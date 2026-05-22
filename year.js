@@ -1,14 +1,15 @@
 import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.min.mjs";
 
 const DEFAULT_PDF_FILE = "./PORTFOLIO_Zuzana-Purmova.pdf";
-const ASSET_CACHE_VERSION = "2026-05-22-pages-13-15";
-const DATA_CACHE_VERSION = "2026-05-22-pages-13-15";
+const ASSET_CACHE_VERSION = "2026-05-22-selected-project-load";
+const DATA_CACHE_VERSION = "2026-05-22-selected-project-load";
 const MAX_CANVAS_DEVICE_SCALE = 1;
 const MAX_CANVAS_EDGE = 1800;
 
 const yearHeading = document.getElementById("yearHeading");
 const projectSelectorSection = document.getElementById("projectSelectorSection");
 const projectPicker = document.getElementById("projectPicker");
+const projectsSection = document.getElementById("projects");
 const projectYearBadge = document.getElementById("projectYearBadge");
 const projectTitle = document.getElementById("projectTitle");
 const projectMeta = document.getElementById("projectMeta");
@@ -18,6 +19,7 @@ const visualLayers = document.getElementById("visualLayers");
 const viewerStatus = document.getElementById("viewerStatus");
 const scrollSteps = document.getElementById("scrollSteps");
 const yearLabel = document.getElementById("year");
+const backToProjects = document.getElementById("backToProjects");
 
 let allProjects = [];
 let yearProjects = [];
@@ -30,6 +32,9 @@ let activeProjectIndex = -1;
 let objectRefsByScene = new Map();
 let annotationRefsByScene = new Map();
 let carouselRefsByScene = new Map();
+let selectedProjectIndex = -1;
+let isScrollHandlerAttached = false;
+let isResizeHandlerAttached = false;
 const pdfCache = new Map();
 
 function clamp(value, min, max) {
@@ -289,11 +294,11 @@ function normalizePhotoDefinition(rawPhoto, photoIndex) {
   };
 }
 
-function buildSceneTrack() {
+function buildSceneTrack(projects = yearProjects.map((project, projectIndex) => ({ project, projectIndex }))) {
   sceneTrack = [];
   projectStartStepByIndex = new Map();
 
-  yearProjects.forEach((project, projectIndex) => {
+  projects.forEach(({ project, projectIndex }) => {
     projectStartStepByIndex.set(projectIndex, sceneTrack.length);
     const projectScenes = Array.isArray(project.scenesResolved) && project.scenesResolved.length > 0
       ? project.scenesResolved
@@ -441,15 +446,14 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
   });
 }
 
-function applyAnnotationSceneProgress(sceneIndex, sceneProgress) {
+function applyAnnotationSceneProgress(sceneIndex) {
   const refs = annotationRefsByScene.get(sceneIndex);
   if (!refs) {
     return;
   }
 
-  const detailInProgress = clamp((sceneProgress - 0.42) / 0.12, 0, 1);
-  refs.details.style.opacity = String(detailInProgress);
-  refs.details.style.transform = `translateY(${lerp(14, 0, detailInProgress)}px)`;
+  refs.details.style.opacity = "1";
+  refs.details.style.transform = "translateY(0)";
 }
 
 function applyCarouselSceneProgress(sceneIndex, sceneProgress) {
@@ -891,7 +895,13 @@ async function renderSceneLayer(scene, sceneIndex) {
   return layer;
 }
 
-async function renderAllLayers() {
+function waitForNextFrame() {
+  return new Promise((resolve) => {
+    requestAnimationFrame(resolve);
+  });
+}
+
+async function renderAllLayers(options = {}) {
   visualLayers.replaceChildren();
   layers = [];
   objectRefsByScene = new Map();
@@ -902,6 +912,10 @@ async function renderAllLayers() {
     const scene = sceneTrack[sceneIndex];
     const layer = await renderSceneLayer(scene, sceneIndex);
     layers.push(layer);
+    if (sceneIndex === 0 && typeof options.afterFirstLayer === "function") {
+      options.afterFirstLayer();
+      await waitForNextFrame();
+    }
   }
 }
 
@@ -909,6 +923,25 @@ function activateProjectButton(projectIndex) {
   for (const button of projectPicker.querySelectorAll(".project-button")) {
     button.classList.toggle("is-active", Number(button.dataset.projectIndex) === projectIndex);
   }
+}
+
+function setProjectLoadingState(isLoading) {
+  viewerStatus.classList.toggle("is-visible", isLoading);
+  viewerStatus.textContent = isLoading ? "Loading selected project…" : "";
+}
+
+function updateBackToProjectsVisibility() {
+  if (!backToProjects) {
+    return;
+  }
+
+  if (selectedProjectIndex < 0) {
+    backToProjects.classList.add("is-hidden");
+    return;
+  }
+
+  const selectorBottom = projectSelectorSection.getBoundingClientRect().bottom;
+  backToProjects.classList.toggle("is-hidden", selectorBottom > 0);
 }
 
 function scrollToProject(projectIndex) {
@@ -935,9 +968,8 @@ function renderProjectPicker() {
     button.className = "year-button project-button";
     button.dataset.projectIndex = `${projectIndex}`;
     button.textContent = project.selectorLabel || project.title;
-    button.addEventListener("click", () => {
-      activateProjectButton(projectIndex);
-      scrollToProject(projectIndex);
+    button.addEventListener("click", async () => {
+      await selectProject(projectIndex);
     });
     fragment.append(button);
   });
@@ -947,6 +979,10 @@ function renderProjectPicker() {
 }
 
 function attachScrollHandler() {
+  if (isScrollHandlerAttached) {
+    return;
+  }
+  isScrollHandlerAttached = true;
   let ticking = false;
   window.addEventListener(
     "scroll",
@@ -957,6 +993,7 @@ function attachScrollHandler() {
       ticking = true;
       requestAnimationFrame(() => {
         updateFromScroll();
+        updateBackToProjectsVisibility();
         ticking = false;
       });
     },
@@ -965,21 +1002,73 @@ function attachScrollHandler() {
 }
 
 function attachResizeHandler() {
+  if (isResizeHandlerAttached) {
+    return;
+  }
+  isResizeHandlerAttached = true;
   let resizeTimer = 0;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = window.setTimeout(async () => {
+      if (selectedProjectIndex < 0) {
+        return;
+      }
       await renderAllLayers();
       recomputeStepPositions();
       updateFromScroll();
+      updateBackToProjectsVisibility();
     }, 160);
   });
+}
+
+async function selectProject(projectIndex) {
+  const project = yearProjects[projectIndex];
+  if (!project) {
+    return;
+  }
+
+  selectedProjectIndex = projectIndex;
+  activeProjectIndex = projectIndex;
+  activateProjectButton(projectIndex);
+  setProjectText(project);
+  setProjectLoadingState(true);
+  projectsSection.classList.remove("is-hidden", "is-project-loaded");
+
+  try {
+    if (!Array.isArray(project.scenesResolved)) {
+      await resolveProjectScenes(project, projectIndex, yearProjects.length);
+    }
+
+    buildSceneTrack([{ project, projectIndex }]);
+    renderSteps();
+    await renderAllLayers({
+      afterFirstLayer: () => {
+        recomputeStepPositions();
+        updateFromScroll();
+        setProjectLoadingState(false);
+        projectsSection.classList.add("is-project-loaded");
+        updateBackToProjectsVisibility();
+      },
+    });
+    recomputeStepPositions();
+    updateFromScroll();
+    setProjectLoadingState(false);
+    projectsSection.classList.add("is-project-loaded");
+    attachScrollHandler();
+    attachResizeHandler();
+    updateBackToProjectsVisibility();
+  } catch (error) {
+    setProjectLoadingState(false);
+    viewerStatus.classList.add("is-visible");
+    viewerStatus.textContent = "Error loading selected project";
+    projectDescription.textContent = error.message;
+  }
 }
 
 async function resolveProjectScenes(project, projectIndex, totalProjects) {
   const pdfFile = project.pdfFile || DEFAULT_PDF_FILE;
   const scenes = Array.isArray(project.scenes) ? project.scenes : [];
-  const needsPdf = scenes.length === 0 || scenes.some(sceneNeedsPdf);
+  const needsPdf = scenes.length === 0;
   const pdfDocument = needsPdf ? await loadPdfDocument(pdfFile) : null;
   const fallbackTotalPages = Array.isArray(project.pdfPages) && project.pdfPages.length > 0
     ? Math.max(...project.pdfPages.filter((value) => Number.isInteger(value)))
@@ -1062,28 +1151,23 @@ async function initializeYearPage() {
 
   pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.worker.min.mjs";
 
-  for (let projectIndex = 0; projectIndex < yearProjects.length; projectIndex += 1) {
-    await resolveProjectScenes(yearProjects[projectIndex], projectIndex, yearProjects.length);
-  }
-
-  buildSceneTrack();
-  renderSteps();
-  await renderAllLayers();
   renderProjectPicker();
 
   yearHeading.textContent = `${selectedYear}`;
   yearLabel.textContent = new Date().getFullYear();
 
-  recomputeStepPositions();
-  setProjectText(yearProjects[0]);
-  activeProjectIndex = 0;
-  activateProjectButton(0);
-  updateFromScroll();
   attachScrollHandler();
   attachResizeHandler();
+  if (backToProjects) {
+    backToProjects.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  updateBackToProjectsVisibility();
 }
 
 initializeYearPage().catch((error) => {
+  projectsSection.classList.remove("is-hidden");
   viewerStatus.classList.add("is-visible");
   viewerStatus.textContent = "Error loading year view";
   projectTitle.textContent = "Could not load year";

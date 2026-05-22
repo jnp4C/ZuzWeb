@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Year View</title>
+    <meta name="description" content="Year-based project view with scroll-driven PDF visuals." />
+    <link rel="stylesheet" href="./styles.css?v=2026-05-22-pages-13-15" />
+  </head>
+  <body>
+    <header class="site-header container">
+      <a class="back-link" href="./index.html">← Back to years</a>
+      <p class="brand">Zuzana Purmova</p>
+      <p class="tagline">Architecture Portfolio</p>
+      <h1 id="yearHeading" class="year-heading">Year</h1>
+    </header>
+
+    <main class="container">
+      <section id="projectSelectorSection" class="year-selector is-hidden">
+        <h2>Projects</h2>
+        <div id="projectPicker" class="year-picker" aria-label="Project selector"></div>
+      </section>
+
+      <section id="projects" class="fullstage">
+        <div class="project-overlay">
+          <p id="projectYearBadge" class="panel-counter">Year</p>
+          <h2 id="projectTitle" class="panel-title">Loading…</h2>
+          <p id="projectMeta" class="panel-meta"></p>
+          <p id="projectDescription" class="panel-description"></p>
+        </div>
+        <div class="story-content">
+          <div class="visual-sticky">
+            <div class="visual-frame full-bleed">
+              <div id="visualLayers" class="visual-layers"></div>
+              <p id="viewerStatus" class="viewer-status">Loading portfolio PDF…</p>
+            </div>
+          </div>
+        </div>
+        <div id="scrollSteps" class="scroll-steps" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© <span id="year"></span> Zuzana Purmova</p>
+    </footer>
+
+    <script src="./year.js?v=2026-05-22-pages-13-15" type="module"></script>
+  </body>
+</html>

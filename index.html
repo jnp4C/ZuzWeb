@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zuzana Purmova | Portfolio</title>
+    <meta
+      name="description"
+      content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
+    />
+    <link rel="stylesheet" href="./styles.css?v=2026-05-21-header-align" />
+  </head>
+  <body>
+    <header class="site-header container">
+      <p class="brand">Zuzana Purmova</p>
+      <p class="tagline">Architecture Portfolio</p>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <h1>Introduction</h1>
+        <p class="intro-copy">
+          The aim of this portfolio is to show various types of scales and topics<br />
+          that I have worked with, and to describe the process of my practice<br />
+          through selected designs.
+        </p>
+      </section>
+
+      <section class="year-selector">
+        <h2>Select Project Year</h2>
+        <div id="yearPicker" class="year-picker" aria-label="Project year selector"></div>
+        <p class="year-selection-status">Choose a year to open that portfolio section.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© <span id="year"></span> Zuzana Purmova</p>
+    </footer>
+
+    <script src="./script.js?v=2026-05-21-header-align" type="module"></script>
+  </body>
+</html>

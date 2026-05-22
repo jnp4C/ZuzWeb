@@ -1,0 +1,1009 @@
+:root {
+  --bg: #fdfdfd;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #2b3f5e;
+  --line: #133b6b;
+  --container-width: min(1180px, 92vw);
+  --container-gutter: calc((100vw - var(--container-width)) / 2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 1.25rem 0 0.9rem;
+  border-bottom: 2px solid var(--line);
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--line);
+  text-decoration: none;
+  border: 2px solid var(--line);
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.year-heading {
+  margin: 0.8rem 0 0;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+}
+
+.intro {
+  padding: 1.2rem;
+  border: 2px solid var(--line);
+  margin: 2rem 0;
+  background: var(--surface);
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+}
+
+.intro-copy {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  max-width: 65ch;
+  line-height: 1.6;
+}
+
+.year-selector {
+  border: 2px solid var(--line);
+  background: var(--surface);
+  padding: 0.85rem 1rem;
+  margin: 0.9rem 0 0.1rem;
+}
+
+.year-selector h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.year-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+.year-button {
+  border: 2px solid var(--line);
+  background: var(--surface);
+  color: var(--line);
+  padding: 0.35rem 0.7rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.year-button.is-active,
+.year-button:hover {
+  background: var(--line);
+  color: var(--surface);
+}
+
+.project-button {
+  text-align: left;
+}
+
+.year-selection-status {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.fullstage {
+  position: relative;
+  min-height: 100vh;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0.5rem;
+  left: auto;
+  z-index: 20;
+  max-width: min(34ch, 36vw);
+  pointer-events: none;
+  margin: 0 0 0.75rem;
+  padding: 0.2rem 0.3rem;
+  background: rgba(253, 253, 253, 0.78);
+  backdrop-filter: blur(1px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-panel {
+  position: sticky;
+  top: 2rem;
+  padding: 1.4rem;
+  border: 2px solid var(--line);
+  border-radius: 0;
+  background: var(--surface);
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panel-counter {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.panel-title {
+  margin: 0.75rem 0 0;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  line-height: 1.2;
+}
+
+.panel-meta {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+.panel-description {
+  margin: 0.45rem 0 0;
+  line-height: 1.45;
+  max-width: 32ch;
+}
+
+.story-content {
+  position: relative;
+  height: auto;
+}
+
+.visual-sticky {
+  position: relative;
+  top: 0;
+  height: auto;
+}
+
+.visual-frame {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.visual-layers {
+  position: relative;
+}
+
+.pdf-layer {
+  position: relative;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  min-height: auto;
+}
+
+.annotation-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: clamp(0.45rem, 1vh, 0.7rem);
+  padding: clamp(0.2rem, 0.8vh, 0.45rem) var(--container-gutter) clamp(0.6rem, 1.6vh, 1rem);
+  min-height: auto;
+}
+
+.annotation-box {
+  width: min(72ch, 100%);
+  border: 0;
+  padding: 0;
+  white-space: pre-line;
+  line-height: 1.45;
+  font-size: clamp(0.88rem, 1.12vw, 1.02rem);
+  color: var(--text);
+  background: transparent;
+}
+
+.annotation-intro {
+  align-self: flex-start;
+}
+
+.project-header-sheet {
+  align-self: flex-start;
+  width: min(42rem, 88vw);
+  padding: clamp(0.9rem, 2vw, 1.35rem);
+  background: var(--line);
+  color: var(--surface);
+  box-shadow: 0 0.8rem 2rem rgba(19, 59, 107, 0.12);
+}
+
+.project-header-sheet a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.annotation-details {
+  width: min(42rem, 88vw);
+  border: 2px solid var(--line);
+  padding: clamp(0.85rem, 1.8vw, 1.25rem);
+  background: var(--surface);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.annotation-layer + .object-scene-layer {
+  padding-top: 0;
+}
+
+.annotation-layer + .object-scene-layer .full-width-visual-object-scene {
+  padding-top: 0;
+}
+
+.object-scene-layer {
+  overflow: hidden;
+  padding: clamp(0.45rem, 1.5vh, 1rem) 0;
+}
+
+.flow-object-scene-layer {
+  display: block;
+  min-height: auto;
+}
+
+.object-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flow-object-scene-layer .object-scene {
+  height: auto;
+  min-height: auto;
+}
+
+.annotation-object-scene {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: min(8vw, 5rem);
+  height: auto;
+  margin-top: 0;
+}
+
+.side-by-side-object-scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(4.5vw, 3rem);
+  height: auto;
+  padding: clamp(1rem, 3vh, 2rem) 6vw 0;
+}
+
+.side-by-side-object-scene.has-carousel {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: clamp(1.5rem, 4vh, 3rem);
+  height: auto;
+  min-height: 92vh;
+  padding: clamp(0.75rem, 2vh, 1.5rem) 0 clamp(2rem, 5vh, 4rem);
+}
+
+.side-by-side-object-scene.has-carousel .object-row {
+  align-items: flex-start;
+}
+
+.analysis-object-scene {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: clamp(1rem, 2.5vh, 1.6rem) min(5vw, 3.5rem);
+  height: auto;
+  padding: clamp(4rem, 8vh, 5.5rem) 6vw 0;
+}
+
+.analysis-object-scene .scene-object:first-child {
+  width: 100% !important;
+  align-items: flex-start;
+}
+
+.analysis-object-scene .scene-object:first-child .scene-object-image {
+  width: min(36vw, 34rem);
+}
+
+.map-legend-object-scene {
+  position: relative;
+  width: 100%;
+  height: min(86vw, 94vh);
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.map-legend-object-scene .scene-object {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  margin: 0;
+}
+
+.map-legend-object-scene .scene-object[data-object-name^="map-"] {
+  top: 0;
+  right: 0;
+  align-items: flex-end;
+}
+
+.map-legend-object-scene .scene-object[data-object-name^="legend-"] {
+  left: clamp(1rem, 6vw, 5rem);
+  bottom: clamp(1rem, 4vw, 3rem);
+  align-items: flex-start;
+}
+
+.map-legend-object-scene .scene-object[data-object-name="map-situace-aktualni-stav"] {
+  width: min(94vw, 1320px) !important;
+}
+
+.map-legend-object-scene .scene-object[data-object-name="legend-situace-aktualni-stav"] {
+  width: min(88vw, 1180px) !important;
+}
+
+.single-text-object-scene {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: clamp(2rem, 5vh, 4rem) 6vw;
+}
+
+.single-text-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  align-items: flex-start;
+}
+
+.stacked-map-text-object-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.75rem, 1.8vh, 1.25rem);
+  padding: clamp(1.25rem, 3vh, 2.25rem) 0 clamp(1.5rem, 4vh, 3rem);
+}
+
+.stacked-map-text-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.stacked-carousel-object-scene,
+.vegetation-object-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.55rem, 1.4vh, 1rem);
+  padding: clamp(1rem, 2.4vh, 1.8rem) 0 clamp(1.25rem, 3vh, 2.25rem);
+}
+
+.stacked-carousel-object-scene .scene-object,
+.vegetation-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.stacked-carousel-object-scene .object-row {
+  align-items: flex-start;
+}
+
+.vegetation-object-scene .object-row {
+  align-items: flex-start;
+  gap: min(3vw, 2rem);
+}
+
+.vegetation-object-scene .scene-object[data-object-name="vegetace-text"] {
+  width: min(34vw, 32rem) !important;
+  align-items: flex-start;
+}
+
+.vegetation-object-scene .scene-object[data-object-name="vegetace-illustrations"] {
+  width: min(53vw, 56rem) !important;
+}
+
+.inner-function-object-scene {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(0.75rem, 2vh, 1.4rem) min(4vw, 3rem);
+  padding: clamp(1rem, 2.5vh, 2rem) 4vw clamp(1.5rem, 3.5vh, 2.6rem);
+}
+
+.inner-function-object-scene .scene-object,
+.full-width-visual-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.inner-function-object-scene .scene-object[data-object-name="vnitrni-funkce-text"] {
+  width: min(41vw, 43rem) !important;
+  align-items: flex-start;
+}
+
+.inner-function-object-scene .scene-object[data-object-name="vnitrni-funkce-pricny-rez"] {
+  width: min(47vw, 54rem) !important;
+}
+
+.inner-function-object-scene .scene-object[data-object-name="vnitrni-funkce-podelny-rez"] {
+  width: min(96vw, 118rem) !important;
+  flex-basis: 100%;
+  margin-top: clamp(0.35rem, 1.2vh, 0.9rem);
+}
+
+.inner-function-object-scene .scene-object-text {
+  font-size: clamp(1rem, 1.55vw, 1.6rem);
+}
+
+.full-width-visual-object-scene {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(1rem, 2.5vh, 2rem) 0 clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.full-width-visual-object-scene .scene-object {
+  width: min(96vw, 118rem) !important;
+}
+
+.krematorium-site-split-object-scene {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  padding: clamp(1rem, 2.5vh, 2rem) 2vw clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.krematorium-site-split-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.krematorium-site-split-object-scene .scene-object {
+  width: min(48vw, 42rem) !important;
+}
+
+.krematorium-sirsi-vztahy-object-scene {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  padding: clamp(1rem, 2.5vh, 2rem) 2vw clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.krematorium-sirsi-vztahy-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.krematorium-sirsi-vztahy-object-scene .scene-object[data-object-name="sirsi-vztahy-left"] {
+  width: min(44vw, 48rem) !important;
+}
+
+.krematorium-sirsi-vztahy-object-scene .scene-object[data-object-name="velky-okruh-right"] {
+  width: min(46vw, 50rem) !important;
+}
+
+.krematorium-sirsi-vztahy-object-scene .scene-object[data-object-name="sirsi-vztahy-map"] {
+  width: 96vw !important;
+  flex-basis: 100%;
+}
+
+.krematorium-navrh-cyklus-object-scene,
+.krematorium-koncept-object-scene,
+.krematorium-dva-svety-object-scene {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  padding: clamp(1rem, 2.5vh, 2rem) 2vw clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.krematorium-navrh-cyklus-object-scene .scene-object,
+.krematorium-koncept-object-scene .scene-object,
+.krematorium-dva-svety-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.krematorium-navrh-cyklus-object-scene .scene-object[data-object-name="navrh-title"] {
+  width: 96vw !important;
+  margin-right: auto;
+}
+
+.krematorium-navrh-cyklus-object-scene .scene-object[data-object-name="navrh-map"],
+.krematorium-koncept-object-scene .scene-object[data-object-name="koncept-map"],
+.krematorium-dva-svety-object-scene .scene-object[data-object-name="dvasvety-map"] {
+  width: 96vw !important;
+  flex-basis: 100%;
+}
+
+.krematorium-koncept-object-scene .scene-object[data-object-name="koncept-left"],
+.krematorium-dva-svety-object-scene .scene-object[data-object-name="dvasvety-left"] {
+  width: min(44vw, 48rem) !important;
+}
+
+.krematorium-koncept-object-scene .scene-object[data-object-name="koncept-right"],
+.krematorium-dva-svety-object-scene .scene-object[data-object-name="dvasvety-right"] {
+  width: min(46vw, 50rem) !important;
+}
+
+.krematorium-pohled-a-object-scene {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(1rem, 2.5vh, 2rem) 2vw clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.krematorium-pohled-a-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 96vw !important;
+}
+
+.zahrada-documentation-object-scene {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.55fr) minmax(22rem, 1.1fr);
+  grid-template-rows: 1fr 1fr;
+  column-gap: clamp(0.8rem, 2vw, 1.4rem);
+  row-gap: clamp(0.25rem, 0.8vw, 0.55rem);
+  align-items: start;
+  padding: clamp(0.35rem, 1vh, 0.8rem) 4vw clamp(0.5rem, 1.4vh, 1rem);
+}
+
+.zahrada-documentation-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 100% !important;
+}
+
+.zahrada-documentation-object-scene .scene-object:first-child {
+  grid-row: span 2;
+}
+
+.zahrada-documentation-object-scene .scene-object-image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.zahrada-two-column-object-scene {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.55fr) minmax(22rem, 1.1fr);
+  gap: clamp(0.8rem, 2vw, 1.4rem);
+  align-items: start;
+  padding: clamp(0.35rem, 1vh, 0.8rem) 4vw clamp(0.5rem, 1.4vh, 1rem);
+}
+
+.zahrada-two-column-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 100% !important;
+}
+
+.zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-5-left"],
+.zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-7-left"] {
+  justify-self: end;
+  width: min(30vw, 25rem) !important;
+}
+
+.zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-5-right"],
+.zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-7-right"] {
+  justify-self: end;
+  width: min(34vw, 29rem) !important;
+}
+
+.zahrada-four-grid-object-scene {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 1fr);
+  gap: clamp(0.45rem, 1.1vw, 0.85rem);
+  align-items: start;
+  padding: clamp(0.35rem, 1vh, 0.8rem) 4vw clamp(0.5rem, 1.4vh, 1rem);
+}
+
+.zahrada-four-grid-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 100% !important;
+}
+
+.zahrada-left-stack-object-scene {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.55fr) minmax(22rem, 1.1fr);
+  gap: clamp(0.45rem, 1.1vw, 0.85rem);
+  align-items: start;
+  padding: clamp(0.35rem, 1vh, 0.8rem) 4vw clamp(0.5rem, 1.4vh, 1rem);
+}
+
+.zahrada-left-stack-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 100% !important;
+}
+
+.zahrada-left-stack-object-scene .scene-object:first-child {
+  grid-row: span 3;
+}
+
+.krematorium-legenda-object-scene {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: min(3vw, 2rem);
+  padding: clamp(1rem, 2.5vh, 2rem) 2vw clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.krematorium-legenda-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.krematorium-legenda-object-scene .scene-object[data-object-name="legenda-left"] {
+  width: min(45vw, 42rem) !important;
+}
+
+.krematorium-legenda-object-scene .scene-object[data-object-name="legenda-right"] {
+  width: min(50vw, 46rem) !important;
+}
+
+.krematorium-pohled-b-object-scene {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(1rem, 2.5vh, 2rem) 2vw clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.krematorium-pohled-b-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 96vw !important;
+}
+
+.krematorium-obradni-sin-object-scene,
+.krematorium-zed-object-scene {
+  display: grid;
+  grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.46fr);
+  column-gap: min(4vw, 3rem);
+  row-gap: clamp(1rem, 2.5vh, 2rem);
+  align-items: start;
+  padding: clamp(1rem, 2.5vh, 2rem) 4vw clamp(1.5rem, 3vh, 2.4rem);
+}
+
+.krematorium-obradni-sin-object-scene .scene-object,
+.krematorium-zed-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 100% !important;
+}
+
+.krematorium-obradni-sin-object-scene .scene-object:not([data-object-name$="-map"]),
+.krematorium-zed-object-scene .scene-object:not([data-object-name$="-map"]) {
+  grid-column: 1;
+}
+
+.krematorium-obradni-sin-object-scene .scene-object[data-object-name$="-map"],
+.krematorium-zed-object-scene .scene-object[data-object-name$="-map"] {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+
+.history-kostel-object-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(0.8rem, 1.8vh, 1.2rem);
+  padding: clamp(1rem, 2.6vh, 2rem) 6vw clamp(2rem, 4vh, 3rem);
+}
+
+.history-kostel-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+  align-items: flex-start;
+}
+
+.history-kostel-object-scene .scene-object[data-object-name="kostel-sv-jiri-photo"] {
+  width: min(26vw, 24rem) !important;
+}
+
+.history-kostel-object-scene .scene-object[data-object-name="kostel-sv-jiri-description"] {
+  width: min(32vw, 30rem) !important;
+}
+
+.history-kostel-object-scene .scene-object-text {
+  font-size: clamp(1rem, 1.22vw, 1.28rem);
+  line-height: 1.38;
+  text-align: left;
+}
+
+.object-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(4.5vw, 3rem);
+  width: 100%;
+  padding: 0 6vw;
+}
+
+.scene-object {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.annotation-object-scene .scene-object,
+.side-by-side-object-scene .scene-object,
+.analysis-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.scene-object-canvas,
+.scene-object-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.scene-object-text {
+  width: 100%;
+  white-space: pre-line;
+  line-height: 1.25;
+  font-size: clamp(0.95rem, 1.45vw, 1.45rem);
+  color: var(--text);
+}
+
+.scene-object-caption {
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.9rem);
+  line-height: 1.2;
+  color: var(--text);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.carousel-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-scene {
+  width: 100vw;
+  overflow: hidden;
+  padding: clamp(1rem, 2.5vh, 2rem) 0;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+  gap: clamp(1rem, 2vw, 1.8rem);
+  animation: photo-float 42s linear infinite;
+}
+
+.carousel-photo {
+  width: min(34vw, 28rem);
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.carousel-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-photo figcaption {
+  margin-top: 0.45rem;
+  font-size: clamp(0.9rem, 1.1vw, 1.25rem);
+  line-height: 1.2;
+  text-align: right;
+  color: var(--text);
+}
+
+.embedded-carousel-scene {
+  flex: 0 0 100%;
+  padding: 0;
+  margin-top: clamp(0.75rem, 2vh, 1.5rem);
+}
+
+.embedded-carousel-scene .carousel-photo {
+  width: min(25vw, 20rem);
+}
+
+.compact-carousel-layer .carousel-scene {
+  padding: clamp(0.45rem, 1.2vh, 0.8rem) 0;
+}
+
+.compact-carousel-layer .carousel-track {
+  gap: clamp(0.45rem, 1.1vw, 0.8rem);
+}
+
+.compact-carousel-layer .carousel-photo {
+  width: min(8vw, 7.5rem);
+}
+
+@keyframes photo-float {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - clamp(0.5rem, 1vw, 0.9rem)));
+  }
+}
+
+.pdf-layer canvas {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border: 0;
+  box-shadow: none;
+}
+
+.pdf-layer.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.viewer-status {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.9rem;
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 2px solid var(--line);
+  padding: 0.3rem 0.5rem;
+  border-radius: 0;
+  display: none;
+}
+
+.viewer-status.is-visible {
+  display: block;
+}
+
+.scroll-steps {
+  display: none;
+}
+
+.story-step {
+  min-height: 100vh;
+}
+
+.site-footer {
+  border-top: 2px solid var(--line);
+  margin-top: 2rem;
+  padding: 1.1rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .project-overlay {
+    max-width: calc(100vw - 2rem);
+    top: 0.35rem;
+  }
+
+  .story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-panel {
+    position: static;
+    min-height: auto;
+  }
+
+  .visual-sticky {
+    top: 0;
+    height: auto;
+  }
+
+  .scroll-steps {
+    display: none;
+  }
+
+  .annotation-layer {
+    padding: 0.75rem 1.1rem 1rem;
+  }
+
+  .zahrada-documentation-object-scene,
+  .zahrada-two-column-object-scene,
+  .zahrada-four-grid-object-scene,
+  .zahrada-left-stack-object-scene {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-inline: 1rem;
+  }
+
+  .zahrada-documentation-object-scene .scene-object:first-child,
+  .zahrada-left-stack-object-scene .scene-object:first-child {
+    grid-row: auto;
+  }
+}

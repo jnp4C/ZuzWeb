@@ -1,0 +1,6077 @@
+[
+  {
+    "title": "Through the Forest",
+    "category": "Landscape Architecture",
+    "location": "Prague, CZ",
+    "year": 2021,
+    "description": "Landscape architecture studio project focused on permeability and ecological continuity in Prague 11.",
+    "annotation": "The project was created on the basis of a common vision for Prague 11. Its main element is a green net, connecting three vaste forests that surround the area. The proposal is a response to the issue of permeability of the territory and a part of the net. The project connects the Kunratice Forest with the Hostivař-Záběhlice Park. Therefore, it uses a stripe of free space around roads. Benefits of the proposal: interconnection of areas, possibility of migration of species, use of vague areas, pedestrian safety, expansion of forest area and new areas for recreation. The result is a terrain mass that rises like a wave to span two roads, absorbing the rest inside. It’s liquid consistency adapts to the existing terrain and and partially hides a building of a large shopping center.",
+    "pdfFile": "./2021_1.pdf",
+    "pdfPages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "scenes": [
+      {
+        "type": "annotation",
+        "text": "PROJEKT 1\n\nVznikl na základě ateliérového zadání Praha 11 - Vize a realita.\nHlavním prvkem společné vize je zelená páteř / síť, spojující primárně tři zmíněné\nplochy přírodního charakteru a sekundárně všechny zelené plochy v zástavbě.\nDále počítáme s omezením automobilové dopravy a upřednostnění chodců a cyklistů.",
+        "supportingText": "hlavní prvky vize :\n- zelená síť / páteř spojující tři velké plochy přírodního charakteru a všechny zelené\n  plochy v zástavbě\n- omezení automobilové dopravy\n- multifunkční parkovací domy místo rozlehlých asfaltových parkovacích ploch\n- upřednostnění a podpora pěších a cyklistů\n- doplnění lidského měřítka",
+        "page": 3,
+        "objects": [
+          {
+            "name": "multifunkcni-parkovaci-domy",
+            "caption": "multifunkční parkovací domy",
+            "src": "./assets/2021-through-the-forest/parking-scale.png",
+            "crop": [
+              0.035,
+              0.465,
+              0.445,
+              0.33
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "doplneni-lidskeho-meritka",
+            "caption": "doplnění lidského měřítka",
+            "src": "./assets/2021-through-the-forest/human-scale.png",
+            "crop": [
+              0.44,
+              0.425,
+              0.545,
+              0.365
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 4,
+        "objects": [
+          {
+            "name": "misto-text",
+            "src": "./assets/2021-through-the-forest/misto-text.png",
+            "crop": [
+              0.025,
+              0.045,
+              0.39,
+              0.52
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "praha-map",
+            "src": "./assets/2021-through-the-forest/praha-map.png",
+            "crop": [
+              0.435,
+              0.055,
+              0.505,
+              0.545
+            ],
+            "displayWidthRatio": 0.38,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ],
+        "photos": [
+          {
+            "src": "./assets/2021-through-the-forest/site-photos/site-01.jpg",
+            "alt": "Prague 11 housing and shopfronts"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/site-photos/site-02.jpg",
+            "alt": "Open green space between housing blocks"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/site-photos/site-03.jpg",
+            "alt": "Parking area near apartment buildings"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/site-photos/site-04.jpg",
+            "alt": "Road corridor at Prague 11"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/site-photos/site-05.jpg",
+            "alt": "Pedestrian route beside housing"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/site-photos/site-06.jpg",
+            "alt": "High-rise housing beside road infrastructure"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 5,
+        "objects": [
+          {
+            "name": "negativa-text",
+            "src": "./assets/2021-through-the-forest/negativa-text.png",
+            "crop": [
+              0.035,
+              0.05,
+              0.54,
+              0.225
+            ],
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "negativa-sketch",
+            "src": "./assets/2021-through-the-forest/negativa-sketch.png",
+            "crop": [
+              0.555,
+              0.158,
+              0.415,
+              0.43
+            ],
+            "displayWidthRatio": 0.4,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 6,
+        "objects": [
+          {
+            "name": "pozitiva-text",
+            "src": "./assets/2021-through-the-forest/pozitiva-text.png",
+            "crop": [
+              0.03,
+              0.055,
+              0.6,
+              0.245
+            ],
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "pozitiva-sketch",
+            "src": "./assets/2021-through-the-forest/pozitiva-sketch.png",
+            "crop": [
+              0.405,
+              0.305,
+              0.565,
+              0.265
+            ],
+            "displayWidthRatio": 0.4,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ],
+        "photos": [
+          {
+            "src": "./assets/2021-through-the-forest/pozitiva-photos/pozitiva-01.jpg",
+            "alt": "Open green park near housing blocks"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/pozitiva-photos/pozitiva-02.jpg",
+            "alt": "Forest edge and meadow"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/pozitiva-photos/pozitiva-03.jpg",
+            "alt": "Green natural landscape near Prague 11"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "analysis",
+        "page": 7,
+        "objects": [
+          {
+            "name": "analyza-head",
+            "src": "./assets/2021-through-the-forest/analyza-head.png",
+            "crop": [
+              0.035,
+              0.05,
+              0.39,
+              0.15
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.35,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "analyza-kunraticky-les",
+            "src": "./assets/2021-through-the-forest/analyza-kunraticky-les.png",
+            "crop": [
+              0.035,
+              0.275,
+              0.555,
+              0.64
+            ],
+            "displayWidthRatio": 0.35,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "analyza-hostivar-zabehlice",
+            "src": "./assets/2021-through-the-forest/analyza-hostivar-zabehlice.png",
+            "crop": [
+              0.505,
+              0.065,
+              0.47,
+              0.625
+            ],
+            "displayWidthRatio": 0.33,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "map-legend",
+        "page": 8,
+        "objects": [
+          {
+            "name": "map-unbuilt-areas",
+            "src": "./assets/2021-through-the-forest/map-unbuilt-areas.png",
+            "displayWidthRatio": 0.86,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.05,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          },
+          {
+            "name": "legend-unbuilt-areas",
+            "src": "./assets/2021-through-the-forest/legend-unbuilt-areas.png",
+            "displayWidthRatio": 0.28,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -460,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "map-legend",
+        "page": 9,
+        "objects": [
+          {
+            "name": "map-access-points",
+            "src": "./assets/2021-through-the-forest/map-access-points.png",
+            "displayWidthRatio": 0.86,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.05,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          },
+          {
+            "name": "legend-access-points",
+            "src": "./assets/2021-through-the-forest/legend-access-points.png",
+            "displayWidthRatio": 0.3,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -460,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "map-legend",
+        "page": 10,
+        "objects": [
+          {
+            "name": "map-situace-aktualni-stav",
+            "src": "./assets/2021-through-the-forest/map-situace-aktualni-stav.png",
+            "displayWidthRatio": 0.94,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.05,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          },
+          {
+            "name": "legend-situace-aktualni-stav",
+            "src": "./assets/2021-through-the-forest/legend-situace-aktualni-stav.png",
+            "displayWidthRatio": 0.84,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -560,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "single-text",
+        "page": 11,
+        "objects": [
+          {
+            "name": "concept-text",
+            "src": "./assets/2021-through-the-forest/concept-text.png",
+            "displayWidthRatio": 0.76,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "stacked-map-text",
+        "page": 12,
+        "objects": [
+          {
+            "name": "route-detail-map",
+            "src": "./assets/2021-through-the-forest/route-detail-map.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "route-layout-text",
+            "src": "./assets/2021-through-the-forest/route-layout-text.png",
+            "displayWidthRatio": 0.86,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.12,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "stacked-carousel",
+        "page": 13,
+        "objects": [
+          {
+            "name": "tvar-panel",
+            "src": "./assets/2021-through-the-forest/tvar-panel.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.01,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ],
+        "photos": [
+          {
+            "src": "./assets/2021-through-the-forest/tvar-photos/tvar-01.jpg",
+            "alt": "Tvar terrain model photo 1"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/tvar-photos/tvar-02.jpg",
+            "alt": "Tvar terrain model photo 2"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/tvar-photos/tvar-03.jpg",
+            "alt": "Tvar terrain model photo 3"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "vegetation",
+        "page": 14,
+        "objects": [
+          {
+            "name": "vegetace-text",
+            "text": "VEGETACE 12\n\nDruhové složení zamýšleného lesního porostu je odvozeno od stávajícího pestrého složení přilehlých lesů, jejichž části jsou kvůli svým cenným druhovým společenstvím chráněné.\n\nideální (přirozené) zastoupení dřevin pro tuto oblast :\n- Quercus sp. / dub 68%\n- Fagus sylvatica / buk lesní 20%\n- Abies alba / jedle bělokorá 3%\n- Betula pendula / bříza bělokorá 2%\n- Carpinus betulus / habr obecný 2%\n- Alnus glutinosa / olše lepkavá 2%\n- Fraxinus excelsior / jasan ztepilý 1%\n- Pinus sylvestris / borovice lesní 1%\n- Tilia cordata / lípa srdčitá 1%\n\nProcentuální zastoupení druhů je orientační, lokálně by se v místech navrhovaných ploch lišilo podle vhodnosti stanovištních podmínek pro konkrétní druhy.",
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.46,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "vegetace-illustrations",
+            "src": "./assets/2021-through-the-forest/vegetace-illustrations.png",
+            "displayWidthRatio": 0.52,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 540,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ],
+        "photos": [
+          {
+            "src": "./assets/2021-through-the-forest/vegetace-photos/vegetace-01.jpg",
+            "alt": "Vegetace forest photo 1"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/vegetace-photos/vegetace-02.jpg",
+            "alt": "Vegetace forest path photo 2"
+          },
+          {
+            "src": "./assets/2021-through-the-forest/vegetace-photos/vegetace-03.jpg",
+            "alt": "Vegetace meadow and power lines photo 3"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "inner-function",
+        "page": 15,
+        "objects": [
+          {
+            "name": "vnitrni-funkce-text",
+            "text": "VNITŘNÍ FUNKCE 13\n\nJelikož jde o velkou terénní masu, tak při odečtení hloubky vrchní vrstvy zeminy pro pohodlnou existenci lesního porostu zbývá ještě prostor uvnitř (množství se liší v různých částech tělesa podle jeho výšky).\n\nČást zabere zapuštění menších komunikací, zbytek by bylo možné využít :\n\n- jako dodatečné parkovací domy (málo prosvětlené části)\n- jako kanceláře, popřípadě bytové jednotky se službami v dolním parteru (nejvíce prosvětlené, konkávně prohnuté části)\n- jako skladové prostory pro přilehlé obchodní centrum (neprosvětlené části)",
+            "displayWidthRatio": 0.4,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -540,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.48,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "vnitrni-funkce-pricny-rez",
+            "src": "./assets/2021-through-the-forest/vnitrni-funkce-pricny-rez.png",
+            "displayWidthRatio": 0.47,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 540,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "vnitrni-funkce-podelny-rez",
+            "src": "./assets/2021-through-the-forest/vnitrni-funkce-podelny-rez.png",
+            "displayWidthRatio": 0.94,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.18,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 16,
+        "objects": [
+          {
+            "name": "vizualizace-full",
+            "src": "./assets/2021-through-the-forest/vizualizace-full.png",
+            "displayWidthRatio": 0.94,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -700,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.fa.cvut.cz/en/gallery/studio-projects/34933-through-the-forest"
+  },
+  {
+    "title": "Stone Garden Pavilion",
+    "category": "Landscape",
+    "location": "Vienna, AT",
+    "year": 2021,
+    "description": "Small public pavilion blending stone terraces, shade canopies, and rainwater-fed planting beds.",
+    "pdfPages": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Riverside Housing Cluster",
+    "category": "Residential",
+    "location": "Prague, CZ",
+    "year": 2025,
+    "description": "Multi-block housing with shared gardens and timber facades designed for low operational energy.",
+    "pdfPages": [
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "title": "City Art Hall Renovation",
+    "category": "Cultural",
+    "location": "Brno, CZ",
+    "year": 2024,
+    "description": "Adaptive reuse of a 1930s hall with daylight-focused gallery circulation and new public foyer.",
+    "pdfPages": [
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "title": "Kladno Krematorium",
+    "category": "Landscape Architecture",
+    "location": "Kladno, CZ",
+    "year": 2022,
+    "description": "Landscape architecture studio project for a dignified and recreational landscape around the Kladno crematorium.",
+    "annotation": "Crematorium now exists only as a technical building, that looks like a car repair shop surrounded by shrubs and rests of orchard. The project tends to create a pleasant space, which can be visit both for dignifiedly take part with departed and for recreation, but with condition that these intents wouldn’t disturb each other. One of the basis of the project is an elegant wall, that hides the crematorium’s building. Then there is an idea of two worlds, bordered with a water ribbon. Inside, there is a place of peaceful rest with three scattering meadow shaped as grass pillows. Dynamic path in dialog with water ribbon are symbolizing the infinite cycle of life. Both features are changing constantly, bringing the idea that the life of the grievers is not ending, just changing.",
+    "pdfFile": "./krematorium2022.pdf",
+    "pdfPages": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16
+    ],
+    "scenes": [
+      {
+        "type": "annotation",
+        "supportingText": "Crematorium now exists only as a technical building, that looks like a car repair shop surrounded by shrubs and rests of orchard. The project tends to create a pleasant space, which can be visit both for dignifiedly take part with departed and for recreation, but with condition that these intents wouldn’t disturb each other. One of the basis of the project is an elegant wall, that hides the crematorium’s building. Then there is an idea of two worlds, bordered with a water ribbon. Inside, there is a place of peaceful rest with three scattering meadow shaped as grass pillows. Dynamic path in dialog with water ribbon are symbolizing the infinite cycle of life. Both features are changing constantly, bringing the idea that the life of the grievers is not ending, just changing."
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 1,
+        "objects": [
+          {
+            "name": "krematorium-cover",
+            "src": "./assets/2022-krematorium/cover.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 140,
+              "scale": 0.985,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-site-split",
+        "page": 3,
+        "objects": [
+          {
+            "name": "krematorium-misto-navrhu",
+            "src": "./assets/2022-krematorium/misto-navrhu-left.jpg",
+            "displayWidthRatio": 0.48,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -720,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          },
+          {
+            "name": "krematorium-site-photos",
+            "src": "./assets/2022-krematorium/site-photos-right.jpg",
+            "displayWidthRatio": 0.48,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 720,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-sirsi-vztahy",
+        "page": 4,
+        "objects": [
+          {
+            "name": "sirsi-vztahy-left",
+            "src": "./assets/2022-krematorium/sirsi-vztahy-left.jpg",
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "velky-okruh-right",
+            "src": "./assets/2022-krematorium/sirsivztahyright.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.06,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "sirsi-vztahy-map",
+            "src": "./assets/2022-krematorium/sirsi-vztahy-map.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.52,
+            "enterDuration": 0.28,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-navrh-cyklus",
+        "page": 5,
+        "objects": [
+          {
+            "name": "navrh-title",
+            "src": "./assets/2022-krematorium/navrhtop.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "navrh-map",
+            "src": "./assets/2022-krematorium/navrhmap.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 720,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.58,
+            "enterDuration": 0.36,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-koncept",
+        "page": 6,
+        "objects": [
+          {
+            "name": "koncept-left",
+            "src": "./assets/2022-krematorium/konceptleft.jpg",
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "koncept-right",
+            "src": "./assets/2022-krematorium/konceptright.jpg",
+            "displayWidthRatio": 0.44,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.06,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "koncept-map",
+            "src": "./assets/2022-krematorium/konceptmap.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.52,
+            "enterDuration": 0.28,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-pohled-a",
+        "page": 7,
+        "objects": [
+          {
+            "name": "pohled-a",
+            "src": "./assets/2022-krematorium/pohled-a.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-dva-svety",
+        "page": 8,
+        "objects": [
+          {
+            "name": "dvasvety-left",
+            "src": "./assets/2022-krematorium/dvasvetyleft.jpg",
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "dvasvety-right",
+            "src": "./assets/2022-krematorium/dvasvetyright.jpg",
+            "displayWidthRatio": 0.44,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.06,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "dvasvety-map",
+            "src": "./assets/2022-krematorium/dvasvetymap.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.52,
+            "enterDuration": 0.28,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-legenda",
+        "page": 9,
+        "objects": [
+          {
+            "name": "legenda-left",
+            "src": "./assets/2022-krematorium/legendaleft.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.48,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          },
+          {
+            "name": "legenda-right",
+            "src": "./assets/2022-krematorium/legendaright.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.06,
+            "enterDuration": 0.48,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-pohled-b",
+        "page": 10,
+        "objects": [
+          {
+            "name": "pohled-b",
+            "src": "./assets/2022-krematorium/pohledbfromdown.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -760,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-obradni-sin",
+        "page": 11,
+        "objects": [
+          {
+            "name": "obradni-sin-top-left",
+            "src": "./assets/2022-krematorium/obradnisintopleft.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "obradni-sin-mid-left",
+            "src": "./assets/2022-krematorium/obradnisinmidleft.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.34,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "obradni-sin-map",
+            "src": "./assets/2022-krematorium/obradnisinmap.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.34,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          },
+          {
+            "name": "obradni-sin-down-left",
+            "src": "./assets/2022-krematorium/obradnisindownleft.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.7,
+            "enterDuration": 0.28,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-pohled-a",
+        "page": 10,
+        "objects": [
+          {
+            "name": "object-c",
+            "src": "./assets/2022-krematorium/pohledC.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-zed",
+        "page": 13,
+        "objects": [
+          {
+            "name": "zed-top-left",
+            "src": "./assets/2022-krematorium/zedtopleft.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "zed-mid-left",
+            "src": "./assets/2022-krematorium/zedmidleft.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.34,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "zed-down-left",
+            "src": "./assets/2022-krematorium/zeddownleft.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.7,
+            "enterDuration": 0.28,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          },
+          {
+            "name": "zed-map",
+            "src": "./assets/2022-krematorium/zedmap.jpg",
+            "displayWidthRatio": 0.46,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 640,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.34,
+            "enterDuration": 0.42,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-pohled-a",
+        "page": 14,
+        "objects": [
+          {
+            "name": "pohled-d",
+            "src": "./assets/2022-krematorium/pohledd.jpg",
+            "displayWidthRatio": 0.96,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "krematorium-site-split",
+        "page": 15,
+        "objects": [
+          {
+            "name": "parkoviste-left",
+            "src": "./assets/2022-krematorium/parkovisteleft.jpg",
+            "displayWidthRatio": 0.48,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -720,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 1
+          },
+          {
+            "name": "parkoviste-right",
+            "src": "./assets/2022-krematorium/parkovisteright.jpg",
+            "displayWidthRatio": 0.48,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 720,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "zIndex": 2
+          }
+        ]
+      }
+    ],
+    "projectType": "Individual project",
+    "projectTeam": [
+      "BC. ZUZANA PURMOVÁ"
+    ],
+    "studioName": "Atelier Sitta - Chmelová, FA ČVUT v Praze",
+    "selectorLabel": "Kladno Krematorium"
+  },
+  {
+    "title": "CONCEPT OF SEMNĚVICE LANDSCAPE",
+    "category": "Group project",
+    "location": "Semněvice, CZ",
+    "year": 2023,
+    "description": "Landscape concept for Semněvice based on a multi-layer territorial analysis.",
+    "annotation": "Based on a detailed analysis of the landscape of Semněvice, a vision for the area was proposed — SemněVISION, and a Landscape Concept of Semněvice was prepared. It aims to grasp the landscape comprehensively as a whole, to establish principles and methods of rational and sustainable use and interventions so that it would prosper and people would live well in it. The landscape concept was elaborated in detail in four layers based on the needs and problems of the Semněvice landscape: the road network, the intramural area, agriculture and the water regime. This team project is followed by individual projects developing the following layers: THE LANDSCAPE AROUND SEMNĚVICE, Through the Village Under the Hillage, WATER FLOW, Heart of Semněvice, AGRI-SEMNĚ-CULTURE, REWATERIZATION, OUT-WATERING.",
+    "pdfFile": "./semevice_2023.pdf",
+    "pdfPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "scenes": [
+      {
+        "type": "annotation",
+        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nCONCEPT OF SEMNĚVICE LANDSCAPE\n\nTYPE OF PROJECT\nGroup project\nBC. DENISA MORAVCOVÁ, BC. ZUZANA PURMOVÁ,\nING. ARCH. DANIELA KVAPILOVÁ, BC. MARTINA GRUNTOVÁ\n\nSTUDIO\nStudio Salzmann\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "supportingText": "Based on a detailed analysis of the landscape of Semněvice, a vision for the area was proposed — SemněVISION, and a Landscape Concept of Semněvice was prepared. It aims to grasp the landscape comprehensively as a whole, to establish principles and methods of rational and sustainable use and interventions so that it would prosper and people would live well in it. The landscape concept was elaborated in detail in four layers based on the needs and problems of the Semněvice landscape: the road network, the intramural area, agriculture and the water regime. This team project is followed by individual projects developing the following layers: THE LANDSCAPE AROUND SEMNĚVICE, Through the Village Under the Hillage, WATER FLOW, Heart of Semněvice, AGRI-SEMNĚ-CULTURE, REWATERIZATION, OUT-WATERING.",
+        "page": 1
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 1,
+        "objects": [
+          {
+            "name": "semnevice-cover",
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.01,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 2,
+        "objects": [
+          {
+            "name": "semnevice-uvod-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-uvod-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 3,
+        "objects": [
+          {
+            "name": "semnevice-spadove-oblasti-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-spadove-oblasti-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 4,
+        "objects": [
+          {
+            "name": "semnevice-relief-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-relief-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 5,
+        "objects": [
+          {
+            "name": "semnevice-topografie-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-topografie-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 6,
+        "objects": [
+          {
+            "name": "semnevice-vodni-rezim-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-vodni-rezim-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 7,
+        "objects": [
+          {
+            "name": "semnevice-vodni-toky-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-vodni-toky-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 8,
+        "objects": [
+          {
+            "name": "semnevice-voda-relief-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-voda-relief-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 9,
+        "objects": [
+          {
+            "name": "semnevice-zasahy-do-vodniho-rezimu-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-zasahy-do-vodniho-rezimu-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 10,
+        "objects": [
+          {
+            "name": "semnevice-eroze-pudy-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-eroze-pudy-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 11,
+        "objects": [
+          {
+            "name": "semnevice-eroze-podlozi-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-eroze-podlozi-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 12,
+        "objects": [
+          {
+            "name": "semnevice-eroze-pudy-vetrem-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-eroze-pudy-vetrem-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 13,
+        "objects": [
+          {
+            "name": "semnevice-horninove-podlozi-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-horninove-podlozi-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 14,
+        "objects": [
+          {
+            "name": "semnevice-puda-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-puda-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 15,
+        "objects": [
+          {
+            "name": "semnevice-landuse-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-landuse-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 16,
+        "objects": [
+          {
+            "name": "semnevice-klima-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-klima-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 17,
+        "objects": [
+          {
+            "name": "semnevice-biodiverzita-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-biodiverzita-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 18,
+        "objects": [
+          {
+            "name": "semnevice-soucasny-stav-left-text",
+            "crop": [
+              0.03,
+              0.03,
+              0.29,
+              0.86
+            ],
+            "displayWidthRatio": 0.29,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-soucasny-stav-right-text",
+            "crop": [
+              0.335,
+              0.22,
+              0.295,
+              0.285
+            ],
+            "displayWidthRatio": 0.29,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ],
+        "photos": [
+          {
+            "src": "./assets/2023-semnevice/soucasny-stav/soucasny-stav-photo-01.jpg",
+            "alt": "Současný stav — bowling do kopce 1",
+            "caption": "bowling do kopce"
+          },
+          {
+            "src": "./assets/2023-semnevice/soucasny-stav/soucasny-stav-photo-02.jpg",
+            "alt": "Současný stav — bowling do kopce 2",
+            "caption": "bowling do kopce"
+          },
+          {
+            "src": "./assets/2023-semnevice/soucasny-stav/soucasny-stav-photo-03.jpg",
+            "alt": "Současný stav — Pocinovický nohejbalový turnaj",
+            "caption": "Pocinovický nohejbalový turnaj"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 19,
+        "objects": [
+          {
+            "name": "semnevice-majetkopravni-vztahy-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-majetkopravni-vztahy-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 20,
+        "objects": [
+          {
+            "name": "semnevice-dopravni-infrastruktura-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-dopravni-infrastruktura-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 21,
+        "objects": [
+          {
+            "name": "semnevice-limity-v-uzemi-prirodni-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-limity-v-uzemi-prirodni-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 22,
+        "objects": [
+          {
+            "name": "semnevice-limity-v-uzemi-antropogeni-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-limity-v-uzemi-antropogeni-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 23,
+        "objects": [
+          {
+            "name": "semnevice-semnevice-sidla-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-semnevice-sidla-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 24,
+        "objects": [
+          {
+            "name": "semnevice-pocinovice-slovice-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-pocinovice-slovice-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 25,
+        "objects": [
+          {
+            "name": "semnevice-vyznamne-cenne-prvky-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-vyznamne-cenne-prvky-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 26,
+        "objects": [
+          {
+            "name": "semnevice-nasima-ocima-header",
+            "crop": [
+              0,
+              0,
+              1,
+              0.2
+            ],
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "photos": [
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/nase-oci-01.jpg",
+            "alt": "Semněvice našima očima 1",
+            "caption": "Západní výhled na Sedmihoří a dále na Šumavu."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/nase-oci-02.jpg",
+            "alt": "Semněvice našima očima 2",
+            "caption": "Pohled na Semněvice ze západní strany z výšin balíků."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/nase-oci-03.jpg",
+            "alt": "Semněvice našima očima 3",
+            "caption": "Nezpevněná cesta později protínající les, v dáli je patrná Ostromeč."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/nase-oci-04.jpg",
+            "alt": "Semněvice našima očima 4",
+            "caption": "Atmosféra vesnické zástavby, protkána sítí elektrického vedení, ve středu dominanta kostela. Foceno z návsi Semněvic."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/nase-oci-05.jpg",
+            "alt": "Semněvice našima očima 5",
+            "caption": "Pohled na Semněvice z východní strany."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/nase-oci-06.jpg",
+            "alt": "Semněvice našima očima 6",
+            "caption": "Rybník v Semněvicích."
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 27,
+        "objects": [
+          {
+            "name": "semnevice-v-detailu-header",
+            "crop": [
+              0,
+              0,
+              1,
+              0.2
+            ],
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "photos": [
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-01.jpg",
+            "alt": "Semněvice v detailu 1",
+            "caption": "Hrnečky ve Šlovicích."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-02.jpg",
+            "alt": "Semněvice v detailu 2",
+            "caption": "Studna v Semněvicích."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-03.jpg",
+            "alt": "Semněvice v detailu 3",
+            "caption": "„Zelená střecha“ v Pocinovicích."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-04.jpg",
+            "alt": "Semněvice v detailu 4",
+            "caption": "Cesta ke hřbitovu, díky aleji viditelně posunuta vpravo."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-05.jpg",
+            "alt": "Semněvice v detailu 5",
+            "caption": "Sluneční hodiny na kapličce v Pocinovicích."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-06.jpg",
+            "alt": "Semněvice v detailu 6",
+            "caption": "Stromy lemující lesní cestu porostlé choroši, v dáli Ostromeč."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-07.jpg",
+            "alt": "Semněvice v detailu 7",
+            "caption": "Stará živá kamenná zídka v Semněvicích."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/detailu-08.jpg",
+            "alt": "Semněvice v detailu 8",
+            "caption": "Zarostlý meliorační příkop."
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 28,
+        "objects": [
+          {
+            "name": "semnevice-pozitiva-header",
+            "crop": [
+              0,
+              0,
+              1,
+              0.2
+            ],
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "photos": [
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/pozitiva-01.jpg",
+            "alt": "Pozitiva 1",
+            "caption": "Cenný biotop, Semněvice."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/pozitiva-02.jpg",
+            "alt": "Pozitiva 2",
+            "caption": "Malebné a upravené okolí."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/pozitiva-03.jpg",
+            "alt": "Pozitiva 3",
+            "caption": "Luční a lesní plochy, výhledy na Sedmihoří."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/pozitiva-04.jpg",
+            "alt": "Pozitiva 4",
+            "caption": "Kostel ve vesnici Semněvice."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/pozitiva-05.jpg",
+            "alt": "Pozitiva 5",
+            "caption": "Jeden z mnoha křížků v obci ve velice dobrém stavu."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/pozitiva-06.jpg",
+            "alt": "Pozitiva 6",
+            "caption": "Snaha o zadržování vody místními."
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 29,
+        "objects": [
+          {
+            "name": "semnevice-negativa-header",
+            "crop": [
+              0,
+              0,
+              1,
+              0.2
+            ],
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "photos": [
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-01.jpg",
+            "alt": "Negativa 1",
+            "caption": "Krajina bez vody."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-02.jpg",
+            "alt": "Negativa 2",
+            "caption": "Hřbitov bez stromů."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-03.jpg",
+            "alt": "Negativa 3",
+            "caption": "Asfaltová cesta bez alejí a v okolí rozsáhlá pole."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-04.jpg",
+            "alt": "Negativa 4",
+            "caption": "Neudržované bytové domy, nepořádek v jejich okolí."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-05.jpg",
+            "alt": "Negativa 5",
+            "caption": "Stav vody ve Šlovicích."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-06.jpg",
+            "alt": "Negativa 6",
+            "caption": "Rozlehlé polní lány v obci."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-07.jpg",
+            "alt": "Negativa 7",
+            "caption": "Staré neudržované stavby ve špatném stavu, vpravo fasáda kostela."
+          },
+          {
+            "src": "./assets/2023-semnevice/visualni-vnimani/negativa-08.jpg",
+            "alt": "Negativa 8",
+            "caption": "Nedodržení charakteru zástavby důsledkem chybějících regulativů."
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 30,
+        "objects": [
+          {
+            "name": "semnevice-dejiny-header",
+            "crop": [
+              0,
+              0,
+              1,
+              0.56
+            ],
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 30,
+        "objects": [
+          {
+            "name": "semnevice-dejiny-legendy-text",
+            "src": "./assets/2023-semnevice/historie/dejiny-legendy-text.jpg",
+            "displayWidthRatio": 0.52,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-dejiny-masopust-photo",
+            "src": "./assets/2023-semnevice/historie/dejiny-masopust-1936.jpg",
+            "displayWidthRatio": 0.28,
+            "caption": "fotografie: masopustní veselí kolem roku 1936",
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 31,
+        "objects": [
+          {
+            "name": "semnevice-historicka-fotodokumentace-header",
+            "crop": [
+              0,
+              0,
+              1,
+              0.22
+            ],
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "photos": [
+          {
+            "src": "./assets/2023-semnevice/historie/historicka-foto-01.jpg",
+            "alt": "Historická fotodokumentace 1",
+            "caption": "Semněvice - náves; nedatováno"
+          },
+          {
+            "src": "./assets/2023-semnevice/historie/historicka-foto-02.jpg",
+            "alt": "Historická fotodokumentace 2",
+            "caption": "Semněvice - náves, fotografován nejspíše z kostelní věže; nedatováno"
+          },
+          {
+            "src": "./assets/2023-semnevice/historie/historicka-foto-03.jpg",
+            "alt": "Historická fotodokumentace 3",
+            "caption": "Pocinovice - Artur Klein - prodej uhlí; nedatováno"
+          },
+          {
+            "src": "./assets/2023-semnevice/historie/historicka-foto-04.jpg",
+            "alt": "Historická fotodokumentace 4",
+            "caption": "Pocinovice - čp. 29; nedatováno"
+          },
+          {
+            "src": "./assets/2023-semnevice/historie/historicka-foto-05.jpg",
+            "alt": "Historická fotodokumentace 5",
+            "caption": "Šlovice - rybník na návsi; 1937"
+          },
+          {
+            "src": "./assets/2023-semnevice/historie/historicka-foto-06.jpg",
+            "alt": "Historická fotodokumentace 6",
+            "caption": "Semněvice - centrum s kostelem; 1921"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "history-kostel",
+        "page": 31,
+        "objects": [
+          {
+            "name": "kostel-sv-jiri-photo",
+            "src": "./assets/2023-semnevice/historie/kostel-sv-jiri-1915.jpg",
+            "displayWidthRatio": 0.25,
+            "caption": "KOSTEL SV. JIŘÍ; kolem roku 1915",
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -360,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "kostel-sv-jiri-description",
+            "text": "Stavbu s polygonálním závěrem zaklenutým žebrovou klenbou a osvětleným zčásti ještě gotickými okny doplňuje vyosená mohutná hranolová věž. Gotická loď byla před rokem 1757 prodloužena, nově sklenuta a doplněna nástropními malbami od horšovskotýnského malíře A. Krause. Vnitřní zařízení je barokní z poloviny 18. století. Při rozsáhlých opravách kostela v letech 1993-1995 byla zpevněna staticky narušená věž a překryta střecha.",
+            "displayWidthRatio": 0.29,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 140,
+              "scale": 0.93,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.48,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 32,
+        "objects": [
+          {
+            "name": "semnevice-historicky-vyvoj-ii-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-historicky-vyvoj-ii-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 33,
+        "objects": [
+          {
+            "name": "semnevice-historicky-vyvoj-indikacni-skici-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-historicky-vyvoj-indikacni-skici-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 34,
+        "objects": [
+          {
+            "name": "semnevice-historicky-vyvoj-iii-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-historicky-vyvoj-iii-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 35,
+        "objects": [
+          {
+            "name": "semnevice-historicky-vyvoj-souhrnne-porovnani-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-historicky-vyvoj-souhrnne-porovnani-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 36,
+        "objects": [
+          {
+            "name": "semnevice-historicky-vyvoj-ortofotomapa-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-historicky-vyvoj-ortofotomapa-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 37,
+        "objects": [
+          {
+            "name": "semnevice-swot-s-w-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-swot-s-w-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 38,
+        "objects": [
+          {
+            "name": "semnevice-swot-o-t-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "semnevice-swot-o-t-map",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      }
+    ],
+    "projectType": "Group project",
+    "projectTeam": [
+      "BC. DENISA MORAVCOVÁ",
+      "BC. ZUZANA PURMOVÁ",
+      "ING. ARCH. DANIELA KVAPILOVÁ",
+      "BC. MARTINA GRUNTOVÁ"
+    ],
+    "studioName": "Studio Salzmann",
+    "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+    "selectorLabel": "CONCEPT OF SEMNĚVICE LANDSCAPE"
+  },
+  {
+    "title": "GARDEN IN STŘEŠOVICE",
+    "category": "Garden Design",
+    "location": "Prague-Střešovice, CZ",
+    "year": 2023,
+    "description": "Redevelopment design of a steep family-house garden in Prague's Střešovice district.",
+    "annotation": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project's plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
+    "pdfFile": "./zahradavesvahu2023.pdf",
+    "pdfPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "scenes": [
+      {
+        "type": "annotation",
+        "supportingText": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project's plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
+        "page": 1
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 1,
+        "objects": [
+          {
+            "name": "zahrada-starting-scene",
+            "src": "./assets/2023-zahrada/1.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-documentation",
+        "page": 2,
+        "objects": [
+          {
+            "name": "zahrada-detail-left",
+            "src": "./assets/2023-zahrada/2left.jpg",
+            "displayWidthRatio": 0.32,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-detail-right-top",
+            "src": "./assets/2023-zahrada/2righttop.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-detail-right-down",
+            "src": "./assets/2023-zahrada/2rightdown.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-two-column",
+        "page": 3,
+        "objects": [
+          {
+            "name": "zahrada-scene-3-left",
+            "src": "./assets/2023-zahrada/3left.jpg",
+            "displayWidthRatio": 0.32,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-3-right",
+            "src": "./assets/2023-zahrada/3right.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-documentation",
+        "page": 4,
+        "objects": [
+          {
+            "name": "zahrada-scene-4-left",
+            "src": "./assets/2023-zahrada/4left.jpg",
+            "displayWidthRatio": 0.32,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-4-right-top",
+            "src": "./assets/2023-zahrada/4righttop.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-4-right-down",
+            "src": "./assets/2023-zahrada/4rightdown.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-two-column",
+        "page": 5,
+        "objects": [
+          {
+            "name": "zahrada-scene-5-left",
+            "src": "./assets/2023-zahrada/5left.jpg",
+            "displayWidthRatio": 0.42,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-5-right",
+            "src": "./assets/2023-zahrada/5right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "compact": true,
+        "photos": [
+          {
+            "src": "./assets/2023-zahrada/5.1.jpg",
+            "alt": "Garden in Střešovice detail 5.1"
+          },
+          {
+            "src": "./assets/2023-zahrada/5.2.jpg",
+            "alt": "Garden in Střešovice detail 5.2"
+          },
+          {
+            "src": "./assets/2023-zahrada/5.3.jpg",
+            "alt": "Garden in Střešovice detail 5.3"
+          },
+          {
+            "src": "./assets/2023-zahrada/5.4.jpg",
+            "alt": "Garden in Střešovice detail 5.4"
+          },
+          {
+            "src": "./assets/2023-zahrada/5.5.jpg",
+            "alt": "Garden in Střešovice detail 5.5"
+          },
+          {
+            "src": "./assets/2023-zahrada/5.6.jpg",
+            "alt": "Garden in Střešovice detail 5.6"
+          },
+          {
+            "src": "./assets/2023-zahrada/5.8.jpg",
+            "alt": "Garden in Střešovice detail 5.8"
+          },
+          {
+            "src": "./assets/2023-zahrada/5.9.jpg",
+            "alt": "Garden in Střešovice detail 5.9"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-two-column",
+        "page": 6,
+        "objects": [
+          {
+            "name": "zahrada-scene-6-left",
+            "src": "./assets/2023-zahrada/6left.jpg",
+            "displayWidthRatio": 0.32,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-6-right",
+            "src": "./assets/2023-zahrada/6right.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-two-column",
+        "page": 7,
+        "objects": [
+          {
+            "name": "zahrada-scene-7-left",
+            "src": "./assets/2023-zahrada/7left.jpg",
+            "displayWidthRatio": 0.42,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-7-right",
+            "src": "./assets/2023-zahrada/7right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "compact": true,
+        "photos": [
+          {
+            "src": "./assets/2023-zahrada/7.7.jpg",
+            "alt": "Garden in Střešovice detail 7.7"
+          },
+          {
+            "src": "./assets/2023-zahrada/7.8.jpg",
+            "alt": "Garden in Střešovice detail 7.8"
+          },
+          {
+            "src": "./assets/2023-zahrada/7.9.jpg",
+            "alt": "Garden in Střešovice detail 7.9"
+          },
+          {
+            "src": "./assets/2023-zahrada/7.10.jpg",
+            "alt": "Garden in Střešovice detail 7.10"
+          },
+          {
+            "src": "./assets/2023-zahrada/7.11.jpg",
+            "alt": "Garden in Střešovice detail 7.11"
+          },
+          {
+            "src": "./assets/2023-zahrada/7.12.jpg",
+            "alt": "Garden in Střešovice detail 7.12"
+          },
+          {
+            "src": "./assets/2023-zahrada/7.13.jpg",
+            "alt": "Garden in Střešovice detail 7.13"
+          },
+          {
+            "src": "./assets/2023-zahrada/7.17.jpg",
+            "alt": "Garden in Střešovice detail 7.17"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-two-column",
+        "page": 8,
+        "objects": [
+          {
+            "name": "zahrada-scene-8-left",
+            "src": "./assets/2023-zahrada/8left.jpg",
+            "displayWidthRatio": 0.42,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-8-right",
+            "src": "./assets/2023-zahrada/8right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-documentation",
+        "page": 9,
+        "objects": [
+          {
+            "name": "zahrada-scene-9-left",
+            "src": "./assets/2023-zahrada/9left.jpg",
+            "displayWidthRatio": 0.32,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-9-right-top",
+            "src": "./assets/2023-zahrada/9righttop.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-9-right-down",
+            "src": "./assets/2023-zahrada/9rightdown.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 120,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-two-column",
+        "page": 10,
+        "objects": [
+          {
+            "name": "zahrada-scene-10-left",
+            "src": "./assets/2023-zahrada/10left.jpg",
+            "displayWidthRatio": 0.32,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-10-right",
+            "src": "./assets/2023-zahrada/10right.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-four-grid",
+        "page": 11,
+        "objects": [
+          {
+            "name": "zahrada-scene-11-top-left",
+            "src": "./assets/2023-zahrada/11topleft.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-11-top-right",
+            "src": "./assets/2023-zahrada/11topright.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-11-down-left",
+            "src": "./assets/2023-zahrada/11downleft.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 520,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-11-down-right",
+            "src": "./assets/2023-zahrada/11downright.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 520,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.24,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-four-grid",
+        "page": 12,
+        "objects": [
+          {
+            "name": "zahrada-scene-12-top-left",
+            "src": "./assets/2023-zahrada/12topleft.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-12-top-right",
+            "src": "./assets/2023-zahrada/12topright.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-12-down-left",
+            "src": "./assets/2023-zahrada/12downleft.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 520,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-12-down-right",
+            "src": "./assets/2023-zahrada/12downright.jpg",
+            "displayWidthRatio": 0.45,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 520,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.24,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 13,
+        "objects": [
+          {
+            "name": "zahrada-scene-13",
+            "src": "./assets/2023-zahrada/13.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "zahrada-left-stack",
+        "page": 14,
+        "objects": [
+          {
+            "name": "zahrada-scene-14-left",
+            "src": "./assets/2023-zahrada/14left.jpg",
+            "displayWidthRatio": 0.32,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-14-top-right",
+            "src": "./assets/2023-zahrada/14topright.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-14-mid-right",
+            "src": "./assets/2023-zahrada/14midright.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.18,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "zahrada-scene-14-down-right",
+            "src": "./assets/2023-zahrada/14downright.jpg",
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.28,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 15,
+        "objects": [
+          {
+            "name": "zahrada-scene-15",
+            "src": "./assets/2023-zahrada/15.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.52,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      }
+    ],
+    "projectType": "Individual project",
+    "projectTeam": [
+      "BC. ZUZANA PURMOVÁ"
+    ],
+    "studioName": "Studio Sitta",
+    "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
+    "selectorLabel": "GARDEN IN STŘEŠOVICE"
+  }
+]

@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Year View</title>
     <meta name="description" content="Year-based project view with scroll-driven PDF visuals." />
-    <link rel="stylesheet" href="./styles.css?v=2026-05-22-selected-project-load" />
+    <link rel="stylesheet" href="./styles.css?v=2026-05-23-page-continuity" />
   </head>
   <body>
     <header class="site-header container">
       <a class="back-link" href="./index.html">← Back to years</a>
-      <p class="brand">Zuzana Purmova</p>
-      <p class="tagline">Architecture Portfolio</p>
-      <h1 id="yearHeading" class="year-heading">Year</h1>
+      <div class="header-identity">
+        <div class="brand-block">
+          <p class="brand">Zuzana Purmova</p>
+          <p class="tagline">Architecture Portfolio</p>
+        </div>
+        <h1 id="yearHeading" class="year-heading">Year</h1>
+      </div>
     </header>
 
     <main class="container">
       <section id="projectSelectorSection" class="year-selector is-hidden">
-        <h2>Projects</h2>
+        <div class="selector-header">
+          <h2>Projects</h2>
+        </div>
         <div id="projectPicker" class="year-picker" aria-label="Project selector"></div>
       </section>
 
@@ -46,6 +52,6 @@
       <p>© <span id="year"></span> Zuzana Purmova</p>
     </footer>
 
-    <script src="./year.js?v=2026-05-22-selected-project-load" type="module"></script>
+    <script src="./year.js?v=2026-05-23-page-continuity" type="module"></script>
   </body>
 </html>

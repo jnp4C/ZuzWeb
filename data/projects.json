@@ -1007,16 +1007,3162 @@
     ]
   },
   {
-    "title": "Riverside Housing Cluster",
-    "category": "Residential",
-    "location": "Prague, CZ",
+    "title": "ABSTRACT.",
+    "category": "Urban Design",
+    "location": "Lund, SE",
     "year": 2025,
-    "description": "Multi-block housing with shared gardens and timber facades designed for low operational energy.",
-    "pdfPages": [
-      10,
-      11,
-      12
-    ]
+    "description": "Urban tissue shaped through abstraction from the landscape, centered around a hilltop community center and pedestrian axes.",
+    "annotation": "The aim of the design was to emerge from the landscape. This was accomplished through a process of abstraction—extracting the essential elements and using them as the foundation for the work, ensuring a relation to the place. The created urban tissue is shaped as an interpretation of the landscape, for it to make the place more readable for its visitors, fostering a deeper emotional connection. Centralized to the top of the hill with a community center, the two axes continue as pedestrian streets, referring to the main street in the old city center. Important was the usage of the partly opened block, with apartment buildings on the edges and row-houses in the middle. Therefore, the sun exposure and sheltering from the wind is achieved, as well as the cosy courtyards creating communities.",
+    "scenes": [
+      {
+        "type": "annotation",
+        "text": "NAME OF PROJECT\nABSTRACT.\n\nTYPE OF PROJECT\nIndividual project\n\nUNIVERSITY NAME\nLund University\n\nSUPERVISOR'S NAME\nTeresa Arana Aristi, Andreas Olsson",
+        "supportingText": "The aim of the design was to emerge from the landscape. This was accomplished through a process of abstraction—extracting the essential elements and using them as the foundation for the work, ensuring a relation to the place. The created urban tissue is shaped as an interpretation of the landscape, for it to make the place more readable for its visitors, fostering a deeper emotional connection. Centralized to the top of the hill with a community center, the two axes continue as pedestrian streets, referring to the main street in the old city center. Important was the usage of the partly opened block, with apartment buildings on the edges and row-houses in the middle. Therefore, the sun exposure and sheltering from the wind is achieved, as well as the cosy courtyards creating communities."
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-start",
+        "startLineRatio": 0.86,
+        "travelRatio": 0.95,
+        "objects": [
+          {
+            "name": "abstract-scene-1-top-left",
+            "src": "./assets/2025-abstract/1topleft.jpg",
+            "displayWidthRatio": 0.451,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 540,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-1-top-right",
+            "src": "./assets/2025-abstract/1topright.jpg",
+            "displayWidthRatio": 0.549,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 540,
+              "y": 560,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.06,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-1-mid-left",
+            "src": "./assets/2025-abstract/1midleft.jpg",
+            "displayWidthRatio": 0.451,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 780,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.18,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-1-down-left",
+            "src": "./assets/2025-abstract/1downleft.jpg",
+            "displayWidthRatio": 0.451,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 820,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.3,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-1-down-right",
+            "src": "./assets/2025-abstract/1downright.jpg",
+            "displayWidthRatio": 0.549,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 860,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.42,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-left-one-right",
+        "objects": [
+          {
+            "name": "abstract-scene-2-top-left",
+            "src": "./assets/2025-abstract/2topleft.jpg",
+            "displayWidthRatio": 0.305,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.72,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-2-down-left",
+            "src": "./assets/2025-abstract/2downleft.jpg",
+            "displayWidthRatio": 0.305,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 820,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.12,
+            "enterDuration": 0.72,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-2-right",
+            "src": "./assets/2025-abstract/2right.jpg",
+            "displayWidthRatio": 0.695,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 880,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.24,
+            "enterDuration": 0.72,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-top-one-down",
+        "objects": [
+          {
+            "name": "abstract-scene-3-top-left",
+            "src": "./assets/2025-abstract/3topleft.jpg",
+            "displayWidthRatio": 0.42,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-3-top-right",
+            "src": "./assets/2025-abstract/3topright.jpeg",
+            "displayWidthRatio": 0.36,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-3-down",
+            "src": "./assets/2025-abstract/3down.jpeg",
+            "displayWidthRatio": 0.86,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 680,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.22,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-top-one-down",
+        "objects": [
+          {
+            "name": "abstract-scene-4-top-left",
+            "src": "./assets/2025-abstract/4topleft.jpeg",
+            "displayWidthRatio": 0.39,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-4-top-right",
+            "src": "./assets/2025-abstract/4topright.jpeg",
+            "displayWidthRatio": 0.41,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-4-down",
+            "src": "./assets/2025-abstract/4down.jpeg",
+            "displayWidthRatio": 0.86,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 680,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.22,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-top-one-down",
+        "objects": [
+          {
+            "name": "abstract-scene-5-top-left",
+            "src": "./assets/2025-abstract/5topleft.jpeg",
+            "displayWidthRatio": 0.39,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-5-top-right",
+            "src": "./assets/2025-abstract/5topright.jpeg",
+            "displayWidthRatio": 0.41,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-5-down",
+            "src": "./assets/2025-abstract/5down.jpeg",
+            "displayWidthRatio": 0.86,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 680,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.22,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-three-left-one-right",
+        "objects": [
+          {
+            "name": "abstract-scene-6-top-left",
+            "src": "./assets/2025-abstract/6topleft.jpeg",
+            "displayWidthRatio": 0.25,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -460,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-6-mid-left",
+            "src": "./assets/2025-abstract/6midleft.jpeg",
+            "displayWidthRatio": 0.25,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -460,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.12,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-6-down-left",
+            "src": "./assets/2025-abstract/6downleft.jpeg",
+            "displayWidthRatio": 0.25,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 640,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.24,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-6-right",
+            "src": "./assets/2025-abstract/6right.jpeg",
+            "displayWidthRatio": 0.56,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.1,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-left-one-right",
+        "objects": [
+          {
+            "name": "abstract-scene-7-top-left",
+            "src": "./assets/2025-abstract/7topleft.png",
+            "displayWidthRatio": 0.322,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -460,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-7-down-left",
+            "src": "./assets/2025-abstract/7downleft.png",
+            "displayWidthRatio": 0.322,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 640,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-7-right",
+            "src": "./assets/2025-abstract/7right.png",
+            "displayWidthRatio": 0.678,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-left-one-right",
+        "objects": [
+          {
+            "name": "abstract-scene-8-top-left",
+            "src": "./assets/2025-abstract/8topleft.png",
+            "displayWidthRatio": 0.325,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -460,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-8-down-left",
+            "src": "./assets/2025-abstract/8downleft.png",
+            "displayWidthRatio": 0.325,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 640,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-8-right",
+            "src": "./assets/2025-abstract/8right.png",
+            "displayWidthRatio": 0.675,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-three-horizontal",
+        "objects": [
+          {
+            "name": "abstract-scene-9-top",
+            "src": "./assets/2025-abstract/9top.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 620,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-9-mid",
+            "src": "./assets/2025-abstract/9mid.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 700,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.12,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-9-down",
+            "src": "./assets/2025-abstract/9down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 780,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.24,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-left-one-right",
+        "objects": [
+          {
+            "name": "abstract-scene-10-top-left",
+            "src": "./assets/2025-abstract/10topleft.png",
+            "displayWidthRatio": 0.331,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -460,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-10-down-left",
+            "src": "./assets/2025-abstract/10downleft.png",
+            "displayWidthRatio": 0.331,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 640,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.16,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-10-right",
+            "src": "./assets/2025-abstract/10right.png",
+            "displayWidthRatio": 0.669,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-column",
+        "objects": [
+          {
+            "name": "abstract-scene-11-left",
+            "src": "./assets/2025-abstract/11left.png",
+            "displayWidthRatio": 0.538,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-11-right",
+            "src": "./assets/2025-abstract/11right.png",
+            "displayWidthRatio": 0.462,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-column",
+        "objects": [
+          {
+            "name": "abstract-scene-12-left",
+            "src": "./assets/2025-abstract/12left.png",
+            "displayWidthRatio": 0.602,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-12-right",
+            "src": "./assets/2025-abstract/12right.png",
+            "displayWidthRatio": 0.398,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-column",
+        "objects": [
+          {
+            "name": "abstract-scene-13-left",
+            "src": "./assets/2025-abstract/13left.png",
+            "displayWidthRatio": 0.571,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-13-right",
+            "src": "./assets/2025-abstract/13right.png",
+            "displayWidthRatio": 0.429,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "abstract-two-column",
+        "objects": [
+          {
+            "name": "abstract-scene-14-left",
+            "src": "./assets/2025-abstract/14left.png",
+            "displayWidthRatio": 0.538,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "abstract-scene-14-right",
+            "src": "./assets/2025-abstract/14right.png",
+            "displayWidthRatio": 0.462,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "objects": [
+          {
+            "name": "abstract-scene-15",
+            "src": "./assets/2025-abstract/15.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      }
+    ],
+    "projectType": "Individual project",
+    "universityName": "Lund University",
+    "supervisors": [
+      "Teresa Arana Aristi",
+      "Andreas Olsson"
+    ],
+    "selectorLabel": "ABSTRACT."
+  },
+  {
+    "title": "Steep Garden Realization",
+    "category": "Garden Design",
+    "location": "Prague, Střešovice, CZ",
+    "year": 2024,
+    "description": "Realization of a steep family house garden in Prague's Střešovice district.",
+    "annotation": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project’s plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
+    "scenes": [
+      {
+        "type": "annotation",
+        "text": "NAME OF PROJECT\nSteep Garden Realization\n\nTYPE OF PROJECT\nStudio project, individuale\n\nSTUDIO\nSitta - Chmelová, FA ČVUT v Praze",
+        "supportingText": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project’s plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
+        "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
+        "studioName": "Sitta - Chmelová, FA ČVUT v Praze"
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-2-left",
+            "src": "./assets/2024-realizace-zahrada/2left.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-2-right",
+            "src": "./assets/2024-realizace-zahrada/2right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-3-left",
+            "src": "./assets/2024-realizace-zahrada/3left.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-3-right",
+            "src": "./assets/2024-realizace-zahrada/3right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-4-left",
+            "src": "./assets/2024-realizace-zahrada/4left.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-4-right",
+            "src": "./assets/2024-realizace-zahrada/4right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-5-left",
+            "src": "./assets/2024-realizace-zahrada/5left.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-5-right",
+            "src": "./assets/2024-realizace-zahrada/5right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-single-wide",
+        "objects": [
+          {
+            "name": "realization-scene-6",
+            "src": "./assets/2024-realizace-zahrada/6.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 720,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-top-down",
+        "objects": [
+          {
+            "name": "realization-scene-7-top",
+            "src": "./assets/2024-realizace-zahrada/7top.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 680,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-7-down",
+            "src": "./assets/2024-realizace-zahrada/7down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-8-top-left",
+            "src": "./assets/2024-realizace-zahrada/8topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-8-top-right",
+            "src": "./assets/2024-realizace-zahrada/8topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-8-down",
+            "src": "./assets/2024-realizace-zahrada/8down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-top-down",
+        "objects": [
+          {
+            "name": "realization-scene-9-top",
+            "src": "./assets/2024-realizace-zahrada/9top.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 680,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-9-down",
+            "src": "./assets/2024-realizace-zahrada/9down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-10-top-left",
+            "src": "./assets/2024-realizace-zahrada/10topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-10-top-right",
+            "src": "./assets/2024-realizace-zahrada/10topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-10-down",
+            "src": "./assets/2024-realizace-zahrada/10down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-11-top-left",
+            "src": "./assets/2024-realizace-zahrada/11topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-11-top-right",
+            "src": "./assets/2024-realizace-zahrada/11topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-11-down",
+            "src": "./assets/2024-realizace-zahrada/11down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-12-top-left",
+            "src": "./assets/2024-realizace-zahrada/12topleft.jpg",
+            "displayWidthRatio": 0.824,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-12-top-right",
+            "src": "./assets/2024-realizace-zahrada/12topright.jpg",
+            "displayWidthRatio": 0.176,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-12-down",
+            "src": "./assets/2024-realizace-zahrada/12down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-single-wide-351",
+        "objects": [
+          {
+            "name": "realization-scene-13",
+            "src": "./assets/2024-realizace-zahrada/13.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 720,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "objects": [
+          {
+            "name": "realization-scene-14",
+            "src": "./assets/2024-realizace-zahrada/14.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 760,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-15-top-left",
+            "src": "./assets/2024-realizace-zahrada/15topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-15-top-right",
+            "src": "./assets/2024-realizace-zahrada/15topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-15-down",
+            "src": "./assets/2024-realizace-zahrada/15down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-single-wide-306",
+        "objects": [
+          {
+            "name": "realization-scene-16",
+            "src": "./assets/2024-realizace-zahrada/16.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 720,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-17-top-left",
+            "src": "./assets/2024-realizace-zahrada/17topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-17-top-right",
+            "src": "./assets/2024-realizace-zahrada/17topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-17-down",
+            "src": "./assets/2024-realizace-zahrada/17down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-single-wide-513",
+        "objects": [
+          {
+            "name": "realization-scene-18",
+            "src": "./assets/2024-realizace-zahrada/18.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 720,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-19-top-left",
+            "src": "./assets/2024-realizace-zahrada/19topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-19-top-right",
+            "src": "./assets/2024-realizace-zahrada/19topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-19-down",
+            "src": "./assets/2024-realizace-zahrada/19down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-20-top-left",
+            "src": "./assets/2024-realizace-zahrada/20topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-20-top-right",
+            "src": "./assets/2024-realizace-zahrada/20topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-20-down",
+            "src": "./assets/2024-realizace-zahrada/20down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-21-top-left",
+            "src": "./assets/2024-realizace-zahrada/21topleft.jpg",
+            "displayWidthRatio": 0.823,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-21-top-right",
+            "src": "./assets/2024-realizace-zahrada/21topright.jpg",
+            "displayWidthRatio": 0.177,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-21-down",
+            "src": "./assets/2024-realizace-zahrada/21down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-22-left",
+            "src": "./assets/2024-realizace-zahrada/22left.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-22-right",
+            "src": "./assets/2024-realizace-zahrada/22right.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-even-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-23-top-left",
+            "src": "./assets/2024-realizace-zahrada/23topleft.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-23-top-right",
+            "src": "./assets/2024-realizace-zahrada/23topright.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-23-down",
+            "src": "./assets/2024-realizace-zahrada/23down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-top-down",
+        "objects": [
+          {
+            "name": "realization-scene-24-top",
+            "src": "./assets/2024-realizace-zahrada/24top.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 680,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-24-down",
+            "src": "./assets/2024-realizace-zahrada/24down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-even-top-one-down",
+        "objects": [
+          {
+            "name": "realization-scene-25-top-left",
+            "src": "./assets/2024-realizace-zahrada/25topleft.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-25-top-right",
+            "src": "./assets/2024-realizace-zahrada/25topright.jpg",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-25-down",
+            "src": "./assets/2024-realizace-zahrada/25down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down-26",
+        "objects": [
+          {
+            "name": "realization-scene-26-top-left",
+            "src": "./assets/2024-realizace-zahrada/26topleft.jpg",
+            "displayWidthRatio": 0.7939444911690496,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-26-top-right",
+            "src": "./assets/2024-realizace-zahrada/26topright.jpg",
+            "displayWidthRatio": 0.2060555088309504,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-26-down",
+            "src": "./assets/2024-realizace-zahrada/26down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-one-down-27",
+        "objects": [
+          {
+            "name": "realization-scene-27-top-left",
+            "src": "./assets/2024-realizace-zahrada/27topleft.jpg",
+            "displayWidthRatio": 0.4436026936026936,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-27-top-right",
+            "src": "./assets/2024-realizace-zahrada/27topright.jpg",
+            "displayWidthRatio": 0.5563973063973064,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-27-down",
+            "src": "./assets/2024-realizace-zahrada/27down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-top-28",
+        "objects": [
+          {
+            "name": "realization-scene-28-top-left",
+            "src": "./assets/2024-realizace-zahrada/28topleft.jpg",
+            "displayWidthRatio": 0.415475189234651,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-28-top-right",
+            "src": "./assets/2024-realizace-zahrada/28topright.jpg",
+            "displayWidthRatio": 0.584524810765349,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-full-page",
+        "objects": [
+          {
+            "name": "realization-scene-29",
+            "src": "./assets/2024-realizace-zahrada/29.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 720,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      }
+    ],
+    "projectType": "Studio project, individuale",
+    "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+    "selectorLabel": "STEEP GARDEN REALIZATION",
+    "relatedProjectLink": {
+      "label": "View concept",
+      "href": "./year.html?year=2023&project=garden-in-stresovice"
+    },
+    "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta"
   },
   {
     "title": "City Art Hall Renovation",
@@ -4910,7 +8056,9 @@
       {
         "type": "annotation",
         "supportingText": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project's plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
-        "page": 1
+        "page": 1,
+        "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+        "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta"
       },
       {
         "type": "objects",
@@ -6070,8 +9218,12 @@
     "projectTeam": [
       "BC. ZUZANA PURMOVÁ"
     ],
-    "studioName": "Studio Sitta",
+    "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
-    "selectorLabel": "GARDEN IN STŘEŠOVICE"
+    "selectorLabel": "GARDEN IN STŘEŠOVICE",
+    "relatedProjectLink": {
+      "label": "View realization",
+      "href": "./year.html?year=2024&project=steep-garden-realization"
+    }
   }
 ]

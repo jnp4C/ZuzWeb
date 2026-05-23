@@ -8,15 +8,27 @@
       name="description"
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
-    <link rel="stylesheet" href="./styles.css?v=2026-05-22-selected-project-load" />
+    <link rel="stylesheet" href="./styles.css?v=2026-05-23-page-continuity" />
   </head>
   <body>
     <header class="site-header container">
-      <p class="brand">Zuzana Purmova</p>
-      <p class="tagline">Architecture Portfolio</p>
+      <div class="header-identity">
+        <div class="brand-block">
+          <p class="brand">Zuzana Purmova</p>
+          <p class="tagline">Architecture Portfolio</p>
+        </div>
+      </div>
     </header>
 
     <main class="container">
+      <section class="year-selector">
+        <div class="selector-header">
+          <h2>Select Project Year</h2>
+          <p class="year-selection-status">Choose a year to open that portfolio section.</p>
+        </div>
+        <div id="yearPicker" class="year-picker" aria-label="Project year selector"></div>
+      </section>
+
       <section class="intro">
         <h1>Introduction</h1>
         <p class="intro-copy">
@@ -25,18 +37,12 @@
           through selected designs.
         </p>
       </section>
-
-      <section class="year-selector">
-        <h2>Select Project Year</h2>
-        <div id="yearPicker" class="year-picker" aria-label="Project year selector"></div>
-        <p class="year-selection-status">Choose a year to open that portfolio section.</p>
-      </section>
     </main>
 
     <footer class="site-footer container">
       <p>© <span id="year"></span> Zuzana Purmova</p>
     </footer>
 
-    <script src="./script.js?v=2026-05-21-header-align" type="module"></script>
+    <script src="./script.js?v=2026-05-23-page-continuity" type="module"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 const yearPicker = document.getElementById("yearPicker");
 const yearLabel = document.getElementById("year");
-const DATA_CACHE_VERSION = "2026-05-21-header-align";
+const DATA_CACHE_VERSION = "2026-05-23-abstract-scenes";
 
 function renderYearButtons(projects) {
   const years = [...new Set(projects.map((project) => project.year))].sort((left, right) => right - left);

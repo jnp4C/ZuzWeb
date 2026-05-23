@@ -1,8 +1,8 @@
 import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.min.mjs";
 
 const DEFAULT_PDF_FILE = "./PORTFOLIO_Zuzana-Purmova.pdf";
-const ASSET_CACHE_VERSION = "2026-05-22-selected-project-load";
-const DATA_CACHE_VERSION = "2026-05-22-selected-project-load";
+const ASSET_CACHE_VERSION = "2026-05-23-abstract-scenes";
+const DATA_CACHE_VERSION = "2026-05-23-abstract-scenes";
 const MAX_CANVAS_DEVICE_SCALE = 1;
 const MAX_CANVAS_EDGE = 1800;
 
@@ -61,6 +61,20 @@ function getSelectedYear() {
   return Number.isInteger(parsed) ? parsed : null;
 }
 
+function getSelectedProjectSlug() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("project") || "";
+}
+
+function slugifyProject(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function setProjectText(project) {
   projectYearBadge.textContent = String(project.year);
   projectTitle.textContent = project.title;
@@ -104,24 +118,48 @@ function removeProjectHeaderLabel(text) {
   return text.replace(/^PROJECT HEADER\s*\n+/i, "");
 }
 
-function appendLinkedText(element, text) {
+function appendLinkedText(element, text, linkContext = {}) {
+  const studioName = linkContext.studioName || "";
+  const studioUrl = linkContext.studioUrl || "";
   const urlPattern = /(https?:\/\/[^\s]+)/g;
-  let lastIndex = 0;
-  for (const match of text.matchAll(urlPattern)) {
-    if (match.index > lastIndex) {
-      element.append(document.createTextNode(text.slice(lastIndex, match.index)));
+  const lines = text.split("\n");
+
+  lines.forEach((line, lineIndex) => {
+    if (lineIndex > 0) {
+      element.append(document.createTextNode("\n"));
     }
-    const link = document.createElement("a");
-    link.href = match[0];
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = match[0];
-    element.append(link);
-    lastIndex = match.index + match[0].length;
-  }
-  if (lastIndex < text.length) {
-    element.append(document.createTextNode(text.slice(lastIndex)));
-  }
+
+    if (studioName && studioUrl && line.trim() === studioName) {
+      const link = document.createElement("a");
+      link.href = studioUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = line;
+      element.append(link);
+      return;
+    }
+
+    if (studioUrl && line.trim() === studioUrl) {
+      return;
+    }
+
+    let lastIndex = 0;
+    for (const match of line.matchAll(urlPattern)) {
+      if (match.index > lastIndex) {
+        element.append(document.createTextNode(line.slice(lastIndex, match.index)));
+      }
+      const link = document.createElement("a");
+      link.href = match[0];
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = match[0];
+      element.append(link);
+      lastIndex = match.index + match[0].length;
+    }
+    if (lastIndex < line.length) {
+      element.append(document.createTextNode(line.slice(lastIndex)));
+    }
+  });
 }
 
 function uniquePageNumbers(pageNumbers) {
@@ -274,6 +312,7 @@ function normalizeObjectDefinition(rawObject, objectIndex) {
     enterDuration: rawObject.enterDuration ?? 0.52,
     exitStart: rawObject.exitStart ?? 0.72,
     exitDuration: rawObject.exitDuration ?? 0.28,
+    scrollTrigger: rawObject.scrollTrigger || "scene",
     zIndex: rawObject.zIndex ?? objectIndex + 1,
   };
 }
@@ -346,6 +385,10 @@ function getSceneHandoffStart(scene) {
     return 0.72;
   }
 
+  if (isRealizationDelayedDownLayout(scene.layout)) {
+    return 0.98;
+  }
+
   if (
     scene.layout === "side-by-side"
     || scene.layout === "analysis"
@@ -366,6 +409,13 @@ function getSceneHandoffStart(scene) {
     || scene.layout === "krematorium-pohled-b"
     || scene.layout === "krematorium-obradni-sin"
     || scene.layout === "krematorium-zed"
+    || scene.layout === "abstract-start"
+    || scene.layout === "abstract-two-left-one-right"
+    || scene.layout === "abstract-two-top-one-down"
+    || scene.layout === "abstract-three-left-one-right"
+    || scene.layout === "abstract-three-horizontal"
+    || scene.layout === "abstract-two-column"
+    || isRealizationFlowLayout(scene.layout)
     || scene.layout === "history-kostel"
   ) {
     return 0.62;
@@ -424,8 +474,9 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
 
   objectRefs.forEach((item) => {
     const config = item.config;
-    const inProgress = clamp((sceneProgress - config.delay) / config.enterDuration, 0, 1);
-    const outProgress = item.flowOnly ? 0 : clamp((sceneProgress - config.exitStart) / config.exitDuration, 0, 1);
+    const progress = config.scrollTrigger === "self" ? getObjectScrollProgress(item) : sceneProgress;
+    const inProgress = clamp((progress - config.delay) / config.enterDuration, 0, 1);
+    const outProgress = item.flowOnly ? 0 : clamp((progress - config.exitStart) / config.exitDuration, 0, 1);
 
     const inX = lerp(config.enter.x, config.base.x, inProgress);
     const inY = lerp(config.enter.y, config.base.y, inProgress);
@@ -444,6 +495,14 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
     item.element.style.opacity = String(opacity);
     item.element.style.transform = `translate(${x}px, ${y}px) rotate(${rotate}deg) scale(${scale})`;
   });
+}
+
+function getObjectScrollProgress(item) {
+  const sceneTop = item.layer.getBoundingClientRect().top;
+  const objectTop = sceneTop + item.element.offsetTop;
+  const startLine = window.innerHeight * 1.14;
+  const travel = Math.max(window.innerHeight * 0.82, item.element.offsetHeight * 2.4);
+  return clamp((startLine - objectTop) / travel, 0, 1);
 }
 
 function applyAnnotationSceneProgress(sceneIndex) {
@@ -503,12 +562,33 @@ function applyOverlayState(sceneIndex, sceneProgress) {
 
 function getContinuousSceneProgress(layer) {
   const rect = layer.getBoundingClientRect();
-  const startLine = window.innerHeight * 0.86;
+  const scene = sceneTrack[Number(layer.dataset.sceneIndex)];
+  const startLineRatio = scene?.startLineRatio ?? 0.86;
+  const startLine = window.innerHeight * startLineRatio;
   const isFlowScene = layer.classList.contains("flow-object-scene-layer");
+  const hasDelayedDownObject = isRealizationDelayedDownLayout(scene?.layout);
   const travel = isFlowScene
-    ? Math.max(window.innerHeight * 0.95, rect.height * 0.92)
+    ? Math.max(window.innerHeight * (scene?.travelRatio ?? (hasDelayedDownObject ? 1.75 : 0.95)), rect.height * 0.92)
     : Math.max(1, Math.min(window.innerHeight * 0.72, rect.height * 0.72));
   return clamp((startLine - rect.top) / travel, 0, 1);
+}
+
+function isRealizationDelayedDownLayout(layout) {
+  return layout === "realization-top-down"
+    || layout === "realization-two-top-one-down"
+    || layout === "realization-two-even-top-one-down"
+    || /^realization-two-top-one-down-\d+$/.test(layout);
+}
+
+function isRealizationFlowLayout(layout) {
+  return isRealizationDelayedDownLayout(layout)
+    || layout === "realization-two-column"
+    || layout === "realization-single-wide"
+    || layout === "realization-single-wide-351"
+    || layout === "realization-single-wide-306"
+    || layout === "realization-single-wide-513"
+    || layout === "realization-full-page"
+    || /^realization-two-top-\d+$/.test(layout);
 }
 
 function updateFromScroll() {
@@ -730,6 +810,60 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
   if (scene.layout === "history-kostel") {
     objectScene.classList.add("history-kostel-object-scene");
   }
+  if (scene.layout === "abstract-start") {
+    objectScene.classList.add("abstract-start-object-scene");
+  }
+  if (scene.layout === "abstract-two-left-one-right") {
+    objectScene.classList.add("abstract-two-left-one-right-object-scene");
+  }
+  if (scene.layout === "abstract-two-top-one-down") {
+    objectScene.classList.add("abstract-two-top-one-down-object-scene");
+  }
+  if (scene.layout === "abstract-three-left-one-right") {
+    objectScene.classList.add("abstract-three-left-one-right-object-scene");
+  }
+  if (scene.layout === "abstract-three-horizontal") {
+    objectScene.classList.add("abstract-three-horizontal-object-scene");
+  }
+  if (scene.layout === "abstract-two-column") {
+    objectScene.classList.add("abstract-two-column-object-scene");
+  }
+  if (scene.layout === "realization-two-column") {
+    objectScene.classList.add("realization-two-column-object-scene");
+  }
+  if (scene.layout === "realization-single-wide") {
+    objectScene.classList.add("realization-single-wide-object-scene");
+  }
+  if (scene.layout === "realization-single-wide-351") {
+    objectScene.classList.add("realization-single-wide-351-object-scene");
+  }
+  if (scene.layout === "realization-single-wide-306") {
+    objectScene.classList.add("realization-single-wide-306-object-scene");
+  }
+  if (scene.layout === "realization-single-wide-513") {
+    objectScene.classList.add("realization-single-wide-513-object-scene");
+  }
+  if (scene.layout === "realization-top-down") {
+    objectScene.classList.add("realization-top-down-object-scene");
+  }
+  if (scene.layout === "realization-two-top-one-down") {
+    objectScene.classList.add("realization-two-top-one-down-object-scene");
+  }
+  if (scene.layout === "realization-two-even-top-one-down") {
+    objectScene.classList.add("realization-two-even-top-one-down-object-scene");
+  }
+  if (scene.layout === "realization-two-top-one-down-26") {
+    objectScene.classList.add("realization-two-top-one-down-26-object-scene");
+  }
+  if (scene.layout === "realization-two-top-one-down-27") {
+    objectScene.classList.add("realization-two-top-one-down-27-object-scene");
+  }
+  if (scene.layout === "realization-two-top-28") {
+    objectScene.classList.add("realization-two-top-28-object-scene");
+  }
+  if (scene.layout === "realization-full-page") {
+    objectScene.classList.add("realization-full-page-object-scene");
+  }
   if (Array.isArray(scene.photos) && scene.photos.length > 0) {
     objectScene.classList.add("has-carousel");
   }
@@ -761,7 +895,7 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
       image.className = "scene-object-image";
       image.src = withAssetCacheVersion(objectConfig.src);
       image.alt = objectConfig.caption || objectConfig.name;
-      image.loading = "lazy";
+      image.loading = "eager";
       image.decoding = "async";
       objectNode.append(image);
     } else {
@@ -782,6 +916,7 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
     objectContainer.append(objectNode);
 
     refs.push({
+      layer,
       element: objectNode,
       config: objectConfig,
       flowOnly: scene.type === "annotation"
@@ -804,6 +939,13 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
         || scene.layout === "krematorium-pohled-b"
         || scene.layout === "krematorium-obradni-sin"
         || scene.layout === "krematorium-zed"
+        || scene.layout === "abstract-start"
+        || scene.layout === "abstract-two-left-one-right"
+        || scene.layout === "abstract-two-top-one-down"
+        || scene.layout === "abstract-three-left-one-right"
+        || scene.layout === "abstract-three-horizontal"
+        || scene.layout === "abstract-two-column"
+        || isRealizationFlowLayout(scene.layout)
         || scene.layout === "zahrada-two-column"
         || scene.layout === "zahrada-documentation"
         || scene.layout === "zahrada-four-grid"
@@ -855,7 +997,14 @@ async function renderSceneLayer(scene, sceneIndex) {
     layer.classList.add("annotation-layer");
     const annotationBox = document.createElement("article");
     annotationBox.className = "annotation-box annotation-intro";
-    appendLinkedText(annotationBox, removeProjectHeaderLabel(scene.text));
+    appendLinkedText(annotationBox, removeProjectHeaderLabel(scene.text), scene);
+    if (scene.relatedProjectLink?.href && scene.relatedProjectLink?.label) {
+      const action = document.createElement("a");
+      action.className = "project-header-action";
+      action.href = scene.relatedProjectLink.href;
+      action.textContent = scene.relatedProjectLink.label;
+      annotationBox.append(action);
+    }
     annotationBox.classList.add("project-header-sheet");
     layer.append(annotationBox);
     if (Array.isArray(scene.objects) && scene.objects.length > 0) {
@@ -1088,6 +1237,9 @@ async function resolveProjectScenes(project, projectIndex, totalProjects) {
         type: "annotation",
         text: scene.text || buildProjectHeaderText(project),
         supportingText: scene.supportingText || project.annotation || project.description || "",
+        relatedProjectLink: scene.relatedProjectLink || project.relatedProjectLink || null,
+        studioName: scene.studioName || project.studioName || "",
+        studioUrl: scene.studioUrl || project.studioUrl || "",
         page,
         pdfFile,
         objects,
@@ -1105,6 +1257,8 @@ async function resolveProjectScenes(project, projectIndex, totalProjects) {
         objects,
         caption: scene.caption || "",
         layout: scene.layout || "",
+        startLineRatio: scene.startLineRatio,
+        travelRatio: scene.travelRatio,
         photos: Array.isArray(scene.photos) ? scene.photos.map(normalizePhotoDefinition).filter((photo) => photo.src) : [],
         sceneIndex,
       };
@@ -1164,6 +1318,17 @@ async function initializeYearPage() {
     });
   }
   updateBackToProjectsVisibility();
+
+  const selectedProjectSlug = getSelectedProjectSlug();
+  if (selectedProjectSlug) {
+    const projectIndex = yearProjects.findIndex((project) => (
+      slugifyProject(project.selectorLabel) === selectedProjectSlug
+      || slugifyProject(project.title) === selectedProjectSlug
+    ));
+    if (projectIndex >= 0) {
+      await selectProject(projectIndex);
+    }
+  }
 }
 
 initializeYearPage().catch((error) => {

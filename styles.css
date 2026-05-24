@@ -175,6 +175,165 @@ body {
   text-align: right;
 }
 
+.personal-panel {
+  margin: -1.1rem 0 2rem;
+  border: 2px solid var(--line);
+  background: var(--surface);
+}
+
+.personal-toggle {
+  width: 100%;
+  border: 0;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.85rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.personal-toggle:hover,
+.personal-toggle[aria-expanded="true"] {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.personal-toggle::after {
+  content: "+";
+  float: right;
+}
+
+.personal-toggle[aria-expanded="true"]::after {
+  content: "-";
+}
+
+.personal-details {
+  border-top: 2px solid var(--line);
+  background: var(--surface);
+  overflow: hidden;
+  animation: personal-panel-open 360ms ease both;
+}
+
+.cv-line {
+  position: relative;
+  display: grid;
+  gap: 0;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.cv-line::before {
+  content: "";
+  position: absolute;
+  top: 1.45rem;
+  bottom: 1.6rem;
+  left: calc(1rem + clamp(5.4rem, 16vw, 9rem) + 0.7rem + 0.6rem - 1px);
+  width: 2px;
+  background: var(--line);
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: cv-line-draw 620ms cubic-bezier(0.16, 0.78, 0.18, 1) 90ms forwards;
+}
+
+.cv-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(5.4rem, 16vw, 9rem) 1.2rem minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: baseline;
+  min-height: 3.8rem;
+  padding: 0.25rem 0;
+  opacity: 0;
+  transform: translateY(0.35rem);
+  animation: cv-item-in 360ms ease forwards;
+}
+
+.cv-item:nth-child(1) {
+  animation-delay: 140ms;
+}
+
+.cv-item:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+.cv-item:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.cv-item:nth-child(4) {
+  animation-delay: 380ms;
+}
+
+.cv-item:nth-child(5) {
+  animation-delay: 460ms;
+}
+
+.cv-item:nth-child(6) {
+  animation-delay: 540ms;
+}
+
+.cv-date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.cv-marker {
+  position: relative;
+  z-index: 1;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  align-self: center;
+  justify-self: center;
+}
+
+.cv-copy h3 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.cv-copy p {
+  margin: 0.18rem 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 62ch;
+}
+
+.cv-copy a {
+  color: var(--line);
+  font-weight: 600;
+  text-underline-offset: 0.18em;
+}
+
+@keyframes personal-panel-open {
+  from {
+    opacity: 0;
+    transform: translateY(-0.35rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cv-line-draw {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes cv-item-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .is-hidden {
   display: none;
 }
@@ -290,8 +449,8 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   gap: clamp(0.45rem, 1vh, 0.7rem);
-  padding: clamp(0.2rem, 0.8vh, 0.45rem) var(--container-gutter) clamp(0.6rem, 1.6vh, 1rem);
-  min-height: auto;
+  padding: clamp(0.2rem, 0.8vh, 0.45rem) var(--container-gutter) clamp(3rem, 12vh, 7rem);
+  min-height: 104vh;
 }
 
 .annotation-box {
@@ -341,10 +500,19 @@ body {
   text-underline-offset: 0.18em;
 }
 
-.project-header-action {
+.project-header-actions {
   position: absolute;
   top: clamp(0.55rem, 1.4vw, 0.85rem);
   right: clamp(0.55rem, 1.4vw, 0.85rem);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.project-header-action {
+  position: relative;
   display: block;
   border: 1px solid currentColor;
   padding: 0.18rem 0.45rem;
@@ -352,11 +520,82 @@ body {
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none !important;
+  overflow: visible;
+}
+
+.project-header-action-item {
+  position: relative;
 }
 
 .project-header-action:hover {
   background: var(--surface);
   color: var(--line);
+}
+
+.project-header-action.is-award {
+  --glow-x: 50%;
+  --glow-y: 50%;
+  border-color: #d7b24a;
+  color: #d7b24a;
+}
+
+.project-header-action.is-award:hover,
+.project-header-action.is-award:focus-visible {
+  background:
+    radial-gradient(
+      circle at var(--glow-x) var(--glow-y),
+      rgba(215, 178, 74, 0.5) 0,
+      rgba(215, 178, 74, 0.2) 34%,
+      rgba(255, 255, 255, 0) 68%
+    ),
+    #ffffff;
+  color: #111111;
+  border-color: #d7b24a;
+  box-shadow: none;
+}
+
+.project-header-action.is-award::before {
+  content: none;
+}
+
+.project-header-action.is-award:hover::before,
+.project-header-action.is-award:focus-visible::before {
+  opacity: 0;
+}
+
+.project-header-tooltip {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  z-index: 20;
+  width: max-content;
+  max-width: min(18rem, 72vw);
+  border: 1px solid currentColor;
+  padding: 0.45rem 0.55rem;
+  background: var(--surface);
+  color: var(--line);
+  white-space: pre-line;
+  font-size: 0.78rem;
+  line-height: 1.25;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.2rem);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.project-header-action-item.is-award .project-header-tooltip {
+  border-color: #d7b24a;
+  background: #ffffff;
+  color: #111111;
+  box-shadow: 0 0.55rem 1.25rem rgba(17, 17, 17, 0.18), 0 0 0.75rem rgba(215, 178, 74, 0.35);
+}
+
+.project-header-action-item:hover .project-header-tooltip,
+.project-header-action-item:focus-within .project-header-tooltip,
+.project-header-action:hover + .project-header-tooltip,
+.project-header-action:focus-visible + .project-header-tooltip {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .annotation-details {
@@ -1010,7 +1249,12 @@ body {
 .realization-two-even-top-one-down-object-scene,
 .realization-two-top-one-down-26-object-scene,
 .realization-two-top-one-down-27-object-scene,
-.realization-two-top-28-object-scene {
+.realization-two-top-28-object-scene,
+.realization-custom-two-top-one-down-object-scene,
+.realization-custom-two-top-object-scene,
+.realization-single-custom-object-scene,
+.growing-left-stack-right-object-scene,
+.growing-two-top-one-down-object-scene {
   display: grid;
   gap: 0;
   justify-self: center;
@@ -1079,6 +1323,16 @@ body {
   aspect-ratio: 1189 / 743;
 }
 
+.realization-custom-two-top-one-down-object-scene,
+.realization-custom-two-top-object-scene,
+.realization-single-custom-object-scene,
+.growing-left-stack-right-object-scene,
+.growing-two-top-one-down-object-scene {
+  grid-template-columns: var(--realization-columns, minmax(0, 1fr));
+  grid-template-rows: var(--realization-rows, 1fr);
+  aspect-ratio: var(--realization-aspect, 1190 / 841);
+}
+
 .realization-two-column-object-scene .scene-object,
 .realization-single-wide-object-scene .scene-object,
 .realization-single-wide-351-object-scene .scene-object,
@@ -1090,7 +1344,12 @@ body {
 .realization-two-even-top-one-down-object-scene .scene-object,
 .realization-two-top-one-down-26-object-scene .scene-object,
 .realization-two-top-one-down-27-object-scene .scene-object,
-.realization-two-top-28-object-scene .scene-object {
+.realization-two-top-28-object-scene .scene-object,
+.realization-custom-two-top-one-down-object-scene .scene-object,
+.realization-custom-two-top-object-scene .scene-object,
+.realization-single-custom-object-scene .scene-object,
+.growing-left-stack-right-object-scene .scene-object,
+.growing-two-top-one-down-object-scene .scene-object {
   position: static;
   left: auto;
   top: auto;
@@ -1111,7 +1370,12 @@ body {
 .realization-two-even-top-one-down-object-scene .scene-object-image,
 .realization-two-top-one-down-26-object-scene .scene-object-image,
 .realization-two-top-one-down-27-object-scene .scene-object-image,
-.realization-two-top-28-object-scene .scene-object-image {
+.realization-two-top-28-object-scene .scene-object-image,
+.realization-custom-two-top-one-down-object-scene .scene-object-image,
+.realization-custom-two-top-object-scene .scene-object-image,
+.realization-single-custom-object-scene .scene-object-image,
+.growing-left-stack-right-object-scene .scene-object-image,
+.growing-two-top-one-down-object-scene .scene-object-image {
   height: 100%;
   object-fit: fill;
 }
@@ -1120,8 +1384,15 @@ body {
 .realization-two-even-top-one-down-object-scene .scene-object[data-object-name$="-down"],
 .realization-two-top-one-down-26-object-scene .scene-object[data-object-name$="-down"],
 .realization-two-top-one-down-27-object-scene .scene-object[data-object-name$="-down"],
+.realization-custom-two-top-one-down-object-scene .scene-object[data-object-name$="-down"],
+.growing-two-top-one-down-object-scene .scene-object[data-object-name$="-down"],
 .realization-top-down-object-scene .scene-object[data-object-name$="-down"] {
   grid-column: 1 / -1;
+}
+
+.growing-left-stack-right-object-scene .scene-object[data-object-name$="-right"] {
+  grid-row: 1 / -1;
+  grid-column: 2;
 }
 
 .krematorium-legenda-object-scene {
@@ -1408,6 +1679,31 @@ body {
 
   .year-selection-status {
     text-align: left;
+  }
+
+  .cv-line::before {
+    left: calc(1rem + 0.6rem - 1px);
+  }
+
+  .cv-item {
+    grid-template-columns: 1.2rem minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .cv-date {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .cv-marker {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: start;
+    margin-top: 0.2rem;
+  }
+
+  .cv-copy {
+    grid-column: 2;
   }
 
   .project-overlay {

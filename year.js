@@ -1,8 +1,8 @@
-import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.min.mjs";
-
+const PDFJS_MODULE_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.min.mjs";
+const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.worker.min.mjs";
 const DEFAULT_PDF_FILE = "./PORTFOLIO_Zuzana-Purmova.pdf";
-const ASSET_CACHE_VERSION = "2026-05-23-abstract-scenes";
-const DATA_CACHE_VERSION = "2026-05-23-abstract-scenes";
+const ASSET_CACHE_VERSION = "2026-05-24-responsive-pdf-crops";
+const DATA_CACHE_VERSION = "2026-05-24-responsive-pdf-crops";
 const MAX_CANVAS_DEVICE_SCALE = 1;
 const MAX_CANVAS_EDGE = 1800;
 
@@ -36,6 +36,7 @@ let selectedProjectIndex = -1;
 let isScrollHandlerAttached = false;
 let isResizeHandlerAttached = false;
 const pdfCache = new Map();
+let pdfjsLibPromise = null;
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
@@ -162,6 +163,17 @@ function appendLinkedText(element, text, linkContext = {}) {
   });
 }
 
+function getProjectHeaderActions(scene) {
+  const actions = [];
+  if (scene.relatedProjectLink?.href && scene.relatedProjectLink?.label) {
+    actions.push(scene.relatedProjectLink);
+  }
+  if (Array.isArray(scene.headerActions)) {
+    actions.push(...scene.headerActions.filter((action) => action?.href && action?.label));
+  }
+  return actions;
+}
+
 function uniquePageNumbers(pageNumbers) {
   return [...new Set(pageNumbers)];
 }
@@ -212,6 +224,11 @@ async function loadPdfDocument(filePath) {
     return pdfCache.get(filePath);
   }
 
+  if (!pdfjsLibPromise) {
+    pdfjsLibPromise = import(PDFJS_MODULE_URL);
+  }
+  const pdfjsLib = await pdfjsLibPromise;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER_URL;
   const loadingTask = pdfjsLib.getDocument({
     url: filePath,
     disableWorker: window.location.protocol === "file:",
@@ -283,6 +300,8 @@ function normalizeObjectDefinition(rawObject, objectIndex) {
     name: rawObject.name || `object-${objectIndex + 1}`,
     caption: rawObject.caption || "",
     src: rawObject.src || "",
+    srcset: rawObject.srcset || "",
+    sizes: rawObject.sizes || "",
     text: rawObject.text || "",
     flowOffsetY: rawObject.flowOffsetY ?? 0,
     crop: crop.map((value, index) => (index < 2 ? clamp(value, 0, 1) : clamp(value, 0.02, 1))),
@@ -577,6 +596,8 @@ function isRealizationDelayedDownLayout(layout) {
   return layout === "realization-top-down"
     || layout === "realization-two-top-one-down"
     || layout === "realization-two-even-top-one-down"
+    || layout === "realization-custom-two-top-one-down"
+    || layout === "growing-two-top-one-down"
     || /^realization-two-top-one-down-\d+$/.test(layout);
 }
 
@@ -588,6 +609,9 @@ function isRealizationFlowLayout(layout) {
     || layout === "realization-single-wide-306"
     || layout === "realization-single-wide-513"
     || layout === "realization-full-page"
+    || layout === "realization-single-custom"
+    || layout === "realization-custom-two-top"
+    || layout === "growing-left-stack-right"
     || /^realization-two-top-\d+$/.test(layout);
 }
 
@@ -864,6 +888,30 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
   if (scene.layout === "realization-full-page") {
     objectScene.classList.add("realization-full-page-object-scene");
   }
+  if (scene.layout === "realization-custom-two-top-one-down") {
+    objectScene.classList.add("realization-custom-two-top-one-down-object-scene");
+  }
+  if (scene.layout === "realization-custom-two-top") {
+    objectScene.classList.add("realization-custom-two-top-object-scene");
+  }
+  if (scene.layout === "realization-single-custom") {
+    objectScene.classList.add("realization-single-custom-object-scene");
+  }
+  if (scene.layout === "growing-left-stack-right") {
+    objectScene.classList.add("growing-left-stack-right-object-scene");
+  }
+  if (scene.layout === "growing-two-top-one-down") {
+    objectScene.classList.add("growing-two-top-one-down-object-scene");
+  }
+  if (scene.layoutConfig?.columns) {
+    objectScene.style.setProperty("--realization-columns", scene.layoutConfig.columns);
+  }
+  if (scene.layoutConfig?.rows) {
+    objectScene.style.setProperty("--realization-rows", scene.layoutConfig.rows);
+  }
+  if (scene.layoutConfig?.aspect) {
+    objectScene.style.setProperty("--realization-aspect", scene.layoutConfig.aspect);
+  }
   if (Array.isArray(scene.photos) && scene.photos.length > 0) {
     objectScene.classList.add("has-carousel");
   }
@@ -894,6 +942,24 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
       const image = document.createElement("img");
       image.className = "scene-object-image";
       image.src = withAssetCacheVersion(objectConfig.src);
+      if (objectConfig.srcset) {
+        image.srcset = objectConfig.srcset
+          .split(",")
+          .map((entry) => {
+            const trimmedEntry = entry.trim();
+            const firstSpaceIndex = trimmedEntry.indexOf(" ");
+            if (firstSpaceIndex < 0) {
+              return withAssetCacheVersion(trimmedEntry);
+            }
+            const src = trimmedEntry.slice(0, firstSpaceIndex);
+            const descriptor = trimmedEntry.slice(firstSpaceIndex + 1);
+            return `${withAssetCacheVersion(src)} ${descriptor}`;
+          })
+          .join(", ");
+      }
+      if (objectConfig.sizes) {
+        image.sizes = objectConfig.sizes;
+      }
       image.alt = objectConfig.caption || objectConfig.name;
       image.loading = "eager";
       image.decoding = "async";
@@ -998,12 +1064,41 @@ async function renderSceneLayer(scene, sceneIndex) {
     const annotationBox = document.createElement("article");
     annotationBox.className = "annotation-box annotation-intro";
     appendLinkedText(annotationBox, removeProjectHeaderLabel(scene.text), scene);
-    if (scene.relatedProjectLink?.href && scene.relatedProjectLink?.label) {
-      const action = document.createElement("a");
-      action.className = "project-header-action";
-      action.href = scene.relatedProjectLink.href;
-      action.textContent = scene.relatedProjectLink.label;
-      annotationBox.append(action);
+    const headerActions = getProjectHeaderActions(scene);
+    if (headerActions.length > 0) {
+      const actionsWrap = document.createElement("div");
+      actionsWrap.className = "project-header-actions";
+      annotationBox.append(actionsWrap);
+      headerActions.forEach((headerAction) => {
+        const actionItem = document.createElement("div");
+        actionItem.className = `project-header-action-item${headerAction.variant ? ` is-${headerAction.variant}` : ""}`;
+        const action = document.createElement("a");
+        action.className = `project-header-action${headerAction.variant ? ` is-${headerAction.variant}` : ""}`;
+        action.href = headerAction.href;
+        action.textContent = headerAction.label;
+        if (headerAction.target === "_blank" || /^https?:\/\//i.test(headerAction.href)) {
+          action.target = "_blank";
+          action.rel = "noopener noreferrer";
+        }
+        if (headerAction.tooltip) {
+          action.dataset.tooltip = headerAction.tooltip;
+          action.setAttribute("aria-label", `${headerAction.label}: ${headerAction.tooltip.replace(/\s+/g, " ")}`);
+          const tooltip = document.createElement("span");
+          tooltip.className = "project-header-tooltip";
+          tooltip.setAttribute("aria-hidden", "true");
+          tooltip.textContent = headerAction.tooltip;
+          actionItem.append(tooltip);
+        }
+        if (headerAction.variant === "award") {
+          action.addEventListener("pointermove", (event) => {
+            const rect = action.getBoundingClientRect();
+            action.style.setProperty("--glow-x", `${event.clientX - rect.left}px`);
+            action.style.setProperty("--glow-y", `${event.clientY - rect.top}px`);
+          });
+        }
+        actionItem.prepend(action);
+        actionsWrap.append(actionItem);
+      });
     }
     annotationBox.classList.add("project-header-sheet");
     layer.append(annotationBox);
@@ -1238,6 +1333,7 @@ async function resolveProjectScenes(project, projectIndex, totalProjects) {
         text: scene.text || buildProjectHeaderText(project),
         supportingText: scene.supportingText || project.annotation || project.description || "",
         relatedProjectLink: scene.relatedProjectLink || project.relatedProjectLink || null,
+        headerActions: Array.isArray(scene.headerActions) ? scene.headerActions : (Array.isArray(project.headerActions) ? project.headerActions : []),
         studioName: scene.studioName || project.studioName || "",
         studioUrl: scene.studioUrl || project.studioUrl || "",
         page,
@@ -1257,6 +1353,7 @@ async function resolveProjectScenes(project, projectIndex, totalProjects) {
         objects,
         caption: scene.caption || "",
         layout: scene.layout || "",
+        layoutConfig: scene.layoutConfig || null,
         startLineRatio: scene.startLineRatio,
         travelRatio: scene.travelRatio,
         photos: Array.isArray(scene.photos) ? scene.photos.map(normalizePhotoDefinition).filter((photo) => photo.src) : [],
@@ -1302,8 +1399,6 @@ async function initializeYearPage() {
   if (yearProjects.length === 0) {
     throw new Error(`No projects found for year ${selectedYear}.`);
   }
-
-  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.worker.min.mjs";
 
   renderProjectPicker();
 

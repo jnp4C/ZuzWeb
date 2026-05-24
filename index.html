@@ -8,7 +8,7 @@
       name="description"
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
-    <link rel="stylesheet" href="./styles.css?v=2026-05-23-page-continuity" />
+    <link rel="stylesheet" href="./styles.css?v=2026-05-24-personal-tab" />
   </head>
   <body>
     <header class="site-header container">
@@ -37,12 +37,76 @@
           through selected designs.
         </p>
       </section>
+
+      <section class="personal-panel" aria-labelledby="personalToggle">
+        <button
+          id="personalToggle"
+          class="personal-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="personalDetails"
+        >
+          Personal information
+        </button>
+        <div id="personalDetails" class="personal-details" hidden>
+          <div class="cv-line" aria-label="Personal CV line">
+            <article class="cv-item">
+              <p class="cv-date">Personal info</p>
+              <div class="cv-marker" aria-hidden="true"></div>
+              <div class="cv-copy">
+                <h3>Zuzana Purmová</h3>
+                <p><a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> · +420 721 152 711 · date of birth 16.7.2001</p>
+              </div>
+            </article>
+            <article class="cv-item">
+              <p class="cv-date">09/2016 - 06/2020</p>
+              <div class="cv-marker" aria-hidden="true"></div>
+              <div class="cv-copy">
+                <h3>Akademické gymnázium Štěpánská</h3>
+                <p>Gymnasium, Štěpánská 614, 110 00 Praha.</p>
+              </div>
+            </article>
+            <article class="cv-item">
+              <p class="cv-date">09/2020 - 06/2026</p>
+              <div class="cv-marker" aria-hidden="true"></div>
+              <div class="cv-copy">
+                <h3>Czech Technical University in Prague</h3>
+                <p>Faculty of Architecture, Landscape Architecture. Bachelor's degree completed in 06/2023; master's degree expected in 06/2026.</p>
+              </div>
+            </article>
+            <article class="cv-item">
+              <p class="cv-date">01/2025 - 06/2025</p>
+              <div class="cv-marker" aria-hidden="true"></div>
+              <div class="cv-copy">
+                <h3>Erasmus stay at Lund University</h3>
+                <p>International study period during the master's studies.</p>
+              </div>
+            </article>
+            <article class="cv-item">
+              <p class="cv-date">Languages</p>
+              <div class="cv-marker" aria-hidden="true"></div>
+              <div class="cv-copy">
+                <h3>English C1 · French B1</h3>
+                <p>English level C1 with FCE certification.</p>
+              </div>
+            </article>
+            <article class="cv-item">
+              <p class="cv-date">Skills</p>
+              <div class="cv-marker" aria-hidden="true"></div>
+              <div class="cv-copy">
+                <h3>Software and handwork</h3>
+                <p>AutoCAD, Rhino, QGIS, Adobe Photoshop, Illustrator, InDesign, and various handwork and art techniques.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer container">
       <p>© <span id="year"></span> Zuzana Purmova</p>
     </footer>
 
-    <script src="./script.js?v=2026-05-23-page-continuity" type="module"></script>
+    <script src="./script.js?v=2026-05-24-personal-tab" type="module"></script>
   </body>
 </html>

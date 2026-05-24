@@ -4153,6 +4153,1307 @@
             "exitDuration": 0.01
           }
         ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 967fr) minmax(0, 217fr)",
+          "rows": "741fr 102fr",
+          "aspect": "1184 / 843"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-30-top-left",
+            "src": "./assets/2024-realizace-zahrada/30topleft.png",
+            "displayWidthRatio": 0.816722972972973,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-30-top-right",
+            "src": "./assets/2024-realizace-zahrada/30topright.png",
+            "displayWidthRatio": 0.18327702702702703,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-30-down",
+            "src": "./assets/2024-realizace-zahrada/30down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 972fr) minmax(0, 222fr)",
+          "rows": "738fr 103fr",
+          "aspect": "1194 / 841"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-31-top-left",
+            "src": "./assets/2024-realizace-zahrada/31topleft.png",
+            "displayWidthRatio": 0.8140703517587939,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-31-top-right",
+            "src": "./assets/2024-realizace-zahrada/31topright.png",
+            "displayWidthRatio": 0.18592964824120603,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-31-down",
+            "src": "./assets/2024-realizace-zahrada/31down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-32-left",
+            "src": "./assets/2024-realizace-zahrada/32left.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-32-right",
+            "src": "./assets/2024-realizace-zahrada/32right.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-33-left",
+            "src": "./assets/2024-realizace-zahrada/33left.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-33-right",
+            "src": "./assets/2024-realizace-zahrada/33right.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-34-left",
+            "src": "./assets/2024-realizace-zahrada/34left.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-34-right",
+            "src": "./assets/2024-realizace-zahrada/34right.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-two-column",
+        "objects": [
+          {
+            "name": "realization-scene-35-left",
+            "src": "./assets/2024-realizace-zahrada/35left.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-35-right",
+            "src": "./assets/2024-realizace-zahrada/35right.png",
+            "displayWidthRatio": 0.5,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 979fr) minmax(0, 211fr)",
+          "rows": "741fr 100fr",
+          "aspect": "1190 / 841"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-36-top-left",
+            "src": "./assets/2024-realizace-zahrada/36topleft.png",
+            "displayWidthRatio": 0.8226890756302521,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-36-top-right",
+            "src": "./assets/2024-realizace-zahrada/36topright.png",
+            "displayWidthRatio": 0.1773109243697479,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-36-down",
+            "src": "./assets/2024-realizace-zahrada/36down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 1190fr) minmax(0, 215fr)",
+          "rows": "841fr 102fr",
+          "aspect": "1405 / 943"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-37-top-left",
+            "src": "./assets/2024-realizace-zahrada/37topleft.png",
+            "displayWidthRatio": 0.8469750889679716,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-37-top-right",
+            "src": "./assets/2024-realizace-zahrada/37toright.png",
+            "displayWidthRatio": 0.15302491103202848,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-37-down",
+            "src": "./assets/2024-realizace-zahrada/37down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 650fr) minmax(0, 539fr)",
+          "rows": "740fr 99fr",
+          "aspect": "1190 / 839"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-38-top-left",
+            "src": "./assets/2024-realizace-zahrada/38topleft.png",
+            "displayWidthRatio": 0.5466778805719091,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-38-top-right",
+            "src": "./assets/2024-realizace-zahrada/38topright.png",
+            "displayWidthRatio": 0.4533221194280908,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-38-down",
+            "src": "./assets/2024-realizace-zahrada/38down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 974fr) minmax(0, 215fr)",
+          "rows": "739fr 101fr",
+          "aspect": "1190 / 840"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-39-top-left",
+            "src": "./assets/2024-realizace-zahrada/39topleft.png",
+            "displayWidthRatio": 0.8191757779646762,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-39-top-right",
+            "src": "./assets/2024-realizace-zahrada/39topright.png",
+            "displayWidthRatio": 0.1808242220353238,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-39-down",
+            "src": "./assets/2024-realizace-zahrada/39down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-single-custom",
+        "layoutConfig": {
+          "columns": "minmax(0, 1fr)",
+          "rows": "1fr",
+          "aspect": "1190 / 421"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-40",
+            "src": "./assets/2024-realizace-zahrada/40.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 720,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 981fr) minmax(0, 213fr)",
+          "rows": "739fr 99fr",
+          "aspect": "1194 / 838"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-41-top-left",
+            "src": "./assets/2024-realizace-zahrada/41topleft.png",
+            "displayWidthRatio": 0.821608040201005,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-41-top-right",
+            "src": "./assets/2024-realizace-zahrada/41topright.png",
+            "displayWidthRatio": 0.17839195979899497,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-41-down",
+            "src": "./assets/2024-realizace-zahrada/41down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 980fr) minmax(0, 212fr)",
+          "rows": "740fr 101fr",
+          "aspect": "1192 / 841"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-42-top-left",
+            "src": "./assets/2024-realizace-zahrada/42topleft.png",
+            "displayWidthRatio": 0.8221476510067114,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-42-top-right",
+            "src": "./assets/2024-realizace-zahrada/42topright.png",
+            "displayWidthRatio": 0.17785234899328858,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-42-down",
+            "src": "./assets/2024-realizace-zahrada/42down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 509fr) minmax(0, 668fr)",
+          "rows": "739fr 103fr",
+          "aspect": "1190 / 842"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-43-top-left",
+            "src": "./assets/2024-realizace-zahrada/43topleft.png",
+            "displayWidthRatio": 0.4324553950722175,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-43-top-right",
+            "src": "./assets/2024-realizace-zahrada/43topright.png",
+            "displayWidthRatio": 0.5675446049277825,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-43-down",
+            "src": "./assets/2024-realizace-zahrada/43down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 525fr) minmax(0, 669fr)",
+          "rows": "735fr 106fr",
+          "aspect": "1194 / 841"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-44-top-left",
+            "src": "./assets/2024-realizace-zahrada/44topleft.png",
+            "displayWidthRatio": 0.4396984924623116,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-44-top-right",
+            "src": "./assets/2024-realizace-zahrada/44topright.png",
+            "displayWidthRatio": 0.5603015075376885,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-44-down",
+            "src": "./assets/2024-realizace-zahrada/44down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "realization-custom-two-top-one-down",
+        "layoutConfig": {
+          "columns": "minmax(0, 976fr) minmax(0, 224fr)",
+          "rows": "738fr 106fr",
+          "aspect": "1200 / 844"
+        },
+        "objects": [
+          {
+            "name": "realization-scene-45-top-left",
+            "src": "./assets/2024-realizace-zahrada/45topleft.png",
+            "displayWidthRatio": 0.8133333333333334,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-45-top-right",
+            "src": "./assets/2024-realizace-zahrada/45topright.png",
+            "displayWidthRatio": 0.18666666666666668,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "realization-scene-45-down",
+            "src": "./assets/2024-realizace-zahrada/45down.png",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
       }
     ],
     "projectType": "Studio project, individuale",
@@ -4163,6 +5464,233 @@
       "href": "./year.html?year=2023&project=garden-in-stresovice"
     },
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta"
+  },
+  {
+    "title": "GROWING-THROUGH",
+    "category": "Landscape Installation",
+    "location": "Les Jardins de Métis, CA",
+    "year": 2024,
+    "description": "Two-year outdoor installation for the International Garden Festival at Les Jardins de Métis.",
+    "annotation": "A design for a two-year outdoor installation created for the International Garden Festival at Les Jardins de Métis (Reford Gardens) with the theme 'BORDERS'. The installation illustrates how nature deals with artificial boundaries created by humans. Concrete objects placed in conflict with willow patches demonstrate various spatial concepts of barriers and their overcoming. By using willow rods that will take root and grow through the whole time of the exhibition, the installation continuously evolves, showing how the environment adapts to the impacts of insensitive human interventions.",
+    "scenes": [
+      {
+        "type": "annotation",
+        "text": "NAME OF PROJECT\nGROWING-THROUGH\n\nTYPE OF PROJECT\nStudio project, group project\nmgr. David Šíma\n\nSTUDIO\nSitta - Chmelová, FA ČVUT v Praze",
+        "supportingText": "A design for a two-year outdoor installation created for the International Garden Festival at Les Jardins de Métis (Reford Gardens) with the theme 'BORDERS'. The installation illustrates how nature deals with artificial boundaries created by humans. Concrete objects placed in conflict with willow patches demonstrate various spatial concepts of barriers and their overcoming. By using willow rods that will take root and grow through the whole time of the exhibition, the installation continuously evolves, showing how the environment adapts to the impacts of insensitive human interventions.",
+        "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+        "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
+        "headerActions": [
+          {
+            "label": "Award",
+            "href": "https://www.fa.cvut.cz/en/events/144465-2025-laurus-awards-announced",
+            "variant": "award",
+            "tooltip": "2025 LAURUS AWARDS\nLandscape Gesture category",
+            "target": "_blank"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "growing-left-stack-right",
+        "layoutConfig": {
+          "columns": "713fr 476fr",
+          "rows": "348fr 492fr",
+          "aspect": "1189 / 841"
+        },
+        "objects": [
+          {
+            "name": "growing-scene-1-top-left",
+            "src": "./assets/2024-growing-thru/1topleft.jpg",
+            "displayWidthRatio": 0.599663582842725,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "growing-scene-1-down-left",
+            "src": "./assets/2024-growing-thru/1downleft.jpg",
+            "displayWidthRatio": 0.599663582842725,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.1,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "growing-scene-1-right",
+            "src": "./assets/2024-growing-thru/1right.jpg",
+            "displayWidthRatio": 0.400336417157275,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "growing-two-top-one-down",
+        "layoutConfig": {
+          "columns": "339fr 850fr",
+          "rows": "586fr 254fr",
+          "aspect": "1190 / 841"
+        },
+        "objects": [
+          {
+            "name": "growing-scene-2-top-left",
+            "src": "./assets/2024-growing-thru/2topleft.jpg",
+            "displayWidthRatio": 0.2851135407905803,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "growing-scene-2-top-right",
+            "src": "./assets/2024-growing-thru/2topright.jpg",
+            "displayWidthRatio": 0.7148864592094197,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.64,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "growing-scene-2-down",
+            "src": "./assets/2024-growing-thru/2down.jpg",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 620,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "scrollTrigger": "self"
+          }
+        ]
+      }
+    ],
+    "projectType": "Studio project, group project",
+    "projectTeam": [
+      "mgr. David Šíma"
+    ],
+    "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+    "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
+    "selectorLabel": "GROWING-THROUGH",
+    "headerActions": [
+      {
+        "label": "Award",
+        "href": "https://www.fa.cvut.cz/en/events/144465-2025-laurus-awards-announced",
+        "variant": "award",
+        "tooltip": "2025 LAURUS AWARDS\nLandscape Gesture category",
+        "target": "_blank"
+      }
+    ]
   },
   {
     "title": "City Art Hall Renovation",
@@ -5240,7 +6768,10 @@
             "delay": 0,
             "enterDuration": 0.01,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5279,7 +6810,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/02-semnevice-uvod-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/02-semnevice-uvod-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/02-semnevice-uvod-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-uvod-map",
@@ -5311,7 +6845,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/02-semnevice-uvod-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/02-semnevice-uvod-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/02-semnevice-uvod-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5350,7 +6887,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/03-semnevice-spadove-oblasti-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/03-semnevice-spadove-oblasti-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/03-semnevice-spadove-oblasti-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-spadove-oblasti-map",
@@ -5382,7 +6922,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/03-semnevice-spadove-oblasti-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/03-semnevice-spadove-oblasti-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/03-semnevice-spadove-oblasti-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5421,7 +6964,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/04-semnevice-relief-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/04-semnevice-relief-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/04-semnevice-relief-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-relief-map",
@@ -5453,7 +6999,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/04-semnevice-relief-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/04-semnevice-relief-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/04-semnevice-relief-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5492,7 +7041,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/05-semnevice-topografie-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/05-semnevice-topografie-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/05-semnevice-topografie-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-topografie-map",
@@ -5524,7 +7076,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/05-semnevice-topografie-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/05-semnevice-topografie-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/05-semnevice-topografie-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5563,7 +7118,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-vodni-rezim-map",
@@ -5595,7 +7153,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5634,7 +7195,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/07-semnevice-vodni-toky-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/07-semnevice-vodni-toky-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/07-semnevice-vodni-toky-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-vodni-toky-map",
@@ -5666,7 +7230,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/07-semnevice-vodni-toky-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/07-semnevice-vodni-toky-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/07-semnevice-vodni-toky-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5705,7 +7272,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/08-semnevice-voda-relief-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/08-semnevice-voda-relief-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/08-semnevice-voda-relief-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-voda-relief-map",
@@ -5737,7 +7307,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/08-semnevice-voda-relief-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/08-semnevice-voda-relief-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/08-semnevice-voda-relief-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5776,7 +7349,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/09-semnevice-zasahy-do-vodniho-rezimu-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/09-semnevice-zasahy-do-vodniho-rezimu-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/09-semnevice-zasahy-do-vodniho-rezimu-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-zasahy-do-vodniho-rezimu-map",
@@ -5808,7 +7384,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/09-semnevice-zasahy-do-vodniho-rezimu-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/09-semnevice-zasahy-do-vodniho-rezimu-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/09-semnevice-zasahy-do-vodniho-rezimu-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5847,7 +7426,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/10-semnevice-eroze-pudy-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/10-semnevice-eroze-pudy-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/10-semnevice-eroze-pudy-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-eroze-pudy-map",
@@ -5879,7 +7461,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/10-semnevice-eroze-pudy-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/10-semnevice-eroze-pudy-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/10-semnevice-eroze-pudy-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5918,7 +7503,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/11-semnevice-eroze-podlozi-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/11-semnevice-eroze-podlozi-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/11-semnevice-eroze-podlozi-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-eroze-podlozi-map",
@@ -5950,7 +7538,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/11-semnevice-eroze-podlozi-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/11-semnevice-eroze-podlozi-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/11-semnevice-eroze-podlozi-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -5989,7 +7580,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/12-semnevice-eroze-pudy-vetrem-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/12-semnevice-eroze-pudy-vetrem-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/12-semnevice-eroze-pudy-vetrem-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-eroze-pudy-vetrem-map",
@@ -6021,7 +7615,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/12-semnevice-eroze-pudy-vetrem-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/12-semnevice-eroze-pudy-vetrem-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/12-semnevice-eroze-pudy-vetrem-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6060,7 +7657,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/13-semnevice-horninove-podlozi-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/13-semnevice-horninove-podlozi-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/13-semnevice-horninove-podlozi-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-horninove-podlozi-map",
@@ -6092,7 +7692,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/13-semnevice-horninove-podlozi-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/13-semnevice-horninove-podlozi-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/13-semnevice-horninove-podlozi-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6131,7 +7734,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/14-semnevice-puda-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/14-semnevice-puda-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/14-semnevice-puda-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-puda-map",
@@ -6163,7 +7769,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/14-semnevice-puda-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/14-semnevice-puda-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/14-semnevice-puda-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6202,7 +7811,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-landuse-map",
@@ -6234,7 +7846,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6273,7 +7888,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/16-semnevice-klima-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/16-semnevice-klima-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/16-semnevice-klima-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-klima-map",
@@ -6305,7 +7923,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/16-semnevice-klima-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/16-semnevice-klima-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/16-semnevice-klima-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6344,7 +7965,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/17-semnevice-biodiverzita-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/17-semnevice-biodiverzita-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/17-semnevice-biodiverzita-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-biodiverzita-map",
@@ -6376,7 +8000,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/17-semnevice-biodiverzita-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/17-semnevice-biodiverzita-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/17-semnevice-biodiverzita-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6415,7 +8042,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/18-semnevice-soucasny-stav-left-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/18-semnevice-soucasny-stav-left-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/18-semnevice-soucasny-stav-left-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-soucasny-stav-right-text",
@@ -6447,7 +8077,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/18-semnevice-soucasny-stav-right-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/18-semnevice-soucasny-stav-right-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/18-semnevice-soucasny-stav-right-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ],
         "photos": [
@@ -6503,7 +8136,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/19-semnevice-majetkopravni-vztahy-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/19-semnevice-majetkopravni-vztahy-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/19-semnevice-majetkopravni-vztahy-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-majetkopravni-vztahy-map",
@@ -6535,7 +8171,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/19-semnevice-majetkopravni-vztahy-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/19-semnevice-majetkopravni-vztahy-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/19-semnevice-majetkopravni-vztahy-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6574,7 +8213,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/20-semnevice-dopravni-infrastruktura-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/20-semnevice-dopravni-infrastruktura-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/20-semnevice-dopravni-infrastruktura-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-dopravni-infrastruktura-map",
@@ -6606,7 +8248,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/20-semnevice-dopravni-infrastruktura-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/20-semnevice-dopravni-infrastruktura-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/20-semnevice-dopravni-infrastruktura-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6645,7 +8290,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/21-semnevice-limity-v-uzemi-prirodni-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/21-semnevice-limity-v-uzemi-prirodni-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/21-semnevice-limity-v-uzemi-prirodni-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-limity-v-uzemi-prirodni-map",
@@ -6677,7 +8325,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/21-semnevice-limity-v-uzemi-prirodni-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/21-semnevice-limity-v-uzemi-prirodni-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/21-semnevice-limity-v-uzemi-prirodni-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6716,7 +8367,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/22-semnevice-limity-v-uzemi-antropogeni-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/22-semnevice-limity-v-uzemi-antropogeni-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/22-semnevice-limity-v-uzemi-antropogeni-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-limity-v-uzemi-antropogeni-map",
@@ -6748,7 +8402,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/22-semnevice-limity-v-uzemi-antropogeni-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/22-semnevice-limity-v-uzemi-antropogeni-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/22-semnevice-limity-v-uzemi-antropogeni-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6787,7 +8444,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/23-semnevice-semnevice-sidla-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/23-semnevice-semnevice-sidla-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/23-semnevice-semnevice-sidla-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-semnevice-sidla-map",
@@ -6819,7 +8479,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/23-semnevice-semnevice-sidla-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/23-semnevice-semnevice-sidla-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/23-semnevice-semnevice-sidla-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6858,7 +8521,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/24-semnevice-pocinovice-slovice-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/24-semnevice-pocinovice-slovice-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/24-semnevice-pocinovice-slovice-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-pocinovice-slovice-map",
@@ -6890,7 +8556,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/24-semnevice-pocinovice-slovice-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/24-semnevice-pocinovice-slovice-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/24-semnevice-pocinovice-slovice-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -6929,7 +8598,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/25-semnevice-vyznamne-cenne-prvky-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/25-semnevice-vyznamne-cenne-prvky-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/25-semnevice-vyznamne-cenne-prvky-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-vyznamne-cenne-prvky-map",
@@ -6961,7 +8633,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/25-semnevice-vyznamne-cenne-prvky-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/25-semnevice-vyznamne-cenne-prvky-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/25-semnevice-vyznamne-cenne-prvky-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7000,7 +8675,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/26-semnevice-nasima-ocima-header-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/26-semnevice-nasima-ocima-header-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/26-semnevice-nasima-ocima-header-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7074,7 +8752,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/27-semnevice-v-detailu-header-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/27-semnevice-v-detailu-header-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/27-semnevice-v-detailu-header-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7158,7 +8839,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/28-semnevice-pozitiva-header-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/28-semnevice-pozitiva-header-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/28-semnevice-pozitiva-header-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7232,7 +8916,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/29-semnevice-negativa-header-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/29-semnevice-negativa-header-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/29-semnevice-negativa-header-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7316,7 +9003,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/30-semnevice-dejiny-header-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/30-semnevice-dejiny-header-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/30-semnevice-dejiny-header-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7417,7 +9107,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/31-semnevice-historicka-fotodokumentace-header-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/31-semnevice-historicka-fotodokumentace-header-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/31-semnevice-historicka-fotodokumentace-header-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7553,7 +9246,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/32-semnevice-historicky-vyvoj-ii-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/32-semnevice-historicky-vyvoj-ii-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/32-semnevice-historicky-vyvoj-ii-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-historicky-vyvoj-ii-map",
@@ -7585,7 +9281,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/32-semnevice-historicky-vyvoj-ii-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/32-semnevice-historicky-vyvoj-ii-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/32-semnevice-historicky-vyvoj-ii-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7624,7 +9323,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/33-semnevice-historicky-vyvoj-indikacni-skici-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/33-semnevice-historicky-vyvoj-indikacni-skici-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/33-semnevice-historicky-vyvoj-indikacni-skici-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-historicky-vyvoj-indikacni-skici-map",
@@ -7656,7 +9358,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/33-semnevice-historicky-vyvoj-indikacni-skici-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/33-semnevice-historicky-vyvoj-indikacni-skici-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/33-semnevice-historicky-vyvoj-indikacni-skici-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7695,7 +9400,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/34-semnevice-historicky-vyvoj-iii-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/34-semnevice-historicky-vyvoj-iii-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/34-semnevice-historicky-vyvoj-iii-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-historicky-vyvoj-iii-map",
@@ -7727,7 +9435,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/34-semnevice-historicky-vyvoj-iii-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/34-semnevice-historicky-vyvoj-iii-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/34-semnevice-historicky-vyvoj-iii-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7766,7 +9477,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/35-semnevice-historicky-vyvoj-souhrnne-porovnani-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/35-semnevice-historicky-vyvoj-souhrnne-porovnani-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/35-semnevice-historicky-vyvoj-souhrnne-porovnani-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-historicky-vyvoj-souhrnne-porovnani-map",
@@ -7798,7 +9512,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/35-semnevice-historicky-vyvoj-souhrnne-porovnani-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/35-semnevice-historicky-vyvoj-souhrnne-porovnani-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/35-semnevice-historicky-vyvoj-souhrnne-porovnani-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7837,7 +9554,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/36-semnevice-historicky-vyvoj-ortofotomapa-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/36-semnevice-historicky-vyvoj-ortofotomapa-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/36-semnevice-historicky-vyvoj-ortofotomapa-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-historicky-vyvoj-ortofotomapa-map",
@@ -7869,7 +9589,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/36-semnevice-historicky-vyvoj-ortofotomapa-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/36-semnevice-historicky-vyvoj-ortofotomapa-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/36-semnevice-historicky-vyvoj-ortofotomapa-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7908,7 +9631,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-swot-s-w-map",
@@ -7940,7 +9666,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       },
@@ -7979,7 +9708,10 @@
             "delay": 0,
             "enterDuration": 0.45,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-text-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-text-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-text-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           },
           {
             "name": "semnevice-swot-o-t-map",
@@ -8011,7 +9743,10 @@
             "delay": 0.04,
             "enterDuration": 0.5,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "src": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1800.jpg",
+            "srcset": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)"
           }
         ]
       }

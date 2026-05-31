@@ -441,6 +441,12 @@ body {
   position: relative;
 }
 
+.visual-layers::after {
+  content: "";
+  display: block;
+  height: 92vh;
+}
+
 .pdf-layer {
   position: relative;
   opacity: 1;
@@ -1769,7 +1775,7 @@ body {
     justify-items: center;
     width: 100%;
     padding: 0.5rem 0;
-    touch-action: pan-y;
+    touch-action: pan-y pinch-zoom;
   }
 
   .object-scene {
@@ -1782,7 +1788,6 @@ body {
     min-height: 0;
   }
 
-  .side-by-side-object-scene,
   .analysis-object-scene,
   .annotation-object-scene {
     flex-wrap: wrap;
@@ -1790,12 +1795,24 @@ body {
     padding-inline: 1rem;
   }
 
+  .side-by-side-object-scene {
+    flex-wrap: nowrap;
+    gap: clamp(0.35rem, 1.4vw, 0.85rem);
+    width: min(1190px, 94vw);
+    max-width: 94vw;
+    padding-inline: 0;
+  }
+
+  .side-by-side-object-scene .scene-object {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .object-row {
     flex-wrap: wrap;
     padding-inline: 1rem;
   }
 
-  .side-by-side-object-scene .scene-object,
   .analysis-object-scene .scene-object,
   .annotation-object-scene .scene-object,
   .object-row .scene-object {

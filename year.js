@@ -622,6 +622,8 @@ function updateFromScroll() {
     return;
   }
 
+  const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+  const isAtPageBottom = window.scrollY + window.innerHeight >= documentHeight - 2;
   let activeSceneIndex = 0;
   let closestDistance = Number.POSITIVE_INFINITY;
 
@@ -638,7 +640,8 @@ function updateFromScroll() {
     layer.style.transform = "none";
     layer.style.pointerEvents = "auto";
 
-    const progress = getContinuousSceneProgress(layer);
+    const rawProgress = getContinuousSceneProgress(layer);
+    const progress = sceneIndex === layers.length - 1 && isAtPageBottom ? 1 : rawProgress;
     applyObjectSceneProgress(sceneIndex, progress);
     applyAnnotationSceneProgress(sceneIndex, progress);
     applyCarouselSceneProgress(sceneIndex, progress);

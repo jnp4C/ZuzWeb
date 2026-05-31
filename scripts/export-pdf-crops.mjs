@@ -18,10 +18,12 @@ const widths = (args.get("widths") || "1200,1800,2400")
   .split(",")
   .map((value) => Number.parseInt(value, 10))
   .filter(Number.isInteger);
+const widthMode = args.get("width-mode") || "crop";
 const quality = Number.parseFloat(args.get("quality") || "0.84");
 const writeJson = args.get("write") !== "false";
 const limit = args.has("limit") ? Number.parseInt(args.get("limit"), 10) : Infinity;
 const force = args.get("force") === "true";
+const replaceExisting = args.get("replace-existing") === "true";
 
 if (widths.length === 0) {
   throw new Error("At least one width is required.");
@@ -53,7 +55,12 @@ for (const scene of project.scenes || []) {
       break;
     }
     const hasGeneratedSource = typeof object.src === "string" && object.src.includes("/assets/generated/");
-    if ((object.src && !force) || (object.src && force && !hasGeneratedSource) || object.text || !Array.isArray(object.crop)) {
+    if (
+      (object.src && !force)
+      || (object.src && force && !hasGeneratedSource && !replaceExisting)
+      || object.text
+      || !Array.isArray(object.crop)
+    ) {
       continue;
     }
 
@@ -64,21 +71,26 @@ for (const scene of project.scenes || []) {
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-+|-+$/g, "");
 
+    const outputWidths = widths
+      .map((width) => widthMode === "page" ? Math.max(240, Math.round(width * object.crop[2])) : width)
+      .filter((width, index, list) => list.indexOf(width) === index);
     const baseName = `${String(scene.page).padStart(2, "0")}-${objectSlug}`;
-    const outputs = widths.map((width) => join(assetRoot, `${baseName}-${width}.jpg`));
+    const outputs = outputWidths.map((width) => join(assetRoot, `${baseName}-${width}.jpg`));
     const srcset = outputs
-      .map((output, index) => `./${relative(root, output).replaceAll("\\", "/")} ${widths[index]}w`)
+      .map((output, index) => `./${relative(root, output).replaceAll("\\", "/")} ${outputWidths[index]}w`)
       .join(", ");
 
     object.src = `./${relative(root, outputs[Math.min(1, outputs.length - 1)]).replaceAll("\\", "/")}`;
     object.srcset = srcset;
-    object.sizes = object.sizes || "min(100vw, 1180px)";
+    if (replaceExisting || !object.sizes) {
+      object.sizes = `min(${Math.round((object.displayWidthRatio || object.crop[2]) * 86)}vw, ${Math.round((object.displayWidthRatio || object.crop[2]) * 1190)}px)`;
+    }
 
     jobs.push({
       pdfPath: join(root, project.pdfFile),
       page: scene.page,
       crop: object.crop,
-      widths,
+      widths: outputWidths,
       quality,
       outputs,
     });

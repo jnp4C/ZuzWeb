@@ -582,12 +582,12 @@ function applyOverlayState(sceneIndex, sceneProgress) {
 function getContinuousSceneProgress(layer) {
   const rect = layer.getBoundingClientRect();
   const scene = sceneTrack[Number(layer.dataset.sceneIndex)];
-  const startLineRatio = scene?.startLineRatio ?? 0.86;
+  const startLineRatio = scene?.startLineRatio ?? 0.96;
   const startLine = window.innerHeight * startLineRatio;
   const isFlowScene = layer.classList.contains("flow-object-scene-layer");
   const hasDelayedDownObject = isRealizationDelayedDownLayout(scene?.layout);
   const travel = isFlowScene
-    ? Math.max(window.innerHeight * (scene?.travelRatio ?? (hasDelayedDownObject ? 1.75 : 0.95)), rect.height * 0.92)
+    ? Math.max(window.innerHeight * (scene?.travelRatio ?? (hasDelayedDownObject ? 1.25 : 0.95)), rect.height * 0.92)
     : Math.max(1, Math.min(window.innerHeight * 0.72, rect.height * 0.72));
   return clamp((startLine - rect.top) / travel, 0, 1);
 }

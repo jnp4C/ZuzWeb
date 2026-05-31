@@ -449,8 +449,8 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   gap: clamp(0.45rem, 1vh, 0.7rem);
-  padding: clamp(0.2rem, 0.8vh, 0.45rem) var(--container-gutter) clamp(3rem, 12vh, 7rem);
-  min-height: 104vh;
+  padding: clamp(0.2rem, 0.8vh, 0.45rem) var(--container-gutter) clamp(1.25rem, 4vh, 2.5rem);
+  min-height: auto;
 }
 
 .annotation-box {
@@ -831,6 +831,10 @@ body {
   width: min(96vw, 118rem) !important;
 }
 
+.full-width-visual-object-scene .scene-object[data-object-name^="abstract-"] {
+  width: min(86vw, 1190px) !important;
+}
+
 .krematorium-site-split-object-scene {
   display: flex;
   justify-content: center;
@@ -982,7 +986,7 @@ body {
 .zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-5-right"],
 .zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-7-right"] {
   justify-self: end;
-  width: min(34vw, 29rem) !important;
+  width: min(39vw, 32.5rem) !important;
 }
 
 .zahrada-four-grid-object-scene {
@@ -1021,14 +1025,14 @@ body {
 
 .abstract-start-object-scene {
   display: grid;
-  grid-template-columns: minmax(0, 535fr) minmax(0, 651fr);
-  grid-template-rows: 328fr 158fr 20fr 331fr;
+  grid-template-columns: var(--realization-columns, minmax(0, 535fr) minmax(0, 651fr));
+  grid-template-rows: var(--realization-rows, 328fr 158fr 20fr 331fr);
   gap: 0;
   align-items: start;
   justify-self: center;
   box-sizing: content-box;
   width: min(86vw, 1190px);
-  aspect-ratio: 1190 / 841;
+  aspect-ratio: var(--realization-aspect, 1190 / 841);
   padding: 0;
   background: #ffffff;
 }
@@ -1045,7 +1049,7 @@ body {
 
 .abstract-start-object-scene .scene-object-image {
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .abstract-start-object-scene .scene-object[data-object-name="abstract-scene-1-top-left"] {
@@ -1075,14 +1079,14 @@ body {
 
 .abstract-two-left-one-right-object-scene {
   display: grid;
-  grid-template-columns: minmax(0, 0.32fr) minmax(0, 0.68fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: var(--realization-columns, minmax(0, 0.32fr) minmax(0, 0.68fr));
+  grid-template-rows: var(--realization-rows, auto auto);
   gap: 0;
   align-items: stretch;
   justify-self: center;
   box-sizing: content-box;
   width: min(86vw, 1190px);
-  aspect-ratio: 1190 / 841;
+  aspect-ratio: var(--realization-aspect, 1190 / 841);
   padding: 0;
   background: #ffffff;
 }
@@ -1099,7 +1103,7 @@ body {
 
 .abstract-two-left-one-right-object-scene .scene-object-image {
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .abstract-two-left-one-right-object-scene .scene-object[data-object-name$="-top-left"] {
@@ -1119,13 +1123,14 @@ body {
 
 .abstract-two-top-one-down-object-scene {
   display: grid;
-  grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 1fr);
+  grid-template-columns: var(--realization-columns, minmax(16rem, 1fr) minmax(16rem, 1fr));
+  grid-template-rows: var(--realization-rows, auto auto);
   gap: 0;
   align-items: start;
   justify-self: center;
   box-sizing: content-box;
   width: min(86vw, 1190px);
-  aspect-ratio: 1190 / 841;
+  aspect-ratio: var(--realization-aspect, 1190 / 841);
   padding: 0;
   background: #ffffff;
 }
@@ -1142,7 +1147,7 @@ body {
 
 .abstract-two-top-one-down-object-scene .scene-object-image {
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .abstract-two-top-one-down-object-scene .scene-object[data-object-name$="-down"] {
@@ -1151,13 +1156,14 @@ body {
 
 .abstract-three-left-one-right-object-scene {
   display: grid;
-  grid-template-columns: minmax(12rem, 0.48fr) minmax(20rem, 1fr);
+  grid-template-columns: var(--realization-columns, minmax(12rem, 0.48fr) minmax(20rem, 1fr));
+  grid-template-rows: var(--realization-rows, auto auto auto);
   gap: 0;
   align-items: start;
   justify-self: center;
   box-sizing: content-box;
   width: min(86vw, 1190px);
-  aspect-ratio: 1190 / 841;
+  aspect-ratio: var(--realization-aspect, 1190 / 841);
   padding: 0;
   background: #ffffff;
 }
@@ -1174,7 +1180,7 @@ body {
 
 .abstract-three-left-one-right-object-scene .scene-object-image {
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .abstract-three-left-one-right-object-scene .scene-object[data-object-name="abstract-scene-6-right"] {
@@ -1184,13 +1190,13 @@ body {
 
 .abstract-three-horizontal-object-scene {
   display: grid;
-  grid-template-rows: 310fr 277fr 257fr;
+  grid-template-rows: var(--realization-rows, 310fr 277fr 257fr);
   gap: 0;
   align-items: stretch;
   justify-self: center;
   box-sizing: content-box;
   width: min(86vw, 1190px);
-  aspect-ratio: 1190 / 841;
+  aspect-ratio: var(--realization-aspect, 1190 / 841);
   padding: 0;
   background: #ffffff;
 }
@@ -1207,18 +1213,18 @@ body {
 
 .abstract-three-horizontal-object-scene .scene-object-image {
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .abstract-two-column-object-scene {
   display: grid;
-  grid-template-columns: minmax(0, 642fr) minmax(0, 552fr);
+  grid-template-columns: var(--realization-columns, minmax(0, 642fr) minmax(0, 552fr));
   gap: 0;
   align-items: stretch;
   justify-self: center;
   box-sizing: content-box;
   width: min(86vw, 1190px);
-  aspect-ratio: 1190 / 841;
+  aspect-ratio: var(--realization-aspect, 1190 / 841);
   padding: 0;
   background: #ffffff;
 }
@@ -1235,7 +1241,7 @@ body {
 
 .abstract-two-column-object-scene .scene-object-image {
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .realization-two-column-object-scene,
@@ -1730,20 +1736,123 @@ body {
   }
 
   .annotation-layer {
-    padding: 0.75rem 1.1rem 1rem;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .project-header-sheet,
+  .annotation-details {
+    align-self: center;
+    width: min(42rem, calc(100vw - 2rem));
+    margin-inline: auto;
+  }
+
+  .annotation-box {
+    width: min(72ch, calc(100vw - 2rem));
+  }
+
+  .visual-frame {
+    min-height: auto;
+  }
+
+  .object-scene-layer {
+    overflow-x: hidden;
+    overflow-y: visible;
+    justify-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  .object-scene {
+    max-width: 100%;
+  }
+
+  .map-legend-object-scene {
+    width: 100vw;
+    height: min(100vw, 72vh);
+    min-height: 0;
+  }
+
+  .side-by-side-object-scene,
+  .analysis-object-scene,
+  .annotation-object-scene {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+
+  .object-row {
+    flex-wrap: wrap;
+    padding-inline: 1rem;
+  }
+
+  .side-by-side-object-scene .scene-object,
+  .analysis-object-scene .scene-object,
+  .annotation-object-scene .scene-object,
+  .object-row .scene-object {
+    width: min(100%, 42rem) !important;
+  }
+
+  .abstract-start-object-scene,
+  .full-width-visual-object-scene,
+  .abstract-two-left-one-right-object-scene,
+  .abstract-two-top-one-down-object-scene,
+  .abstract-three-left-one-right-object-scene,
+  .abstract-three-horizontal-object-scene,
+  .abstract-two-column-object-scene,
+  .realization-two-column-object-scene,
+  .realization-single-wide-object-scene,
+  .realization-single-wide-351-object-scene,
+  .realization-single-wide-306-object-scene,
+  .realization-single-wide-513-object-scene,
+  .realization-full-page-object-scene,
+  .realization-top-down-object-scene,
+  .realization-two-top-one-down-object-scene,
+  .realization-two-even-top-one-down-object-scene,
+  .realization-two-top-one-down-26-object-scene,
+  .realization-two-top-one-down-27-object-scene,
+  .realization-two-top-28-object-scene,
+  .realization-custom-two-top-one-down-object-scene,
+  .realization-custom-two-top-object-scene,
+  .realization-single-custom-object-scene,
+  .growing-left-stack-right-object-scene,
+  .growing-two-top-one-down-object-scene {
+    width: min(1190px, 100vw);
+    max-width: 100vw;
+  }
+
+  .carousel-photo {
+    width: min(72vw, 20rem);
+  }
+
+  .embedded-carousel-scene .carousel-photo,
+  .compact-carousel-layer .carousel-photo {
+    width: min(46vw, 12rem);
   }
 
   .zahrada-documentation-object-scene,
   .zahrada-two-column-object-scene,
   .zahrada-four-grid-object-scene,
   .zahrada-left-stack-object-scene {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    padding-inline: 1rem;
+    width: min(1190px, 100vw);
+    max-width: 100vw;
+    gap: 0;
+    padding-inline: 0;
   }
 
-  .zahrada-documentation-object-scene .scene-object:first-child,
-  .zahrada-left-stack-object-scene .scene-object:first-child {
-    grid-row: auto;
+  .zahrada-documentation-object-scene,
+  .zahrada-two-column-object-scene,
+  .zahrada-four-grid-object-scene,
+  .zahrada-left-stack-object-scene {
+    grid-template-columns: var(--realization-columns, minmax(0, 1fr) minmax(0, 1fr));
+  }
+
+  .zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-5-left"],
+  .zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-5-right"],
+  .zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-7-left"],
+  .zahrada-two-column-object-scene .scene-object[data-object-name="zahrada-scene-7-right"] {
+    justify-self: stretch;
+    width: 100% !important;
   }
 }

@@ -3,8 +3,24 @@ const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/
 const DEFAULT_PDF_FILE = "./PORTFOLIO_Zuzana-Purmova.pdf";
 const ASSET_CACHE_VERSION = "2026-05-24-responsive-pdf-crops";
 const DATA_CACHE_VERSION = "2026-05-24-responsive-pdf-crops";
+const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const MAX_CANVAS_DEVICE_SCALE = 1;
 const MAX_CANVAS_EDGE = 1800;
+const DEFAULT_BACKGROUND_SRC = "./assets/Background/contours.svg";
+const SEMNEVICE_BACKGROUND_SRC = "./assets/Background/contours-semnevice.svg";
+const PRAGUE_BACKGROUND_SRC = "./assets/Background/contours-Praha-stresovice.svg";
+const KLADNO_BACKGROUND_SRC = "./assets/Background/contours-kladno.svg";
+const GROWING_BACKGROUND_SRC = "./assets/Background/contours-growing.svg";
+const ABSTRACT_BACKGROUND_SRC = "./assets/Background/contours-abstract.svg";
+const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
+const AVAILABLE_BACKGROUND_SRCS = new Set([
+  DEFAULT_BACKGROUND_SRC,
+  SEMNEVICE_BACKGROUND_SRC,
+  PRAGUE_BACKGROUND_SRC,
+  KLADNO_BACKGROUND_SRC,
+  GROWING_BACKGROUND_SRC,
+  ABSTRACT_BACKGROUND_SRC,
+]);
 
 const yearHeading = document.getElementById("yearHeading");
 const projectSelectorSection = document.getElementById("projectSelectorSection");
@@ -20,6 +36,8 @@ const viewerStatus = document.getElementById("viewerStatus");
 const scrollSteps = document.getElementById("scrollSteps");
 const yearLabel = document.getElementById("year");
 const backToProjects = document.getElementById("backToProjects");
+const backgroundAnimation = document.querySelector(".background-animation");
+let backgroundAnimationElement = document.querySelector(".background-animation-lines");
 
 let allProjects = [];
 let yearProjects = [];
@@ -37,6 +55,11 @@ let isScrollHandlerAttached = false;
 let isResizeHandlerAttached = false;
 let isSelectingProject = false;
 let headerAnimationTimer = 0;
+let activeBackgroundSrc = getStoredBackgroundSrc();
+let backgroundTransitionTimer = 0;
+let backgroundRedrawTimer = 0;
+let backgroundTransitionId = 0;
+const backgroundSvgCache = new Map();
 const pdfCache = new Map();
 let pdfjsLibPromise = null;
 
@@ -55,6 +78,168 @@ function withAssetCacheVersion(src) {
 
   const delimiter = src.includes("?") ? "&" : "?";
   return `${src}${delimiter}asset=${ASSET_CACHE_VERSION}`;
+}
+
+function withBackgroundCacheVersion(src, transitionId = 0) {
+  if (!src) {
+    return src;
+  }
+
+  const delimiter = src.includes("?") ? "&" : "?";
+  return `${src}${delimiter}bg=${BACKGROUND_CACHE_VERSION}&draw=${transitionId}`;
+}
+
+function getStoredBackgroundSrc() {
+  try {
+    const storedBackgroundSrc = window.sessionStorage.getItem(BACKGROUND_STORAGE_KEY);
+    return AVAILABLE_BACKGROUND_SRCS.has(storedBackgroundSrc) ? storedBackgroundSrc : DEFAULT_BACKGROUND_SRC;
+  } catch {
+    return DEFAULT_BACKGROUND_SRC;
+  }
+}
+
+function persistActiveBackground(src) {
+  try {
+    window.sessionStorage.setItem(BACKGROUND_STORAGE_KEY, src);
+  } catch {
+    // Ignore storage failures; background switching should still work in memory.
+  }
+}
+
+async function loadBackgroundSvgElement(src, transitionId = 0) {
+  const cacheKey = src;
+  let svgText = backgroundSvgCache.get(cacheKey);
+  if (!svgText) {
+    const response = await fetch(withBackgroundCacheVersion(src, transitionId), { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Failed to load background: ${src}`);
+    }
+    svgText = await response.text();
+    backgroundSvgCache.set(cacheKey, svgText);
+  }
+
+  const documentParser = new DOMParser();
+  const svgDocument = documentParser.parseFromString(svgText, "image/svg+xml");
+  const svgElement = svgDocument.documentElement;
+  if (!svgElement || svgElement.nodeName.toLowerCase() !== "svg") {
+    throw new Error(`Invalid background SVG: ${src}`);
+  }
+
+  const importedSvg = document.importNode(svgElement, true);
+  importedSvg.classList.add("background-animation-lines");
+  importedSvg.setAttribute("aria-hidden", "true");
+  importedSvg.setAttribute("focusable", "false");
+  return importedSvg;
+}
+
+async function setInitialBackgroundSvg() {
+  if (!backgroundAnimation) {
+    return;
+  }
+
+  try {
+    const svgElement = await loadBackgroundSvgElement(activeBackgroundSrc);
+    svgElement.classList.add("is-static");
+    backgroundAnimation.replaceChildren(svgElement);
+    backgroundAnimationElement = svgElement;
+  } catch {
+    backgroundAnimationElement = document.querySelector(".background-animation-lines");
+  }
+}
+
+function freezeBackgroundLineStates(svgElement) {
+  for (const polyline of svgElement.querySelectorAll("polyline")) {
+    const computedStyle = window.getComputedStyle(polyline);
+    polyline.style.setProperty("--frozen-opacity", `${Math.max(Number.parseFloat(computedStyle.opacity) || 0, 0.86)}`);
+    polyline.style.setProperty("--frozen-dasharray", computedStyle.strokeDasharray);
+    polyline.style.setProperty("--frozen-dashoffset", computedStyle.strokeDashoffset);
+  }
+}
+
+function getProjectBackgroundSrc(project) {
+  const slug = slugifyProject(`${project?.selectorLabel || ""} ${project?.title || ""}`);
+  if (slug.includes("semnevice")) {
+    return SEMNEVICE_BACKGROUND_SRC;
+  }
+
+  if (slug.includes("kladno") || slug.includes("krematorium")) {
+    return KLADNO_BACKGROUND_SRC;
+  }
+
+  if (slug.includes("growing-through")) {
+    return GROWING_BACKGROUND_SRC;
+  }
+
+  if (slug.includes("abstract")) {
+    return ABSTRACT_BACKGROUND_SRC;
+  }
+
+  if (slug.includes("steep-garden")) {
+    return PRAGUE_BACKGROUND_SRC;
+  }
+
+  return DEFAULT_BACKGROUND_SRC;
+}
+
+async function transitionProjectBackground(project) {
+  if (!backgroundAnimation) {
+    return;
+  }
+
+  const nextSrc = getProjectBackgroundSrc(project);
+  if (nextSrc === activeBackgroundSrc) {
+    persistActiveBackground(nextSrc);
+    backgroundAnimationElement?.classList.remove("is-undrawing", "is-redrawing");
+    return;
+  }
+
+  backgroundTransitionId += 1;
+  const currentTransitionId = backgroundTransitionId;
+  activeBackgroundSrc = nextSrc;
+  persistActiveBackground(nextSrc);
+  window.clearTimeout(backgroundTransitionTimer);
+  window.clearTimeout(backgroundRedrawTimer);
+
+  let nextBackgroundElement = null;
+  try {
+    nextBackgroundElement = await loadBackgroundSvgElement(nextSrc, currentTransitionId);
+  } catch {
+    return;
+  }
+
+  if (currentTransitionId !== backgroundTransitionId) {
+    return;
+  }
+
+  if (!backgroundAnimationElement) {
+    nextBackgroundElement.classList.add("is-redrawing");
+    backgroundAnimation.replaceChildren(nextBackgroundElement);
+    backgroundAnimationElement = nextBackgroundElement;
+    return;
+  }
+
+  backgroundAnimationElement.classList.remove("is-redrawing");
+  freezeBackgroundLineStates(backgroundAnimationElement);
+  backgroundAnimationElement.classList.remove("is-static");
+  void backgroundAnimationElement.getBoundingClientRect();
+  backgroundAnimationElement.classList.add("is-undrawing");
+
+  backgroundTransitionTimer = window.setTimeout(() => {
+    if (currentTransitionId !== backgroundTransitionId) {
+      return;
+    }
+
+    nextBackgroundElement.classList.add("is-redrawing");
+    backgroundAnimation.replaceChildren(nextBackgroundElement);
+    backgroundAnimationElement = nextBackgroundElement;
+
+    backgroundRedrawTimer = window.setTimeout(() => {
+      if (currentTransitionId !== backgroundTransitionId) {
+        return;
+      }
+      backgroundAnimationElement.classList.remove("is-redrawing");
+    }, 1800);
+  }, 1280);
 }
 
 function getSelectedYear() {
@@ -1285,6 +1470,7 @@ async function selectProject(projectIndex) {
   selectedProjectIndex = projectIndex;
   activeProjectIndex = projectIndex;
   activateProjectButton(projectIndex);
+  void transitionProjectBackground(project);
   setProjectText(project);
   setProjectLoadingState(true);
   projectsSection.classList.remove("is-hidden", "is-project-loaded", "has-played-header-animation");
@@ -1408,6 +1594,8 @@ async function initializeYearPage() {
     window.location.replace("./index.html");
     return;
   }
+
+  void setInitialBackgroundSvg();
 
   const response = await fetch(`./data/projects.json?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });
   if (!response.ok) {

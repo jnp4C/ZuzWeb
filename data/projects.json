@@ -8325,9 +8325,9 @@
             },
             "enter": {
               "x": 0,
-              "y": 0,
+              "y": 42,
               "scale": 1,
-              "opacity": 1
+              "opacity": 0
             },
             "exit": {
               "x": 0,
@@ -8336,14 +8336,16 @@
               "opacity": 1
             },
             "delay": 0,
-            "enterDuration": 0.01,
+            "enterDuration": 0.72,
             "exitStart": 0.98,
             "exitDuration": 0.01,
             "src": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg",
             "srcset": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg 1800w",
             "sizes": "min(100vw, 1180px)"
           }
-        ]
+        ],
+        "startLineRatio": 0.86,
+        "travelRatio": 0.9
       },
       {
         "type": "objects",

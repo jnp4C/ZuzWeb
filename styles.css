@@ -212,6 +212,9 @@ body {
   border-top: 2px solid var(--line);
   background: var(--surface);
   overflow: hidden;
+}
+
+.personal-details.is-open {
   animation: personal-panel-open 360ms ease both;
 }
 
@@ -232,6 +235,9 @@ body {
   background: var(--line);
   transform: scaleY(0);
   transform-origin: top;
+}
+
+.personal-details.is-open .cv-line::before {
   animation: cv-line-draw 620ms cubic-bezier(0.16, 0.78, 0.18, 1) 90ms forwards;
 }
 
@@ -245,30 +251,33 @@ body {
   padding: 0.25rem 0;
   opacity: 0;
   transform: translateY(0.35rem);
+}
+
+.personal-details.is-open .cv-item {
   animation: cv-item-in 360ms ease forwards;
 }
 
-.cv-item:nth-child(1) {
+.personal-details.is-open .cv-item:nth-child(1) {
   animation-delay: 140ms;
 }
 
-.cv-item:nth-child(2) {
+.personal-details.is-open .cv-item:nth-child(2) {
   animation-delay: 220ms;
 }
 
-.cv-item:nth-child(3) {
+.personal-details.is-open .cv-item:nth-child(3) {
   animation-delay: 300ms;
 }
 
-.cv-item:nth-child(4) {
+.personal-details.is-open .cv-item:nth-child(4) {
   animation-delay: 380ms;
 }
 
-.cv-item:nth-child(5) {
+.personal-details.is-open .cv-item:nth-child(5) {
   animation-delay: 460ms;
 }
 
-.cv-item:nth-child(6) {
+.personal-details.is-open .cv-item:nth-child(6) {
   animation-delay: 540ms;
 }
 
@@ -478,7 +487,7 @@ body {
   box-shadow: 0 0.8rem 2rem rgba(19, 59, 107, 0.12);
 }
 
-.fullstage.is-project-loaded .annotation-box {
+.fullstage.is-project-loaded:not(.has-played-header-animation) .annotation-box {
   animation: project-header-rise 1600ms cubic-bezier(0.16, 0.78, 0.18, 1) both;
 }
 
@@ -1756,12 +1765,11 @@ body {
   }
 
   .object-scene-layer {
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
     justify-items: center;
     width: 100%;
     padding: 0.5rem 0;
-    touch-action: pan-y pinch-zoom;
+    touch-action: pan-y;
   }
 
   .object-scene {

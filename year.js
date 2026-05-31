@@ -35,6 +35,8 @@ let carouselRefsByScene = new Map();
 let selectedProjectIndex = -1;
 let isScrollHandlerAttached = false;
 let isResizeHandlerAttached = false;
+let isSelectingProject = false;
+let headerAnimationTimer = 0;
 const pdfCache = new Map();
 let pdfjsLibPromise = null;
 
@@ -1252,13 +1254,18 @@ function attachResizeHandler() {
   isResizeHandlerAttached = true;
   let resizeTimer = 0;
   window.addEventListener("resize", () => {
+    if (window.visualViewport && Math.abs(window.visualViewport.scale - 1) > 0.01) {
+      return;
+    }
     clearTimeout(resizeTimer);
     resizeTimer = window.setTimeout(async () => {
-      if (selectedProjectIndex < 0) {
+      if (selectedProjectIndex < 0 || isSelectingProject) {
         return;
       }
+      const previousScrollY = window.scrollY;
       await renderAllLayers();
       recomputeStepPositions();
+      window.scrollTo({ top: previousScrollY, behavior: "instant" });
       updateFromScroll();
       updateBackToProjectsVisibility();
     }, 160);
@@ -1271,12 +1278,13 @@ async function selectProject(projectIndex) {
     return;
   }
 
+  isSelectingProject = true;
   selectedProjectIndex = projectIndex;
   activeProjectIndex = projectIndex;
   activateProjectButton(projectIndex);
   setProjectText(project);
   setProjectLoadingState(true);
-  projectsSection.classList.remove("is-hidden", "is-project-loaded");
+  projectsSection.classList.remove("is-hidden", "is-project-loaded", "has-played-header-animation");
 
   try {
     if (!Array.isArray(project.scenesResolved)) {
@@ -1291,6 +1299,10 @@ async function selectProject(projectIndex) {
         updateFromScroll();
         setProjectLoadingState(false);
         projectsSection.classList.add("is-project-loaded");
+        clearTimeout(headerAnimationTimer);
+        headerAnimationTimer = window.setTimeout(() => {
+          projectsSection.classList.add("has-played-header-animation");
+        }, 1700);
         updateBackToProjectsVisibility();
       },
     });
@@ -1298,6 +1310,10 @@ async function selectProject(projectIndex) {
     updateFromScroll();
     setProjectLoadingState(false);
     projectsSection.classList.add("is-project-loaded");
+    clearTimeout(headerAnimationTimer);
+    headerAnimationTimer = window.setTimeout(() => {
+      projectsSection.classList.add("has-played-header-animation");
+    }, 1700);
     attachScrollHandler();
     attachResizeHandler();
     updateBackToProjectsVisibility();
@@ -1306,6 +1322,8 @@ async function selectProject(projectIndex) {
     viewerStatus.classList.add("is-visible");
     viewerStatus.textContent = "Error loading selected project";
     projectDescription.textContent = error.message;
+  } finally {
+    isSelectingProject = false;
   }
 }
 

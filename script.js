@@ -7,8 +7,16 @@ const DATA_CACHE_VERSION = "2026-05-23-abstract-scenes";
 function initPersonalToggle() {
   personalToggle?.addEventListener("click", () => {
     const isOpen = personalToggle.getAttribute("aria-expanded") === "true";
-    personalToggle.setAttribute("aria-expanded", `${!isOpen}`);
-    personalDetails.hidden = isOpen;
+    const shouldOpen = !isOpen;
+    personalToggle.setAttribute("aria-expanded", `${shouldOpen}`);
+    personalDetails.hidden = !shouldOpen;
+    if (shouldOpen) {
+      personalDetails.classList.remove("is-open");
+      void personalDetails.offsetWidth;
+      personalDetails.classList.add("is-open");
+    } else {
+      personalDetails.classList.remove("is-open");
+    }
   });
 }
 

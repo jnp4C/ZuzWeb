@@ -194,7 +194,8 @@
             "src": "./assets/2021-through-the-forest/site-photos/site-06.jpg",
             "alt": "High-rise housing beside road infrastructure"
           }
-        ]
+        ],
+        "startLineRatio": 0.62
       },
       {
         "type": "objects",
@@ -1022,7 +1023,7 @@
       {
         "type": "objects",
         "layout": "abstract-start",
-        "startLineRatio": 0.86,
+        "startLineRatio": 0.62,
         "travelRatio": 0.95,
         "objects": [
           {
@@ -2738,7 +2739,8 @@
             "sizes": "min(43vw, 595px)"
           }
         ],
-        "page": 2
+        "page": 2,
+        "startLineRatio": 0.62
       },
       {
         "type": "objects",
@@ -6884,7 +6886,8 @@
             "srcset": "./assets/generated/growing-through/01-growing-scene-1-right-1200.jpg 1200w, ./assets/generated/growing-through/01-growing-scene-1-right-1800.jpg 1800w",
             "sizes": "min(100vw, 1180px)"
           }
-        ]
+        ],
+        "startLineRatio": 0.62
       },
       {
         "type": "objects",
@@ -7103,7 +7106,8 @@
             "srcset": "./assets/generated/kladno-krematorium/01-krematorium-cover-1800.jpg 1800w, ./assets/generated/kladno-krematorium/01-krematorium-cover-2400.jpg 2400w",
             "sizes": "min(79vw, 1095px)"
           }
-        ]
+        ],
+        "startLineRatio": 0.62
       },
       {
         "type": "objects",
@@ -8344,7 +8348,7 @@
             "sizes": "min(100vw, 1180px)"
           }
         ],
-        "startLineRatio": 0.86,
+        "startLineRatio": 0.62,
         "travelRatio": 0.9
       },
       {
@@ -11407,7 +11411,8 @@
             "srcset": "./assets/generated/steep-garden/01-zahrada-starting-scene-1800.jpg 1800w, ./assets/generated/steep-garden/01-zahrada-starting-scene-2400.jpg 2400w",
             "sizes": "min(79vw, 1095px)"
           }
-        ]
+        ],
+        "startLineRatio": 0.62
       },
       {
         "type": "objects",

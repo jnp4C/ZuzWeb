@@ -148,11 +148,12 @@ async function setInitialBackgroundSvg() {
 }
 
 function freezeBackgroundLineStates(svgElement) {
+  const isStaticBackground = svgElement.classList.contains("is-static");
   for (const polyline of svgElement.querySelectorAll("polyline")) {
     const computedStyle = window.getComputedStyle(polyline);
     polyline.style.setProperty("--frozen-opacity", `${Math.max(Number.parseFloat(computedStyle.opacity) || 0, 0.86)}`);
-    polyline.style.setProperty("--frozen-dasharray", computedStyle.strokeDasharray);
-    polyline.style.setProperty("--frozen-dashoffset", computedStyle.strokeDashoffset);
+    polyline.style.setProperty("--frozen-dasharray", isStaticBackground ? "0.5 0 0.5 0" : computedStyle.strokeDasharray);
+    polyline.style.setProperty("--frozen-dashoffset", isStaticBackground ? "0.25" : computedStyle.strokeDashoffset);
   }
 }
 
@@ -239,7 +240,7 @@ async function transitionProjectBackground(project) {
       }
       backgroundAnimationElement.classList.remove("is-redrawing");
     }, 1800);
-  }, 1280);
+  }, 1160);
 }
 
 function getSelectedYear() {

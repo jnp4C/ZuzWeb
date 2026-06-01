@@ -2,8 +2,8 @@
   --bg: #fdfdfd;
   --surface: #ffffff;
   --text: #111111;
-  --muted: #2b3f5e;
-  --line: #133b6b;
+  --muted: #415f58;
+  --line: #5a7d75;
   --container-width: min(1180px, 92vw);
   --container-gutter: calc((100vw - var(--container-width)) / 2);
 }
@@ -711,9 +711,9 @@ main,
   width: min(42rem, 88vw);
   padding: clamp(0.9rem, 2vw, 1.35rem);
   overflow: hidden;
-  background: rgba(19, 59, 107, 0.9);
+  background: rgba(90, 125, 117, 0.9);
   color: var(--surface);
-  box-shadow: 0 0.8rem 2rem rgba(19, 59, 107, 0.12);
+  box-shadow: 0 0.8rem 2rem rgba(90, 125, 117, 0.12);
 }
 
 .project-header-sheet > :not(.project-header-contour-overlay):not(.project-header-actions) {

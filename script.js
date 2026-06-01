@@ -2,6 +2,7 @@ const yearPicker = document.getElementById("yearPicker");
 const yearLabel = document.getElementById("year");
 const personalToggle = document.getElementById("personalToggle");
 const personalDetails = document.getElementById("personalDetails");
+const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
 const DATA_CACHE_VERSION = "2026-05-23-abstract-scenes";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
@@ -36,10 +37,28 @@ async function loadBackgroundSvgElement(src) {
   }
 
   const importedSvg = document.importNode(svgElement, true);
+  prepareBackgroundSvgElement(importedSvg);
   importedSvg.classList.add("background-animation-lines");
   importedSvg.setAttribute("aria-hidden", "true");
   importedSvg.setAttribute("focusable", "false");
   return importedSvg;
+}
+
+function prepareBackgroundSvgElement(svgElement) {
+  svgElement.querySelector("#background-contour-animation")?.remove();
+  const polylines = Array.from(svgElement.querySelectorAll("polyline"));
+  polylines.forEach((polyline, index) => {
+    let lineLength = 1;
+    try {
+      lineLength = Math.max(1, polyline.getTotalLength());
+    } catch {
+      lineLength = 1;
+    }
+    polyline.style.setProperty("--contour-line-length", `${lineLength}`);
+    if (!polyline.style.getPropertyValue("--contour-delay")) {
+      polyline.style.setProperty("--contour-delay", `${Math.min(index * 0.035, 2.4)}s`);
+    }
+  });
 }
 
 async function restoreSavedBackground() {
@@ -63,6 +82,25 @@ async function restoreSavedBackground() {
 }
 
 function initPersonalToggle() {
+  let hasSeenPersonalPhoto = false;
+  const photoObserver = personalPhotoFrame && "IntersectionObserver" in window
+    ? new IntersectionObserver((entries) => {
+      if (hasSeenPersonalPhoto) {
+        return;
+      }
+      const entry = entries[0];
+      if (entry?.isIntersecting) {
+        hasSeenPersonalPhoto = true;
+        personalPhotoFrame.classList.add("is-visible");
+        photoObserver.disconnect();
+      }
+    }, { threshold: 0.35 })
+    : null;
+
+  if (personalPhotoFrame && !photoObserver) {
+    personalPhotoFrame.classList.add("is-visible");
+  }
+
   personalToggle?.addEventListener("click", () => {
     const isOpen = personalToggle.getAttribute("aria-expanded") === "true";
     const shouldOpen = !isOpen;
@@ -72,8 +110,14 @@ function initPersonalToggle() {
       personalDetails.classList.remove("is-open");
       void personalDetails.offsetWidth;
       personalDetails.classList.add("is-open");
+      if (personalPhotoFrame && photoObserver && !hasSeenPersonalPhoto) {
+        photoObserver.observe(personalPhotoFrame);
+      }
     } else {
       personalDetails.classList.remove("is-open");
+      if (personalPhotoFrame && photoObserver && !hasSeenPersonalPhoto) {
+        photoObserver.unobserve(personalPhotoFrame);
+      }
     }
   });
 }

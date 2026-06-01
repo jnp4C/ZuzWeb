@@ -62,6 +62,7 @@ let backgroundTransitionId = 0;
 const backgroundSvgCache = new Map();
 const pdfCache = new Map();
 let pdfjsLibPromise = null;
+let headerContourSyncQueued = false;
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
@@ -126,10 +127,28 @@ async function loadBackgroundSvgElement(src, transitionId = 0) {
   }
 
   const importedSvg = document.importNode(svgElement, true);
+  prepareBackgroundSvgElement(importedSvg);
   importedSvg.classList.add("background-animation-lines");
   importedSvg.setAttribute("aria-hidden", "true");
   importedSvg.setAttribute("focusable", "false");
   return importedSvg;
+}
+
+function prepareBackgroundSvgElement(svgElement) {
+  svgElement.querySelector("#background-contour-animation")?.remove();
+  const polylines = Array.from(svgElement.querySelectorAll("polyline"));
+  polylines.forEach((polyline, index) => {
+    let lineLength = 1;
+    try {
+      lineLength = Math.max(1, polyline.getTotalLength());
+    } catch {
+      lineLength = 1;
+    }
+    polyline.style.setProperty("--contour-line-length", `${lineLength}`);
+    if (!polyline.style.getPropertyValue("--contour-delay")) {
+      polyline.style.setProperty("--contour-delay", `${Math.min(index * 0.035, 2.4)}s`);
+    }
+  });
 }
 
 async function setInitialBackgroundSvg() {
@@ -145,6 +164,48 @@ async function setInitialBackgroundSvg() {
   } catch {
     backgroundAnimationElement = document.querySelector(".background-animation-lines");
   }
+}
+
+function syncHeaderContourOverlays() {
+  headerContourSyncQueued = false;
+  for (const viewport of document.querySelectorAll(".project-header-contour-viewport")) {
+    const overlay = viewport.parentElement;
+    if (!overlay) {
+      continue;
+    }
+    const rect = overlay.getBoundingClientRect();
+    viewport.style.setProperty("--contour-offset-x", `${-rect.left}px`);
+    viewport.style.setProperty("--contour-offset-y", `${-rect.top}px`);
+  }
+}
+
+function queueHeaderContourOverlaySync() {
+  if (headerContourSyncQueued) {
+    return;
+  }
+  headerContourSyncQueued = true;
+  requestAnimationFrame(syncHeaderContourOverlays);
+}
+
+async function appendHeaderContourOverlay(headerSheet) {
+  let svgElement = null;
+  try {
+    svgElement = await loadBackgroundSvgElement(activeBackgroundSrc, backgroundTransitionId);
+  } catch {
+    return;
+  }
+
+  svgElement.classList.add("project-header-contour-lines", "is-static");
+  svgElement.classList.remove("is-undrawing", "is-redrawing");
+
+  const overlay = document.createElement("div");
+  overlay.className = "project-header-contour-overlay";
+  const viewport = document.createElement("div");
+  viewport.className = "project-header-contour-viewport";
+  viewport.append(svgElement);
+  overlay.append(viewport);
+  headerSheet.prepend(overlay);
+  queueHeaderContourOverlaySync();
 }
 
 function freezeBackgroundLineStates(svgElement) {
@@ -663,13 +724,17 @@ function applyLayerState(currentIndex, progress) {
   });
 
   applyObjectSceneProgress(currentIndex, safeProgress);
+  layers[currentIndex]?.classList.toggle("has-visible-objects", currentScene?.type !== "objects" || safeProgress > 0.025);
   applyAnnotationSceneProgress(currentIndex, safeProgress);
   applyCarouselSceneProgress(currentIndex, safeProgress);
   if (handoffProgress > 0) {
+    const nextScene = sceneTrack[nextIndex];
+    layers[nextIndex]?.classList.toggle("has-visible-objects", nextScene?.type !== "objects" || nextSceneProgress > 0.025);
     applyObjectSceneProgress(nextIndex, nextSceneProgress);
     applyAnnotationSceneProgress(nextIndex, nextSceneProgress);
     applyCarouselSceneProgress(nextIndex, nextSceneProgress);
   }
+  queueHeaderContourOverlaySync();
   applyOverlayState(currentIndex, safeProgress);
 }
 
@@ -828,11 +893,14 @@ function updateFromScroll() {
 
     const rawProgress = getContinuousSceneProgress(layer);
     const progress = sceneIndex === layers.length - 1 && isAtPageBottom ? 1 : rawProgress;
+    const scene = sceneTrack[sceneIndex];
+    layer.classList.toggle("has-visible-objects", scene?.type !== "objects" || progress > 0.025);
     applyObjectSceneProgress(sceneIndex, progress);
     applyAnnotationSceneProgress(sceneIndex, progress);
     applyCarouselSceneProgress(sceneIndex, progress);
   });
 
+  queueHeaderContourOverlaySync();
   setActiveProjectFromScene(activeSceneIndex);
   applyOverlayState(activeSceneIndex, 1);
 }
@@ -1292,6 +1360,7 @@ async function renderSceneLayer(scene, sceneIndex) {
       });
     }
     annotationBox.classList.add("project-header-sheet");
+    await appendHeaderContourOverlay(annotationBox);
     layer.append(annotationBox);
     if (Array.isArray(scene.objects) && scene.objects.length > 0) {
       await renderObjectsIntoLayer(layer, scene, sceneIndex);
@@ -1429,6 +1498,7 @@ function attachScrollHandler() {
       requestAnimationFrame(() => {
         updateFromScroll();
         updateBackToProjectsVisibility();
+        queueHeaderContourOverlaySync();
         ticking = false;
       });
     },
@@ -1457,6 +1527,7 @@ function attachResizeHandler() {
       window.scrollTo({ top: previousScrollY, behavior: "instant" });
       updateFromScroll();
       updateBackToProjectsVisibility();
+      queueHeaderContourOverlaySync();
     }, 160);
   });
 }

@@ -46,7 +46,7 @@ body {
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0) scale(1.08);
   transform-origin: center center;
-  animation: background-terrain-drift 56s ease-in-out infinite alternate;
+  animation: background-terrain-drift 56s ease-in-out var(--contour-drift-delay, 0s) infinite alternate;
   transition:
     clip-path 420ms cubic-bezier(0.62, 0, 0.2, 1),
     opacity 420ms ease,
@@ -61,8 +61,8 @@ body {
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
   opacity: 0;
-  stroke-dasharray: var(--contour-line-length, 1);
-  stroke-dashoffset: var(--contour-line-length, 1);
+  stroke-dasharray: 0 0.5 0 0.5;
+  stroke-dashoffset: 0.25;
   animation: background-contour-draw 9s cubic-bezier(0.58, 0, 0.16, 1) var(--contour-delay, 0s) both;
 }
 
@@ -85,8 +85,8 @@ body {
 .background-animation-lines.is-static polyline {
   animation: none !important;
   opacity: 0.96;
-  stroke-dasharray: var(--contour-line-length, 1);
-  stroke-dashoffset: 0;
+  stroke-dasharray: 0.5 0 0.5 0;
+  stroke-dashoffset: 0.25;
 }
 
 .background-animation-lines.is-undrawing polyline {
@@ -106,7 +106,8 @@ body {
 @keyframes background-contour-draw {
   0% {
     opacity: 0;
-    stroke-dashoffset: var(--contour-line-length, 1);
+    stroke-dasharray: 0 0.5 0 0.5;
+    stroke-dashoffset: 0.25;
   }
 
   12% {
@@ -116,15 +117,16 @@ body {
   72%,
   100% {
     opacity: 0.96;
-    stroke-dashoffset: 0;
+    stroke-dasharray: 0.5 0 0.5 0;
+    stroke-dashoffset: 0.25;
   }
 }
 
 @keyframes background-contour-undraw {
   0% {
     opacity: var(--frozen-opacity, 0.96);
-    stroke-dasharray: var(--frozen-dasharray, 0.5 0 0.5 0);
-    stroke-dashoffset: var(--frozen-dashoffset, 0.25);
+    stroke-dasharray: 0.5 0 0.5 0;
+    stroke-dashoffset: 0.25;
   }
 
   88% {
@@ -248,7 +250,7 @@ main,
   padding: 1.2rem;
   border: 2px solid var(--line);
   margin: 0.9rem 0 2rem;
-  background: var(--surface);
+  background: transparent;
 }
 
 .intro h1 {
@@ -264,7 +266,7 @@ main,
 }
 
 .year-selector {
-  border: 0;
+  border: 2px solid var(--line);
   background: transparent;
   padding: 0.85rem 1rem;
   margin: 0.9rem 0 0.1rem;
@@ -320,13 +322,13 @@ main,
 .personal-panel {
   margin: -1.1rem 0 2rem;
   border: 2px solid var(--line);
-  background: var(--surface);
+  background: transparent;
 }
 
 .personal-toggle {
   width: 100%;
   border: 0;
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
   padding: 0.85rem 1rem;
   font: inherit;
@@ -337,7 +339,7 @@ main,
 
 .personal-toggle:hover,
 .personal-toggle[aria-expanded="true"] {
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
 }
 
@@ -352,7 +354,7 @@ main,
 
 .personal-details {
   border-top: 2px solid var(--line);
-  background: var(--surface);
+  background: transparent;
   overflow: hidden;
 }
 
@@ -714,7 +716,7 @@ main,
   box-shadow: 0 0.8rem 2rem rgba(19, 59, 107, 0.12);
 }
 
-.project-header-sheet > :not(.project-header-contour-overlay) {
+.project-header-sheet > :not(.project-header-contour-overlay):not(.project-header-actions) {
   position: relative;
   z-index: 1;
 }
@@ -769,7 +771,7 @@ main,
   position: absolute;
   top: clamp(0.55rem, 1.4vw, 0.85rem);
   right: clamp(0.55rem, 1.4vw, 0.85rem);
-  z-index: 10;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

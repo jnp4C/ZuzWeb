@@ -16,6 +16,7 @@ const AVAILABLE_BACKGROUND_SRCS = new Set([
   "./assets/Background/contours-growing.svg",
   "./assets/Background/contours-abstract.svg",
 ]);
+const RANDOM_INDEX_BACKGROUND_SRCS = Array.from(AVAILABLE_BACKGROUND_SRCS);
 
 function withBackgroundCacheVersion(src) {
   const delimiter = src.includes("?") ? "&" : "?";
@@ -39,6 +40,7 @@ async function loadBackgroundSvgElement(src) {
   const importedSvg = document.importNode(svgElement, true);
   prepareBackgroundSvgElement(importedSvg);
   importedSvg.classList.add("background-animation-lines");
+  importedSvg.style.setProperty("--contour-drift-delay", `${-(performance.now() / 1000)}s`);
   importedSvg.setAttribute("aria-hidden", "true");
   importedSvg.setAttribute("focusable", "false");
   return importedSvg;
@@ -48,34 +50,49 @@ function prepareBackgroundSvgElement(svgElement) {
   svgElement.querySelector("#background-contour-animation")?.remove();
   const polylines = Array.from(svgElement.querySelectorAll("polyline"));
   polylines.forEach((polyline, index) => {
-    let lineLength = 1;
-    try {
-      lineLength = Math.max(1, polyline.getTotalLength());
-    } catch {
-      lineLength = 1;
-    }
-    polyline.style.setProperty("--contour-line-length", `${lineLength}`);
+    polyline.setAttribute("pathLength", "1");
     if (!polyline.style.getPropertyValue("--contour-delay")) {
       polyline.style.setProperty("--contour-delay", `${Math.min(index * 0.035, 2.4)}s`);
     }
   });
 }
 
-async function restoreSavedBackground() {
+function forceFinishedBackgroundDraw(svgElement) {
+  if (!svgElement?.isConnected) {
+    return;
+  }
+  svgElement.classList.add("is-static");
+}
+
+function scheduleBackgroundDrawCompletion(svgElement) {
+  window.setTimeout(() => {
+    forceFinishedBackgroundDraw(svgElement);
+  }, 12500);
+}
+
+function persistActiveBackground(src) {
+  try {
+    window.sessionStorage.setItem(BACKGROUND_STORAGE_KEY, src);
+  } catch {
+    // Ignore storage failures; background switching should still work in memory.
+  }
+}
+
+function getRandomIndexBackgroundSrc() {
+  return RANDOM_INDEX_BACKGROUND_SRCS[Math.floor(Math.random() * RANDOM_INDEX_BACKGROUND_SRCS.length)] || DEFAULT_BACKGROUND_SRC;
+}
+
+async function renderRandomIndexBackground() {
   if (!backgroundAnimation) {
     return;
   }
 
   try {
-    const storedBackgroundSrc = window.sessionStorage.getItem(BACKGROUND_STORAGE_KEY);
-    const backgroundSrc = AVAILABLE_BACKGROUND_SRCS.has(storedBackgroundSrc)
-      ? storedBackgroundSrc
-      : DEFAULT_BACKGROUND_SRC;
+    const backgroundSrc = getRandomIndexBackgroundSrc();
+    persistActiveBackground(backgroundSrc);
     const svgElement = await loadBackgroundSvgElement(backgroundSrc);
-    if (AVAILABLE_BACKGROUND_SRCS.has(storedBackgroundSrc)) {
-      svgElement.classList.add("is-static");
-    }
     backgroundAnimation.replaceChildren(svgElement);
+    scheduleBackgroundDrawCompletion(svgElement);
   } catch {
     // Ignore storage failures; the default background remains usable.
   }
@@ -141,7 +158,7 @@ function renderYearButtons(projects) {
 }
 
 async function init() {
-  void restoreSavedBackground();
+  void renderRandomIndexBackground();
   initPersonalToggle();
 
   const response = await fetch(`./data/projects.json?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });

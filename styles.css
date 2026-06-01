@@ -250,7 +250,7 @@ main,
   padding: 1.2rem;
   border: 2px solid var(--line);
   margin: 0.9rem 0 2rem;
-  background: transparent;
+  background: var(--surface);
 }
 
 .intro h1 {
@@ -322,13 +322,13 @@ main,
 .personal-panel {
   margin: -1.1rem 0 2rem;
   border: 2px solid var(--line);
-  background: transparent;
+  background: var(--surface);
 }
 
 .personal-toggle {
   width: 100%;
   border: 0;
-  background: transparent;
+  background: var(--surface);
   color: var(--text);
   padding: 0.85rem 1rem;
   font: inherit;
@@ -339,7 +339,7 @@ main,
 
 .personal-toggle:hover,
 .personal-toggle[aria-expanded="true"] {
-  background: transparent;
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -354,7 +354,7 @@ main,
 
 .personal-details {
   border-top: 2px solid var(--line);
-  background: transparent;
+  background: var(--surface);
   overflow: hidden;
 }
 
@@ -1965,7 +1965,8 @@ main,
 
   .personal-photo-frame {
     width: min(100%, 20rem);
-    justify-self: start;
+    justify-self: center;
+    margin-inline: auto;
   }
 
   .cv-line::before {

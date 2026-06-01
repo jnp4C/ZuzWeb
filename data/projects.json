@@ -8276,6 +8276,15 @@
       37,
       38
     ],
+    "headerActions": [
+      {
+        "label": "Award",
+        "href": "https://www.fa.cvut.cz/galerie/souteze/cena-dekana/2023-2024/fa_cd24_sbornik_a5_online_double-high.pdf",
+        "variant": "award",
+        "tooltip": "Dean's Award FA CTU 4th year 2023/2024",
+        "target": "_blank"
+      }
+    ],
     "scenes": [
       {
         "type": "annotation",

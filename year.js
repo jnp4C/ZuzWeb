@@ -53,6 +53,7 @@ let carouselRefsByScene = new Map();
 let selectedProjectIndex = -1;
 let isScrollHandlerAttached = false;
 let isResizeHandlerAttached = false;
+let isVisualViewportHandlerAttached = false;
 let isSelectingProject = false;
 let headerAnimationTimer = 0;
 let activeBackgroundSrc = getStoredBackgroundSrc();
@@ -1589,6 +1590,16 @@ function attachResizeHandler() {
   });
 }
 
+function attachVisualViewportHandler() {
+  if (isVisualViewportHandlerAttached || !window.visualViewport) {
+    return;
+  }
+
+  isVisualViewportHandlerAttached = true;
+  window.visualViewport.addEventListener("resize", queueHeaderContourOverlaySync, { passive: true });
+  window.visualViewport.addEventListener("scroll", queueHeaderContourOverlaySync, { passive: true });
+}
+
 async function selectProject(projectIndex) {
   const project = yearProjects[projectIndex];
   if (!project) {
@@ -1745,6 +1756,7 @@ async function initializeYearPage() {
 
   attachScrollHandler();
   attachResizeHandler();
+  attachVisualViewportHandler();
   if (backToProjects) {
     backToProjects.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });

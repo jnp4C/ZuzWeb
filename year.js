@@ -6,12 +6,12 @@ const DATA_CACHE_VERSION = "2026-05-24-responsive-pdf-crops";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const MAX_CANVAS_DEVICE_SCALE = 1;
 const MAX_CANVAS_EDGE = 1800;
-const DEFAULT_BACKGROUND_SRC = "./assets/Background/contours.svg";
-const SEMNEVICE_BACKGROUND_SRC = "./assets/Background/contours-semnevice.svg";
-const PRAGUE_BACKGROUND_SRC = "./assets/Background/contours-Praha-stresovice.svg";
-const KLADNO_BACKGROUND_SRC = "./assets/Background/contours-kladno.svg";
-const GROWING_BACKGROUND_SRC = "./assets/Background/contours-growing.svg";
-const ABSTRACT_BACKGROUND_SRC = "./assets/Background/contours-abstract.svg";
+const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
+const SEMNEVICE_BACKGROUND_SRC = "./assets/Background/smoothed/contours-semnevice.svg";
+const PRAGUE_BACKGROUND_SRC = "./assets/Background/smoothed/contours-Praha-stresovice.svg";
+const KLADNO_BACKGROUND_SRC = "./assets/Background/smoothed/contours-kladno.svg";
+const GROWING_BACKGROUND_SRC = "./assets/Background/smoothed/contours-growing.svg";
+const ABSTRACT_BACKGROUND_SRC = "./assets/Background/smoothed/contours-abstract.svg";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const AVAILABLE_BACKGROUND_SRCS = new Set([
   DEFAULT_BACKGROUND_SRC,
@@ -139,11 +139,11 @@ async function loadBackgroundSvgElement(src, transitionId = 0) {
 
 function prepareBackgroundSvgElement(svgElement) {
   svgElement.querySelector("#background-contour-animation")?.remove();
-  const polylines = Array.from(svgElement.querySelectorAll("polyline"));
-  polylines.forEach((polyline, index) => {
-    polyline.setAttribute("pathLength", "1");
-    if (!polyline.style.getPropertyValue("--contour-delay")) {
-      polyline.style.setProperty("--contour-delay", `${Math.min(index * 0.035, 2.4)}s`);
+  const contours = Array.from(svgElement.querySelectorAll("polyline, path"));
+  contours.forEach((contour, index) => {
+    contour.setAttribute("pathLength", "1");
+    if (!contour.style.getPropertyValue("--contour-delay")) {
+      contour.style.setProperty("--contour-delay", `${Math.min(index * 0.035, 2.4)}s`);
     }
   });
 }
@@ -240,9 +240,9 @@ async function appendHeaderContourOverlay(headerSheet, backgroundSrc = activeBac
 }
 
 function freezeBackgroundLineStates(svgElement) {
-  for (const polyline of svgElement.querySelectorAll("polyline")) {
-    const computedStyle = window.getComputedStyle(polyline);
-    polyline.style.setProperty("--frozen-opacity", `${Math.max(Number.parseFloat(computedStyle.opacity) || 0, 0.86)}`);
+  for (const contour of svgElement.querySelectorAll("polyline, path")) {
+    const computedStyle = window.getComputedStyle(contour);
+    contour.style.setProperty("--frozen-opacity", `${Math.max(Number.parseFloat(computedStyle.opacity) || 0, 0.86)}`);
   }
 }
 

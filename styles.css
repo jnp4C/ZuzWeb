@@ -53,7 +53,7 @@ body {
     transform 420ms ease;
 }
 
-.background-animation-lines polyline {
+.background-animation-lines :is(polyline, path) {
   fill: none;
   stroke: var(--contour-line-color, var(--line)) !important;
   stroke-width: 0.38 !important;
@@ -82,14 +82,14 @@ body {
   opacity: 0.34;
 }
 
-.background-animation-lines.is-static polyline {
+.background-animation-lines.is-static :is(polyline, path) {
   animation: none !important;
   opacity: 0.96;
   stroke-dasharray: 0.5 0 0.5 0;
   stroke-dashoffset: 0.25;
 }
 
-.background-animation-lines.is-undrawing polyline {
+.background-animation-lines.is-undrawing :is(polyline, path) {
   animation: background-contour-undraw 1050ms cubic-bezier(0.72, 0, 0.18, 1) both !important;
 }
 
@@ -145,7 +145,7 @@ body {
     animation: none;
   }
 
-  .background-animation-lines polyline {
+  .background-animation-lines :is(polyline, path) {
     animation: none !important;
     opacity: 0.9;
     stroke-dasharray: none;

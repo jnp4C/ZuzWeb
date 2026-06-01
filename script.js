@@ -7,14 +7,14 @@ const backgroundAnimation = document.querySelector(".background-animation");
 const DATA_CACHE_VERSION = "2026-05-23-abstract-scenes";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
-const DEFAULT_BACKGROUND_SRC = "./assets/Background/contours.svg";
+const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
 const AVAILABLE_BACKGROUND_SRCS = new Set([
   DEFAULT_BACKGROUND_SRC,
-  "./assets/Background/contours-semnevice.svg",
-  "./assets/Background/contours-Praha-stresovice.svg",
-  "./assets/Background/contours-kladno.svg",
-  "./assets/Background/contours-growing.svg",
-  "./assets/Background/contours-abstract.svg",
+  "./assets/Background/smoothed/contours-semnevice.svg",
+  "./assets/Background/smoothed/contours-Praha-stresovice.svg",
+  "./assets/Background/smoothed/contours-kladno.svg",
+  "./assets/Background/smoothed/contours-growing.svg",
+  "./assets/Background/smoothed/contours-abstract.svg",
 ]);
 const RANDOM_INDEX_BACKGROUND_SRCS = Array.from(AVAILABLE_BACKGROUND_SRCS);
 
@@ -48,11 +48,11 @@ async function loadBackgroundSvgElement(src) {
 
 function prepareBackgroundSvgElement(svgElement) {
   svgElement.querySelector("#background-contour-animation")?.remove();
-  const polylines = Array.from(svgElement.querySelectorAll("polyline"));
-  polylines.forEach((polyline, index) => {
-    polyline.setAttribute("pathLength", "1");
-    if (!polyline.style.getPropertyValue("--contour-delay")) {
-      polyline.style.setProperty("--contour-delay", `${Math.min(index * 0.035, 2.4)}s`);
+  const contours = Array.from(svgElement.querySelectorAll("polyline, path"));
+  contours.forEach((contour, index) => {
+    contour.setAttribute("pathLength", "1");
+    if (!contour.style.getPropertyValue("--contour-delay")) {
+      contour.style.setProperty("--contour-delay", `${Math.min(index * 0.035, 2.4)}s`);
     }
   });
 }

@@ -55,6 +55,8 @@ let isScrollHandlerAttached = false;
 let isResizeHandlerAttached = false;
 let isVisualViewportHandlerAttached = false;
 let isSelectingProject = false;
+let seenObjectKeys = new Set();
+let seenCarouselKeys = new Set();
 let headerAnimationTimer = 0;
 let activeBackgroundSrc = getStoredBackgroundSrc();
 let backgroundTransitionTimer = 0;
@@ -156,6 +158,10 @@ function forceFinishedBackgroundDraw(svgElement) {
   svgElement.classList.add("is-static");
 }
 
+function isBackgroundDrawFinished() {
+  return backgroundAnimationElement?.classList.contains("is-static");
+}
+
 function scheduleBackgroundDrawCompletion(svgElement) {
   window.clearTimeout(backgroundDrawCompleteTimer);
   backgroundDrawCompleteTimer = window.setTimeout(() => {
@@ -227,9 +233,13 @@ async function appendHeaderContourOverlay(headerSheet, backgroundSrc = activeBac
 
   svgElement.classList.add("project-header-contour-lines");
   svgElement.classList.remove("is-static", "is-undrawing", "is-redrawing");
-  window.setTimeout(() => {
-    forceFinishedBackgroundDraw(svgElement);
-  }, 12500);
+  if (isBackgroundDrawFinished()) {
+    svgElement.classList.add("is-static");
+  } else {
+    window.setTimeout(() => {
+      forceFinishedBackgroundDraw(svgElement);
+    }, 12500);
+  }
 
   const overlay = document.createElement("div");
   overlay.className = "project-header-contour-overlay";
@@ -803,7 +813,13 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
 
   objectRefs.forEach((item) => {
     const config = item.config;
-    const progress = config.scrollTrigger === "self" ? getObjectScrollProgress(item) : sceneProgress;
+    const objectKey = `${sceneIndex}:${config.name}`;
+    const rawProgress = config.scrollTrigger === "self" ? getObjectScrollProgress(item) : sceneProgress;
+    const enterCompleteProgress = config.delay + config.enterDuration;
+    if (rawProgress >= enterCompleteProgress) {
+      seenObjectKeys.add(objectKey);
+    }
+    const progress = seenObjectKeys.has(objectKey) ? Math.max(rawProgress, enterCompleteProgress) : rawProgress;
     const inProgress = clamp((progress - config.delay) / config.enterDuration, 0, 1);
     const outProgress = item.flowOnly ? 0 : clamp((progress - config.exitStart) / config.exitDuration, 0, 1);
 
@@ -850,7 +866,12 @@ function applyCarouselSceneProgress(sceneIndex, sceneProgress) {
     return;
   }
 
-  const carouselProgress = carouselRef.embedded ? clamp((sceneProgress - 0.02) / 0.08, 0, 1) : 1;
+  const carouselKey = `${sceneIndex}`;
+  const rawCarouselProgress = carouselRef.embedded ? clamp((sceneProgress - 0.02) / 0.08, 0, 1) : 1;
+  if (rawCarouselProgress >= 1) {
+    seenCarouselKeys.add(carouselKey);
+  }
+  const carouselProgress = seenCarouselKeys.has(carouselKey) ? 1 : rawCarouselProgress;
   carouselRef.element.style.opacity = String(carouselProgress);
   carouselRef.element.style.transform = `translateY(${lerp(12, 0, carouselProgress)}px)`;
 }
@@ -1609,6 +1630,8 @@ async function selectProject(projectIndex) {
   isSelectingProject = true;
   selectedProjectIndex = projectIndex;
   activeProjectIndex = projectIndex;
+  seenObjectKeys = new Set();
+  seenCarouselKeys = new Set();
   activateProjectButton(projectIndex);
   void transitionProjectBackground(project);
   setProjectText(project);

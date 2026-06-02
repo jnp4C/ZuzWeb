@@ -1375,12 +1375,15 @@ main,
   left: auto;
   top: auto;
   width: 100% !important;
+  min-width: 0;
   height: 100%;
   gap: 0;
   align-items: stretch;
+  overflow: hidden;
 }
 
 .abstract-two-left-one-right-object-scene .scene-object-image {
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -1452,12 +1455,15 @@ main,
   left: auto;
   top: auto;
   width: 100% !important;
+  min-width: 0;
   height: 100%;
   gap: 0;
   align-items: stretch;
+  overflow: hidden;
 }
 
 .abstract-three-left-one-right-object-scene .scene-object-image {
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -1465,6 +1471,21 @@ main,
 .abstract-three-left-one-right-object-scene .scene-object[data-object-name="abstract-scene-6-right"] {
   grid-column: 2;
   grid-row: 1 / span 3;
+}
+
+.abstract-three-left-one-right-object-scene .scene-object[data-object-name="abstract-scene-6-mid-left"] {
+  position: relative;
+}
+
+.abstract-three-left-one-right-object-scene .scene-object[data-object-name="abstract-scene-6-mid-left"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16%;
+  height: 100%;
+  background: #ffffff;
+  pointer-events: none;
 }
 
 .abstract-three-horizontal-object-scene {

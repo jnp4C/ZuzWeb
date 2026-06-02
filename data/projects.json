@@ -1670,7 +1670,7 @@
         "objects": [
           {
             "name": "abstract-scene-6-top-left",
-            "src": "./assets/generated/abstract/06-abstract-scene-6-top-left-617.jpg",
+            "src": "./assets/2025-abstract/6topleft.jpeg",
             "displayWidthRatio": 0.25,
             "base": {
               "x": 0,
@@ -1693,19 +1693,11 @@
             "delay": 0,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01,
-            "crop": [
-              0,
-              0,
-              0.2571428571428571,
-              0.3971462544589774
-            ],
-            "srcset": "./assets/generated/abstract/06-abstract-scene-6-top-left-463.jpg 463w, ./assets/generated/abstract/06-abstract-scene-6-top-left-617.jpg 617w",
-            "sizes": "min(22vw, 298px)"
+            "exitDuration": 0.01
           },
           {
             "name": "abstract-scene-6-mid-left",
-            "src": "./assets/generated/abstract/06-abstract-scene-6-mid-left-651.jpg",
+            "src": "./assets/2025-abstract/6midleft.jpeg",
             "displayWidthRatio": 0.25,
             "base": {
               "x": 0,
@@ -1728,19 +1720,11 @@
             "delay": 0.12,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01,
-            "crop": [
-              0,
-              0.3971462544589774,
-              0.2714285714285714,
-              0.3733650416171225
-            ],
-            "srcset": "./assets/generated/abstract/06-abstract-scene-6-mid-left-489.jpg 489w, ./assets/generated/abstract/06-abstract-scene-6-mid-left-651.jpg 651w",
-            "sizes": "min(22vw, 298px)"
+            "exitDuration": 0.01
           },
           {
             "name": "abstract-scene-6-down-left",
-            "src": "./assets/generated/abstract/06-abstract-scene-6-down-left-660.jpg",
+            "src": "./assets/2025-abstract/6downleft.jpeg",
             "displayWidthRatio": 0.25,
             "base": {
               "x": 0,
@@ -1763,20 +1747,12 @@
             "delay": 0.24,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01,
-            "crop": [
-              0,
-              0.783,
-              0.275,
-              0.192
-            ],
-            "srcset": "./assets/generated/abstract/06-abstract-scene-6-down-left-495.jpg 495w, ./assets/generated/abstract/06-abstract-scene-6-down-left-660.jpg 660w",
-            "sizes": "min(22vw, 298px)"
+            "exitDuration": 0.01
           },
           {
             "name": "abstract-scene-6-right",
-            "src": "./assets/generated/abstract/06-abstract-scene-6-right-1656.jpg",
-            "displayWidthRatio": 0.56,
+            "src": "./assets/2025-abstract/6right.jpeg",
+            "displayWidthRatio": 0.52,
             "base": {
               "x": 0,
               "y": 0,
@@ -1798,20 +1774,12 @@
             "delay": 0.1,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01,
-            "crop": [
-              0.29,
-              0.034,
-              0.69,
-              0.9357907253269917
-            ],
-            "srcset": "./assets/generated/abstract/06-abstract-scene-6-right-1242.jpg 1242w, ./assets/generated/abstract/06-abstract-scene-6-right-1656.jpg 1656w",
-            "sizes": "min(48vw, 666px)"
+            "exitDuration": 0.01
           }
         ],
         "page": 6,
         "layoutConfig": {
-          "columns": "323fr 806fr",
+          "columns": "346fr 783fr",
           "rows": "334fr 314fr 162fr",
           "aspect": "1190 / 841"
         }
@@ -2132,7 +2100,7 @@
         "objects": [
           {
             "name": "abstract-scene-10-top-left",
-            "src": "./assets/generated/abstract/10-abstract-scene-10-top-left-712.jpg",
+            "src": "./assets/2025-abstract/10topleft.png",
             "displayWidthRatio": 0.331,
             "base": {
               "x": 0,
@@ -2155,19 +2123,11 @@
             "delay": 0,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01,
-            "crop": [
-              0,
-              0,
-              0.2966386554621849,
-              0.6956004756242569
-            ],
-            "srcset": "./assets/generated/abstract/10-abstract-scene-10-top-left-534.jpg 534w, ./assets/generated/abstract/10-abstract-scene-10-top-left-712.jpg 712w",
-            "sizes": "min(28vw, 394px)"
+            "exitDuration": 0.01
           },
           {
             "name": "abstract-scene-10-down-left",
-            "src": "./assets/generated/abstract/10-abstract-scene-10-down-left-827.jpg",
+            "src": "./assets/2025-abstract/10downleft.png",
             "displayWidthRatio": 0.331,
             "base": {
               "x": 0,
@@ -2190,19 +2150,11 @@
             "delay": 0.16,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01,
-            "crop": [
-              0,
-              0.6932223543400713,
-              0.3445378151260504,
-              0.30677764565992865
-            ],
-            "srcset": "./assets/generated/abstract/10-abstract-scene-10-down-left-620.jpg 620w, ./assets/generated/abstract/10-abstract-scene-10-down-left-827.jpg 827w",
-            "sizes": "min(28vw, 394px)"
+            "exitDuration": 0.01
           },
           {
             "name": "abstract-scene-10-right",
-            "src": "./assets/generated/abstract/10-abstract-scene-10-right-1674.jpg",
+            "src": "./assets/2025-abstract/10right.png",
             "displayWidthRatio": 0.669,
             "base": {
               "x": 0,
@@ -2225,15 +2177,7 @@
             "delay": 0.08,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01,
-            "crop": [
-              0.3025210084033614,
-              0,
-              0.6974789915966386,
-              0.9988109393579072
-            ],
-            "srcset": "./assets/generated/abstract/10-abstract-scene-10-right-1255.jpg 1255w, ./assets/generated/abstract/10-abstract-scene-10-right-1674.jpg 1674w",
-            "sizes": "min(58vw, 796px)"
+            "exitDuration": 0.01
           }
         ],
         "page": 10,

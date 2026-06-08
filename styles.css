@@ -1162,7 +1162,14 @@ main,
 }
 
 .rewaterization-three-part-object-scene {
-  row-gap: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.515fr) minmax(0, 0.485fr);
+  align-items: stretch;
+  justify-items: stretch;
+  gap: 0;
+  width: min(94vw, 1180px);
+  max-width: 94vw;
+  padding-inline: 0;
 }
 
 .rewaterization-photo-carousel-object-scene.has-carousel {
@@ -1186,13 +1193,22 @@ main,
 
 .rewaterization-photo-carousel-object-scene .scene-object[data-object-name="rewaterization-page-05-top"],
 .rewaterization-stacked-object-scene .scene-object,
-.rewaterization-three-part-object-scene .scene-object:first-child,
 .rewaterization-top-bottom-object-scene .scene-object {
   width: min(94vw, 1180px) !important;
 }
 
+.rewaterization-three-part-object-scene .scene-object:first-child {
+  grid-column: 1 / -1;
+  width: 100% !important;
+}
+
 .rewaterization-three-part-object-scene .scene-object:not(:first-child) {
-  width: min(43vw, 34rem) !important;
+  width: 100% !important;
+}
+
+.rewaterization-three-part-object-scene .scene-object-image {
+  width: 100%;
+  max-width: 100%;
 }
 
 .rewaterization-photo-carousel-object-scene .embedded-carousel-scene {
@@ -2263,7 +2279,6 @@ main,
     padding-inline: 0;
   }
 
-  .rewaterization-three-part-object-scene .scene-object:not(:first-child),
   .rewaterization-photo-carousel-object-scene .carousel-photo {
     width: min(88vw, 30rem) !important;
   }

@@ -1114,6 +1114,101 @@ main,
   width: min(86vw, 1190px) !important;
 }
 
+.rewaterization-process-object-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.4rem, 5vh, 4rem);
+  padding: clamp(1.5rem, 4vh, 3rem) 4vw clamp(1.8rem, 4vh, 3.4rem);
+}
+
+.rewaterization-process-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.rewaterization-process-object-scene .scene-object[data-object-name="rewaterization-definition"] {
+  width: min(46rem, 86vw) !important;
+  align-self: flex-start;
+  margin-left: max(5vw, calc((100vw - 1180px) / 2));
+}
+
+.rewaterization-process-object-scene .scene-object[data-object-name="rewaterization-process-diagram"] {
+  width: min(72vw, 58rem) !important;
+}
+
+.rewaterization-process-object-scene .scene-object-text {
+  font-size: clamp(0.95rem, 1.15vw, 1.35rem);
+  line-height: 1.34;
+}
+
+.rewaterization-photo-carousel-object-scene,
+.rewaterization-stacked-object-scene,
+.rewaterization-three-part-object-scene,
+.rewaterization-top-bottom-object-scene {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(1rem, 3vh, 2rem) min(4vw, 3rem);
+  padding: clamp(1rem, 3vh, 2rem) 4vw clamp(1.5rem, 4vh, 3rem);
+}
+
+.rewaterization-stacked-object-scene,
+.rewaterization-top-bottom-object-scene {
+  flex-direction: column;
+  gap: 0;
+}
+
+.rewaterization-three-part-object-scene {
+  row-gap: 0;
+}
+
+.rewaterization-photo-carousel-object-scene.has-carousel {
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.4rem, 4vh, 2.8rem);
+}
+
+.rewaterization-photo-carousel-object-scene .object-row {
+  padding-inline: 0;
+}
+
+.rewaterization-photo-carousel-object-scene .scene-object,
+.rewaterization-stacked-object-scene .scene-object,
+.rewaterization-three-part-object-scene .scene-object,
+.rewaterization-top-bottom-object-scene .scene-object {
+  position: static;
+  left: auto;
+  top: auto;
+}
+
+.rewaterization-photo-carousel-object-scene .scene-object[data-object-name="rewaterization-page-05-top"],
+.rewaterization-stacked-object-scene .scene-object,
+.rewaterization-three-part-object-scene .scene-object:first-child,
+.rewaterization-top-bottom-object-scene .scene-object {
+  width: min(94vw, 1180px) !important;
+}
+
+.rewaterization-three-part-object-scene .scene-object:not(:first-child) {
+  width: min(43vw, 34rem) !important;
+}
+
+.rewaterization-photo-carousel-object-scene .embedded-carousel-scene {
+  width: 100%;
+}
+
+.rewaterization-photo-carousel-object-scene .carousel-photo {
+  width: min(30vw, 24rem);
+}
+
+.rewaterization-html-text {
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.92);
+  padding: clamp(0.75rem, 1.5vw, 1.4rem);
+}
+
 .krematorium-site-split-object-scene {
   display: flex;
   justify-content: center;
@@ -2137,10 +2232,40 @@ main,
   .realization-custom-two-top-one-down-object-scene,
   .realization-custom-two-top-object-scene,
   .realization-single-custom-object-scene,
+  .rewaterization-process-object-scene,
   .growing-left-stack-right-object-scene,
   .growing-two-top-one-down-object-scene {
     width: min(1190px, 94vw) !important;
     max-width: 94vw;
+  }
+
+  .rewaterization-process-object-scene {
+    gap: clamp(1.2rem, 4vh, 2.4rem);
+    padding-inline: 0;
+  }
+
+  .rewaterization-process-object-scene .scene-object[data-object-name="rewaterization-definition"] {
+    width: min(88vw, 32rem) !important;
+    align-self: center;
+    margin-left: 0;
+  }
+
+  .rewaterization-process-object-scene .scene-object[data-object-name="rewaterization-process-diagram"] {
+    width: min(90vw, 42rem) !important;
+  }
+
+  .rewaterization-photo-carousel-object-scene,
+  .rewaterization-stacked-object-scene,
+  .rewaterization-three-part-object-scene,
+  .rewaterization-top-bottom-object-scene {
+    width: min(1190px, 94vw) !important;
+    max-width: 94vw;
+    padding-inline: 0;
+  }
+
+  .rewaterization-three-part-object-scene .scene-object:not(:first-child),
+  .rewaterization-photo-carousel-object-scene .carousel-photo {
+    width: min(88vw, 30rem) !important;
   }
 
   .carousel-photo {

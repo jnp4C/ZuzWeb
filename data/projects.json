@@ -11262,6 +11262,1735 @@
     "selectorLabel": "CONCEPT OF SEMNĚVICE LANDSCAPE"
   },
   {
+    "title": "REWATERIZATION",
+    "category": "Studio project",
+    "location": "Semněvice, CZ",
+    "year": 2023,
+    "description": "A Semněvice water regime revitalisation proposal developed from the landscape concept.",
+    "annotation": "The project arises from group work, in which a VISION was proposed and a LANDSCAPE CONCEPT was created based on an analysis of the territory of the Semněvice municipality. Its aim was to grasp the landscape as a whole and to establish principles and methods for rational and sustainable use, so that it could thrive and people could live well in it. The proposal is an application of principles established in the concept to a specific area, an example of revitalising local water regime. The work is based on the real needs of the community. The presentation of the proposal ensures that the issue of water in the landscape is adequately explained, as it is not just theoretical work for the academic community but primarily a real initiative for a specific municipality and its citizens.",
+    "relatedProjectLink": {
+      "label": "View concept",
+      "href": "./year.html?year=2023&project=concept-of-semnevice-landscape"
+    },
+    "scenes": [
+      {
+        "type": "annotation",
+        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nREWATERIZATION\n\nTYPE OF PROJECT\nStudio project\n\nSTUDIO\nStudio Salzmann\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "supportingText": "The project arises from group work, in which a VISION was proposed and a LANDSCAPE CONCEPT was created based on an analysis of the territory of the Semněvice municipality. Its aim was to grasp the landscape as a whole and to establish principles and methods for rational and sustainable use, so that it could thrive and people could live well in it. The proposal is an application of principles established in the concept to a specific area, an example of revitalising local water regime. The work is based on the real needs of the community. The presentation of the proposal ensures that the issue of water in the landscape is adequately explained, as it is not just theoretical work for the academic community but primarily a real initiative for a specific municipality and its citizens.",
+        "page": 1,
+        "studioName": "Studio Salzmann",
+        "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "relatedProjectLink": {
+          "label": "View concept",
+          "href": "./year.html?year=2023&project=concept-of-semnevice-landscape"
+        }
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 1,
+        "objects": [
+          {
+            "name": "rewaterization-cover",
+            "src": "./assets/generated/rewaterization/01-full-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/01-full-1200.jpg 1200w, ./assets/generated/rewaterization/01-full-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 42,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.72,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ],
+        "startLineRatio": 0.62,
+        "travelRatio": 0.9
+      },
+      {
+        "type": "objects",
+        "layout": "rewaterization-process",
+        "page": 2,
+        "objects": [
+          {
+            "name": "rewaterization-definition",
+            "text": "revodalizace*\n[podst. jméno] -e (ž)\n\nobnova vodního režimu nebo jeho části; oživení nefunkčního, popř. zchátralého; uvedení vodního režimu do takového stavu, aby prosperoval a s ním i celá krajina - revodalizace území; revodalizace krajiny\n\n[přídavné jméno] revodalizační; [sloveso] revodalizovat\n\n* Jedná se o vymyšlené slovo.",
+            "displayWidthRatio": 0.44,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          },
+          {
+            "name": "rewaterization-process-diagram",
+            "src": "./assets/generated/rewaterization/02-process-1300.jpg",
+            "srcset": "./assets/generated/rewaterization/02-process-900.jpg 900w, ./assets/generated/rewaterization/02-process-1300.jpg 1300w",
+            "sizes": "min(90vw, 920px)",
+            "displayWidthRatio": 0.58,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 3,
+        "objects": [
+          {
+            "name": "rewaterization-analysis-title",
+            "src": "./assets/generated/rewaterization/03-full-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/03-full-1200.jpg 1200w, ./assets/generated/rewaterization/03-full-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 42,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.6,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 4,
+        "objects": [
+          {
+            "name": "rewaterization-page-04-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/04-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/04-split-left-700.jpg 700w, ./assets/generated/rewaterization/04-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-04-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/04-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/04-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/04-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "rewaterization-photo-carousel",
+        "page": 5,
+        "objects": [
+          {
+            "name": "rewaterization-page-05-top",
+            "src": "./assets/generated/rewaterization/05-top-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/05-top-1200.jpg 1200w, ./assets/generated/rewaterization/05-top-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 72,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.58,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ],
+        "photos": [
+          {
+            "src": "./assets/generated/rewaterization/05-photo-left-1000.jpg",
+            "alt": "Rewaterization landscape character photo 1"
+          },
+          {
+            "src": "./assets/generated/rewaterization/05-photo-mid-1000.jpg",
+            "alt": "Rewaterization landscape character photo 2"
+          },
+          {
+            "src": "./assets/generated/rewaterization/05-photo-right-1000.jpg",
+            "alt": "Rewaterization landscape character photo 3"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 6,
+        "objects": [
+          {
+            "name": "rewaterization-page-06-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/06-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/06-split-left-700.jpg 700w, ./assets/generated/rewaterization/06-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-06-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/06-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/06-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/06-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 7,
+        "objects": [
+          {
+            "name": "rewaterization-page-07-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/07-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/07-split-left-700.jpg 700w, ./assets/generated/rewaterization/07-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-07-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/07-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/07-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/07-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 8,
+        "objects": [
+          {
+            "name": "rewaterization-page-08-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/08-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/08-split-left-700.jpg 700w, ./assets/generated/rewaterization/08-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-08-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/08-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/08-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/08-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 9,
+        "objects": [
+          {
+            "name": "rewaterization-page-09",
+            "src": "./assets/generated/rewaterization/09-full-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/09-full-1200.jpg 1200w, ./assets/generated/rewaterization/09-full-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 42,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.6,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "rewaterization-stacked",
+        "page": 10,
+        "objects": [
+          {
+            "name": "rewaterization-page-10-top",
+            "src": "./assets/generated/rewaterization/10-top-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/10-top-1200.jpg 1200w, ./assets/generated/rewaterization/10-top-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -100,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "rewaterization-page-10-diagram",
+            "src": "./assets/generated/rewaterization/10-diagram-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/10-diagram-1200.jpg 1200w, ./assets/generated/rewaterization/10-diagram-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 76,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 11,
+        "objects": [
+          {
+            "name": "rewaterization-page-11-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/11-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/11-split-left-700.jpg 700w, ./assets/generated/rewaterization/11-split-left-1000.jpg 1000w",
+            "sizes": "min(34vw, 405px)"
+          },
+          {
+            "name": "rewaterization-page-11-visual",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/11-split-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/11-split-right-1200.jpg 1200w, ./assets/generated/rewaterization/11-split-right-1800.jpg 1800w",
+            "sizes": "min(55vw, 655px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 12,
+        "objects": [
+          {
+            "name": "rewaterization-page-12",
+            "src": "./assets/generated/rewaterization/12-full-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/12-full-1200.jpg 1200w, ./assets/generated/rewaterization/12-full-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 42,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.6,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 13,
+        "objects": [
+          {
+            "name": "rewaterization-page-13-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/13-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/13-split-left-700.jpg 700w, ./assets/generated/rewaterization/13-split-left-1000.jpg 1000w",
+            "sizes": "min(34vw, 405px)"
+          },
+          {
+            "name": "rewaterization-page-13-visual",
+            "crop": [
+              0.32,
+              0,
+              0.68,
+              1
+            ],
+            "displayWidthRatio": 0.55,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/13-split-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/13-split-right-1200.jpg 1200w, ./assets/generated/rewaterization/13-split-right-1800.jpg 1800w",
+            "sizes": "min(55vw, 655px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 14,
+        "objects": [
+          {
+            "name": "rewaterization-page-14-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/14-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/14-split-left-700.jpg 700w, ./assets/generated/rewaterization/14-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-14-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/14-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/14-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/14-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 15,
+        "objects": [
+          {
+            "name": "rewaterization-page-15-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/15-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/15-split-left-700.jpg 700w, ./assets/generated/rewaterization/15-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-15-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/15-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/15-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/15-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 16,
+        "objects": [
+          {
+            "name": "rewaterization-page-16-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/16-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/16-split-left-700.jpg 700w, ./assets/generated/rewaterization/16-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-16-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/16-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/16-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/16-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 17,
+        "objects": [
+          {
+            "name": "rewaterization-page-17-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/17-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/17-split-left-700.jpg 700w, ./assets/generated/rewaterization/17-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-17-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/17-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/17-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/17-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 18,
+        "objects": [
+          {
+            "name": "rewaterization-page-18-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/18-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/18-split-left-700.jpg 700w, ./assets/generated/rewaterization/18-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-18-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/18-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/18-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/18-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
+        "page": 19,
+        "objects": [
+          {
+            "name": "rewaterization-page-19-text",
+            "crop": [
+              0,
+              0,
+              0.34,
+              1
+            ],
+            "displayWidthRatio": 0.31,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/19-split-left-1000.jpg",
+            "srcset": "./assets/generated/rewaterization/19-split-left-700.jpg 700w, ./assets/generated/rewaterization/19-split-left-1000.jpg 1000w",
+            "sizes": "min(31vw, 369px)"
+          },
+          {
+            "name": "rewaterization-page-19-visual",
+            "crop": [
+              0.34,
+              0,
+              0.66,
+              1
+            ],
+            "displayWidthRatio": 0.6,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.5,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "src": "./assets/generated/rewaterization/19-equal-right-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/19-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/19-equal-right-1800.jpg 1800w",
+            "sizes": "min(60vw, 714px)"
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "rewaterization-three-part",
+        "page": 20,
+        "objects": [
+          {
+            "name": "rewaterization-page-20-top",
+            "src": "./assets/generated/rewaterization/20-top-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/20-top-1200.jpg 1200w, ./assets/generated/rewaterization/20-top-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -90,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "rewaterization-page-20-bottom-left",
+            "src": "./assets/generated/rewaterization/20-bottom-left-1300.jpg",
+            "srcset": "./assets/generated/rewaterization/20-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/20-bottom-left-1300.jpg 1300w",
+            "sizes": "min(43vw, 512px)",
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "rewaterization-page-20-bottom-right",
+            "src": "./assets/generated/rewaterization/20-bottom-right-1300.jpg",
+            "srcset": "./assets/generated/rewaterization/20-bottom-right-900.jpg 900w, ./assets/generated/rewaterization/20-bottom-right-1300.jpg 1300w",
+            "sizes": "min(43vw, 512px)",
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "rewaterization-three-part",
+        "page": 21,
+        "objects": [
+          {
+            "name": "rewaterization-page-21-top",
+            "src": "./assets/generated/rewaterization/21-top-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/21-top-1200.jpg 1200w, ./assets/generated/rewaterization/21-top-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -90,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "rewaterization-page-21-bottom-left",
+            "src": "./assets/generated/rewaterization/21-bottom-left-1300.jpg",
+            "srcset": "./assets/generated/rewaterization/21-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/21-bottom-left-1300.jpg 1300w",
+            "sizes": "min(43vw, 512px)",
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "rewaterization-page-21-bottom-right",
+            "src": "./assets/generated/rewaterization/21-bottom-right-1300.jpg",
+            "srcset": "./assets/generated/rewaterization/21-bottom-right-900.jpg 900w, ./assets/generated/rewaterization/21-bottom-right-1300.jpg 1300w",
+            "sizes": "min(43vw, 512px)",
+            "displayWidthRatio": 0.43,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 420,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "rewaterization-top-bottom",
+        "page": 22,
+        "objects": [
+          {
+            "name": "rewaterization-page-22-top",
+            "src": "./assets/generated/rewaterization/22-top-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/22-top-1200.jpg 1200w, ./assets/generated/rewaterization/22-top-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -90,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "rewaterization-page-22-bottom",
+            "src": "./assets/generated/rewaterization/22-bottom-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/22-bottom-1200.jpg 1200w, ./assets/generated/rewaterization/22-bottom-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 78,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "rewaterization-top-bottom",
+        "page": 23,
+        "objects": [
+          {
+            "name": "rewaterization-page-23-top",
+            "src": "./assets/generated/rewaterization/23-top-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/23-top-1200.jpg 1200w, ./assets/generated/rewaterization/23-top-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": -90,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.45,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "rewaterization-page-23-bottom",
+            "src": "./assets/generated/rewaterization/23-bottom-1800.jpg",
+            "srcset": "./assets/generated/rewaterization/23-bottom-1200.jpg 1200w, ./assets/generated/rewaterization/23-bottom-1800.jpg 1800w",
+            "sizes": "min(100vw, 1180px)",
+            "displayWidthRatio": 0.98,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 78,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.04,
+            "enterDuration": 0.55,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "carousel",
+        "photos": [
+          {
+            "src": "./assets/Other photos/2023-rewaterization/R1.jpg",
+            "alt": "Rewaterization photo 1"
+          },
+          {
+            "src": "./assets/Other photos/2023-rewaterization/R2.jpg",
+            "alt": "Rewaterization photo 2"
+          },
+          {
+            "src": "./assets/Other photos/2023-rewaterization/R3.jpg",
+            "alt": "Rewaterization photo 3"
+          },
+          {
+            "src": "./assets/Other photos/2023-rewaterization/R4.jpg",
+            "alt": "Rewaterization photo 4"
+          },
+          {
+            "src": "./assets/Other photos/2023-rewaterization/R5.jpg",
+            "alt": "Rewaterization photo 5"
+          }
+        ]
+      }
+    ],
+    "projectType": "Studio project",
+    "studioName": "Studio Salzmann",
+    "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+    "selectorLabel": "REWATERIZATION"
+  },
+  {
     "title": "STEEP GARDEN",
     "category": "Garden Design",
     "location": "Prague-Střešovice, CZ",

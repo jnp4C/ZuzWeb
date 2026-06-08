@@ -259,7 +259,7 @@ function freezeBackgroundLineStates(svgElement) {
 
 function getProjectBackgroundSrc(project) {
   const slug = slugifyProject(`${project?.selectorLabel || ""} ${project?.title || ""}`);
-  if (slug.includes("semnevice")) {
+  if (slug.includes("semnevice") || slug.includes("rewaterization") || slug.includes("revodalizace")) {
     return SEMNEVICE_BACKGROUND_SRC;
   }
 
@@ -734,6 +734,11 @@ function getSceneHandoffStart(scene) {
     || scene.layout === "vegetation"
     || scene.layout === "inner-function"
     || scene.layout === "full-width-visual"
+    || scene.layout === "rewaterization-process"
+    || scene.layout === "rewaterization-photo-carousel"
+    || scene.layout === "rewaterization-stacked"
+    || scene.layout === "rewaterization-three-part"
+    || scene.layout === "rewaterization-top-bottom"
     || scene.layout === "krematorium-site-split"
     || scene.layout === "krematorium-sirsi-vztahy"
     || scene.layout === "krematorium-navrh-cyklus"
@@ -1077,6 +1082,11 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
     || scene.layout === "vegetation"
     || scene.layout === "inner-function"
     || scene.layout === "full-width-visual"
+    || scene.layout === "rewaterization-process"
+    || scene.layout === "rewaterization-photo-carousel"
+    || scene.layout === "rewaterization-stacked"
+    || scene.layout === "rewaterization-three-part"
+    || scene.layout === "rewaterization-top-bottom"
     || scene.layout === "krematorium-site-split"
     || scene.layout === "krematorium-sirsi-vztahy"
     || scene.layout === "krematorium-navrh-cyklus"
@@ -1125,6 +1135,21 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
   }
   if (scene.layout === "full-width-visual") {
     objectScene.classList.add("full-width-visual-object-scene");
+  }
+  if (scene.layout === "rewaterization-process") {
+    objectScene.classList.add("rewaterization-process-object-scene");
+  }
+  if (scene.layout === "rewaterization-photo-carousel") {
+    objectScene.classList.add("rewaterization-photo-carousel-object-scene");
+  }
+  if (scene.layout === "rewaterization-stacked") {
+    objectScene.classList.add("rewaterization-stacked-object-scene");
+  }
+  if (scene.layout === "rewaterization-three-part") {
+    objectScene.classList.add("rewaterization-three-part-object-scene");
+  }
+  if (scene.layout === "rewaterization-top-bottom") {
+    objectScene.classList.add("rewaterization-top-bottom-object-scene");
   }
   if (scene.layout === "krematorium-site-split") {
     objectScene.classList.add("krematorium-site-split-object-scene");
@@ -1332,6 +1357,11 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
         || scene.layout === "vegetation"
         || scene.layout === "inner-function"
         || scene.layout === "full-width-visual"
+        || scene.layout === "rewaterization-process"
+        || scene.layout === "rewaterization-photo-carousel"
+        || scene.layout === "rewaterization-stacked"
+        || scene.layout === "rewaterization-three-part"
+        || scene.layout === "rewaterization-top-bottom"
         || scene.layout === "krematorium-site-split"
         || scene.layout === "krematorium-sirsi-vztahy"
         || scene.layout === "krematorium-navrh-cyklus"

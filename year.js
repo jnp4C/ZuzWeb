@@ -35,6 +35,7 @@ const visualLayers = document.getElementById("visualLayers");
 const viewerStatus = document.getElementById("viewerStatus");
 const scrollSteps = document.getElementById("scrollSteps");
 const yearLabel = document.getElementById("year");
+const backLink = document.querySelector(".back-link");
 const backToProjects = document.getElementById("backToProjects");
 const backgroundAnimation = document.querySelector(".background-animation");
 let backgroundAnimationElement = document.querySelector(".background-animation-lines");
@@ -1727,14 +1728,68 @@ function attachResizeHandler() {
   });
 }
 
+function getViewportGutter() {
+  const rawGutter = getComputedStyle(document.documentElement).getPropertyValue("--container-gutter");
+  const parsedGutter = Number.parseFloat(rawGutter);
+  return Number.isFinite(parsedGutter) ? Math.max(16, parsedGutter) : 16;
+}
+
+function updateFixedNavForVisualViewport() {
+  const viewport = window.visualViewport;
+  const scale = viewport?.scale || 1;
+  const inverseScale = scale > 0 ? 1 / scale : 1;
+  const offsetLeft = viewport?.offsetLeft || 0;
+  const offsetTop = viewport?.offsetTop || 0;
+  const viewportWidth = viewport?.width || window.innerWidth;
+  const gutter = getViewportGutter();
+  const top = offsetTop + 16;
+
+  if (backLink) {
+    backLink.style.left = `${offsetLeft + gutter}px`;
+    backLink.style.top = `${top}px`;
+    backLink.style.right = "auto";
+    backLink.style.transformOrigin = "top left";
+    backLink.style.transform = `scale(${inverseScale})`;
+  }
+
+  if (backToProjects) {
+    const buttonWidth = backToProjects.offsetWidth || 130;
+    const left = offsetLeft + viewportWidth - gutter - buttonWidth * inverseScale;
+    backToProjects.style.left = `${Math.max(offsetLeft + gutter, left)}px`;
+    backToProjects.style.top = `${top}px`;
+    backToProjects.style.right = "auto";
+    backToProjects.style.transformOrigin = "top left";
+    backToProjects.style.transform = `scale(${inverseScale})`;
+  }
+}
+
+function resetPinchZoomForNavigation() {
+  const viewportMeta = document.querySelector('meta[name="viewport"]');
+  if (!viewportMeta || !window.visualViewport || window.visualViewport.scale <= 1.01) {
+    return;
+  }
+
+  const originalContent = viewportMeta.getAttribute("content") || "width=device-width, initial-scale=1.0";
+  viewportMeta.setAttribute("content", `${originalContent}, maximum-scale=1.0`);
+  window.setTimeout(() => {
+    viewportMeta.setAttribute("content", originalContent);
+    updateFixedNavForVisualViewport();
+  }, 220);
+}
+
 function attachVisualViewportHandler() {
   if (isVisualViewportHandlerAttached || !window.visualViewport) {
     return;
   }
 
   isVisualViewportHandlerAttached = true;
-  window.visualViewport.addEventListener("resize", queueHeaderContourOverlaySync, { passive: true });
-  window.visualViewport.addEventListener("scroll", queueHeaderContourOverlaySync, { passive: true });
+  const handleVisualViewportChange = () => {
+    updateFixedNavForVisualViewport();
+    queueHeaderContourOverlaySync();
+  };
+  window.visualViewport.addEventListener("resize", handleVisualViewportChange, { passive: true });
+  window.visualViewport.addEventListener("scroll", handleVisualViewportChange, { passive: true });
+  updateFixedNavForVisualViewport();
 }
 
 async function selectProject(projectIndex) {
@@ -1897,9 +1952,16 @@ async function initializeYearPage() {
   attachScrollHandler();
   attachResizeHandler();
   attachVisualViewportHandler();
+  if (backLink) {
+    backLink.addEventListener("click", () => {
+      resetPinchZoomForNavigation();
+    });
+  }
   if (backToProjects) {
     backToProjects.addEventListener("click", () => {
+      resetPinchZoomForNavigation();
       window.scrollTo({ top: 0, behavior: "smooth" });
+      updateFixedNavForVisualViewport();
     });
   }
   updateBackToProjectsVisibility();

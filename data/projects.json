@@ -1,6 +1,208 @@
 [
   {
-    "title": "Through the Forest",
+    "title": "A Tree with the Spirit of Christmas",
+    "category": "Landscape Installation",
+    "location": "Prague, CZ",
+    "year": 2026,
+    "description": "Group project for the GHMP Opencall.",
+    "annotation": "A group project prepared for the GHMP Opencall.",
+    "scenes": [
+      {
+        "type": "annotation",
+        "introOnly": true,
+        "supportingText": "A group project prepared for the GHMP Opencall."
+      },
+      {
+        "type": "objects",
+        "layout": "christmas-day-night",
+        "page": 1,
+        "objects": [
+          {
+            "name": "christmas-spirit-day-night-switch",
+            "src": "./assets/generated/christmas-spirit/day-1800.jpg",
+            "srcset": "./assets/generated/christmas-spirit/day-1200.jpg 1200w, ./assets/generated/christmas-spirit/day-1800.jpg 1800w",
+            "nightSrc": "./assets/generated/christmas-spirit/night-1800.jpg",
+            "nightSrcset": "./assets/generated/christmas-spirit/night-1200.jpg 1200w, ./assets/generated/christmas-spirit/night-1800.jpg 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "nightAutoStart": 0.72,
+            "nightAutoEnd": 0.94,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 0,
+              "y": 220,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.08,
+            "enterDuration": 0.22,
+            "exitStart": 0.98,
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "christmas-spirit-text",
+            "text": "Stejně jako se tržnice liší od klasických nákupních center, hledali jsme i my alternativu k jejich typickému způsobu výzdoby. Zvolili jsme proto jednoduchost a přírodní materiály, které zdobné budovy tržnice jemně doplní.\n\nKonstrukce je odkazem na tradiční doškové střechy, doplněné o moderní technologie. V doškách jsou totiž kromě rákosu i optická vlákna, díky nimž strom při soumraku kouzelně ožívá. Možná se bude zdát, že světélkují samotné konce stébel. Že by je rozsvěcel Duch Vánoc?",
+            "displayWidthRatio": 0.34,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0.4,
+            "enterDuration": 0.2,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 3,
+        "objects": [
+          {
+            "name": "christmas-spirit-booklet-page-03",
+            "src": "./assets/generated/christmas-spirit/booklet-page-03-1800.jpg",
+            "srcset": "./assets/generated/christmas-spirit/booklet-page-03-1200.jpg 1200w, ./assets/generated/christmas-spirit/booklet-page-03-1800.jpg 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.62,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 4,
+        "objects": [
+          {
+            "name": "christmas-spirit-booklet-page-04",
+            "src": "./assets/generated/christmas-spirit/booklet-page-04-1800.jpg",
+            "srcset": "./assets/generated/christmas-spirit/booklet-page-04-1200.jpg 1200w, ./assets/generated/christmas-spirit/booklet-page-04-1800.jpg 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.62,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 5,
+        "objects": [
+          {
+            "name": "christmas-spirit-booklet-page-05",
+            "src": "./assets/generated/christmas-spirit/booklet-page-05-1800.jpg",
+            "srcset": "./assets/generated/christmas-spirit/booklet-page-05-1200.jpg 1200w, ./assets/generated/christmas-spirit/booklet-page-05-1800.jpg 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "delay": 0,
+            "enterDuration": 0.62,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      }
+    ],
+    "projectType": "GHMP Opencall, group project",
+    "projectTeam": [
+      "ING. DAVID ŠMÍD",
+      "ING. ZUZANA PURMOVÁ"
+    ],
+    "selectorLabel": "A TREE WITH THE SPIRIT OF CHRISTMAS"
+  },
+  {
+    "title": "THROUGH THE FOREST",
     "category": "Landscape Architecture",
     "location": "Prague, CZ",
     "year": 2021,
@@ -22,8 +224,15 @@
     "scenes": [
       {
         "type": "annotation",
-        "text": "PROJEKT 1\n\nVznikl na základě ateliérového zadání Praha 11 - Vize a realita.\nHlavním prvkem společné vize je zelená páteř / síť, spojující primárně tři zmíněné\nplochy přírodního charakteru a sekundárně všechny zelené plochy v zástavbě.\nDále počítáme s omezením automobilové dopravy a upřednostnění chodců a cyklistů.",
-        "supportingText": "hlavní prvky vize :\n- zelená síť / páteř spojující tři velké plochy přírodního charakteru a všechny zelené\n  plochy v zástavbě\n- omezení automobilové dopravy\n- multifunkční parkovací domy místo rozlehlých asfaltových parkovacích ploch\n- upřednostnění a podpora pěších a cyklistů\n- doplnění lidského měřítka",
+        "text": "NAME OF PROJECT\nTHROUGH THE FOREST\n\nTYPE OF PROJECT\nStudio project, individual\n\nSTUDIO\nStudio Salzmann, FA CTU in Prague\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "supportingText": "The project was created on the basis of a common vision for Prague 11. Its main element is a green net, connecting three vaste forests that surround the area. The proposal is a response to the issue of permeability of the territory and a part of the net. The project connects the Kunratice Forest with the Hostivař-Záběhlice Park. Therefore, it uses a stripe of free space around roads. Benefits of the proposal: interconnection of areas, possibility of migration of species, use of vague areas, pedestrian safety, expansion of forest area and new areas for recreation. The result is a terrain mass that rises like a wave to span two roads, absorbing the rest inside. It’s liquid consistency adapts to the existing terrain and and partially hides a building of a large shopping center.",
+        "studioName": "Studio Salzmann, FA CTU in Prague",
+        "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "page": 3
+      },
+      {
+        "type": "objects",
+        "layout": "side-by-side",
         "page": 3,
         "objects": [
           {
@@ -992,7 +1201,11 @@
         ]
       }
     ],
-    "sourceUrl": "https://www.fa.cvut.cz/en/gallery/studio-projects/34933-through-the-forest"
+    "sourceUrl": "https://www.fa.cvut.cz/en/gallery/studio-projects/34933-through-the-forest",
+    "projectType": "Studio project, individual",
+    "studioName": "Studio Salzmann, FA CTU in Prague",
+    "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+    "selectorLabel": "THROUGH THE FOREST"
   },
   {
     "title": "ABSTRACT.",
@@ -2589,10 +2802,10 @@
     "scenes": [
       {
         "type": "annotation",
-        "text": "NAME OF PROJECT\nSteep Garden Realization\n\nTYPE OF PROJECT\nStudio project, individuale\n\nSTUDIO\nSitta - Chmelová, FA ČVUT v Praze",
+        "text": "NAME OF PROJECT\nSteep Garden Realization\n\nTYPE OF PROJECT\nStudio project, individual\n\nSTUDIO\nSitta - Chmelová, FA CTU in Prague",
         "supportingText": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project’s plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
         "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
-        "studioName": "Sitta - Chmelová, FA ČVUT v Praze"
+        "studioName": "Sitta - Chmelová, FA CTU in Prague"
       },
       {
         "type": "objects",
@@ -6666,8 +6879,8 @@
         "page": 45
       }
     ],
-    "projectType": "Studio project, individuale",
-    "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+    "projectType": "Studio project, individual",
+    "studioName": "Sitta - Chmelová, FA CTU in Prague",
     "selectorLabel": "STEEP GARDEN REALIZATION",
     "relatedProjectLink": {
       "label": "View concept",
@@ -6685,9 +6898,9 @@
     "scenes": [
       {
         "type": "annotation",
-        "text": "NAME OF PROJECT\nGROWING-THROUGH\n\nTYPE OF PROJECT\nStudio project, group project\nmgr. David Šíma\n\nSTUDIO\nSitta - Chmelová, FA ČVUT v Praze",
+        "text": "NAME OF PROJECT\nGROWING-THROUGH\n\nTYPE OF PROJECT\nStudio project, group project\nING. DAVID ŠMÍD, ING. ZUZANA PURMOVÁ\n\nSTUDIO\nSitta - Chmelová, FA CTU in Prague",
         "supportingText": "A design for a two-year outdoor installation created for the International Garden Festival at Les Jardins de Métis (Reford Gardens) with the theme 'BORDERS'. The installation illustrates how nature deals with artificial boundaries created by humans. Concrete objects placed in conflict with willow patches demonstrate various spatial concepts of barriers and their overcoming. By using willow rods that will take root and grow through the whole time of the exhibition, the installation continuously evolves, showing how the environment adapts to the impacts of insensitive human interventions.",
-        "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+        "studioName": "Sitta - Chmelová, FA CTU in Prague",
         "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
         "headerActions": [
           {
@@ -6938,9 +7151,10 @@
     ],
     "projectType": "Studio project, group project",
     "projectTeam": [
-      "mgr. David Šíma"
+      "ING. DAVID ŠMÍD",
+      "ING. ZUZANA PURMOVÁ"
     ],
-    "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+    "studioName": "Sitta - Chmelová, FA CTU in Prague",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
     "selectorLabel": "GROWING-THROUGH",
     "headerActions": [
@@ -8160,11 +8374,9 @@
         ]
       }
     ],
-    "projectType": "Individual project",
-    "projectTeam": [
-      "BC. ZUZANA PURMOVÁ"
-    ],
-    "studioName": "Atelier Sitta - Chmelová, FA ČVUT v Praze",
+    "projectType": "Studio project, individual",
+    "studioName": "Atelier Sitta - Chmelová, FA CTU in Prague",
+    "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
     "selectorLabel": "Kladno Krematorium"
   },
   {
@@ -8226,7 +8438,7 @@
     "scenes": [
       {
         "type": "annotation",
-        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nCONCEPT OF SEMNĚVICE LANDSCAPE\n\nTYPE OF PROJECT\nGroup project\nBC. DENISA MORAVCOVÁ, BC. ZUZANA PURMOVÁ,\nING. ARCH. DANIELA KVAPILOVÁ, BC. MARTINA GRUNTOVÁ\n\nSTUDIO\nStudio Salzmann\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nCONCEPT OF SEMNĚVICE LANDSCAPE\n\nTYPE OF PROJECT\nGroup project\nING. DENISA MORAVCOVÁ, ING. ZUZANA PURMOVÁ,\nING. MARTINA GRUNTOVÁ\n\nSTUDIO\nStudio Salzmann, FA CTU in Prague\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
         "supportingText": "Based on a detailed analysis of the landscape of Semněvice, a vision for the area was proposed — SemněVISION, and a Landscape Concept of Semněvice was prepared. It aims to grasp the landscape comprehensively as a whole, to establish principles and methods of rational and sustainable use and interventions so that it would prosper and people would live well in it. The landscape concept was elaborated in detail in four layers based on the needs and problems of the Semněvice landscape: the road network, the intramural area, agriculture and the water regime. This team project is followed by individual projects developing the following layers: THE LANDSCAPE AROUND SEMNĚVICE, Through the Village Under the Hillage, WATER FLOW, Heart of Semněvice, AGRI-SEMNĚ-CULTURE, REWATERIZATION, OUT-WATERING.",
         "page": 1
       },
@@ -11252,12 +11464,11 @@
     ],
     "projectType": "Group project",
     "projectTeam": [
-      "BC. DENISA MORAVCOVÁ",
-      "BC. ZUZANA PURMOVÁ",
-      "ING. ARCH. DANIELA KVAPILOVÁ",
-      "BC. MARTINA GRUNTOVÁ"
+      "ING. DENISA MORAVCOVÁ",
+      "ING. ZUZANA PURMOVÁ",
+      "ING. MARTINA GRUNTOVÁ"
     ],
-    "studioName": "Studio Salzmann",
+    "studioName": "Studio Salzmann, FA CTU in Prague",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
     "selectorLabel": "CONCEPT OF SEMNĚVICE LANDSCAPE"
   },
@@ -11275,10 +11486,10 @@
     "scenes": [
       {
         "type": "annotation",
-        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nREWATERIZATION\n\nTYPE OF PROJECT\nStudio project\n\nSTUDIO\nStudio Salzmann\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nREWATERIZATION\n\nTYPE OF PROJECT\nStudio project, individual, part of group concept\n\nSTUDIO\nStudio Salzmann, FA CTU in Prague\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
         "supportingText": "The project arises from group work, in which a VISION was proposed and a LANDSCAPE CONCEPT was created based on an analysis of the territory of the Semněvice municipality. Its aim was to grasp the landscape as a whole and to establish principles and methods for rational and sustainable use, so that it could thrive and people could live well in it. The proposal is an application of principles established in the concept to a specific area, an example of revitalising local water regime. The work is based on the real needs of the community. The presentation of the proposal ensures that the issue of water in the landscape is adequately explained, as it is not just theoretical work for the academic community but primarily a real initiative for a specific municipality and its citizens.",
         "page": 1,
-        "studioName": "Studio Salzmann",
+        "studioName": "Studio Salzmann, FA CTU in Prague",
         "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
         "relatedProjectLink": {
           "label": "View concept",
@@ -12985,8 +13196,8 @@
         ]
       }
     ],
-    "projectType": "Studio project",
-    "studioName": "Studio Salzmann",
+    "projectType": "Studio project, individual, part of group concept",
+    "studioName": "Studio Salzmann, FA CTU in Prague",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
     "selectorLabel": "REWATERIZATION"
   },
@@ -13019,7 +13230,7 @@
         "type": "annotation",
         "supportingText": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project's plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
         "page": 1,
-        "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+        "studioName": "Sitta - Chmelová, FA CTU in Prague",
         "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta"
       },
       {
@@ -14465,11 +14676,8 @@
         ]
       }
     ],
-    "projectType": "Individual project",
-    "projectTeam": [
-      "BC. ZUZANA PURMOVÁ"
-    ],
-    "studioName": "Sitta - Chmelová, FA ČVUT v Praze",
+    "projectType": "Studio project, individual, private commission",
+    "studioName": "Sitta - Chmelová, FA CTU in Prague",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
     "selectorLabel": "STEEP GARDEN",
     "relatedProjectLink": {

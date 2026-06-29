@@ -1,8 +1,8 @@
 const PDFJS_MODULE_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.min.mjs";
 const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.worker.min.mjs";
 const DEFAULT_PDF_FILE = "./PORTFOLIO_Zuzana-Purmova.pdf";
-const ASSET_CACHE_VERSION = "2026-05-24-responsive-pdf-crops";
-const DATA_CACHE_VERSION = "2026-05-24-responsive-pdf-crops";
+const ASSET_CACHE_VERSION = "2026-06-29-christmas-spirit-scenes";
+const DATA_CACHE_VERSION = "2026-06-29-christmas-spirit-scenes";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const MAX_CANVAS_DEVICE_SCALE = 1;
 const MAX_CANVAS_EDGE = 1800;
@@ -617,6 +617,10 @@ function normalizeObjectDefinition(rawObject, objectIndex) {
     caption: rawObject.caption || "",
     src: rawObject.src || "",
     srcset: rawObject.srcset || "",
+    nightSrc: rawObject.nightSrc || "",
+    nightSrcset: rawObject.nightSrcset || "",
+    nightAutoStart: rawObject.nightAutoStart ?? 0.36,
+    nightAutoEnd: rawObject.nightAutoEnd ?? 0.7,
     sizes: rawObject.sizes || "",
     text: rawObject.text || "",
     flowOffsetY: rawObject.flowOffsetY ?? 0,
@@ -734,6 +738,7 @@ function getSceneHandoffStart(scene) {
     || scene.layout === "vegetation"
     || scene.layout === "inner-function"
     || scene.layout === "full-width-visual"
+    || scene.layout === "christmas-day-night"
     || scene.layout === "rewaterization-process"
     || scene.layout === "rewaterization-photo-carousel"
     || scene.layout === "rewaterization-stacked"
@@ -844,6 +849,15 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
 
     item.element.style.opacity = String(opacity);
     item.element.style.transform = `translate(${x}px, ${y}px) rotate(${rotate}deg) scale(${scale})`;
+
+    if (item.dayNightSwitcher && item.dayNightSlider) {
+      const blendStart = clamp(config.nightAutoStart, 0, 1);
+      const blendEnd = Math.max(blendStart + 0.01, clamp(config.nightAutoEnd, 0, 1));
+      const nightProgress = clamp((sceneProgress - blendStart) / (blendEnd - blendStart), 0, 1);
+      item.dayNightSwitcher.classList.toggle("is-control-visible", sceneProgress >= 0.4);
+      item.dayNightSwitcher.style.setProperty("--night-opacity", `${nightProgress}`);
+      item.dayNightSlider.value = `${Math.round(nightProgress * 100)}`;
+    }
   });
 }
 
@@ -922,6 +936,12 @@ function getContinuousSceneProgress(layer) {
   const startLine = window.innerHeight * startLineRatio;
   const isFlowScene = layer.classList.contains("flow-object-scene-layer");
   const hasDelayedDownObject = isRealizationDelayedDownLayout(scene?.layout);
+  if (layer.classList.contains("christmas-day-night-layer")) {
+    const stickyScene = layer.querySelector(".christmas-day-night-object-scene");
+    const stickyOffset = stickyScene ? Number.parseFloat(getComputedStyle(stickyScene).top) || 0 : 0;
+    const pinnedTravel = Math.max(1, rect.height - window.innerHeight + stickyOffset);
+    return clamp((stickyOffset - rect.top) / pinnedTravel, 0, 1);
+  }
   const travel = isFlowScene
     ? Math.max(window.innerHeight * (scene?.travelRatio ?? (hasDelayedDownObject ? 1.25 : 0.95)), rect.height * 0.92)
     : Math.max(1, Math.min(window.innerHeight * 0.72, rect.height * 0.72));
@@ -1082,6 +1102,7 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
     || scene.layout === "vegetation"
     || scene.layout === "inner-function"
     || scene.layout === "full-width-visual"
+    || scene.layout === "christmas-day-night"
     || scene.layout === "rewaterization-process"
     || scene.layout === "rewaterization-photo-carousel"
     || scene.layout === "rewaterization-stacked"
@@ -1103,6 +1124,9 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
     || scene.layout === "zahrada-left-stack"
   ) {
     layer.classList.add("flow-object-scene-layer");
+  }
+  if (scene.layout === "christmas-day-night") {
+    layer.classList.add("christmas-day-night-layer");
   }
   const objectScene = document.createElement("div");
   objectScene.className = "object-scene";
@@ -1135,6 +1159,9 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
   }
   if (scene.layout === "full-width-visual") {
     objectScene.classList.add("full-width-visual-object-scene");
+  }
+  if (scene.layout === "christmas-day-night") {
+    objectScene.classList.add("christmas-day-night-object-scene");
   }
   if (scene.layout === "rewaterization-process") {
     objectScene.classList.add("rewaterization-process-object-scene");
@@ -1294,6 +1321,8 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
     objectNode.style.opacity = "0";
     objectNode.style.transform = "translate(0, 0) scale(1)";
     objectNode.style.width = `${visualLayers.clientWidth * objectConfig.displayWidthRatio}px`;
+    let dayNightSwitcher = null;
+    let dayNightSlider = null;
 
     if (objectConfig.text) {
       const textNode = document.createElement("article");
@@ -1325,7 +1354,58 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
       image.alt = objectConfig.caption || objectConfig.name;
       image.loading = "eager";
       image.decoding = "async";
-      objectNode.append(image);
+      if (objectConfig.nightSrc) {
+        const switcher = document.createElement("div");
+        dayNightSwitcher = switcher;
+        switcher.className = "day-night-switcher";
+        switcher.style.setProperty("--night-opacity", "0");
+
+        const nightImage = document.createElement("img");
+        nightImage.className = "scene-object-image day-night-image-night";
+        nightImage.src = withAssetCacheVersion(objectConfig.nightSrc);
+        if (objectConfig.nightSrcset) {
+          nightImage.srcset = objectConfig.nightSrcset
+            .split(",")
+            .map((entry) => {
+              const trimmedEntry = entry.trim();
+              const firstSpaceIndex = trimmedEntry.indexOf(" ");
+              if (firstSpaceIndex < 0) {
+                return withAssetCacheVersion(trimmedEntry);
+              }
+              const src = trimmedEntry.slice(0, firstSpaceIndex);
+              const descriptor = trimmedEntry.slice(firstSpaceIndex + 1);
+              return `${withAssetCacheVersion(src)} ${descriptor}`;
+            })
+            .join(", ");
+        }
+        if (objectConfig.sizes) {
+          nightImage.sizes = objectConfig.sizes;
+        }
+        nightImage.alt = `${objectConfig.caption || objectConfig.name} night`;
+        nightImage.loading = "eager";
+        nightImage.decoding = "async";
+
+        const control = document.createElement("label");
+        control.className = "day-night-control";
+        const labelText = document.createElement("span");
+        labelText.textContent = "Day / night";
+        const slider = document.createElement("input");
+        slider.type = "range";
+        slider.min = "0";
+        slider.max = "100";
+        slider.value = "0";
+        dayNightSlider = slider;
+        slider.setAttribute("aria-label", "Blend between day and night visualization");
+        slider.addEventListener("input", () => {
+          switcher.style.setProperty("--night-opacity", `${Number(slider.value) / 100}`);
+        });
+        control.append(labelText, slider);
+
+        switcher.append(image, nightImage, control);
+        objectNode.append(switcher);
+      } else {
+        objectNode.append(image);
+      }
     } else {
       const canvas = document.createElement("canvas");
       canvas.className = "scene-object-canvas";
@@ -1347,6 +1427,8 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
       layer,
       element: objectNode,
       config: objectConfig,
+      dayNightSwitcher,
+      dayNightSlider,
       flowOnly: scene.type === "annotation"
         || scene.layout === "side-by-side"
         || scene.layout === "analysis"
@@ -1357,6 +1439,7 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
         || scene.layout === "vegetation"
         || scene.layout === "inner-function"
         || scene.layout === "full-width-visual"
+        || scene.layout === "christmas-day-night"
         || scene.layout === "rewaterization-process"
         || scene.layout === "rewaterization-photo-carousel"
         || scene.layout === "rewaterization-stacked"
@@ -1428,6 +1511,9 @@ async function renderSceneLayer(scene, sceneIndex) {
 
   if (scene.type === "annotation") {
     layer.classList.add("annotation-layer");
+    if (scene.introOnly) {
+      layer.classList.add("intro-only-annotation-layer");
+    }
     const annotationBox = document.createElement("article");
     annotationBox.className = "annotation-box annotation-intro";
     appendLinkedText(annotationBox, removeProjectHeaderLabel(scene.text), scene);
@@ -1736,6 +1822,7 @@ async function resolveProjectScenes(project, projectIndex, totalProjects) {
         headerActions: Array.isArray(scene.headerActions) ? scene.headerActions : (Array.isArray(project.headerActions) ? project.headerActions : []),
         studioName: scene.studioName || project.studioName || "",
         studioUrl: scene.studioUrl || project.studioUrl || "",
+        introOnly: Boolean(scene.introOnly),
         page,
         pdfFile,
         objects,

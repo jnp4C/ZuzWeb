@@ -17,6 +17,7 @@ const continueButton = document.getElementById("continueGift");
 const bouquetSelection = document.getElementById("bouquetSelection");
 const offeredFlower = document.getElementById("offeredFlower");
 const handoffPrompt = document.getElementById("handoffPrompt");
+const handoffTitle = document.getElementById("handoffTitle");
 const handoffContinue = document.getElementById("handoffContinue");
 const receivedCharacter = document.querySelector(".received-character");
 const handoffCharacter = document.querySelector(".handoff-character");
@@ -282,7 +283,7 @@ flowerChoices.forEach((choice) => {
   choice.addEventListener("click", () => {
     flowerChoices.forEach((item) => item.setAttribute("aria-pressed", `${item === choice}`));
     experience.dataset.selectedFlower = choice.dataset.flower;
-    bouquetSelection.textContent = `${choice.dataset.flower} selected for your bouquet.`;
+    bouquetSelection.textContent = `${choice.dataset.flower} selected to be delivered.`;
     continueButton.disabled = false;
   });
 });
@@ -342,6 +343,7 @@ offeredFlower.addEventListener("click", () => {
   });
   handoffPrompt.textContent = "Here it comes...";
   window.setTimeout(() => {
+    handoffTitle.textContent = "Wow, I’m out of words. You look just… majestic!";
     handoffPrompt.textContent = "I hope they smell as good as the real ones XD";
     handoffContinue.hidden = false;
   }, 720);

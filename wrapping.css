@@ -296,18 +296,9 @@ body.gift-is-active {
   transform: translateX(36%);
 }
 
-.handoff-stage.is-received .handoff-frame--one {
-  transform: scale(1.27);
-  transform-origin: 50% 18%;
-}
-
 .handoff-stage.is-received .received-character {
   opacity: 1;
   transform: translateX(-105%);
-}
-
-.handoff-stage.is-received .received-character img {
-  transform: scale(1.27);
 }
 
 .offered-flower {

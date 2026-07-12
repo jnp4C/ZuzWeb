@@ -1153,7 +1153,7 @@ main,
 }
 
 .christmas-day-night-object-scene .scene-object[data-object-name="christmas-spirit-day-night-switch"] {
-  width: min(100vw, 118rem) !important;
+  width: min(96vw, 118rem) !important;
 }
 
 .christmas-day-night-object-scene .scene-object[data-object-name="christmas-spirit-text"] {
@@ -2372,25 +2372,41 @@ main,
 
   .christmas-day-night-object-scene {
     --christmas-sticky-offset: 3.4rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
     width: 100%;
     max-width: 100%;
     overflow: visible;
   }
 
+  .christmas-day-night-layer {
+    display: block;
+    overflow: visible;
+    min-height: 420vh;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  .christmas-day-night-layer .christmas-day-night-object-scene {
+    position: sticky;
+    top: var(--christmas-sticky-offset);
+  }
+
   .christmas-day-night-object-scene .scene-object[data-object-name="christmas-spirit-day-night-switch"] {
-    width: min(118rem, 160vw) !important;
+    width: min(100%, 100vw) !important;
+    max-width: 100vw;
   }
 
   .christmas-day-night-object-scene .scene-object[data-object-name="christmas-spirit-text"] {
-    position: absolute;
-    left: clamp(0.65rem, 3vw, 1rem);
-    top: clamp(3.5rem, 13vw, 5rem);
-    width: min(78vw, 24rem) !important;
-    align-self: flex-start;
+    position: static;
+    left: auto;
+    top: auto;
+    width: min(86vw, 24rem) !important;
+    align-self: center;
   }
 
   .christmas-day-night-object-scene .scene-object-text {
-    max-height: min(48vh, 24rem);
+    max-height: min(38vh, 22rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     font-size: clamp(0.9rem, 3.45vw, 1.08rem);

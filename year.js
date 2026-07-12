@@ -1742,10 +1742,11 @@ function updateFixedNavForVisualViewport() {
   const offsetTop = viewport?.offsetTop || 0;
   const viewportWidth = viewport?.width || window.innerWidth;
   const gutter = getViewportGutter();
-  const top = offsetTop + 16;
+  const scaledGutter = gutter * inverseScale;
+  const top = offsetTop + 16 * inverseScale;
 
   if (backLink) {
-    backLink.style.left = `${offsetLeft + gutter}px`;
+    backLink.style.left = `${offsetLeft + scaledGutter}px`;
     backLink.style.top = `${top}px`;
     backLink.style.right = "auto";
     backLink.style.transformOrigin = "top left";
@@ -1754,8 +1755,8 @@ function updateFixedNavForVisualViewport() {
 
   if (backToProjects) {
     const buttonWidth = backToProjects.offsetWidth || 130;
-    const left = offsetLeft + viewportWidth - gutter - buttonWidth * inverseScale;
-    backToProjects.style.left = `${Math.max(offsetLeft + gutter, left)}px`;
+    const left = offsetLeft + viewportWidth - scaledGutter - buttonWidth * inverseScale;
+    backToProjects.style.left = `${Math.max(offsetLeft + scaledGutter, left)}px`;
     backToProjects.style.top = `${top}px`;
     backToProjects.style.right = "auto";
     backToProjects.style.transformOrigin = "top left";

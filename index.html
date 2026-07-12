@@ -9,8 +9,85 @@
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
     <link rel="stylesheet" href="./styles.css?v=2026-06-29-christmas-spirit-scenes" />
+    <link rel="stylesheet" href="./wrapping.css?v=2026-07-12" />
+    <script>
+      try {
+        if (localStorage.getItem("zuz-birthday-gift-unwrapped-v1") === "true") {
+          document.documentElement.classList.add("gift-already-unwrapped");
+        }
+      } catch {}
+    </script>
   </head>
   <body>
+    <div id="giftExperience" class="gift-experience" aria-label="Birthday gift wrapping">
+      <section id="bouquetLayer" class="gift-stage bouquet-stage" aria-labelledby="bouquetTitle" aria-hidden="true">
+        <div class="bouquet-card">
+          <h1 id="bouquetTitle">Select your desired digital flower</h1>
+          <p class="bouquet-copy">its easier for me this way, meet me in the middle nuni</p>
+          <div class="flower-picker" role="group" aria-label="Select your desired digital flower">
+            <button class="flower-choice flower-choice--spring" type="button" data-flower="Spring bouquet" aria-pressed="false">
+              <span class="flower-preview" aria-hidden="true"></span>
+              <span class="flower-name">Spring bouquet</span>
+            </button>
+            <button class="flower-choice flower-choice--bright" type="button" data-flower="Bright bouquet" aria-pressed="false">
+              <span class="flower-preview" aria-hidden="true"></span>
+              <span class="flower-name">Bright bouquet</span>
+            </button>
+            <button class="flower-choice flower-choice--roses" type="button" data-flower="Red roses" aria-pressed="false">
+              <span class="flower-preview" aria-hidden="true"></span>
+              <span class="flower-name">Red roses</span>
+            </button>
+            <button class="flower-choice flower-choice--succulent" type="button" data-flower="Succulent" aria-pressed="false">
+              <span class="flower-preview" aria-hidden="true"></span>
+              <span class="flower-name">Succulent</span>
+            </button>
+          </div>
+          <p id="bouquetSelection" class="bouquet-selection" aria-live="polite"></p>
+          <button id="continueGift" class="gift-button" type="button" disabled>Continue unwrapping</button>
+        </div>
+      </section>
+
+      <section id="handoffLayer" class="gift-stage handoff-stage is-dismissed" aria-labelledby="handoffTitle" aria-hidden="true">
+        <div class="handoff-copy">
+          <h1 id="handoffTitle">Oh hey diva, did someone order any specific flowers?</h1>
+          <p id="handoffPrompt" aria-live="polite">Just a moment...</p>
+        </div>
+        <div class="handoff-character" aria-hidden="true">
+          <img class="handoff-frame handoff-frame--one" src="./BDWRAP/character1f.png" alt="" />
+          <img class="handoff-frame handoff-frame--two" src="./BDWRAP/character2f.png" alt="" />
+          <button id="offeredFlower" class="offered-flower" type="button" aria-label="Receive your selected digital flower">
+            <span class="offered-flower-image"></span>
+          </button>
+        </div>
+        <div class="received-character" aria-hidden="true">
+          <img src="./BDWRAP/zuz.png" alt="" />
+        </div>
+        <button id="handoffContinue" class="gift-button handoff-continue" type="button" hidden>Continue unwrapping</button>
+      </section>
+
+      <section id="finalWrap" class="gift-stage wrap-stage final-wrap" aria-hidden="true">
+        <canvas class="wrap-canvas" aria-label="Final wrapping paper. Drag to unwrap."></canvas>
+        <div class="wrap-instruction">
+          <p>I hope this gift will make you as happy as it was fun for me to create. This is what you get when an Archigirl dates a Digiboy. I love you so much.</p>
+          <span>Continue to unwrap</span>
+        </div>
+        <div class="unwrap-progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section id="outerWrap" class="gift-stage wrap-stage outer-wrap">
+        <canvas class="wrap-canvas" aria-label="Birthday wrapping paper. Click, then drag to unwrap."></canvas>
+        <button id="unwrapIntro" class="unwrap-intro" type="button" aria-label="Begin unwrapping">
+          <span id="typedGiftMessage" class="typed-gift-message" aria-live="polite"></span>
+          <span class="unwrap-prompt">Click to begin</span>
+        </button>
+        <div class="wrap-instruction" hidden>
+          <p>Unwrap me</p>
+          <span>Drag your mouse or finger across the paper</span>
+        </div>
+        <div class="unwrap-progress" aria-hidden="true"><span></span></div>
+      </section>
+    </div>
+
     <div class="background-animation" aria-hidden="true">
     </div>
     <header class="site-header container">
@@ -19,6 +96,7 @@
           <p class="brand">Ing. Zuzana Purmová</p>
           <p class="tagline">Landscape Architecture Portfolio</p>
         </div>
+        <button id="replayGift" class="replay-gift" type="button">Replay gift wrapping</button>
       </div>
     </header>
 
@@ -115,5 +193,6 @@
     </footer>
 
     <script src="./script.js?v=2026-06-29-christmas-spirit-scenes" type="module"></script>
+    <script src="./wrapping.js?v=2026-07-12" type="module"></script>
   </body>
 </html>

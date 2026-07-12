@@ -1,0 +1,533 @@
+:root {
+  --gift-green: #5a7d75;
+  --gift-green-dark: #415f58;
+  --gift-paper-light: #73968e;
+  --gift-cream: #fdfdfd;
+}
+
+body.gift-is-active {
+  overflow: hidden;
+}
+
+.gift-already-unwrapped .gift-experience {
+  display: none;
+}
+
+.gift-experience {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.gift-experience.is-complete {
+  pointer-events: none;
+}
+
+.replay-gift {
+  align-self: center;
+  margin-left: auto;
+  padding: 0.35rem 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--gift-green-dark);
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.replay-gift:hover {
+  color: #111;
+}
+
+.gift-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transition: opacity 700ms ease, visibility 700ms ease;
+}
+
+.gift-stage.is-dismissed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.gift-stage.is-presenting {
+  transition: none;
+}
+
+.wrap-stage {
+  touch-action: none;
+  cursor: grab;
+}
+
+.wrap-stage.is-tearing {
+  cursor: grabbing;
+}
+
+.wrap-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.unwrap-intro,
+.wrap-instruction {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: min(42rem, calc(100vw - 3rem));
+  transform: translate(-50%, -50%);
+  color: var(--gift-cream);
+  text-align: center;
+}
+
+.unwrap-intro {
+  min-height: 12rem;
+  padding: 2rem;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.typed-gift-message {
+  display: block;
+  min-height: 4.5rem;
+  font-size: clamp(1.55rem, 4vw, 3.25rem);
+  line-height: 1.25;
+}
+
+.typed-gift-message::after {
+  content: "";
+  display: inline-block;
+  width: 0.08em;
+  height: 0.9em;
+  margin-left: 0.12em;
+  background: currentColor;
+  vertical-align: -0.08em;
+  animation: gift-caret 800ms steps(1) infinite;
+}
+
+.unwrap-prompt {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  opacity: 0;
+  text-transform: uppercase;
+  transition: opacity 500ms ease;
+}
+
+.unwrap-intro.is-ready .unwrap-prompt {
+  opacity: 0.85;
+}
+
+.wrap-instruction {
+  pointer-events: none;
+  transition: opacity 450ms ease;
+}
+
+.wrap-instruction.is-fading {
+  opacity: 0;
+}
+
+.wrap-instruction p {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.7rem, 4vw, 3.5rem);
+}
+
+.final-wrap .wrap-instruction {
+  width: min(52rem, calc(100vw - 3rem));
+}
+
+.final-wrap .wrap-instruction p {
+  font-size: clamp(1.3rem, 3vw, 2.55rem);
+  line-height: 1.3;
+}
+
+.wrap-instruction span {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.unwrap-progress {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  height: 3px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+}
+
+.unwrap-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--gift-cream);
+  transition: width 180ms ease;
+}
+
+.bouquet-stage {
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: var(--gift-cream);
+  color: #111;
+}
+
+.bouquet-card {
+  width: min(44rem, 100%);
+  text-align: center;
+}
+
+.handoff-stage {
+  z-index: 2;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  place-items: center;
+  padding: clamp(1rem, 3vh, 2rem);
+  background: var(--gift-green-dark);
+  color: var(--gift-cream);
+  text-align: center;
+}
+
+.final-wrap {
+  z-index: 1;
+}
+
+.outer-wrap {
+  z-index: 3;
+}
+
+.handoff-copy {
+  position: relative;
+  z-index: 3;
+}
+
+.handoff-copy h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(1.7rem, 4vw, 3.2rem);
+  font-weight: 400;
+}
+
+.handoff-copy p:last-child {
+  margin: 0.45rem 0 0;
+  opacity: 0.78;
+}
+
+.handoff-stage .gift-eyebrow {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.handoff-character {
+  position: relative;
+  z-index: 1;
+  height: min(69vh, 72vw, 51rem);
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  transition: transform 700ms cubic-bezier(0.22, 0.75, 0.22, 1);
+}
+
+.handoff-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 500ms steps(5, end), transform 700ms cubic-bezier(0.22, 0.75, 0.22, 1);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 99%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 99%);
+}
+
+.handoff-stage.is-playing .handoff-frame--one {
+  opacity: 1;
+}
+
+.handoff-stage.is-offering .handoff-frame--one {
+  opacity: 0;
+}
+
+.handoff-stage.is-offering .handoff-frame--two,
+.handoff-stage.is-received .handoff-frame--one {
+  opacity: 1;
+}
+
+.handoff-stage.is-received .handoff-frame--two {
+  opacity: 0;
+}
+
+.received-character {
+  position: absolute;
+  z-index: 1;
+  bottom: clamp(2.8rem, 6vh, 5rem);
+  left: 50%;
+  height: min(69vh, 72vw, 51rem);
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-150%);
+  transition: opacity 550ms ease 180ms, transform 700ms cubic-bezier(0.22, 0.75, 0.22, 1);
+}
+
+.received-character img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.12);
+  transform-origin: 50% 18%;
+  transition: transform 700ms cubic-bezier(0.22, 0.75, 0.22, 1);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 99%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 99%);
+}
+
+.handoff-stage.is-received .handoff-character {
+  transform: translateX(36%);
+}
+
+.handoff-stage.is-received .handoff-frame--one {
+  transform: scale(1.27);
+  transform-origin: 50% 18%;
+}
+
+.handoff-stage.is-received .received-character {
+  opacity: 1;
+  transform: translateX(-105%);
+}
+
+.handoff-stage.is-received .received-character img {
+  transform: scale(1.27);
+}
+
+.offered-flower {
+  position: absolute;
+  z-index: 2;
+  top: 24%;
+  left: 2%;
+  width: 34%;
+  aspect-ratio: 1;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.45) rotate(-8deg);
+  transition: opacity 350ms ease, transform 550ms cubic-bezier(0.2, 0.9, 0.25, 1.3);
+}
+
+.handoff-stage.is-offering .offered-flower {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) rotate(0);
+  animation: offered-flower-pulse 1.7s ease-in-out infinite;
+}
+
+.handoff-stage.is-received .offered-flower {
+  opacity: 1;
+  pointer-events: none;
+  transform: scale(0.72);
+}
+
+.handoff-stage > .offered-flower {
+  position: absolute;
+  z-index: 4;
+  transition:
+    left 700ms cubic-bezier(0.22, 0.75, 0.22, 1),
+    top 700ms cubic-bezier(0.22, 0.75, 0.22, 1),
+    opacity 250ms ease,
+    transform 700ms cubic-bezier(0.22, 0.75, 0.22, 1);
+}
+
+.offered-flower-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("./BDWRAP/flowers-transparent.png");
+  background-repeat: no-repeat;
+  background-size: 210% auto;
+}
+
+.offered-flower[data-flower="spring"] .offered-flower-image { background-position: 0% 19%; }
+.offered-flower[data-flower="bright"] .offered-flower-image { background-position: 100% 19%; }
+.offered-flower[data-flower="roses"] .offered-flower-image { background-position: 50% 71%; }
+.offered-flower[data-flower="succulent"] .offered-flower-image {
+  background-image: url("./BDWRAP/sukulent-transparent.png");
+  background-position: 50% 50%;
+  background-size: 100% auto;
+}
+
+.handoff-continue {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+@keyframes offered-flower-pulse {
+  50% { transform: scale(1.045); }
+}
+
+.gift-eyebrow {
+  color: var(--gift-green-dark);
+  font-size: 0.74rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.bouquet-card h1 {
+  margin: 0.75rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.bouquet-copy,
+.bouquet-selection {
+  color: var(--gift-green-dark);
+}
+
+.bouquet-selection:empty {
+  display: none;
+}
+
+.flower-picker {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 2rem 0;
+}
+
+.flower-choice,
+.gift-button {
+  border: 1px solid var(--gift-green);
+  background: transparent;
+  color: var(--gift-green-dark);
+  font: inherit;
+  cursor: pointer;
+}
+
+.flower-choice {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.flower-preview {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-image: url("./BDWRAP/flowers-transparent.png");
+  background-repeat: no-repeat;
+  background-size: 210% auto;
+  transition: transform 250ms ease;
+}
+
+.flower-choice--spring .flower-preview {
+  background-position: 0% 19%;
+}
+
+.flower-choice--bright .flower-preview {
+  background-position: 100% 19%;
+}
+
+.flower-choice--roses .flower-preview {
+  background-position: 50% 71%;
+}
+
+.flower-choice--succulent .flower-preview {
+  background-image: url("./BDWRAP/sukulent-transparent.png");
+  background-position: 50% 50%;
+  background-size: 100% auto;
+}
+
+.flower-name {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 0.5rem;
+  background: var(--gift-cream);
+  border-top: 1px solid rgba(90, 125, 117, 0.25);
+  color: var(--gift-green-dark);
+  font-size: clamp(0.76rem, 1.6vw, 0.95rem);
+}
+
+.flower-choice:hover,
+.flower-choice[aria-pressed="true"] {
+  transform: translateY(-0.2rem);
+  box-shadow: inset 0 -2px var(--gift-green);
+}
+
+.flower-choice:hover .flower-preview,
+.flower-choice[aria-pressed="true"] .flower-preview {
+  transform: scale(1.035);
+}
+
+.flower-choice[aria-pressed="true"] .flower-name {
+  color: #111;
+}
+
+.gift-button {
+  margin-top: 1rem;
+  padding: 0.9rem 1.4rem;
+  background: var(--gift-green);
+  color: #fff;
+}
+
+.gift-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+@keyframes gift-caret {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gift-stage,
+  .unwrap-prompt,
+  .wrap-instruction,
+  .unwrap-progress span {
+    transition-duration: 1ms;
+  }
+
+  .typed-gift-message::after {
+    animation: none;
+  }
+
+  .offered-flower {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .bouquet-stage {
+    overflow-y: auto;
+  }
+
+  .bouquet-card {
+    padding-block: 2rem;
+  }
+
+  .flower-picker {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

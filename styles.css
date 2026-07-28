@@ -374,7 +374,7 @@ main,
 .project-index-group h2 {
   position: absolute;
   top: var(--project-label-top);
-  left: calc(-1 * var(--project-branch-indent) + 0.35rem);
+  left: calc(-1 * var(--project-branch-indent) - 1.1rem);
   margin: 0;
   font-family: var(--font-heading);
   font-size: var(--type-large);
@@ -388,15 +388,6 @@ main,
   padding-block: 0.2rem;
   background: var(--surface);
   box-shadow: 0 0 0 0.7rem var(--surface);
-  transition:
-    filter 260ms ease,
-    opacity 260ms ease;
-}
-
-.project-index-group:has(.project-index-link:hover) h2,
-.project-index-group:focus-within h2 {
-  opacity: 0.32;
-  filter: blur(5px);
 }
 
 .project-index-list {
@@ -2710,7 +2701,7 @@ main,
     top: 0.75rem;
     font-size: var(--type-large);
     writing-mode: vertical-rl;
-    left: calc(-1 * var(--project-branch-indent) + 0.25rem);
+    left: calc(-1 * var(--project-branch-indent) - 0.9rem);
     transform: rotate(180deg);
   }
 
@@ -2749,8 +2740,7 @@ main,
 
 @media (prefers-reduced-motion: reduce) {
   .project-index-detail,
-  .project-index-title,
-  .project-index-group h2 {
+  .project-index-title {
     transition: none;
   }
 }

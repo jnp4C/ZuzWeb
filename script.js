@@ -3,11 +3,11 @@ const projectGroups = {
   practice: document.getElementById("practiceProjects"),
 };
 const yearLabel = document.getElementById("year");
-const personalToggle = document.getElementById("personalToggle");
-const personalDetails = document.getElementById("personalDetails");
+const infoToggle = document.getElementById("infoToggle");
+const infoDetails = document.getElementById("infoDetails");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
-const DATA_CACHE_VERSION = "2026-07-28-redesign-tree-interaction";
+const DATA_CACHE_VERSION = "2026-07-28-redesign-info-toggle";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -101,7 +101,7 @@ async function renderRandomIndexBackground() {
   }
 }
 
-function initPersonalToggle() {
+function initInfoToggle() {
   let hasSeenPersonalPhoto = false;
   const photoObserver = personalPhotoFrame && "IntersectionObserver" in window
     ? new IntersectionObserver((entries) => {
@@ -121,20 +121,20 @@ function initPersonalToggle() {
     personalPhotoFrame.classList.add("is-visible");
   }
 
-  personalToggle?.addEventListener("click", () => {
-    const isOpen = personalToggle.getAttribute("aria-expanded") === "true";
+  infoToggle?.addEventListener("click", () => {
+    const isOpen = infoToggle.getAttribute("aria-expanded") === "true";
     const shouldOpen = !isOpen;
-    personalToggle.setAttribute("aria-expanded", `${shouldOpen}`);
-    personalDetails.hidden = !shouldOpen;
+    infoToggle.setAttribute("aria-expanded", `${shouldOpen}`);
+    infoDetails.hidden = !shouldOpen;
     if (shouldOpen) {
-      personalDetails.classList.remove("is-open");
-      void personalDetails.offsetWidth;
-      personalDetails.classList.add("is-open");
+      infoDetails.classList.remove("is-open");
+      void infoDetails.offsetWidth;
+      infoDetails.classList.add("is-open");
       if (personalPhotoFrame && photoObserver && !hasSeenPersonalPhoto) {
         photoObserver.observe(personalPhotoFrame);
       }
     } else {
-      personalDetails.classList.remove("is-open");
+      infoDetails.classList.remove("is-open");
       if (personalPhotoFrame && photoObserver && !hasSeenPersonalPhoto) {
         photoObserver.unobserve(personalPhotoFrame);
       }
@@ -208,7 +208,7 @@ function renderProjectIndex(projects) {
 
 async function init() {
   void renderRandomIndexBackground();
-  initPersonalToggle();
+  initInfoToggle();
 
   const response = await fetch(`./data/projects.json?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });
   if (!response.ok) {

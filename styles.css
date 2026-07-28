@@ -343,7 +343,18 @@ main,
 
 .project-index-group {
   position: relative;
-  min-height: 8rem;
+  min-height: clamp(13rem, 25vw, 19rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.project-index-group::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: var(--project-branch-indent);
+  height: 2px;
+  background: var(--text);
 }
 
 .project-index-group + .project-index-group {
@@ -352,16 +363,16 @@ main,
 
 .project-index-group h2 {
   position: absolute;
-  top: 0;
-  left: calc(-1 * var(--project-branch-indent));
+  top: clamp(0.8rem, 1.8vw, 1.35rem);
+  left: calc(-1 * var(--project-branch-indent) + 0.35rem);
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--type-medium);
+  font-size: var(--type-large);
   font-weight: 500;
   line-height: 1;
   text-transform: lowercase;
   writing-mode: vertical-rl;
-  transform: translateX(-15%) rotate(180deg);
+  transform: rotate(180deg);
   transform-origin: center;
 }
 
@@ -452,20 +463,43 @@ main,
   min-height: 2.25rem;
 }
 
+.project-index-info-toggle {
+  width: fit-content;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.project-index-info-toggle:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 0.45rem;
+}
+
 .project-index-destination-heading .project-index-symbol {
   position: absolute;
   left: calc(-1 * var(--project-branch-indent) - 1.1rem);
 }
 
-.project-index-destination-heading h2 {
+.project-index-destination-heading h2,
+.project-index-destination-title {
   margin: 0;
+  font-family: var(--font-heading);
   font-size: clamp(var(--type-medium), 4vw, var(--type-large));
+  font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .project-index-info-content {
   margin-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.project-index-info-content.is-open {
+  animation: personal-panel-open 360ms ease both;
 }
 
 .project-index-info .intro {
@@ -2645,13 +2679,16 @@ main,
   }
 
   .project-index-group {
-    min-height: 0;
+    min-height: 12rem;
+    padding-top: 2rem;
   }
 
   .project-index-group h2 {
-    font-size: var(--type-medium);
+    top: 0.75rem;
+    font-size: var(--type-large);
     writing-mode: vertical-rl;
-    transform: translateX(-10%) rotate(180deg);
+    left: calc(-1 * var(--project-branch-indent) + 0.25rem);
+    transform: rotate(180deg);
   }
 
   .project-index-link {

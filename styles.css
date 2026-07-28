@@ -347,16 +347,6 @@ main,
   padding-top: clamp(2rem, 4vw, 3rem);
 }
 
-.project-index-group::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: var(--project-branch-indent);
-  height: 2px;
-  background: var(--text);
-}
-
 .project-index-group + .project-index-group {
   margin-top: clamp(2.5rem, 7vw, 6rem);
 }
@@ -374,6 +364,12 @@ main,
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   transform-origin: center;
+  z-index: 2;
+  padding-block: 0.2rem;
+  background: var(--surface);
+  box-shadow:
+    -0.55rem 0 0 var(--surface),
+    0.25rem 0 0 var(--surface);
 }
 
 .project-index-list {

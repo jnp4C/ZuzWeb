@@ -367,9 +367,7 @@ main,
   z-index: 2;
   padding-block: 0.2rem;
   background: var(--surface);
-  box-shadow:
-    -0.55rem 0 0 var(--surface),
-    0.25rem 0 0 var(--surface);
+  box-shadow: 0 0 0 0.7rem var(--surface);
 }
 
 .project-index-list {

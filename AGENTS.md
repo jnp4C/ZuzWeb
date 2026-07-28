@@ -40,6 +40,8 @@ Key references:
 
 - `Redesign/web draft 01.pdf`: graphic design and interaction concept for the
   new project index/tree.
+- `Redesign/web draftprojectscheme.pdf`: project-page layout scheme and reading
+  order.
 - `Redesign/WEB PORTFOLIO texty.pdf`: project metadata, links, Czech and English
   descriptions, credits, awards, and publication notes.
 - `Redesign/PROJEKTY na web/`: source images, drawings, models, portfolios,
@@ -104,17 +106,22 @@ presentation. When adding or migrating a project:
 4. Put normalized award information in `projectPage.awards`. Keep useful
    top-level legacy fields while the existing project header still consumes
    them.
-5. Use `projectPage.featuredSections` for the selected first-look sequence:
-   graphical representation, masterplan, project details, and model. Its
-   `media` arrays intentionally stay empty until the user chooses project source
+5. Fill `projectPage.info` for the scheme's year, scale, processing, type, and
+   collaborator rows. Use `projectPage.hero` for the main first-look image; it
+   can expand to landscape and moves below the annotation on mobile.
+6. Use `projectPage.featuredSections` for the selected tree sequence: a
+   user-named graphical representation, masterplan, and model. Its `media`
+   arrays intentionally stay empty until the user chooses project source
    material. Never guess the final image selection.
-6. Keep the current `scenes` array unchanged as the complete animated document.
+7. Keep the current `scenes` array unchanged as the complete animated document.
    `projectPage.fullPresentation` exposes it as the optional `+ Full
    presentation` section after the concise first-look content.
-7. Confirm that the project appears in the intended index group and that its
+8. Confirm that the project appears in the intended index group and that its
    direct URL selects the correct project before committing.
 
-The intended project-page reading order is: existing project header and core
-information, awards, annotation, selected featured sections, model image, then
-the expandable full animated presentation. The first-look content should convey
-the project clearly without requiring visitors to open the full document.
+The intended project-page reading order is: project name; core information;
+awards; annotation beside the main image; selected graphical representation;
+masterplan; model; then the bottom `+` control for the full animated
+presentation. On mobile the main image follows the annotation. The first-look
+content should convey the project clearly without requiring visitors to open
+the full document.

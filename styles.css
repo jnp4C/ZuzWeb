@@ -300,7 +300,9 @@ main,
 
 .project-index-root h1 {
   margin: 0;
+  font-family: var(--font-heading);
   font-size: clamp(var(--type-medium), 4vw, var(--type-large));
+  font-weight: 700;
   line-height: 0.95;
   text-transform: uppercase;
 }
@@ -325,10 +327,12 @@ main,
 }
 
 .project-index-branch {
+  --project-branch-top: clamp(2rem, 5vw, 4.25rem);
   --project-branch-indent: clamp(2.8rem, 8vw, 7.5rem);
+  --project-label-top: clamp(0.8rem, 1.8vw, 1.35rem);
   position: relative;
   margin-left: 1.1rem;
-  padding: clamp(2rem, 5vw, 4.25rem) 0 0 var(--project-branch-indent);
+  padding: var(--project-branch-top) 0 0 var(--project-branch-indent);
 }
 
 .project-index-branch::before {
@@ -347,13 +351,29 @@ main,
   padding-top: clamp(2rem, 4vw, 3rem);
 }
 
+.project-index-group::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--project-branch-indent));
+  z-index: 3;
+  width: 2px;
+  height: var(--project-label-top);
+  background: var(--text);
+}
+
+.project-index-group:first-child::before {
+  top: calc(-1 * var(--project-branch-top));
+  height: calc(var(--project-branch-top) + var(--project-label-top));
+}
+
 .project-index-group + .project-index-group {
   margin-top: clamp(2.5rem, 7vw, 6rem);
 }
 
 .project-index-group h2 {
   position: absolute;
-  top: clamp(0.8rem, 1.8vw, 1.35rem);
+  top: var(--project-label-top);
   left: calc(-1 * var(--project-branch-indent) + 0.35rem);
   margin: 0;
   font-family: var(--font-heading);
@@ -368,6 +388,15 @@ main,
   padding-block: 0.2rem;
   background: var(--surface);
   box-shadow: 0 0 0 0.7rem var(--surface);
+  transition:
+    filter 260ms ease,
+    opacity 260ms ease;
+}
+
+.project-index-group:has(.project-index-link:hover) h2,
+.project-index-group:focus-within h2 {
+  opacity: 0.32;
+  filter: blur(5px);
 }
 
 .project-index-list {
@@ -483,8 +512,8 @@ main,
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(var(--type-medium), 4vw, var(--type-large));
-  font-weight: 600;
-  line-height: 1;
+  font-weight: 700;
+  line-height: 0.95;
   text-transform: uppercase;
 }
 
@@ -2720,7 +2749,8 @@ main,
 
 @media (prefers-reduced-motion: reduce) {
   .project-index-detail,
-  .project-index-title {
+  .project-index-title,
+  .project-index-group h2 {
     transition: none;
   }
 }

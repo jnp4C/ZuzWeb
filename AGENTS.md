@@ -135,3 +135,49 @@ masterplan; model; then the bottom `+` control for the full animated
 presentation. On mobile the main image follows the annotation. The first-look
 content should convey the project clearly without requiring visitors to open
 the full document.
+
+## Session handoff: index foundation
+
+Last verified on the `redesign` branch at commit `6f2f46e`. At the beginning of
+the next session, start or verify localhost and visually inspect the current
+index before changing it.
+
+Completed:
+
+- `data/projects.json` contains redesign metadata for all nine existing
+  projects: seven in `study` and two in `practice`.
+- The index renders projects directly from JSON instead of rendering year
+  buttons. Direct links still open the matching project in the existing
+  `year.html` presentation.
+- Desktop rows initially emphasize the project name; scale, context, and
+  highlights unfold on hover or keyboard focus. Touch layouts keep this
+  information visible because touch has no dependable hover.
+- The tree contains `Study`, `Practice`, `INFO`, and `CV`. Clicking `INFO`
+  reveals the existing introduction and personal-information content. `CV` is
+  intentionally still a placeholder.
+- `PROJECTS`, `INFO`, and `CV` use the same Space Grotesk display treatment.
+  Small project metadata uses Public Sans.
+- The vertical spine is intentionally interrupted by the `Study` and
+  `Practice` words. Each word sits directly on the spine axis, not offset to the
+  right. The line ends immediately above the word and resumes below it. Do not
+  add horizontal connector lines.
+- Do not blur, soften, reduce the opacity of, or otherwise degrade `Study` or
+  `Practice` during project interaction. A blur experiment was explicitly
+  rejected because it reduced text quality.
+- The latest desktop layout was visually checked with a 1440px-wide Firefox
+  localhost screenshot after commit `6f2f46e`.
+
+Next recommended work:
+
+1. Keep the index stable unless the user requests another visual adjustment.
+2. Build the concise project-page layout from
+   `Redesign/web draftprojectscheme.pdf` using the existing project header.
+3. Render `projectPage.info`, awards, and annotation first.
+4. Leave `projectPage.hero` and each featured section's `media` empty until the
+   user selects the graphical representation, masterplan, and model assets for
+   that project.
+5. Place the existing animated `scenes` behind the final `+ Full presentation`
+   control rather than deleting or rebuilding those scenes.
+
+Known local-only state: `BDWRAP/` remains untracked and unrelated. `Redesign/`
+is ignored intentionally and contains the current design/source references.

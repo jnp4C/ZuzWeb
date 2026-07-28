@@ -58,15 +58,21 @@ options.
 
 1. Check the current branch and working tree before editing. Redesign work should
    normally happen on `redesign`.
-2. Review the relevant draft area, project folder, and portfolio text before
+2. At the start of every coding session, serve the repository through a local
+   HTTP server and verify that the site loads over HTTP. Reuse an already
+   running suitable server when possible; otherwise start one (for example,
+   `python3 -m http.server 8000`). Report the local URL and do not rely on
+   opening the HTML through a `file://` URL. If the server cannot be started,
+   diagnose and report that before making site changes.
+3. Review the relevant draft area, project folder, and portfolio text before
    implementing a screen or project.
-3. Distinguish published project folders from `PROJEKTY nezveřejněné`.
-4. Define shared project metadata and navigation centrally rather than
+4. Distinguish published project folders from `PROJEKTY nezveřejněné`.
+5. Define shared project metadata and navigation centrally rather than
    hard-coding a separate year-based path for each project.
-5. Keep the index-to-project and project-to-project interactions usable with
+6. Keep the index-to-project and project-to-project interactions usable with
    keyboard, touch, and pointer input, and support reduced motion.
-6. Test responsive behavior at narrow mobile and wide desktop sizes.
-7. Do not commit local drafts, source portfolios, lock files, or the complete
+7. Test responsive behavior at narrow mobile and wide desktop sizes.
+8. Do not commit local drafts, source portfolios, lock files, or the complete
    contents of `Redesign/`.
 
 ## Repository notes

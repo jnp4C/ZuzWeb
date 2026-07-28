@@ -267,62 +267,133 @@ main,
   line-height: 1.6;
 }
 
-.year-selector {
+.project-index {
   border: 2px solid var(--line);
-  background: transparent;
-  padding: 0.85rem 1rem;
-  margin: 0.9rem 0 0.1rem;
-  min-height: 6.3rem;
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  margin: 0.9rem 0 2rem;
+  padding: clamp(1rem, 2.5vw, 2rem);
 }
 
-.year-selector h2 {
-  margin: 0;
-  font-size: 1.05rem;
-}
-
-.selector-header {
+.project-index-root {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 0.85rem;
 }
 
-.year-picker {
+.project-index-root h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.project-index-symbol {
+  display: grid;
+  flex: 0 0 2.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  background: var(--text);
+  color: var(--surface);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.project-index-key {
+  margin: 0.4rem 0 0;
+  color: color-mix(in srgb, var(--text) 35%, transparent);
+  font-size: clamp(0.82rem, 1.4vw, 1rem);
+  font-weight: 650;
+}
+
+.project-index-branch {
+  position: relative;
+  margin-left: 1.1rem;
+  padding: clamp(2rem, 5vw, 4.25rem) 0 0 clamp(2.2rem, 7vw, 6.6rem);
+}
+
+.project-index-branch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: var(--text);
+}
+
+.project-index-group {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2.5rem);
+  min-height: 8rem;
+}
+
+.project-index-group + .project-index-group {
+  margin-top: clamp(2.5rem, 7vw, 6rem);
+}
+
+.project-index-group h2 {
+  align-self: start;
+  margin: 0;
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: lowercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.project-index-list {
+  display: grid;
+  align-content: start;
+  gap: clamp(0.8rem, 1.8vw, 1.25rem);
+}
+
+.project-index-link {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 0.75rem;
+  align-items: baseline;
+  gap: 0.25rem 0.4rem;
+  width: fit-content;
+  max-width: 100%;
+  color: var(--text);
+  font-size: clamp(0.92rem, 1.7vw, 1.25rem);
+  line-height: 1.25;
+  text-decoration: none;
 }
 
-.year-button {
-  border: 2px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
-  padding: 0.35rem 0.7rem;
-  font: inherit;
+.project-index-scale {
   font-weight: 600;
-  cursor: pointer;
 }
 
-.year-button:visited {
-  color: var(--text);
+.project-index-title {
+  font-weight: 750;
+  text-transform: uppercase;
 }
 
-.year-button.is-active,
-.year-button:hover {
-  background: var(--line);
+.project-index-context {
+  color: color-mix(in srgb, var(--text) 48%, transparent);
+  font-weight: 650;
+}
+
+.project-index-highlight {
+  background: var(--text);
   color: var(--surface);
+  padding: 0.05em 0.2em 0.1em;
 }
 
-.project-button {
-  text-align: left;
+.project-index-link:hover .project-index-title,
+.project-index-link:focus-visible .project-index-title {
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.16em;
 }
 
-.year-selection-status {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  text-align: right;
+.project-index-link:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 0.3rem;
 }
 
 .personal-panel {
@@ -2468,5 +2539,48 @@ main,
 
   .zahrada-four-grid-object-scene {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .project-index {
+    padding: 1rem 0.85rem 1.25rem;
+  }
+
+  .project-index-symbol {
+    flex-basis: 1.9rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    font-size: 1.7rem;
+  }
+
+  .project-index-branch {
+    margin-left: 0.9rem;
+    padding: 2rem 0 0 1.35rem;
+  }
+
+  .project-index-group {
+    display: block;
+    min-height: 0;
+  }
+
+  .project-index-group h2 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .project-index-link {
+    display: grid;
+    gap: 0.1rem;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .project-index-highlight {
+    width: fit-content;
+    margin-top: 0.15rem;
   }
 }

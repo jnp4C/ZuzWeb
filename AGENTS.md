@@ -87,3 +87,34 @@ intentional replacement.
 `BDWRAP/` contains untracked local assets from the birthday wrapping work and is
 not part of the redesign. Leave it untouched unless the user explicitly brings
 that feature into scope.
+
+## Project data contract
+
+`data/projects.json` supports the redesign alongside the legacy animated
+presentation. When adding or migrating a project:
+
+1. Give it a unique, stable `slug`, set `visibility`, and assign
+   `portfolioSection` as `study` or `practice`.
+2. Fill `index.order`, bilingual `index.scale`, `index.title`, and
+   `index.context`. Add only meaningful `index.highlights`, such as an award or
+   publication.
+3. Treat the existing top-level English `title`, `description`, and `annotation`
+   as the primary copy. Put Czech copy in `translations.cs`; `null` means that
+   the translation still needs user-approved text.
+4. Put normalized award information in `projectPage.awards`. Keep useful
+   top-level legacy fields while the existing project header still consumes
+   them.
+5. Use `projectPage.featuredSections` for the selected first-look sequence:
+   graphical representation, masterplan, project details, and model. Its
+   `media` arrays intentionally stay empty until the user chooses project source
+   material. Never guess the final image selection.
+6. Keep the current `scenes` array unchanged as the complete animated document.
+   `projectPage.fullPresentation` exposes it as the optional `+ Full
+   presentation` section after the concise first-look content.
+7. Confirm that the project appears in the intended index group and that its
+   direct URL selects the correct project before committing.
+
+The intended project-page reading order is: existing project header and core
+information, awards, annotation, selected featured sections, model image, then
+the expandable full animated presentation. The first-look content should convey
+the project clearly without requiring visitors to open the full document.

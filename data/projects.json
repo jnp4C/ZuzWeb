@@ -1,5 +1,85 @@
 [
   {
+    "slug": "tree-with-the-spirit-of-christmas",
+    "visibility": "published",
+    "portfolioSection": "practice",
+    "index": {
+      "order": 1,
+      "scale": {
+        "en": "installation",
+        "cs": null
+      },
+      "title": {
+        "en": "A TREE WITH THE SPIRIT OF CHRISTMAS",
+        "cs": "STROM S DUCHEM VÁNOC"
+      },
+      "context": {
+        "en": "collaboration",
+        "cs": "spolupráce"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "STROM S DUCHEM VÁNOC",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "A Tree with the Spirit of Christmas",
     "category": "Landscape Installation",
     "location": "Prague, CZ",
@@ -202,6 +282,86 @@
     "selectorLabel": "A TREE WITH THE SPIRIT OF CHRISTMAS"
   },
   {
+    "slug": "through-the-forest",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 10,
+      "scale": {
+        "en": "large scale",
+        "cs": null
+      },
+      "title": {
+        "en": "THROUGH THE FOREST",
+        "cs": "ZLESA DOLESA"
+      },
+      "context": {
+        "en": "FA CTU, individual",
+        "cs": "FA ČVUT, samostatná práce"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "ZLESA DOLESA",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "THROUGH THE FOREST",
     "category": "Landscape Architecture",
     "location": "Prague, CZ",
@@ -1208,6 +1368,86 @@
     "selectorLabel": "THROUGH THE FOREST"
   },
   {
+    "slug": "abstract",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 8,
+      "scale": {
+        "en": "large scale",
+        "cs": null
+      },
+      "title": {
+        "en": "ABSTRACT.",
+        "cs": "ABSTRACT."
+      },
+      "context": {
+        "en": "Lund University, Erasmus",
+        "cs": "Lund University, Erasmus"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "ABSTRACT.",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "ABSTRACT.",
     "category": "Urban Design",
     "location": "Lund, SE",
@@ -2793,6 +3033,86 @@
     ]
   },
   {
+    "slug": "steep-garden-realization",
+    "visibility": "published",
+    "portfolioSection": "practice",
+    "index": {
+      "order": 2,
+      "scale": {
+        "en": "small scale + documentation",
+        "cs": null
+      },
+      "title": {
+        "en": "STEEP GARDEN REALIZATION",
+        "cs": "REALIZACE ZAHRADY VE SVAHU"
+      },
+      "context": {
+        "en": "private commission",
+        "cs": "soukromá zakázka"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "REALIZACE ZAHRADY VE SVAHU",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "Steep Garden Realization",
     "category": "Garden Design",
     "location": "Prague, Střešovice, CZ",
@@ -6889,6 +7209,106 @@
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta"
   },
   {
+    "slug": "growing-through",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 6,
+      "scale": {
+        "en": "small scale",
+        "cs": null
+      },
+      "title": {
+        "en": "GROWING-THROUGH",
+        "cs": "GROWING-THROUGH"
+      },
+      "context": {
+        "en": "FA CTU, collaboration",
+        "cs": "FA ČVUT, spolupráce"
+      },
+      "highlights": [
+        {
+          "type": "award",
+          "label": {
+            "en": "Award",
+            "cs": null
+          }
+        }
+      ]
+    },
+    "translations": {
+      "cs": {
+        "title": "GROWING-THROUGH",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [
+        {
+          "label": {
+            "en": "Award",
+            "cs": null
+          },
+          "detail": {
+            "en": "2025 LAURUS AWARDS\nLandscape Gesture category",
+            "cs": null
+          },
+          "href": "https://www.fa.cvut.cz/en/events/144465-2025-laurus-awards-announced"
+        }
+      ],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "GROWING-THROUGH",
     "category": "Landscape Installation",
     "location": "Les Jardins de Métis, CA",
@@ -7168,6 +7588,86 @@
     ]
   },
   {
+    "slug": "cycle-of-change",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 2,
+      "scale": {
+        "en": "small scale + documentation",
+        "cs": null
+      },
+      "title": {
+        "en": "Kladno Krematorium",
+        "cs": "CYKLUS PROMĚNY"
+      },
+      "context": {
+        "en": "FA CTU, individual",
+        "cs": "FA ČVUT, samostatná práce"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "CYKLUS PROMĚNY",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "Kladno Krematorium",
     "category": "Landscape Architecture",
     "location": "Kladno, CZ",
@@ -8380,6 +8880,106 @@
     "selectorLabel": "Kladno Krematorium"
   },
   {
+    "slug": "semnevision",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 3,
+      "scale": {
+        "en": "large scale",
+        "cs": null
+      },
+      "title": {
+        "en": "CONCEPT OF SEMNĚVICE LANDSCAPE",
+        "cs": "SEMNĚVIZE"
+      },
+      "context": {
+        "en": "FA CTU, collaboration",
+        "cs": "FA ČVUT, spolupráce"
+      },
+      "highlights": [
+        {
+          "type": "award",
+          "label": {
+            "en": "Award",
+            "cs": null
+          }
+        }
+      ]
+    },
+    "translations": {
+      "cs": {
+        "title": "SEMNĚVIZE",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [
+        {
+          "label": {
+            "en": "Award",
+            "cs": null
+          },
+          "detail": {
+            "en": "Dean's Award FA CTU 4th year 2023/2024",
+            "cs": null
+          },
+          "href": "https://www.fa.cvut.cz/galerie/souteze/cena-dekana/2023-2024/fa_cd24_sbornik_a5_online_double-high.pdf"
+        }
+      ],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "CONCEPT OF SEMNĚVICE LANDSCAPE",
     "category": "Group project",
     "location": "Semněvice, CZ",
@@ -11473,6 +12073,86 @@
     "selectorLabel": "CONCEPT OF SEMNĚVICE LANDSCAPE"
   },
   {
+    "slug": "rewaterization",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 4,
+      "scale": {
+        "en": "large scale",
+        "cs": null
+      },
+      "title": {
+        "en": "REWATERIZATION",
+        "cs": "REVODALIZACE"
+      },
+      "context": {
+        "en": "FA CTU, individual",
+        "cs": "FA ČVUT, samostatná práce"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "REVODALIZACE",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "REWATERIZATION",
     "category": "Studio project",
     "location": "Semněvice, CZ",
@@ -13202,6 +13882,86 @@
     "selectorLabel": "REWATERIZATION"
   },
   {
+    "slug": "steep-garden",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 5,
+      "scale": {
+        "en": "small scale + documentation",
+        "cs": null
+      },
+      "title": {
+        "en": "STEEP GARDEN",
+        "cs": "ZAHRADA VE SVAHU"
+      },
+      "context": {
+        "en": "FA CTU, individual",
+        "cs": "FA ČVUT, samostatná práce"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "ZAHRADA VE SVAHU",
+        "description": null,
+        "annotation": null
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [
+        {
+          "id": "graphical-representation",
+          "kind": "graphic",
+          "label": {
+            "en": "Graphical representation",
+            "cs": "Grafické znázornění"
+          },
+          "media": []
+        },
+        {
+          "id": "masterplan",
+          "kind": "masterplan",
+          "label": {
+            "en": "Masterplan",
+            "cs": "Situace"
+          },
+          "media": []
+        },
+        {
+          "id": "project-details",
+          "kind": "details",
+          "label": {
+            "en": "Project details",
+            "cs": "Detail projektu"
+          },
+          "media": []
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": []
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        }
+      }
+    },
     "title": "STEEP GARDEN",
     "category": "Garden Design",
     "location": "Prague-Střešovice, CZ",

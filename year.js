@@ -1970,7 +1970,8 @@ async function initializeYearPage() {
   const selectedProjectSlug = getSelectedProjectSlug();
   if (selectedProjectSlug) {
     const projectIndex = yearProjects.findIndex((project) => (
-      slugifyProject(project.selectorLabel) === selectedProjectSlug
+      project.slug === selectedProjectSlug
+      || slugifyProject(project.selectorLabel) === selectedProjectSlug
       || slugifyProject(project.title) === selectedProjectSlug
     ));
     if (projectIndex >= 0) {

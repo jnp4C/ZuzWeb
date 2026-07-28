@@ -8,7 +8,7 @@
       name="description"
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
-    <link rel="stylesheet" href="./styles.css?v=2026-06-29-christmas-spirit-scenes" />
+    <link rel="stylesheet" href="./styles.css?v=2026-07-28-redesign-index-schema" />
   </head>
   <body>
     <div class="background-animation" aria-hidden="true">
@@ -23,12 +23,24 @@
     </header>
 
     <main class="container">
-      <section class="year-selector">
-        <div class="selector-header">
-          <h2>Select Project Year</h2>
-          <p class="year-selection-status">Choose a year to open that portfolio section.</p>
+      <section class="project-index" aria-labelledby="projectIndexTitle">
+        <div class="project-index-root">
+          <span class="project-index-symbol" aria-hidden="true">+</span>
+          <div>
+            <h1 id="projectIndexTitle">Projects</h1>
+            <p class="project-index-key">[ scale / type ] TITLE &lt; context &gt;</p>
+          </div>
         </div>
-        <div id="yearPicker" class="year-picker" aria-label="Project year selector"></div>
+        <div class="project-index-branch">
+          <section class="project-index-group" aria-labelledby="studyProjectsTitle">
+            <h2 id="studyProjectsTitle">Study</h2>
+            <div id="studyProjects" class="project-index-list"></div>
+          </section>
+          <section class="project-index-group" aria-labelledby="practiceProjectsTitle">
+            <h2 id="practiceProjectsTitle">Practice</h2>
+            <div id="practiceProjects" class="project-index-list"></div>
+          </section>
+        </div>
       </section>
 
       <section class="intro">
@@ -114,6 +126,6 @@
       <p>© <span id="year"></span> Ing. Zuzana Purmová</p>
     </footer>
 
-    <script src="./script.js?v=2026-06-29-christmas-spirit-scenes" type="module"></script>
+    <script src="./script.js?v=2026-07-28-redesign-index-schema" type="module"></script>
   </body>
 </html>

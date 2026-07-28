@@ -1,10 +1,13 @@
-const yearPicker = document.getElementById("yearPicker");
+const projectGroups = {
+  study: document.getElementById("studyProjects"),
+  practice: document.getElementById("practiceProjects"),
+};
 const yearLabel = document.getElementById("year");
 const personalToggle = document.getElementById("personalToggle");
 const personalDetails = document.getElementById("personalDetails");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
-const DATA_CACHE_VERSION = "2026-06-29-christmas-spirit-scenes";
+const DATA_CACHE_VERSION = "2026-07-28-redesign-index-schema";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -139,22 +142,64 @@ function initPersonalToggle() {
   });
 }
 
-function renderYearButtons(projects) {
-  const years = [...new Set(projects.map((project) => project.year))].sort((left, right) => right - left);
-  const fragment = document.createDocumentFragment();
+function createLocalizedText(value, locale = "en") {
+  if (typeof value === "string") {
+    return value;
+  }
+  return value?.[locale] || value?.en || "";
+}
 
-  years.forEach((year) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "year-button";
-    button.textContent = `${year}`;
-    button.addEventListener("click", () => {
-      window.location.href = `./year.html?year=${encodeURIComponent(year)}`;
-    });
-    fragment.append(button);
+function createProjectIndexItem(project) {
+  const link = document.createElement("a");
+  const projectSlug = project.slug || project.selectorLabel || project.title;
+  link.className = "project-index-link";
+  link.href = `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
+
+  const scale = document.createElement("span");
+  scale.className = "project-index-scale";
+  scale.textContent = `[ ${createLocalizedText(project.index?.scale)} ]`;
+
+  const title = document.createElement("span");
+  title.className = "project-index-title";
+  title.textContent = createLocalizedText(project.index?.title) || project.selectorLabel || project.title;
+
+  const context = document.createElement("span");
+  context.className = "project-index-context";
+  context.textContent = `< ${createLocalizedText(project.index?.context)} >`;
+
+  link.append(scale, title, context);
+
+  (project.index?.highlights || []).forEach((highlight) => {
+    const badge = document.createElement("span");
+    badge.className = `project-index-highlight project-index-highlight--${highlight.type || "note"}`;
+    badge.textContent = createLocalizedText(highlight.label);
+    link.append(badge);
   });
 
-  yearPicker.replaceChildren(fragment);
+  return link;
+}
+
+function renderProjectIndex(projects) {
+  Object.values(projectGroups).forEach((group) => group?.replaceChildren());
+  const fragment = document.createDocumentFragment();
+
+  Object.entries(projectGroups).forEach(([section, container]) => {
+    if (!container) {
+      return;
+    }
+
+    const sectionProjects = projects
+      .filter((project) => (
+        project.visibility !== "unpublished"
+        && project.portfolioSection === section
+      ))
+      .sort((left, right) => (left.index?.order ?? 999) - (right.index?.order ?? 999));
+
+    sectionProjects.forEach((project) => {
+      fragment.append(createProjectIndexItem(project));
+    });
+    container.append(fragment);
+  });
 }
 
 async function init() {
@@ -167,10 +212,14 @@ async function init() {
   }
 
   const projects = await response.json();
-  renderYearButtons(projects);
+  renderProjectIndex(projects);
   yearLabel.textContent = new Date().getFullYear();
 }
 
 init().catch(() => {
-  yearPicker.textContent = "Could not load project years.";
+  Object.values(projectGroups).forEach((group) => {
+    if (group) {
+      group.textContent = "Could not load projects.";
+    }
+  });
 });

@@ -7,7 +7,7 @@ const personalToggle = document.getElementById("personalToggle");
 const personalDetails = document.getElementById("personalDetails");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
-const DATA_CACHE_VERSION = "2026-07-28-redesign-index-schema";
+const DATA_CACHE_VERSION = "2026-07-28-redesign-tree-interaction";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -156,7 +156,7 @@ function createProjectIndexItem(project) {
   link.href = `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
 
   const scale = document.createElement("span");
-  scale.className = "project-index-scale";
+  scale.className = "project-index-detail project-index-scale";
   scale.textContent = `[ ${createLocalizedText(project.index?.scale)} ]`;
 
   const title = document.createElement("span");
@@ -164,14 +164,18 @@ function createProjectIndexItem(project) {
   title.textContent = createLocalizedText(project.index?.title) || project.selectorLabel || project.title;
 
   const context = document.createElement("span");
-  context.className = "project-index-context";
+  context.className = "project-index-detail project-index-context";
   context.textContent = `< ${createLocalizedText(project.index?.context)} >`;
 
   link.append(scale, title, context);
+  link.setAttribute(
+    "aria-label",
+    `${scale.textContent} ${title.textContent} ${context.textContent}`.trim(),
+  );
 
   (project.index?.highlights || []).forEach((highlight) => {
     const badge = document.createElement("span");
-    badge.className = `project-index-highlight project-index-highlight--${highlight.type || "note"}`;
+    badge.className = `project-index-detail project-index-highlight project-index-highlight--${highlight.type || "note"}`;
     badge.textContent = createLocalizedText(highlight.label);
     link.append(badge);
   });

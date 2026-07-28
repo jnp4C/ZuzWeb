@@ -43,7 +43,7 @@ Key references:
 - `Redesign/web draftprojectscheme.pdf`: project-page layout scheme and reading
   order.
 - `Redesign/WEB PORTFOLIO texty.pdf`: project metadata, links, Czech and English
-  descriptions, credits, awards, and publication notes.
+  descriptions, credits, awards, publication notes, and typography direction.
 - `Redesign/PROJEKTY na web/`: source images, drawings, models, portfolios,
   presentations, and thumbnails for projects intended for the website.
 - `Redesign/PROJEKTY na web/PROJEKTY nezveřejněné/`: unpublished projects.
@@ -55,6 +55,16 @@ tracked site asset directories, use web-appropriate names and formats, and
 preserve the original local references unchanged. Confirm project selection,
 image selection, and copy when the source material offers multiple plausible
 options.
+
+## Typography
+
+Use the three-level type system specified at the start of
+`Redesign/WEB PORTFOLIO texty.pdf`: approximately 10pt, 20pt, and 40pt, with
+each level doubling. Use Public Sans for small body copy and Space Grotesk for
+the two larger, mainly heading levels. Both uppercase and lowercase headings are
+valid when the hierarchy calls for them. Use the CSS variables `--type-small`,
+`--type-medium`, `--type-large`, `--font-text`, and `--font-heading` instead of
+introducing unrelated type sizes or families without user approval.
 
 ## Implementation workflow
 

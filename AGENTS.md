@@ -181,3 +181,31 @@ Next recommended work:
 
 Known local-only state: `BDWRAP/` remains untracked and unrelated. `Redesign/`
 is ignored intentionally and contains the current design/source references.
+
+## Session handoff: full-page animated index (2026-07-29)
+
+The homepage redesign now uses a full-page PROJECTS / INFO / CV index over the
+animated contour landscape. All three controls start closed and open only when
+clicked. Their content rows share a Public Sans type treatment, responsive size,
+horizontal label baseline, staged reveal, temporary detail wave, and persistent
+hover/focus preview.
+
+- PROJECTS renders the existing study and practice data as single-line rows.
+  Bracketed scale information unfolds to the left of the title; context and
+  highlights unfold to the right.
+- INFO contains only email, year of birth, alma mater, and the portrait. The
+  bracketed values unfold to the left of their labels. Do not restore the
+  removed introduction copy or add a phone number.
+- CV is a five-row interactive timeline. Its bracketed dates unfold to the left,
+  supplementary context unfolds to the right, and an SVG rope connects the
+  markers with animated sag and hover reactions.
+- PROJECTS and CV have reverse closing sequences. A closed control outline is
+  hidden unless hovered or keyboard-focused. During a closing sequence, a
+  hovered outline must follow the perimeter animation instead of flashing into
+  its completed state.
+- The animated name header uses `assets/Header/name-writing.mp4` with
+  `name-writing-final.webp` as its persistent poster.
+
+Keep `BDWRAP/` untracked and leave the ignored `Redesign/` source folder
+untouched. The redesign commit preceding this handoff is `2b28218`; inspect the
+current branch log for the follow-up interaction commit.

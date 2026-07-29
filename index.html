@@ -8,7 +8,7 @@
       name="description"
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
-    <link rel="stylesheet" href="./styles.css?v=2026-07-29-redesign-horizontal-info-timeline" />
+    <link rel="stylesheet" href="./styles.css?v=2026-07-29-redesign-info-details-left" />
   </head>
   <body class="index-page">
     <div class="background-animation" aria-hidden="true">
@@ -100,67 +100,25 @@
             <div id="infoDetails" class="project-index-info-content" hidden>
               <div class="project-index-info-content-inner">
                 <section class="intro">
-                  <h3>Introduction</h3>
-                  <p class="intro-copy">
-                    The aim of this portfolio is to show various types of scales and topics<br />
-                    that I have worked with, and to describe the process of my practice<br />
-                    through selected designs.
-                  </p>
                   <p class="project-index-info-contact">
-                    [ <a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> ]
-                    [ born 2001 ]
+                    <span class="project-index-info-row" tabindex="0">
+                      <strong>email</strong>
+                      <span class="project-index-info-detail">[ <a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> ]</span>
+                    </span>
+                    <span class="project-index-info-row" tabindex="0">
+                      <strong>year of birth</strong>
+                      <span class="project-index-info-detail">[ 2001 ]</span>
+                    </span>
+                    <span class="project-index-info-row" tabindex="0">
+                      <strong>alma mater</strong>
+                      <span class="project-index-info-detail">[ Czech Technical University in Prague ] &lt; 2020–2026 &gt;</span>
+                    </span>
                   </p>
                 </section>
+                <figure class="personal-photo-frame">
+                  <img src="./assets/Other%20photos/personal-photo.png" alt="Portrait of Zuzana Purmová" />
+                </figure>
 
-                <section class="personal-panel" aria-label="Personal information">
-                  <div class="personal-content">
-                    <div class="cv-line" aria-label="Personal CV line">
-                      <article class="cv-item">
-                        <p class="cv-date">[ 09/2016–06/2020 ]</p>
-                        <div class="cv-marker" aria-hidden="true"></div>
-                        <div class="cv-copy">
-                          <h3>Akademické gymnázium Štěpánská</h3>
-                          <p>Gymnasium, Štěpánská 614, 110 00 Praha.</p>
-                        </div>
-                      </article>
-                      <article class="cv-item">
-                        <p class="cv-date">[ 09/2020–06/2026 ]</p>
-                        <div class="cv-marker" aria-hidden="true"></div>
-                        <div class="cv-copy">
-                          <h3>Czech Technical University in Prague</h3>
-                          <p>Faculty of Architecture, Landscape Architecture. Bachelor's degree completed in 06/2023; master's degree completed in 06/2026.</p>
-                        </div>
-                      </article>
-                      <article class="cv-item">
-                        <p class="cv-date">[ 01/2025–06/2025 ]</p>
-                        <div class="cv-marker" aria-hidden="true"></div>
-                        <div class="cv-copy">
-                          <h3>Erasmus stay at Lund University</h3>
-                          <p>International study period during the master's studies.</p>
-                        </div>
-                      </article>
-                      <article class="cv-item">
-                        <p class="cv-date">[ languages ]</p>
-                        <div class="cv-marker" aria-hidden="true"></div>
-                        <div class="cv-copy">
-                          <h3>English C1 · French B1</h3>
-                          <p>English level C1 with FCE certification.</p>
-                        </div>
-                      </article>
-                      <article class="cv-item">
-                        <p class="cv-date">[ skills ]</p>
-                        <div class="cv-marker" aria-hidden="true"></div>
-                        <div class="cv-copy">
-                          <h3>Software and handwork</h3>
-                          <p>AutoCAD, Rhino, QGIS, Adobe Photoshop, Illustrator, InDesign, and various handwork and art techniques.</p>
-                        </div>
-                      </article>
-                    </div>
-                    <figure class="personal-photo-frame">
-                      <img src="./assets/Other%20photos/personal-photo.png" alt="Portrait of Zuzana Purmová" />
-                    </figure>
-                  </div>
-                </section>
               </div>
             </div>
           </section>
@@ -171,6 +129,7 @@
               class="project-index-destination-heading project-index-cv-toggle"
               type="button"
               aria-expanded="false"
+              aria-controls="cvDetails"
             >
               <span class="project-index-frame" aria-hidden="true">
                 <span class="project-index-frame-line project-index-frame-line--lower-left"></span>
@@ -182,6 +141,56 @@
               <span class="project-index-symbol" aria-hidden="true">∗</span>
               <h2 id="cvTitle">CV</h2>
             </button>
+            <div id="cvDetails" class="project-index-cv-content" hidden>
+              <div class="project-index-cv-content-inner">
+                <section class="personal-panel" aria-label="Curriculum vitae">
+                  <div class="personal-content">
+                    <div class="cv-line" aria-label="CV timeline">
+                      <article class="cv-item" tabindex="0">
+                        <p class="cv-date">[ 09/2016–06/2020 ]</p>
+                        <div class="cv-copy">
+                          <h3>Akademické gymnázium Štěpánská</h3>
+                          <div class="cv-marker" aria-hidden="true"></div>
+                          <p>&lt; Prague &gt;</p>
+                        </div>
+                      </article>
+                      <article class="cv-item" tabindex="0">
+                        <p class="cv-date">[ 09/2020–06/2026 ]</p>
+                        <div class="cv-copy">
+                          <h3>Czech Technical University in Prague</h3>
+                          <div class="cv-marker" aria-hidden="true"></div>
+                          <p>&lt; Faculty of Architecture · Landscape Architecture &gt;</p>
+                        </div>
+                      </article>
+                      <article class="cv-item" tabindex="0">
+                        <p class="cv-date">[ 01/2025–06/2025 ]</p>
+                        <div class="cv-copy">
+                          <h3>Erasmus at Lund University</h3>
+                          <div class="cv-marker" aria-hidden="true"></div>
+                          <p>&lt; Sweden &gt;</p>
+                        </div>
+                      </article>
+                      <article class="cv-item" tabindex="0">
+                        <p class="cv-date">[ languages ]</p>
+                        <div class="cv-copy">
+                          <h3>English C1 · French B1</h3>
+                          <div class="cv-marker" aria-hidden="true"></div>
+                          <p>&lt; FCE certification &gt;</p>
+                        </div>
+                      </article>
+                      <article class="cv-item" tabindex="0">
+                        <p class="cv-date">[ skills ]</p>
+                        <div class="cv-copy">
+                          <h3>AutoCAD · Rhino · QGIS · Adobe</h3>
+                          <div class="cv-marker" aria-hidden="true"></div>
+                          <p>&lt; handwork and art techniques &gt;</p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
           </section>
         </div>
       </section>
@@ -191,6 +200,6 @@
       <p>© <span id="year"></span> Ing. Zuzana Purmová</p>
     </footer>
 
-    <script src="./script.js?v=2026-07-29-redesign-horizontal-info-timeline" type="module"></script>
+    <script src="./script.js?v=2026-07-29-redesign-info-project-rows" type="module"></script>
   </body>
 </html>

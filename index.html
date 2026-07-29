@@ -8,38 +8,76 @@
       name="description"
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
-    <link rel="stylesheet" href="./styles.css?v=2026-07-28-redesign-spine-label-position" />
+    <link rel="stylesheet" href="./styles.css?v=2026-07-29-redesign-horizontal-info-timeline" />
   </head>
-  <body>
+  <body class="index-page">
     <div class="background-animation" aria-hidden="true">
     </div>
-    <header class="site-header container">
-      <div class="header-identity">
-        <div class="brand-block">
-          <p class="brand">Ing. Zuzana Purmová</p>
-          <p class="tagline">Landscape Architecture Portfolio</p>
-        </div>
-      </div>
+    <header
+      class="site-header index-nameplate"
+      style="
+        display: flex;
+        visibility: visible;
+        width: 100vw;
+        min-height: 104px;
+        margin: clamp(3rem, 6vw, 6rem) 0 0;
+        padding: 0 clamp(1.5rem, 2.8vw, 3.5rem);
+        overflow: hidden;
+        background: #000 url('./assets/Header/name-writing-final.webp') clamp(1.5rem, 2.8vw, 3.5rem) center / auto 100% no-repeat;
+        opacity: 1;
+      "
+    >
+      <h1 class="visually-hidden">Ing. Zuzana Purmová</h1>
+      <video
+        id="indexNameAnimation"
+        class="index-name-animation"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+        poster="./assets/Header/name-writing-final.webp"
+        aria-hidden="true"
+        style="display: block; width: auto; max-width: 100%; height: 104px; background: #000"
+      >
+        <source src="./assets/Header/name-writing.mp4" type="video/mp4" />
+      </video>
     </header>
 
     <main class="container">
       <section class="project-index" aria-labelledby="projectIndexTitle">
-        <div class="project-index-root">
+        <button
+          id="projectsToggle"
+          class="project-index-root"
+          type="button"
+          aria-expanded="false"
+          aria-controls="projectsPanel"
+        >
+          <span class="project-index-frame" aria-hidden="true">
+            <span class="project-index-frame-line project-index-frame-line--lower-left"></span>
+            <span class="project-index-frame-line project-index-frame-line--bottom"></span>
+            <span class="project-index-frame-line project-index-frame-line--right"></span>
+            <span class="project-index-frame-line project-index-frame-line--top"></span>
+            <span class="project-index-frame-line project-index-frame-line--upper-left"></span>
+          </span>
           <span class="project-index-symbol" aria-hidden="true">+</span>
-          <div>
-            <h1 id="projectIndexTitle">Projects</h1>
+          <span>
+            <span id="projectIndexTitle" class="project-index-heading" role="heading" aria-level="1">Projects</span>
             <p class="project-index-key">[ scale / type ] TITLE &lt; context &gt;</p>
-          </div>
-        </div>
+          </span>
+          </button>
         <div class="project-index-branch">
-          <section class="project-index-group" aria-labelledby="studyProjectsTitle">
-            <h2 id="studyProjectsTitle">Study</h2>
-            <div id="studyProjects" class="project-index-list"></div>
-          </section>
-          <section class="project-index-group" aria-labelledby="practiceProjectsTitle">
-            <h2 id="practiceProjectsTitle">Practice</h2>
-            <div id="practiceProjects" class="project-index-list"></div>
-          </section>
+          <div id="projectsPanel" class="project-index-projects-panel" hidden>
+            <div class="project-index-projects-panel-inner">
+              <section class="project-index-group" aria-labelledby="studyProjectsTitle">
+                <h2 id="studyProjectsTitle">Study</h2>
+                <div id="studyProjects" class="project-index-list"></div>
+              </section>
+              <section class="project-index-group" aria-labelledby="practiceProjectsTitle">
+                <h2 id="practiceProjectsTitle">Practice</h2>
+                <div id="practiceProjects" class="project-index-list"></div>
+              </section>
+            </div>
+          </div>
 
           <section class="project-index-destination project-index-info" aria-labelledby="infoTitle">
             <button
@@ -49,32 +87,36 @@
               aria-expanded="false"
               aria-controls="infoDetails"
             >
-              <span class="project-index-symbol" aria-hidden="true">*</span>
+              <span class="project-index-frame" aria-hidden="true">
+                <span class="project-index-frame-line project-index-frame-line--lower-left"></span>
+                <span class="project-index-frame-line project-index-frame-line--bottom"></span>
+                <span class="project-index-frame-line project-index-frame-line--right"></span>
+                <span class="project-index-frame-line project-index-frame-line--top"></span>
+                <span class="project-index-frame-line project-index-frame-line--upper-left"></span>
+              </span>
+              <span class="project-index-symbol" aria-hidden="true">∗</span>
               <span id="infoTitle" class="project-index-destination-title">Info</span>
             </button>
             <div id="infoDetails" class="project-index-info-content" hidden>
-              <section class="intro">
-                <h3>Introduction</h3>
-                <p class="intro-copy">
-                  The aim of this portfolio is to show various types of scales and topics<br />
-                  that I have worked with, and to describe the process of my practice<br />
-                  through selected designs.
-                </p>
-              </section>
+              <div class="project-index-info-content-inner">
+                <section class="intro">
+                  <h3>Introduction</h3>
+                  <p class="intro-copy">
+                    The aim of this portfolio is to show various types of scales and topics<br />
+                    that I have worked with, and to describe the process of my practice<br />
+                    through selected designs.
+                  </p>
+                  <p class="project-index-info-contact">
+                    [ <a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> ]
+                    [ born 2001 ]
+                  </p>
+                </section>
 
-              <section class="personal-panel" aria-label="Personal information">
-                <div class="personal-content">
-                  <div class="cv-line" aria-label="Personal CV line">
+                <section class="personal-panel" aria-label="Personal information">
+                  <div class="personal-content">
+                    <div class="cv-line" aria-label="Personal CV line">
                       <article class="cv-item">
-                        <p class="cv-date">Personal info</p>
-                        <div class="cv-marker" aria-hidden="true"></div>
-                        <div class="cv-copy">
-                          <h3>Ing. Zuzana Purmová</h3>
-                          <p><a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> · +420 721 152 711 · date of birth 16.7.2001</p>
-                        </div>
-                      </article>
-                      <article class="cv-item">
-                        <p class="cv-date">09/2016 - 06/2020</p>
+                        <p class="cv-date">[ 09/2016–06/2020 ]</p>
                         <div class="cv-marker" aria-hidden="true"></div>
                         <div class="cv-copy">
                           <h3>Akademické gymnázium Štěpánská</h3>
@@ -82,7 +124,7 @@
                         </div>
                       </article>
                       <article class="cv-item">
-                        <p class="cv-date">09/2020 - 06/2026</p>
+                        <p class="cv-date">[ 09/2020–06/2026 ]</p>
                         <div class="cv-marker" aria-hidden="true"></div>
                         <div class="cv-copy">
                           <h3>Czech Technical University in Prague</h3>
@@ -90,7 +132,7 @@
                         </div>
                       </article>
                       <article class="cv-item">
-                        <p class="cv-date">01/2025 - 06/2025</p>
+                        <p class="cv-date">[ 01/2025–06/2025 ]</p>
                         <div class="cv-marker" aria-hidden="true"></div>
                         <div class="cv-copy">
                           <h3>Erasmus stay at Lund University</h3>
@@ -98,7 +140,7 @@
                         </div>
                       </article>
                       <article class="cv-item">
-                        <p class="cv-date">Languages</p>
+                        <p class="cv-date">[ languages ]</p>
                         <div class="cv-marker" aria-hidden="true"></div>
                         <div class="cv-copy">
                           <h3>English C1 · French B1</h3>
@@ -106,27 +148,40 @@
                         </div>
                       </article>
                       <article class="cv-item">
-                        <p class="cv-date">Skills</p>
+                        <p class="cv-date">[ skills ]</p>
                         <div class="cv-marker" aria-hidden="true"></div>
                         <div class="cv-copy">
                           <h3>Software and handwork</h3>
                           <p>AutoCAD, Rhino, QGIS, Adobe Photoshop, Illustrator, InDesign, and various handwork and art techniques.</p>
                         </div>
                       </article>
+                    </div>
+                    <figure class="personal-photo-frame">
+                      <img src="./assets/Other%20photos/personal-photo.png" alt="Portrait of Zuzana Purmová" />
+                    </figure>
                   </div>
-                  <figure class="personal-photo-frame">
-                    <img src="./assets/Other%20photos/personal-photo.png" alt="Portrait of Zuzana Purmová" />
-                  </figure>
-                </div>
-              </section>
+                </section>
+              </div>
             </div>
           </section>
 
           <section class="project-index-destination project-index-cv" aria-labelledby="cvTitle">
-            <div class="project-index-destination-heading">
-              <span class="project-index-symbol" aria-hidden="true">*</span>
+            <button
+              id="cvToggle"
+              class="project-index-destination-heading project-index-cv-toggle"
+              type="button"
+              aria-expanded="false"
+            >
+              <span class="project-index-frame" aria-hidden="true">
+                <span class="project-index-frame-line project-index-frame-line--lower-left"></span>
+                <span class="project-index-frame-line project-index-frame-line--bottom"></span>
+                <span class="project-index-frame-line project-index-frame-line--right"></span>
+                <span class="project-index-frame-line project-index-frame-line--top"></span>
+                <span class="project-index-frame-line project-index-frame-line--upper-left"></span>
+              </span>
+              <span class="project-index-symbol" aria-hidden="true">∗</span>
               <h2 id="cvTitle">CV</h2>
-            </div>
+            </button>
           </section>
         </div>
       </section>
@@ -136,6 +191,6 @@
       <p>© <span id="year"></span> Ing. Zuzana Purmová</p>
     </footer>
 
-    <script src="./script.js?v=2026-07-28-redesign-spine-label-position" type="module"></script>
+    <script src="./script.js?v=2026-07-29-redesign-horizontal-info-timeline" type="module"></script>
   </body>
 </html>

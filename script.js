@@ -3,10 +3,15 @@ const projectGroups = {
   practice: document.getElementById("practiceProjects"),
 };
 const yearLabel = document.getElementById("year");
+const projectIndex = document.querySelector(".project-index");
+const projectsToggle = document.getElementById("projectsToggle");
+const projectsPanel = document.getElementById("projectsPanel");
 const infoToggle = document.getElementById("infoToggle");
 const infoDetails = document.getElementById("infoDetails");
+const cvToggle = document.getElementById("cvToggle");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
+const indexNameAnimation = document.getElementById("indexNameAnimation");
 const DATA_CACHE_VERSION = "2026-07-28-redesign-spine-label-position";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
@@ -121,11 +126,14 @@ function initInfoToggle() {
     personalPhotoFrame.classList.add("is-visible");
   }
 
-  infoToggle?.addEventListener("click", () => {
-    const isOpen = infoToggle.getAttribute("aria-expanded") === "true";
-    const shouldOpen = !isOpen;
+  const setInfoOpen = (shouldOpen) => {
+    if (!infoToggle || !infoDetails) {
+      return;
+    }
+
     infoToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     infoDetails.hidden = !shouldOpen;
+    projectIndex?.classList.toggle("is-info-open", shouldOpen);
     if (shouldOpen) {
       infoDetails.classList.remove("is-open");
       void infoDetails.offsetWidth;
@@ -139,6 +147,88 @@ function initInfoToggle() {
         photoObserver.unobserve(personalPhotoFrame);
       }
     }
+  };
+
+  infoToggle?.addEventListener("click", () => {
+    setInfoOpen(infoToggle.getAttribute("aria-expanded") !== "true");
+  });
+}
+
+function initProjectsToggle() {
+  if (!projectIndex || !projectsToggle || !projectsPanel) {
+    return;
+  }
+
+  let closingTimer;
+  let introTimer;
+
+  const setProjectsOpen = (shouldOpen) => {
+    projectsToggle.setAttribute("aria-expanded", `${shouldOpen}`);
+    window.clearTimeout(closingTimer);
+    window.clearTimeout(introTimer);
+
+    if (shouldOpen) {
+      projectsPanel.hidden = false;
+      projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
+        link.classList.remove("has-user-previewed");
+      });
+      projectIndex.classList.remove("is-projects-closing");
+      projectIndex.classList.add("is-projects-open");
+      projectIndex.classList.add("is-projects-intro-active");
+      introTimer = window.setTimeout(() => {
+        projectIndex.classList.remove("is-projects-intro-active");
+      }, 6200);
+      return;
+    }
+
+    projectIndex.classList.remove("is-projects-intro-active");
+    projectIndex.classList.remove("is-projects-open");
+    projectIndex.classList.add("is-projects-closing");
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 3300;
+    closingTimer = window.setTimeout(() => {
+      projectsPanel.hidden = true;
+      projectIndex.classList.remove("is-projects-closing");
+    }, closingDuration);
+  };
+
+  projectsToggle.addEventListener("click", () => {
+    setProjectsOpen(projectsToggle.getAttribute("aria-expanded") !== "true");
+  });
+}
+
+function initCvToggle() {
+  cvToggle?.addEventListener("click", () => {
+    const shouldOpen = cvToggle.getAttribute("aria-expanded") !== "true";
+    cvToggle.setAttribute("aria-expanded", `${shouldOpen}`);
+    projectIndex?.classList.toggle("is-cv-open", shouldOpen);
+  });
+}
+
+function initIndexNameAnimation() {
+  if (!indexNameAnimation) {
+    return;
+  }
+
+  const holdFinalFrame = () => {
+    if (Number.isFinite(indexNameAnimation.duration)) {
+      indexNameAnimation.currentTime = Math.max(0, indexNameAnimation.duration - 0.04);
+    }
+    indexNameAnimation.pause();
+  };
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (indexNameAnimation.readyState >= HTMLMediaElement.HAVE_METADATA) {
+      holdFinalFrame();
+    } else {
+      indexNameAnimation.addEventListener("loadedmetadata", holdFinalFrame, { once: true });
+    }
+    return;
+  }
+
+  indexNameAnimation.currentTime = 0;
+  indexNameAnimation.addEventListener("ended", () => indexNameAnimation.pause(), { once: true });
+  void indexNameAnimation.play().catch(() => {
+    // Muted inline autoplay is broadly supported; retain the first frame if blocked.
   });
 }
 
@@ -149,11 +239,22 @@ function createLocalizedText(value, locale = "en") {
   return value?.[locale] || value?.en || "";
 }
 
-function createProjectIndexItem(project) {
+function createProjectIndexItem(project, order) {
   const link = document.createElement("a");
   const projectSlug = project.slug || project.selectorLabel || project.title;
   link.className = "project-index-link";
+  link.style.setProperty("--project-order", `${order}`);
   link.href = `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
+  link.addEventListener("pointerenter", () => {
+    if (projectIndex?.classList.contains("is-projects-intro-active")) {
+      link.classList.add("has-user-previewed");
+    }
+  });
+  link.addEventListener("focus", () => {
+    if (projectIndex?.classList.contains("is-projects-intro-active")) {
+      link.classList.add("has-user-previewed");
+    }
+  });
 
   const scale = document.createElement("span");
   scale.className = "project-index-detail project-index-scale";
@@ -186,6 +287,7 @@ function createProjectIndexItem(project) {
 function renderProjectIndex(projects) {
   Object.values(projectGroups).forEach((group) => group?.replaceChildren());
   const fragment = document.createDocumentFragment();
+  let projectOrder = 0;
 
   Object.entries(projectGroups).forEach(([section, container]) => {
     if (!container) {
@@ -200,15 +302,24 @@ function renderProjectIndex(projects) {
       .sort((left, right) => (left.index?.order ?? 999) - (right.index?.order ?? 999));
 
     sectionProjects.forEach((project) => {
-      fragment.append(createProjectIndexItem(project));
+      fragment.append(createProjectIndexItem(project, projectOrder));
+      projectOrder += 1;
     });
     container.append(fragment);
+  });
+
+  const projectLinks = Array.from(document.querySelectorAll(".project-index-link"));
+  projectLinks.forEach((link, order) => {
+    link.style.setProperty("--project-reverse-order", `${projectLinks.length - order - 1}`);
   });
 }
 
 async function init() {
   void renderRandomIndexBackground();
+  initIndexNameAnimation();
+  initProjectsToggle();
   initInfoToggle();
+  initCvToggle();
 
   const response = await fetch(`./data/projects.json?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });
   if (!response.ok) {

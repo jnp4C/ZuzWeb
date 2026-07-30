@@ -1,3 +1,9 @@
+import {
+  getLanguage,
+  getLocalizedText,
+  initLanguageSwitch,
+} from "./language.js";
+
 const projectGroups = {
   study: document.getElementById("studyProjects"),
   practice: document.getElementById("practiceProjects"),
@@ -14,7 +20,9 @@ const cvLine = document.querySelector(".project-index-cv .cv-line");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
 const indexNameAnimation = document.getElementById("indexNameAnimation");
-const DATA_CACHE_VERSION = "2026-07-28-redesign-spine-label-position";
+const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
+const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
+const DATA_CACHE_VERSION = "2026-07-30-bilingual-project-copy";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -31,6 +39,8 @@ const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
 let cvRopeAnimationFrame;
 let cvRopeIsIntroAnimating = false;
 let cvRopeLiveReactionStartedAt = 0;
+let activeLanguage = getLanguage();
+let indexProjects = [];
 
 function renderCvRope(elapsed = Number.POSITIVE_INFINITY, reactiveWobble = 0) {
   if (!cvLine || !cvDetails || cvDetails.hidden) {
@@ -224,6 +234,7 @@ async function renderRandomIndexBackground() {
 
 function initInfoToggle() {
   const infoRows = Array.from(infoDetails?.querySelectorAll(".project-index-info-row") || []);
+  let infoClosingTimer;
   infoRows.forEach((row) => {
     const holdDetailsOpen = () => row.classList.add("has-user-previewed");
     row.addEventListener("pointerenter", holdDetailsOpen);
@@ -236,17 +247,30 @@ function initInfoToggle() {
     }
 
     infoToggle.setAttribute("aria-expanded", `${shouldOpen}`);
-    infoDetails.hidden = !shouldOpen;
-    personalPhotoFrame?.classList.toggle("is-visible", shouldOpen);
-    projectIndex?.classList.toggle("is-info-open", shouldOpen);
+    window.clearTimeout(infoClosingTimer);
     if (shouldOpen) {
+      infoDetails.hidden = false;
       infoRows.forEach((row) => row.classList.remove("has-user-previewed"));
-      infoDetails.classList.remove("is-open");
+      infoDetails.classList.remove("is-open", "is-closing");
       void infoDetails.offsetWidth;
       infoDetails.classList.add("is-open");
-    } else {
-      infoDetails.classList.remove("is-open");
+      personalPhotoFrame?.classList.add("is-visible");
+      projectIndex?.classList.remove("is-info-closing");
+      projectIndex?.classList.add("is-info-open");
+      return;
     }
+
+    infoDetails.classList.remove("is-open");
+    infoDetails.classList.add("is-closing");
+    projectIndex?.classList.remove("is-info-open");
+    projectIndex?.classList.add("is-info-closing");
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 3700;
+    infoClosingTimer = window.setTimeout(() => {
+      infoDetails.hidden = true;
+      infoDetails.classList.remove("is-closing");
+      personalPhotoFrame?.classList.remove("is-visible");
+      projectIndex?.classList.remove("is-info-closing");
+    }, closingDuration);
   };
 
   infoToggle?.addEventListener("click", () => {
@@ -270,7 +294,7 @@ function initProjectsToggle() {
     if (shouldOpen) {
       projectsPanel.hidden = false;
       projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
-        link.classList.remove("has-user-previewed");
+        link.classList.remove("has-user-previewed", "skip-language-reveal");
       });
       projectIndex.classList.remove("is-projects-closing");
       projectIndex.classList.add("is-projects-open");
@@ -357,34 +381,37 @@ function initIndexNameAnimation() {
     return;
   }
 
-  const holdFinalFrame = () => {
-    if (Number.isFinite(indexNameAnimation.duration)) {
-      indexNameAnimation.currentTime = Math.max(0, indexNameAnimation.duration - 0.04);
-    }
+  const showFinalPoster = () => {
     indexNameAnimation.pause();
+    signatureNameplate?.classList.add("is-signature-static");
+    document.documentElement.classList.add("signature-complete");
+    try {
+      window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
+    } catch {
+      // The static transparent image still works when storage is unavailable.
+    }
   };
 
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    if (indexNameAnimation.readyState >= HTMLMediaElement.HAVE_METADATA) {
-      holdFinalFrame();
-    } else {
-      indexNameAnimation.addEventListener("loadedmetadata", holdFinalFrame, { once: true });
-    }
+  let hasCompleted = false;
+  try {
+    hasCompleted = window.sessionStorage.getItem(SIGNATURE_COMPLETE_STORAGE_KEY) === "1";
+  } catch {
+    hasCompleted = false;
+  }
+  if (hasCompleted || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    showFinalPoster();
     return;
   }
 
   indexNameAnimation.currentTime = 0;
-  indexNameAnimation.addEventListener("ended", () => indexNameAnimation.pause(), { once: true });
+  indexNameAnimation.addEventListener("ended", showFinalPoster, { once: true });
   void indexNameAnimation.play().catch(() => {
-    // Muted inline autoplay is broadly supported; retain the first frame if blocked.
+    showFinalPoster();
   });
 }
 
-function createLocalizedText(value, locale = "en") {
-  if (typeof value === "string") {
-    return value;
-  }
-  return value?.[locale] || value?.en || "";
+function createLocalizedText(value, locale = activeLanguage) {
+  return getLocalizedText(value, locale);
 }
 
 function createProjectIndexItem(project, order) {
@@ -392,7 +419,9 @@ function createProjectIndexItem(project, order) {
   const projectSlug = project.slug || project.selectorLabel || project.title;
   link.className = "project-index-link";
   link.style.setProperty("--project-order", `${order}`);
-  link.href = `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
+  link.href = project.projectPage?.layout === "concise"
+    ? `./project.html?project=${encodeURIComponent(projectSlug)}`
+    : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
   link.addEventListener("pointerenter", () => {
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
@@ -416,10 +445,10 @@ function createProjectIndexItem(project, order) {
   context.className = "project-index-detail project-index-context";
   context.textContent = `< ${createLocalizedText(project.index?.context)} >`;
 
-  link.append(scale, title, context);
+  link.append(title, scale, context);
   link.setAttribute(
     "aria-label",
-    `${scale.textContent} ${title.textContent} ${context.textContent}`.trim(),
+    `${title.textContent} ${scale.textContent} ${context.textContent}`.trim(),
   );
 
   (project.index?.highlights || []).forEach((highlight) => {
@@ -450,7 +479,11 @@ function renderProjectIndex(projects) {
       .sort((left, right) => (left.index?.order ?? 999) - (right.index?.order ?? 999));
 
     sectionProjects.forEach((project) => {
-      fragment.append(createProjectIndexItem(project, projectOrder));
+      const projectLink = createProjectIndexItem(project, projectOrder);
+      if (projectIndex?.classList.contains("is-projects-open")) {
+        projectLink.classList.add("skip-language-reveal", "has-user-previewed");
+      }
+      fragment.append(projectLink);
       projectOrder += 1;
     });
     container.append(fragment);
@@ -474,10 +507,17 @@ async function init() {
     throw new Error("Failed to load projects.");
   }
 
-  const projects = await response.json();
-  renderProjectIndex(projects);
+  indexProjects = await response.json();
+  renderProjectIndex(indexProjects);
   yearLabel.textContent = new Date().getFullYear();
 }
+
+initLanguageSwitch((language) => {
+  activeLanguage = language;
+  if (indexProjects.length > 0) {
+    renderProjectIndex(indexProjects);
+  }
+});
 
 init().catch(() => {
   Object.values(projectGroups).forEach((group) => {

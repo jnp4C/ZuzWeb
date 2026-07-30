@@ -7,7 +7,7 @@
       "order": 1,
       "scale": {
         "en": "installation",
-        "cs": null
+        "cs": "instalace"
       },
       "title": {
         "en": "A TREE WITH THE SPIRIT OF CHRISTMAS",
@@ -302,10 +302,10 @@
     "visibility": "published",
     "portfolioSection": "study",
     "index": {
-      "order": 10,
+      "order": 1,
       "scale": {
         "en": "large scale",
-        "cs": null
+        "cs": "velké"
       },
       "title": {
         "en": "THROUGH THE FOREST",
@@ -320,8 +320,8 @@
     "translations": {
       "cs": {
         "title": "ZLESA DOLESA",
-        "description": null,
-        "annotation": null
+        "description": "Propojení Kunratického lesa s parkem Hostivař-Záběhlice pomocí nové zelené páteře.",
+        "annotation": "Projekt vznikl na základě společné vize pro Prahu 11. Jejím hlavním prvkem je zelená páteř, spojující tři velké plochy lesů, které území obklopují a zelené plochy v zástavbě. Návrh je reakcí na problematiku prostupnosti území a součástí páteře. Projekt propojuje Kunratický les s parkem Hostivař-Záběhlice. Využívá proto pás volného území kolem komunikací, překážkou jsou dálnice a další silnice. Přínosy návrhu: propojení území, možnost migrace druhů, využití vágních prostor, bezpečnost chodce, rozšíření plochy lesa a nové prostory k rekreaci. Výsledkem je mohutné terénní těleso, které se jako vlna zvedá, aby překlenulo dvě komunikace, a zbytek pohlcuje uvnitř. Rozlévá se tak, aby se přizpůsobilo stávajícímu terénu, přiléhá na rozlehlou stavbu obchodního centra a částečně ho skrývá."
       }
     },
     "projectPage": {
@@ -1402,10 +1402,10 @@
     "visibility": "published",
     "portfolioSection": "study",
     "index": {
-      "order": 8,
+      "order": 7,
       "scale": {
         "en": "large scale",
-        "cs": null
+        "cs": "velké"
       },
       "title": {
         "en": "ABSTRACT.",
@@ -3084,7 +3084,7 @@
       "order": 2,
       "scale": {
         "en": "small scale + documentation",
-        "cs": null
+        "cs": "malé + dokumentace"
       },
       "title": {
         "en": "STEEP GARDEN REALIZATION",
@@ -3153,11 +3153,11 @@
         "year": 2024,
         "scale": {
           "en": "small scale + documentation",
-          "cs": null
+          "cs": "malé + dokumentace"
         },
         "processing": {
           "en": "Studio project, individual",
-          "cs": null
+          "cs": "ateliérový projekt, samostatná práce"
         },
         "type": {
           "en": "Garden Design",
@@ -7262,7 +7262,7 @@
     "selectorLabel": "STEEP GARDEN REALIZATION",
     "relatedProjectLink": {
       "label": "View concept",
-      "href": "./year.html?year=2023&project=steep-garden"
+      "href": "./year.html?year=2024&project=steep-garden"
     },
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta"
   },
@@ -7274,7 +7274,7 @@
       "order": 6,
       "scale": {
         "en": "small scale",
-        "cs": null
+        "cs": "malé"
       },
       "title": {
         "en": "GROWING-THROUGH",
@@ -7289,7 +7289,7 @@
           "type": "award",
           "label": {
             "en": "Award",
-            "cs": null
+            "cs": "Ocenění"
           }
         }
       ]
@@ -7297,8 +7297,8 @@
     "translations": {
       "cs": {
         "title": "GROWING-THROUGH",
-        "description": null,
-        "annotation": null
+        "description": "Dvouletá venkovní instalace pro mezinárodní zahradní festival Les Jardins de Métis.",
+        "annotation": "Návrh na dvouletou venkovní instalaci vypracovaný pro mezinárodní zahradní festival Les Jardins de Métis (Reford Gardens) na téma „BORDERS“. Instalace znázorňuje, jak se příroda vypořádává s umělými hranicemi vytvořenými člověkem. Betonové objekty umístěné do konfliktu s vrbovým porostem ukazují různé prostorové koncepty bariér a jejich překonávání. Díky použití vrbových prutů, které zakoření a budou po celou dobu výstavy růst, se instalace v čase neustále mění a ukazuje, jak jsou dopady necitlivých lidských zásahů postupně prostředím pohlceny."
       }
     },
     "projectPage": {
@@ -7311,7 +7311,7 @@
         {
           "label": {
             "en": "Award",
-            "cs": null
+            "cs": "Ocenění"
           },
           "detail": {
             "en": "2025 LAURUS AWARDS\nLandscape Gesture category",
@@ -7669,7 +7669,7 @@
       "order": 2,
       "scale": {
         "en": "small scale + documentation",
-        "cs": null
+        "cs": "malé + dokumentace"
       },
       "title": {
         "en": "Kladno Krematorium",
@@ -7684,11 +7684,12 @@
     "translations": {
       "cs": {
         "title": "CYKLUS PROMĚNY",
-        "description": null,
-        "annotation": null
+        "description": "Krajinářská úprava okolí kladenského krematoria propojující rozloučení a rekreaci.",
+        "annotation": "Krematorium nyní existuje jen jako provozní budova, vypadající jako autodílna obklopena neudržovanými pozemky a pozůstatky sadu. Návrh spočívá ve vytvoření příjemného místa, které splétá možnost poklidného rozloučení se se zesnulými s okolní přírodou využívanou k rekreaci tak, aby se odlišné děje navzájem nerušily. Základem návrhu je elegantní zeď, která schová budovu krematoria před návštěvníky areálu. Dále návrh pracuje s myšlenkou dvou světů, které pomyslně dělí vodní stuha. Uvnitř je území klidného odpočinku, tvořené třemi rozptylovými loučkami v podobě měkkých travnatých polštářů. Dynamická cesta a vodní stuha se kterou je propletená, symbolizují nekončící cyklus života. Oba prvky se celou dobu proměňují, to doplňuje myšlenku, že život pozůstalých nekončí, jen se neustále mění."
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": true,
@@ -7700,10 +7701,35 @@
           "id": "graphical-representation",
           "kind": "graphic",
           "label": {
-            "en": "Graphical representation",
-            "cs": "Název grafiky"
+            "en": "Two worlds",
+            "cs": "Dva světy"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/kladno-krematorium/06-koncept-map-2396.jpg",
+              "srcset": "./assets/generated/kladno-krematorium/06-koncept-map-1797.jpg 1797w, ./assets/generated/kladno-krematorium/06-koncept-map-2396.jpg 2396w",
+              "alt": {
+                "en": "Concept diagram showing the two landscape worlds around Kladno Crematorium",
+                "cs": "Koncepční diagram dvou světů v okolí kladenského krematoria"
+              }
+            },
+            {
+              "src": "./assets/generated/kladno-krematorium/06-koncept-left-1216.jpg",
+              "srcset": "./assets/generated/kladno-krematorium/06-koncept-left-912.jpg 912w, ./assets/generated/kladno-krematorium/06-koncept-left-1216.jpg 1216w",
+              "alt": {
+                "en": "Concept explanation for the outer landscape world",
+                "cs": "Koncepční vysvětlení vnějšího světa krajiny"
+              }
+            },
+            {
+              "src": "./assets/generated/kladno-krematorium/06-koncept-right-1198.jpg",
+              "srcset": "./assets/generated/kladno-krematorium/06-koncept-right-898.jpg 898w, ./assets/generated/kladno-krematorium/06-koncept-right-1198.jpg 1198w",
+              "alt": {
+                "en": "Concept explanation for the inner landscape world",
+                "cs": "Koncepční vysvětlení vnitřního světa krajiny"
+              }
+            }
+          ]
         },
         {
           "id": "masterplan",
@@ -7712,7 +7738,32 @@
             "en": "Masterplan",
             "cs": "Masterplan"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/kladno-krematorium/05-navrh-map-2394.jpg",
+              "srcset": "./assets/generated/kladno-krematorium/05-navrh-map-1795.jpg 1795w, ./assets/generated/kladno-krematorium/05-navrh-map-2394.jpg 2394w",
+              "alt": {
+                "en": "Masterplan of the Kladno Crematorium landscape proposal",
+                "cs": "Masterplan krajinářského návrhu okolí kladenského krematoria"
+              }
+            },
+            {
+              "src": "./assets/generated/kladno-krematorium/04-sirsi-vztahy-map-2398.jpg",
+              "srcset": "./assets/generated/kladno-krematorium/04-sirsi-vztahy-map-1798.jpg 1798w, ./assets/generated/kladno-krematorium/04-sirsi-vztahy-map-2398.jpg 2398w",
+              "alt": {
+                "en": "Wider landscape relationships around Kladno Crematorium",
+                "cs": "Širší krajinné vztahy v okolí kladenského krematoria"
+              }
+            },
+            {
+              "src": "./assets/generated/kladno-krematorium/08-dvasvety-map-2396.jpg",
+              "srcset": "./assets/generated/kladno-krematorium/08-dvasvety-map-1797.jpg 1797w, ./assets/generated/kladno-krematorium/08-dvasvety-map-2396.jpg 2396w",
+              "alt": {
+                "en": "Detailed plan of the two landscape worlds",
+                "cs": "Detailní plán dvou světů krajiny"
+              }
+            }
+          ]
         },
         {
           "id": "model",
@@ -7721,7 +7772,48 @@
             "en": "Model",
             "cs": "Model"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/project-pages/cycle-of-change/model-1800.webp",
+              "srcset": "./assets/project-pages/cycle-of-change/model-1100.webp 1100w, ./assets/project-pages/cycle-of-change/model-1800.webp 1800w",
+              "alt": {
+                "en": "Physical model of the Kladno Crematorium landscape proposal",
+                "cs": "Fyzický model krajinářského návrhu okolí kladenského krematoria"
+              }
+            },
+            {
+              "src": "./assets/project-pages/cycle-of-change/model-0985-1600.webp",
+              "srcset": "./assets/project-pages/cycle-of-change/model-0985-1000.webp 1000w, ./assets/project-pages/cycle-of-change/model-0985-1600.webp 1600w",
+              "alt": {
+                "en": "Physical model seen from the entrance side",
+                "cs": "Fyzický model z pohledu od vstupu"
+              }
+            },
+            {
+              "src": "./assets/project-pages/cycle-of-change/model-0987-1600.webp",
+              "srcset": "./assets/project-pages/cycle-of-change/model-0987-1000.webp 1000w, ./assets/project-pages/cycle-of-change/model-0987-1600.webp 1600w",
+              "alt": {
+                "en": "Physical model focused on the inner tree enclosure",
+                "cs": "Fyzický model se zaměřením na vnitřní kruh stromů"
+              }
+            },
+            {
+              "src": "./assets/project-pages/cycle-of-change/model-0988-1600.webp",
+              "srcset": "./assets/project-pages/cycle-of-change/model-0988-1000.webp 1000w, ./assets/project-pages/cycle-of-change/model-0988-1600.webp 1600w",
+              "alt": {
+                "en": "Physical model and the crematorium building",
+                "cs": "Fyzický model a budova krematoria"
+              }
+            },
+            {
+              "src": "./assets/project-pages/cycle-of-change/model-0990-1600.webp",
+              "srcset": "./assets/project-pages/cycle-of-change/model-0990-1000.webp 1000w, ./assets/project-pages/cycle-of-change/model-0990-1600.webp 1600w",
+              "alt": {
+                "en": "Close view through the model landscape",
+                "cs": "Detailní průhled krajinou modelu"
+              }
+            }
+          ]
         }
       ],
       "fullPresentation": {
@@ -7738,20 +7830,27 @@
         "year": 2022,
         "scale": {
           "en": "small scale + documentation",
-          "cs": null
+          "cs": "malé + dokumentace"
         },
         "processing": {
           "en": "Studio project, individual",
-          "cs": null
+          "cs": "ateliérový projekt, samostatná práce"
         },
         "type": {
           "en": "Landscape Architecture",
-          "cs": null
+          "cs": "krajinářská architektura"
         },
         "collaborators": []
       },
       "hero": {
-        "media": null,
+        "media": {
+          "src": "./assets/generated/kladno-krematorium/01-krematorium-cover-2400.jpg",
+          "srcset": "./assets/generated/kladno-krematorium/01-krematorium-cover-1800.jpg 1800w, ./assets/generated/kladno-krematorium/01-krematorium-cover-2400.jpg 2400w",
+          "alt": {
+            "en": "Kladno Crematorium project cover and site plan",
+            "cs": "Titulní grafika a situace projektu Krematorium Kladno"
+          }
+        },
         "allowLandscapeExpansion": true,
         "mobilePosition": "after-annotation"
       }
@@ -8975,7 +9074,7 @@
       "order": 3,
       "scale": {
         "en": "large scale",
-        "cs": null
+        "cs": "velké"
       },
       "title": {
         "en": "CONCEPT OF SEMNĚVICE LANDSCAPE",
@@ -8990,7 +9089,7 @@
           "type": "award",
           "label": {
             "en": "Award",
-            "cs": null
+            "cs": "Ocenění"
           }
         }
       ]
@@ -8998,8 +9097,8 @@
     "translations": {
       "cs": {
         "title": "SEMNĚVIZE",
-        "description": null,
-        "annotation": null
+        "description": "Koncepce krajiny Semněvic založená na vícevrstvé analýze území.",
+        "annotation": "Na základě podrobné analýzy krajiny Semněvic byla pro území navržena vize – SemněVIZE a zhotovena Krajinná Koncepce Semněvic. Jejím cílem bylo krajinu uchopit komplexně jako jeden celek, stanovit principy a způsoby racionálního a udržitelného využití a zásahů, tak aby prosperovala a dobře se v ní lidem žilo. Koncepce krajiny byla podrobněji zpracována ve čtyřech vrstvách vycházejících z potřeb a problému krajiny Semněvic: cestní síť, intravilán, zemědělství a vodní režim. Na tento týmový projekt navazují individuální projekty rozvíjející tyto vrstvy: KRAJINOU KOL SEMNĚVIC, Skrz Obci Pod Kopci, VODO TEČ, Srdce Semněvic, SEMNĚ-DĚLSTVÍ, REVODALIZACE, VYVODNĚNÍ."
       }
     },
     "projectPage": {
@@ -9061,7 +9160,7 @@
         "control": "plus"
       },
       "info": {
-        "year": 2023,
+        "year": 2024,
         "scale": {
           "en": "large scale",
           "cs": null
@@ -9076,6 +9175,10 @@
         },
         "collaborators": [
           "ING. DENISA MORAVCOVÁ",
+          "ING. ANNA KOUPALOVÁ",
+          "ING. DANIELA KVAPILOVÁ",
+          "ING. ELIŠKA KUNCÍŘOVÁ",
+          "ING. JOSEFÍNA JÍROVCOVÁ",
           "ING. MARTINA GRUNTOVÁ"
         ]
       },
@@ -9138,12 +9241,19 @@
         "variant": "award",
         "tooltip": "Dean's Award FA CTU 4th year 2023/2024",
         "target": "_blank"
+      },
+      {
+        "label": "Publication",
+        "href": "https://www.casopis.forumochranyprirody.cz/magazin/analyzy-komentare/moznosti-planovani-krajiny",
+        "variant": "publication",
+        "tooltip": "Možnosti plánování krajiny",
+        "target": "_blank"
       }
     ],
     "scenes": [
       {
         "type": "annotation",
-        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nCONCEPT OF SEMNĚVICE LANDSCAPE\n\nTYPE OF PROJECT\nGroup project\nING. DENISA MORAVCOVÁ, ING. ZUZANA PURMOVÁ,\nING. MARTINA GRUNTOVÁ\n\nSTUDIO\nStudio Salzmann, FA CTU in Prague\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nCONCEPT OF SEMNĚVICE LANDSCAPE\n\nTYPE OF PROJECT\nGroup project\nING. DENISA MORAVCOVÁ, ING. ANNA KOUPALOVÁ,\nING. DANIELA KVAPILOVÁ, ING. ELIŠKA KUNCÍŘOVÁ,\nING. JOSEFÍNA JÍROVCOVÁ, ING. MARTINA GRUNTOVÁ,\nING. ZUZANA PURMOVÁ\n\nSTUDIO\nStudio Salzmann, FA CTU in Prague\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
         "supportingText": "Based on a detailed analysis of the landscape of Semněvice, a vision for the area was proposed — SemněVISION, and a Landscape Concept of Semněvice was prepared. It aims to grasp the landscape comprehensively as a whole, to establish principles and methods of rational and sustainable use and interventions so that it would prosper and people would live well in it. The landscape concept was elaborated in detail in four layers based on the needs and problems of the Semněvice landscape: the road network, the intramural area, agriculture and the water regime. This team project is followed by individual projects developing the following layers: THE LANDSCAPE AROUND SEMNĚVICE, Through the Village Under the Hillage, WATER FLOW, Heart of Semněvice, AGRI-SEMNĚ-CULTURE, REWATERIZATION, OUT-WATERING.",
         "page": 1
       },
@@ -12170,6 +12280,10 @@
     "projectType": "Group project",
     "projectTeam": [
       "ING. DENISA MORAVCOVÁ",
+      "ING. ANNA KOUPALOVÁ",
+      "ING. DANIELA KVAPILOVÁ",
+      "ING. ELIŠKA KUNCÍŘOVÁ",
+      "ING. JOSEFÍNA JÍROVCOVÁ",
       "ING. ZUZANA PURMOVÁ",
       "ING. MARTINA GRUNTOVÁ"
     ],
@@ -12185,7 +12299,7 @@
       "order": 4,
       "scale": {
         "en": "large scale",
-        "cs": null
+        "cs": "velké"
       },
       "title": {
         "en": "REWATERIZATION",
@@ -12200,8 +12314,8 @@
     "translations": {
       "cs": {
         "title": "REVODALIZACE",
-        "description": null,
-        "annotation": null
+        "description": "Návrh revitalizace a podpory vodního režimu krajiny Semněvic.",
+        "annotation": "Projekt vychází ze skupinové práce, ve které byla na základě analýzy pro území obce Semněvice navržena VIZE a zhotovena KRAJINNÁ KONCEPCE. Jejím cílem bylo krajinu uchopit komplexně, jako jeden celek, a stanovit principy a způsoby racionálního a udržitelného využití a zásahů, tak aby prosperovala a dobře se v ní lidem žilo. Návrh je aplikací principů stanovených v koncepci na konkrétním území. Je to příklad revitalizace a podpory vodního režimu. Práce je postavena na reálných potřebách obce a má nabídnout vhodnější alternativu k vodní nádrži zamýšlené k postavení v území. Prezentace návrhu dbá na to, aby problematiku vody v krajině dostatečně vysvětlila, neboť nejde jen o teoretickou práci pro akademickou společnost ale hlavně o reálnou iniciativu pro konkrétní obec a její občany."
       }
     },
     "projectPage": {
@@ -14008,7 +14122,7 @@
       "order": 5,
       "scale": {
         "en": "small scale + documentation",
-        "cs": null
+        "cs": "malé + dokumentace"
       },
       "title": {
         "en": "STEEP GARDEN",
@@ -14023,8 +14137,8 @@
     "translations": {
       "cs": {
         "title": "ZAHRADA VE SVAHU",
-        "description": null,
-        "annotation": null
+        "description": "Studie přestavby svažité zahrady rodinného domu v pražských Střešovicích.",
+        "annotation": "Předmětem projektu je studie přestavby zahrady rodinného domu v pražských Střešovicích, která byla následně zpracována do projektové dokumentace. Zahrada je v prudkém svahu, tudíž návrh pracuje s terénem, aby vytvořil více využitelných ploch. Koncept návrhu staví na jednoduchosti, aby v malém prostoru zahrady nedošlo k přehlcení. Výrazově se návrh inspiruje zahradami městských vil z počátku minulého století, například použitím stálezelených dřevin. Vytváří útulné pokoje, vybízející k trávení času v zahradě namísto pasivního pozorování za oknem. I přes její malou rozlohu, je zahrada schopna nabídnout prostory pro socializaci nebo naopak pobývání v klidu o samotě, pro všechny uživatele domu."
       }
     },
     "projectPage": {
@@ -14098,7 +14212,7 @@
     "title": "STEEP GARDEN",
     "category": "Garden Design",
     "location": "Prague-Střešovice, CZ",
-    "year": 2023,
+    "year": 2024,
     "description": "Design of a steep family house garden in Prague's Střešovice district.",
     "annotation": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project's plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
     "pdfPages": [
@@ -15577,5 +15691,213 @@
       "label": "View realization",
       "href": "./year.html?year=2024&project=steep-garden-realization"
     }
+  },
+  {
+    "slug": "mezi-vsim",
+    "visibility": "published",
+    "portfolioSection": "practice",
+    "index": {
+      "order": 3,
+      "scale": {
+        "en": "installation",
+        "cs": "instalace"
+      },
+      "title": {
+        "en": "MEZI VŠÍM",
+        "cs": "MEZI VŠÍM"
+      },
+      "context": {
+        "en": "Pokoje 2024, collaboration",
+        "cs": "Pokoje 2024, spolupráce"
+      },
+      "highlights": [
+        {
+          "type": "realization",
+          "label": {
+            "en": "Realized",
+            "cs": "Realizace"
+          }
+        }
+      ]
+    },
+    "translations": {
+      "cs": {
+        "title": "MEZI VŠÍM",
+        "description": "Realizovaná instalace pro přehlídku Pokoje 2024.",
+        "annotation": "V pokoji sídlí ztvárnění Krajinářské Architektury jako živé entity. Ale co je to vlastně za obor?\nDisciplína sama se kvůli své komplexitě potýká s obtížným definováním a nalezením jádra. V návrzích pojednává neustále se vyvíjející prostředí se všemi fázemi životního cyklu – je to práce s růstem. Architekturu krajiny můžeme hledat pomocí propojení mnoha oborů a témat, týkajících se životního prostředí v celé jeho šířce.\nZveme Vás k prolézání její spletitostí, zkoumání tematických souvislostí a objevování zhmotněného jádra. Jako návštěvník můžete pomoci růst jak skulptuře samotné, tak i povědomí o smyslu krajinářské tvorby."
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": false,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [],
+      "fullPresentation": {
+        "enabled": false,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        },
+        "placement": "end",
+        "control": "plus"
+      },
+      "info": {
+        "year": 2024,
+        "scale": {
+          "en": "installation",
+          "cs": null
+        },
+        "processing": {
+          "en": "Master's study, collaboration",
+          "cs": null
+        },
+        "type": {
+          "en": "Exhibition installation",
+          "cs": null
+        },
+        "collaborators": [
+          "SABINA PEKOVÁ",
+          "DAVID ŠMÍD"
+        ]
+      },
+      "hero": {
+        "media": null,
+        "allowLandscapeExpansion": true,
+        "mobilePosition": "after-annotation"
+      }
+    },
+    "title": "MEZI VŠÍM",
+    "category": "Exhibition Installation",
+    "location": "Prague, CZ",
+    "year": 2024,
+    "description": "Realized installation for the Pokoje 2024 exhibition.",
+    "annotation": "The room houses a representation of Landscape Architecture as a living entity. But what kind of discipline is it?\nBecause of its complexity, the discipline itself struggles to define and find its core. Its designs address an ever-evolving environment through every phase of its life cycle—it is work with growth. Landscape architecture can be explored through the interconnection of many disciplines and themes spanning the full breadth of the environment.\nWe invite you to climb through its intricacies, explore thematic connections and discover its materialized core. As a visitor, you can help both the sculpture itself and awareness of the purpose of landscape design to grow.",
+    "headerActions": [
+      {
+        "label": "Pokoje 2024",
+        "href": "https://www.prehlidkapokoje.cz/pokoje-2024/",
+        "variant": "publication",
+        "tooltip": "Pokoje 2024 exhibition",
+        "target": "_blank"
+      }
+    ],
+    "scenes": [
+      {
+        "type": "annotation",
+        "introOnly": true,
+        "supportingText": "The room houses a representation of Landscape Architecture as a living entity. But what kind of discipline is it?\nBecause of its complexity, the discipline itself struggles to define and find its core. Its designs address an ever-evolving environment through every phase of its life cycle—it is work with growth. Landscape architecture can be explored through the interconnection of many disciplines and themes spanning the full breadth of the environment.\nWe invite you to climb through its intricacies, explore thematic connections and discover its materialized core. As a visitor, you can help both the sculpture itself and awareness of the purpose of landscape design to grow."
+      }
+    ],
+    "projectType": "Master's study, collaboration",
+    "projectTeam": [
+      "SABINA PEKOVÁ",
+      "ZUZANA PURMOVÁ",
+      "DAVID ŠMÍD"
+    ],
+    "selectorLabel": "MEZI VŠÍM"
+  },
+  {
+    "slug": "new-landscape-of-high-speed-railways",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 8,
+      "scale": {
+        "en": "large scale",
+        "cs": "velké"
+      },
+      "title": {
+        "en": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS",
+        "cs": "NOVÁ KRAJINA VYSOKORYCHLOSTNÍCH TRATÍ"
+      },
+      "context": {
+        "en": "FA CTU, diploma thesis",
+        "cs": "FA ČVUT, diplomová práce"
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "NOVÁ KRAJINA VYSOKORYCHLOSTNÍCH TRATÍ",
+        "description": "Diplomová práce o krajinářském začlenění vysokorychlostní železniční trati do krajiny Polabí.",
+        "annotation": "Diplomová práce se zabývá možnostmi krajinářského začlenění vysokorychlostní železniční trati do krajiny Polabí. Vychází z předpokladu, že pouze funkční řešení záměru stavby VRT ve smyslu technicko-ekologických aspektů je nedostatečné. Cílem práce je tedy odpovědět na otázku, jak uchopit vysokorychlostní tratě celistvě, tak, aby to odpovídalo měřítku jejich zásahu do krajiny, a co do procesu může přinést krajinářská architektura. První část práce je teoretická rešerše, zabývající se vztahem krajiny a VRT, jakožto liniové dopravní infrastruktury.\n\nDruhá část práce se již věnuje řešenému území mezi Roudnicí nad Labem a Křešicemi, které podrobně analyzuje. Návrh tvoří třetí část práce, kde dochází k aplikaci teoretických poznatků na konkrétní úsek plánované tratě. Na základě rešerše jsou odvozeny principy celistvého přístupu k VRT, na kterých je vystavěna vize Nových Krajin vysokorychlostních tratí. Polabská výšivka je název konceptu jedné z Nových Krajin VRT, kterou je i řešené území. Koncept Polabské výšivky je následně konkretizován do koncepce začlenění, která ukazuje navržené úpravy krajiny. Součástí je i detailnější představení jednotlivých začleňujících prvků."
+      }
+    },
+    "projectPage": {
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": false,
+        "showAnnotation": true
+      },
+      "awards": [],
+      "featuredSections": [],
+      "fullPresentation": {
+        "enabled": false,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        },
+        "placement": "end",
+        "control": "plus"
+      },
+      "info": {
+        "year": "2025–2026",
+        "scale": {
+          "en": "large scale",
+          "cs": null
+        },
+        "processing": {
+          "en": "Diploma thesis",
+          "cs": null
+        },
+        "type": {
+          "en": "Landscape planning",
+          "cs": null
+        },
+        "collaborators": []
+      },
+      "hero": {
+        "media": null,
+        "allowLandscapeExpansion": true,
+        "mobilePosition": "after-annotation"
+      }
+    },
+    "title": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS",
+    "category": "Diploma Thesis",
+    "location": "Elbe Lowlands, CZ",
+    "year": 2026,
+    "description": "Diploma thesis on integrating a high-speed railway into the landscape of the Elbe lowlands.",
+    "annotation": "The thesis examines the possibilities of integrating a high-speed railway line into the landscape of the Elbe lowlands from a landscape architecture perspective. It assumes that a purely functional solution to a high-speed rail project, understood in terms of technical and ecological aspects, is insufficient. The aim of the thesis is therefore to answer the question of how high-speed rail lines can be approached comprehensively, in a way that corresponds to the scale of their intervention in the landscape, and what landscape architecture can contribute to this process. The first part of the thesis is a theoretical review dealing with the relationship between landscape and high-speed rail as a form of linear transport infrastructure.\n\nThe second part focuses on the study area between Roudnice nad Labem and Křešice, which is analysed in detail. The design forms the third part of the thesis, where the theoretical findings are applied to a specific section of the planned railway line. Based on the review, principles of a comprehensive approach to high-speed rail are derived, forming the basis for the vision of the New Landscapes of High-Speed Rail. The Elbe Embroidery is the name of the concept for one of the New Landscapes of High-Speed Rail, which also includes the study area. The concept of the Elbe Embroidery is then further specified in an integration strategy, which presents the proposed landscape modifications. It also includes a more detailed presentation of the individual integrating elements.",
+    "headerActions": [
+      {
+        "label": "Diploma thesis",
+        "href": "https://www.fa.cvut.cz/cs/galerie/diplomove-prace/148333-nova-krajina-vysokorychlostnich-trati-zacleneni-useku-trate-rs4-podripsko-ii-do-krajiny",
+        "variant": "publication",
+        "tooltip": "FA CTU diploma thesis page",
+        "target": "_blank"
+      },
+      {
+        "label": "Studio project",
+        "href": "https://www.fa.cvut.cz/cs/galerie/atelierove-prace/128098-nova-krajina-vysokorychlostnich-trati",
+        "variant": "publication",
+        "tooltip": "FA CTU studio project page",
+        "target": "_blank"
+      }
+    ],
+    "scenes": [
+      {
+        "type": "annotation",
+        "introOnly": true,
+        "supportingText": "The thesis examines the possibilities of integrating a high-speed railway line into the landscape of the Elbe lowlands from a landscape architecture perspective. It assumes that a purely functional solution to a high-speed rail project, understood in terms of technical and ecological aspects, is insufficient. The aim of the thesis is therefore to answer the question of how high-speed rail lines can be approached comprehensively, in a way that corresponds to the scale of their intervention in the landscape, and what landscape architecture can contribute to this process. The first part of the thesis is a theoretical review dealing with the relationship between landscape and high-speed rail as a form of linear transport infrastructure.\n\nThe second part focuses on the study area between Roudnice nad Labem and Křešice, which is analysed in detail. The design forms the third part of the thesis, where the theoretical findings are applied to a specific section of the planned railway line. Based on the review, principles of a comprehensive approach to high-speed rail are derived, forming the basis for the vision of the New Landscapes of High-Speed Rail. The Elbe Embroidery is the name of the concept for one of the New Landscapes of High-Speed Rail, which also includes the study area. The concept of the Elbe Embroidery is then further specified in an integration strategy, which presents the proposed landscape modifications. It also includes a more detailed presentation of the individual integrating elements."
+      }
+    ],
+    "projectType": "Diploma thesis",
+    "studioName": "Atelier Jeníková–Štemberová–Trpkoš, FA CTU in Prague",
+    "selectorLabel": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS"
   }
 ]

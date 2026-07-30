@@ -1,8 +1,15 @@
+import {
+  getLanguage,
+  getLocalizedProjectText,
+  getLocalizedText,
+  initLanguageSwitch,
+} from "./language.js";
+
 const PDFJS_MODULE_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.min.mjs";
 const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.worker.min.mjs";
 const DEFAULT_PDF_FILE = "./PORTFOLIO_Zuzana-Purmova.pdf";
 const ASSET_CACHE_VERSION = "2026-06-29-christmas-spirit-scenes";
-const DATA_CACHE_VERSION = "2026-06-29-christmas-spirit-scenes";
+const DATA_CACHE_VERSION = "2026-07-30-bilingual-project-copy";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const MAX_CANVAS_DEVICE_SCALE = 1;
 const MAX_CANVAS_EDGE = 1800;
@@ -69,6 +76,41 @@ const pdfCache = new Map();
 let pdfjsLibPromise = null;
 let headerContourSyncQueued = false;
 let headerContourSyncUntil = 0;
+let activeLanguage = getLanguage();
+const isEmbeddedPresentation = new URLSearchParams(window.location.search).get("embedded") === "1";
+let embeddedFirstSceneProgress = isEmbeddedPresentation ? 0 : null;
+let embeddedFirstSceneAnimationFrame = 0;
+let embeddedFirstSceneAnimationRequested = isEmbeddedPresentation;
+
+if (isEmbeddedPresentation) {
+  document.body.classList.add("embedded-presentation");
+}
+
+const CZECH_PROJECT_TERMS = {
+  "GHMP Opencall, group project": "GHMP Open Call, skupinový projekt",
+  "Studio project, individual": "Ateliérový projekt, samostatná práce",
+  "Individual project": "Samostatná práce",
+  "Studio project, group project": "Ateliérový projekt, skupinová práce",
+  "Group project": "Skupinový projekt",
+  "Studio project, individual, part of group concept": "Ateliérový projekt, samostatná práce navazující na skupinovou koncepci",
+  "Studio project, individual, private commission": "Ateliérový projekt, samostatná práce, soukromá zakázka",
+  "Master's study, collaboration": "Magisterské studium, spolupráce",
+  "Diploma thesis": "Diplomová práce",
+  "Landscape Installation": "Krajinářská instalace",
+  "Landscape Architecture": "Krajinářská architektura",
+  "Urban Design": "Urbanistický návrh",
+  "Garden Design": "Návrh zahrady",
+  "Studio project": "Ateliérový projekt",
+  "Exhibition installation": "Výstavní instalace",
+  "Landscape planning": "Krajinné plánování",
+};
+
+function getLocalizedProjectTerm(value) {
+  const localizedValue = getLocalizedText(value, activeLanguage);
+  return activeLanguage === "cs"
+    ? (CZECH_PROJECT_TERMS[localizedValue] || localizedValue)
+    : localizedValue;
+}
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
@@ -395,23 +437,28 @@ function slugifyProject(value) {
 
 function setProjectText(project) {
   projectYearBadge.textContent = String(project.year);
-  projectTitle.textContent = project.title;
-  const projectType = project.projectType || project.category;
+  projectTitle.textContent = getLocalizedProjectText(project, "title", activeLanguage);
+  const projectType = getLocalizedProjectTerm(project.projectPage?.info?.type)
+    || project.projectType
+    || project.category;
   projectMeta.textContent = `${project.year} · ${projectType} · ${project.location}`;
-  projectDescription.textContent = project.description;
+  projectDescription.textContent = getLocalizedProjectText(project, "description", activeLanguage);
 }
 
 function buildProjectHeaderText(project) {
-  const projectType = project.projectType || project.category || "Project";
+  const projectType = getLocalizedProjectTerm(project.projectPage?.info?.processing)
+    || project.projectType
+    || project.category
+    || (activeLanguage === "cs" ? "Projekt" : "Project");
   const team = Array.isArray(project.projectTeam) ? project.projectTeam.filter(Boolean) : [];
   const studioName = project.studioName || "";
   const studioUrl = project.studioUrl || "";
 
   const lines = [
-    "NAME OF PROJECT",
-    project.title || "",
+    activeLanguage === "cs" ? "NÁZEV PROJEKTU" : "NAME OF PROJECT",
+    getLocalizedProjectText(project, "title", activeLanguage),
     "",
-    "TYPE OF PROJECT",
+    activeLanguage === "cs" ? "TYP PROJEKTU" : "TYPE OF PROJECT",
     projectType,
   ];
 
@@ -420,7 +467,7 @@ function buildProjectHeaderText(project) {
   }
 
   if (studioName || studioUrl) {
-    lines.push("", "STUDIO");
+    lines.push("", activeLanguage === "cs" ? "ATELIÉR" : "STUDIO");
     if (studioName) {
       lines.push(studioName);
     }
@@ -679,9 +726,15 @@ function buildSceneTrack(projects = yearProjects.map((project, projectIndex) => 
 
   projects.forEach(({ project, projectIndex }) => {
     projectStartStepByIndex.set(projectIndex, sceneTrack.length);
-    const projectScenes = Array.isArray(project.scenesResolved) && project.scenesResolved.length > 0
+    const resolvedProjectScenes = Array.isArray(project.scenesResolved) && project.scenesResolved.length > 0
       ? project.scenesResolved
       : createFallbackScenes(project);
+    const firstVisualSceneIndex = isEmbeddedPresentation
+      ? resolvedProjectScenes.findIndex((scene) => scene.type !== "annotation")
+      : 0;
+    const projectScenes = firstVisualSceneIndex > 0
+      ? resolvedProjectScenes.slice(firstVisualSceneIndex)
+      : resolvedProjectScenes;
 
     projectScenes.forEach((scene, sceneIndex) => {
       sceneTrack.push({
@@ -949,6 +1002,40 @@ function getContinuousSceneProgress(layer) {
   return clamp((startLine - rect.top) / travel, 0, 1);
 }
 
+function startEmbeddedFirstSceneAnimation() {
+  if (!isEmbeddedPresentation || !objectRefsByScene.has(0)) {
+    embeddedFirstSceneAnimationRequested = true;
+    return;
+  }
+
+  embeddedFirstSceneAnimationRequested = false;
+  window.cancelAnimationFrame(embeddedFirstSceneAnimationFrame);
+  for (const key of Array.from(seenObjectKeys)) {
+    if (key.startsWith("0:")) {
+      seenObjectKeys.delete(key);
+    }
+  }
+  embeddedFirstSceneProgress = 0;
+  applyObjectSceneProgress(0, 0);
+  const startedAt = performance.now();
+  const duration = 1500;
+
+  const animate = (now) => {
+    const linearProgress = clamp((now - startedAt) / duration, 0, 1);
+    embeddedFirstSceneProgress = 1 - ((1 - linearProgress) ** 3);
+    updateFromScroll();
+    if (linearProgress < 1) {
+      embeddedFirstSceneAnimationFrame = window.requestAnimationFrame(animate);
+      return;
+    }
+    embeddedFirstSceneProgress = null;
+    embeddedFirstSceneAnimationFrame = 0;
+    updateFromScroll();
+  };
+
+  embeddedFirstSceneAnimationFrame = window.requestAnimationFrame(animate);
+}
+
 function isRealizationDelayedDownLayout(layout) {
   return layout === "realization-top-down"
     || layout === "realization-two-top-one-down"
@@ -995,7 +1082,12 @@ function updateFromScroll() {
     layer.style.transform = "none";
     layer.style.pointerEvents = "auto";
 
-    const rawProgress = getContinuousSceneProgress(layer);
+    const measuredProgress = getContinuousSceneProgress(layer);
+    const rawProgress = isEmbeddedPresentation
+      && sceneIndex === 0
+      && embeddedFirstSceneProgress !== null
+      ? embeddedFirstSceneProgress
+      : measuredProgress;
     const progress = sceneIndex === layers.length - 1 && isAtPageBottom ? 1 : rawProgress;
     const scene = sceneTrack[sceneIndex];
     layer.classList.toggle("has-visible-objects", scene?.type !== "objects" || progress > 0.025);
@@ -1517,7 +1609,11 @@ async function renderSceneLayer(scene, sceneIndex) {
     }
     const annotationBox = document.createElement("article");
     annotationBox.className = "annotation-box annotation-intro";
-    appendLinkedText(annotationBox, removeProjectHeaderLabel(scene.text), scene);
+    const project = yearProjects[scene.projectIndex];
+    const headerText = activeLanguage === "cs"
+      ? buildProjectHeaderText(project)
+      : removeProjectHeaderLabel(scene.text);
+    appendLinkedText(annotationBox, headerText, scene);
     const headerActions = getProjectHeaderActions(scene);
     if (headerActions.length > 0) {
       const actionsWrap = document.createElement("div");
@@ -1529,7 +1625,15 @@ async function renderSceneLayer(scene, sceneIndex) {
         const action = document.createElement("a");
         action.className = `project-header-action${headerAction.variant ? ` is-${headerAction.variant}` : ""}`;
         action.href = headerAction.href;
-        action.textContent = headerAction.label;
+        const localizedActionLabel = activeLanguage === "cs"
+          ? ({
+              Award: "Ocenění",
+              Publication: "Publikace",
+              "Diploma thesis": "Diplomová práce",
+              "Studio project": "Ateliérový projekt",
+            }[headerAction.label] || headerAction.label)
+          : headerAction.label;
+        action.textContent = localizedActionLabel;
         if (headerAction.target === "_blank" || /^https?:\/\//i.test(headerAction.href)) {
           action.target = "_blank";
           action.rel = "noopener noreferrer";
@@ -1561,10 +1665,12 @@ async function renderSceneLayer(scene, sceneIndex) {
     if (Array.isArray(scene.objects) && scene.objects.length > 0) {
       await renderObjectsIntoLayer(layer, scene, sceneIndex);
     }
-    if (scene.supportingText) {
+    const localizedSupportingText = getLocalizedProjectText(project, "annotation", activeLanguage)
+      || scene.supportingText;
+    if (localizedSupportingText) {
       const supportingBox = document.createElement("article");
       supportingBox.className = "annotation-box annotation-details";
-      supportingBox.textContent = scene.supportingText;
+      supportingBox.textContent = localizedSupportingText;
       layer.append(supportingBox);
       annotationRefsByScene.set(sceneIndex, {
         intro: annotationBox,
@@ -1667,7 +1773,9 @@ function renderProjectPicker() {
     button.type = "button";
     button.className = "year-button project-button";
     button.dataset.projectIndex = `${projectIndex}`;
-    button.textContent = project.selectorLabel || project.title;
+    button.textContent = getLocalizedProjectText(project, "title", activeLanguage)
+      || project.selectorLabel
+      || project.title;
     button.addEventListener("click", async () => {
       await selectProject(projectIndex);
     });
@@ -1828,6 +1936,9 @@ async function selectProject(projectIndex) {
           projectsSection.classList.add("has-played-header-animation");
         }, 1700);
         updateBackToProjectsVisibility();
+        if (embeddedFirstSceneAnimationRequested) {
+          startEmbeddedFirstSceneAnimation();
+        }
       },
     });
     recomputeStepPositions();
@@ -1979,6 +2090,28 @@ async function initializeYearPage() {
     }
   }
 }
+
+window.addEventListener("message", (event) => {
+  if (
+    isEmbeddedPresentation
+    && event.source === window.parent
+    && event.data?.type === "restart-embedded-first-scene"
+  ) {
+    startEmbeddedFirstSceneAnimation();
+  }
+});
+
+initLanguageSwitch((language) => {
+  activeLanguage = language;
+  if (yearProjects.length === 0) {
+    return;
+  }
+
+  renderProjectPicker();
+  if (selectedProjectIndex >= 0 && !isSelectingProject) {
+    void selectProject(selectedProjectIndex);
+  }
+});
 
 initializeYearPage().catch((error) => {
   projectsSection.classList.remove("is-hidden");

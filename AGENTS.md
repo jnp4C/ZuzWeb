@@ -136,6 +136,97 @@ presentation. On mobile the main image follows the annotation. The first-look
 content should convey the project clearly without requiring visitors to open
 the full document.
 
+## Standardized redesign project-page formula
+
+Use the `cycle-of-change` concise page as the implementation reference for every
+project migrated to the redesign. New project pages should share this structure
+and interaction model; vary the project content, selected media, labels, and
+project-specific landscape background rather than inventing a separate layout.
+
+### Shared page structure
+
+1. Start with the transparent animated signature, aligned to the same responsive
+   left gutter as the index. It spans the available width without distortion.
+   The clean animation ends before the gray tail frames in the source MOV, then
+   changes to the separate transparent static PNG. Preserve the session state so
+   project navigation retains the completed signature instead of replaying it.
+2. Place the project title below the signature in the primary 40pt Space
+   Grotesk level. Put the index/back symbol on the left spine and paired
+   previous/next project controls on the right. Previous and next controls use
+   two solid CSS triangles, not textual `<<`, `>>`, `«`, or `»` glyphs.
+3. Run one pitch-black 2px vertical spine down the left side. Labels interrupt
+   the spine with the page background behind them; the line must not show
+   through the label text or its symbols.
+4. Embed vertical `info` and `annotation` labels into that spine. Their top
+   positions align with the top of their corresponding text blocks. Use the
+   20pt Space Grotesk level for these structural labels.
+5. Keep the hero image as the outlined box adjacent to the Info/Annotation
+   column on desktop. On mobile, stack Info, Annotation, and then the hero while
+   retaining the spine-label relationship.
+
+### Info and annotation
+
+- Format every Info row as `[ LABEL ] VALUE`.
+- Keep `[ LABEL ]` gray and the value bold black.
+- The bold value appears first; the gray bracketed label unfolds afterward.
+- Give the Info rows and Annotation the same left edge and text-block width.
+  Bracketed labels align left, values align to the right edge, and flexible
+  space separates both sides of the row.
+- Annotation is a transparent text block, not an outlined box and not a filled
+  color block. Use justified Public Sans body text with no inset padding.
+- Language changes update the content in place and must not replay completed
+  Info animations.
+
+### Featured media and carousels
+
+- Follow the selected sequence from project data, normally graphical
+  representation, masterplan, and model.
+- Each visible section has a horizontal 2px black branch from the main vertical
+  spine to the exact center of the carousel frame's left border. The localized
+  section label sits immediately above the line. Do not prepend section numbers.
+- A section may contain multiple media items. Its first selected asset is the
+  initial frame, and all additional assets use the same framed carousel.
+- Carousels autoplay in a continuous right-to-left horizontal swipe. Manual
+  previous navigation reverses the direction. Pause autoplay for pointer hover
+  or keyboard interaction and disable autoplay/transitions for reduced motion.
+- Keep the carousel frame monochrome and responsive. Recalculate branch
+  geometry when the frame or viewport resizes so the line remains connected.
+
+### Full presentation and animation continuity
+
+- The bottom `+ Full presentation` control reveals the existing scene
+  presentation inline. It is full viewport width/height, borderless, and the
+  parent page scrolls directly to it.
+- Embedded presentations omit the legacy header and introductory annotation;
+  they start with the first visual scene.
+- Do not remove or rebuild the existing `scenes` data. The embedded scene must
+  continue the project's established animation and landscape.
+- The first embedded scene uses a deterministic entrance timeline after the
+  iframe becomes visible. Do not allow its initial scroll measurement to mark
+  it complete before it animates.
+- Keep the project-specific contour background pitch black, subtle, and
+  consistent with the index transition. The stored index landscape undraws
+  before the project landscape draws.
+
+### Responsive and implementation rules
+
+- Use the shared 10pt / 20pt / 40pt typography variables and the existing
+  Public Sans / Space Grotesk families.
+- Align signature, title, spine, text blocks, connectors, and frames through
+  shared responsive gutters and CSS variables. Avoid viewport-specific
+  hard-coded offsets when geometry can be measured or derived.
+- Nothing may overlap at narrow, intermediate, or very wide viewport sizes.
+  Long metadata values wrap inside their column; project controls retain their
+  own lane.
+- Keep project content in `data/projects.json`. Use `projectPage.info`,
+  `projectPage.hero`, `projectPage.featuredSections`, and the existing
+  `projectPage.fullPresentation` contract rather than hard-coding project copy
+  in `project.js`.
+- A project opts into this standardized page with
+  `projectPage.layout: "concise"`. Until its curated first-look media is ready,
+  it may remain linked to the legacy presentation, but it must stay visible in
+  the index when published.
+
 ## Session handoff: index foundation
 
 Last verified on the `redesign` branch at commit `6f2f46e`. At the beginning of

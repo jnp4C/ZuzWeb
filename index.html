@@ -8,39 +8,33 @@
       name="description"
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
-    <link rel="stylesheet" href="./styles.css?v=2026-07-29-redesign-info-details-left" />
+    <script>
+      try {
+        if (sessionStorage.getItem("zuz-signature-animation-complete-v2") === "1") {
+          document.documentElement.classList.add("signature-complete");
+        }
+      } catch {}
+    </script>
+    <link rel="stylesheet" href="./styles.css?v=2026-07-30-clean-alpha-v2" />
   </head>
   <body class="index-page">
     <div class="background-animation" aria-hidden="true">
     </div>
-    <header
-      class="site-header index-nameplate"
-      style="
-        display: flex;
-        visibility: visible;
-        width: 100vw;
-        min-height: 104px;
-        margin: clamp(3rem, 6vw, 6rem) 0 0;
-        padding: 0 clamp(1.5rem, 2.8vw, 3.5rem);
-        overflow: hidden;
-        background: #000 url('./assets/Header/name-writing-final.webp') clamp(1.5rem, 2.8vw, 3.5rem) center / auto 100% no-repeat;
-        opacity: 1;
-      "
-    >
+    <header class="site-header index-nameplate signature-nameplate">
       <h1 class="visually-hidden">Ing. Zuzana Purmová</h1>
       <video
         id="indexNameAnimation"
-        class="index-name-animation"
+        class="index-name-animation signature-animation"
         autoplay
         muted
         playsinline
         preload="auto"
-        poster="./assets/Header/name-writing-final.webp"
+        poster="./assets/Header/signature-transparent.png?v=2026-07-30-clean-alpha-v2"
         aria-hidden="true"
-        style="display: block; width: auto; max-width: 100%; height: 104px; background: #000"
       >
-        <source src="./assets/Header/name-writing.mp4" type="video/mp4" />
+        <source src="./assets/Header/signature-transparent.webm?v=2026-07-30-clean-alpha-v2" type="video/webm" />
       </video>
+      <img class="signature-poster" src="./assets/Header/signature-transparent.png?v=2026-07-30-clean-alpha-v2" alt="" aria-hidden="true" />
     </header>
 
     <main class="container">
@@ -61,19 +55,19 @@
           </span>
           <span class="project-index-symbol" aria-hidden="true">+</span>
           <span>
-            <span id="projectIndexTitle" class="project-index-heading" role="heading" aria-level="1">Projects</span>
-            <p class="project-index-key">[ scale / type ] TITLE &lt; context &gt;</p>
+            <span id="projectIndexTitle" class="project-index-heading" role="heading" aria-level="1" data-en="Projects" data-cs="Projekty">Projects</span>
+            <p class="project-index-key" data-en="[ scale / type ] TITLE < context >" data-cs="[ měřítko / typ ] NÁZEV < kontext >">[ scale / type ] TITLE &lt; context &gt;</p>
           </span>
           </button>
         <div class="project-index-branch">
           <div id="projectsPanel" class="project-index-projects-panel" hidden>
             <div class="project-index-projects-panel-inner">
               <section class="project-index-group" aria-labelledby="studyProjectsTitle">
-                <h2 id="studyProjectsTitle">Study</h2>
+                <h2 id="studyProjectsTitle" data-en="Study" data-cs="Studium">Study</h2>
                 <div id="studyProjects" class="project-index-list"></div>
               </section>
               <section class="project-index-group" aria-labelledby="practiceProjectsTitle">
-                <h2 id="practiceProjectsTitle">Practice</h2>
+                <h2 id="practiceProjectsTitle" data-en="Practice" data-cs="Praxe">Practice</h2>
                 <div id="practiceProjects" class="project-index-list"></div>
               </section>
             </div>
@@ -102,16 +96,17 @@
                 <section class="intro">
                   <p class="project-index-info-contact">
                     <span class="project-index-info-row" tabindex="0">
+                      <span class="project-index-info-detail project-index-info-detail--left">[ <a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> ]</span>
                       <strong>email</strong>
-                      <span class="project-index-info-detail">[ <a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> ]</span>
                     </span>
                     <span class="project-index-info-row" tabindex="0">
-                      <strong>year of birth</strong>
-                      <span class="project-index-info-detail">[ 2001 ]</span>
+                      <span class="project-index-info-detail project-index-info-detail--left">[ 2001 ]</span>
+                      <strong data-en="year of birth" data-cs="rok narození">year of birth</strong>
                     </span>
                     <span class="project-index-info-row" tabindex="0">
-                      <strong>alma mater</strong>
-                      <span class="project-index-info-detail">[ Czech Technical University in Prague ] &lt; 2020–2026 &gt;</span>
+                      <span class="project-index-info-detail project-index-info-detail--left" data-en="[ Czech Technical University in Prague ]" data-cs="[ České vysoké učení technické v Praze ]">[ Czech Technical University in Prague ]</span>
+                      <strong data-en="alma mater" data-cs="alma mater">alma mater</strong>
+                      <span class="project-index-info-detail project-index-info-detail--right">&lt; 2020–2026 &gt;</span>
                     </span>
                   </p>
                 </section>
@@ -151,39 +146,39 @@
                         <div class="cv-copy">
                           <h3>Akademické gymnázium Štěpánská</h3>
                           <div class="cv-marker" aria-hidden="true"></div>
-                          <p>&lt; Prague &gt;</p>
+                          <p data-en="< Prague >" data-cs="< Praha >">&lt; Prague &gt;</p>
                         </div>
                       </article>
                       <article class="cv-item" tabindex="0">
                         <p class="cv-date">[ 09/2020–06/2026 ]</p>
                         <div class="cv-copy">
-                          <h3>Czech Technical University in Prague</h3>
+                          <h3 data-en="Czech Technical University in Prague" data-cs="České vysoké učení technické v Praze">Czech Technical University in Prague</h3>
                           <div class="cv-marker" aria-hidden="true"></div>
-                          <p>&lt; Faculty of Architecture · Landscape Architecture &gt;</p>
+                          <p data-en="< Faculty of Architecture · Landscape Architecture >" data-cs="< Fakulta architektury · Krajinářská architektura >">&lt; Faculty of Architecture · Landscape Architecture &gt;</p>
                         </div>
                       </article>
                       <article class="cv-item" tabindex="0">
                         <p class="cv-date">[ 01/2025–06/2025 ]</p>
                         <div class="cv-copy">
-                          <h3>Erasmus at Lund University</h3>
+                          <h3 data-en="Erasmus at Lund University" data-cs="Erasmus na Lund University">Erasmus at Lund University</h3>
                           <div class="cv-marker" aria-hidden="true"></div>
-                          <p>&lt; Sweden &gt;</p>
+                          <p data-en="< Sweden >" data-cs="< Švédsko >">&lt; Sweden &gt;</p>
                         </div>
                       </article>
                       <article class="cv-item" tabindex="0">
-                        <p class="cv-date">[ languages ]</p>
+                        <p class="cv-date" data-en="[ languages ]" data-cs="[ jazyky ]">[ languages ]</p>
                         <div class="cv-copy">
-                          <h3>English C1 · French B1</h3>
+                          <h3 data-en="English C1 · French B1" data-cs="Angličtina C1 · Francouzština B1">English C1 · French B1</h3>
                           <div class="cv-marker" aria-hidden="true"></div>
-                          <p>&lt; FCE certification &gt;</p>
+                          <p data-en="< FCE certification >" data-cs="< certifikace FCE >">&lt; FCE certification &gt;</p>
                         </div>
                       </article>
                       <article class="cv-item" tabindex="0">
-                        <p class="cv-date">[ skills ]</p>
+                        <p class="cv-date" data-en="[ skills ]" data-cs="[ dovednosti ]">[ skills ]</p>
                         <div class="cv-copy">
                           <h3>AutoCAD · Rhino · QGIS · Adobe</h3>
                           <div class="cv-marker" aria-hidden="true"></div>
-                          <p>&lt; handwork and art techniques &gt;</p>
+                          <p data-en="< handwork and art techniques >" data-cs="< ruční práce a výtvarné techniky >">&lt; handwork and art techniques &gt;</p>
                         </div>
                       </article>
                     </div>
@@ -196,10 +191,16 @@
       </section>
     </main>
 
+    <nav class="language-switch" data-language-switch aria-label="Language">
+      <button type="button" data-language="cs" aria-pressed="false">CZ</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-language="en" aria-pressed="true">EN</button>
+    </nav>
+
     <footer class="site-footer container">
       <p>© <span id="year"></span> Ing. Zuzana Purmová</p>
     </footer>
 
-    <script src="./script.js?v=2026-07-29-redesign-info-project-rows" type="module"></script>
+    <script src="./script.js?v=2026-07-30-clean-alpha-v2" type="module"></script>
   </body>
 </html>

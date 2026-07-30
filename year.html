@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Year View</title>
     <meta name="description" content="Year-based project view with scroll-driven PDF visuals." />
-    <link rel="stylesheet" href="./styles.css?v=2026-06-29-christmas-spirit-scenes" />
+    <link rel="stylesheet" href="./styles.css?v=2026-07-30-embedded-first-scene" />
   </head>
   <body>
     <div class="background-animation" aria-hidden="true">
     </div>
     <header class="site-header container">
-      <a class="back-link" href="./index.html">← Back to years</a>
+      <a class="back-link" href="./index.html" data-en="← Back to projects" data-cs="← Zpět na projekty">← Back to projects</a>
       <div class="header-identity">
         <div class="brand-block">
           <p class="brand">Ing. Zuzana Purmová</p>
-          <p class="tagline">Architecture Portfolio</p>
+          <p class="tagline" data-en="Architecture Portfolio" data-cs="Portfolio krajinářské architektury">Architecture Portfolio</p>
         </div>
         <h1 id="yearHeading" class="year-heading">Year</h1>
       </div>
@@ -24,7 +24,7 @@
     <main class="container">
       <section id="projectSelectorSection" class="year-selector is-hidden">
         <div class="selector-header">
-          <h2>Projects</h2>
+          <h2 data-en="Projects" data-cs="Projekty">Projects</h2>
         </div>
         <div id="projectPicker" class="year-picker" aria-label="Project selector"></div>
       </section>
@@ -48,12 +48,18 @@
       </section>
     </main>
 
-    <button id="backToProjects" class="back-to-projects is-hidden" type="button">↑ Projects</button>
+    <button id="backToProjects" class="back-to-projects is-hidden" type="button" data-en="↑ Projects" data-cs="↑ Projekty">↑ Projects</button>
+
+    <nav class="language-switch" data-language-switch aria-label="Language">
+      <button type="button" data-language="cs" aria-pressed="false">CZ</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-language="en" aria-pressed="true">EN</button>
+    </nav>
 
     <footer class="site-footer container">
       <p>© <span id="year"></span> Ing. Zuzana Purmová</p>
     </footer>
 
-    <script src="./year.js?v=2026-06-29-christmas-spirit-scenes" type="module"></script>
+    <script src="./year.js?v=2026-07-30-reliable-embedded-intro" type="module"></script>
   </body>
 </html>

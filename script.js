@@ -22,7 +22,8 @@ const backgroundAnimation = document.querySelector(".background-animation");
 const indexNameAnimation = document.getElementById("indexNameAnimation");
 const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
-const DATA_CACHE_VERSION = "2026-07-30-bilingual-project-copy";
+const INDEX_OPENING_SPEED = 0.6;
+const DATA_CACHE_VERSION = "2026-08-01-index-project-preview";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -41,6 +42,9 @@ let cvRopeIsIntroAnimating = false;
 let cvRopeLiveReactionStartedAt = 0;
 let activeLanguage = getLanguage();
 let indexProjects = [];
+let setProjectsOpen = () => {};
+let setInfoOpen = () => {};
+let setCvOpen = () => {};
 
 function renderCvRope(elapsed = Number.POSITIVE_INFINITY, reactiveWobble = 0) {
   if (!cvLine || !cvDetails || cvDetails.hidden) {
@@ -68,8 +72,8 @@ function renderCvRope(elapsed = Number.POSITIVE_INFINITY, reactiveWobble = 0) {
     const startY = markerBounds.top + (markerBounds.height / 2) - lineBounds.top;
     const endX = nextBounds.left + (nextBounds.width / 2) - lineBounds.left;
     const endY = nextBounds.top + (nextBounds.height / 2) - lineBounds.top;
-    const segmentStart = 1990 + (index * 140);
-    const progress = Math.min(1, Math.max(0, (elapsed - segmentStart) / 1150));
+    const segmentStart = (1990 + (index * 140)) * INDEX_OPENING_SPEED;
+    const progress = Math.min(1, Math.max(0, (elapsed - segmentStart) / (1150 * INDEX_OPENING_SPEED)));
     const easedProgress = 1 - ((1 - progress) ** 3);
     const segmentLength = Math.max(0, endY - startY);
     const finalSag = Math.min(20, Math.max(8, segmentLength * 0.12));
@@ -113,7 +117,7 @@ function startCvRopeAnimation() {
       ? Math.sin(liveReactionProgress * Math.PI * 4) * 9 * ((1 - liveReactionProgress) ** 2)
       : 0;
     renderCvRope(elapsed, liveReaction);
-    if (elapsed < 5800 && cvDetails && !cvDetails.hidden) {
+    if (elapsed < 5800 * INDEX_OPENING_SPEED && cvDetails && !cvDetails.hidden) {
       cvRopeAnimationFrame = window.requestAnimationFrame(drawFrame);
     } else {
       cvRopeIsIntroAnimating = false;
@@ -241,7 +245,7 @@ function initInfoToggle() {
     row.addEventListener("focusin", holdDetailsOpen);
   });
 
-  const setInfoOpen = (shouldOpen) => {
+  setInfoOpen = (shouldOpen, immediate = false) => {
     if (!infoToggle || !infoDetails) {
       return;
     }
@@ -249,6 +253,8 @@ function initInfoToggle() {
     infoToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(infoClosingTimer);
     if (shouldOpen) {
+      setProjectsOpen(false, true);
+      setCvOpen(false, true);
       infoDetails.hidden = false;
       infoRows.forEach((row) => row.classList.remove("has-user-previewed"));
       infoDetails.classList.remove("is-open", "is-closing");
@@ -257,6 +263,14 @@ function initInfoToggle() {
       personalPhotoFrame?.classList.add("is-visible");
       projectIndex?.classList.remove("is-info-closing");
       projectIndex?.classList.add("is-info-open");
+      return;
+    }
+
+    if (immediate) {
+      infoDetails.hidden = true;
+      infoDetails.classList.remove("is-open", "is-closing");
+      personalPhotoFrame?.classList.remove("is-visible");
+      projectIndex?.classList.remove("is-info-open", "is-info-closing");
       return;
     }
 
@@ -286,12 +300,14 @@ function initProjectsToggle() {
   let closingTimer;
   let introTimer;
 
-  const setProjectsOpen = (shouldOpen) => {
+  setProjectsOpen = (shouldOpen, immediate = false) => {
     projectsToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(closingTimer);
     window.clearTimeout(introTimer);
 
     if (shouldOpen) {
+      setInfoOpen(false, true);
+      setCvOpen(false, true);
       projectsPanel.hidden = false;
       projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
         link.classList.remove("has-user-previewed", "skip-language-reveal");
@@ -301,7 +317,17 @@ function initProjectsToggle() {
       projectIndex.classList.add("is-projects-intro-active");
       introTimer = window.setTimeout(() => {
         projectIndex.classList.remove("is-projects-intro-active");
-      }, 6200);
+      }, 6200 * INDEX_OPENING_SPEED);
+      return;
+    }
+
+    if (immediate) {
+      projectsPanel.hidden = true;
+      projectIndex.classList.remove(
+        "is-projects-open",
+        "is-projects-closing",
+        "is-projects-intro-active",
+      );
       return;
     }
 
@@ -334,39 +360,51 @@ function initCvToggle() {
     item.addEventListener("blur", reactCvRopeToRowChange);
   });
 
-  cvToggle?.addEventListener("click", () => {
-    const shouldOpen = cvToggle.getAttribute("aria-expanded") !== "true";
+  setCvOpen = (shouldOpen, immediate = false) => {
+    if (!cvToggle || !cvDetails) {
+      return;
+    }
     cvToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(cvClosingTimer);
 
     if (shouldOpen) {
+      setProjectsOpen(false, true);
+      setInfoOpen(false, true);
       cvItems.forEach((item) => item.classList.remove("has-user-previewed"));
-      if (cvDetails) {
-        cvDetails.hidden = false;
-        cvDetails.classList.remove("is-closing");
-        cvDetails.classList.add("is-open");
-      }
+      cvDetails.hidden = false;
+      cvDetails.classList.remove("is-closing");
+      cvDetails.classList.add("is-open");
       projectIndex?.classList.remove("is-cv-closing");
       projectIndex?.classList.add("is-cv-open");
       startCvRopeAnimation();
-    } else {
-      window.cancelAnimationFrame(cvRopeAnimationFrame);
-      cvRopeIsIntroAnimating = false;
-      cvRopeLiveReactionStartedAt = 0;
-      cvDetails?.classList.remove("is-open");
-      cvDetails?.classList.add("is-closing");
-      projectIndex?.classList.remove("is-cv-open");
-      projectIndex?.classList.add("is-cv-closing");
-      const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 4000;
-      cvClosingTimer = window.setTimeout(() => {
-        if (cvDetails) {
-          cvDetails.hidden = true;
-          cvDetails.classList.remove("is-closing");
-        }
-        projectIndex?.classList.remove("is-cv-closing");
-        cvLine?.querySelector(".cv-rope")?.remove();
-      }, closingDuration);
+      return;
     }
+
+    window.cancelAnimationFrame(cvRopeAnimationFrame);
+    cvRopeIsIntroAnimating = false;
+    cvRopeLiveReactionStartedAt = 0;
+    if (immediate) {
+      cvDetails.hidden = true;
+      cvDetails.classList.remove("is-open", "is-closing");
+      projectIndex?.classList.remove("is-cv-open", "is-cv-closing");
+      cvLine?.querySelector(".cv-rope")?.remove();
+      return;
+    }
+    cvDetails.classList.remove("is-open");
+    cvDetails.classList.add("is-closing");
+    projectIndex?.classList.remove("is-cv-open");
+    projectIndex?.classList.add("is-cv-closing");
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 4000;
+    cvClosingTimer = window.setTimeout(() => {
+      cvDetails.hidden = true;
+      cvDetails.classList.remove("is-closing");
+      projectIndex?.classList.remove("is-cv-closing");
+      cvLine?.querySelector(".cv-rope")?.remove();
+    }, closingDuration);
+  };
+
+  cvToggle?.addEventListener("click", () => {
+    setCvOpen(cvToggle.getAttribute("aria-expanded") !== "true");
   });
 
   window.addEventListener("resize", () => {
@@ -392,9 +430,13 @@ function initIndexNameAnimation() {
     }
   };
 
+  const isPageReload = window.performance
+    ?.getEntriesByType("navigation")
+    .some((entry) => entry.type === "reload");
   let hasCompleted = false;
   try {
-    hasCompleted = window.sessionStorage.getItem(SIGNATURE_COMPLETE_STORAGE_KEY) === "1";
+    hasCompleted = !isPageReload
+      && window.sessionStorage.getItem(SIGNATURE_COMPLETE_STORAGE_KEY) === "1";
   } catch {
     hasCompleted = false;
   }
@@ -403,6 +445,8 @@ function initIndexNameAnimation() {
     return;
   }
 
+  document.documentElement.classList.remove("signature-complete");
+  signatureNameplate?.classList.remove("is-signature-static");
   indexNameAnimation.currentTime = 0;
   indexNameAnimation.addEventListener("ended", showFinalPoster, { once: true });
   void indexNameAnimation.play().catch(() => {
@@ -412,6 +456,36 @@ function initIndexNameAnimation() {
 
 function createLocalizedText(value, locale = activeLanguage) {
   return getLocalizedText(value, locale);
+}
+
+function getProjectIndexMedia(project) {
+  const media = project.index?.image || project.projectPage?.hero?.media;
+  if (media?.src) {
+    return media;
+  }
+  const sceneMedia = (project.scenes || [])
+    .flatMap((scene) => scene.objects || [])
+    .find((item) => item.src);
+  if (!sceneMedia) {
+    return null;
+  }
+  const title = createLocalizedText(project.index?.title) || project.title;
+  return {
+    src: sceneMedia.src,
+    srcset: sceneMedia.srcset || "",
+    alt: { en: `${title} project preview`, cs: `Náhled projektu ${title}` },
+  };
+}
+
+function updateProjectPreviewPlacements() {
+  document.querySelectorAll(".project-index-link:has(.project-index-link-preview)").forEach((link) => {
+    const textParts = Array.from(link.children)
+      .filter((child) => !child.classList.contains("project-index-link-preview"));
+    const textRight = Math.max(...textParts.map((part) => part.getBoundingClientRect().right));
+    const availableRight = window.innerWidth - textRight - 24;
+    link.style.setProperty("--project-preview-side-width", `${Math.max(0, availableRight)}px`);
+    link.classList.toggle("has-side-preview", window.innerWidth > 900 && availableRight >= 280);
+  });
 }
 
 function createProjectIndexItem(project, order) {
@@ -458,6 +532,21 @@ function createProjectIndexItem(project, order) {
     link.append(badge);
   });
 
+  const media = getProjectIndexMedia(project);
+  if (media?.src) {
+    const preview = document.createElement("figure");
+    preview.className = "project-index-link-preview";
+    preview.setAttribute("aria-hidden", "true");
+    const previewImage = document.createElement("img");
+    previewImage.src = media.src;
+    previewImage.srcset = media.srcset || "";
+    previewImage.sizes = "(max-width: 760px) 90vw, min(70vw, 46rem)";
+    previewImage.alt = "";
+    previewImage.loading = "lazy";
+    preview.append(previewImage);
+    link.append(preview);
+  }
+
   return link;
 }
 
@@ -493,6 +582,7 @@ function renderProjectIndex(projects) {
   projectLinks.forEach((link, order) => {
     link.style.setProperty("--project-reverse-order", `${projectLinks.length - order - 1}`);
   });
+  window.requestAnimationFrame(updateProjectPreviewPlacements);
 }
 
 async function init() {
@@ -501,6 +591,7 @@ async function init() {
   initProjectsToggle();
   initInfoToggle();
   initCvToggle();
+  window.addEventListener("resize", updateProjectPreviewPlacements);
 
   const response = await fetch(`./data/projects.json?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });
   if (!response.ok) {

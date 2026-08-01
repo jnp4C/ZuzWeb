@@ -5,7 +5,7 @@ import {
   initLanguageSwitch,
 } from "./language.js";
 
-const DATA_CACHE_VERSION = "2026-07-30-concise-project-prototype";
+const DATA_CACHE_VERSION = "2026-08-01-all-concise-projects";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -37,10 +37,14 @@ const COPY = {
     processing: "Processing",
     type: "Type",
     collaborators: "Collaborators",
+    awards: "Awards",
     annotation: "Annotation",
     fullPresentation: "Full presentation",
     previousImage: "Previous image",
     nextImage: "Next image",
+    openImage: "Open enlarged image",
+    closeImage: "Close enlarged image",
+    imageViewer: "Project image viewer",
     previousProject: "Previous project",
     nextProject: "Next project",
     unavailable: "This project page is not available.",
@@ -53,10 +57,14 @@ const COPY = {
     processing: "Zpracování",
     type: "Typ",
     collaborators: "Spoluautoři",
+    awards: "Ocenění",
     annotation: "Anotace",
     fullPresentation: "Celá prezentace",
     previousImage: "Předchozí obrázek",
     nextImage: "Další obrázek",
+    openImage: "Otevřít zvětšený obrázek",
+    closeImage: "Zavřít zvětšený obrázek",
+    imageViewer: "Prohlížeč obrázků projektu",
     previousProject: "Předchozí projekt",
     nextProject: "Další projekt",
     unavailable: "Tato projektová stránka není dostupná.",
@@ -202,6 +210,127 @@ function createImage(media, className = "") {
   return image;
 }
 
+function openImageLightbox(mediaItems, initialIndex) {
+  let activeIndex = initialIndex;
+  let scale = 1;
+  let translateX = 0;
+  let translateY = 0;
+  let pinchDistance = 0;
+  let pinchScale = 1;
+  const pointers = new Map();
+
+  const dialog = document.createElement("dialog");
+  dialog.className = "project-image-lightbox";
+  dialog.setAttribute("aria-label", COPY[activeLanguage].imageViewer);
+  const stage = document.createElement("div");
+  stage.className = "project-image-lightbox-stage";
+  const image = document.createElement("img");
+  image.draggable = false;
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = "project-image-lightbox-close";
+  close.textContent = "×";
+  close.setAttribute("aria-label", COPY[activeLanguage].closeImage);
+  const previous = document.createElement("button");
+  previous.type = "button";
+  previous.className = "project-image-lightbox-nav project-image-lightbox-nav--previous";
+  previous.textContent = "‹";
+  previous.setAttribute("aria-label", COPY[activeLanguage].previousImage);
+  const next = document.createElement("button");
+  next.type = "button";
+  next.className = "project-image-lightbox-nav project-image-lightbox-nav--next";
+  next.textContent = "›";
+  next.setAttribute("aria-label", COPY[activeLanguage].nextImage);
+  previous.hidden = mediaItems.length < 2;
+  next.hidden = mediaItems.length < 2;
+  const counter = document.createElement("span");
+  counter.className = "project-image-lightbox-counter";
+  counter.setAttribute("aria-live", "polite");
+
+  const applyTransform = () => {
+    image.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
+  };
+  const resetTransform = () => {
+    scale = 1;
+    translateX = 0;
+    translateY = 0;
+    applyTransform();
+  };
+  const renderMedia = () => {
+    const media = mediaItems[activeIndex];
+    image.src = media.src;
+    image.srcset = media.srcset || "";
+    image.alt = getLocalizedText(media.alt, activeLanguage);
+    counter.textContent = `${activeIndex + 1} / ${mediaItems.length}`;
+    resetTransform();
+  };
+  const changeMedia = (direction) => {
+    activeIndex = (activeIndex + direction + mediaItems.length) % mediaItems.length;
+    renderMedia();
+  };
+  const closeLightbox = () => dialog.close();
+  const onKeydown = (event) => {
+    if (event.key === "ArrowLeft") changeMedia(-1);
+    if (event.key === "ArrowRight") changeMedia(1);
+  };
+
+  close.addEventListener("click", closeLightbox);
+  previous.addEventListener("click", () => changeMedia(-1));
+  next.addEventListener("click", () => changeMedia(1));
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeLightbox();
+  });
+  dialog.addEventListener("close", () => {
+    document.removeEventListener("keydown", onKeydown);
+    dialog.remove();
+  });
+  document.addEventListener("keydown", onKeydown);
+
+  image.addEventListener("dblclick", resetTransform);
+  image.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    scale = Math.min(5, Math.max(1, scale * (event.deltaY < 0 ? 1.15 : 0.87)));
+    if (scale === 1) {
+      translateX = 0;
+      translateY = 0;
+    }
+    applyTransform();
+  }, { passive: false });
+  image.addEventListener("pointerdown", (event) => {
+    image.setPointerCapture(event.pointerId);
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointers.size === 2) {
+      const [first, second] = Array.from(pointers.values());
+      pinchDistance = Math.hypot(second.x - first.x, second.y - first.y);
+      pinchScale = scale;
+    }
+  });
+  image.addEventListener("pointermove", (event) => {
+    const previousPoint = pointers.get(event.pointerId);
+    if (!previousPoint) return;
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointers.size === 2) {
+      const [first, second] = Array.from(pointers.values());
+      const distance = Math.hypot(second.x - first.x, second.y - first.y);
+      scale = Math.min(5, Math.max(1, pinchScale * (distance / Math.max(1, pinchDistance))));
+    } else if (scale > 1) {
+      translateX += event.clientX - previousPoint.x;
+      translateY += event.clientY - previousPoint.y;
+    }
+    applyTransform();
+  });
+  const releasePointer = (event) => pointers.delete(event.pointerId);
+  image.addEventListener("pointerup", releasePointer);
+  image.addEventListener("pointercancel", releasePointer);
+
+  stage.append(image);
+  dialog.append(stage, close, previous, next, counter);
+  document.body.append(dialog);
+  renderMedia();
+  dialog.showModal();
+  close.focus();
+}
+
 function createMediaCarousel(mediaItems, label) {
   const figure = document.createElement("figure");
   figure.className = "concise-project-carousel";
@@ -211,6 +340,9 @@ function createMediaCarousel(mediaItems, label) {
 
   const slides = mediaItems.map((media, index) => {
     const image = createImage(media, "concise-project-carousel-slide");
+    if (index === 0) {
+      image.loading = "eager";
+    }
     image.classList.toggle("is-active", index === 0);
     image.setAttribute("aria-hidden", String(index !== 0));
     viewport.append(image);
@@ -275,26 +407,31 @@ function createMediaCarousel(mediaItems, label) {
   if (mediaItems.length > 1) {
     figure.append(controls);
     figure.setAttribute("aria-label", label);
-
-    if (!reducedMotion) {
-      let isPaused = false;
-      const autoplayTimer = window.setInterval(() => {
-        if (!isPaused && figure.isConnected) {
-          moveToSlide((activeIndex + 1) % mediaItems.length, 1);
-        }
-      }, 4500);
-      const pause = () => {
-        isPaused = true;
-      };
-      const resume = () => {
-        isPaused = false;
-      };
-      figure.addEventListener("pointerenter", pause);
-      figure.addEventListener("pointerleave", resume);
-      figure.addEventListener("focusin", pause);
-      figure.addEventListener("focusout", resume);
-      carouselCleanups.push(() => window.clearInterval(autoplayTimer));
-    }
+    viewport.classList.add("is-clickable");
+    viewport.tabIndex = 0;
+    viewport.setAttribute("role", "button");
+    viewport.setAttribute("aria-label", COPY[activeLanguage].openImage);
+    viewport.addEventListener("click", () => {
+      openImageLightbox(mediaItems, activeIndex);
+    });
+    viewport.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openImageLightbox(mediaItems, activeIndex);
+      }
+    });
+  } else {
+    viewport.classList.add("is-clickable");
+    viewport.tabIndex = 0;
+    viewport.setAttribute("role", "button");
+    viewport.setAttribute("aria-label", COPY[activeLanguage].openImage);
+    viewport.addEventListener("click", () => openImageLightbox(mediaItems, 0));
+    viewport.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openImageLightbox(mediaItems, 0);
+      }
+    });
   }
   counter.textContent = `1 / ${mediaItems.length}`;
   return figure;
@@ -307,13 +444,20 @@ function connectSectionToFrame(section, figure) {
     }
     const sectionRect = section.getBoundingClientRect();
     const figureRect = figure.getBoundingClientRect();
+    const heading = section.querySelector("h2");
+    const headingWidth = heading?.getBoundingClientRect().width || 0;
     const project = section.closest(".concise-project");
     const spineX = project
       ? Number.parseFloat(getComputedStyle(project).getPropertyValue("--project-spine-x")) || 0
       : 0;
     section.style.setProperty(
+      "--feature-label-clearance",
+      `${headingWidth + Math.max(16, spineX * 0.45)}px`,
+    );
+    const connectorMeetsTop = window.matchMedia("(max-width: 760px)").matches;
+    section.style.setProperty(
       "--feature-connector-top",
-      `${figureRect.top - sectionRect.top + (figureRect.height / 2)}px`,
+      `${figureRect.top - sectionRect.top + (connectorMeetsTop ? 0 : figureRect.height / 2)}px`,
     );
     section.style.setProperty(
       "--feature-connector-width",
@@ -360,6 +504,58 @@ function createProjectNavigationLink(project, direction, label) {
   return link;
 }
 
+function getMigratedMedia(project) {
+  const seenSources = new Set();
+  return (project.scenes || []).flatMap((scene) => scene.objects || [])
+    .filter((item) => {
+      if (!item.src || seenSources.has(item.src)) {
+        return false;
+      }
+      seenSources.add(item.src);
+      return true;
+    })
+    .map((item) => ({
+      src: item.src,
+      srcset: item.srcset || "",
+      alt: {
+        en: `${getLocalizedProjectText(project, "title", "en")} — selected project view`,
+        cs: `${getLocalizedProjectText(project, "title", "cs")} — vybraný pohled na projekt`,
+      },
+    }));
+}
+
+function getConcisePage(project) {
+  const page = project.projectPage;
+  const hasCuratedHero = Boolean(page.hero?.media?.src);
+  const hasCuratedSections = (page.featuredSections || [])
+    .some((section) => (section.media || []).length > 0);
+  if (hasCuratedHero || hasCuratedSections) {
+    return page;
+  }
+
+  const media = getMigratedMedia(project);
+  if (media.length === 0) {
+    return page;
+  }
+
+  const sectionLabels = [
+    { en: "Selected views I", cs: "Vybrané pohledy I" },
+    { en: "Selected views II", cs: "Vybrané pohledy II" },
+    { en: "Selected views III", cs: "Vybrané pohledy III" },
+  ];
+  const remainingMedia = media.slice(1, 7);
+  return {
+    ...page,
+    hero: { ...page.hero, media: media[0] },
+    featuredSections: sectionLabels.map((label, index) => ({
+      id: `migrated-selection-${index + 1}`,
+      kind: "graphic",
+      label,
+      media: remainingMedia.slice(index * 2, (index * 2) + 2),
+    })),
+  };
+}
+
 function renderProject(animateFacts = false) {
   if (!activeProject || !projectRoot) {
     return;
@@ -371,7 +567,7 @@ function renderProject(animateFacts = false) {
   const copy = COPY[activeLanguage];
   const title = getLocalizedProjectText(activeProject, "title", activeLanguage);
   const annotation = getLocalizedProjectText(activeProject, "annotation", activeLanguage);
-  const page = activeProject.projectPage;
+  const page = getConcisePage(activeProject);
   const info = page.info;
   const hero = page.hero?.media;
   const fullPresentationUrl = `./year.html?year=${encodeURIComponent(activeProject.year)}&project=${encodeURIComponent(activeProject.slug)}`;
@@ -390,6 +586,13 @@ function renderProject(animateFacts = false) {
   back.href = "./index.html";
   back.textContent = "∗";
   back.setAttribute("aria-label", copy.back);
+  back.addEventListener("click", () => {
+    try {
+      window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
+    } catch {
+      // Navigation still works when storage is unavailable.
+    }
+  });
   const name = document.createElement("h1");
   name.textContent = title;
   const activeNavigationIndex = navigableProjects.findIndex((project) => project.slug === activeProject.slug);
@@ -406,6 +609,35 @@ function renderProject(animateFacts = false) {
   );
   heading.append(back, name, projectNavigation);
 
+  let navigationFrame;
+  const updateFloatingNavigation = () => {
+    window.cancelAnimationFrame(navigationFrame);
+    navigationFrame = window.requestAnimationFrame(() => {
+      const floatingTop = Math.max(14, window.innerWidth * 0.025);
+      const articleBounds = article.getBoundingClientRect();
+      const spineX = Number.parseFloat(
+        window.getComputedStyle(article).getPropertyValue("--project-spine-x"),
+      ) || 0;
+      const backWidth = back.getBoundingClientRect().width;
+      article.style.setProperty(
+        "--project-floating-star-left",
+        `${articleBounds.left + spineX - (backWidth / 2)}px`,
+      );
+      article.classList.toggle(
+        "is-project-nav-floating",
+        heading.getBoundingClientRect().bottom <= floatingTop,
+      );
+    });
+  };
+  window.addEventListener("scroll", updateFloatingNavigation, { passive: true });
+  window.addEventListener("resize", updateFloatingNavigation);
+  carouselCleanups.push(() => {
+    window.cancelAnimationFrame(navigationFrame);
+    window.removeEventListener("scroll", updateFloatingNavigation);
+    window.removeEventListener("resize", updateFloatingNavigation);
+  });
+  updateFloatingNavigation();
+
   const intro = document.createElement("div");
   intro.className = "concise-project-intro";
   const textColumn = document.createElement("div");
@@ -420,6 +652,16 @@ function renderProject(animateFacts = false) {
   );
   if (Array.isArray(info.collaborators) && info.collaborators.length > 0) {
     facts.append(createFact(copy.collaborators, info.collaborators.join(", "), "left", 4));
+  }
+  if (Array.isArray(page.awards) && page.awards.length > 0) {
+    const awards = page.awards
+      .map((award) => getLocalizedText(award.detail || award, activeLanguage))
+      .filter(Boolean);
+    if (awards.length > 0) {
+      const awardsFact = createFact(copy.awards, awards.join(" · "), "left", 5);
+      awardsFact.classList.add("concise-project-fact--awards");
+      facts.append(awardsFact);
+    }
   }
   const infoBlock = document.createElement("section");
   infoBlock.className = "concise-project-info-block";
@@ -444,8 +686,24 @@ function renderProject(animateFacts = false) {
     const heroImage = createImage(hero);
     heroImage.loading = "eager";
     heroFigure.append(heroImage);
+    heroFigure.classList.add("is-clickable");
+    heroFigure.tabIndex = 0;
+    heroFigure.setAttribute("role", "button");
+    heroFigure.setAttribute("aria-label", copy.openImage);
+    heroFigure.addEventListener("click", () => openImageLightbox([hero], 0));
+    heroFigure.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openImageLightbox([hero], 0);
+      }
+    });
   }
-  intro.append(textColumn, heroFigure);
+  intro.append(textColumn);
+  if (hero) {
+    intro.append(heroFigure);
+  } else {
+    intro.classList.add("concise-project-intro--without-hero");
+  }
 
   const featured = document.createElement("div");
   featured.className = "concise-project-featured";
@@ -468,6 +726,7 @@ function renderProject(animateFacts = false) {
 
   const footer = document.createElement("footer");
   footer.className = "concise-project-footer";
+  footer.hidden = !page.fullPresentation?.enabled || (activeProject.scenes || []).length === 0;
   const presentation = document.createElement("button");
   presentation.type = "button";
   presentation.setAttribute("aria-expanded", "false");
@@ -477,7 +736,8 @@ function renderProject(animateFacts = false) {
   plus.setAttribute("aria-hidden", "true");
   plus.textContent = "+";
   const presentationLabel = document.createElement("span");
-  presentationLabel.textContent = copy.fullPresentation;
+  presentationLabel.textContent = getLocalizedText(page.fullPresentation?.label, activeLanguage)
+    || copy.fullPresentation;
   presentation.append(plus, presentationLabel);
   footer.append(presentation);
 

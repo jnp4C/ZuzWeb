@@ -300,3 +300,39 @@ hover/focus preview.
 Keep `BDWRAP/` untracked and leave the ignored `Redesign/` source folder
 untouched. The redesign commit preceding this handoff is `2b28218`; inspect the
 current branch log for the follow-up interaction commit.
+
+## Session handoff: full concise migration and responsive interaction (2026-08-01)
+
+All ten published projects now route to `project.html` with
+`projectPage.layout: "concise"`. WATERSCAPE, CYKLUS PROMĚNY, SEMNĚVIZE, and
+REVODALIZACE have curated concise media. Other projects reuse a bounded
+selection of their existing scene assets when curated media is absent;
+MEZI VŠÍM and THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS render clean text-only
+concise pages until imagery is supplied. Unpublished projects remain excluded.
+
+- Project and index pages share the same signature dimensions, responsive
+  gutters, 2.25rem black controls, heading scale, and left spine axis.
+- The project home star begins on the title row and becomes viewport-fixed only
+  after that row scrolls away. Its center stays aligned with the vertical spine;
+  previous/next controls float at the opposite gutter at the same threshold.
+- Returning to the index through the star keeps the completed signature static.
+  Reloading the index intentionally replays it.
+- Featured images are frameless. Desktop image widths reserve space for their
+  connector labels; phone layouts use the full width between page gutters and
+  connect labels to the image top edge without overlapping the label text.
+- Carousels do not autoplay. Their arrows remain available, and selecting any
+  hero or featured image opens a blurred-backdrop lightbox with previous/next,
+  keyboard controls, wheel zoom, double-click reset, and touch pinch/pan.
+- Award metadata renders as a full-width black band with white text.
+- Index project previews use existing index, hero, or scene media. They are
+  overlays and never move subsequent rows; they open beside text when space is
+  available, otherwise below it, and close as soon as the pointer leaves text.
+- PROJECTS, INFO, and CV openings run at 60% of their earlier timeline (40%
+  faster); closing sequences retain their prior speed. Drawer state is mutually
+  exclusive and clears stale timers/classes during rapid switching.
+- Mobile CV is a persistent, wrapped vertical timeline with dates and supporting
+  context always visible and markers kept inside the content width.
+
+`assets/project-pages/waterscape/` contains the selected web-ready derivatives
+used by the concise WATERSCAPE page. Continue to leave `BDWRAP/` untracked and
+the ignored `Redesign/` source tree unchanged.

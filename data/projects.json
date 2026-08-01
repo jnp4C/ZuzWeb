@@ -1,5 +1,300 @@
 [
   {
+    "slug": "waterscape",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 1,
+      "scale": {
+        "en": "medium scale",
+        "cs": "střední měřítko"
+      },
+      "title": {
+        "en": "WATERSCAPE",
+        "cs": "WATERSCAPE"
+      },
+      "context": {
+        "en": "studio project",
+        "cs": "školní práce"
+      },
+      "image": {
+        "src": "./assets/project-pages/waterscape/hero-1800.webp",
+        "srcset": "./assets/project-pages/waterscape/hero-1100.webp 1100w, ./assets/project-pages/waterscape/hero-1800.webp 1800w",
+        "alt": {
+          "en": "Graphical representation of the Waterscape island system",
+          "cs": "Grafické znázornění systému ostrůvků Waterscape"
+        }
+      },
+      "highlights": []
+    },
+    "translations": {
+      "cs": {
+        "title": "WATERSCAPE",
+        "description": "Návrh znovuotevření milánského kanálu a veřejného prostoru, v němž hraje hlavní roli voda.",
+        "annotation": "Milano bylo kdysi protkané vodními kanály jako například Benátky. Mezinárodní soutěž se ptá, jak je znovu otevřít a jak by měl vypadat veřejný prostor na pár vybraných místech okolo. Jedním z nich je i ulice s parkovým náměstím, propojující budoucí archeologický park s přístavem – Darsenou. Kanál ve svém návrhu WATERSCAPE otvírám v plné parádě a náměstí pojednávám tak, že je v hlavní roli voda, pro kterou okolní terén tvoří nenápadný amfiteátr. Díky rozdělení pevniny na hodně menších ostrůvku, nabízím návštěvníkovi intimnější kontakt s vodní hladinou, a to hned v několika formách. Prostor kříží dvě cesty v hlavních tranzitních směrech skrz náměstí, aby návrh nebyl překážkou pro pěší. Díky nenápadným herním prvkům a kavárně důmyslně zasunuté do terénu, je to veřejný prostor pro všechny."
+      }
+    },
+    "projectPage": {
+      "layout": "concise",
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": true,
+        "showAnnotation": true
+      },
+      "awards": [
+        {
+          "en": "Laurus 2022 nomination — finalist, Medium Scale category",
+          "cs": "Nominace Laurus 2022 — finálová práce v kategorii Střední měřítko"
+        }
+      ],
+      "featuredSections": [
+        {
+          "id": "situation",
+          "kind": "masterplan",
+          "label": {
+            "en": "Situation",
+            "cs": "Situace"
+          },
+          "media": [
+            {
+              "src": "./assets/project-pages/waterscape/situation-night-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/situation-night-1100.webp 1100w, ./assets/project-pages/waterscape/situation-night-1800.webp 1800w",
+              "alt": {
+                "en": "Night masterplan of the Waterscape proposal",
+                "cs": "Noční situace návrhu Waterscape"
+              }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/situation-day-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/situation-day-1100.webp 1100w, ./assets/project-pages/waterscape/situation-day-1800.webp 1800w",
+              "alt": {
+                "en": "Day masterplan of the Waterscape proposal",
+                "cs": "Denní situace návrhu Waterscape"
+              }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/situation-annotated-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/situation-annotated-1100.webp 1100w, ./assets/project-pages/waterscape/situation-annotated-1800.webp 1800w",
+              "alt": {
+                "en": "Annotated night masterplan of Waterscape",
+                "cs": "Popsaná noční situace návrhu Waterscape"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sections",
+          "kind": "graphic",
+          "label": {
+            "en": "Sections",
+            "cs": "Řezy"
+          },
+          "media": [
+            {
+              "src": "./assets/project-pages/waterscape/section-left-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/section-left-1100.webp 1100w, ./assets/project-pages/waterscape/section-left-1800.webp 1800w",
+              "alt": {
+                "en": "Left section through the Waterscape proposal",
+                "cs": "Levý řez návrhem Waterscape"
+              }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/section-centre-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/section-centre-1100.webp 1100w, ./assets/project-pages/waterscape/section-centre-1800.webp 1800w",
+              "alt": {
+                "en": "Central section through the Waterscape proposal",
+                "cs": "Střední řez návrhem Waterscape"
+              }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/section-right-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/section-right-1100.webp 1100w, ./assets/project-pages/waterscape/section-right-1800.webp 1800w",
+              "alt": {
+                "en": "Right section through the Waterscape proposal",
+                "cs": "Pravý řez návrhem Waterscape"
+              }
+            }
+          ]
+        },
+        {
+          "id": "model",
+          "kind": "model",
+          "label": {
+            "en": "Model",
+            "cs": "Model"
+          },
+          "media": [
+            {
+              "src": "./assets/project-pages/waterscape/model-1-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/model-1-1100.webp 1100w, ./assets/project-pages/waterscape/model-1-1800.webp 1800w",
+              "alt": { "en": "Waterscape model, view 1", "cs": "Model Waterscape, pohled 1" }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/model-2-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/model-2-1100.webp 1100w, ./assets/project-pages/waterscape/model-2-1800.webp 1800w",
+              "alt": { "en": "Waterscape model, view 2", "cs": "Model Waterscape, pohled 2" }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/model-3-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/model-3-1100.webp 1100w, ./assets/project-pages/waterscape/model-3-1800.webp 1800w",
+              "alt": { "en": "Waterscape model, view 3", "cs": "Model Waterscape, pohled 3" }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/model-4-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/model-4-1100.webp 1100w, ./assets/project-pages/waterscape/model-4-1800.webp 1800w",
+              "alt": { "en": "Waterscape model, view 4", "cs": "Model Waterscape, pohled 4" }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/model-5-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/model-5-1100.webp 1100w, ./assets/project-pages/waterscape/model-5-1800.webp 1800w",
+              "alt": { "en": "Waterscape model, view 5", "cs": "Model Waterscape, pohled 5" }
+            },
+            {
+              "src": "./assets/project-pages/waterscape/model-6-1800.webp",
+              "srcset": "./assets/project-pages/waterscape/model-6-1100.webp 1100w, ./assets/project-pages/waterscape/model-6-1800.webp 1800w",
+              "alt": { "en": "Waterscape model, view 6", "cs": "Model Waterscape, pohled 6" }
+            }
+          ]
+        }
+      ],
+      "fullPresentation": {
+        "enabled": true,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        },
+        "placement": "end",
+        "control": "plus"
+      },
+      "info": {
+        "year": 2022,
+        "scale": {
+          "en": "medium scale",
+          "cs": "střední měřítko"
+        },
+        "processing": {
+          "en": "study",
+          "cs": "studie"
+        },
+        "type": {
+          "en": "studio project + competition",
+          "cs": "školní práce + soutěž"
+        },
+        "collaborators": []
+      },
+      "hero": {
+        "media": {
+          "src": "./assets/project-pages/waterscape/hero-1800.webp",
+          "srcset": "./assets/project-pages/waterscape/hero-1100.webp 1100w, ./assets/project-pages/waterscape/hero-1800.webp 1800w",
+          "alt": {
+            "en": "Graphical representation of the Waterscape island system",
+            "cs": "Grafické znázornění systému ostrůvků Waterscape"
+          }
+        },
+        "allowLandscapeExpansion": true,
+        "mobilePosition": "after-annotation"
+      }
+    },
+    "title": "WATERSCAPE",
+    "category": "Landscape Architecture",
+    "location": "Milan, IT",
+    "year": 2022,
+    "description": "A proposal to reopen a Milan canal and shape a public space where water plays the leading role.",
+    "annotation": "Milan once was the city of water canals, such as Venice for example. The international competition is asking its participants, how to reopen them and how the public space around them should look like in a few chosen areas. One of them is a street with a park square, connecting the future archeological park with a water basin and former port – Darsena. In the WATERSCAPE project, I’m opening the canal in its full beauty and water plays the key role in it. With the use of many smaller islands, the design offers a more intimate contact with the water level in numerous forms. The spatial concept is also formed by two paths in the main transit directions, because it’s pedestrian friendly. Thanks to modest playing features and a café half-hidden in the terrain, it is a public space for everyone.",
+    "scenes": [
+      {
+        "type": "annotation",
+        "introOnly": true,
+        "supportingText": "A proposal to reopen a Milan canal and shape a public space where water plays the leading role."
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 1,
+        "objects": [
+          {
+            "name": "waterscape-presentation-1",
+            "src": "./assets/project-pages/waterscape/presentation-1-1800.webp",
+            "srcset": "./assets/project-pages/waterscape/presentation-1-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-1-1800.webp 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "enter": { "x": -520, "y": 0, "scale": 1, "opacity": 0 },
+            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "delay": 0,
+            "enterDuration": 0.62,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 2,
+        "objects": [
+          {
+            "name": "waterscape-presentation-2",
+            "src": "./assets/project-pages/waterscape/presentation-2-1800.webp",
+            "srcset": "./assets/project-pages/waterscape/presentation-2-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-2-1800.webp 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "enter": { "x": 520, "y": 0, "scale": 1, "opacity": 0 },
+            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "delay": 0,
+            "enterDuration": 0.62,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 3,
+        "objects": [
+          {
+            "name": "waterscape-presentation-3",
+            "src": "./assets/project-pages/waterscape/presentation-3-1800.webp",
+            "srcset": "./assets/project-pages/waterscape/presentation-3-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-3-1800.webp 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "enter": { "x": -520, "y": 0, "scale": 1, "opacity": 0 },
+            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "delay": 0,
+            "enterDuration": 0.62,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      },
+      {
+        "type": "objects",
+        "layout": "full-width-visual",
+        "page": 4,
+        "objects": [
+          {
+            "name": "waterscape-presentation-4",
+            "src": "./assets/project-pages/waterscape/presentation-4-1800.webp",
+            "srcset": "./assets/project-pages/waterscape/presentation-4-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-4-1800.webp 1800w",
+            "sizes": "min(96vw, 1180px)",
+            "displayWidthRatio": 0.92,
+            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "enter": { "x": 520, "y": 0, "scale": 1, "opacity": 0 },
+            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "delay": 0,
+            "enterDuration": 0.62,
+            "exitStart": 0.98,
+            "exitDuration": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "tree-with-the-spirit-of-christmas",
     "visibility": "published",
     "portfolioSection": "practice",
@@ -27,6 +322,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": true,
@@ -299,7 +595,7 @@
   },
   {
     "slug": "through-the-forest",
-    "visibility": "published",
+    "visibility": "unpublished",
     "portfolioSection": "study",
     "index": {
       "order": 1,
@@ -1402,7 +1698,7 @@
     "visibility": "published",
     "portfolioSection": "study",
     "index": {
-      "order": 7,
+      "order": 8,
       "scale": {
         "en": "large scale",
         "cs": "velké"
@@ -1425,6 +1721,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": true,
@@ -3078,7 +3375,7 @@
   },
   {
     "slug": "steep-garden-realization",
-    "visibility": "published",
+    "visibility": "unpublished",
     "portfolioSection": "practice",
     "index": {
       "order": 2,
@@ -7271,10 +7568,10 @@
     "visibility": "published",
     "portfolioSection": "study",
     "index": {
-      "order": 6,
+      "order": 7,
       "scale": {
-        "en": "small scale",
-        "cs": "malé"
+        "en": "installation",
+        "cs": "instalace"
       },
       "title": {
         "en": "GROWING-THROUGH",
@@ -7302,6 +7599,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": true,
@@ -7668,16 +7966,16 @@
     "index": {
       "order": 2,
       "scale": {
-        "en": "small scale + documentation",
-        "cs": "malé + dokumentace"
+        "en": "medium scale + documentation",
+        "cs": "střední měřítko + dokumentace"
       },
       "title": {
-        "en": "Kladno Krematorium",
+        "en": "CYCLE OF CHANGE",
         "cs": "CYKLUS PROMĚNY"
       },
       "context": {
-        "en": "FA CTU, individual",
-        "cs": "FA ČVUT, samostatná práce"
+        "en": "bachelor thesis",
+        "cs": "bakalářská práce"
       },
       "highlights": []
     },
@@ -7827,18 +8125,18 @@
         "control": "plus"
       },
       "info": {
-        "year": 2022,
+        "year": "2022–2023",
         "scale": {
-          "en": "small scale + documentation",
-          "cs": "malé + dokumentace"
+          "en": "medium scale",
+          "cs": "střední měřítko"
         },
         "processing": {
-          "en": "Studio project, individual",
-          "cs": "ateliérový projekt, samostatná práce"
+          "en": "study + documentation",
+          "cs": "studie + dokumentace"
         },
         "type": {
-          "en": "Landscape Architecture",
-          "cs": "krajinářská architektura"
+          "en": "bachelor thesis",
+          "cs": "bakalářská práce"
         },
         "collaborators": []
       },
@@ -9078,7 +9376,7 @@
       },
       "title": {
         "en": "CONCEPT OF SEMNĚVICE LANDSCAPE",
-        "cs": "SEMNĚVIZE"
+        "cs": "KONCEPCE KRAJINY SEMNĚVIC"
       },
       "context": {
         "en": "FA CTU, collaboration",
@@ -9102,6 +9400,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": true,
@@ -9109,44 +9408,60 @@
       },
       "awards": [
         {
-          "label": {
-            "en": "Award",
-            "cs": null
-          },
-          "detail": {
-            "en": "Dean's Award FA CTU 4th year 2023/2024",
-            "cs": null
-          },
-          "href": "https://www.fa.cvut.cz/galerie/souteze/cena-dekana/2023-2024/fa_cd24_sbornik_a5_online_double-high.pdf"
+          "en": "Dean's Award FA CTU — 4th year, 2023/2024",
+          "cs": "Cena děkana FA ČVUT — 4. ročník, 2023/2024"
         }
       ],
       "featuredSections": [
         {
-          "id": "graphical-representation",
+          "id": "water-regime",
           "kind": "graphic",
           "label": {
-            "en": "Graphical representation",
-            "cs": "Název grafiky"
+            "en": "Water regime",
+            "cs": "Vodní režim"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1800.jpg",
+              "srcset": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1800.jpg 1800w",
+              "alt": { "en": "Analysis map of the Semněvice water regime", "cs": "Analytická mapa vodního režimu Semněvic" }
+            }
+          ]
         },
         {
-          "id": "masterplan",
+          "id": "land-use",
           "kind": "masterplan",
           "label": {
-            "en": "Masterplan",
-            "cs": "Masterplan"
+            "en": "Land use",
+            "cs": "Využití krajiny"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1800.jpg",
+              "srcset": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1800.jpg 1800w",
+              "alt": { "en": "Land-use analysis of the Semněvice landscape", "cs": "Analýza využití krajiny Semněvic" }
+            }
+          ]
         },
         {
-          "id": "model",
-          "kind": "model",
+          "id": "swot",
+          "kind": "graphic",
           "label": {
-            "en": "Model",
-            "cs": "Model"
+            "en": "Landscape evaluation",
+            "cs": "Hodnocení krajiny"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1800.jpg",
+              "srcset": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1800.jpg 1800w",
+              "alt": { "en": "Strengths and weaknesses map of Semněvice", "cs": "Mapa silných a slabých stránek Semněvic" }
+            },
+            {
+              "src": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1800.jpg",
+              "srcset": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1800.jpg 1800w",
+              "alt": { "en": "Opportunities and threats map of Semněvice", "cs": "Mapa příležitostí a hrozeb Semněvic" }
+            }
+          ]
         }
       ],
       "fullPresentation": {
@@ -9183,7 +9498,11 @@
         ]
       },
       "hero": {
-        "media": null,
+        "media": {
+          "src": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg",
+          "srcset": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg 1800w",
+          "alt": { "en": "Semněvice landscape concept cover drawing", "cs": "Úvodní kresba koncepce krajiny Semněvic" }
+        },
         "allowLandscapeExpansion": true,
         "mobilePosition": "after-annotation"
       }
@@ -12298,8 +12617,8 @@
     "index": {
       "order": 4,
       "scale": {
-        "en": "large scale",
-        "cs": "velké"
+        "en": "medium scale",
+        "cs": "střední měřítko"
       },
       "title": {
         "en": "REWATERIZATION",
@@ -12319,6 +12638,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": true,
@@ -12327,31 +12647,54 @@
       "awards": [],
       "featuredSections": [
         {
-          "id": "graphical-representation",
+          "id": "design-process",
           "kind": "graphic",
           "label": {
-            "en": "Graphical representation",
-            "cs": "Název grafiky"
+            "en": "Design process",
+            "cs": "Proces návrhu"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/rewaterization/02-process-1300.jpg",
+              "srcset": "./assets/generated/rewaterization/02-process-900.jpg 900w, ./assets/generated/rewaterization/02-process-1300.jpg 1300w",
+              "alt": { "en": "Diagram of the Rewaterization design process", "cs": "Schéma procesu návrhu Revodalizace" }
+            }
+          ]
         },
         {
-          "id": "masterplan",
+          "id": "landscape-principles",
           "kind": "masterplan",
           "label": {
-            "en": "Masterplan",
-            "cs": "Masterplan"
+            "en": "Landscape principles",
+            "cs": "Principy krajiny"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/rewaterization/10-diagram-1800.jpg",
+              "srcset": "./assets/generated/rewaterization/10-diagram-1200.jpg 1200w, ./assets/generated/rewaterization/10-diagram-1800.jpg 1800w",
+              "alt": { "en": "Diagram of water-regime and landscape principles", "cs": "Schéma principů vodního režimu a krajiny" }
+            }
+          ]
         },
         {
-          "id": "model",
-          "kind": "model",
+          "id": "technical-design",
+          "kind": "graphic",
           "label": {
-            "en": "Model",
-            "cs": "Model"
+            "en": "Technical design",
+            "cs": "Technické řešení"
           },
-          "media": []
+          "media": [
+            {
+              "src": "./assets/generated/rewaterization/20-bottom-left-1300.jpg",
+              "srcset": "./assets/generated/rewaterization/20-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/20-bottom-left-1300.jpg 1300w",
+              "alt": { "en": "Technical design of stream barriers", "cs": "Technické řešení přehrážek v toku" }
+            },
+            {
+              "src": "./assets/generated/rewaterization/21-bottom-left-1300.jpg",
+              "srcset": "./assets/generated/rewaterization/21-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/21-bottom-left-1300.jpg 1300w",
+              "alt": { "en": "Alternative stream-barrier construction", "cs": "Alternativní konstrukce přehrážek v toku" }
+            }
+          ]
         }
       ],
       "fullPresentation": {
@@ -12381,7 +12724,11 @@
         "collaborators": []
       },
       "hero": {
-        "media": null,
+        "media": {
+          "src": "./assets/generated/rewaterization/01-full-1800.jpg",
+          "srcset": "./assets/generated/rewaterization/01-full-1200.jpg 1200w, ./assets/generated/rewaterization/01-full-1800.jpg 1800w",
+          "alt": { "en": "Rewaterization proposal for the Semněvice landscape", "cs": "Návrh Revodalizace krajiny Semněvic" }
+        },
         "allowLandscapeExpansion": true,
         "mobilePosition": "after-annotation"
       }
@@ -14142,6 +14489,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": true,
@@ -15695,9 +16043,9 @@
   {
     "slug": "mezi-vsim",
     "visibility": "published",
-    "portfolioSection": "practice",
+    "portfolioSection": "study",
     "index": {
-      "order": 3,
+      "order": 6,
       "scale": {
         "en": "installation",
         "cs": "instalace"
@@ -15728,6 +16076,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": false,
@@ -15805,7 +16154,7 @@
     "visibility": "published",
     "portfolioSection": "study",
     "index": {
-      "order": 8,
+      "order": 10,
       "scale": {
         "en": "large scale",
         "cs": "velké"
@@ -15828,6 +16177,7 @@
       }
     },
     "projectPage": {
+      "layout": "concise",
       "intro": {
         "showProjectInfo": true,
         "showAwards": false,

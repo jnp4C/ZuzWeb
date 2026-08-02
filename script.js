@@ -3,7 +3,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-02-indexed-sources";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-02-revodalizace-update";
 
 const projectGroups = {
   study: document.getElementById("studyProjects"),

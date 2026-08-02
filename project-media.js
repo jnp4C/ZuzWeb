@@ -83,14 +83,16 @@ const CURATED_MEDIA = {
   rewaterization: {
     hero: media("rewaterization", "index", "Rewaterization project visualization", "Vizualizace projektu Revodalizace"),
     sections: [
-      section("visualization", "graphic", "Visualization", "Vizualizace", [
+      section("process", "graphic", "Process", "Proces", [
+        media("rewaterization", "process", "Rewaterization project process", "Proces projektu Revodalizace"),
+      ]),
+      section("stream-revitalization", "graphic", "Stream revitalization", "Revitalizace toku", [
+        media("rewaterization", "stream-revitalization", "Technical proposal for stream revitalization", "Technický návrh revitalizace toku"),
+        media("rewaterization", "water-reservoir", "Existing state and proposed water reservoir", "Současný stav a návrh vodní nádrže"),
+      ]),
+      section("proposal", "masterplan", "Proposal", "Návrh", [
         media("rewaterization", "visualization", "Rewaterization proposal visualization", "Vizualizace návrhu Revodalizace"),
-      ]),
-      section("axonometry", "graphic", "Axonometry", "Axonometrie", [
-        media("rewaterization", "axonometry", "Rewaterization axonometry", "Axonometrie projektu Revodalizace"),
-      ]),
-      section("section", "graphic", "Section", "Řez", [
-        media("rewaterization", "section", "Rewaterization landscape section", "Krajinářský řez projektu Revodalizace"),
+        media("rewaterization", "landscape-plan", "Annotated landscape proposal", "Popsaný krajinářský návrh"),
       ]),
     ],
   },

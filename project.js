@@ -4,7 +4,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-02-indexed-sources";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-02-revodalizace-update";
 
 const DATA_CACHE_VERSION = "2026-08-02-updated-project-content";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";

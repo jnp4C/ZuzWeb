@@ -349,6 +349,19 @@ function createMediaCarousel(mediaItems, label) {
     viewport.append(image);
     return image;
   });
+  const setInitialViewportRatio = (image) => {
+    const applyRatio = () => {
+      if (image.naturalWidth > 0 && image.naturalHeight > 0) {
+        viewport.style.aspectRatio = `${image.naturalWidth} / ${image.naturalHeight}`;
+      }
+    };
+    if (image.complete) {
+      applyRatio();
+    } else {
+      image.addEventListener("load", applyRatio, { once: true });
+    }
+  };
+  setInitialViewportRatio(slides[0]);
   let activeIndex = 0;
   let isAnimating = false;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

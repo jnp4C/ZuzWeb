@@ -567,6 +567,13 @@ h3,
   height: auto;
 }
 
+.concise-project-hero img {
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
 .concise-project-featured {
   display: grid;
   gap: clamp(4rem, 12vw, 11rem);
@@ -619,6 +626,7 @@ h3,
   place-items: center;
   overflow: hidden;
   background: var(--surface);
+  transition: aspect-ratio 280ms ease;
 }
 
 .concise-project-carousel-viewport.is-clickable {
@@ -752,6 +760,10 @@ h3,
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .concise-project-carousel-viewport {
+    transition: none;
+  }
+
   .concise-project-carousel-slide {
     will-change: auto;
   }

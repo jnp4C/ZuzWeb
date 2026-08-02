@@ -4,8 +4,9 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-02-indexed-sources";
 
-const DATA_CACHE_VERSION = "2026-08-01-all-concise-projects";
+const DATA_CACHE_VERSION = "2026-08-02-updated-project-content";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -484,6 +485,26 @@ function createFact(label, value, placement = "left", order = 0) {
   return row;
 }
 
+function createReferenceFact(reference, language, order) {
+  const row = createFact(
+    getLocalizedText(reference.label, language),
+    getLocalizedText(reference.text, language),
+    "left",
+    order,
+  );
+  row.classList.add("concise-project-fact--reference");
+  if (reference.href) {
+    const description = row.querySelector("dd");
+    const link = document.createElement("a");
+    link.href = reference.href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = description.textContent;
+    description.replaceChildren(link);
+  }
+  return row;
+}
+
 function getProjectUrl(project) {
   if (project.projectPage?.layout === "concise") {
     return `./project.html?project=${encodeURIComponent(project.slug)}`;
@@ -653,13 +674,20 @@ function renderProject(animateFacts = false) {
   if (Array.isArray(info.collaborators) && info.collaborators.length > 0) {
     facts.append(createFact(copy.collaborators, info.collaborators.join(", "), "left", 4));
   }
+  if (Array.isArray(page.references)) {
+    page.references.forEach((reference, index) => {
+      facts.append(createReferenceFact(reference, activeLanguage, 5 + index));
+    });
+  }
   if (Array.isArray(page.awards) && page.awards.length > 0) {
     const awards = page.awards
       .map((award) => getLocalizedText(award.detail || award, activeLanguage))
       .filter(Boolean);
     if (awards.length > 0) {
-      const awardsFact = createFact(copy.awards, awards.join(" · "), "left", 5);
+      const referenceCount = Array.isArray(page.references) ? page.references.length : 0;
+      const awardsFact = createFact(copy.awards, awards.join(" · "), "left", 5 + referenceCount);
       awardsFact.classList.add("concise-project-fact--awards");
+      awardsFact.querySelector("dt").textContent = copy.awards;
       facts.append(awardsFact);
     }
   }
@@ -678,7 +706,10 @@ function renderProject(animateFacts = false) {
   const annotationText = document.createElement("p");
   annotationText.textContent = annotation;
   annotationBlock.append(annotationHeading, annotationText);
-  textColumn.append(infoBlock, annotationBlock);
+  textColumn.append(infoBlock);
+  if (annotation || page.intro?.showAnnotation !== false) {
+    textColumn.append(annotationBlock);
+  }
 
   const heroFigure = document.createElement("figure");
   heroFigure.className = "concise-project-hero";
@@ -788,7 +819,7 @@ async function initializeProject() {
   if (!response.ok) {
     throw new Error("Failed to load project data.");
   }
-  const projects = await response.json();
+  const projects = applyCuratedProjectMedia(await response.json());
   navigableProjects = projects
     .filter((project) => project.visibility !== "unpublished")
     .sort((left, right) => {

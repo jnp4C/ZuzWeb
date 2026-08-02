@@ -3,6 +3,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-02-indexed-sources";
 
 const projectGroups = {
   study: document.getElementById("studyProjects"),
@@ -598,7 +599,7 @@ async function init() {
     throw new Error("Failed to load projects.");
   }
 
-  indexProjects = await response.json();
+  indexProjects = applyCuratedProjectMedia(await response.json());
   renderProjectIndex(indexProjects);
   yearLabel.textContent = new Date().getFullYear();
 }

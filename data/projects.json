@@ -372,15 +372,15 @@
         "year": 2026,
         "scale": {
           "en": "installation",
-          "cs": null
+          "cs": "instalace"
         },
         "processing": {
           "en": "GHMP Opencall, group project",
-          "cs": null
+          "cs": "GHMP Opencall, skupinový projekt"
         },
         "type": {
-          "en": "Landscape Installation",
-          "cs": null
+          "en": "landscape installation",
+          "cs": "krajinářská instalace"
         },
         "collaborators": [
           "ING. DAVID ŠMÍD"
@@ -1771,15 +1771,15 @@
         "year": 2025,
         "scale": {
           "en": "large scale",
-          "cs": null
+          "cs": "velké měřítko"
         },
         "processing": {
-          "en": "Individual project",
-          "cs": null
+          "en": "individual project",
+          "cs": "individuální projekt"
         },
         "type": {
-          "en": "Urban Design",
-          "cs": null
+          "en": "urban design",
+          "cs": "urbanistický návrh"
         },
         "collaborators": []
       },
@@ -7578,8 +7578,8 @@
         "cs": "GROWING-THROUGH"
       },
       "context": {
-        "en": "FA CTU, collaboration",
-        "cs": "FA ČVUT, spolupráce"
+        "en": "studio project, collaboration",
+        "cs": "školní práce, spoluautorství"
       },
       "highlights": [
         {
@@ -7661,15 +7661,15 @@
         "year": 2024,
         "scale": {
           "en": "small scale",
-          "cs": null
+          "cs": "malé měřítko"
         },
         "processing": {
-          "en": "Studio project, group project",
-          "cs": null
+          "en": "studio project, group project",
+          "cs": "školní práce, skupinový projekt"
         },
         "type": {
-          "en": "Landscape Installation",
-          "cs": null
+          "en": "landscape installation",
+          "cs": "krajinářská instalace"
         },
         "collaborators": [
           "ING. DAVID ŠMÍD"
@@ -8153,7 +8153,7 @@
         "mobilePosition": "after-annotation"
       }
     },
-    "title": "Kladno Krematorium",
+    "title": "CYCLE OF CHANGE",
     "category": "Landscape Architecture",
     "location": "Kladno, CZ",
     "year": 2022,
@@ -9362,7 +9362,7 @@
     "projectType": "Studio project, individual",
     "studioName": "Atelier Sitta - Chmelová, FA CTU in Prague",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
-    "selectorLabel": "Kladno Krematorium"
+    "selectorLabel": "CYCLE OF CHANGE"
   },
   {
     "slug": "semnevision",
@@ -9394,7 +9394,7 @@
     },
     "translations": {
       "cs": {
-        "title": "SEMNĚVIZE",
+        "title": "KONCEPCE KRAJINY SEMNĚVIC",
         "description": "Koncepce krajiny Semněvic založená na vícevrstvé analýze území.",
         "annotation": "Na základě podrobné analýzy krajiny Semněvic byla pro území navržena vize – SemněVIZE a zhotovena Krajinná Koncepce Semněvic. Jejím cílem bylo krajinu uchopit komplexně jako jeden celek, stanovit principy a způsoby racionálního a udržitelného využití a zásahů, tak aby prosperovala a dobře se v ní lidem žilo. Koncepce krajiny byla podrobněji zpracována ve čtyřech vrstvách vycházejících z potřeb a problému krajiny Semněvic: cestní síť, intravilán, zemědělství a vodní režim. Na tento týmový projekt navazují individuální projekty rozvíjející tyto vrstvy: KRAJINOU KOL SEMNĚVIC, Skrz Obci Pod Kopci, VODO TEČ, Srdce Semněvic, SEMNĚ-DĚLSTVÍ, REVODALIZACE, VYVODNĚNÍ."
       }
@@ -9408,47 +9408,72 @@
       },
       "awards": [
         {
-          "en": "Dean's Award FA CTU — 4th year, 2023/2024",
-          "cs": "Cena děkana FA ČVUT — 4. ročník, 2023/2024"
+          "en": "FA CTU Dean's Award 2024 for a 2nd–5th year studio project — Landscape Architecture",
+          "cs": "Cena děkana FA ČVUT 2024 za ateliérový projekt 2.–5. ročníku – Krajinářská architektura"
+        }
+      ],
+      "references": [
+        {
+          "type": "publication",
+          "label": {
+            "en": "Publication",
+            "cs": "Publikace"
+          },
+          "text": {
+            "en": "Landscape planning possibilities",
+            "cs": "Možnosti plánování krajiny"
+          },
+          "href": "https://www.casopis.forumochranyprirody.cz/magazin/analyzy-komentare/moznosti-planovani-krajiny"
+        },
+        {
+          "type": "conference",
+          "label": {
+            "en": "Conference",
+            "cs": "Konference"
+          },
+          "text": {
+            "en": "Nature-based measures in the landscape — FA CTU, 18 September 2024",
+            "cs": "Přírodě blízká opatření v krajině – FA ČVUT, 18. 9. 2024"
+          }
         }
       ],
       "featuredSections": [
         {
-          "id": "water-regime",
+          "id": "iso",
           "kind": "graphic",
           "label": {
-            "en": "Water regime",
-            "cs": "Vodní režim"
+            "en": "ISO",
+            "cs": "ISO"
           },
           "media": [
             {
-              "src": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1800.jpg",
-              "srcset": "./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/06-semnevice-vodni-rezim-map-1800.jpg 1800w",
-              "alt": { "en": "Analysis map of the Semněvice water regime", "cs": "Analytická mapa vodního režimu Semněvic" }
+              "src": "./assets/project-pages/semnevice/iso-1800.webp",
+              "srcset": "./assets/project-pages/semnevice/iso-1200.webp 1200w, ./assets/project-pages/semnevice/iso-1800.webp 1800w",
+              "alt": { "en": "Exploded isometric landscape concept for Semněvice", "cs": "Rozložená izometrie koncepce krajiny Semněvic" }
             }
           ]
         },
         {
-          "id": "land-use",
+          "id": "masterplan",
           "kind": "masterplan",
           "label": {
-            "en": "Land use",
-            "cs": "Využití krajiny"
+            "en": "Masterplan",
+            "cs": "Masterplan"
           },
           "media": [
             {
-              "src": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1800.jpg",
-              "srcset": "./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/15-semnevice-landuse-map-1800.jpg 1800w",
-              "alt": { "en": "Land-use analysis of the Semněvice landscape", "cs": "Analýza využití krajiny Semněvic" }
+              "src": "./assets/project-pages/semnevice/masterplan-1800.webp",
+              "srcset": "./assets/project-pages/semnevice/masterplan-1200.webp 1200w, ./assets/project-pages/semnevice/masterplan-1800.webp 1800w",
+              "alt": { "en": "Landscape masterplan for Semněvice", "cs": "Masterplan koncepce krajiny Semněvic" }
             }
           ]
         },
         {
-          "id": "swot",
+          "id": "analysis-examples",
           "kind": "graphic",
           "label": {
-            "en": "Landscape evaluation",
-            "cs": "Hodnocení krajiny"
+            "en": "Analysis examples",
+            "cs": "Ukázka analýz"
           },
           "media": [
             {
@@ -9475,26 +9500,26 @@
         "control": "plus"
       },
       "info": {
-        "year": 2024,
+        "year": 2023,
         "scale": {
           "en": "large scale",
-          "cs": null
+          "cs": "velké měřítko"
         },
         "processing": {
-          "en": "Group project",
-          "cs": null
+          "en": "study",
+          "cs": "studie"
         },
         "type": {
-          "en": "Group project",
-          "cs": null
+          "en": "studio project",
+          "cs": "školní práce"
         },
         "collaborators": [
-          "ING. DENISA MORAVCOVÁ",
-          "ING. ANNA KOUPALOVÁ",
-          "ING. DANIELA KVAPILOVÁ",
-          "ING. ELIŠKA KUNCÍŘOVÁ",
-          "ING. JOSEFÍNA JÍROVCOVÁ",
-          "ING. MARTINA GRUNTOVÁ"
+          "D. Moravcová",
+          "A. Koupalová",
+          "D. Kvapilová",
+          "E. Kuncířová",
+          "J. Jírovcová",
+          "M. Gruntová"
         ]
       },
       "hero": {
@@ -12711,15 +12736,15 @@
         "year": 2023,
         "scale": {
           "en": "large scale",
-          "cs": null
+          "cs": "velké měřítko"
         },
         "processing": {
-          "en": "Studio project, individual, part of group concept",
-          "cs": null
+          "en": "studio project, individual, part of group concept",
+          "cs": "školní práce, individuální projekt, součást skupinové koncepce"
         },
         "type": {
-          "en": "Studio project",
-          "cs": null
+          "en": "studio project",
+          "cs": "školní práce"
         },
         "collaborators": []
       },
@@ -14539,15 +14564,15 @@
         "year": 2023,
         "scale": {
           "en": "small scale + documentation",
-          "cs": null
+          "cs": "malé měřítko + dokumentace"
         },
         "processing": {
-          "en": "Studio project, individual, private commission",
-          "cs": null
+          "en": "studio project, individual, private commission",
+          "cs": "školní práce, individuální projekt, soukromá zakázka"
         },
         "type": {
-          "en": "Garden Design",
-          "cs": null
+          "en": "garden design",
+          "cs": "návrh zahrady"
         },
         "collaborators": []
       },
@@ -16098,15 +16123,15 @@
         "year": 2024,
         "scale": {
           "en": "installation",
-          "cs": null
+          "cs": "instalace"
         },
         "processing": {
-          "en": "Master's study, collaboration",
-          "cs": null
+          "en": "master's study, collaboration",
+          "cs": "magisterské studium, spoluautorství"
         },
         "type": {
-          "en": "Exhibition installation",
-          "cs": null
+          "en": "exhibition installation",
+          "cs": "výstavní instalace"
         },
         "collaborators": [
           "SABINA PEKOVÁ",
@@ -16199,15 +16224,15 @@
         "year": "2025–2026",
         "scale": {
           "en": "large scale",
-          "cs": null
+          "cs": "velké měřítko"
         },
         "processing": {
-          "en": "Diploma thesis",
-          "cs": null
+          "en": "diploma thesis",
+          "cs": "diplomová práce"
         },
         "type": {
-          "en": "Landscape planning",
-          "cs": null
+          "en": "landscape planning",
+          "cs": "krajinné plánování"
         },
         "collaborators": []
       },
@@ -16249,5 +16274,91 @@
     "projectType": "Diploma thesis",
     "studioName": "Atelier Jeníková–Štemberová–Trpkoš, FA CTU in Prague",
     "selectorLabel": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS"
+  },
+  {
+    "slug": "polyporus-larixis",
+    "visibility": "published",
+    "portfolioSection": "study",
+    "index": {
+      "order": 9,
+      "scale": {
+        "en": "small scale",
+        "cs": "malé měřítko"
+      },
+      "title": {
+        "en": "POLYPORUS LARIXIS",
+        "cs": "POLYPORUS LARIXIS"
+      },
+      "context": {
+        "en": "design-build workshop, collaboration",
+        "cs": "design-build workshop, spoluautorství"
+      },
+      "highlights": [
+        {
+          "type": "realization",
+          "label": {
+            "en": "Realization",
+            "cs": "Realizace"
+          }
+        }
+      ]
+    },
+    "translations": {
+      "cs": {
+        "title": "POLYPORUS LARIXIS",
+        "description": "Realizace z design-build workshopu.",
+        "annotation": ""
+      }
+    },
+    "projectPage": {
+      "layout": "concise",
+      "intro": {
+        "showProjectInfo": true,
+        "showAwards": false,
+        "showAnnotation": false
+      },
+      "awards": [],
+      "featuredSections": [],
+      "fullPresentation": {
+        "enabled": false,
+        "source": "scenes",
+        "label": {
+          "en": "Full presentation",
+          "cs": "Celá prezentace"
+        },
+        "placement": "end",
+        "control": "plus"
+      },
+      "info": {
+        "year": 2025,
+        "scale": {
+          "en": "small scale",
+          "cs": "malé měřítko"
+        },
+        "processing": {
+          "en": "design-build workshop",
+          "cs": "design-build workshop"
+        },
+        "type": {
+          "en": "collaboration, realization",
+          "cs": "spoluautorství, realizace"
+        },
+        "collaborators": []
+      },
+      "hero": {
+        "media": null,
+        "allowLandscapeExpansion": true,
+        "mobilePosition": "after-annotation"
+      }
+    },
+    "title": "POLYPORUS LARIXIS",
+    "category": "Design-build workshop",
+    "location": "Czech Republic",
+    "year": 2025,
+    "description": "A realized design-build workshop project.",
+    "annotation": "",
+    "scenes": [],
+    "projectType": "Design-build workshop, collaboration",
+    "selectorLabel": "POLYPORUS LARIXIS"
   }
 ]

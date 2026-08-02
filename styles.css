@@ -456,15 +456,45 @@ h3,
 }
 
 .concise-project-fact--awards {
+  grid-template-columns: max-content minmax(0, 1fr);
   width: 100%;
   padding: clamp(0.55rem, 1.2vw, 0.8rem);
   background: var(--text);
   color: var(--surface);
+  text-align: right;
 }
 
-.concise-project-fact--awards dt,
-.concise-project-fact--awards dd {
+.concise-project-fact--awards dt {
+  display: block;
   color: var(--surface);
+  font-weight: 750;
+  text-transform: none;
+}
+
+.concise-project-fact--awards dd {
+  grid-column: 2;
+  width: 100%;
+  color: var(--surface);
+  font-weight: 400;
+  justify-self: stretch;
+  text-align: right;
+}
+
+.concise-project-fact--reference dd {
+  font-weight: 400;
+  text-align: right;
+}
+
+.concise-project-fact--reference a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.concise-project-fact--reference a:hover,
+.concise-project-fact--reference a:focus-visible {
+  text-decoration-thickness: 2px;
 }
 
 .concise-project.skip-fact-intro .concise-project-fact dt,
@@ -505,9 +535,9 @@ h3,
   margin: 0 0 0.65rem;
   font-family: var(--font-heading);
   font-size: var(--type-medium);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .concise-project-annotation p {
@@ -518,7 +548,7 @@ h3,
   padding: 0;
   background: transparent;
   color: var(--text);
-  font-size: var(--type-small);
+  font-size: clamp(var(--type-small), 1.05vw, 0.98rem);
   line-height: 1.5;
   text-align: justify;
   text-wrap: pretty;

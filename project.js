@@ -6,7 +6,7 @@ import {
 } from "./language.js";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-02-revodalizace-update";
 
-const DATA_CACHE_VERSION = "2026-08-02-updated-project-content";
+const DATA_CACHE_VERSION = "2026-08-14-real-project-content-downloads";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -590,6 +590,40 @@ function getConcisePage(project) {
   };
 }
 
+function getMediaIdentity(media) {
+  const source = media?.src || "";
+  if (!source) return "";
+  return source
+    .split("?")[0]
+    .split("/")
+    .pop()
+    .replace(/-(?:\d{3,4}|small|medium|large)(?=\.[^.]+$)/i, "")
+    .toLowerCase();
+}
+
+function moveCoverDuplicatesBehindCarouselStart(page, project) {
+  const coverIdentities = new Set([
+    getMediaIdentity(page.hero?.media),
+    getMediaIdentity(project.index?.image),
+  ].filter(Boolean));
+
+  if (coverIdentities.size === 0) return page;
+
+  return {
+    ...page,
+    featuredSections: (page.featuredSections || []).map((section) => {
+      const media = [...(section.media || [])];
+      if (media.length === 0 || !coverIdentities.has(getMediaIdentity(media[0]))) {
+        return section;
+      }
+      return {
+        ...section,
+        media: media.length > 1 ? [...media.slice(1), media[0]] : [],
+      };
+    }),
+  };
+}
+
 function renderProject(animateFacts = false) {
   if (!activeProject || !projectRoot) {
     return;
@@ -601,7 +635,10 @@ function renderProject(animateFacts = false) {
   const copy = COPY[activeLanguage];
   const title = getLocalizedProjectText(activeProject, "title", activeLanguage);
   const annotation = getLocalizedProjectText(activeProject, "annotation", activeLanguage);
-  const page = getConcisePage(activeProject);
+  const page = moveCoverDuplicatesBehindCarouselStart(
+    getConcisePage(activeProject),
+    activeProject,
+  );
   const info = page.info;
   const hero = page.hero?.media;
   const fullPresentationUrl = `./year.html?year=${encodeURIComponent(activeProject.year)}&project=${encodeURIComponent(activeProject.slug)}`;
@@ -616,7 +653,7 @@ function renderProject(animateFacts = false) {
   const heading = document.createElement("header");
   heading.className = "concise-project-heading";
   const back = document.createElement("a");
-  back.className = "concise-project-symbol concise-project-back";
+  back.className = "concise-project-symbol concise-project-symbol--star concise-project-back";
   back.href = "./index.html";
   back.textContent = "∗";
   back.setAttribute("aria-label", copy.back);
@@ -770,7 +807,12 @@ function renderProject(animateFacts = false) {
 
   const footer = document.createElement("footer");
   footer.className = "concise-project-footer";
-  footer.hidden = !page.fullPresentation?.enabled || (activeProject.scenes || []).length === 0;
+  const hasEmbeddedPresentation = page.fullPresentation?.enabled
+    && (activeProject.scenes || []).length > 0;
+  const presentationDownload = page.fullPresentation?.download;
+  const hasPresentationContent = page.fullPresentation?.enabled
+    && (hasEmbeddedPresentation || Boolean(presentationDownload?.href));
+  footer.hidden = !hasPresentationContent;
   const presentation = document.createElement("button");
   presentation.type = "button";
   presentation.setAttribute("aria-expanded", "false");
@@ -783,23 +825,42 @@ function renderProject(animateFacts = false) {
   presentationLabel.textContent = getLocalizedText(page.fullPresentation?.label, activeLanguage)
     || copy.fullPresentation;
   presentation.append(plus, presentationLabel);
-  footer.append(presentation);
+  if (hasPresentationContent) {
+    footer.append(presentation);
+  }
+
+  if (presentationDownload?.href) {
+    const download = document.createElement("a");
+    download.className = "concise-project-pdf-download";
+    download.href = presentationDownload.href;
+    download.download = "";
+    download.textContent = getLocalizedText(presentationDownload.label, activeLanguage)
+      || "Download PDF";
+    download.setAttribute("aria-hidden", "true");
+    download.tabIndex = -1;
+    footer.append(download);
+  }
 
   const fullPresentation = document.createElement("section");
   fullPresentation.id = "embeddedFullPresentation";
   fullPresentation.className = "concise-project-full-presentation";
   fullPresentation.hidden = true;
-  const presentationFrame = document.createElement("iframe");
-  presentationFrame.title = copy.fullPresentation;
-  presentationFrame.loading = "lazy";
-  presentationFrame.dataset.src = `${fullPresentationUrl}&embedded=1`;
-  fullPresentation.append(presentationFrame);
+  let presentationFrame = null;
+  if (hasEmbeddedPresentation) {
+    presentationFrame = document.createElement("iframe");
+    presentationFrame.title = copy.fullPresentation;
+    presentationFrame.loading = "lazy";
+    presentationFrame.dataset.src = `${fullPresentationUrl}&embedded=1`;
+    fullPresentation.append(presentationFrame);
+  } else {
+    fullPresentation.classList.add("concise-project-full-presentation--download-only");
+  }
 
   const scrollToPresentation = () => {
     fullPresentation.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  presentationFrame.addEventListener("load", () => {
+  presentationFrame?.addEventListener("load", () => {
     if (presentation.getAttribute("aria-expanded") === "true") {
       presentationFrame.contentWindow?.postMessage(
         { type: "restart-embedded-first-scene" },
@@ -809,12 +870,33 @@ function renderProject(animateFacts = false) {
     }
   });
 
+  let presentationCloseTimer;
   presentation.addEventListener("click", () => {
     const shouldOpen = presentation.getAttribute("aria-expanded") !== "true";
     presentation.setAttribute("aria-expanded", String(shouldOpen));
-    fullPresentation.hidden = !shouldOpen;
     plus.textContent = shouldOpen ? "−" : "+";
-    if (shouldOpen && !presentationFrame.hasAttribute("src")) {
+    window.clearTimeout(presentationCloseTimer);
+    if (shouldOpen) {
+      footer.classList.add("is-presentation-open");
+      const download = footer.querySelector(".concise-project-pdf-download");
+      download?.setAttribute("aria-hidden", "false");
+      if (download) download.tabIndex = 0;
+      fullPresentation.hidden = false;
+      fullPresentation.classList.remove("is-closing");
+      window.requestAnimationFrame(() => fullPresentation.classList.add("is-open"));
+    } else {
+      footer.classList.remove("is-presentation-open");
+      const download = footer.querySelector(".concise-project-pdf-download");
+      download?.setAttribute("aria-hidden", "true");
+      if (download) download.tabIndex = -1;
+      fullPresentation.classList.remove("is-open");
+      fullPresentation.classList.add("is-closing");
+      presentationCloseTimer = window.setTimeout(() => {
+        fullPresentation.hidden = true;
+        fullPresentation.classList.remove("is-closing");
+      }, 460);
+    }
+    if (shouldOpen && presentationFrame && !presentationFrame.hasAttribute("src")) {
       presentationFrame.src = presentationFrame.dataset.src;
     }
     if (shouldOpen) {

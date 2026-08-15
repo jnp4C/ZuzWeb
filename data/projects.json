@@ -127,32 +127,50 @@
             {
               "src": "./assets/project-pages/waterscape/model-1-1800.webp",
               "srcset": "./assets/project-pages/waterscape/model-1-1100.webp 1100w, ./assets/project-pages/waterscape/model-1-1800.webp 1800w",
-              "alt": { "en": "Waterscape model, view 1", "cs": "Model Waterscape, pohled 1" }
+              "alt": {
+                "en": "Waterscape model, view 1",
+                "cs": "Model Waterscape, pohled 1"
+              }
             },
             {
               "src": "./assets/project-pages/waterscape/model-2-1800.webp",
               "srcset": "./assets/project-pages/waterscape/model-2-1100.webp 1100w, ./assets/project-pages/waterscape/model-2-1800.webp 1800w",
-              "alt": { "en": "Waterscape model, view 2", "cs": "Model Waterscape, pohled 2" }
+              "alt": {
+                "en": "Waterscape model, view 2",
+                "cs": "Model Waterscape, pohled 2"
+              }
             },
             {
               "src": "./assets/project-pages/waterscape/model-3-1800.webp",
               "srcset": "./assets/project-pages/waterscape/model-3-1100.webp 1100w, ./assets/project-pages/waterscape/model-3-1800.webp 1800w",
-              "alt": { "en": "Waterscape model, view 3", "cs": "Model Waterscape, pohled 3" }
+              "alt": {
+                "en": "Waterscape model, view 3",
+                "cs": "Model Waterscape, pohled 3"
+              }
             },
             {
               "src": "./assets/project-pages/waterscape/model-4-1800.webp",
               "srcset": "./assets/project-pages/waterscape/model-4-1100.webp 1100w, ./assets/project-pages/waterscape/model-4-1800.webp 1800w",
-              "alt": { "en": "Waterscape model, view 4", "cs": "Model Waterscape, pohled 4" }
+              "alt": {
+                "en": "Waterscape model, view 4",
+                "cs": "Model Waterscape, pohled 4"
+              }
             },
             {
               "src": "./assets/project-pages/waterscape/model-5-1800.webp",
               "srcset": "./assets/project-pages/waterscape/model-5-1100.webp 1100w, ./assets/project-pages/waterscape/model-5-1800.webp 1800w",
-              "alt": { "en": "Waterscape model, view 5", "cs": "Model Waterscape, pohled 5" }
+              "alt": {
+                "en": "Waterscape model, view 5",
+                "cs": "Model Waterscape, pohled 5"
+              }
             },
             {
               "src": "./assets/project-pages/waterscape/model-6-1800.webp",
               "srcset": "./assets/project-pages/waterscape/model-6-1100.webp 1100w, ./assets/project-pages/waterscape/model-6-1800.webp 1800w",
-              "alt": { "en": "Waterscape model, view 6", "cs": "Model Waterscape, pohled 6" }
+              "alt": {
+                "en": "Waterscape model, view 6",
+                "cs": "Model Waterscape, pohled 6"
+              }
             }
           ]
         }
@@ -165,7 +183,14 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/waterscape.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": 2022,
@@ -219,9 +244,24 @@
             "srcset": "./assets/project-pages/waterscape/presentation-1-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-1-1800.webp 1800w",
             "sizes": "min(96vw, 1180px)",
             "displayWidthRatio": 0.92,
-            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
-            "enter": { "x": -520, "y": 0, "scale": 1, "opacity": 0 },
-            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
             "delay": 0,
             "enterDuration": 0.62,
             "exitStart": 0.98,
@@ -240,9 +280,24 @@
             "srcset": "./assets/project-pages/waterscape/presentation-2-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-2-1800.webp 1800w",
             "sizes": "min(96vw, 1180px)",
             "displayWidthRatio": 0.92,
-            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
-            "enter": { "x": 520, "y": 0, "scale": 1, "opacity": 0 },
-            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
             "delay": 0,
             "enterDuration": 0.62,
             "exitStart": 0.98,
@@ -261,9 +316,24 @@
             "srcset": "./assets/project-pages/waterscape/presentation-3-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-3-1800.webp 1800w",
             "sizes": "min(96vw, 1180px)",
             "displayWidthRatio": 0.92,
-            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
-            "enter": { "x": -520, "y": 0, "scale": 1, "opacity": 0 },
-            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": -520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
             "delay": 0,
             "enterDuration": 0.62,
             "exitStart": 0.98,
@@ -282,9 +352,24 @@
             "srcset": "./assets/project-pages/waterscape/presentation-4-1100.webp 1100w, ./assets/project-pages/waterscape/presentation-4-1800.webp 1800w",
             "sizes": "min(96vw, 1180px)",
             "displayWidthRatio": 0.92,
-            "base": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
-            "enter": { "x": 520, "y": 0, "scale": 1, "opacity": 0 },
-            "exit": { "x": 0, "y": 0, "scale": 1, "opacity": 1 },
+            "base": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
+            "enter": {
+              "x": 520,
+              "y": 0,
+              "scale": 1,
+              "opacity": 0
+            },
+            "exit": {
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "opacity": 1
+            },
             "delay": 0,
             "enterDuration": 0.62,
             "exitStart": 0.98,
@@ -309,8 +394,8 @@
         "cs": "STROM S DUCHEM VÁNOC"
       },
       "context": {
-        "en": "collaboration",
-        "cs": "spolupráce"
+        "en": "open call, collaboration",
+        "cs": "opencall, spoluautorství"
       },
       "highlights": []
     },
@@ -318,7 +403,7 @@
       "cs": {
         "title": "STROM S DUCHEM VÁNOC",
         "description": null,
-        "annotation": null
+        "annotation": "Stejně jako se Holešovická Tržnice liší od klasických nákupních center, hledali jsme i my alternativu k jejich typickému způsobu výzdoby. Zvolili jsme proto jednoduchost a přírodní materiály, které zdobné budovy tržnice jemně doplní.\n\nKonstrukce je odkazem na tradiční doškové střechy, doplněné o moderní technologie. V doškách jsou totiž kromě rákosu i optická vlákna, díky nimž strom při soumraku kouzelně ožívá. Možná se bude zdát, že světélkují samotné konce stébel. Že by je rozsvěcel Duch Vánoc?\n\nNávrh byl vytvořen pro OPEN CALL – Vánoční strom v Holešovické tržnici, otevřenou výzvu pořádanou GHMP v rámci programu Umění pro město."
       }
     },
     "projectPage": {
@@ -366,21 +451,28 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/tree-with-the-spirit-of-christmas.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": 2026,
         "scale": {
-          "en": "installation",
-          "cs": "instalace"
+          "en": "small scale",
+          "cs": "malé měřítko"
         },
         "processing": {
-          "en": "GHMP Opencall, group project",
-          "cs": "GHMP Opencall, skupinový projekt"
+          "en": "installation design",
+          "cs": "návrh instalace"
         },
         "type": {
-          "en": "landscape installation",
-          "cs": "krajinářská instalace"
+          "en": "open call",
+          "cs": "opencall"
         },
         "collaborators": [
           "ING. DAVID ŠMÍD"
@@ -397,7 +489,7 @@
     "location": "Prague, CZ",
     "year": 2026,
     "description": "Group project for the GHMP Opencall.",
-    "annotation": "A group project prepared for the GHMP Opencall.",
+    "annotation": "Just as Holešovice Market differs from conventional shopping centres, we sought an alternative to their typical style of Christmas decoration. We chose simplicity and natural materials to subtly complement the market's ornate buildings.\n\nThe construction refers to traditional thatched roofs while incorporating modern technology. Alongside reeds, the thatch contains optical fibres that make the tree magically come alive at dusk, as if the tips of the stalks themselves were glowing. Could it be the Spirit of Christmas lighting them?\n\nThe proposal was created for OPEN CALL – Christmas Tree at Holešovice Market, organized by GHMP as part of the Art for the City programme.",
     "scenes": [
       {
         "type": "annotation",
@@ -1701,15 +1793,15 @@
       "order": 8,
       "scale": {
         "en": "large scale",
-        "cs": "velké"
+        "cs": "velké měřítko"
       },
       "title": {
         "en": "ABSTRACT.",
         "cs": "ABSTRACT."
       },
       "context": {
-        "en": "Lund University, Erasmus",
-        "cs": "Lund University, Erasmus"
+        "en": "studio project, Erasmus",
+        "cs": "školní práce, Erasmus"
       },
       "highlights": []
     },
@@ -1765,7 +1857,14 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/abstract.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": 2025,
@@ -1774,12 +1873,12 @@
           "cs": "velké měřítko"
         },
         "processing": {
-          "en": "individual project",
-          "cs": "individuální projekt"
+          "en": "study",
+          "cs": "studie"
         },
         "type": {
-          "en": "urban design",
-          "cs": "urbanistický návrh"
+          "en": "studio project",
+          "cs": "školní práce"
         },
         "collaborators": []
       },
@@ -7583,11 +7682,8 @@
       },
       "highlights": [
         {
-          "type": "award",
-          "label": {
-            "en": "Award",
-            "cs": "Ocenění"
-          }
+          "en": "award",
+          "cs": "ocenění"
         }
       ]
     },
@@ -7607,15 +7703,8 @@
       },
       "awards": [
         {
-          "label": {
-            "en": "Award",
-            "cs": "Ocenění"
-          },
-          "detail": {
-            "en": "2025 LAURUS AWARDS\nLandscape Gesture category",
-            "cs": null
-          },
-          "href": "https://www.fa.cvut.cz/en/events/144465-2025-laurus-awards-announced"
+          "en": "Laurus 2025 — winner, Landscape Gesture category",
+          "cs": "Laurus 2025 — vítěz v kategorii KRAJINÁŘSKÉ GESTO"
         }
       ],
       "featuredSections": [
@@ -7655,7 +7744,14 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/growing-through.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": 2024,
@@ -7664,8 +7760,8 @@
           "cs": "malé měřítko"
         },
         "processing": {
-          "en": "studio project, group project",
-          "cs": "školní práce, skupinový projekt"
+          "en": "installation design",
+          "cs": "návrh instalace"
         },
         "type": {
           "en": "landscape installation",
@@ -8122,7 +8218,14 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/cycle-of-change.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": "2022–2023",
@@ -9372,23 +9475,20 @@
       "order": 3,
       "scale": {
         "en": "large scale",
-        "cs": "velké"
+        "cs": "velké měřítko"
       },
       "title": {
         "en": "CONCEPT OF SEMNĚVICE LANDSCAPE",
         "cs": "KONCEPCE KRAJINY SEMNĚVIC"
       },
       "context": {
-        "en": "FA CTU, collaboration",
-        "cs": "FA ČVUT, spolupráce"
+        "en": "studio project, collaboration",
+        "cs": "školní práce, spoluautorství"
       },
       "highlights": [
         {
-          "type": "award",
-          "label": {
-            "en": "Award",
-            "cs": "Ocenění"
-          }
+          "en": "award",
+          "cs": "ocenění"
         }
       ]
     },
@@ -9449,7 +9549,10 @@
             {
               "src": "./assets/project-pages/semnevice/iso-1800.webp",
               "srcset": "./assets/project-pages/semnevice/iso-1200.webp 1200w, ./assets/project-pages/semnevice/iso-1800.webp 1800w",
-              "alt": { "en": "Exploded isometric landscape concept for Semněvice", "cs": "Rozložená izometrie koncepce krajiny Semněvic" }
+              "alt": {
+                "en": "Exploded isometric landscape concept for Semněvice",
+                "cs": "Rozložená izometrie koncepce krajiny Semněvic"
+              }
             }
           ]
         },
@@ -9464,7 +9567,10 @@
             {
               "src": "./assets/project-pages/semnevice/masterplan-1800.webp",
               "srcset": "./assets/project-pages/semnevice/masterplan-1200.webp 1200w, ./assets/project-pages/semnevice/masterplan-1800.webp 1800w",
-              "alt": { "en": "Landscape masterplan for Semněvice", "cs": "Masterplan koncepce krajiny Semněvic" }
+              "alt": {
+                "en": "Landscape masterplan for Semněvice",
+                "cs": "Masterplan koncepce krajiny Semněvic"
+              }
             }
           ]
         },
@@ -9479,12 +9585,18 @@
             {
               "src": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1800.jpg",
               "srcset": "./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/37-semnevice-swot-s-w-map-1800.jpg 1800w",
-              "alt": { "en": "Strengths and weaknesses map of Semněvice", "cs": "Mapa silných a slabých stránek Semněvic" }
+              "alt": {
+                "en": "Strengths and weaknesses map of Semněvice",
+                "cs": "Mapa silných a slabých stránek Semněvic"
+              }
             },
             {
               "src": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1800.jpg",
               "srcset": "./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/38-semnevice-swot-o-t-map-1800.jpg 1800w",
-              "alt": { "en": "Opportunities and threats map of Semněvice", "cs": "Mapa příležitostí a hrozeb Semněvic" }
+              "alt": {
+                "en": "Opportunities and threats map of Semněvice",
+                "cs": "Mapa příležitostí a hrozeb Semněvic"
+              }
             }
           ]
         }
@@ -9497,7 +9609,14 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/concept-of-semnevice-landscape.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": 2023,
@@ -9526,7 +9645,10 @@
         "media": {
           "src": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg",
           "srcset": "./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1200.jpg 1200w, ./assets/generated/concept-of-semnevice-landscape/01-semnevice-cover-1800.jpg 1800w",
-          "alt": { "en": "Semněvice landscape concept cover drawing", "cs": "Úvodní kresba koncepce krajiny Semněvic" }
+          "alt": {
+            "en": "Semněvice landscape concept cover drawing",
+            "cs": "Úvodní kresba koncepce krajiny Semněvic"
+          }
         },
         "allowLandscapeExpansion": true,
         "mobilePosition": "after-annotation"
@@ -12650,8 +12772,8 @@
         "cs": "REVODALIZACE"
       },
       "context": {
-        "en": "FA CTU, individual",
-        "cs": "FA ČVUT, samostatná práce"
+        "en": "studio project",
+        "cs": "školní práce"
       },
       "highlights": []
     },
@@ -12682,7 +12804,10 @@
             {
               "src": "./assets/generated/rewaterization/02-process-1300.jpg",
               "srcset": "./assets/generated/rewaterization/02-process-900.jpg 900w, ./assets/generated/rewaterization/02-process-1300.jpg 1300w",
-              "alt": { "en": "Diagram of the Rewaterization design process", "cs": "Schéma procesu návrhu Revodalizace" }
+              "alt": {
+                "en": "Diagram of the Rewaterization design process",
+                "cs": "Schéma procesu návrhu Revodalizace"
+              }
             }
           ]
         },
@@ -12697,7 +12822,10 @@
             {
               "src": "./assets/generated/rewaterization/10-diagram-1800.jpg",
               "srcset": "./assets/generated/rewaterization/10-diagram-1200.jpg 1200w, ./assets/generated/rewaterization/10-diagram-1800.jpg 1800w",
-              "alt": { "en": "Diagram of water-regime and landscape principles", "cs": "Schéma principů vodního režimu a krajiny" }
+              "alt": {
+                "en": "Diagram of water-regime and landscape principles",
+                "cs": "Schéma principů vodního režimu a krajiny"
+              }
             }
           ]
         },
@@ -12712,12 +12840,18 @@
             {
               "src": "./assets/generated/rewaterization/20-bottom-left-1300.jpg",
               "srcset": "./assets/generated/rewaterization/20-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/20-bottom-left-1300.jpg 1300w",
-              "alt": { "en": "Technical design of stream barriers", "cs": "Technické řešení přehrážek v toku" }
+              "alt": {
+                "en": "Technical design of stream barriers",
+                "cs": "Technické řešení přehrážek v toku"
+              }
             },
             {
               "src": "./assets/generated/rewaterization/21-bottom-left-1300.jpg",
               "srcset": "./assets/generated/rewaterization/21-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/21-bottom-left-1300.jpg 1300w",
-              "alt": { "en": "Alternative stream-barrier construction", "cs": "Alternativní konstrukce přehrážek v toku" }
+              "alt": {
+                "en": "Alternative stream-barrier construction",
+                "cs": "Alternativní konstrukce přehrážek v toku"
+              }
             }
           ]
         }
@@ -12730,17 +12864,24 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/rewaterization.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": 2023,
         "scale": {
-          "en": "large scale",
-          "cs": "velké měřítko"
+          "en": "medium scale",
+          "cs": "střední měřítko"
         },
         "processing": {
-          "en": "studio project, individual, part of group concept",
-          "cs": "školní práce, individuální projekt, součást skupinové koncepce"
+          "en": "study",
+          "cs": "studie"
         },
         "type": {
           "en": "studio project",
@@ -12752,7 +12893,10 @@
         "media": {
           "src": "./assets/generated/rewaterization/01-full-1800.jpg",
           "srcset": "./assets/generated/rewaterization/01-full-1200.jpg 1200w, ./assets/generated/rewaterization/01-full-1800.jpg 1800w",
-          "alt": { "en": "Rewaterization proposal for the Semněvice landscape", "cs": "Návrh Revodalizace krajiny Semněvic" }
+          "alt": {
+            "en": "Rewaterization proposal for the Semněvice landscape",
+            "cs": "Návrh Revodalizace krajiny Semněvic"
+          }
         },
         "allowLandscapeExpansion": true,
         "mobilePosition": "after-annotation"
@@ -14494,15 +14638,15 @@
       "order": 5,
       "scale": {
         "en": "small scale + documentation",
-        "cs": "malé + dokumentace"
+        "cs": "malé měřítko + dokumentace"
       },
       "title": {
         "en": "STEEP GARDEN",
         "cs": "ZAHRADA VE SVAHU"
       },
       "context": {
-        "en": "FA CTU, individual",
-        "cs": "FA ČVUT, samostatná práce"
+        "en": "studio project",
+        "cs": "školní práce"
       },
       "highlights": []
     },
@@ -14558,21 +14702,28 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/steep-garden.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
-        "year": 2023,
+        "year": 2024,
         "scale": {
-          "en": "small scale + documentation",
-          "cs": "malé měřítko + dokumentace"
+          "en": "small scale",
+          "cs": "malé měřítko"
         },
         "processing": {
-          "en": "studio project, individual, private commission",
-          "cs": "školní práce, individuální projekt, soukromá zakázka"
+          "en": "study + documentation",
+          "cs": "studie + dokumentace"
         },
         "type": {
-          "en": "garden design",
-          "cs": "návrh zahrady"
+          "en": "studio project",
+          "cs": "školní práce"
         },
         "collaborators": []
       },
@@ -16080,16 +16231,13 @@
         "cs": "MEZI VŠÍM"
       },
       "context": {
-        "en": "Pokoje 2024, collaboration",
-        "cs": "Pokoje 2024, spolupráce"
+        "en": "Pokoje exhibition, collaboration",
+        "cs": "přehlídka Pokoje, spoluautorství"
       },
       "highlights": [
         {
-          "type": "realization",
-          "label": {
-            "en": "Realized",
-            "cs": "Realizace"
-          }
+          "en": "realization",
+          "cs": "realizace"
         }
       ]
     },
@@ -16110,14 +16258,21 @@
       "awards": [],
       "featuredSections": [],
       "fullPresentation": {
-        "enabled": false,
+        "enabled": true,
         "source": "scenes",
         "label": {
           "en": "Full presentation",
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/mezi-vsim.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": 2024,
@@ -16182,15 +16337,15 @@
       "order": 10,
       "scale": {
         "en": "large scale",
-        "cs": "velké"
+        "cs": "velké měřítko"
       },
       "title": {
         "en": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS",
         "cs": "NOVÁ KRAJINA VYSOKORYCHLOSTNÍCH TRATÍ"
       },
       "context": {
-        "en": "FA CTU, diploma thesis",
-        "cs": "FA ČVUT, diplomová práce"
+        "en": "diploma thesis",
+        "cs": "diplomová práce"
       },
       "highlights": []
     },
@@ -16211,14 +16366,21 @@
       "awards": [],
       "featuredSections": [],
       "fullPresentation": {
-        "enabled": false,
+        "enabled": true,
         "source": "scenes",
         "label": {
           "en": "Full presentation",
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus"
+        "control": "plus",
+        "download": {
+          "href": "./assets/presentations/new-landscape-of-high-speed-railways.pdf",
+          "label": {
+            "en": "Download presentation",
+            "cs": "Stáhnout prezentaci"
+          }
+        }
       },
       "info": {
         "year": "2025–2026",
@@ -16295,11 +16457,8 @@
       },
       "highlights": [
         {
-          "type": "realization",
-          "label": {
-            "en": "Realization",
-            "cs": "Realizace"
-          }
+          "en": "realization",
+          "cs": "realizace"
         }
       ]
     },

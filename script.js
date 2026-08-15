@@ -24,7 +24,12 @@ const indexNameAnimation = document.getElementById("indexNameAnimation");
 const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 const INDEX_OPENING_SPEED = 0.6;
-const DATA_CACHE_VERSION = "2026-08-01-index-project-preview";
+const MOBILE_DRAWER_LAYOUT = window.matchMedia("(max-width: 720px)");
+const CV_DESKTOP_GEOMETRY_SETTLE_MS = 2100;
+const CV_DESKTOP_ROPE_SEGMENT_STAGGER_MS = 110;
+const CV_DESKTOP_ROPE_SEGMENT_DURATION_MS = 620;
+const CV_DESKTOP_INTRO_END_MS = 3400;
+const DATA_CACHE_VERSION = "2026-08-14-real-project-content-downloads";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -73,8 +78,14 @@ function renderCvRope(elapsed = Number.POSITIVE_INFINITY, reactiveWobble = 0) {
     const startY = markerBounds.top + (markerBounds.height / 2) - lineBounds.top;
     const endX = nextBounds.left + (nextBounds.width / 2) - lineBounds.left;
     const endY = nextBounds.top + (nextBounds.height / 2) - lineBounds.top;
-    const segmentStart = (1990 + (index * 140)) * INDEX_OPENING_SPEED;
-    const progress = Math.min(1, Math.max(0, (elapsed - segmentStart) / (1150 * INDEX_OPENING_SPEED)));
+    const usesStableDesktopTimeline = !MOBILE_DRAWER_LAYOUT.matches;
+    const segmentStart = usesStableDesktopTimeline
+      ? CV_DESKTOP_GEOMETRY_SETTLE_MS + (index * CV_DESKTOP_ROPE_SEGMENT_STAGGER_MS)
+      : (1990 + (index * 140)) * INDEX_OPENING_SPEED;
+    const segmentDuration = usesStableDesktopTimeline
+      ? CV_DESKTOP_ROPE_SEGMENT_DURATION_MS
+      : 1150 * INDEX_OPENING_SPEED;
+    const progress = Math.min(1, Math.max(0, (elapsed - segmentStart) / segmentDuration));
     const easedProgress = 1 - ((1 - progress) ** 3);
     const segmentLength = Math.max(0, endY - startY);
     const finalSag = Math.min(20, Math.max(8, segmentLength * 0.12));
@@ -118,7 +129,10 @@ function startCvRopeAnimation() {
       ? Math.sin(liveReactionProgress * Math.PI * 4) * 9 * ((1 - liveReactionProgress) ** 2)
       : 0;
     renderCvRope(elapsed, liveReaction);
-    if (elapsed < 5800 * INDEX_OPENING_SPEED && cvDetails && !cvDetails.hidden) {
+    const introEnd = MOBILE_DRAWER_LAYOUT.matches
+      ? 5800 * INDEX_OPENING_SPEED
+      : CV_DESKTOP_INTRO_END_MS;
+    if (elapsed < introEnd && cvDetails && !cvDetails.hidden) {
       cvRopeAnimationFrame = window.requestAnimationFrame(drawFrame);
     } else {
       cvRopeIsIntroAnimating = false;
@@ -254,8 +268,10 @@ function initInfoToggle() {
     infoToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(infoClosingTimer);
     if (shouldOpen) {
-      setProjectsOpen(false, true);
-      setCvOpen(false, true);
+      if (!MOBILE_DRAWER_LAYOUT.matches) {
+        setProjectsOpen(false, true);
+        setCvOpen(false, true);
+      }
       infoDetails.hidden = false;
       infoRows.forEach((row) => row.classList.remove("has-user-previewed"));
       infoDetails.classList.remove("is-open", "is-closing");
@@ -307,8 +323,10 @@ function initProjectsToggle() {
     window.clearTimeout(introTimer);
 
     if (shouldOpen) {
-      setInfoOpen(false, true);
-      setCvOpen(false, true);
+      if (!MOBILE_DRAWER_LAYOUT.matches) {
+        setInfoOpen(false, true);
+        setCvOpen(false, true);
+      }
       projectsPanel.hidden = false;
       projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
         link.classList.remove("has-user-previewed", "skip-language-reveal");
@@ -369,8 +387,10 @@ function initCvToggle() {
     window.clearTimeout(cvClosingTimer);
 
     if (shouldOpen) {
-      setProjectsOpen(false, true);
-      setInfoOpen(false, true);
+      if (!MOBILE_DRAWER_LAYOUT.matches) {
+        setProjectsOpen(false, true);
+        setInfoOpen(false, true);
+      }
       cvItems.forEach((item) => item.classList.remove("has-user-previewed"));
       cvDetails.hidden = false;
       cvDetails.classList.remove("is-closing");
@@ -529,7 +549,7 @@ function createProjectIndexItem(project, order) {
   (project.index?.highlights || []).forEach((highlight) => {
     const badge = document.createElement("span");
     badge.className = `project-index-detail project-index-highlight project-index-highlight--${highlight.type || "note"}`;
-    badge.textContent = createLocalizedText(highlight.label);
+    badge.textContent = createLocalizedText(highlight.label || highlight);
     link.append(badge);
   });
 

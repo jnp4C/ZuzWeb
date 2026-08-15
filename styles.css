@@ -822,8 +822,9 @@ h3,
 
 .concise-project-footer {
   display: flex;
-  min-height: 4.3rem;
   align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  min-height: 4.3rem;
   margin-top: clamp(4rem, 12vw, 10rem);
 }
 
@@ -863,6 +864,7 @@ h3,
 }
 
 .concise-project-full-presentation {
+  position: relative;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
@@ -871,6 +873,61 @@ h3,
   background: var(--surface);
   overflow: hidden;
   scroll-margin-top: 0;
+}
+
+.concise-project-full-presentation--download-only {
+  height: auto;
+  min-height: clamp(8rem, 18vw, 14rem);
+}
+
+.concise-project-footer .concise-project-pdf-download {
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 0;
+  height: 2.25rem;
+  padding: 0;
+  border: 0 solid #000;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: var(--type-medium);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateX(-1rem) scaleX(0.85);
+  transform-origin: left center;
+  transition:
+    max-width 420ms cubic-bezier(0.65, 0, 0.35, 1),
+    padding 420ms cubic-bezier(0.65, 0, 0.35, 1),
+    border-width 420ms cubic-bezier(0.65, 0, 0.35, 1),
+    transform 420ms cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 120ms linear;
+}
+
+.concise-project-footer.is-presentation-open .concise-project-pdf-download {
+  max-width: 18rem;
+  padding: 0 1.25rem;
+  border-width: 2px;
+  opacity: 1;
+  transform: translateX(0) scaleX(1);
+}
+
+.concise-project-pdf-download:hover,
+.concise-project-pdf-download:focus-visible {
+  background: #fff;
+  color: #000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-pdf-download {
+    transition: none;
+  }
 }
 
 .concise-project-full-presentation iframe {
@@ -920,7 +977,7 @@ h3,
   .concise-project-symbol {
     width: 2.25rem;
     height: 2.25rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .concise-project-nav {
@@ -1334,6 +1391,23 @@ main,
   color: var(--surface);
   font-size: 2rem;
   line-height: 1;
+  transition: color 120ms ease;
+}
+
+/* Keep the thin desktop star and correct mobile font-baseline centering. */
+.project-index-symbol--star,
+.concise-project-symbol--star {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 0;
+  padding-bottom: 0.06em;
+}
+
+/* Once an index drawer becomes a line, remove the pale glyph from its origin
+   so it cannot read as a cross cutting through the connector. */
+.project-index-root[aria-expanded="true"] > .project-index-symbol,
+.project-index-destination-heading[aria-expanded="true"] > .project-index-symbol {
+  color: transparent;
 }
 
 .project-index-key {
@@ -2063,6 +2137,10 @@ main,
   --cv-order: 4;
 }
 
+.project-index-cv-content.is-open .cv-item:nth-of-type(6) {
+  --cv-order: 5;
+}
+
 .project-index-cv-content.is-open .cv-item:not(.has-user-previewed) .cv-date,
 .project-index-cv-content.is-open .cv-item:not(.has-user-previewed) .cv-copy p {
   animation: project-index-detail-wave 2400ms cubic-bezier(0.4, 0, 0.2, 1) backwards;
@@ -2476,6 +2554,22 @@ main,
 .project-index-cv-content.is-open .cv-item:nth-of-type(4) { animation-delay: 1362ms; }
 .project-index-cv-content.is-open .cv-item:nth-of-type(5) { animation-delay: 1446ms; }
 .project-index-cv-content.is-open .cv-item:nth-of-type(6) { animation-delay: 1530ms; }
+
+/* Desktop CV geometry must finish expanding before markers and their rope are
+   revealed. This prevents the SVG from redrawing against moving endpoints. */
+@media (min-width: 721px) {
+  .project-index-cv-content.is-open .cv-item:nth-of-type(1) { animation-delay: 2100ms; }
+  .project-index-cv-content.is-open .cv-item:nth-of-type(2) { animation-delay: 2210ms; }
+  .project-index-cv-content.is-open .cv-item:nth-of-type(3) { animation-delay: 2320ms; }
+  .project-index-cv-content.is-open .cv-item:nth-of-type(4) { animation-delay: 2430ms; }
+  .project-index-cv-content.is-open .cv-item:nth-of-type(5) { animation-delay: 2540ms; }
+  .project-index-cv-content.is-open .cv-item:nth-of-type(6) { animation-delay: 2650ms; }
+
+  .project-index-cv-content.is-open .cv-item:not(.has-user-previewed) .cv-date,
+  .project-index-cv-content.is-open .cv-item:not(.has-user-previewed) .cv-copy p {
+    animation-delay: calc(2460ms + (var(--cv-order) * 110ms) + var(--cv-detail-delay, 0ms));
+  }
+}
 
 .project-index-cv-content.is-open .cv-line::before {
   animation-duration: 720ms;
@@ -4953,7 +5047,7 @@ main,
   .project-index-destination-heading > .project-index-symbol {
     width: 2.25rem;
     height: 2.25rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .project-index-root,
@@ -5120,7 +5214,7 @@ main,
     flex-basis: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .project-index-branch {
@@ -5308,6 +5402,13 @@ main,
   background: transparent;
 }
 
+/* The animation source has an opaque white matte; multiply makes that matte
+   visually transparent while preserving the black handwriting and landscape. */
+.index-page .signature-animation,
+.concise-project-page .signature-animation {
+  mix-blend-mode: multiply;
+}
+
 .index-page .signature-poster,
 .concise-project-page .signature-poster {
   display: none;
@@ -5343,5 +5444,24 @@ main,
 
   .index-page .project-index {
     padding-top: clamp(0.25rem, 1.5vw, 0.55rem);
+  }
+
+  /* Reserve the completed row geometry from the first frame. Only the ink
+     reveals, so long titles cannot cause the project tree to jump or reflow. */
+  .project-index.is-projects-intro-active .project-index-link:not(.has-user-previewed) .project-index-detail:not(.project-index-scale) {
+    max-width: none;
+    opacity: 0;
+    overflow: visible;
+    transform: translateY(-0.3rem);
+    animation: mobile-project-detail-in 420ms ease forwards;
+    animation-delay: calc(1280ms + (var(--project-order) * 85ms) + var(--detail-delay, 0ms));
+    transition: none;
+  }
+}
+
+@keyframes mobile-project-detail-in {
+  to {
+    opacity: 1;
+    transform: none;
   }
 }

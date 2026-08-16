@@ -5361,7 +5361,7 @@ main,
   transform-origin: top;
 }
 
-.index-page .project-index:not(.is-projects-open) .project-index-destination::before {
+.index-page .project-index:not(.is-projects-open):not(.is-projects-closing) .project-index-destination::before {
   top: -1.25rem;
   left: 0;
   height: calc(1.25rem + 2.125rem);

@@ -5129,6 +5129,10 @@ main,
     min-height: clamp(3.5rem, 16vw, 4.25rem);
   }
 
+  .project-index-key {
+    left: 2.75rem;
+  }
+
   .project-index-branch,
   .index-page .project-index-branch {
     width: calc(100vw - (2 * var(--index-page-gutter)));

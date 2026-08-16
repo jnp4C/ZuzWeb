@@ -5608,7 +5608,8 @@ main,
 }
 
 .project-index-cv-content-inner {
-  padding: clamp(1.5rem, 3vw, 2.75rem) 0 clamp(3rem, 8vw, 7rem);
+  margin-left: -2rem;
+  padding: clamp(1.5rem, 3vw, 2.75rem) 0 clamp(3rem, 8vw, 7rem) 2rem;
 }
 
 .project-index-cv .cv-section {

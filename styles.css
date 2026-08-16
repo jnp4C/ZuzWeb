@@ -1450,6 +1450,7 @@ main,
 /* Draw the star at a fixed optical size. A font glyph rendered noticeably
    smaller in iOS Safari than in desktop browser emulation. */
 .project-index-symbol--star,
+.project-index-destination-heading > .project-index-symbol.project-index-symbol--star,
 .concise-project-symbol--star {
   font-size: 0;
   line-height: 1;
@@ -1458,10 +1459,14 @@ main,
 .project-index-symbol--star::before,
 .concise-project-symbol--star::before {
   content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.15rem;
+  height: 1.15rem;
   background: currentColor;
+  transform: translate(-50%, -50%);
   clip-path: polygon(
     42% 0, 58% 0, 58% 35%, 88% 18%, 96% 32%, 66% 49%,
     96% 66%, 88% 80%, 58% 63%, 58% 100%, 42% 100%, 42% 63%,

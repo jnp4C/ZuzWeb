@@ -611,10 +611,12 @@ function createHighlightedProjectText(page, language, copy) {
   block.className = "concise-project-highlight";
   entries.forEach(({ label, detail, href }) => {
     const paragraph = document.createElement("p");
+    const mark = document.createElement("span");
+    mark.className = "concise-project-highlight-mark";
     if (label) {
       const heading = document.createElement("strong");
       heading.textContent = `${label}:`;
-      paragraph.append(heading, document.createTextNode(" "));
+      mark.append(heading, document.createTextNode(" "));
     }
     if (href) {
       const link = document.createElement("a");
@@ -622,10 +624,11 @@ function createHighlightedProjectText(page, language, copy) {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       link.textContent = detail;
-      paragraph.append(link);
+      mark.append(link);
     } else {
-      paragraph.append(document.createTextNode(detail));
+      mark.append(document.createTextNode(detail));
     }
+    paragraph.append(mark);
     block.append(paragraph);
   });
   return block;

@@ -513,12 +513,12 @@ h3,
 .concise-project-highlight {
   width: 100%;
   max-width: 62ch;
-  padding: clamp(0.75rem, 1.5vw, 1rem);
-  background: var(--text);
-  color: var(--surface);
+  padding: 0;
+  background: transparent;
+  color: var(--text);
   font-family: var(--font-text);
   font-size: clamp(var(--type-small), 1.05vw, 0.98rem);
-  line-height: 1.5;
+  line-height: 1.65;
   text-align: justify;
   text-wrap: pretty;
   white-space: pre-line;
@@ -529,7 +529,15 @@ h3,
 }
 
 .concise-project-highlight p + p {
-  margin-top: 0.7em;
+  margin-top: 0.35em;
+}
+
+.concise-project-highlight-mark {
+  padding: 0.12em 0.28em;
+  background: var(--text);
+  box-decoration-break: clone;
+  color: var(--surface);
+  -webkit-box-decoration-break: clone;
 }
 
 .concise-project-highlight strong {

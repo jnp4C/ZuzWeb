@@ -5117,6 +5117,11 @@ main,
     font-size: 1.5rem;
   }
 
+  .project-index-root[aria-expanded="true"] > .project-index-symbol,
+  .project-index-destination-heading[aria-expanded="true"] > .project-index-symbol {
+    color: var(--surface);
+  }
+
   .project-index-root,
   .project-index-destination-heading,
   .project-index-info-toggle {

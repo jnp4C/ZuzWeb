@@ -934,9 +934,9 @@ function renderProject(animateFacts = false) {
     download.setAttribute("aria-label", downloadLabel);
     download.title = downloadLabel;
     const downloadIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    downloadIcon.setAttribute("viewBox", "0 0 24 24");
+    downloadIcon.setAttribute("viewBox", "0 0 30 30");
     downloadIcon.setAttribute("aria-hidden", "true");
-    downloadIcon.innerHTML = '<path d="M12 3v12m-5-5 5 5 5-5M5 20h14" />';
+    downloadIcon.innerHTML = '<path d="M15 1v19M7 12l8 8 8-8M1 29h28" />';
     download.append(downloadIcon);
     download.setAttribute("aria-hidden", "true");
     download.tabIndex = -1;

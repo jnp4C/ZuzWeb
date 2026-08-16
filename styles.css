@@ -6210,20 +6210,20 @@ main,
 }
 
 .concise-project-nav-triangles i {
-  border-top-width: 10px;
-  border-bottom-width: 10px;
+  border-top-width: 15px;
+  border-bottom-width: 15px;
 }
 
 .concise-project-nav-link--next .concise-project-nav-triangles i {
-  border-left-width: 12px;
+  border-left-width: 14px;
 }
 
 .concise-project-nav-link--previous .concise-project-nav-triangles i {
-  border-right-width: 12px;
+  border-right-width: 14px;
 }
 
 .concise-project-scroll-top-triangles i {
-  border-right-width: 10px;
-  border-bottom-width: 12px;
-  border-left-width: 10px;
+  border-right-width: 15px;
+  border-bottom-width: 14px;
+  border-left-width: 15px;
 }

@@ -825,13 +825,13 @@ h3,
   align-items: center;
   justify-content: flex-end;
   gap: 0.2rem;
-  margin-left: auto;
+  margin-left: 0;
 }
 
 .concise-project-carousel-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   min-height: 2rem;
   padding-top: 0.55rem;

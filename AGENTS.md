@@ -202,10 +202,10 @@ project-specific landscape background rather than inventing a separate layout.
 - Carousels autoplay in a continuous right-to-left horizontal swipe. Manual
   dot selection may move in either direction. Pause autoplay for pointer hover
   or keyboard interaction and disable autoplay/transitions for reduced motion.
-- Use one pagination dot per carousel image below the frame at its right corner,
-  aligned in one row with the left-side section label. Dots are outlined by
-  default and solid black when selected; selecting a dot moves directly to its
-  image. Do not add previous/next arrows or a textual slide counter.
+- Use one pagination dot per carousel image in the centered row below the
+  frame, grouped beside the section label. Dots are outlined by default and
+  solid black when selected; selecting a dot moves directly to its image. Do
+  not add previous/next arrows or a textual slide counter.
 - Keep the carousel frame monochrome and responsive. Recalculate branch
   geometry when the frame or viewport resizes so the line remains connected.
 

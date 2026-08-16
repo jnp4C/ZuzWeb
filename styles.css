@@ -6273,6 +6273,21 @@ main,
   line-height: 30px;
 }
 
+.index-page .project-index-cv .cv-section {
+  display: grid;
+}
+
+.index-page .project-index-cv .cv-section > h3,
+.index-page .project-index-cv .cv-section-content {
+  grid-area: 1 / 1;
+}
+
+.index-page .project-index-cv .cv-section > h3 {
+  position: relative;
+  align-self: start;
+  justify-self: start;
+}
+
 @media (max-width: 480px) {
   .index-page #cvTitle {
     padding-inline: 12.2px;

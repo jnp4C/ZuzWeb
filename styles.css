@@ -5303,7 +5303,8 @@ main,
   --index-connector-easing: cubic-bezier(0.22, 0.8, 0.2, 1);
   --index-connector-duration: 380ms;
   --index-spine-duration: 1080ms;
-  --index-spine-delay: 960ms;
+  --index-spine-bridge-duration: 380ms;
+  --index-spine-delay: 0ms;
 }
 
 .index-page .project-index-frame {
@@ -5378,7 +5379,7 @@ main,
 .index-page .project-index-root[aria-expanded="true"] .project-index-heading::before,
 .index-page .project-index-info-toggle[aria-expanded="true"] .project-index-destination-title::before,
 .index-page .project-index-cv-toggle[aria-expanded="true"] h2::before {
-  animation: consume-index-connector var(--index-connector-duration) var(--index-connector-easing) calc(var(--index-spine-delay) + var(--index-spine-duration)) both;
+  animation: consume-index-connector var(--index-connector-duration) var(--index-connector-easing) both;
 }
 
 @keyframes consume-index-connector {
@@ -5421,7 +5422,36 @@ main,
 
 .index-page .project-index.is-projects-open .project-index-info::before,
 .index-page .project-index.is-info-open .project-index-cv::before {
-  animation: project-index-spine-draw var(--index-spine-duration) cubic-bezier(0.45, 0, 0.2, 1) var(--index-spine-delay) both;
+  animation: project-index-spine-draw var(--index-spine-bridge-duration) linear var(--index-spine-duration) both;
+}
+
+.index-page .project-index.is-projects-open .project-index-projects-panel::before,
+.index-page .project-index.is-info-open .project-index-info::after,
+.index-page .project-index.is-cv-open .project-index-cv::after {
+  animation-timing-function: linear;
+}
+
+/* With the obsolete frame reveal removed, every part of an opening drawer
+   starts with the spine instead of waiting or cascading row by row. */
+.index-page .project-index.is-projects-open .project-index-key,
+.index-page .project-index.is-projects-open .project-index-projects-panel::before,
+.index-page .project-index.is-projects-open .project-index-branch,
+.index-page .project-index.is-projects-open .project-index-projects-panel,
+.index-page .project-index.is-projects-open .project-index-destination,
+.index-page .project-index.is-info-open .project-index-info::after,
+.index-page .project-index.is-cv-open .project-index-cv::after,
+.index-page .project-index-info-content.is-open,
+.index-page .project-index-cv-content.is-open,
+.index-page .project-index.is-projects-open .project-index-group h2,
+.index-page .project-index.is-projects-open .project-index-link,
+.index-page .project-index-info-content.is-open .project-index-info-row,
+.index-page .project-index-info-content.is-open .personal-photo-frame.is-visible {
+  animation-delay: 0ms;
+}
+
+.index-page .project-index.is-projects-intro-active .project-index-link:not(.has-user-previewed) .project-index-detail:not(.project-index-scale),
+.index-page .project-index-info-content.is-open .project-index-info-row:not(.has-user-previewed) .project-index-info-detail {
+  animation-delay: 0ms;
 }
 
 .index-page .project-index.is-projects-closing .project-index-info::before,
@@ -5711,7 +5741,7 @@ main,
     overflow: visible;
     transform: translateY(-0.3rem);
     animation: mobile-project-detail-in 420ms ease forwards;
-    animation-delay: calc(1280ms + (var(--project-order) * 85ms) + var(--detail-delay, 0ms));
+    animation-delay: 0ms;
     transition: none;
   }
 }

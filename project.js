@@ -906,8 +906,8 @@ function renderProject(animateFacts = false) {
     fullPresentation.classList.add("concise-project-full-presentation--download-only");
   }
 
-  const scrollToPresentation = () => {
-    fullPresentation.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToPresentationControls = () => {
+    footer.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   presentationFrame?.addEventListener("load", () => {
@@ -916,7 +916,7 @@ function renderProject(animateFacts = false) {
         { type: "restart-embedded-first-scene" },
         window.location.origin,
       );
-      scrollToPresentation();
+      scrollToPresentationControls();
     }
   });
 
@@ -950,7 +950,7 @@ function renderProject(animateFacts = false) {
       presentationFrame.src = presentationFrame.dataset.src;
     }
     if (shouldOpen) {
-      window.requestAnimationFrame(scrollToPresentation);
+      window.requestAnimationFrame(scrollToPresentationControls);
     }
   });
 

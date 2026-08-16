@@ -5659,16 +5659,8 @@ main,
 }
 
 /* Web draft 02: editorial Info and CV drawers. */
-.cv-title-full {
-  display: none;
-}
-
-.project-index-cv-toggle[aria-expanded="true"] .cv-title-short {
-  display: none;
-}
-
-.project-index-cv-toggle[aria-expanded="true"] .cv-title-full {
-  display: inline;
+.project-index-cv-toggle h2 {
+  white-space: nowrap;
 }
 
 .project-index-info-content-inner {

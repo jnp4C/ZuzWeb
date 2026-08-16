@@ -5613,7 +5613,7 @@ main,
   }
 
   .project-index-link {
-    margin-left: calc(1.85rem - var(--project-branch-indent));
+    margin-left: calc(2.75rem - var(--project-branch-indent));
   }
 
   .project-index-group {

@@ -5431,6 +5431,25 @@ main,
   animation-timing-function: linear;
 }
 
+/* The Projects panel itself moves down while opening. Counter-animate the
+   line's offset so its viewport origin stays at the pictogram center instead
+   of briefly appearing above the black square. */
+.index-page .project-index.is-projects-open .project-index-projects-panel::before {
+  animation:
+    project-index-project-spine-anchor var(--index-spine-duration) cubic-bezier(0.45, 0, 0.2, 1) both,
+    project-index-spine-draw var(--index-spine-duration) linear both;
+}
+
+@keyframes project-index-project-spine-anchor {
+  from {
+    top: -2.125rem;
+  }
+
+  to {
+    top: calc(-1 * var(--project-branch-top) - 2.125rem);
+  }
+}
+
 /* With the obsolete frame reveal removed, every part of an opening drawer
    starts with the spine instead of waiting or cascading row by row. */
 .index-page .project-index.is-projects-open .project-index-key,

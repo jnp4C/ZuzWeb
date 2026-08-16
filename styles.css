@@ -6014,8 +6014,8 @@ main,
 /* WEB_DRAFT_ROZMERY: exact desktop index typography and pixel rhythm. */
 @media (min-width: 721px) {
   .index-page .project-index {
-    --index-drawer-heading-size: 44pt;
-    --index-section-heading-size: 44pt;
+    --index-drawer-heading-size: 44px;
+    --index-section-heading-size: 44px;
   }
 
   .index-page :is(.project-index-root, .project-index-destination-heading) {
@@ -6040,7 +6040,7 @@ main,
 
   .index-page .project-index-link {
     min-height: 30px;
-    font-size: 22pt;
+    font-size: 22px;
     line-height: 30px;
   }
 
@@ -6067,7 +6067,7 @@ main,
 
   .index-page .project-index-info-contact {
     gap: 0;
-    font-size: 22pt;
+    font-size: 22px;
     line-height: 30px;
   }
 
@@ -6093,7 +6093,7 @@ main,
 
   .index-page .project-index-cv .cv-entry {
     min-height: 30px;
-    font-size: 22pt;
+    font-size: 22px;
     line-height: 30px;
   }
 }

@@ -579,14 +579,22 @@ h3,
   }
 }
 
-.concise-project-annotation h2:not(.concise-project-spine-label),
-.concise-project-section h2 {
+.concise-project-annotation h2:not(.concise-project-spine-label) {
   margin: 0 0 0.65rem;
   font-family: var(--font-heading);
   font-size: var(--type-medium);
   font-weight: 500;
   line-height: 1;
   text-transform: none;
+}
+
+.concise-project-section h2 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-text);
+  font-size: clamp(var(--type-small), 1.05vw, 0.98rem);
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .concise-project-annotation p {

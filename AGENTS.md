@@ -179,8 +179,20 @@ project-specific landscape background rather than inventing a separate layout.
 
 ### Featured media and carousels
 
-- Follow the selected sequence from project data, normally graphical
-  representation, masterplan, and model.
+- Treat `Redesign/WEB PORTFOLIO real obsah (1).docx` as the authoritative
+  source for each project's featured-section names and section order. Source
+  carousel images only from that project's folder whose name ends in
+  `_grafika` (case-insensitive). Include every image belonging to the named
+  section and preserve the numeric filename order within that section. Create
+  web-ready derivatives under `assets/project-pages/<slug>/`; never link the
+  ignored source files directly. If the document does not specify a project or
+  the mapping is ambiguous, ask the user instead of falling back to generic
+  graphical-representation/masterplan/model placeholders.
+- Every featured-media label leading into a graphical carousel must use the
+  exact annotation-body typography: Public Sans (`--font-text`), the same
+  responsive body size (`clamp(var(--type-small), 1.05vw, 0.98rem)`), regular
+  weight, and 1.5 line height. Render the label in all caps. Do not use the
+  Space Grotesk heading level for these labels.
 - Each visible section has a horizontal 2px black branch from the main vertical
   spine to the exact center of the carousel frame's left border. The localized
   section label sits immediately above the line. Do not prepend section numbers.

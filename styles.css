@@ -5960,3 +5960,90 @@ main,
     line-height: 1.4;
   }
 }
+
+/* WEB_DRAFT_ROZMERY: exact desktop index typography and pixel rhythm. */
+@media (min-width: 721px) {
+  .index-page .project-index {
+    --index-drawer-heading-size: 44pt;
+    --index-section-heading-size: 44pt;
+  }
+
+  .index-page :is(.project-index-root, .project-index-destination-heading) {
+    min-height: 50px;
+    padding: 0 1rem 0 50px;
+  }
+
+  .index-page .project-index-symbol,
+  .index-page .project-index-destination-heading > .project-index-symbol {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+  }
+
+  .index-page .project-index-branch {
+    --project-branch-top: 50px;
+  }
+
+  .index-page .project-index-list {
+    gap: 0;
+  }
+
+  .index-page .project-index-link {
+    min-height: 30px;
+    font-size: 22pt;
+    line-height: 30px;
+  }
+
+  .index-page .project-index-group {
+    min-height: 0;
+  }
+
+  .index-page .project-index-group:last-child {
+    min-height: var(--section-label-clearance);
+  }
+
+  .index-page .project-index-group + .project-index-group {
+    margin-top: 80px;
+  }
+
+  .index-page .project-index-destination {
+    margin-top: 100px;
+  }
+
+  .index-page .project-index-info-content-inner {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .index-page .project-index-info-contact {
+    gap: 0;
+    font-size: 22pt;
+    line-height: 30px;
+  }
+
+  .index-page .project-index-info-row {
+    min-height: 30px;
+  }
+
+  .index-page .project-index-cv-content-inner {
+    padding-top: 50px;
+  }
+
+  .index-page .project-index-cv .cv-section {
+    min-height: 0;
+  }
+
+  .index-page .project-index-cv .cv-section + .cv-section {
+    margin-top: 80px;
+  }
+
+  .index-page .project-index-cv .cv-section-content {
+    gap: 0;
+  }
+
+  .index-page .project-index-cv .cv-entry {
+    min-height: 30px;
+    font-size: 22pt;
+    line-height: 30px;
+  }
+}

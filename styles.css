@@ -5050,6 +5050,14 @@ main,
     font-size: 2rem;
   }
 
+  /* The multiplication-star has a much larger visual face than the plus at
+     the same nominal font size. Preserve the shared desktop icon box while
+     matching the two glyphs optically on small screens. */
+  .project-index-symbol--star,
+  .project-index-destination-heading > .project-index-symbol--star {
+    font-size: 1.5rem;
+  }
+
   .project-index-root,
   .project-index-destination-heading,
   .project-index-info-toggle {

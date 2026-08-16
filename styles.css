@@ -341,6 +341,50 @@ h3,
   border-right: 0.65rem solid currentColor;
 }
 
+.concise-project-scroll-top {
+  position: fixed;
+  right: var(--project-page-gutter);
+  bottom: clamp(0.85rem, 2.5vw, 2rem);
+  z-index: 300;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(0.75rem);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
+}
+
+.concise-project.is-project-nav-floating .concise-project-scroll-top {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  transition-delay: 0s;
+}
+
+.concise-project-scroll-top-triangles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.12rem;
+}
+
+.concise-project-scroll-top-triangles i {
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 0.42rem solid transparent;
+  border-bottom: 0.65rem solid currentColor;
+  border-left: 0.42rem solid transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-scroll-top {
+    transition: none;
+  }
+}
+
 .concise-project-symbol:hover,
 .concise-project-symbol:focus-visible {
   background: var(--text);

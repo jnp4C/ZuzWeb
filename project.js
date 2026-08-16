@@ -49,6 +49,7 @@ const COPY = {
     imageViewer: "Project image viewer",
     previousProject: "Previous project",
     nextProject: "Next project",
+    scrollToTop: "Scroll to top",
     unavailable: "This project page is not available.",
   },
   cs: {
@@ -69,6 +70,7 @@ const COPY = {
     imageViewer: "Prohlížeč obrázků projektu",
     previousProject: "Předchozí projekt",
     nextProject: "Další projekt",
+    scrollToTop: "Posunout nahoru",
     unavailable: "Tato projektová stránka není dostupná.",
   },
 };
@@ -684,6 +686,22 @@ function renderProject(animateFacts = false) {
   );
   heading.append(back, name, projectNavigation);
 
+  const scrollTop = document.createElement("button");
+  scrollTop.type = "button";
+  scrollTop.className = "concise-project-symbol concise-project-scroll-top";
+  scrollTop.setAttribute("aria-label", copy.scrollToTop);
+  const scrollTopTriangles = document.createElement("span");
+  scrollTopTriangles.className = "concise-project-scroll-top-triangles";
+  scrollTopTriangles.setAttribute("aria-hidden", "true");
+  scrollTopTriangles.append(document.createElement("i"), document.createElement("i"));
+  scrollTop.append(scrollTopTriangles);
+  scrollTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    });
+  });
+
   let navigationFrame;
   const updateFloatingNavigation = () => {
     window.cancelAnimationFrame(navigationFrame);
@@ -908,7 +926,7 @@ function renderProject(animateFacts = false) {
     }
   });
 
-  article.append(heading, intro, featured, footer, fullPresentation);
+  article.append(heading, intro, featured, footer, fullPresentation, scrollTop);
   projectRoot.append(article);
 }
 

@@ -6260,6 +6260,27 @@ main,
   }
 }
 
+/* Text labels use the same 10px inset as every 30px pictogram. */
+.index-page .project-index-heading,
+.index-page .project-index-destination-title,
+.index-page .project-index-destination-heading h2,
+.concise-project-footer button > span:last-child {
+  box-sizing: border-box;
+  height: 50px;
+  min-height: 50px;
+  padding: 10px;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.concise-project-heading h1 {
+  box-sizing: border-box;
+  min-height: 50px;
+  padding: 10px;
+  font-size: 30px;
+  line-height: 30px;
+}
+
 .concise-project-nav-triangles,
 .concise-project-scroll-top-triangles {
   width: 30px;

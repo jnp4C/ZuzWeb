@@ -6269,15 +6269,27 @@ main,
   height: 50px;
   min-height: 50px;
   padding: 10px;
-  font-size: 28px;
+  font-size: 41px;
   line-height: 30px;
+}
+
+@media (max-width: 480px) {
+  .index-page #cvTitle {
+    padding-inline: 12.2px;
+    scale: 0.82 1;
+    transform-origin: left center;
+  }
+
+  .concise-project-footer button > span:last-child {
+    letter-spacing: -0.08em;
+  }
 }
 
 .concise-project-heading h1 {
   box-sizing: border-box;
   min-height: 50px;
   padding: 10px;
-  font-size: 30px;
+  font-size: 41px;
   line-height: 30px;
 }
 

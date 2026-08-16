@@ -5624,19 +5624,20 @@ main,
 .project-index-cv .cv-section > h3 {
   position: absolute;
   top: 0;
-  left: 0.25rem;
+  left: -1.1rem;
   z-index: 2;
   margin: 0;
-  padding-block: 0.25rem;
+  padding-block: 0.2rem;
   background: var(--surface);
-  box-shadow: 0 0 0 0.55rem var(--surface);
+  box-shadow: 0 0 0 0.7rem var(--surface);
   font-family: var(--font-heading);
-  font-size: clamp(var(--type-medium), 2.8vw, var(--type-large));
+  font-size: var(--index-section-heading-size);
   font-weight: 500;
   line-height: 1;
   text-transform: lowercase;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+  transform-origin: center;
 }
 
 .project-index-cv .cv-section-content {
@@ -5705,8 +5706,8 @@ main,
   }
 
   .project-index-cv .cv-section > h3 {
-    left: 0.25rem;
-    font-size: var(--type-medium);
+    left: -0.9rem;
+    font-size: var(--index-section-heading-size);
   }
 
   .project-index-cv .cv-section-content {

@@ -5301,6 +5301,18 @@ main,
   z-index: 2;
 }
 
+.index-page .project-index-root > .project-index-symbol,
+.index-page .project-index-destination-heading > .project-index-symbol {
+  rotate: 0deg;
+  transition: rotate 420ms var(--index-connector-easing);
+  will-change: rotate;
+}
+
+.index-page .project-index-root[aria-expanded="true"] > .project-index-symbol,
+.index-page .project-index-destination-heading[aria-expanded="true"] > .project-index-symbol {
+  rotate: 45deg;
+}
+
 .index-page .project-index-projects-panel::before {
   z-index: 0;
 }
@@ -5404,6 +5416,11 @@ main,
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .index-page .project-index-root > .project-index-symbol,
+  .index-page .project-index-destination-heading > .project-index-symbol {
+    transition: none;
+  }
+
   .index-page .project-index-heading::before,
   .index-page .project-index-destination-title::before,
   .index-page .project-index-destination-heading h2::before {

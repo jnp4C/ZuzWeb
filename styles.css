@@ -2799,6 +2799,33 @@ main,
   transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
 }
 
+.concise-project-footer button {
+  gap: 25px;
+}
+
+.concise-project-footer button > span:last-child {
+  display: flex;
+  box-sizing: border-box;
+  width: fit-content;
+  height: 50px;
+  min-height: 50px;
+  align-items: center;
+  padding: 0.12em 0.2em 0;
+  background: var(--text);
+  color: var(--surface);
+  font-family: var(--font-heading);
+  font-size: var(--index-drawer-heading-size);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.concise-project-footer button:hover > span:last-child,
+.concise-project-footer button:focus-visible > span:last-child {
+  text-decoration: none;
+}
+
 @media (max-width: 760px) {
   .concise-project-heading {
     grid-template-columns: minmax(0, 1fr) calc(100px + 0.35rem);

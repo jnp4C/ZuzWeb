@@ -1043,11 +1043,8 @@ h3,
 .concise-project-pdf-download svg {
   width: 1.35rem;
   height: 1.35rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: square;
-  stroke-linejoin: miter;
+  fill: currentColor;
+  stroke: none;
 }
 
 .concise-project-pdf-download:hover,

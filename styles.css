@@ -290,8 +290,14 @@ h3,
 .concise-project-nav {
   grid-column: 2;
   display: flex;
+  align-items: center;
   justify-self: end;
   gap: 0.35rem;
+}
+
+.concise-project-nav .language-switch {
+  position: static;
+  margin-right: 0.35rem;
 }
 
 .concise-project.is-project-nav-floating .concise-project-back {
@@ -1193,6 +1199,10 @@ main,
   background: color-mix(in srgb, var(--surface) 90%, transparent);
   margin: 0.9rem 0 2rem;
   padding: clamp(1rem, 2.5vw, 2rem);
+}
+
+.index-page .project-index {
+  position: relative;
 }
 
 /* The redesign index is the full page, open over the animated landscape. */
@@ -2261,9 +2271,9 @@ main,
 }
 
 .language-switch {
-  position: fixed;
+  position: absolute;
   right: clamp(0.85rem, 2.5vw, 2rem);
-  bottom: clamp(0.85rem, 2.5vw, 2rem);
+  top: clamp(0.85rem, 2.5vw, 2rem);
   z-index: 300;
   display: flex;
   align-items: baseline;
@@ -2276,6 +2286,11 @@ main,
   font-weight: 700;
   line-height: 1;
   backdrop-filter: blur(4px);
+}
+
+.index-page .project-index > .language-switch {
+  top: calc(clamp(1.5rem, 2.2vw, 2.75rem) + 1.25rem);
+  right: 0;
 }
 
 .language-switch button {

@@ -44,11 +44,12 @@ Key references:
   order.
 - `Redesign/WEB PORTFOLIO texty.pdf`: project metadata, links, Czech and English
   descriptions, credits, awards, publication notes, and typography direction.
-- `Redesign/PROJEKTY na web/`: source images, drawings, models, portfolios,
-  presentations, and thumbnails for projects intended for the website.
-- `Redesign/PROJEKTY na web/PROJEKTY nezveřejněné/`: unpublished projects.
-  Treat this directory as private/reference-only and do not expose or copy its
-  contents into the public site without explicit user approval.
+- `Redesign/PROJEKTY na web (1)/PROJEKTY na web/`: newest source images,
+  drawings, models, presentations, and thumbnails for projects intended for
+  the website. Prefer it over older duplicated project collections.
+- Any folder identified as unpublished or `nezveřejněné`, plus every
+  `*_nepouzito`/`*_nepouzite` folder, is private/reference-only. Do not expose
+  or copy its contents into the public site without explicit user approval.
 
 When website-ready derivatives are needed, copy only the selected material into
 tracked site asset directories, use web-appropriate names and formats, and
@@ -100,256 +101,141 @@ intentional replacement.
 not part of the redesign. Leave it untouched unless the user explicitly brings
 that feature into scope.
 
-## Project data contract
+## Current design rules
 
-`data/projects.json` supports the redesign alongside the legacy animated
-presentation. When adding or migrating a project:
+- `Redesign/web draft 02.pdf` is the visual reference for the current INFO and
+  CV drawers. `Redesign/web_draft_rozmery.pdf` defines page dimensions, and the
+  newest `ikony_schema_rozmeru.pdf` inside the dated Drive download defines
+  control and pictogram geometry. Red measurements are pixels.
+- PROJECTS, INFO, and Curriculum vitae are independent drawers. Visitors may
+  keep all three open at once. Do not reintroduce mutually exclusive behavior.
+- Closed drawer controls are static black boxes with centered white text and a
+  white plus. Only the plus rotates 90 degrees when opened; the box itself must
+  never rotate or resize. The 2px connector/spine begins below the box, remains
+  continuous, and must not cross either box edge during opening or closing.
+- A hover connector runs from the drawer control to its destination. It is
+  consumed as the vertical opening spine grows and appears again only when the
+  closing control is hovered. Closing must clear all content deterministically;
+  lower headings settle continuously rather than snapping after a timeout.
+- PROJECTS, INFO, and Curriculum vitae use the same 50px control geometry,
+  vertical-label typography, spine, and 25px content offset. Vertical labels
+  must be sized by their text, never cropped to the content height.
+- Use the index signature as the size and centering reference everywhere. It is
+  20 percent smaller than the original draft version and must not change the
+  starting position of the page content.
+- All black controls, including project titles, presentation, download,
+  previous/next, home, and lightbox controls, follow the icon schema. White text
+  and pictograms keep the specified 10px optical clearance. Reuse the existing
+  plus/cross and double-triangle shapes; do not substitute font glyphs.
+- Project and presentation labels use the same Space Grotesk size and weight as
+  index text. Featured-media labels use annotation typography in all caps.
+- Highlighted awards, publications, conferences, and realizations render as
+  individually marked black text fragments, not a full-width solid rectangle.
+  Copy their wording and punctuation exactly from the authoritative content
+  document.
+- Author names use normal capitalization and omit academic titles everywhere.
+- Index previews are desktop/tablet pointer affordances only. They remain to the
+  right of their row and scale down to fit the available viewport without
+  cropping or overlapping text. Do not render previews on mobile/touch layouts.
+- Mobile project titles must wrap without overlapping the controls. Project
+  Info, Annotation, highlighted copy, and media align to the shared content
+  start derived from the title/header label.
 
-1. Give it a unique, stable `slug`, set `visibility`, and assign
-   `portfolioSection` as `study` or `practice`.
-2. Fill `index.order`, bilingual `index.scale`, `index.title`, and
-   `index.context`. Add only meaningful `index.highlights`, such as an award or
-   publication.
-3. Treat the existing top-level English `title`, `description`, and `annotation`
-   as the primary copy. Put Czech copy in `translations.cs`; `null` means that
-   the translation still needs user-approved text.
-4. Put normalized award information in `projectPage.awards`. Keep useful
-   top-level legacy fields while the existing project header still consumes
-   them.
-5. Fill `projectPage.info` for the scheme's year, scale, processing, type, and
-   collaborator rows. Use `projectPage.hero` for the main first-look image; it
-   can expand to landscape and moves below the annotation on mobile.
-6. Use `projectPage.featuredSections` for the selected tree sequence: a
-   user-named graphical representation, masterplan, and model. Its `media`
-   arrays intentionally stay empty until the user chooses project source
-   material. Never guess the final image selection.
-7. Keep the current `scenes` array unchanged as the complete animated document.
-   `projectPage.fullPresentation` exposes it as the optional `+ Full
-   presentation` section after the concise first-look content.
-8. Confirm that the project appears in the intended index group and that its
-   direct URL selects the correct project before committing.
+## Authoritative project sources
 
-The intended project-page reading order is: project name; core information;
-awards; annotation beside the main image; selected graphical representation;
-masterplan; model; then the bottom `+` control for the full animated
-presentation. On mobile the main image follows the annotation. The first-look
-content should convey the project clearly without requiring visitors to open
-the full document.
+For new or updated projects, use the newest matching files rather than an older
+duplicate:
 
-## Standardized redesign project-page formula
+1. `Redesign/WEB PORTFOLIO real obsah (1).docx` defines project text, exact
+   highlighted passages, featured-section names, and carousel order. Check
+   newer numbered copies if their modified date shows that they supersede it.
+2. `Redesign/PROJEKTY na web (1)/PROJEKTY na web/` is the current project asset
+   collection. A project's `*_index` directory supplies its index preview,
+   `*_grafika` supplies concise-page carousel media, and `*_prezentace` supplies
+   a downloadable/full presentation when one exists. Never source published
+   media from `*_nepouzito`, `*_nepouzite`, or unpublished-project folders.
+3. Preserve the exact filename/numeric order stated by the content document.
+   Do not infer images from a similarly named old directory when properly
+   labelled files exist in the current project folder.
+4. Copy only chosen web derivatives to `assets/project-pages/<slug>/` and PDFs
+   to `assets/presentations/`. Never link into or commit `Redesign/`.
 
-Use the `cycle-of-change` concise page as the implementation reference for every
-project migrated to the redesign. New project pages should share this structure
-and interaction model; vary the project content, selected media, labels, and
-project-specific landscape background rather than inventing a separate layout.
+## Adding a project
 
-### Shared page structure
+Use an existing current concise project as a structural template, but copy no
+project-specific text or media. Complete this checklist for every addition:
 
-1. Start with the transparent animated signature, aligned to the same responsive
-   left gutter as the index. It spans the available width without distortion.
-   The clean animation ends before the gray tail frames in the source MOV, then
-   changes to the separate transparent static PNG. Preserve the session state so
-   project navigation retains the completed signature instead of replaying it.
-2. Place the project title below the signature in the primary 40pt Space
-   Grotesk level. Put the index/back symbol on the left spine and paired
-   previous/next project controls on the right. Previous and next controls use
-   two solid CSS triangles, not textual `<<`, `>>`, `«`, or `»` glyphs.
-3. Run one pitch-black 2px vertical spine down the left side. Labels interrupt
-   the spine with the page background behind them; the line must not show
-   through the label text or its symbols.
-4. Embed vertical `info` and `annotation` labels into that spine. Their top
-   positions align with the top of their corresponding text blocks. Use the
-   20pt Space Grotesk level for these structural labels.
-5. Keep the hero image as the outlined box adjacent to the Info/Annotation
-   column on desktop. On mobile, stack Info, Annotation, and then the hero while
-   retaining the spine-label relationship.
+1. Add one object to `data/projects.json` with a stable lowercase kebab-case
+   `slug`, `visibility`, and `portfolioSection` (`study` or `practice`). Use
+   `visibility: "unpublished"` until all content and media have been approved.
+2. Add `index.order`, localized `index.scale`, `index.title`, `index.context`,
+   `index.highlights`, and `index.image`. The index image must come from the
+   project's current index folder and include meaningful Czech and English alt
+   text plus responsive `srcset` where derivatives exist.
+3. Add the primary English `title`, `description`, and `annotation`, with exact
+   Czech equivalents in `translations.cs`. Preserve the source's spelling,
+   capitalization, punctuation, and paragraph meaning. Do not invent missing
+   translations or editorially rewrite valid copy.
+4. Set `projectPage.layout` to `"concise"`. Fill `projectPage.info` in the
+   content-document order, plus the intro visibility settings and hero media
+   when required. Keep long values wrap-safe. Normalize collaborators/authors
+   to names without titles and without forced uppercase.
+5. Put marked content in `projectPage.awards`, `projectPage.references`, or
+   `projectPage.highlightedText` as appropriate. Store the exact localized label
+   and detail separately; add `href` only when the source supplies a link.
+6. Build `projectPage.featuredSections` in the exact order defined by the
+   content document. Each section needs a stable `id`, `kind`, bilingual
+   `label`, and ordered `media`. Each media entry needs `src`, optional `srcset`,
+   and descriptive bilingual `alt` text.
+7. A normal carousel uses centered pagination dots below the image; the selected
+   dot is solid and the others outlined. There are no carousel arrows or text
+   counters. The all-caps label and dots share one centered row, and the 2px
+   horizontal connector remains continuous above it.
+8. For a day/night comparison, set `presentation: "day-night-fade"` and supply
+   exactly the ordered day/night pair. It renders one image with the existing
+   compact slider, not two separate visualizations.
+9. Add `projectPage.fullPresentation` only when a real presentation is supplied.
+   Set `enabled: true`, the correct source, and `download.href` only for an
+   existing tracked PDF. If there is no presentation, disable/omit this data so
+   neither Presentation nor download control is rendered. The visible control
+   text is only `PRESENTATION`/`PREZENTACE`; opening rotates only its plus.
+10. Preserve any legacy `scenes`/`pdfPages` data unless the task explicitly
+    replaces it. Do not use legacy scene assets as a silent fallback for a new
+    project's curated concise page.
+11. Ensure previous/next navigation includes the project in the correct
+    published order and the direct URL is
+    `project.html?project=<slug>`. Confirm both languages, image lightbox,
+    presentation scroll position, and download behavior.
 
-### Info and annotation
+## Project-page invariants
 
-- Format every Info row as `[ LABEL ] VALUE`.
-- Keep `[ LABEL ]` gray and the value bold black.
-- The bold value appears first; the gray bracketed label unfolds afterward.
-- Give the Info rows and Annotation the same left edge and text-block width.
-  Bracketed labels align left, values align to the right edge, and flexible
-  space separates both sides of the row.
-- Annotation is a transparent text block, not an outlined box and not a filled
-  color block. Use justified Public Sans body text with no inset padding.
-- Language changes update the content in place and must not replay completed
-  Info animations.
+- Reading order is title; Info and Annotation; exact marked content; hero and
+  ordered featured carousels; optional Presentation and download controls.
+- The signature, title control, 2px spine, vertical labels, body content, and
+  media all use the established shared alignment variables. Do not add
+  project-specific offsets to repair a shared-layout issue.
+- Annotation and featured labels use Public Sans body sizing. Vertical labels,
+  index controls, project title controls, and Presentation use the established
+  Space Grotesk display sizing.
+- Carousel images are fully contained and responsive. Their click target opens
+  the current lightbox, whose previous/next controls reuse double triangles and
+  whose close control reuses the rotating plus/cross with 10px clearance.
+- Presentation auto-scroll stops with the Presentation label and download
+  control still visible. The download control is a square aligned with the
+  orientation controls and uses the existing triangle-plus-rectangle icon.
+- Support keyboard, touch, pointer input, and `prefers-reduced-motion`.
 
-### Featured media and carousels
+## Validation and commit checklist
 
-- Treat `Redesign/WEB PORTFOLIO real obsah (1).docx` as the authoritative
-  source for each project's featured-section names and section order. Source
-  carousel images only from that project's folder whose name ends in
-  `_grafika` (case-insensitive). Include every image belonging to the named
-  section and preserve the numeric filename order within that section. Create
-  web-ready derivatives under `assets/project-pages/<slug>/`; never link the
-  ignored source files directly. If the document does not specify a project or
-  the mapping is ambiguous, ask the user instead of falling back to generic
-  graphical-representation/masterplan/model placeholders.
-- Every featured-media label leading into a graphical carousel must use the
-  exact annotation-body typography: Public Sans (`--font-text`), the same
-  responsive body size (`clamp(var(--type-small), 1.05vw, 0.98rem)`), regular
-  weight, and 1.5 line height. Render the label in all caps. Do not use the
-  Space Grotesk heading level for these labels.
-- Each visible section has a horizontal 2px black branch from the main vertical
-  spine to the exact center of the carousel frame's left border. Keep this line
-  continuous; labels must never interrupt it. Put the localized section label
-  below the frame at its left corner. Do not prepend section numbers.
-- A section may contain multiple media items. Its first selected asset is the
-  initial frame, and all additional assets use the same framed carousel.
-- Carousels autoplay in a continuous right-to-left horizontal swipe. Manual
-  dot selection may move in either direction. Pause autoplay for pointer hover
-  or keyboard interaction and disable autoplay/transitions for reduced motion.
-- Use one pagination dot per carousel image in the centered row below the
-  frame, grouped beside the section label. Dots are outlined by default and
-  solid black when selected; selecting a dot moves directly to its image. Do
-  not add previous/next arrows or a textual slide counter.
-- Keep the carousel frame monochrome and responsive. Recalculate branch
-  geometry when the frame or viewport resizes so the line remains connected.
-
-### Full presentation and animation continuity
-
-- The bottom `+ Full presentation` control reveals the existing scene
-  presentation inline. It is full viewport width/height, borderless, and the
-  parent page scrolls directly to it.
-- Embedded presentations omit the legacy header and introductory annotation;
-  they start with the first visual scene.
-- Do not remove or rebuild the existing `scenes` data. The embedded scene must
-  continue the project's established animation and landscape.
-- The first embedded scene uses a deterministic entrance timeline after the
-  iframe becomes visible. Do not allow its initial scroll measurement to mark
-  it complete before it animates.
-- Keep the project-specific contour background pitch black, subtle, and
-  consistent with the index transition. The stored index landscape undraws
-  before the project landscape draws.
-
-### Responsive and implementation rules
-
-- Use the shared 10pt / 20pt / 40pt typography variables and the existing
-  Public Sans / Space Grotesk families.
-- Align signature, title, spine, text blocks, connectors, and frames through
-  shared responsive gutters and CSS variables. Avoid viewport-specific
-  hard-coded offsets when geometry can be measured or derived.
-- Nothing may overlap at narrow, intermediate, or very wide viewport sizes.
-  Long metadata values wrap inside their column; project controls retain their
-  own lane.
-- Keep project content in `data/projects.json`. Use `projectPage.info`,
-  `projectPage.hero`, `projectPage.featuredSections`, and the existing
-  `projectPage.fullPresentation` contract rather than hard-coding project copy
-  in `project.js`.
-- A project opts into this standardized page with
-  `projectPage.layout: "concise"`. Until its curated first-look media is ready,
-  it may remain linked to the legacy presentation, but it must stay visible in
-  the index when published.
-
-## Session handoff: index foundation
-
-Last verified on the `redesign` branch at commit `6f2f46e`. At the beginning of
-the next session, start or verify localhost and visually inspect the current
-index before changing it.
-
-Completed:
-
-- `data/projects.json` contains redesign metadata for all nine existing
-  projects: seven in `study` and two in `practice`.
-- The index renders projects directly from JSON instead of rendering year
-  buttons. Direct links still open the matching project in the existing
-  `year.html` presentation.
-- Desktop rows initially emphasize the project name; scale, context, and
-  highlights unfold on hover or keyboard focus. Touch layouts keep this
-  information visible because touch has no dependable hover.
-- The tree contains `Study`, `Practice`, `INFO`, and `CV`. Clicking `INFO`
-  reveals the existing introduction and personal-information content. `CV` is
-  intentionally still a placeholder.
-- `PROJECTS`, `INFO`, and `CV` use the same Space Grotesk display treatment.
-  Small project metadata uses Public Sans.
-- The vertical spine is intentionally interrupted by the `Study` and
-  `Practice` words. Each word sits directly on the spine axis, not offset to the
-  right. The line ends immediately above the word and resumes below it. Do not
-  add horizontal connector lines.
-- Do not blur, soften, reduce the opacity of, or otherwise degrade `Study` or
-  `Practice` during project interaction. A blur experiment was explicitly
-  rejected because it reduced text quality.
-- The latest desktop layout was visually checked with a 1440px-wide Firefox
-  localhost screenshot after commit `6f2f46e`.
-
-Next recommended work:
-
-1. Keep the index stable unless the user requests another visual adjustment.
-2. Build the concise project-page layout from
-   `Redesign/web draftprojectscheme.pdf` using the existing project header.
-3. Render `projectPage.info`, awards, and annotation first.
-4. Leave `projectPage.hero` and each featured section's `media` empty until the
-   user selects the graphical representation, masterplan, and model assets for
-   that project.
-5. Place the existing animated `scenes` behind the final `+ Full presentation`
-   control rather than deleting or rebuilding those scenes.
-
-Known local-only state: `BDWRAP/` remains untracked and unrelated. `Redesign/`
-is ignored intentionally and contains the current design/source references.
-
-## Session handoff: full-page animated index (2026-07-29)
-
-The homepage redesign now uses a full-page PROJECTS / INFO / CV index over the
-animated contour landscape. All three controls start closed and open only when
-clicked. Their content rows share a Public Sans type treatment, responsive size,
-horizontal label baseline, staged reveal, temporary detail wave, and persistent
-hover/focus preview.
-
-- PROJECTS renders the existing study and practice data as single-line rows.
-  Bracketed scale information unfolds to the left of the title; context and
-  highlights unfold to the right.
-- INFO contains only email, year of birth, alma mater, and the portrait. The
-  bracketed values unfold to the left of their labels. Do not restore the
-  removed introduction copy or add a phone number.
-- CV is a five-row interactive timeline. Its bracketed dates unfold to the left,
-  supplementary context unfolds to the right, and an SVG rope connects the
-  markers with animated sag and hover reactions.
-- PROJECTS and CV have reverse closing sequences. A closed control outline is
-  hidden unless hovered or keyboard-focused. During a closing sequence, a
-  hovered outline must follow the perimeter animation instead of flashing into
-  its completed state.
-- The animated name header uses `assets/Header/name-writing.mp4` with
-  `name-writing-final.webp` as its persistent poster.
-
-Keep `BDWRAP/` untracked and leave the ignored `Redesign/` source folder
-untouched. The redesign commit preceding this handoff is `2b28218`; inspect the
-current branch log for the follow-up interaction commit.
-
-## Session handoff: full concise migration and responsive interaction (2026-08-01)
-
-All ten published projects now route to `project.html` with
-`projectPage.layout: "concise"`. WATERSCAPE, CYKLUS PROMĚNY, SEMNĚVIZE, and
-REVODALIZACE have curated concise media. Other projects reuse a bounded
-selection of their existing scene assets when curated media is absent;
-MEZI VŠÍM and THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS render clean text-only
-concise pages until imagery is supplied. Unpublished projects remain excluded.
-
-- Project and index pages share the same signature dimensions, responsive
-  gutters, 2.25rem black controls, heading scale, and left spine axis.
-- The project home star begins on the title row and becomes viewport-fixed only
-  after that row scrolls away. Its center stays aligned with the vertical spine;
-  previous/next controls float at the opposite gutter at the same threshold.
-- Returning to the index through the star keeps the completed signature static.
-  Reloading the index intentionally replays it.
-- Featured images are frameless. Desktop image widths reserve space for their
-  connector labels; phone layouts use the full width between page gutters and
-  connect labels to the image top edge without overlapping the label text.
-- Carousels do not autoplay. Their arrows remain available, and selecting any
-  hero or featured image opens a blurred-backdrop lightbox with previous/next,
-  keyboard controls, wheel zoom, double-click reset, and touch pinch/pan.
-- Award metadata renders as a full-width black band with white text.
-- Index project previews use existing index, hero, or scene media. They are
-  overlays and never move subsequent rows; they open beside text when space is
-  available, otherwise below it, and close as soon as the pointer leaves text.
-- PROJECTS, INFO, and CV openings run at 60% of their earlier timeline (40%
-  faster); closing sequences retain their prior speed. Drawer state is mutually
-  exclusive and clears stale timers/classes during rapid switching.
-- Mobile CV is a persistent, wrapped vertical timeline with dates and supporting
-  context always visible and markers kept inside the content width.
-
-`assets/project-pages/waterscape/` contains the selected web-ready derivatives
-used by the concise WATERSCAPE page. Continue to leave `BDWRAP/` untracked and
-the ignored `Redesign/` source tree unchanged.
+1. Validate JSON parsing and run `node --check` for every changed JavaScript
+   file. Run `xmllint --html --noout` for changed HTML and `git diff --check`.
+2. Serve the site over localhost and inspect index plus the new direct project
+   URL at desktop, tablet, and mobile widths. Check long titles and wrapped
+   metadata as well as a short project.
+3. Verify every tracked media path exists, every carousel count/order matches
+   the content document, and no `Redesign/`, office lock file, or `BDWRAP/`
+   content is staged.
+4. Confirm drawer opening/closing under rapid repeated clicks and with multiple
+   drawers open. No text may remain after closing and no spine may cross a box.
+5. Each requested change gets its own commit. Review `git status` immediately
+   before and after committing; leave unrelated user files untouched.

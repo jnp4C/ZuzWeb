@@ -16265,14 +16265,7 @@
           "cs": "Celá prezentace"
         },
         "placement": "end",
-        "control": "plus",
-        "download": {
-          "href": "./assets/presentations/mezi-vsim.pdf",
-          "label": {
-            "en": "Download presentation",
-            "cs": "Stáhnout prezentaci"
-          }
-        }
+        "control": "plus"
       },
       "info": {
         "year": 2024,

@@ -789,7 +789,8 @@ h3,
   transform: translateX(50%);
 }
 
-.concise-project-carousel-viewport img {
+.concise-project-carousel-viewport img,
+.concise-project-carousel-viewport video {
   grid-area: 1 / 1;
   width: 100%;
   height: 100%;
@@ -949,7 +950,7 @@ h3,
   justify-content: center;
   box-sizing: border-box;
   max-width: 0;
-  height: 2.25rem;
+  min-height: 2.25rem;
   padding: 0;
   border: 0 solid #000;
   background: #000;
@@ -957,7 +958,7 @@ h3,
   font-family: var(--font-heading);
   font-size: var(--type-medium);
   font-weight: 600;
-  line-height: 1;
+  line-height: 0.95;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
@@ -973,8 +974,8 @@ h3,
 }
 
 .concise-project-footer.is-presentation-open .concise-project-pdf-download {
-  max-width: 18rem;
-  padding: 0 1.25rem;
+  max-width: 28rem;
+  padding: 0.3em 0.45em 0.4em;
   border-width: 2px;
   opacity: 1;
   transform: translateX(0) scaleX(1);

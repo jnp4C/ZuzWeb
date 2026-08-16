@@ -6353,7 +6353,11 @@ main,
 /* Exact CV rhythm: separate entries always have 30px between their line
    boxes. Wrapped lines inside one education entry use 15px of leading. */
 .index-page .project-index-cv .cv-section-content {
-  gap: 30px;
+  gap: 0;
+}
+
+.index-page .project-index-cv .cv-entry + .cv-entry {
+  margin-top: 30px;
 }
 
 .index-page .project-index-cv .cv-entry {

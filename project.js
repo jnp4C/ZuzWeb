@@ -6,7 +6,7 @@ import {
 } from "./language.js";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
 
-const DATA_CACHE_VERSION = "2026-08-16-authoritative-highlight-copy";
+const DATA_CACHE_VERSION = "2026-08-16-normalized-author-names";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";

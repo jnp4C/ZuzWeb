@@ -470,7 +470,7 @@
           "cs": "opencall"
         },
         "collaborators": [
-          "ING. DAVID ŠMÍD"
+          "David Šmíd"
         ]
       },
       "hero": {
@@ -675,8 +675,8 @@
     ],
     "projectType": "GHMP Opencall, group project",
     "projectTeam": [
-      "ING. DAVID ŠMÍD",
-      "ING. ZUZANA PURMOVÁ"
+      "David Šmíd",
+      "Zuzana Purmová"
     ],
     "selectorLabel": "A TREE WITH THE SPIRIT OF CHRISTMAS"
   },
@@ -7781,7 +7781,7 @@
           "cs": "krajinářská instalace"
         },
         "collaborators": [
-          "ING. DAVID ŠMÍD"
+          "David Šmíd"
         ]
       },
       "hero": {
@@ -7799,7 +7799,7 @@
     "scenes": [
       {
         "type": "annotation",
-        "text": "NAME OF PROJECT\nGROWING-THROUGH\n\nTYPE OF PROJECT\nStudio project, group project\nING. DAVID ŠMÍD, ING. ZUZANA PURMOVÁ\n\nSTUDIO\nSitta - Chmelová, FA CTU in Prague",
+        "text": "NAME OF PROJECT\nGROWING-THROUGH\n\nTYPE OF PROJECT\nStudio project, group project\nDavid Šmíd, Zuzana Purmová\n\nSTUDIO\nSitta - Chmelová, FA CTU in Prague",
         "supportingText": "A design for a two-year outdoor installation created for the International Garden Festival at Les Jardins de Métis (Reford Gardens) with the theme 'BORDERS'. The installation illustrates how nature deals with artificial boundaries created by humans. Concrete objects placed in conflict with willow patches demonstrate various spatial concepts of barriers and their overcoming. By using willow rods that will take root and grow through the whole time of the exhibition, the installation continuously evolves, showing how the environment adapts to the impacts of insensitive human interventions.",
         "studioName": "Sitta - Chmelová, FA CTU in Prague",
         "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
@@ -8052,8 +8052,8 @@
     ],
     "projectType": "Studio project, group project",
     "projectTeam": [
-      "ING. DAVID ŠMÍD",
-      "ING. ZUZANA PURMOVÁ"
+      "David Šmíd",
+      "Zuzana Purmová"
     ],
     "studioName": "Sitta - Chmelová, FA CTU in Prague",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/167-studio-sitta",
@@ -9652,12 +9652,12 @@
           "cs": "školní práce"
         },
         "collaborators": [
-          "D. Moravcová",
-          "A. Koupalová",
-          "D. Kvapilová",
-          "E. Kuncířová",
-          "J. Jírovcová",
-          "M. Gruntová"
+          "Denisa Moravcová",
+          "Anna Koupalová",
+          "Daniela Kvapilová",
+          "Eliška Kuncířová",
+          "Josefína Jírovcová",
+          "Martina Gruntová"
         ]
       },
       "hero": {
@@ -9738,7 +9738,7 @@
     "scenes": [
       {
         "type": "annotation",
-        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nCONCEPT OF SEMNĚVICE LANDSCAPE\n\nTYPE OF PROJECT\nGroup project\nING. DENISA MORAVCOVÁ, ING. ANNA KOUPALOVÁ,\nING. DANIELA KVAPILOVÁ, ING. ELIŠKA KUNCÍŘOVÁ,\nING. JOSEFÍNA JÍROVCOVÁ, ING. MARTINA GRUNTOVÁ,\nING. ZUZANA PURMOVÁ\n\nSTUDIO\nStudio Salzmann, FA CTU in Prague\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
+        "text": "PROJECT HEADER\n\nNAME OF PROJECT\nCONCEPT OF SEMNĚVICE LANDSCAPE\n\nTYPE OF PROJECT\nGroup project\nDenisa Moravcová, Anna Koupalová,\nDaniela Kvapilová, Eliška Kuncířová,\nJosefína Jírovcová, Martina Gruntová,\nZuzana Purmová\n\nSTUDIO\nStudio Salzmann, FA CTU in Prague\nhttps://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
         "supportingText": "Based on a detailed analysis of the landscape of Semněvice, a vision for the area was proposed — SemněVISION, and a Landscape Concept of Semněvice was prepared. It aims to grasp the landscape comprehensively as a whole, to establish principles and methods of rational and sustainable use and interventions so that it would prosper and people would live well in it. The landscape concept was elaborated in detail in four layers based on the needs and problems of the Semněvice landscape: the road network, the intramural area, agriculture and the water regime. This team project is followed by individual projects developing the following layers: THE LANDSCAPE AROUND SEMNĚVICE, Through the Village Under the Hillage, WATER FLOW, Heart of Semněvice, AGRI-SEMNĚ-CULTURE, REWATERIZATION, OUT-WATERING.",
         "page": 1
       },
@@ -12764,13 +12764,13 @@
     ],
     "projectType": "Group project",
     "projectTeam": [
-      "ING. DENISA MORAVCOVÁ",
-      "ING. ANNA KOUPALOVÁ",
-      "ING. DANIELA KVAPILOVÁ",
-      "ING. ELIŠKA KUNCÍŘOVÁ",
-      "ING. JOSEFÍNA JÍROVCOVÁ",
-      "ING. ZUZANA PURMOVÁ",
-      "ING. MARTINA GRUNTOVÁ"
+      "Denisa Moravcová",
+      "Anna Koupalová",
+      "Daniela Kvapilová",
+      "Eliška Kuncířová",
+      "Josefína Jírovcová",
+      "Zuzana Purmová",
+      "Martina Gruntová"
     ],
     "studioName": "Studio Salzmann, FA CTU in Prague",
     "studioUrl": "https://www.fa.cvut.cz/en/study/studios/12141-studio-salzmann",
@@ -16312,8 +16312,8 @@
           "cs": "výstavní instalace"
         },
         "collaborators": [
-          "SABINA PEKOVÁ",
-          "DAVID ŠMÍD"
+          "Sabina Peková",
+          "David Šmíd"
         ]
       },
       "hero": {
@@ -16346,9 +16346,9 @@
     ],
     "projectType": "Master's study, collaboration",
     "projectTeam": [
-      "SABINA PEKOVÁ",
-      "ZUZANA PURMOVÁ",
-      "DAVID ŠMÍD"
+      "Sabina Peková",
+      "Zuzana Purmová",
+      "David Šmíd"
     ],
     "selectorLabel": "MEZI VŠÍM"
   },

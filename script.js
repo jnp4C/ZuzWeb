@@ -339,8 +339,12 @@ function updateProjectPreviewPlacements() {
       .filter((child) => !child.classList.contains("project-index-link-preview"));
     const textRight = Math.max(...textParts.map((part) => part.getBoundingClientRect().right));
     const availableRight = window.innerWidth - textRight - 24;
+    const desiredSideWidth = Math.min(window.innerWidth * 0.38, 34 * 16);
     link.style.setProperty("--project-preview-side-width", `${Math.max(0, availableRight)}px`);
-    link.classList.toggle("has-side-preview", window.innerWidth > 900 && availableRight >= 280);
+    link.classList.toggle(
+      "has-side-preview",
+      window.innerWidth > 900 && availableRight >= desiredSideWidth,
+    );
   });
 }
 
@@ -439,6 +443,7 @@ function renderProjectIndex(projects) {
     link.style.setProperty("--project-reverse-order", `${projectLinks.length - order - 1}`);
   });
   window.requestAnimationFrame(updateProjectPreviewPlacements);
+  document.fonts?.ready.then(updateProjectPreviewPlacements);
 }
 
 async function init() {

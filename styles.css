@@ -6093,9 +6093,10 @@ main,
 }
 
 .project-index-cv .cv-section {
+  --cv-section-indent: clamp(3.75rem, 8vw, 7rem);
   position: relative;
   min-height: clamp(9rem, 18vw, 14rem);
-  padding-left: clamp(3.75rem, 8vw, 7rem);
+  padding-left: var(--cv-section-indent);
 }
 
 .project-index-cv .cv-section + .cv-section {
@@ -6182,8 +6183,9 @@ main,
   }
 
   .project-index-cv .cv-section {
+    --cv-section-indent: calc(var(--project-branch-indent) + 0.5rem);
     min-height: 8rem;
-    padding-left: calc(var(--project-branch-indent) + 0.5rem);
+    padding-left: var(--cv-section-indent);
   }
 
   .project-index-cv .cv-section > h3 {
@@ -6209,6 +6211,7 @@ main,
     --draft-row-gap: clamp(18px, 2.0833vw, 30px);
     --draft-section-gap: clamp(48px, 5.5556vw, 80px);
     --draft-drawer-gap: clamp(60px, 6.9444vw, 100px);
+    --draft-body-font-size: clamp(14px, 1.5278vw, 22px);
     --index-drawer-heading-size: clamp(28px, 3.0556vw, 44px);
     --index-section-heading-size: clamp(28px, 3.0556vw, 44px);
   }
@@ -6235,7 +6238,7 @@ main,
   }
 
   .index-page .project-index-link {
-    font-size: clamp(14px, 1.5278vw, 22px);
+    font-size: var(--draft-body-font-size);
     line-height: 1.25;
   }
 
@@ -6270,7 +6273,7 @@ main,
 
   .index-page .project-index-info-contact {
     gap: var(--draft-row-gap);
-    font-size: clamp(14px, 1.5278vw, 22px);
+    font-size: var(--draft-body-font-size);
     line-height: 1.25;
   }
 
@@ -6291,7 +6294,7 @@ main,
   }
 
   .index-page .project-index-cv .cv-entry {
-    font-size: clamp(14px, 1.5278vw, 22px);
+    font-size: var(--draft-body-font-size);
     line-height: 1.25;
   }
 }
@@ -6342,6 +6345,8 @@ main,
   position: relative;
   align-self: start;
   justify-self: start;
+  left: calc(-1 * var(--cv-section-indent) - 1.1rem);
+  font-size: var(--index-section-heading-size);
 }
 
 @media (max-width: 480px) {

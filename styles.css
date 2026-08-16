@@ -5926,6 +5926,16 @@ main,
   background: transparent;
 }
 
+/* Match the index signature even against the older project-nameplate image
+   rule, whose element selector otherwise makes the static poster 100% wide. */
+.concise-project-page .signature-nameplate .signature-animation,
+.concise-project-page .signature-nameplate .signature-poster {
+  width: var(--signature-render-width);
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
 /* The animation source has an opaque white matte; multiply makes that matte
    visually transparent while preserving the black handwriting and landscape. */
 .index-page .signature-animation,

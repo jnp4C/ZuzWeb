@@ -2750,6 +2750,94 @@ main,
   }
 }
 
+/* IKONY_SCHEMA_ROZMERU: 50px frames, 30px symbols, 10px inner clearance. */
+.index-page .project-index-symbol,
+.index-page .project-index-destination-heading > .project-index-symbol,
+.concise-project-symbol,
+.concise-project-footer .concise-project-pdf-download {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  flex-basis: 50px;
+}
+
+.index-page .project-index-symbol-mark {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+}
+
+.index-page .project-index-symbol-mark::before,
+.index-page .project-index-symbol-mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 5px;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.index-page .project-index-symbol-mark::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.project-index-symbol--star::before,
+.concise-project-symbol--star::before {
+  width: 30px;
+  height: 30px;
+}
+
+.concise-project-nav-triangles,
+.concise-project-scroll-top-triangles,
+.concise-project-pdf-download svg {
+  width: 30px;
+  height: 30px;
+}
+
+.concise-project-footer .concise-project-symbol {
+  position: relative;
+  margin-left: calc(var(--project-spine-x) - 25px);
+  font-size: 0;
+}
+
+.concise-project-footer .concise-project-symbol::before,
+.concise-project-footer .concise-project-symbol::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 5px;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.concise-project-footer .concise-project-symbol::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.concise-project-footer button[aria-expanded="true"] .concise-project-symbol::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+}
+
+@media (max-width: 760px) {
+  .concise-project-heading {
+    grid-template-columns: minmax(0, 1fr) calc(100px + 0.35rem);
+  }
+
+  .index-page :is(.project-index-root, .project-index-destination-heading) {
+    min-height: 50px;
+    padding-left: 50px;
+  }
+}
+
 .project-index-cv-content.is-open .cv-line::before {
   animation-duration: 720ms;
   animation-delay: 1050ms;

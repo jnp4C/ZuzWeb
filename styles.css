@@ -6360,6 +6360,12 @@ main,
   margin-top: 30px;
 }
 
+/* Experience entries are single-line rows. Keep their baseline rhythm at an
+   actual 30px instead of adding 30px after the preceding 1em line box. */
+.index-page .project-index-cv .cv-section[aria-labelledby="cvExperienceTitle"] .cv-entry + .cv-entry {
+  margin-top: max(0px, calc(30px - 1em));
+}
+
 .index-page .project-index-cv .cv-entry {
   line-height: 1;
 }

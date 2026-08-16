@@ -17,18 +17,12 @@ const infoToggle = document.getElementById("infoToggle");
 const infoDetails = document.getElementById("infoDetails");
 const cvToggle = document.getElementById("cvToggle");
 const cvDetails = document.getElementById("cvDetails");
-const cvLine = document.querySelector(".project-index-cv .cv-line");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
 const indexNameAnimation = document.getElementById("indexNameAnimation");
 const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 const INDEX_OPENING_SPEED = 0.6;
-const MOBILE_DRAWER_LAYOUT = window.matchMedia("(max-width: 720px)");
-const CV_DESKTOP_GEOMETRY_SETTLE_MS = 2100;
-const CV_DESKTOP_ROPE_SEGMENT_STAGGER_MS = 110;
-const CV_DESKTOP_ROPE_SEGMENT_DURATION_MS = 620;
-const CV_DESKTOP_INTRO_END_MS = 3400;
 const DATA_CACHE_VERSION = "2026-08-14-real-project-content-downloads";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
@@ -42,134 +36,11 @@ const AVAILABLE_BACKGROUND_SRCS = new Set([
   "./assets/Background/smoothed/contours-abstract.svg",
 ]);
 const RANDOM_INDEX_BACKGROUND_SRCS = Array.from(AVAILABLE_BACKGROUND_SRCS);
-const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
-let cvRopeAnimationFrame;
-let cvRopeIsIntroAnimating = false;
-let cvRopeLiveReactionStartedAt = 0;
 let activeLanguage = getLanguage();
 let indexProjects = [];
 let setProjectsOpen = () => {};
 let setInfoOpen = () => {};
 let setCvOpen = () => {};
-
-function renderCvRope(elapsed = Number.POSITIVE_INFINITY, reactiveWobble = 0) {
-  if (!cvLine || !cvDetails || cvDetails.hidden) {
-    return;
-  }
-
-  let rope = cvLine.querySelector(".cv-rope");
-  if (!rope) {
-    rope = document.createElementNS(SVG_NAMESPACE, "svg");
-    rope.classList.add("cv-rope");
-    rope.setAttribute("aria-hidden", "true");
-    cvLine.prepend(rope);
-  }
-
-  const markers = Array.from(cvLine.querySelectorAll(".cv-marker"));
-  const lineBounds = cvLine.getBoundingClientRect();
-  rope.setAttribute("viewBox", `0 0 ${lineBounds.width} ${lineBounds.height}`);
-  rope.replaceChildren();
-
-  markers.slice(0, -1).forEach((marker, index) => {
-    const nextMarker = markers[index + 1];
-    const markerBounds = marker.getBoundingClientRect();
-    const nextBounds = nextMarker.getBoundingClientRect();
-    const startX = markerBounds.left + (markerBounds.width / 2) - lineBounds.left;
-    const startY = markerBounds.top + (markerBounds.height / 2) - lineBounds.top;
-    const endX = nextBounds.left + (nextBounds.width / 2) - lineBounds.left;
-    const endY = nextBounds.top + (nextBounds.height / 2) - lineBounds.top;
-    const usesStableDesktopTimeline = !MOBILE_DRAWER_LAYOUT.matches;
-    const segmentStart = usesStableDesktopTimeline
-      ? CV_DESKTOP_GEOMETRY_SETTLE_MS + (index * CV_DESKTOP_ROPE_SEGMENT_STAGGER_MS)
-      : (1990 + (index * 140)) * INDEX_OPENING_SPEED;
-    const segmentDuration = usesStableDesktopTimeline
-      ? CV_DESKTOP_ROPE_SEGMENT_DURATION_MS
-      : 1150 * INDEX_OPENING_SPEED;
-    const progress = Math.min(1, Math.max(0, (elapsed - segmentStart) / segmentDuration));
-    const easedProgress = 1 - ((1 - progress) ** 3);
-    const segmentLength = Math.max(0, endY - startY);
-    const finalSag = Math.min(20, Math.max(8, segmentLength * 0.12));
-    const wobble = progress < 1
-      ? Math.sin(progress * Math.PI * 5) * 22 * (1 - easedProgress)
-      : 0;
-    const reactionDirection = index % 2 === 0 ? 1 : -0.7;
-    const curveOffset = finalSag + wobble + (reactiveWobble * reactionDirection);
-    const controlYOne = startY + ((endY - startY) * 0.34);
-    const controlYTwo = startY + ((endY - startY) * 0.68);
-    const path = document.createElementNS(SVG_NAMESPACE, "path");
-
-    path.setAttribute(
-      "d",
-      `M ${startX} ${startY} C ${startX + curveOffset} ${controlYOne}, ${endX + curveOffset} ${controlYTwo}, ${endX} ${endY}`,
-    );
-    path.setAttribute("pathLength", "1");
-    path.style.setProperty("--rope-reverse-order", `${markers.length - index - 2}`);
-    path.style.strokeDasharray = "1";
-    path.style.strokeDashoffset = `${1 - easedProgress}`;
-    rope.append(path);
-  });
-}
-
-function startCvRopeAnimation() {
-  window.cancelAnimationFrame(cvRopeAnimationFrame);
-  cvRopeLiveReactionStartedAt = 0;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    cvRopeIsIntroAnimating = false;
-    cvRopeAnimationFrame = window.requestAnimationFrame(() => renderCvRope());
-    return;
-  }
-
-  cvRopeIsIntroAnimating = true;
-  const startedAt = performance.now();
-
-  const drawFrame = (timestamp) => {
-    const elapsed = timestamp - startedAt;
-    const liveReactionProgress = Math.min(1, Math.max(0, (timestamp - cvRopeLiveReactionStartedAt) / 720));
-    const liveReaction = cvRopeLiveReactionStartedAt > 0 && liveReactionProgress < 1
-      ? Math.sin(liveReactionProgress * Math.PI * 4) * 9 * ((1 - liveReactionProgress) ** 2)
-      : 0;
-    renderCvRope(elapsed, liveReaction);
-    const introEnd = MOBILE_DRAWER_LAYOUT.matches
-      ? 5800 * INDEX_OPENING_SPEED
-      : CV_DESKTOP_INTRO_END_MS;
-    if (elapsed < introEnd && cvDetails && !cvDetails.hidden) {
-      cvRopeAnimationFrame = window.requestAnimationFrame(drawFrame);
-    } else {
-      cvRopeIsIntroAnimating = false;
-      renderCvRope();
-    }
-  };
-
-  cvRopeAnimationFrame = window.requestAnimationFrame(drawFrame);
-}
-
-function reactCvRopeToRowChange() {
-  if (!cvDetails || cvDetails.hidden) {
-    return;
-  }
-
-  if (cvRopeIsIntroAnimating) {
-    cvRopeLiveReactionStartedAt = performance.now();
-    return;
-  }
-
-  window.cancelAnimationFrame(cvRopeAnimationFrame);
-  const startedAt = performance.now();
-  const reactionDuration = 720;
-
-  const drawReaction = (timestamp) => {
-    const progress = Math.min(1, (timestamp - startedAt) / reactionDuration);
-    const reactiveWobble = Math.sin(progress * Math.PI * 4) * 9 * ((1 - progress) ** 2);
-    renderCvRope(Number.POSITIVE_INFINITY, reactiveWobble);
-    if (progress < 1 && cvDetails && !cvDetails.hidden) {
-      cvRopeAnimationFrame = window.requestAnimationFrame(drawReaction);
-    } else {
-      renderCvRope();
-    }
-  };
-
-  cvRopeAnimationFrame = window.requestAnimationFrame(drawReaction);
-}
 
 function withBackgroundCacheVersion(src) {
   const delimiter = src.includes("?") ? "&" : "?";
@@ -358,18 +229,7 @@ function initProjectsToggle() {
 }
 
 function initCvToggle() {
-  const cvItems = Array.from(cvLine?.querySelectorAll(".cv-item") || []);
   let cvClosingTimer;
-  cvItems.forEach((item) => {
-    const holdDetailsOpen = () => {
-      item.classList.add("has-user-previewed");
-      reactCvRopeToRowChange();
-    };
-    item.addEventListener("pointerenter", holdDetailsOpen);
-    item.addEventListener("pointerleave", reactCvRopeToRowChange);
-    item.addEventListener("focus", holdDetailsOpen);
-    item.addEventListener("blur", reactCvRopeToRowChange);
-  });
 
   setCvOpen = (shouldOpen, immediate = false) => {
     if (!cvToggle || !cvDetails) {
@@ -379,24 +239,18 @@ function initCvToggle() {
     window.clearTimeout(cvClosingTimer);
 
     if (shouldOpen) {
-      cvItems.forEach((item) => item.classList.remove("has-user-previewed"));
       cvDetails.hidden = false;
       cvDetails.classList.remove("is-closing");
       cvDetails.classList.add("is-open");
       projectIndex?.classList.remove("is-cv-closing");
       projectIndex?.classList.add("is-cv-open");
-      startCvRopeAnimation();
       return;
     }
 
-    window.cancelAnimationFrame(cvRopeAnimationFrame);
-    cvRopeIsIntroAnimating = false;
-    cvRopeLiveReactionStartedAt = 0;
     if (immediate) {
       cvDetails.hidden = true;
       cvDetails.classList.remove("is-open", "is-closing");
       projectIndex?.classList.remove("is-cv-open", "is-cv-closing");
-      cvLine?.querySelector(".cv-rope")?.remove();
       return;
     }
     cvDetails.classList.remove("is-open");
@@ -408,18 +262,11 @@ function initCvToggle() {
       cvDetails.hidden = true;
       cvDetails.classList.remove("is-closing");
       projectIndex?.classList.remove("is-cv-closing");
-      cvLine?.querySelector(".cv-rope")?.remove();
     }, closingDuration);
   };
 
   cvToggle?.addEventListener("click", () => {
     setCvOpen(cvToggle.getAttribute("aria-expanded") !== "true");
-  });
-
-  window.addEventListener("resize", () => {
-    if (cvDetails && !cvDetails.hidden) {
-      renderCvRope();
-    }
   });
 }
 

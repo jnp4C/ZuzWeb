@@ -15,7 +15,7 @@
         }
       } catch {}
     </script>
-    <link rel="stylesheet" href="./styles.css?v=2026-08-16-centered-pictograms" />
+    <link rel="stylesheet" href="./styles.css?v=2026-08-16-draft02-info-cv" />
   </head>
   <body class="index-page">
     <div class="background-animation" aria-hidden="true">
@@ -98,22 +98,21 @@
             </button>
             <div id="infoDetails" class="project-index-info-content" hidden>
               <div class="project-index-info-content-inner">
-                <section class="intro">
-                  <p class="project-index-info-contact">
-                    <span class="project-index-info-row" tabindex="0">
-                      <span class="project-index-info-detail project-index-info-detail--left">[ <a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a> ]</span>
-                      <strong>email</strong>
-                    </span>
-                    <span class="project-index-info-row" tabindex="0">
-                      <span class="project-index-info-detail project-index-info-detail--left">[ 2001 ]</span>
-                      <strong data-en="year of birth" data-cs="rok narození">year of birth</strong>
-                    </span>
-                    <span class="project-index-info-row" tabindex="0">
-                      <span class="project-index-info-detail project-index-info-detail--left" data-en="[ Czech Technical University in Prague ]" data-cs="[ České vysoké učení technické v Praze ]">[ Czech Technical University in Prague ]</span>
-                      <strong data-en="alma mater" data-cs="alma mater">alma mater</strong>
-                      <span class="project-index-info-detail project-index-info-detail--right">&lt; 2020–2026 &gt;</span>
-                    </span>
-                  </p>
+                <section class="intro" aria-label="Contact information">
+                  <dl class="project-index-info-contact">
+                    <div class="project-index-info-row">
+                      <dt data-en="[ date of birth ]" data-cs="[ datum narození ]">[ date of birth ]</dt>
+                      <dd>16/07/2001</dd>
+                    </div>
+                    <div class="project-index-info-row">
+                      <dt data-en="[ based in ]" data-cs="[ místo působení ]">[ based in ]</dt>
+                      <dd data-en="Prague, Central Bohemian Region" data-cs="Praha, Středočeský kraj">Prague, Central Bohemian Region</dd>
+                    </div>
+                    <div class="project-index-info-row">
+                      <dt>[ email ]</dt>
+                      <dd><a href="mailto:zuzana.purmova@gmail.com">zuzana.purmova@gmail.com</a></dd>
+                    </div>
+                  </dl>
                 </section>
                 <figure class="personal-photo-frame">
                   <img src="./assets/Other%20photos/personal-photo.png" alt="Portrait of Zuzana Purmová" />
@@ -139,54 +138,43 @@
                 <span class="project-index-frame-line project-index-frame-line--upper-left"></span>
               </span>
               <span class="project-index-symbol project-index-symbol--star" aria-hidden="true">∗</span>
-              <h2 id="cvTitle">CV</h2>
+              <h2 id="cvTitle">
+                <span class="cv-title-short">CV</span>
+                <span class="cv-title-full" data-en="Curriculum Vitae" data-cs="Curriculum Vitae">Curriculum Vitae</span>
+              </h2>
             </button>
             <div id="cvDetails" class="project-index-cv-content" hidden>
               <div class="project-index-cv-content-inner">
-                <section class="personal-panel" aria-label="Curriculum vitae">
-                  <div class="personal-content">
-                    <div class="cv-line" aria-label="CV timeline">
-                      <article class="cv-item" tabindex="0">
-                        <p class="cv-date">[ 09/2016–06/2020 ]</p>
-                        <div class="cv-copy">
-                          <h3>Akademické gymnázium Štěpánská</h3>
-                          <div class="cv-marker" aria-hidden="true"></div>
-                          <p data-en="< Prague >" data-cs="< Praha >">&lt; Prague &gt;</p>
-                        </div>
-                      </article>
-                      <article class="cv-item" tabindex="0">
-                        <p class="cv-date">[ 09/2020–06/2026 ]</p>
-                        <div class="cv-copy">
-                          <h3 data-en="Czech Technical University in Prague" data-cs="České vysoké učení technické v Praze">Czech Technical University in Prague</h3>
-                          <div class="cv-marker" aria-hidden="true"></div>
-                          <p data-en="< Faculty of Architecture · Landscape Architecture >" data-cs="< Fakulta architektury · Krajinářská architektura >">&lt; Faculty of Architecture · Landscape Architecture &gt;</p>
-                        </div>
-                      </article>
-                      <article class="cv-item" tabindex="0">
-                        <p class="cv-date">[ 01/2025–06/2025 ]</p>
-                        <div class="cv-copy">
-                          <h3 data-en="Erasmus at Lund University" data-cs="Erasmus na Lund University">Erasmus at Lund University</h3>
-                          <div class="cv-marker" aria-hidden="true"></div>
-                          <p data-en="< Sweden >" data-cs="< Švédsko >">&lt; Sweden &gt;</p>
-                        </div>
-                      </article>
-                      <article class="cv-item" tabindex="0">
-                        <p class="cv-date" data-en="[ languages ]" data-cs="[ jazyky ]">[ languages ]</p>
-                        <div class="cv-copy">
-                          <h3 data-en="English C1 · French B1" data-cs="Angličtina C1 · Francouzština B1">English C1 · French B1</h3>
-                          <div class="cv-marker" aria-hidden="true"></div>
-                          <p data-en="< FCE certification >" data-cs="< certifikace FCE >">&lt; FCE certification &gt;</p>
-                        </div>
-                      </article>
-                      <article class="cv-item" tabindex="0">
-                        <p class="cv-date" data-en="[ skills ]" data-cs="[ dovednosti ]">[ skills ]</p>
-                        <div class="cv-copy">
-                          <h3>AutoCAD · Rhino · QGIS · Adobe</h3>
-                          <div class="cv-marker" aria-hidden="true"></div>
-                          <p data-en="< handwork and art techniques >" data-cs="< ruční práce a výtvarné techniky >">&lt; handwork and art techniques &gt;</p>
-                        </div>
-                      </article>
-                    </div>
+                <section class="cv-section" aria-labelledby="cvEducationTitle">
+                  <h3 id="cvEducationTitle" data-en="education" data-cs="vzdělání">education</h3>
+                  <div class="cv-section-content">
+                    <article class="cv-entry">
+                      <p><span class="cv-date">[ 09/2016 - 06/2020 ]</span> <strong>Akademické gymnázium Štěpánská</strong> <span class="cv-muted">&lt; Štěpánská 614, 110 00, Praha &gt;</span></p>
+                    </article>
+                    <article class="cv-entry">
+                      <p><span class="cv-date">[ 09/2020 - 06/2026 ]</span> <strong data-en="Czech Technical University in Prague – Faculty of Architecture" data-cs="České vysoké učení technické v Praze – Fakulta architektury">Czech Technical University in Prague – Faculty of Architecture</strong> <span data-en="(bachelor’s + master’s studies)" data-cs="(bakalářské + magisterské studium)">(bachelor’s + master’s studies)</span><br><span class="cv-muted">&lt; Thákurova 9, 166 34 Praha 6 - Dejvice &gt;</span> <mark data-en="Landscape Architecture programme" data-cs="obor Krajinářská architektura">Landscape Architecture programme</mark></p>
+                    </article>
+                    <article class="cv-entry">
+                      <p><span class="cv-date">[ 09/2023 ]</span> <strong>Politecnico di Milano – School of Architecture Urban Planning Construction Engineering</strong> <span data-en="(international workshop)" data-cs="(mezinárodní workshop)">(international workshop)</span><br><span class="cv-muted" data-en="< Italy >" data-cs="< Itálie >">&lt; Italy &gt;</span> <mark>Landscape OF[F] Limits</mark></p>
+                    </article>
+                    <article class="cv-entry">
+                      <p><span class="cv-date">[ 01/2025 - 06/2025 ]</span> <strong>Lund University – School of Architecture</strong> <span data-en="(Erasmus study stay)" data-cs="(studijní pobyt Erasmus)">(Erasmus study stay)</span><br><span class="cv-muted" data-en="< Sweden >" data-cs="< Švédsko >">&lt; Sweden &gt;</span> <mark>Sustainable Urban Design</mark></p>
+                    </article>
+                  </div>
+                </section>
+                <section class="cv-section" aria-labelledby="cvSkillsTitle">
+                  <h3 id="cvSkillsTitle" data-en="skills" data-cs="dovednosti">skills</h3>
+                  <div class="cv-section-content">
+                    <article class="cv-entry"><p><strong data-en="English - C1 level" data-cs="Angličtina - úroveň C1">English - C1 level</strong> <span class="cv-muted" data-en="< FCE certification >" data-cs="< FCE certifikace >">&lt; FCE certification &gt;</span></p></article>
+                    <article class="cv-entry"><p><mark data-en="software" data-cs="software">software</mark> <strong>AutoCAD; Rhino; QGIS; Adobe Photoshop, Illustrator <span data-en="and" data-cs="a">and</span> InDesign</strong></p></article>
+                    <article class="cv-entry"><p data-en="various craft and artistic techniques (from machine sewing and basic carpentry to throwing on a potter’s wheel)" data-cs="různé řemeslno-výtvarné techniky (od šití na stroji, přes základy tesařství, k točení na hrnčířském kruhu)">various craft and artistic techniques (from machine sewing and basic carpentry to throwing on a potter’s wheel)</p></article>
+                  </div>
+                </section>
+                <section class="cv-section" aria-labelledby="cvExperienceTitle">
+                  <h3 id="cvExperienceTitle" data-en="experience" data-cs="zkušenosti">experience</h3>
+                  <div class="cv-section-content">
+                    <article class="cv-entry"><p><span class="cv-date">[ 2025 - 2026 ]</span> <strong data-en="member of the Povaleč festival graphic design team" data-cs="součástí grafického týmu festivalu Povaleč">member of the Povaleč festival graphic design team</strong></p></article>
+                    <article class="cv-entry"><p><span class="cv-date">[ 2021 - 2024 ]</span> <strong data-en="member of the Architecture Students’ Association" data-cs="součástí Spolku Posluchačů Architektury">member of the Architecture Students’ Association</strong> <span class="cv-muted" data-en="< FA CTU student association >" data-cs="< studentský spolek FA ČVUT >">&lt; FA CTU student association &gt;</span></p></article>
                   </div>
                 </section>
               </div>
@@ -200,6 +188,6 @@
       <p>© <span id="year"></span> Ing. Zuzana Purmová</p>
     </footer>
 
-    <script src="./script.js?v=2026-08-16-independent-drawers" type="module"></script>
+    <script src="./script.js?v=2026-08-16-draft02-info-cv" type="module"></script>
   </body>
 </html>

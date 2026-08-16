@@ -5545,3 +5545,176 @@ main,
     transform: none;
   }
 }
+
+/* Web draft 02: editorial Info and CV drawers. */
+.cv-title-full {
+  display: none;
+}
+
+.project-index-cv-toggle[aria-expanded="true"] .cv-title-short {
+  display: none;
+}
+
+.project-index-cv-toggle[aria-expanded="true"] .cv-title-full {
+  display: inline;
+}
+
+.project-index-info-content-inner {
+  --info-content-indent: clamp(3.75rem, 8vw, 7rem);
+  grid-template-columns: minmax(23rem, 1fr) minmax(11rem, 17rem);
+  gap: clamp(2rem, 7vw, 8rem);
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2.5rem) 0 clamp(2.5rem, 6vw, 5rem) var(--info-content-indent);
+}
+
+.project-index-info-contact {
+  gap: clamp(0.8rem, 1.8vw, 1.3rem);
+  font-size: clamp(var(--type-small), 1.2vw, var(--type-medium));
+}
+
+.project-index-info-row {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: clamp(0.65rem, 1.5vw, 1.25rem);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  opacity: 1;
+  transform: none;
+  white-space: normal;
+}
+
+.project-index-info-row dt,
+.project-index-info-row dd {
+  margin: 0;
+}
+
+.project-index-info-row dt {
+  color: color-mix(in srgb, var(--text) 62%, transparent);
+}
+
+.project-index-info-row dd {
+  font-weight: 750;
+}
+
+.project-index-info-row:hover,
+.project-index-info-row:focus-within {
+  translate: none;
+}
+
+.project-index-info .personal-photo-frame {
+  justify-self: start;
+  width: min(100%, 17rem);
+}
+
+.project-index-cv-content-inner {
+  padding: clamp(1.5rem, 3vw, 2.75rem) 0 clamp(3rem, 8vw, 7rem);
+}
+
+.project-index-cv .cv-section {
+  position: relative;
+  min-height: clamp(9rem, 18vw, 14rem);
+  padding-left: clamp(3.75rem, 8vw, 7rem);
+}
+
+.project-index-cv .cv-section + .cv-section {
+  margin-top: clamp(2.5rem, 7vw, 6rem);
+}
+
+.project-index-cv .cv-section > h3 {
+  position: absolute;
+  top: 0;
+  left: 0.25rem;
+  z-index: 2;
+  margin: 0;
+  padding-block: 0.25rem;
+  background: var(--surface);
+  box-shadow: 0 0 0 0.55rem var(--surface);
+  font-family: var(--font-heading);
+  font-size: clamp(var(--type-medium), 2.8vw, var(--type-large));
+  font-weight: 500;
+  line-height: 1;
+  text-transform: lowercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.project-index-cv .cv-section-content {
+  display: grid;
+  gap: clamp(1.1rem, 2.25vw, 1.9rem);
+  max-width: min(100%, 90rem);
+}
+
+.project-index-cv .cv-entry {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: clamp(var(--type-small), 1.2vw, var(--type-medium));
+  line-height: 1.45;
+}
+
+.project-index-cv .cv-entry p {
+  margin: 0;
+}
+
+.project-index-cv .cv-date {
+  position: static;
+  display: inline;
+  max-width: none;
+  color: var(--text);
+  font: inherit;
+  font-weight: 400;
+  opacity: 1;
+  overflow: visible;
+  text-align: left;
+  white-space: normal;
+  translate: none;
+  transform: none;
+}
+
+.project-index-cv .cv-muted {
+  color: color-mix(in srgb, var(--text) 48%, transparent);
+}
+
+.project-index-cv mark {
+  display: inline;
+  padding: 0.04em 0.18em 0.1em;
+  background: var(--text);
+  color: var(--surface);
+  font-weight: 750;
+}
+
+@media (max-width: 720px) {
+  .project-index-info-content-inner {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1rem 0 2.5rem calc(var(--project-branch-indent) + 0.5rem);
+  }
+
+  .project-index-info-row {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .project-index-info .personal-photo-frame {
+    width: clamp(9rem, 52vw, 15rem);
+  }
+
+  .project-index-cv .cv-section {
+    min-height: 8rem;
+    padding-left: calc(var(--project-branch-indent) + 0.5rem);
+  }
+
+  .project-index-cv .cv-section > h3 {
+    left: 0.25rem;
+    font-size: var(--type-medium);
+  }
+
+  .project-index-cv .cv-section-content {
+    gap: 1.15rem;
+  }
+
+  .project-index-cv .cv-entry {
+    font-size: var(--type-small);
+    line-height: 1.4;
+  }
+}

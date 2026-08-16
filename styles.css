@@ -295,11 +295,6 @@ h3,
   gap: 0.35rem;
 }
 
-.concise-project-nav .language-switch {
-  position: static;
-  margin-right: 0.35rem;
-}
-
 .concise-project.is-project-nav-floating .concise-project-back {
   position: fixed;
   top: clamp(0.85rem, 2.5vw, 2rem);
@@ -2330,11 +2325,6 @@ main,
   font-weight: 700;
   line-height: 1;
   backdrop-filter: blur(4px);
-}
-
-.index-page .project-index > .language-switch {
-  top: calc(clamp(1.5rem, 2.2vw, 2.75rem) + 1.25rem);
-  right: 0;
 }
 
 .language-switch button {
@@ -5450,7 +5440,7 @@ main,
   height: auto;
   min-height: 0;
   align-items: flex-start;
-  margin: clamp(0.35rem, 1.4vw, 1.25rem) 0 0;
+  margin: clamp(2.6rem, 4.5vw, 3.5rem) 0 0;
   padding: 0 var(--index-page-gutter);
   overflow: visible;
   border: 0;
@@ -5515,7 +5505,7 @@ main,
   .concise-project-page .signature-nameplate {
     height: auto;
     min-height: 0;
-    margin-top: clamp(0.25rem, 2vw, 0.65rem);
+    margin-top: 2.75rem;
   }
 
   .index-page .project-index {

@@ -15,11 +15,16 @@
         }
       } catch {}
     </script>
-    <link rel="stylesheet" href="./styles.css?v=2026-08-16-aligned-mobile-index-legend" />
+    <link rel="stylesheet" href="./styles.css?v=2026-08-16-top-right-language" />
   </head>
   <body class="index-page">
     <div class="background-animation" aria-hidden="true">
     </div>
+    <nav class="language-switch" data-language-switch aria-label="Language">
+      <button type="button" data-language="cs" aria-pressed="false">CZ</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-language="en" aria-pressed="true">EN</button>
+    </nav>
     <header class="site-header index-nameplate signature-nameplate">
       <h1 class="visually-hidden">Ing. Zuzana Purmová</h1>
       <video
@@ -39,11 +44,6 @@
 
     <main class="container">
       <section class="project-index" aria-labelledby="projectIndexTitle">
-        <nav class="language-switch" data-language-switch aria-label="Language">
-          <button type="button" data-language="cs" aria-pressed="false">CZ</button>
-          <span aria-hidden="true">/</span>
-          <button type="button" data-language="en" aria-pressed="true">EN</button>
-        </nav>
         <button
           id="projectsToggle"
           class="project-index-root"

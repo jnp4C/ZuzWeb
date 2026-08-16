@@ -20,7 +20,6 @@ const AVAILABLE_BACKGROUND_SRCS = new Set([
   "./assets/Background/smoothed/contours-abstract.svg",
 ]);
 const projectRoot = document.getElementById("conciseProject");
-const projectLanguageSwitch = document.querySelector(".concise-project-page > .language-switch");
 const backgroundAnimation = document.querySelector(".concise-project-background");
 const signatureAnimation = document.querySelector(".signature-animation");
 const signatureNameplate = signatureAnimation?.closest(".signature-nameplate");
@@ -677,9 +676,6 @@ function renderProject(animateFacts = false) {
   const projectNavigation = document.createElement("nav");
   projectNavigation.className = "concise-project-nav";
   projectNavigation.setAttribute("aria-label", `${copy.previousProject} / ${copy.nextProject}`);
-  if (projectLanguageSwitch) {
-    projectNavigation.append(projectLanguageSwitch);
-  }
   projectNavigation.append(
     createProjectNavigationLink(previousProject, "previous", copy.previousProject),
     createProjectNavigationLink(nextProject, "next", copy.nextProject),

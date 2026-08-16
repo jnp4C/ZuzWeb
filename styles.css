@@ -6400,6 +6400,10 @@ main,
   animation-delay: 0ms;
 }
 
+.index-page .project-index.is-projects-closing .project-index-destination-heading {
+  animation: project-index-heading-return 900ms cubic-bezier(0.45, 0, 0.2, 1) both;
+}
+
 .index-page .project-index-info-content.is-closing,
 .index-page .project-index-cv-content.is-closing,
 .index-page .project-index.is-info-closing .project-index-info::after,
@@ -6422,6 +6426,16 @@ main,
 ).is-closing,
 .index-page .project-index.is-projects-closing .project-index-projects-panel {
   pointer-events: none;
+}
+
+@keyframes project-index-heading-return {
+  from {
+    margin-left: calc(-1 * var(--project-branch-indent));
+  }
+
+  to {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 480px) {

@@ -23,7 +23,8 @@ const indexNameAnimation = document.getElementById("indexNameAnimation");
 const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 const INDEX_OPENING_SPEED = 0.6;
-const DRAWER_CLOSING_DURATION = 950;
+const PROJECTS_CLOSING_DURATION = 900;
+const NESTED_DRAWER_CLOSING_DURATION = 700;
 const DATA_CACHE_VERSION = "2026-08-16-normalized-author-names";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
@@ -166,7 +167,7 @@ function initInfoToggle() {
     infoDetails.classList.add("is-closing");
     projectIndex?.classList.remove("is-info-open");
     projectIndex?.classList.add("is-info-closing");
-    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : DRAWER_CLOSING_DURATION;
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : NESTED_DRAWER_CLOSING_DURATION;
     infoClosingTimer = window.setTimeout(() => {
       if (transitionId !== infoTransitionId) return;
       infoDetails.hidden = true;
@@ -224,7 +225,7 @@ function initProjectsToggle() {
     projectIndex.classList.remove("is-projects-open");
     void projectsPanel.offsetWidth;
     projectIndex.classList.add("is-projects-closing");
-    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : DRAWER_CLOSING_DURATION;
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : PROJECTS_CLOSING_DURATION;
     closingTimer = window.setTimeout(() => {
       if (transitionId !== projectsTransitionId) return;
       projectsPanel.hidden = true;
@@ -269,7 +270,7 @@ function initCvToggle() {
     cvDetails.classList.add("is-closing");
     projectIndex?.classList.remove("is-cv-open");
     projectIndex?.classList.add("is-cv-closing");
-    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : DRAWER_CLOSING_DURATION;
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : NESTED_DRAWER_CLOSING_DURATION;
     cvClosingTimer = window.setTimeout(() => {
       if (transitionId !== cvTransitionId) return;
       cvDetails.hidden = true;

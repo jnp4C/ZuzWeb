@@ -254,8 +254,13 @@ h3,
 
 .concise-project-heading h1 {
   grid-column: 1;
-  margin: 0;
-  padding: 0.65rem 1rem 0.65rem 2.75rem;
+  display: block;
+  width: fit-content;
+  max-width: calc(100% - 2.75rem);
+  margin: 0 0 0 2.75rem;
+  padding: 0.08em 0.2em 0.14em;
+  background: var(--line);
+  color: var(--surface);
   font-family: var(--font-heading);
   font-size: var(--index-drawer-heading-size);
   font-weight: 700;
@@ -1034,7 +1039,9 @@ h3,
   }
 
   .concise-project-heading h1 {
-    padding: 0.65rem 0.65rem 0.65rem 2.55rem;
+    max-width: calc(100% - 2.55rem);
+    margin-left: 2.55rem;
+    padding: 0.08em 0.2em 0.14em;
     font-size: clamp(1.55rem, 8vw, var(--type-medium));
   }
 

@@ -194,13 +194,18 @@ project-specific landscape background rather than inventing a separate layout.
   weight, and 1.5 line height. Render the label in all caps. Do not use the
   Space Grotesk heading level for these labels.
 - Each visible section has a horizontal 2px black branch from the main vertical
-  spine to the exact center of the carousel frame's left border. The localized
-  section label sits immediately above the line. Do not prepend section numbers.
+  spine to the exact center of the carousel frame's left border. Keep this line
+  continuous; labels must never interrupt it. Put the localized section label
+  below the frame at its left corner. Do not prepend section numbers.
 - A section may contain multiple media items. Its first selected asset is the
   initial frame, and all additional assets use the same framed carousel.
 - Carousels autoplay in a continuous right-to-left horizontal swipe. Manual
-  previous navigation reverses the direction. Pause autoplay for pointer hover
+  dot selection may move in either direction. Pause autoplay for pointer hover
   or keyboard interaction and disable autoplay/transitions for reduced motion.
+- Use one pagination dot per carousel image below the frame at its right corner,
+  aligned in one row with the left-side section label. Dots are outlined by
+  default and solid black when selected; selecting a dot moves directly to its
+  image. Do not add previous/next arrows or a textual slide counter.
 - Keep the carousel frame monochrome and responsive. Recalculate branch
   geometry when the frame or viewport resizes so the line remains connected.
 

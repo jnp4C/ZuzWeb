@@ -334,7 +334,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   close.focus();
 }
 
-function createMediaCarousel(mediaItems, label) {
+function createMediaCarousel(mediaItems, label, heading) {
   const figure = document.createElement("figure");
   figure.className = "concise-project-carousel";
   const viewport = document.createElement("div");
@@ -366,6 +366,7 @@ function createMediaCarousel(mediaItems, label) {
   setInitialViewportRatio(slides[0]);
   let activeIndex = 0;
   let isAnimating = false;
+  let dotButtons = [];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const moveToSlide = (nextIndex, direction = 1) => {
     if (isAnimating || nextIndex === activeIndex) {
@@ -390,7 +391,11 @@ function createMediaCarousel(mediaItems, label) {
     );
 
     activeIndex = nextIndex;
-    counter.textContent = `${activeIndex + 1} / ${mediaItems.length}`;
+    dotButtons.forEach((button, index) => {
+      const isSelected = index === activeIndex;
+      button.classList.toggle("is-selected", isSelected);
+      button.setAttribute("aria-current", isSelected ? "true" : "false");
+    });
     outgoingAnimation.finished.finally(() => {
       outgoingSlide.classList.remove("is-active");
       outgoingSlide.setAttribute("aria-hidden", "true");
@@ -401,27 +406,26 @@ function createMediaCarousel(mediaItems, label) {
 
   const controls = document.createElement("div");
   controls.className = "concise-project-carousel-controls";
-  const previous = document.createElement("button");
-  previous.type = "button";
-  previous.textContent = "‹";
-  previous.setAttribute("aria-label", COPY[activeLanguage].previousImage);
-  const counter = document.createElement("span");
-  counter.setAttribute("aria-live", "polite");
-  const next = document.createElement("button");
-  next.type = "button";
-  next.textContent = "›";
-  next.setAttribute("aria-label", COPY[activeLanguage].nextImage);
-
-  previous.addEventListener("click", () => {
-    moveToSlide((activeIndex - 1 + mediaItems.length) % mediaItems.length, -1);
+  controls.setAttribute("role", "group");
+  controls.setAttribute("aria-label", label);
+  dotButtons = mediaItems.map((media, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "concise-project-carousel-dot";
+    dot.classList.toggle("is-selected", index === 0);
+    dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+    dot.setAttribute("aria-label", `${label}: ${index + 1} / ${mediaItems.length}`);
+    dot.addEventListener("click", () => {
+      moveToSlide(index, index >= activeIndex ? 1 : -1);
+    });
+    return dot;
   });
-  next.addEventListener("click", () => {
-    moveToSlide((activeIndex + 1) % mediaItems.length, 1);
-  });
-
-  controls.append(previous, counter, next);
+  controls.append(...dotButtons);
+  const meta = document.createElement("figcaption");
+  meta.className = "concise-project-carousel-meta";
+  meta.append(heading, controls);
+  figure.append(meta);
   if (mediaItems.length > 1) {
-    figure.append(controls);
     figure.setAttribute("aria-label", label);
     viewport.classList.add("is-clickable");
     viewport.tabIndex = 0;
@@ -449,7 +453,6 @@ function createMediaCarousel(mediaItems, label) {
       }
     });
   }
-  counter.textContent = `1 / ${mediaItems.length}`;
   return figure;
 }
 
@@ -459,25 +462,20 @@ function connectSectionToFrame(section, figure) {
       return;
     }
     const sectionRect = section.getBoundingClientRect();
-    const figureRect = figure.getBoundingClientRect();
-    const heading = section.querySelector("h2");
-    const headingWidth = heading?.getBoundingClientRect().width || 0;
+    const viewport = figure.querySelector(".concise-project-carousel-viewport");
+    const viewportRect = viewport?.getBoundingClientRect() || figure.getBoundingClientRect();
     const project = section.closest(".concise-project");
     const spineX = project
       ? Number.parseFloat(getComputedStyle(project).getPropertyValue("--project-spine-x")) || 0
       : 0;
-    section.style.setProperty(
-      "--feature-label-clearance",
-      `${headingWidth + Math.max(16, spineX * 0.45)}px`,
-    );
-    const connectorMeetsTop = window.matchMedia("(max-width: 760px)").matches;
+    section.style.setProperty("--feature-label-clearance", "0px");
     section.style.setProperty(
       "--feature-connector-top",
-      `${figureRect.top - sectionRect.top + (connectorMeetsTop ? 0 : figureRect.height / 2)}px`,
+      `${viewportRect.top - sectionRect.top + (viewportRect.height / 2)}px`,
     );
     section.style.setProperty(
       "--feature-connector-width",
-      `${Math.max(0, figureRect.left - sectionRect.left - spineX + 2)}px`,
+      `${Math.max(0, viewportRect.left - sectionRect.left - spineX + 2)}px`,
     );
   };
 
@@ -817,8 +815,8 @@ function renderProject(animateFacts = false) {
     const sectionHeading = document.createElement("h2");
     const localizedSectionLabel = getLocalizedText(section.label, activeLanguage);
     sectionHeading.textContent = localizedSectionLabel;
-    const figure = createMediaCarousel(mediaItems, localizedSectionLabel);
-    block.append(sectionHeading, figure);
+    const figure = createMediaCarousel(mediaItems, localizedSectionLabel, sectionHeading);
+    block.append(figure);
     featured.append(block);
     connectSectionToFrame(block, figure);
   });

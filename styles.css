@@ -654,17 +654,11 @@ h3,
 }
 
 .concise-project-section h2 {
-  position: absolute;
-  top: var(--feature-connector-top, 50%);
-  left: calc(var(--project-spine-x) + clamp(0.75rem, 2vw, 1.75rem));
-  z-index: 3;
   display: block;
   margin: 0;
-  max-width: calc(100% - var(--feature-label-clearance));
-  padding: 0 clamp(0.5rem, 1vw, 0.85rem) 0 0;
-  background: var(--surface);
-  white-space: nowrap;
-  transform: translateY(-50%);
+  padding: 0;
+  background: transparent;
+  white-space: normal;
 }
 
 .concise-project-section figure {
@@ -827,44 +821,55 @@ h3,
 }
 
 .concise-project-carousel-controls {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
   display: flex;
   align-items: center;
-  background: #000;
-  color: #fff;
-  font-family: var(--font-text);
-  font-size: var(--type-small);
-  font-weight: 700;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  margin-left: auto;
 }
 
-.concise-project-carousel-controls button {
+.concise-project-carousel-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 2rem;
+  padding-top: 0.55rem;
+}
+
+.concise-project-carousel-dot {
+  position: relative;
   display: grid;
-  width: 2.35rem;
-  height: 2.35rem;
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   place-items: center;
   border: 0;
+  padding: 0;
   background: transparent;
-  color: inherit;
-  font: inherit;
-  font-size: 1.5rem;
   cursor: pointer;
 }
 
-.concise-project-carousel-controls span {
-  min-width: 3.5rem;
-  text-align: center;
+.concise-project-carousel-dot::before {
+  content: "";
+  display: block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1.5px solid var(--text);
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 180ms ease, transform 180ms ease;
 }
 
-.concise-project-carousel-controls button:hover,
-.concise-project-carousel-controls button:focus-visible {
-  background: #fff;
-  color: #000;
+.concise-project-carousel-dot.is-selected::before {
+  background: var(--text);
 }
 
-.concise-project-carousel-controls button:focus-visible {
+.concise-project-carousel-dot:hover::before {
+  transform: scale(1.2);
+}
+
+.concise-project-carousel-dot:focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
 }
@@ -1095,9 +1100,9 @@ h3,
   }
 
   .concise-project-section h2 {
-    padding: 0 0.5rem 0.4rem 0;
-    background: var(--surface);
-    transform: translateY(-100%);
+    padding: 0;
+    background: transparent;
+    transform: none;
   }
 
   .concise-project-section:nth-child(n) figure,

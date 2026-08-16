@@ -6052,7 +6052,19 @@ main,
   }
 
   .index-page .project-index-group {
+    display: grid;
     min-height: 0;
+  }
+
+  .index-page .project-index-group h2,
+  .index-page .project-index-list {
+    grid-area: 1 / 1;
+  }
+
+  .index-page .project-index-group h2 {
+    position: relative;
+    align-self: start;
+    justify-self: start;
   }
 
   .index-page .project-index-group + .project-index-group {

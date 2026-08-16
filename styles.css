@@ -1540,6 +1540,8 @@ main,
 .project-index-destination-heading > .project-index-symbol.project-index-symbol--star,
 .concise-project-symbol--star {
   font-size: 0;
+  rotate: 0deg;
+  transition: rotate 260ms cubic-bezier(0.65, 0, 0.35, 1);
   line-height: 1;
 }
 
@@ -2794,12 +2796,10 @@ main,
 
 .concise-project-footer .concise-project-symbol::after {
   transform: translate(-50%, -50%) rotate(90deg);
-  transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.concise-project-footer button[aria-expanded="true"] .concise-project-symbol::after {
-  opacity: 0;
-  transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+.concise-project-footer button[aria-expanded="true"] .concise-project-symbol {
+  rotate: 45deg;
 }
 
 .concise-project-footer button {
@@ -2819,7 +2819,7 @@ main,
   color: var(--surface);
   font-family: var(--font-heading);
   font-size: var(--index-drawer-heading-size);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
@@ -6245,6 +6245,13 @@ main,
   align-items: center;
   padding: 0.12em 0.2em 0;
   line-height: 1;
+  font-weight: 600;
+}
+
+@media (min-width: 721px) {
+  .concise-project-page {
+    --index-drawer-heading-size: clamp(28px, 3.0556vw, 44px);
+  }
 }
 
 .concise-project-nav-triangles,

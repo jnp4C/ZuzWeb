@@ -976,7 +976,6 @@ function renderProject(animateFacts = false) {
   presentation.addEventListener("click", () => {
     const shouldOpen = presentation.getAttribute("aria-expanded") !== "true";
     presentation.setAttribute("aria-expanded", String(shouldOpen));
-    plus.textContent = shouldOpen ? "−" : "+";
     window.clearTimeout(presentationCloseTimer);
     if (shouldOpen) {
       footer.classList.add("is-presentation-open");

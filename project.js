@@ -4,7 +4,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-authoritative-project-media";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-day-night-slider";
 
 const DATA_CACHE_VERSION = "2026-08-16-authoritative-project-media";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
@@ -481,6 +481,56 @@ function createMediaCarousel(mediaItems, label, heading) {
   return figure;
 }
 
+function createDayNightFade(mediaItems, label, heading) {
+  const figure = document.createElement("figure");
+  figure.className = "concise-project-carousel concise-project-day-night";
+  const viewport = document.createElement("div");
+  viewport.className = "concise-project-carousel-viewport concise-project-day-night-viewport is-clickable";
+  const dayImage = createImage(mediaItems[0], "concise-project-day-night-image");
+  const nightImage = createImage(mediaItems[1], "concise-project-day-night-image concise-project-day-night-image--night");
+  dayImage.loading = "eager";
+  nightImage.style.opacity = "0";
+  viewport.append(dayImage, nightImage);
+  const applyRatio = () => {
+    if (dayImage.naturalWidth > 0 && dayImage.naturalHeight > 0) {
+      viewport.style.aspectRatio = `${dayImage.naturalWidth} / ${dayImage.naturalHeight}`;
+    }
+  };
+  if (dayImage.complete) applyRatio();
+  else dayImage.addEventListener("load", applyRatio, { once: true });
+
+  let nightAmount = 0;
+  const openCurrentImage = () => openImageLightbox(mediaItems, nightAmount >= 0.5 ? 1 : 0);
+  viewport.tabIndex = 0;
+  viewport.setAttribute("role", "button");
+  viewport.setAttribute("aria-label", COPY[activeLanguage].openImage);
+  viewport.addEventListener("click", openCurrentImage);
+  viewport.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openCurrentImage();
+    }
+  });
+
+  const slider = document.createElement("input");
+  slider.className = "concise-project-day-night-slider";
+  slider.type = "range";
+  slider.min = "0";
+  slider.max = "100";
+  slider.value = "0";
+  slider.setAttribute("aria-label", label);
+  slider.addEventListener("input", () => {
+    nightAmount = Number(slider.value) / 100;
+    nightImage.style.opacity = String(nightAmount);
+  });
+
+  const meta = document.createElement("figcaption");
+  meta.className = "concise-project-carousel-meta";
+  meta.append(heading, slider);
+  figure.append(viewport, meta);
+  return figure;
+}
+
 function connectSectionToFrame(section, figure) {
   const updateConnector = () => {
     if (!section.isConnected || !figure.isConnected) {
@@ -840,7 +890,9 @@ function renderProject(animateFacts = false) {
     const sectionHeading = document.createElement("h2");
     const localizedSectionLabel = getLocalizedText(section.label, activeLanguage);
     sectionHeading.textContent = localizedSectionLabel;
-    const figure = createMediaCarousel(mediaItems, localizedSectionLabel, sectionHeading);
+    const figure = section.presentation === "day-night-fade"
+      ? createDayNightFade(mediaItems, localizedSectionLabel, sectionHeading)
+      : createMediaCarousel(mediaItems, localizedSectionLabel, sectionHeading);
     block.append(figure);
     featured.append(block);
     connectSectionToFrame(block, figure);

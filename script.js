@@ -3,7 +3,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-authoritative-project-media";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-day-night-slider";
 
 const projectGroups = {
   study: document.getElementById("studyProjects"),

@@ -16,8 +16,8 @@ function video(slug, name, posterName, en, cs) {
   };
 }
 
-function section(id, kind, en, cs, items) {
-  return { id, kind, label: { en, cs }, media: items };
+function section(id, kind, en, cs, items, options = {}) {
+  return { id, kind, label: { en, cs }, media: items, ...options };
 }
 
 const CURATED_MEDIA = {
@@ -210,12 +210,10 @@ const CURATED_MEDIA = {
   "tree-with-the-spirit-of-christmas": {
     hero: media("tree-with-the-spirit-of-christmas", "index", "Christmas tree project index visualization", "Indexová vizualizace vánočního stromu"),
     sections: [
-      section("day-visualization", "graphic", "Day visualization", "Vizualizace den", [
+      section("day-night-visualization", "graphic", "Day / night visualization", "Vizualizace den / noc", [
         media("tree-with-the-spirit-of-christmas", "source-visualization-day", "Christmas tree daytime visualization", "Denní vizualizace vánočního stromu"),
-      ]),
-      section("night-visualization", "graphic", "Night visualization", "Vizualizace noc", [
         media("tree-with-the-spirit-of-christmas", "source-visualization-night", "Christmas tree nighttime visualization", "Noční vizualizace vánočního stromu"),
-      ]),
+      ], { presentation: "day-night-fade" }),
     ],
   },
   "polyporus-larixis": {

@@ -917,8 +917,7 @@ function renderProject(animateFacts = false) {
   plus.setAttribute("aria-hidden", "true");
   plus.textContent = "+";
   const presentationLabel = document.createElement("span");
-  presentationLabel.textContent = getLocalizedText(page.fullPresentation?.label, activeLanguage)
-    || copy.fullPresentation;
+  presentationLabel.textContent = activeLanguage === "cs" ? "Prezentace" : "Presentation";
   presentation.append(plus, presentationLabel);
   if (hasPresentationContent) {
     footer.append(presentation);

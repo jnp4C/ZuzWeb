@@ -6350,17 +6350,18 @@ main,
   font-size: var(--index-section-heading-size);
 }
 
-/* Exact CV rhythm: education entries are denser because their individual
-   records commonly wrap; skills and experience keep the full row interval. */
-.index-page .project-index-cv .cv-section[aria-labelledby="cvEducationTitle"] .cv-section-content {
-  gap: 15px;
+/* Exact CV rhythm: separate entries always have 30px between their line
+   boxes. Wrapped lines inside one education entry use 15px of leading. */
+.index-page .project-index-cv .cv-section-content {
+  gap: 30px;
 }
 
-.index-page .project-index-cv .cv-section:is(
-  [aria-labelledby="cvSkillsTitle"],
-  [aria-labelledby="cvExperienceTitle"]
-) .cv-section-content {
-  gap: 30px;
+.index-page .project-index-cv .cv-entry {
+  line-height: 1;
+}
+
+.index-page .project-index-cv .cv-section[aria-labelledby="cvEducationTitle"] .cv-entry {
+  line-height: calc(1em + 15px);
 }
 
 @media (max-width: 480px) {

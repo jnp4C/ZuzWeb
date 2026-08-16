@@ -1818,12 +1818,12 @@
       "highlightedText": [
         {
           "label": {
-            "en": "NOTE",
-            "cs": "POZN."
+            "en": "note:",
+            "cs": "pozn.:"
           },
           "detail": {
-            "en": "completed during an Erasmus stay at Lund University (Sustainable Urban Design Studio)",
-            "cs": "v rámci pobytu ERASMUS na Lund University (Sustainable Urban Design Studio)"
+            "en": "completed during an Erasmus stay at Lund University\n(Sustainable Urban Design Studio)",
+            "cs": "v rámci pobytu ERASMUS na Lund University\n(Sustainable Urban Design Studio)"
           }
         }
       ],
@@ -7711,8 +7711,8 @@
       "awards": [
         {
           "label": {
-            "en": "AWARD",
-            "cs": "OCENĚNÍ"
+            "en": "AWARD:",
+            "cs": "OCENĚNÍ :"
           },
           "detail": {
             "en": "Laurus 2025 — Winner in the LANDSCAPE GESTURE category\n(Conceptual or artistic proposals outside a specific brief; a gesture as an idea, symbol or intervention that opens a new perspective on the landscape)",
@@ -9522,12 +9522,12 @@
       "awards": [
         {
           "label": {
-            "en": "AWARD",
-            "cs": "OCENĚNÍ"
+            "en": "AWARD:",
+            "cs": "OCENĚNÍ :"
           },
           "detail": {
-            "en": "FA CTU Dean's Award 2024 for a 2nd–5th year studio project — Landscape Architecture",
-            "cs": "Cena děkana FA ČVUT 2024 za ateliérový projekt 2. – 5. ročníku – Krajinářská architektura"
+            "en": "FA CTU Dean's Award 2024\nfor a 2nd–5th year studio project — Landscape Architecture",
+            "cs": "Cena děkana FA ČVUT 2024\nza ateliérový projekt 2. – 5. ročníku – Krajinářská architektura"
           }
         }
       ],
@@ -9535,24 +9535,24 @@
         {
           "type": "publication",
           "label": {
-            "en": "Publication",
-            "cs": "Publikace"
+            "en": "PUBLICATION:",
+            "cs": "PUBLIKACE:"
           },
           "text": {
-            "en": "Landscape planning possibilities",
-            "cs": "Možnosti plánování krajiny"
+            "en": "https://www.casopis.forumochranyprirody.cz/magazin/analyzy-komentare/moznosti-planovani-krajiny",
+            "cs": "https://www.casopis.forumochranyprirody.cz/magazin/analyzy-komentare/moznosti-planovani-krajiny"
           },
           "href": "https://www.casopis.forumochranyprirody.cz/magazin/analyzy-komentare/moznosti-planovani-krajiny"
         },
         {
           "type": "conference",
           "label": {
-            "en": "Conference",
-            "cs": "Konference"
+            "en": "",
+            "cs": ""
           },
           "text": {
-            "en": "Nature-based measures in the landscape — FA CTU, 18 September 2024",
-            "cs": "Přírodě blízká opatření v krajině – FA ČVUT, 18. 9. 2024"
+            "en": "The project was presented at the conference [ Nature-based Measures in the Landscape ] FA CTU 18 September 2024",
+            "cs": "Projekt byl prezentován na konferenci [ Přírodě blízká opatření v krajině ] FA ČVUT 18.9.2024"
           }
         }
       ],
@@ -16277,8 +16277,8 @@
       "awards": [
         {
           "label": {
-            "en": "REALIZATION",
-            "cs": "REALIZACE"
+            "en": "REALIZATION :",
+            "cs": "REALIZACE :"
           },
           "detail": {
             "en": "POKOJE 2024 EXHIBITION\nThe exhibition presents work by students from art universities across the Czech Republic, as well as Poland, Slovakia and Hungary. Each year, it brings buildings in central Prague to life, with participants creating their own site-specific art projects for these spaces.",

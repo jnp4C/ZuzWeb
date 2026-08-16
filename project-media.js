@@ -145,7 +145,7 @@ const CURATED_MEDIA = {
     ],
   },
   "growing-through": {
-    hero: media("growing-through", "index", "Growing-Through installation visualization", "Vizualizace instalace Growing-Through"),
+    hero: media("growing-through", "source-index", "Growing-Through installation visualization", "Vizualizace instalace Growing-Through"),
     sections: [
       section("visualization", "graphic", "Visualization", "Vizualizace", [
         media("growing-through", "source-visualization", "Growing-Through visualization", "Vizualizace Growing-Through"),
@@ -162,7 +162,7 @@ const CURATED_MEDIA = {
     ],
   },
   abstract: {
-    hero: media("abstract", "index", "Abstract project perspective", "Perspektiva projektu Abstract"),
+    hero: media("abstract", "source-index", "Abstract project perspective", "Perspektiva projektu Abstract"),
     sections: [
       section("masterplan", "masterplan", "Masterplan", "Masterplan", [
         media("abstract", "source-masterplan", "Abstract project masterplan", "Masterplan projektu Abstract"),
@@ -182,7 +182,7 @@ const CURATED_MEDIA = {
     ],
   },
   "mezi-vsim": {
-    hero: media("mezi-vsim", "index", "Mezi vším installation", "Instalace Mezi vším"),
+    hero: media("mezi-vsim", "source-index", "Mezi vším installation", "Instalace Mezi vším"),
     sections: [
       section("design", "graphic", "Design", "Návrh", [1, 2].map((number) => media(
         "mezi-vsim",

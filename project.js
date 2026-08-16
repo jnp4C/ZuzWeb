@@ -4,9 +4,9 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-day-night-slider";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
 
-const DATA_CACHE_VERSION = "2026-08-16-highlighted-project-text";
+const DATA_CACHE_VERSION = "2026-08-16-authoritative-highlight-copy";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -615,7 +615,7 @@ function createHighlightedProjectText(page, language, copy) {
     mark.className = "concise-project-highlight-mark";
     if (label) {
       const heading = document.createElement("strong");
-      heading.textContent = `${label}:`;
+      heading.textContent = label;
       mark.append(heading, document.createTextNode(" "));
     }
     if (href) {

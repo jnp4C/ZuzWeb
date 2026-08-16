@@ -877,8 +877,15 @@ function renderProject(animateFacts = false) {
     download.className = "concise-project-pdf-download";
     download.href = presentationDownload.href;
     download.download = "";
-    download.textContent = getLocalizedText(presentationDownload.label, activeLanguage)
+    const downloadLabel = getLocalizedText(presentationDownload.label, activeLanguage)
       || "Download PDF";
+    download.setAttribute("aria-label", downloadLabel);
+    download.title = downloadLabel;
+    const downloadIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    downloadIcon.setAttribute("viewBox", "0 0 24 24");
+    downloadIcon.setAttribute("aria-hidden", "true");
+    downloadIcon.innerHTML = '<path d="M12 3v12m-5-5 5 5 5-5M5 20h14" />';
+    download.append(downloadIcon);
     download.setAttribute("aria-hidden", "true");
     download.tabIndex = -1;
     footer.append(download);

@@ -1887,9 +1887,15 @@ main,
 .project-index-highlight {
   --detail-delay: 280ms;
   --detail-open-width: 12rem;
+  display: inline-block;
+  max-width: none;
+  opacity: 1;
+  overflow: visible;
+  transform: none;
   background: var(--text);
   color: var(--surface);
   padding: 0.05em 0.2em 0.1em;
+  white-space: nowrap;
 }
 
 .project-index-title {

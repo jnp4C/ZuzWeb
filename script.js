@@ -394,7 +394,7 @@ function createProjectIndexItem(project, order) {
 
   (project.index?.highlights || []).forEach((highlight) => {
     const badge = document.createElement("span");
-    badge.className = `project-index-detail project-index-highlight project-index-highlight--${highlight.type || "note"}`;
+    badge.className = `project-index-highlight project-index-highlight--${highlight.type || "note"}`;
     badge.textContent = createLocalizedText(highlight.label || highlight);
     link.append(badge);
   });

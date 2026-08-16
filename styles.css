@@ -1436,6 +1436,7 @@ main,
 }
 
 .index-page .project-index {
+  --drawer-row-start: 50px;
   width: 100%;
   margin: 0;
   padding: clamp(1.5rem, 2.2vw, 2.75rem) 0 0;
@@ -1656,7 +1657,7 @@ main,
   left: 0;
   z-index: 8;
   width: min(72vw, 46rem);
-  max-width: calc(100vw - (2 * var(--index-page-gutter)) - 2.75rem);
+  max-width: calc(100vw - (2 * var(--index-page-gutter)) - var(--drawer-row-start));
   max-height: 0;
   margin: 0;
   clip-path: inset(0 100% 0 0);
@@ -1820,7 +1821,7 @@ main,
   gap: 0.4rem;
   width: max-content;
   max-width: none;
-  margin-left: calc(2.75rem - var(--project-branch-indent));
+  margin-left: calc(var(--drawer-row-start) - var(--project-branch-indent));
   color: var(--text);
   font-size: var(--type-small);
   line-height: 1.25;
@@ -5412,9 +5413,9 @@ main,
     display: flex;
     flex-wrap: wrap;
     gap: 0.12rem 0.4rem;
-    width: calc(100vw - (2 * var(--index-page-gutter)) - 2.75rem);
+    width: calc(100vw - (2 * var(--index-page-gutter)) - var(--drawer-row-start));
     max-width: 100%;
-    margin-left: calc(2.75rem - var(--project-branch-indent));
+    margin-left: calc(var(--drawer-row-start) - var(--project-branch-indent));
     line-height: 1.2;
     white-space: normal;
   }
@@ -5787,7 +5788,7 @@ main,
   }
 
   .project-index-link {
-    margin-left: calc(2.75rem - var(--project-branch-indent));
+    margin-left: calc(var(--drawer-row-start) - var(--project-branch-indent));
   }
 
   .project-index-group {
@@ -6040,7 +6041,7 @@ main,
 }
 
 .project-index-info-content-inner {
-  --info-content-indent: clamp(3.75rem, 8vw, 7rem);
+  --info-content-indent: var(--drawer-row-start);
   grid-template-columns: minmax(23rem, 1fr) minmax(11rem, 17rem);
   gap: clamp(2rem, 7vw, 8rem);
   align-items: center;
@@ -6093,7 +6094,7 @@ main,
 }
 
 .project-index-cv .cv-section {
-  --cv-section-indent: clamp(3.75rem, 8vw, 7rem);
+  --cv-section-indent: var(--drawer-row-start);
   position: relative;
   min-height: clamp(9rem, 18vw, 14rem);
   padding-left: var(--cv-section-indent);
@@ -6170,7 +6171,7 @@ main,
   .project-index-info-content-inner {
     grid-template-columns: 1fr;
     gap: 1.75rem;
-    padding: 1rem 0 2.5rem calc(var(--project-branch-indent) + 0.5rem);
+    padding: 1rem 0 2.5rem var(--drawer-row-start);
   }
 
   .project-index-info-row {
@@ -6183,7 +6184,7 @@ main,
   }
 
   .project-index-cv .cv-section {
-    --cv-section-indent: calc(var(--project-branch-indent) + 0.5rem);
+    --cv-section-indent: var(--drawer-row-start);
     min-height: 8rem;
     padding-left: var(--cv-section-indent);
   }

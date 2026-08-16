@@ -5902,8 +5902,14 @@ main,
   opacity: 1;
 }
 
-.concise-project-page .signature-nameplate a {
-  display: contents;
+.concise-project-page .signature-nameplate .signature-home-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: none;
 }
 
 .index-page .signature-animation,

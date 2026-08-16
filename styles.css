@@ -1568,24 +1568,6 @@ main,
   color: transparent;
 }
 
-.project-index-key {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  left: 50%;
-  width: max-content;
-  margin: 0.4rem 0 0;
-  color: color-mix(in srgb, var(--text) 35%, transparent);
-  font-size: var(--type-small);
-  font-weight: 650;
-  opacity: 0;
-  translate: -50% 0;
-  transform: translateY(-0.35rem);
-}
-
-.project-index.is-projects-open .project-index-key {
-  animation: project-index-item-unfold 630ms ease 1750ms both;
-}
-
 .project-index-branch {
   --project-branch-top: clamp(2rem, 5vw, 4.25rem);
   --project-branch-indent: clamp(2.8rem, 8vw, 7.5rem);
@@ -2526,14 +2508,9 @@ main,
   margin-left: 0;
 }
 
-.project-index.is-projects-closing .project-index-key,
 .project-index.is-projects-closing .project-index-link {
   animation: project-index-item-fold 450ms ease both;
   animation-delay: calc(var(--project-reverse-order, 0) * 90ms);
-}
-
-.project-index.is-projects-closing .project-index-key {
-  animation-delay: 900ms;
 }
 
 .project-index.is-projects-closing .project-index-group:nth-child(2) h2 {
@@ -2667,11 +2644,6 @@ main,
 }
 
 /* Index drawers open at 60% of their original timeline; closing remains unchanged. */
-.project-index.is-projects-open .project-index-key {
-  animation-duration: 378ms;
-  animation-delay: 1050ms;
-}
-
 .project-index.is-projects-open .project-index-projects-panel::before,
 .project-index.is-projects-open .project-index-branch,
 .project-index.is-projects-open .project-index-projects-panel,
@@ -5332,10 +5304,6 @@ main,
     min-height: clamp(3.5rem, 16vw, 4.25rem);
   }
 
-  .project-index-key {
-    left: 2.75rem;
-  }
-
   .project-index-branch,
   .index-page .project-index-branch {
     width: calc(100vw - (2 * var(--index-page-gutter)));
@@ -5638,7 +5606,6 @@ main,
 
 /* With the obsolete frame reveal removed, every part of an opening drawer
    starts with the spine instead of waiting or cascading row by row. */
-.index-page .project-index.is-projects-open .project-index-key,
 .index-page .project-index.is-projects-open .project-index-projects-panel::before,
 .index-page .project-index.is-projects-open .project-index-branch,
 .index-page .project-index.is-projects-open .project-index-projects-panel,
@@ -5834,7 +5801,6 @@ main,
   }
 
   .project-index.is-projects-open .project-index-projects-panel::before,
-  .project-index.is-projects-open .project-index-key,
   .project-index.is-projects-open .project-index-group h2,
   .project-index.is-projects-open .project-index-link {
     animation: none;

@@ -2730,6 +2730,18 @@ main,
 }
 
 /* IKONY_SCHEMA_ROZMERU: 50px frames, 30px symbols, 10px inner clearance. */
+.index-page .project-index-heading,
+.index-page .project-index-destination-title,
+.index-page .project-index-destination-heading h2 {
+  display: flex;
+  box-sizing: border-box;
+  height: 50px;
+  min-height: 50px;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .index-page .project-index-symbol,
 .index-page .project-index-destination-heading > .project-index-symbol,
 .concise-project-symbol,

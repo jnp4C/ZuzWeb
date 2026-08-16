@@ -6014,24 +6014,29 @@ main,
 /* WEB_DRAFT_ROZMERY: exact desktop index typography and pixel rhythm. */
 @media (min-width: 721px) {
   .index-page .project-index {
-    --index-drawer-heading-size: 44px;
-    --index-section-heading-size: 44px;
+    --draft-control-size: clamp(36px, 3.4722vw, 50px);
+    --draft-control-gap: clamp(14px, 1.7361vw, 25px);
+    --draft-row-height: clamp(24px, 2.0833vw, 30px);
+    --draft-section-gap: clamp(48px, 5.5556vw, 80px);
+    --draft-drawer-gap: clamp(60px, 6.9444vw, 100px);
+    --index-drawer-heading-size: clamp(28px, 3.0556vw, 44px);
+    --index-section-heading-size: clamp(28px, 3.0556vw, 44px);
   }
 
   .index-page :is(.project-index-root, .project-index-destination-heading) {
-    min-height: 50px;
-    padding: 0 1rem 0 50px;
+    min-height: var(--draft-control-size);
+    padding: 0 1rem 0 calc((var(--draft-control-size) / 2) + var(--draft-control-gap));
   }
 
   .index-page .project-index-symbol,
   .index-page .project-index-destination-heading > .project-index-symbol {
-    width: 50px;
-    height: 50px;
-    flex-basis: 50px;
+    width: var(--draft-control-size);
+    height: var(--draft-control-size);
+    flex-basis: var(--draft-control-size);
   }
 
   .index-page .project-index-branch {
-    --project-branch-top: 50px;
+    --project-branch-top: var(--draft-control-size);
   }
 
   .index-page .project-index-list {
@@ -6039,9 +6044,9 @@ main,
   }
 
   .index-page .project-index-link {
-    min-height: 30px;
-    font-size: 22px;
-    line-height: 30px;
+    min-height: var(--draft-row-height);
+    font-size: clamp(14px, 1.5278vw, 22px);
+    line-height: var(--draft-row-height);
   }
 
   .index-page .project-index-group {
@@ -6053,30 +6058,30 @@ main,
   }
 
   .index-page .project-index-group + .project-index-group {
-    margin-top: 80px;
+    margin-top: var(--draft-section-gap);
   }
 
   .index-page .project-index-destination {
-    margin-top: 100px;
+    margin-top: var(--draft-drawer-gap);
   }
 
   .index-page .project-index-info-content-inner {
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: var(--draft-control-size);
+    padding-bottom: var(--draft-drawer-gap);
   }
 
   .index-page .project-index-info-contact {
     gap: 0;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: clamp(14px, 1.5278vw, 22px);
+    line-height: var(--draft-row-height);
   }
 
   .index-page .project-index-info-row {
-    min-height: 30px;
+    min-height: var(--draft-row-height);
   }
 
   .index-page .project-index-cv-content-inner {
-    padding-top: 50px;
+    padding-top: var(--draft-control-size);
   }
 
   .index-page .project-index-cv .cv-section {
@@ -6084,7 +6089,7 @@ main,
   }
 
   .index-page .project-index-cv .cv-section + .cv-section {
-    margin-top: 80px;
+    margin-top: var(--draft-section-gap);
   }
 
   .index-page .project-index-cv .cv-section-content {
@@ -6092,8 +6097,8 @@ main,
   }
 
   .index-page .project-index-cv .cv-entry {
-    min-height: 30px;
-    font-size: 22px;
-    line-height: 30px;
+    min-height: var(--draft-row-height);
+    font-size: clamp(14px, 1.5278vw, 22px);
+    line-height: var(--draft-row-height);
   }
 }

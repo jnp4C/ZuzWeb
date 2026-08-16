@@ -5743,7 +5743,8 @@ main,
 /* Shared transparent signature header. */
 .index-page .signature-nameplate,
 .concise-project-page .signature-nameplate {
-  --signature-render-width: 100%;
+  --signature-render-width: 80%;
+  --signature-reserved-height: calc((100vw - (2 * var(--index-page-gutter))) / 6.9);
   position: relative;
   left: 0;
   z-index: 120;
@@ -5752,7 +5753,7 @@ main,
   width: 100vw;
   max-width: none;
   height: auto;
-  min-height: 0;
+  min-height: var(--signature-reserved-height);
   align-items: flex-start;
   margin: clamp(2.6rem, 4.5vw, 3.5rem) 0 0;
   padding: 0 var(--index-page-gutter);
@@ -5764,7 +5765,7 @@ main,
 
 .concise-project-page .signature-nameplate a {
   display: block;
-  width: var(--signature-render-width);
+  width: 100%;
   height: auto;
   max-width: 100%;
 }
@@ -5818,7 +5819,7 @@ main,
   .index-page .signature-nameplate,
   .concise-project-page .signature-nameplate {
     height: auto;
-    min-height: 0;
+    min-height: var(--signature-reserved-height);
     margin-top: 2.75rem;
   }
 

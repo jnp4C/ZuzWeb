@@ -268,10 +268,6 @@ function initInfoToggle() {
     infoToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(infoClosingTimer);
     if (shouldOpen) {
-      if (!MOBILE_DRAWER_LAYOUT.matches) {
-        setProjectsOpen(false, true);
-        setCvOpen(false, true);
-      }
       infoDetails.hidden = false;
       infoRows.forEach((row) => row.classList.remove("has-user-previewed"));
       infoDetails.classList.remove("is-open", "is-closing");
@@ -323,10 +319,6 @@ function initProjectsToggle() {
     window.clearTimeout(introTimer);
 
     if (shouldOpen) {
-      if (!MOBILE_DRAWER_LAYOUT.matches) {
-        setInfoOpen(false, true);
-        setCvOpen(false, true);
-      }
       projectsPanel.hidden = false;
       projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
         link.classList.remove("has-user-previewed", "skip-language-reveal");
@@ -387,10 +379,6 @@ function initCvToggle() {
     window.clearTimeout(cvClosingTimer);
 
     if (shouldOpen) {
-      if (!MOBILE_DRAWER_LAYOUT.matches) {
-        setProjectsOpen(false, true);
-        setInfoOpen(false, true);
-      }
       cvItems.forEach((item) => item.classList.remove("has-user-previewed"));
       cvDetails.hidden = false;
       cvDetails.classList.remove("is-closing");

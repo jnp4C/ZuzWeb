@@ -16252,10 +16252,21 @@
       "layout": "concise",
       "intro": {
         "showProjectInfo": true,
-        "showAwards": false,
+        "showAwards": true,
         "showAnnotation": true
       },
-      "awards": [],
+      "awards": [
+        {
+          "label": {
+            "en": "REALIZATION : POKOJE 2024 EXHIBITION",
+            "cs": "REALIZACE : PŘEHLÍDKA Pokoje 2024"
+          },
+          "detail": {
+            "en": "The exhibition presents work by students from art universities across the Czech Republic, as well as Poland, Slovakia and Hungary. Each year, it brings buildings in central Prague to life, with participants creating their own site-specific art projects for these spaces.",
+            "cs": "Výstava prezentuje tvorbu studentů vysokých uměleckých škol z celé České republiky a také z Polska, Slovenska a Maďarska, která každoročně oživuje domy v centru Prahy, pro jejichž prostory vytvářejí účastníci vždy vlastní specifické umělecké projekty."
+          }
+        }
+      ],
       "featuredSections": [],
       "fullPresentation": {
         "enabled": true,

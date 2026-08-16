@@ -6,7 +6,7 @@ import {
 } from "./language.js";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-day-night-slider";
 
-const DATA_CACHE_VERSION = "2026-08-16-authoritative-project-media";
+const DATA_CACHE_VERSION = "2026-08-16-mezi-realization-note";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -825,10 +825,13 @@ function renderProject(animateFacts = false) {
       .map((award) => getLocalizedText(award.detail || award, activeLanguage))
       .filter(Boolean);
     if (awards.length > 0) {
+      const awardsLabel = page.awards
+        .map((award) => getLocalizedText(award?.label, activeLanguage))
+        .find(Boolean) || copy.awards;
       const referenceCount = Array.isArray(page.references) ? page.references.length : 0;
-      const awardsFact = createFact(copy.awards, awards.join(" · "), "left", 5 + referenceCount);
+      const awardsFact = createFact(awardsLabel, awards.join(" · "), "left", 5 + referenceCount);
       awardsFact.classList.add("concise-project-fact--awards");
-      awardsFact.querySelector("dt").textContent = copy.awards;
+      awardsFact.querySelector("dt").textContent = awardsLabel;
       facts.append(awardsFact);
     }
   }

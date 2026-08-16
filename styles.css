@@ -5285,6 +5285,97 @@ main,
   }
 }
 
+/* Web draft 02: solid index controls and continuous drawer spine. */
+.index-page .project-index-frame {
+  display: none;
+}
+
+.index-page .project-index-heading,
+.index-page .project-index-destination-title,
+.index-page .project-index-destination-heading h2 {
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding: 0.08em 0.2em 0.14em;
+  background: var(--index-line-color);
+  color: var(--surface);
+}
+
+.index-page .project-index-heading::before,
+.index-page .project-index-destination-title::before,
+.index-page .project-index-destination-heading h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 1.625rem;
+  height: 2px;
+  background: var(--index-line-color);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 320ms cubic-bezier(0.45, 0, 0.2, 1);
+}
+
+.index-page .project-index-heading:hover::before,
+.index-page .project-index-destination-title:hover::before,
+.index-page .project-index-destination-heading h2:hover::before,
+.index-page .project-index-root:focus-visible .project-index-heading::before,
+.index-page .project-index-info-toggle:focus-visible .project-index-destination-title::before,
+.index-page .project-index-cv-toggle:focus-visible h2::before,
+.index-page .project-index-root[aria-expanded="true"] .project-index-heading::before,
+.index-page .project-index-info-toggle[aria-expanded="true"] .project-index-destination-title::before,
+.index-page .project-index-cv-toggle[aria-expanded="true"] h2::before {
+  transform: scaleX(1);
+}
+
+.index-page .project-index-root[aria-expanded="true"] > .project-index-symbol,
+.index-page .project-index-destination-heading[aria-expanded="true"] > .project-index-symbol {
+  color: var(--surface);
+}
+
+.index-page .project-index-destination::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * clamp(2.5rem, 6vw, 5rem));
+  left: calc(-1 * var(--project-branch-indent));
+  z-index: 0;
+  width: 2px;
+  height: calc(clamp(2.5rem, 6vw, 5rem) + 2.125rem);
+  background: var(--index-line-color);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.index-page .project-index:not(.is-projects-open) .project-index-destination::before {
+  top: -1.25rem;
+  left: 0;
+  height: calc(1.25rem + 2.125rem);
+}
+
+.index-page .project-index.is-projects-open .project-index-info::before,
+.index-page .project-index.is-info-open .project-index-cv::before {
+  animation: project-index-spine-draw 1080ms cubic-bezier(0.45, 0, 0.2, 1) 960ms both;
+}
+
+.index-page .project-index.is-projects-closing .project-index-info::before,
+.index-page .project-index.is-info-closing .project-index-cv::before {
+  animation: project-index-spine-undraw 900ms cubic-bezier(0.45, 0, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .index-page .project-index-heading::before,
+  .index-page .project-index-destination-title::before,
+  .index-page .project-index-destination-heading h2::before {
+    transition: none;
+  }
+
+  .index-page .project-index.is-projects-open .project-index-info::before,
+  .index-page .project-index.is-info-open .project-index-cv::before {
+    animation: none;
+    transform: scaleY(1);
+  }
+}
+
 @media (max-width: 620px) {
   .project-index {
     padding: 1rem 0.85rem 1.25rem;

@@ -5290,6 +5290,14 @@ main,
   display: none;
 }
 
+.index-page .project-index-root {
+  z-index: 2;
+}
+
+.index-page .project-index-projects-panel::before {
+  z-index: 0;
+}
+
 .index-page .project-index-heading,
 .index-page .project-index-destination-title,
 .index-page .project-index-destination-heading h2 {

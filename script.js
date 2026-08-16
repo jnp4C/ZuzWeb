@@ -339,7 +339,14 @@ function updateProjectPreviewPlacements() {
       .filter((child) => !child.classList.contains("project-index-link-preview"));
     const textRight = Math.max(...textParts.map((part) => part.getBoundingClientRect().right));
     const availableRight = window.innerWidth - textRight - 24;
+    const linkRect = link.getBoundingClientRect();
+    const linkCenterY = linkRect.top + (linkRect.height / 2);
+    const availableHalfHeight = Math.max(
+      0,
+      Math.min(linkCenterY - 24, window.innerHeight - linkCenterY - 24),
+    );
     link.style.setProperty("--project-preview-side-width", `${Math.max(0, availableRight)}px`);
+    link.style.setProperty("--project-preview-side-height", `${availableHalfHeight * 2}px`);
     link.classList.toggle(
       "has-side-preview",
       window.innerWidth > 720 && availableRight > 0,
@@ -356,6 +363,7 @@ function createProjectIndexItem(project, order) {
     ? `./project.html?project=${encodeURIComponent(projectSlug)}`
     : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
   link.addEventListener("pointerenter", () => {
+    updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
     }

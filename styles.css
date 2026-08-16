@@ -1664,6 +1664,7 @@ main,
   left: calc(100% + clamp(1rem, 2.5vw, 2.5rem));
   width: min(38vw, 34rem, var(--project-preview-side-width));
   max-width: calc(100vw - 2rem);
+  max-height: min(55vh, 34rem, var(--project-preview-side-height));
   transform: translate(-1.25rem, -50%);
 }
 
@@ -1674,17 +1675,28 @@ main,
 
 .project-index-link-preview img {
   display: block;
-  width: auto;
+  width: 100%;
   max-width: 100%;
-  height: auto;
+  height: min(55vh, 34rem);
   max-height: min(55vh, 34rem);
   object-fit: contain;
   object-position: left top;
 }
 
+.project-index-link.has-side-preview .project-index-link-preview img {
+  height: min(55vh, 34rem, var(--project-preview-side-height));
+  max-height: min(55vh, 34rem, var(--project-preview-side-height));
+}
+
 @media (hover: none) {
   .project-index-link-preview {
     display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-index-link-preview {
+    display: none !important;
   }
 }
 

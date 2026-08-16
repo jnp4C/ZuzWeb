@@ -1099,6 +1099,7 @@ h3,
 
   .concise-project-heading {
     grid-template-columns: minmax(0, 1fr) 4.7rem;
+    column-gap: 0.5rem;
   }
 
   .concise-project-heading h1 {
@@ -1106,6 +1107,7 @@ h3,
     margin-left: 2.55rem;
     padding: 0.08em 0.2em 0.14em;
     font-size: clamp(1.55rem, 8vw, var(--type-medium));
+    overflow-wrap: anywhere;
   }
 
   .concise-project-symbol {

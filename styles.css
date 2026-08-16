@@ -6187,3 +6187,43 @@ main,
     line-height: 1.25;
   }
 }
+
+/* Final icon-schema alignment overrides: keep these after responsive rules. */
+.index-page .project-index-heading,
+.index-page .project-index-destination-title,
+.index-page .project-index-destination-heading h2 {
+  display: flex;
+  box-sizing: border-box;
+  height: 50px;
+  min-height: 50px;
+  align-items: center;
+  padding: 0.12em 0.2em 0;
+  line-height: 1;
+}
+
+.concise-project-nav-triangles,
+.concise-project-scroll-top-triangles {
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  gap: 2px;
+}
+
+.concise-project-nav-triangles i {
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+}
+
+.concise-project-nav-link--next .concise-project-nav-triangles i {
+  border-left-width: 12px;
+}
+
+.concise-project-nav-link--previous .concise-project-nav-triangles i {
+  border-right-width: 12px;
+}
+
+.concise-project-scroll-top-triangles i {
+  border-right-width: 10px;
+  border-bottom-width: 12px;
+  border-left-width: 10px;
+}

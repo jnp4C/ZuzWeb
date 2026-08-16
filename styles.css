@@ -433,6 +433,7 @@ h3,
 }
 
 .concise-project-info-block,
+.concise-project-highlight,
 .concise-project-annotation {
   position: relative;
 }
@@ -509,45 +510,41 @@ h3,
   translate: none;
 }
 
-.concise-project-fact--awards {
-  grid-template-columns: max-content minmax(0, 1fr);
+.concise-project-highlight {
   width: 100%;
-  padding: clamp(0.55rem, 1.2vw, 0.8rem);
+  max-width: 62ch;
+  padding: clamp(0.75rem, 1.5vw, 1rem);
   background: var(--text);
   color: var(--surface);
-  text-align: right;
+  font-family: var(--font-text);
+  font-size: clamp(var(--type-small), 1.05vw, 0.98rem);
+  line-height: 1.5;
+  text-align: justify;
+  text-wrap: pretty;
+  white-space: pre-line;
 }
 
-.concise-project-fact--awards dt {
-  display: block;
-  color: var(--surface);
+.concise-project-highlight p {
+  margin: 0;
+}
+
+.concise-project-highlight p + p {
+  margin-top: 0.7em;
+}
+
+.concise-project-highlight strong {
   font-weight: 750;
-  text-transform: none;
 }
 
-.concise-project-fact--awards dd {
-  grid-column: 2;
-  width: 100%;
-  color: var(--surface);
-  font-weight: 400;
-  justify-self: stretch;
-  text-align: right;
-}
-
-.concise-project-fact--reference dd {
-  font-weight: 400;
-  text-align: right;
-}
-
-.concise-project-fact--reference a {
+.concise-project-highlight a {
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
 }
 
-.concise-project-fact--reference a:hover,
-.concise-project-fact--reference a:focus-visible {
+.concise-project-highlight a:hover,
+.concise-project-highlight a:focus-visible {
   text-decoration-thickness: 2px;
 }
 
@@ -1141,6 +1138,10 @@ h3,
   }
 
   .concise-project-annotation {
+    order: 2;
+  }
+
+  .concise-project-highlight {
     order: 2;
   }
 

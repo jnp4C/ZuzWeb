@@ -6,7 +6,7 @@ import {
 } from "./language.js";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-day-night-slider";
 
-const DATA_CACHE_VERSION = "2026-08-16-mezi-realization-note";
+const DATA_CACHE_VERSION = "2026-08-16-highlighted-project-text";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -573,24 +573,62 @@ function createFact(label, value, placement = "left", order = 0) {
   return row;
 }
 
-function createReferenceFact(reference, language, order) {
-  const row = createFact(
-    getLocalizedText(reference.label, language),
-    getLocalizedText(reference.text, language),
-    "left",
-    order,
-  );
-  row.classList.add("concise-project-fact--reference");
-  if (reference.href) {
-    const description = row.querySelector("dd");
-    const link = document.createElement("a");
-    link.href = reference.href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = description.textContent;
-    description.replaceChildren(link);
-  }
-  return row;
+function createHighlightedProjectText(page, language, copy) {
+  const entries = [];
+
+  (page.awards || []).forEach((award) => {
+    const detail = getLocalizedText(award.detail || award, language);
+    if (!detail) return;
+    entries.push({
+      label: getLocalizedText(award?.label, language) || copy.awards,
+      detail,
+    });
+  });
+
+  (page.references || []).forEach((reference) => {
+    const detail = getLocalizedText(reference.text, language);
+    if (!detail) return;
+    entries.push({
+      label: getLocalizedText(reference.label, language),
+      detail,
+      href: reference.href,
+    });
+  });
+
+  (page.highlightedText || []).forEach((entry) => {
+    const detail = getLocalizedText(entry.detail || entry, language);
+    if (!detail) return;
+    entries.push({
+      label: getLocalizedText(entry?.label, language),
+      detail,
+      href: entry.href,
+    });
+  });
+
+  if (entries.length === 0) return null;
+
+  const block = document.createElement("section");
+  block.className = "concise-project-highlight";
+  entries.forEach(({ label, detail, href }) => {
+    const paragraph = document.createElement("p");
+    if (label) {
+      const heading = document.createElement("strong");
+      heading.textContent = `${label}:`;
+      paragraph.append(heading, document.createTextNode(" "));
+    }
+    if (href) {
+      const link = document.createElement("a");
+      link.href = href;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = detail;
+      paragraph.append(link);
+    } else {
+      paragraph.append(document.createTextNode(detail));
+    }
+    block.append(paragraph);
+  });
+  return block;
 }
 
 function getProjectUrl(project) {
@@ -815,26 +853,6 @@ function renderProject(animateFacts = false) {
   if (Array.isArray(info.collaborators) && info.collaborators.length > 0) {
     facts.append(createFact(copy.collaborators, info.collaborators.join(", "), "left", 4));
   }
-  if (Array.isArray(page.references)) {
-    page.references.forEach((reference, index) => {
-      facts.append(createReferenceFact(reference, activeLanguage, 5 + index));
-    });
-  }
-  if (Array.isArray(page.awards) && page.awards.length > 0) {
-    const awards = page.awards
-      .map((award) => getLocalizedText(award.detail || award, activeLanguage))
-      .filter(Boolean);
-    if (awards.length > 0) {
-      const awardsLabel = page.awards
-        .map((award) => getLocalizedText(award?.label, activeLanguage))
-        .find(Boolean) || copy.awards;
-      const referenceCount = Array.isArray(page.references) ? page.references.length : 0;
-      const awardsFact = createFact(awardsLabel, awards.join(" · "), "left", 5 + referenceCount);
-      awardsFact.classList.add("concise-project-fact--awards");
-      awardsFact.querySelector("dt").textContent = awardsLabel;
-      facts.append(awardsFact);
-    }
-  }
   const infoBlock = document.createElement("section");
   infoBlock.className = "concise-project-info-block";
   const infoHeading = document.createElement("h2");
@@ -851,6 +869,10 @@ function renderProject(animateFacts = false) {
   annotationText.textContent = annotation;
   annotationBlock.append(annotationHeading, annotationText);
   textColumn.append(infoBlock);
+  const highlightedText = createHighlightedProjectText(page, activeLanguage, copy);
+  if (highlightedText) {
+    textColumn.append(highlightedText);
+  }
   if (annotation || page.intro?.showAnnotation !== false) {
     textColumn.append(annotationBlock);
   }

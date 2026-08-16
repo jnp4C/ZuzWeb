@@ -38,15 +38,10 @@
       "layout": "concise",
       "intro": {
         "showProjectInfo": true,
-        "showAwards": true,
+        "showAwards": false,
         "showAnnotation": true
       },
-      "awards": [
-        {
-          "en": "Laurus 2022 nomination — finalist, Medium Scale category",
-          "cs": "Nominace Laurus 2022 — finálová práce v kategorii Střední měřítko"
-        }
-      ],
+      "awards": [],
       "featuredSections": [
         {
           "id": "situation",
@@ -1820,6 +1815,18 @@
         "showAnnotation": true
       },
       "awards": [],
+      "highlightedText": [
+        {
+          "label": {
+            "en": "NOTE",
+            "cs": "POZN."
+          },
+          "detail": {
+            "en": "completed during an Erasmus stay at Lund University (Sustainable Urban Design Studio)",
+            "cs": "v rámci pobytu ERASMUS na Lund University (Sustainable Urban Design Studio)"
+          }
+        }
+      ],
       "featuredSections": [
         {
           "id": "graphical-representation",
@@ -7703,8 +7710,14 @@
       },
       "awards": [
         {
-          "en": "Laurus 2025 — winner, Landscape Gesture category",
-          "cs": "Laurus 2025 — vítěz v kategorii KRAJINÁŘSKÉ GESTO"
+          "label": {
+            "en": "AWARD",
+            "cs": "OCENĚNÍ"
+          },
+          "detail": {
+            "en": "Laurus 2025 — Winner in the LANDSCAPE GESTURE category\n(Conceptual or artistic proposals outside a specific brief; a gesture as an idea, symbol or intervention that opens a new perspective on the landscape)",
+            "cs": "Laurus 2025 - Vítěz v kategorii KRAJINÁŘSKÉ GESTO\n(Ideové či výtvarné návrhy, mimo rámec konkrétního zadání, gesto jako myšlenka, symbol nebo zásah, jenž otevírá nový pohled na krajinu)"
+          }
         }
       ],
       "featuredSections": [
@@ -9508,8 +9521,14 @@
       },
       "awards": [
         {
-          "en": "FA CTU Dean's Award 2024 for a 2nd–5th year studio project — Landscape Architecture",
-          "cs": "Cena děkana FA ČVUT 2024 za ateliérový projekt 2.–5. ročníku – Krajinářská architektura"
+          "label": {
+            "en": "AWARD",
+            "cs": "OCENĚNÍ"
+          },
+          "detail": {
+            "en": "FA CTU Dean's Award 2024 for a 2nd–5th year studio project — Landscape Architecture",
+            "cs": "Cena děkana FA ČVUT 2024 za ateliérový projekt 2. – 5. ročníku – Krajinářská architektura"
+          }
         }
       ],
       "references": [
@@ -16258,12 +16277,12 @@
       "awards": [
         {
           "label": {
-            "en": "REALIZATION : POKOJE 2024 EXHIBITION",
-            "cs": "REALIZACE : PŘEHLÍDKA Pokoje 2024"
+            "en": "REALIZATION",
+            "cs": "REALIZACE"
           },
           "detail": {
-            "en": "The exhibition presents work by students from art universities across the Czech Republic, as well as Poland, Slovakia and Hungary. Each year, it brings buildings in central Prague to life, with participants creating their own site-specific art projects for these spaces.",
-            "cs": "Výstava prezentuje tvorbu studentů vysokých uměleckých škol z celé České republiky a také z Polska, Slovenska a Maďarska, která každoročně oživuje domy v centru Prahy, pro jejichž prostory vytvářejí účastníci vždy vlastní specifické umělecké projekty."
+            "en": "POKOJE 2024 EXHIBITION\nThe exhibition presents work by students from art universities across the Czech Republic, as well as Poland, Slovakia and Hungary. Each year, it brings buildings in central Prague to life, with participants creating their own site-specific art projects for these spaces.",
+            "cs": "PŘEHLÍDKA Pokoje 2024\nVýstava prezentuje tvorbu studentů vysokých uměleckých škol z celé České republiky a také z Polska, Slovenska a Maďarska, která každoročně oživuje domy v centru Prahy, pro jejichž prostory vytvářejí účastníci vždy vlastní specifické umělecké projekty."
           }
         }
       ],

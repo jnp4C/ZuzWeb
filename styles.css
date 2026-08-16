@@ -6350,6 +6350,19 @@ main,
   font-size: var(--index-section-heading-size);
 }
 
+/* Exact CV rhythm: education entries are denser because their individual
+   records commonly wrap; skills and experience keep the full row interval. */
+.index-page .project-index-cv .cv-section[aria-labelledby="cvEducationTitle"] .cv-section-content {
+  gap: 15px;
+}
+
+.index-page .project-index-cv .cv-section:is(
+  [aria-labelledby="cvSkillsTitle"],
+  [aria-labelledby="cvExperienceTitle"]
+) .cv-section-content {
+  gap: 30px;
+}
+
 @media (max-width: 480px) {
   .index-page #cvTitle {
     padding-inline: 12.2px;

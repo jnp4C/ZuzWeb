@@ -6360,10 +6360,16 @@ main,
   margin-top: 30px;
 }
 
-/* Experience entries are single-line rows. Keep their baseline rhythm at an
-   actual 30px instead of adding 30px after the preceding 1em line box. */
+/* Experience uses an isolated layout so the visible empty space between its
+   entry boxes is exactly 30px, with no grid gap or sibling margin stacking. */
+.index-page .project-index-cv .cv-section[aria-labelledby="cvExperienceTitle"] .cv-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .index-page .project-index-cv .cv-section[aria-labelledby="cvExperienceTitle"] .cv-entry + .cv-entry {
-  margin-top: max(0px, calc(30px - 1em));
+  margin-top: 0;
 }
 
 .index-page .project-index-cv .cv-entry {

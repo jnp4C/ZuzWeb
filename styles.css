@@ -1672,6 +1672,27 @@ main,
   transform: translate(0, -50%);
 }
 
+.project-index-link:not(.has-side-preview) .project-index-link-preview {
+  position: relative;
+  top: auto;
+  left: auto;
+  flex: 0 0 100%;
+  width: min(72vw, 46rem);
+  max-width: calc(100vw - (2 * var(--index-page-gutter)) - 2.75rem);
+  margin: clamp(0.5rem, 1.2vw, 0.85rem) 0 0 auto;
+  transform: translateY(-0.75rem);
+}
+
+.project-index-link:not(.has-side-preview):has(> :not(.project-index-link-preview):hover) .project-index-link-preview,
+.project-index-link:not(.has-side-preview):focus-visible .project-index-link-preview {
+  transform: none;
+}
+
+.project-index-link:not(.has-side-preview) .project-index-link-preview img {
+  margin-left: auto;
+  object-position: right top;
+}
+
 .project-index-link-preview img {
   display: block;
   width: auto;

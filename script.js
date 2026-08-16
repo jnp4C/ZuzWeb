@@ -23,6 +23,7 @@ const indexNameAnimation = document.getElementById("indexNameAnimation");
 const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 const INDEX_OPENING_SPEED = 0.6;
+const DRAWER_CLOSING_DURATION = 950;
 const DATA_CACHE_VERSION = "2026-08-16-normalized-author-names";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
@@ -125,6 +126,7 @@ async function renderRandomIndexBackground() {
 function initInfoToggle() {
   const infoRows = Array.from(infoDetails?.querySelectorAll(".project-index-info-row") || []);
   let infoClosingTimer;
+  let infoTransitionId = 0;
   infoRows.forEach((row) => {
     const holdDetailsOpen = () => row.classList.add("has-user-previewed");
     row.addEventListener("pointerenter", holdDetailsOpen);
@@ -136,6 +138,7 @@ function initInfoToggle() {
       return;
     }
 
+    const transitionId = ++infoTransitionId;
     infoToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(infoClosingTimer);
     if (shouldOpen) {
@@ -159,11 +162,13 @@ function initInfoToggle() {
     }
 
     infoDetails.classList.remove("is-open");
+    void infoDetails.offsetWidth;
     infoDetails.classList.add("is-closing");
     projectIndex?.classList.remove("is-info-open");
     projectIndex?.classList.add("is-info-closing");
-    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 3700;
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : DRAWER_CLOSING_DURATION;
     infoClosingTimer = window.setTimeout(() => {
+      if (transitionId !== infoTransitionId) return;
       infoDetails.hidden = true;
       infoDetails.classList.remove("is-closing");
       personalPhotoFrame?.classList.remove("is-visible");
@@ -183,8 +188,10 @@ function initProjectsToggle() {
 
   let closingTimer;
   let introTimer;
+  let projectsTransitionId = 0;
 
   setProjectsOpen = (shouldOpen, immediate = false) => {
+    const transitionId = ++projectsTransitionId;
     projectsToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(closingTimer);
     window.clearTimeout(introTimer);
@@ -215,9 +222,11 @@ function initProjectsToggle() {
 
     projectIndex.classList.remove("is-projects-intro-active");
     projectIndex.classList.remove("is-projects-open");
+    void projectsPanel.offsetWidth;
     projectIndex.classList.add("is-projects-closing");
-    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 3300;
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : DRAWER_CLOSING_DURATION;
     closingTimer = window.setTimeout(() => {
+      if (transitionId !== projectsTransitionId) return;
       projectsPanel.hidden = true;
       projectIndex.classList.remove("is-projects-closing");
     }, closingDuration);
@@ -230,11 +239,13 @@ function initProjectsToggle() {
 
 function initCvToggle() {
   let cvClosingTimer;
+  let cvTransitionId = 0;
 
   setCvOpen = (shouldOpen, immediate = false) => {
     if (!cvToggle || !cvDetails) {
       return;
     }
+    const transitionId = ++cvTransitionId;
     cvToggle.setAttribute("aria-expanded", `${shouldOpen}`);
     window.clearTimeout(cvClosingTimer);
 
@@ -254,11 +265,13 @@ function initCvToggle() {
       return;
     }
     cvDetails.classList.remove("is-open");
+    void cvDetails.offsetWidth;
     cvDetails.classList.add("is-closing");
     projectIndex?.classList.remove("is-cv-open");
     projectIndex?.classList.add("is-cv-closing");
-    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 4000;
+    const closingDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : DRAWER_CLOSING_DURATION;
     cvClosingTimer = window.setTimeout(() => {
+      if (transitionId !== cvTransitionId) return;
       cvDetails.hidden = true;
       cvDetails.classList.remove("is-closing");
       projectIndex?.classList.remove("is-cv-closing");

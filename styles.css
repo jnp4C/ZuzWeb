@@ -6380,6 +6380,50 @@ main,
   line-height: calc(1em + 15px);
 }
 
+/* A single deterministic closing timeline prevents delayed geometry and stale
+   row animations from leaving drawer text behind after rapid toggles. */
+.index-page .project-index.is-projects-closing .project-index-projects-panel::before,
+.index-page .project-index.is-projects-closing .project-index-projects-panel,
+.index-page .project-index.is-projects-closing .project-index-branch,
+.index-page .project-index.is-projects-closing .project-index-destination {
+  animation-duration: 900ms;
+  animation-delay: 0ms;
+}
+
+.index-page .project-index.is-projects-closing .project-index-link {
+  animation-duration: 240ms;
+  animation-delay: calc(var(--project-reverse-order, 0) * 35ms);
+}
+
+.index-page .project-index.is-projects-closing .project-index-group h2 {
+  animation-duration: 240ms;
+  animation-delay: 0ms;
+}
+
+.index-page .project-index-info-content.is-closing,
+.index-page .project-index-cv-content.is-closing,
+.index-page .project-index.is-info-closing .project-index-info::after,
+.index-page .project-index.is-cv-closing .project-index-cv::after {
+  animation-duration: 700ms;
+  animation-delay: 0ms;
+}
+
+.index-page .project-index-info-content.is-closing .project-index-info-row,
+.index-page .project-index-info-content.is-closing .personal-photo-frame,
+.index-page .project-index-cv-content.is-closing .cv-entry {
+  animation: project-index-item-fold 220ms ease both;
+  animation-delay: 0ms;
+}
+
+.index-page :is(
+  .project-index-projects-panel,
+  .project-index-info-content,
+  .project-index-cv-content
+).is-closing,
+.index-page .project-index.is-projects-closing .project-index-projects-panel {
+  pointer-events: none;
+}
+
 @media (max-width: 480px) {
   .index-page #cvTitle {
     padding-inline: 12.2px;

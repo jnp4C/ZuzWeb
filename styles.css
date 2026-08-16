@@ -946,6 +946,7 @@ h3,
 .concise-project-footer .concise-project-pdf-download {
   overflow: hidden;
   display: inline-flex;
+  margin-left: auto;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;

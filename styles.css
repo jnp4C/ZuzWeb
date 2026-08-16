@@ -224,6 +224,7 @@ h3,
 
 .concise-project {
   --project-spine-x: 0rem;
+  --project-body-start: 2.75rem;
   position: relative;
   isolation: isolate;
   width: 100%;
@@ -257,7 +258,7 @@ h3,
   display: block;
   width: fit-content;
   max-width: calc(100% - 2.75rem);
-  margin: 0 0 0 2.75rem;
+  margin: 0 0 0 var(--project-body-start);
   padding: 0.08em 0.2em 0.14em;
   background: var(--line);
   color: var(--surface);
@@ -400,7 +401,7 @@ h3,
 }
 
 .concise-project-intro {
-  --project-content-offset: clamp(2rem, 2.5vw, 2.5rem);
+  --project-content-offset: var(--project-body-start);
   display: grid;
   grid-template-columns: minmax(18rem, 0.8fr) minmax(25rem, 1.35fr);
   gap: clamp(2rem, 6vw, 7rem);
@@ -409,7 +410,7 @@ h3,
     0
     0
     clamp(3rem, 9vw, 8rem)
-    calc(var(--project-spine-x) + var(--project-spine-x) + var(--project-content-offset));
+    calc(var(--project-spine-x) + var(--project-spine-x) + var(--project-body-start));
 }
 
 .concise-project-intro-copy {
@@ -650,7 +651,7 @@ h3,
   --feature-label-clearance: 0px;
   position: relative;
   isolation: isolate;
-  padding-left: calc(var(--project-spine-x) + var(--project-spine-x) + clamp(0.75rem, 2vw, 1.75rem));
+  padding-left: calc(var(--project-spine-x) + var(--project-spine-x) + var(--project-body-start));
 }
 
 .concise-project-section::before {
@@ -1126,6 +1127,7 @@ h3,
 
   .concise-project {
     --project-spine-x: 0rem;
+    --project-body-start: 2.55rem;
   }
 
   .concise-project-heading {
@@ -1135,7 +1137,7 @@ h3,
 
   .concise-project-heading h1 {
     max-width: calc(100% - 2.55rem);
-    margin-left: 2.55rem;
+    margin-left: var(--project-body-start);
     padding: 0.08em 0.2em 0.14em;
     font-size: clamp(1.55rem, 8vw, var(--type-medium));
     overflow-wrap: anywhere;
@@ -1157,10 +1159,10 @@ h3,
   }
 
   .concise-project-intro {
-    --project-content-offset: 2rem;
+    --project-content-offset: var(--project-body-start);
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding-left: calc(var(--project-spine-x) + var(--project-spine-x) + var(--project-content-offset));
+    padding-left: calc(var(--project-spine-x) + var(--project-spine-x) + var(--project-body-start));
   }
 
   .concise-project-intro-copy {
@@ -1201,7 +1203,7 @@ h3,
   }
 
   .concise-project-section {
-    padding-left: calc(var(--project-spine-x) + var(--project-spine-x) + 0.65rem);
+    padding-left: calc(var(--project-spine-x) + var(--project-spine-x) + var(--project-body-start));
   }
 
   .concise-project-section::before {
@@ -1216,7 +1218,7 @@ h3,
 
   .concise-project-section:nth-child(n) figure,
   .concise-project-section--model figure {
-    width: calc(100vw - (2 * var(--project-page-gutter)) - 0.65rem);
+    width: calc(100vw - (2 * var(--project-page-gutter)) - var(--project-body-start));
     max-width: none;
     margin-top: clamp(2rem, 8vw, 3rem);
     margin-left: 0;

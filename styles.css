@@ -236,10 +236,11 @@ h3,
   content: "";
   position: absolute;
   top: 2.15rem;
-  bottom: 2.15rem;
+  bottom: auto;
   left: var(--project-spine-x);
   z-index: -1;
   width: 2px;
+  height: var(--project-spine-height, calc(100% - 4.3rem));
   background-color: #000000;
   opacity: 1;
 }

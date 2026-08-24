@@ -1111,6 +1111,34 @@ function renderProject(animateFacts = false) {
 
   article.append(heading, intro, featured, footer, fullPresentation);
   projectRoot.append(article, scrollTop);
+
+  if (hasPresentationContent) {
+    let previousSpineHeight = -1;
+    const updateSpineEnd = () => {
+      const articleRect = article.getBoundingClientRect();
+      const controlRect = plus.getBoundingClientRect();
+      const spineTop = Number.parseFloat(
+        window.getComputedStyle(article, "::before").top,
+      ) || 0;
+      const controlCenter = controlRect.top - articleRect.top + (controlRect.height / 2);
+      const spineHeight = Math.max(0, controlCenter - spineTop);
+      if (Math.abs(spineHeight - previousSpineHeight) < 0.5) return;
+      previousSpineHeight = spineHeight;
+      article.style.setProperty(
+        "--project-spine-height",
+        `${spineHeight}px`,
+      );
+    };
+    const spineObserver = new ResizeObserver(updateSpineEnd);
+    spineObserver.observe(article);
+    spineObserver.observe(footer);
+    window.addEventListener("resize", updateSpineEnd);
+    carouselCleanups.push(() => {
+      spineObserver.disconnect();
+      window.removeEventListener("resize", updateSpineEnd);
+    });
+    window.requestAnimationFrame(updateSpineEnd);
+  }
 }
 
 async function initializeProject() {

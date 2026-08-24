@@ -6790,3 +6790,40 @@ main,
     transform: translateX(-50%);
   }
 }
+
+/* Touch index rows reveal once and remain expanded; they never depend on the
+   synthetic hover state emitted by iOS/iPadOS after a tap. */
+@media (hover: none), (pointer: coarse) {
+  .index-page .project-index .project-index-link .project-index-detail {
+    max-width: none;
+    opacity: 1;
+    overflow: visible;
+    transform: none;
+    animation: none;
+    transition: none;
+    white-space: normal;
+  }
+
+  .index-page .project-index.is-projects-intro-active
+    .project-index-link:not(.has-user-previewed)
+    .project-index-detail:not(.project-index-scale) {
+    max-width: none;
+    opacity: 0;
+    transform: translateY(-0.3rem);
+    animation: touch-project-detail-in 460ms ease forwards;
+    animation-delay: calc(720ms + (var(--project-order) * 70ms) + var(--detail-delay, 0ms));
+  }
+
+  .index-page .project-index-link:is(:hover, :focus, :focus-visible) .project-index-detail {
+    max-width: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes touch-project-detail-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

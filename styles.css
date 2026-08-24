@@ -6412,7 +6412,10 @@ main,
   position: relative;
   align-self: start;
   justify-self: start;
-  left: calc(-1 * var(--cv-section-indent) - 1.1rem);
+  left: calc(
+    -1 * var(--cv-section-indent)
+    - (var(--spine-label-width) / 2)
+  );
   font-size: var(--index-section-heading-size);
 }
 

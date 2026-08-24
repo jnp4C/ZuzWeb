@@ -6,7 +6,7 @@ import {
 } from "./language.js";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
 
-const DATA_CACHE_VERSION = "2026-08-16-normalized-author-names";
+const DATA_CACHE_VERSION = "2026-08-24-vrt-hires-zoom";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -284,8 +284,8 @@ function openImageLightbox(mediaItems, initialIndex) {
   };
   const renderMedia = () => {
     const media = mediaItems[activeIndex];
-    image.src = media.src;
-    image.srcset = media.srcset || "";
+    image.srcset = media.zoomSrc ? "" : (media.srcset || "");
+    image.src = media.zoomSrc || media.src;
     image.alt = getLocalizedText(media.alt, activeLanguage);
     counter.textContent = `${activeIndex + 1} / ${mediaItems.length}`;
     resetTransform();

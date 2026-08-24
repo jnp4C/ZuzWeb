@@ -1126,7 +1126,9 @@ function renderProject(animateFacts = false) {
         ) return;
         const scrollHeight = Number(event.data.scrollHeight);
         if (!Number.isFinite(scrollHeight) || scrollHeight <= 0) return;
-        fullPresentation.style.height = `${Math.max(scrollHeight, window.innerHeight)}px`;
+        const internalTravel = Math.max(0, scrollHeight - window.innerHeight);
+        const outerScrollTravel = internalTravel * 2;
+        fullPresentation.style.height = `${window.innerHeight + outerScrollTravel}px`;
         fullPresentation.classList.add("is-outer-scroll-driven");
         syncOuterScroll();
       };

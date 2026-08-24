@@ -836,13 +836,13 @@ function renderProject(animateFacts = false) {
   heading.append(back, name, projectNavigation);
 
   const updateTitleCarousel = () => {
-    const isMobile = window.matchMedia("(max-width: 720px)").matches;
+    const usesCompactTitle = window.matchMedia("(max-width: 1024px)").matches;
     const nameStyle = window.getComputedStyle(name);
     const availableWidth = name.clientWidth
       - Number.parseFloat(nameStyle.paddingLeft)
       - Number.parseFloat(nameStyle.paddingRight);
     const titleWidth = titleText.getBoundingClientRect().width;
-    const shouldScroll = isMobile && titleWidth > availableWidth + 1;
+    const shouldScroll = usesCompactTitle && titleWidth > availableWidth + 1;
     name.classList.toggle("is-title-scrolling", shouldScroll);
     if (shouldScroll) {
       name.style.setProperty("--title-marquee-duration", `${Math.max(9, titleWidth / 32)}s`);

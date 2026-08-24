@@ -7063,5 +7063,30 @@ main,
 
   .concise-project {
     --project-spine-x: 0px;
+    --project-title-control-gap: calc(var(--project-body-start) - 25px);
+  }
+
+  .concise-project-heading {
+    column-gap: var(--project-title-control-gap);
+  }
+
+  .concise-project-heading h1 {
+    max-width: calc(100% - var(--project-body-start));
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .concise-project-heading h1.is-title-scrolling {
+    --title-marquee-gap: 20px;
+    width: calc(100% - var(--project-body-start));
+  }
+
+  .concise-project-heading h1.is-title-scrolling .concise-project-title-track {
+    gap: var(--title-marquee-gap);
+    animation: concise-project-title-carousel var(--title-marquee-duration, 12s) linear infinite;
+  }
+
+  .concise-project-heading h1.is-title-scrolling .concise-project-title-track > span:last-child {
+    display: inline;
   }
 }

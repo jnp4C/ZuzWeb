@@ -779,9 +779,7 @@ function renderProject(animateFacts = false) {
 
   const copy = COPY[activeLanguage];
   const title = getLocalizedProjectText(activeProject, "title", activeLanguage);
-  const mobileTitle = window.matchMedia("(max-width: 720px)").matches
-    ? getLocalizedText(activeProject.mobileTitle, activeLanguage)
-    : "";
+  const headingTitle = getLocalizedText(activeProject.index?.title, activeLanguage) || title;
   const annotation = getLocalizedProjectText(activeProject, "annotation", activeLanguage);
   const page = moveCoverDuplicatesBehindCarouselStart(
     getConcisePage(activeProject),
@@ -813,7 +811,16 @@ function renderProject(animateFacts = false) {
     }
   });
   const name = document.createElement("h1");
-  name.textContent = mobileTitle || title;
+  name.setAttribute("aria-label", headingTitle);
+  const titleTrack = document.createElement("span");
+  titleTrack.className = "concise-project-title-track";
+  const titleText = document.createElement("span");
+  titleText.textContent = headingTitle;
+  const repeatedTitleText = document.createElement("span");
+  repeatedTitleText.textContent = headingTitle;
+  repeatedTitleText.setAttribute("aria-hidden", "true");
+  titleTrack.append(titleText, repeatedTitleText);
+  name.append(titleTrack);
   const activeNavigationIndex = navigableProjects.findIndex((project) => project.slug === activeProject.slug);
   const previousProject = navigableProjects[
     (activeNavigationIndex - 1 + navigableProjects.length) % navigableProjects.length
@@ -827,6 +834,31 @@ function renderProject(animateFacts = false) {
     createProjectNavigationLink(nextProject, "next", copy.nextProject),
   );
   heading.append(back, name, projectNavigation);
+
+  const updateTitleCarousel = () => {
+    const isMobile = window.matchMedia("(max-width: 720px)").matches;
+    const nameStyle = window.getComputedStyle(name);
+    const availableWidth = name.clientWidth
+      - Number.parseFloat(nameStyle.paddingLeft)
+      - Number.parseFloat(nameStyle.paddingRight);
+    const titleWidth = titleText.getBoundingClientRect().width;
+    const shouldScroll = isMobile && titleWidth > availableWidth + 1;
+    name.classList.toggle("is-title-scrolling", shouldScroll);
+    if (shouldScroll) {
+      name.style.setProperty("--title-marquee-duration", `${Math.max(9, titleWidth / 32)}s`);
+    } else {
+      name.style.removeProperty("--title-marquee-duration");
+    }
+  };
+  const titleObserver = new ResizeObserver(updateTitleCarousel);
+  titleObserver.observe(name);
+  titleObserver.observe(titleText);
+  window.addEventListener("resize", updateTitleCarousel);
+  carouselCleanups.push(() => {
+    titleObserver.disconnect();
+    window.removeEventListener("resize", updateTitleCarousel);
+  });
+  window.requestAnimationFrame(updateTitleCarousel);
 
   const scrollTop = document.createElement("button");
   scrollTop.type = "button";

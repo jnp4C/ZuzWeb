@@ -1020,7 +1020,7 @@ h3,
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  margin: 0 0 0 calc(50% - 50vw);
+  margin: clamp(1.5rem, 4vw, 3rem) 0 0 calc(50% - 50vw);
   border: 0;
   background: var(--surface);
   overflow: hidden;

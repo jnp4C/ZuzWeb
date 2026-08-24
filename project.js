@@ -1128,43 +1128,37 @@ function renderProject(animateFacts = false) {
       fullPresentation.append(pageSequence);
     }
 
-    if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
-      const syncOuterScroll = () => {
-        if (!presentationSceneHost.classList.contains("is-outer-scroll-driven")) return;
-        const rect = presentationSceneHost.getBoundingClientRect();
-        const travel = Math.max(1, rect.height - window.innerHeight);
-        const progress = Math.min(1, Math.max(0, -rect.top / travel));
-        presentationFrame.contentWindow?.postMessage(
-          { type: "set-embedded-scroll-progress", progress },
-          window.location.origin,
-        );
-      };
-      const receivePresentationMetrics = (event) => {
-        if (
-          event.origin !== window.location.origin
-          || event.source !== presentationFrame.contentWindow
-          || event.data?.type !== "embedded-presentation-metrics"
-        ) return;
-        const scrollHeight = Number(event.data.scrollHeight);
-        if (!Number.isFinite(scrollHeight) || scrollHeight <= 0) return;
-        const internalTravel = Math.max(0, scrollHeight - window.innerHeight);
-        const configuredScale = Number(page.fullPresentation?.scrollScale);
-        const outerScrollScale = Number.isFinite(configuredScale) ? configuredScale : 4;
-        const outerScrollTravel = internalTravel * outerScrollScale;
-        presentationSceneHost.style.height = `${window.innerHeight + outerScrollTravel}px`;
-        presentationSceneHost.classList.add("is-outer-scroll-driven");
-        syncOuterScroll();
-      };
-      updateOuterPresentationScroll = syncOuterScroll;
-      window.addEventListener("message", receivePresentationMetrics);
-      window.addEventListener("scroll", syncOuterScroll, { passive: true });
-      window.addEventListener("resize", syncOuterScroll);
-      carouselCleanups.push(() => {
-        window.removeEventListener("message", receivePresentationMetrics);
-        window.removeEventListener("scroll", syncOuterScroll);
-        window.removeEventListener("resize", syncOuterScroll);
-      });
-    }
+    const syncOuterScroll = () => {
+      if (!presentationSceneHost.classList.contains("is-outer-scroll-driven")) return;
+      const rect = presentationSceneHost.getBoundingClientRect();
+      const travel = Math.max(1, rect.height - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / travel));
+      presentationFrame.contentWindow?.postMessage(
+        { type: "set-embedded-scroll-progress", progress },
+        window.location.origin,
+      );
+    };
+    const receivePresentationMetrics = (event) => {
+      if (
+        event.origin !== window.location.origin
+        || event.source !== presentationFrame.contentWindow
+        || event.data?.type !== "embedded-presentation-metrics"
+      ) return;
+      const scrollHeight = Number(event.data.scrollHeight);
+      if (!Number.isFinite(scrollHeight) || scrollHeight <= 0) return;
+      presentationSceneHost.style.height = `${scrollHeight}px`;
+      presentationSceneHost.classList.add("is-outer-scroll-driven");
+      syncOuterScroll();
+    };
+    updateOuterPresentationScroll = syncOuterScroll;
+    window.addEventListener("message", receivePresentationMetrics);
+    window.addEventListener("scroll", syncOuterScroll, { passive: true });
+    window.addEventListener("resize", syncOuterScroll);
+    carouselCleanups.push(() => {
+      window.removeEventListener("message", receivePresentationMetrics);
+      window.removeEventListener("scroll", syncOuterScroll);
+      window.removeEventListener("resize", syncOuterScroll);
+    });
   } else {
     fullPresentation.classList.add("concise-project-full-presentation--download-only");
   }

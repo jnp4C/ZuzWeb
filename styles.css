@@ -1171,9 +1171,8 @@ h3,
 
 .concise-project-full-presentation.is-outer-scroll-driven iframe,
 .concise-project-presentation-scenes.is-outer-scroll-driven iframe {
-  position: sticky;
-  top: 0;
-  height: 100dvh;
+  position: relative;
+  height: 100%;
   pointer-events: none;
 }
 
@@ -1196,21 +1195,18 @@ h3,
 }
 
 .embedded-presentation .visual-frame {
-  position: fixed;
-  inset: 0;
+  position: relative;
   z-index: 1;
   width: 100%;
-  height: 100vh;
-  height: 100dvh;
+  height: auto;
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .embedded-presentation .visual-layers {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .embedded-presentation .visual-layers::after {
@@ -1218,19 +1214,17 @@ h3,
 }
 
 .embedded-presentation .pdf-layer {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 0;
+  height: var(--embedded-scene-height, 100dvh);
+  min-height: var(--embedded-scene-height, 100dvh);
   overflow: hidden;
+  opacity: 1;
+  transform: none;
 }
 
 .embedded-presentation .scroll-steps {
-  position: relative;
-  z-index: 0;
-  display: block;
-  pointer-events: none;
+  display: none;
 }
 
 .embedded-presentation .story-step {
@@ -7091,28 +7085,23 @@ main,
   }
 }
 
-/* The desktop intro columns have hard minimum widths that exceed an iPad
-   portrait content area. Keep the hero in normal flow below the copy there,
-   then restore a flexible two-column composition when landscape has room. */
-@media (min-width: 761px) and (max-width: 900px) {
+/* iPad keeps copy and hero in separate left/right columns. Unlike the desktop
+   grid, both tracks may shrink below their content's intrinsic width, so a
+   large cover can never extend underneath the copy. */
+@media (min-width: 761px) and (max-width: 1024px) {
   .concise-project-intro {
-    grid-template-columns: minmax(0, 1fr);
-    gap: clamp(2.5rem, 7vw, 4rem);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.35fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 
   .concise-project-intro > * {
     min-width: 0;
     max-width: 100%;
   }
-}
 
-@media (min-width: 901px) and (max-width: 1024px) {
-  .concise-project-intro {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.35fr);
-    gap: clamp(2rem, 4vw, 3rem);
-  }
-
-  .concise-project-intro > * {
-    min-width: 0;
+  .concise-project-hero,
+  .concise-project-hero img {
+    width: 100%;
+    max-width: 100%;
   }
 }

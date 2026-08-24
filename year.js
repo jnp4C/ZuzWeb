@@ -78,12 +78,15 @@ let headerContourSyncQueued = false;
 let headerContourSyncUntil = 0;
 let activeLanguage = getLanguage();
 const isEmbeddedPresentation = new URLSearchParams(window.location.search).get("embedded") === "1";
+const embeddedSceneViewportHeight = isEmbeddedPresentation ? window.innerHeight : 0;
+let embeddedVirtualScrollY = 0;
 let embeddedFirstSceneProgress = isEmbeddedPresentation ? 0 : null;
 let embeddedFirstSceneAnimationFrame = 0;
 let embeddedFirstSceneAnimationRequested = isEmbeddedPresentation;
 
 if (isEmbeddedPresentation) {
   document.body.classList.add("embedded-presentation");
+  document.documentElement.style.setProperty("--embedded-scene-height", `${embeddedSceneViewportHeight}px`);
 }
 
 const CZECH_PROJECT_TERMS = {
@@ -923,10 +926,13 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
 }
 
 function getObjectScrollProgress(item) {
-  const sceneTop = item.layer.getBoundingClientRect().top;
+  const sceneTop = isEmbeddedPresentation
+    ? item.layer.offsetTop - embeddedVirtualScrollY
+    : item.layer.getBoundingClientRect().top;
   const objectTop = sceneTop + item.element.offsetTop;
-  const startLine = window.innerHeight * 1.14;
-  const travel = Math.max(window.innerHeight * 0.82, item.element.offsetHeight * 2.4);
+  const viewportHeight = isEmbeddedPresentation ? embeddedSceneViewportHeight : window.innerHeight;
+  const startLine = viewportHeight * 1.14;
+  const travel = Math.max(viewportHeight * 0.82, item.element.offsetHeight * 2.4);
   return clamp((startLine - objectTop) / travel, 0, 1);
 }
 
@@ -1130,6 +1136,49 @@ function updateFromScroll() {
   queueHeaderContourOverlaySync();
   setActiveProjectFromScene(activeSceneIndex);
   applyOverlayState(activeSceneIndex, 1);
+}
+
+function updateEmbeddedContinuousProgress(globalProgress) {
+  if (!isEmbeddedPresentation || layers.length === 0) return;
+  const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+  const maxTravel = Math.max(0, documentHeight - embeddedSceneViewportHeight);
+  embeddedVirtualScrollY = clamp(globalProgress, 0, 1) * maxTravel;
+  const activeAnchor = embeddedVirtualScrollY + embeddedSceneViewportHeight * 0.18;
+  let activeSceneIndex = 0;
+
+  layers.forEach((layer, sceneIndex) => {
+    const scene = sceneTrack[sceneIndex];
+    const sceneTop = layer.offsetTop;
+    const sceneHeight = Math.max(1, layer.offsetHeight);
+    if (activeAnchor >= sceneTop) activeSceneIndex = sceneIndex;
+    const simulatedTop = sceneTop - embeddedVirtualScrollY;
+    const startLineRatio = scene?.startLineRatio ?? 0.96;
+    const hasDelayedDownObject = isRealizationDelayedDownLayout(scene?.layout);
+    const travel = layer.classList.contains("flow-object-scene-layer")
+      ? Math.max(
+        embeddedSceneViewportHeight * (scene?.travelRatio ?? (hasDelayedDownObject ? 1.25 : 0.95)),
+        sceneHeight * 0.92,
+      )
+      : Math.max(1, Math.min(embeddedSceneViewportHeight * 0.72, sceneHeight * 0.72));
+    const sceneProgress = clamp(
+      (embeddedSceneViewportHeight * startLineRatio - simulatedTop) / travel,
+      0,
+      1,
+    );
+
+    layer.classList.add("active");
+    layer.style.opacity = "1";
+    layer.style.transform = "none";
+    layer.style.pointerEvents = "auto";
+    layer.classList.toggle("has-visible-objects", scene?.type !== "objects" || sceneProgress > 0.025);
+    applyObjectSceneProgress(sceneIndex, sceneProgress);
+    applyAnnotationSceneProgress(sceneIndex, sceneProgress);
+    applyCarouselSceneProgress(sceneIndex, sceneProgress);
+  });
+
+  setActiveProjectFromScene(activeSceneIndex);
+  applyOverlayState(activeSceneIndex, 1);
+  queueHeaderContourOverlaySync();
 }
 
 async function renderFullPageCanvas(pdfDocument, pageNumber, canvas) {
@@ -1842,7 +1891,7 @@ function attachScrollHandler() {
 }
 
 function attachResizeHandler() {
-  if (isResizeHandlerAttached) {
+  if (isResizeHandlerAttached || isEmbeddedPresentation) {
     return;
   }
   isResizeHandlerAttached = true;
@@ -2141,9 +2190,7 @@ window.addEventListener("message", (event) => {
   }
   if (event.data?.type === "set-embedded-scroll-progress") {
     const progress = clamp(Number(event.data.progress) || 0, 0, 1);
-    const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
-    const maxScroll = Math.max(0, documentHeight - window.innerHeight - 4);
-    window.scrollTo(0, progress * maxScroll);
+    updateEmbeddedContinuousProgress(progress);
   }
   if (event.data?.type === "request-embedded-presentation-metrics") {
     reportEmbeddedPresentationMetrics();

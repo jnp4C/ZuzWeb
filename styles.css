@@ -6758,9 +6758,31 @@ main,
   }
 
   .concise-project-scroll-top {
+    display: grid;
+    width: var(--mobile-control-size);
+    min-width: var(--mobile-control-size);
+    height: var(--mobile-control-size);
+    min-height: var(--mobile-control-size);
+    place-items: center;
     right: var(--index-page-gutter);
     bottom: calc(clamp(16px, 4vw, 20px) + env(safe-area-inset-bottom, 0px));
     z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(calc(var(--mobile-control-size) + clamp(16px, 4vw, 20px) + env(safe-area-inset-bottom, 0px)));
+    transition:
+      opacity 220ms ease,
+      transform 460ms cubic-bezier(0.22, 0.8, 0.2, 1),
+      visibility 0s linear 460ms;
+  }
+
+  .concise-project-scroll-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
   }
 
   .concise-project.is-project-nav-floating .concise-project-back {

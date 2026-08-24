@@ -872,6 +872,7 @@ function renderProject(animateFacts = false) {
         "--project-floating-star-left",
         `${articleBounds.left + spineX}px`,
       );
+      article.classList.toggle("is-scroll-top-visible", window.scrollY > 48);
       setFloatingNavigation(heading.getBoundingClientRect().bottom <= floatingTop);
     });
   };

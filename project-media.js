@@ -211,36 +211,48 @@ const CURATED_MEDIA = {
     hero: media("tree-with-the-spirit-of-christmas", "index", "Christmas tree project index visualization", "Indexová vizualizace vánočního stromu"),
     sections: [
       section("day-night-visualization", "graphic", "Day / night visualization", "Vizualizace den / noc", [
-        media("tree-with-the-spirit-of-christmas", "source-visualization-day", "Christmas tree daytime visualization", "Denní vizualizace vánočního stromu"),
-        media("tree-with-the-spirit-of-christmas", "source-visualization-night", "Christmas tree nighttime visualization", "Noční vizualizace vánočního stromu"),
+        media("tree-with-the-spirit-of-christmas", "day", "Christmas tree daytime visualization", "Vizualizace stromu ve dne"),
+        media("tree-with-the-spirit-of-christmas", "night", "Christmas tree nighttime visualization", "Vizualizace stromu v noci"),
       ], { presentation: "day-night-fade" }),
     ],
   },
   "polyporus-larixis": {
     hero: media("polyporus-larixis", "index", "Polyporus Larixis timber structure", "Dřevěná konstrukce Polyporus Larixis"),
     sections: [
-      section("graphics", "graphic", "Graphics", "Grafika", [2028, 2029, 2030, 2031].map((number) => media(
-        "polyporus-larixis",
-        `source-image-${number}`,
-        `Polyporus Larixis image ${number}`,
-        `Grafika Polyporus Larixis ${number}`,
+      section("concept", "graphic", "Polyporus Larixis concept", "Koncept „Polyporus Larixis“", [
+        media("polyporus-larixis", "design-01", "Concept drawing for the Polyporus Larixis shelters", "Koncepční kresba přístřešků Polyporus Larixis"),
+      ]),
+      section("viewfinder", "graphic", "Path viewfinder", "Kukátko ukazující cestu", [
+        media("polyporus-larixis", "design-02", "Design drawing of the path viewfinder", "Návrhová kresba kukátka ukazujícího cestu"),
+      ]),
+      section("bicycle-stand", "graphic", "Bicycle stand", "Stojan na kola", [
+        media("polyporus-larixis", "design-03", "Design drawing of the bicycle stand", "Návrhová kresba stojanu na kola"),
+      ]),
+      section("roda-traden-realization", "realization", "Röda Tråden realization", "Realizace „Röda Tråden“", [1, 2, 3, 4].map((number) => media(
+        "polyporus-larixis", `realization-0${number}`, `Röda Tråden construction process ${number}`, `Průběh realizace Röda Tråden ${number}`,
       ))),
+      section("completed-structure", "realization", "Completed structure", "Dokončená stavba", [
+        media("polyporus-larixis", "completed", "Completed Röda Tråden lakeside shelter", "Dokončený přístřešek Röda Tråden u jezera"),
+      ]),
     ],
   },
   "new-landscape-of-high-speed-railways": {
     hero: media("new-landscape-of-high-speed-railways", "index", "New Landscape of High-Speed Railways", "Nová krajina vysokorychlostních tratí"),
     sections: [
-      section("analyses", "graphic", "Analyses", "Analýzy", [1, 2, 3].map((number) => media(
-        "new-landscape-of-high-speed-railways",
-        `source-analysis-0${number}`,
-        `High-speed railway landscape analysis ${number}`,
-        `Analýza krajiny vysokorychlostních tratí ${number}`,
+      section("theoretical-conclusion", "graphic", "Conclusion of the theoretical part", "Závěr teoretické části", [
+        media("new-landscape-of-high-speed-railways", "theory", "Summary diagram of the theoretical research", "Shrnující schéma teoretické části"),
+      ]),
+      section("analyses", "graphic", "Study-area analyses", "Ukázka analýz řešeného území", [1, 2, 3, 4].map((number) => media(
+        "new-landscape-of-high-speed-railways", `analysis-0${number}`, `Study-area analysis ${number}`, `Analýza řešeného území ${number}`,
       ))),
-      section("presentation", "graphic", "Presentation", "Prezentace", [1, 2].map((number) => media(
-        "new-landscape-of-high-speed-railways",
-        `source-presentation-0${number}`,
-        `High-speed railway landscape presentation ${number}`,
-        `Prezentace nové krajiny vysokorychlostních tratí ${number}`,
+      section("project-concept", "graphic", "Project concept", "Koncept projektu", [
+        media("new-landscape-of-high-speed-railways", "concept", "Elbe Embroidery project concept", "Koncept projektu Polabská výšivka"),
+      ]),
+      section("masterplan", "masterplan", "Masterplan", "Masterplan", [1, 2, 3, 4].map((number) => media(
+        "new-landscape-of-high-speed-railways", `masterplan-0${number}`, `High-speed railway landscape masterplan ${number}`, `Masterplan začlenění vysokorychlostní trati ${number}`,
+      ))),
+      section("atmospheric-collages", "graphic", "Atmospheric collages", "Atmosférické koláže", [1, 2, 3, 4, 5, 6].map((number) => media(
+        "new-landscape-of-high-speed-railways", `collage-0${number}`, `Atmospheric collage ${number}`, `Atmosférická koláž ${number}`,
       ))),
     ],
   },

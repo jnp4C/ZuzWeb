@@ -44,9 +44,11 @@ Key references:
   order.
 - `Redesign/WEB PORTFOLIO texty.pdf`: project metadata, links, Czech and English
   descriptions, credits, awards, publication notes, and typography direction.
-- `Redesign/PROJEKTY na web (1)/PROJEKTY na web/`: newest source images,
+- `Redesign/WEB PORTFOLIO Zuz sdileni/PROJEKTY na web/`: newest source images,
   drawings, models, presentations, and thumbnails for projects intended for
   the website. Prefer it over older duplicated project collections.
+- Do not use any `WEB PORTFOLIO podklady*.docx` file as a content source. The
+  author has marked those documents as confusing and superseded.
 - Any folder identified as unpublished or `nezveřejněné`, plus every
   `*_nepouzito`/`*_nepouzite` folder, is private/reference-only. Do not expose
   or copy its contents into the public site without explicit user approval.
@@ -146,10 +148,11 @@ that feature into scope.
 For new or updated projects, use the newest matching files rather than an older
 duplicate:
 
-1. `Redesign/WEB PORTFOLIO real obsah (1).docx` defines project text, exact
-   highlighted passages, featured-section names, and carousel order. Check
-   newer numbered copies if their modified date shows that they supersede it.
-2. `Redesign/PROJEKTY na web (1)/PROJEKTY na web/` is the current project asset
+1. `Redesign/WEB PORTFOLIO Zuz sdileni/WEB PORTFOLIO real obsah.docx` defines
+   project text, exact highlighted passages, featured-section names, and
+   carousel order. Check newer copies if their modified date shows that they
+   supersede it.
+2. `Redesign/WEB PORTFOLIO Zuz sdileni/PROJEKTY na web/` is the current project asset
    collection. A project's `*_index` directory supplies its index preview,
    `*_grafika` supplies concise-page carousel media, and `*_prezentace` supplies
    a downloadable/full presentation when one exists. Never source published

@@ -16488,8 +16488,8 @@
     "translations": {
       "cs": {
         "title": "POLYPORUS LARIXIS",
-        "description": "Realizace z design-build workshopu.",
-        "annotation": ""
+        "description": "Návrh a realizace z design-build workshopu ArkRest u jezera Dagstorpssjön.",
+        "annotation": "V rámci semestrálního Erasmu na Lund University jsem se zúčastnila design&build workshopu ArkRest (Martin Björklund & Ivar Håkenstad). Zadání spočívalo ve vybudování odpočívadla s přístřeškem na břehu jezera Dagstorpssjön.\n\nProjekt k realizaci byl vybrán ze čtyř návrhů, vznikajících v menších skupinkách. Návrh naší skupiny „POLYPORUS LARIXIS“ byl inspirovaný choroši, které na místě rostou. Byla od nich převzata i výsledná nenápadnost navržených přístřešků, zajištěná přileháním konstrukce na svah, ze kterého vyrůstají. Návštěvníci mají možnost volby mezi větším přístřeškem, ve kterém je stůl, nebo menším, nabízejícím sklápěcí opěradlo. Součástí návrhu bylo i ohniště, stojan na kola a kukátka ukazující cestu z turistické stezky.\n\nK realizaci byl vybrán návrh „RÖDA TRÅDEN“ (červená niť). Během stavby se používalo minimum elektrických nástrojů, a tak jsme se naučili tesařské základy. Šlo například o různé typy spojů vyráběných pomocí dláta a palice."
       }
     },
     "projectPage": {
@@ -16497,9 +16497,21 @@
       "intro": {
         "showProjectInfo": true,
         "showAwards": false,
-        "showAnnotation": false
+        "showAnnotation": true
       },
       "awards": [],
+      "highlightedText": [
+        {
+          "label": {
+            "en": "note:",
+            "cs": "pozn.:"
+          },
+          "detail": {
+            "en": "completed during an Erasmus stay at Lund University",
+            "cs": "v rámci pobytu ERASMUS na Lund University"
+          }
+        }
+      ],
       "featuredSections": [],
       "fullPresentation": {
         "enabled": false,
@@ -16537,8 +16549,8 @@
     "category": "Design-build workshop",
     "location": "Czech Republic",
     "year": 2025,
-    "description": "A realized design-build workshop project.",
-    "annotation": "",
+    "description": "A design-and-build project developed during the ArkRest workshop beside Lake Dagstorpssjön.",
+    "annotation": "During an Erasmus semester at Lund University, I took part in the ArkRest design-and-build workshop led by Martin Björklund and Ivar Håkenstad. The assignment was to build a rest area with a shelter on the shore of Lake Dagstorpssjön.\n\nOne of four proposals developed in small groups was selected for construction. Our group’s proposal, “POLYPORUS LARIXIS,” was inspired by the bracket fungi growing on the site. Their unobtrusive character also shaped the shelters, whose structures hug and emerge from the slope. Visitors could choose between a larger shelter with a table and a smaller one with a folding backrest. The proposal also included a fire pit, a bicycle stand, and viewfinders marking the route from the hiking trail.\n\nThe proposal selected for construction was “RÖDA TRÅDEN” (red thread). Very few power tools were used during construction, allowing us to learn basic carpentry, including several types of joints made with a chisel and mallet.",
     "scenes": [],
     "projectType": "Design-build workshop, collaboration",
     "selectorLabel": "POLYPORUS LARIXIS"

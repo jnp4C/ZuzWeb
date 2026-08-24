@@ -7090,3 +7090,29 @@ main,
     display: inline;
   }
 }
+
+/* The desktop intro columns have hard minimum widths that exceed an iPad
+   portrait content area. Keep the hero in normal flow below the copy there,
+   then restore a flexible two-column composition when landscape has room. */
+@media (min-width: 761px) and (max-width: 900px) {
+  .concise-project-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2.5rem, 7vw, 4rem);
+  }
+
+  .concise-project-intro > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .concise-project-intro {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.35fr);
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  .concise-project-intro > * {
+    min-width: 0;
+  }
+}

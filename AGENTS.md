@@ -131,6 +131,14 @@ that feature into scope.
   plus/cross and double-triangle shapes; do not substitute font glyphs.
 - Project and presentation labels use the same Space Grotesk size and weight as
   index text. Featured-media labels use annotation typography in all caps.
+- Tablet layouts (721–1024px) keep equal visible screen margins without moving
+  the internal project spine. Preserve the fixed optical distance from the Home
+  control to the project title and use that same clearance before the right
+  previous/next controls. Long tablet titles use the existing text carousel.
+- On tablet project intros, text remains in a flexible left column and the hero
+  remains in a flexible right column. Both tracks must use zero minimum widths;
+  long URLs and metadata wrap inside the text track, and hero media is contained
+  so neither column can paint across their gap.
 - Highlighted awards, publications, conferences, and realizations render as
   individually marked black text fragments, not a full-width solid rectangle.
   Copy their wording and punctuation exactly from the authoritative content
@@ -226,6 +234,15 @@ project-specific text or media. Complete this checklist for every addition:
 - Presentation auto-scroll stops with the Presentation label and download
   control still visible. The download control is a square aligned with the
   orientation controls and uses the existing triangle-plus-rectangle icon.
+- Scene-based full presentations are one continuous parent-page document. Each
+  animated scene occupies its own viewport-sized normal-flow section and
+  appears after the previous scene as the main page scrolls. Do not restore a
+  sticky single-stage iframe, nested presentation scrolling, artificial scroll
+  scaling, or simultaneous crossfading/overlap between adjacent scene layers.
+- Hybrid presentations retain their animated scenes first and extracted source
+  pages afterward. Extracted pages remain part of the parent page, preserve
+  high-resolution pinch zoom, and must not become individually clickable image
+  links or a nested PDF viewer.
 - Support keyboard, touch, pointer input, and `prefers-reduced-motion`.
 
 ## Validation and commit checklist

@@ -1810,9 +1810,13 @@ main,
 }
 
 .project-index-group h2 {
+  --spine-label-width: 2.25rem;
   position: absolute;
   top: var(--project-label-top);
-  left: calc(-1 * var(--project-branch-indent) - 1.1rem);
+  left: calc(-1 * var(--project-branch-indent) - (var(--spine-label-width) / 2));
+  display: grid;
+  width: var(--spine-label-width);
+  place-items: center;
   margin: 0;
   font-family: var(--font-heading);
   font-size: var(--index-section-heading-size);
@@ -6140,11 +6144,15 @@ main,
 }
 
 .project-index-cv .cv-section > h3 {
+  --spine-label-width: 2.25rem;
   position: absolute;
   top: 0;
-  left: -1.1rem;
+  left: calc(-1 * var(--spine-label-width) / 2);
   z-index: 2;
   margin: 0;
+  display: grid;
+  width: var(--spine-label-width);
+  place-items: center;
   padding-block: 0.2rem;
   background: var(--surface);
   box-shadow: 0 0 0 0.7rem var(--surface);
@@ -6225,7 +6233,8 @@ main,
   }
 
   .project-index-cv .cv-section > h3 {
-    left: -0.9rem;
+    --spine-label-width: 1.7rem;
+    left: calc(-1 * var(--spine-label-width) / 2);
     font-size: var(--index-section-heading-size);
   }
 
@@ -6618,8 +6627,9 @@ main,
   }
 
   .project-index-group h2 {
-    left: calc(-1 * var(--project-branch-indent));
+    --spine-label-width: 1.7rem;
     font-size: var(--index-section-heading-size);
+    left: calc(-1 * var(--project-branch-indent) - (var(--spine-label-width) / 2));
   }
 
   .project-index-link {

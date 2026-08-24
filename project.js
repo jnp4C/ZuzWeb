@@ -978,10 +978,15 @@ function renderProject(animateFacts = false) {
   footer.className = "concise-project-footer";
   const presentationDownload = page.fullPresentation?.download;
   const hasPresentationFile = Boolean(presentationDownload?.href);
+  const presentationPages = Array.isArray(page.fullPresentation?.pages)
+    ? page.fullPresentation.pages
+    : [];
   const usesPdfPresentation = page.fullPresentation?.source === "pdf";
+  const usesImageSequence = page.fullPresentation?.source === "image-sequence"
+    && presentationPages.length > 0;
   const hasEmbeddedPresentation = page.fullPresentation?.enabled
     && hasPresentationFile
-    && (usesPdfPresentation || (activeProject.scenes || []).length > 0);
+    && (usesImageSequence || usesPdfPresentation || (activeProject.scenes || []).length > 0);
   const hasPresentationContent = page.fullPresentation?.enabled
     && hasPresentationFile;
   footer.hidden = !hasPresentationContent;
@@ -1025,7 +1030,28 @@ function renderProject(animateFacts = false) {
   fullPresentation.className = "concise-project-full-presentation";
   fullPresentation.hidden = true;
   let presentationFrame = null;
-  if (hasEmbeddedPresentation) {
+  if (usesImageSequence) {
+    fullPresentation.classList.add("concise-project-full-presentation--image-sequence");
+    presentationPages.forEach((pageMedia, index) => {
+      const pageFigure = document.createElement("figure");
+      pageFigure.className = "concise-project-presentation-page is-clickable";
+      pageFigure.tabIndex = 0;
+      pageFigure.setAttribute("role", "button");
+      pageFigure.setAttribute("aria-label", `${copy.openImage}: ${index + 1}`);
+      const pageImage = createImage(pageMedia);
+      pageImage.loading = index === 0 ? "eager" : "lazy";
+      pageFigure.append(pageImage);
+      const openPage = () => openImageLightbox(presentationPages, index);
+      pageFigure.addEventListener("click", openPage);
+      pageFigure.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openPage();
+        }
+      });
+      fullPresentation.append(pageFigure);
+    });
+  } else if (hasEmbeddedPresentation) {
     presentationFrame = document.createElement("iframe");
     presentationFrame.title = copy.fullPresentation;
     presentationFrame.loading = "lazy";

@@ -1031,6 +1031,27 @@ h3,
   min-height: clamp(8rem, 18vw, 14rem);
 }
 
+.concise-project-full-presentation--image-sequence {
+  display: grid;
+  width: calc(100vw - (2 * var(--project-page-gutter)));
+  height: auto;
+  margin-left: calc(50% - 50vw + var(--project-page-gutter));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  overflow: visible;
+}
+
+.concise-project-presentation-page {
+  width: 100%;
+  margin: 0;
+  background: var(--surface);
+}
+
+.concise-project-presentation-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .concise-project-footer .concise-project-pdf-download {
   overflow: hidden;
   display: inline-flex;
@@ -1241,6 +1262,12 @@ h3,
   .concise-project-full-presentation {
     width: calc(100% - var(--project-spine-x));
     height: 78vh;
+  }
+
+  .concise-project-full-presentation--image-sequence {
+    height: auto;
+    gap: var(--index-page-gutter);
+    overflow: visible;
   }
 }
 
@@ -6760,11 +6787,18 @@ main,
     margin-right: calc(50% - 50vw + var(--index-page-gutter));
   }
 
+  .concise-project-full-presentation--image-sequence {
+    height: auto;
+    gap: var(--index-page-gutter);
+    overflow: visible;
+  }
+
   .concise-project-pdf-frame {
     touch-action: pan-x pan-y pinch-zoom;
   }
 
   .concise-project-scroll-top {
+    box-sizing: border-box;
     display: grid;
     width: var(--mobile-control-size);
     min-width: var(--mobile-control-size);
@@ -6772,7 +6806,9 @@ main,
     min-height: var(--mobile-control-size);
     place-items: center;
     right: var(--index-page-gutter);
-    bottom: calc(clamp(16px, 4vw, 20px) + env(safe-area-inset-bottom, 0px));
+    bottom: calc(var(--index-page-gutter) + env(safe-area-inset-bottom, 0px));
+    padding: 0;
+    border: 0;
     z-index: 500;
     opacity: 0;
     visibility: hidden;
@@ -6782,6 +6818,12 @@ main,
       opacity 220ms ease,
       transform 460ms cubic-bezier(0.22, 0.8, 0.2, 1),
       visibility 0s linear 460ms;
+  }
+
+  .concise-project-scroll-top-triangles i {
+    border-right-width: calc(var(--mobile-symbol-size) / 2);
+    border-bottom-width: clamp(9px, 2.8vw, 12px);
+    border-left-width: calc(var(--mobile-symbol-size) / 2);
   }
 
   .concise-project-scroll-top.is-visible {

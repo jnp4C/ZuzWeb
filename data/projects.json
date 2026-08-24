@@ -16398,7 +16398,7 @@
       "featuredSections": [],
       "fullPresentation": {
         "enabled": true,
-        "source": "pdf",
+        "source": "image-sequence",
         "label": {
           "en": "Full presentation",
           "cs": "Celá prezentace"
@@ -16411,7 +16411,529 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "pages": [
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-01-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-01-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-01-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 1",
+              "cs": "Prezentace Nová krajina VRT, strana 1"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-02-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-02-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-02-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 2",
+              "cs": "Prezentace Nová krajina VRT, strana 2"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-03-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-03-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-03-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 3",
+              "cs": "Prezentace Nová krajina VRT, strana 3"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-04-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-04-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-04-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 4",
+              "cs": "Prezentace Nová krajina VRT, strana 4"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-05-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-05-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-05-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 5",
+              "cs": "Prezentace Nová krajina VRT, strana 5"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-06-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-06-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-06-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 6",
+              "cs": "Prezentace Nová krajina VRT, strana 6"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-07-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-07-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-07-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 7",
+              "cs": "Prezentace Nová krajina VRT, strana 7"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-08-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-08-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-08-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 8",
+              "cs": "Prezentace Nová krajina VRT, strana 8"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-09-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-09-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-09-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 9",
+              "cs": "Prezentace Nová krajina VRT, strana 9"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-10-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-10-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-10-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 10",
+              "cs": "Prezentace Nová krajina VRT, strana 10"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-11-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-11-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-11-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 11",
+              "cs": "Prezentace Nová krajina VRT, strana 11"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-12-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-12-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-12-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 12",
+              "cs": "Prezentace Nová krajina VRT, strana 12"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-13-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-13-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-13-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 13",
+              "cs": "Prezentace Nová krajina VRT, strana 13"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-14-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-14-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-14-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 14",
+              "cs": "Prezentace Nová krajina VRT, strana 14"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-15-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-15-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-15-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 15",
+              "cs": "Prezentace Nová krajina VRT, strana 15"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-16-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-16-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-16-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 16",
+              "cs": "Prezentace Nová krajina VRT, strana 16"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-17-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-17-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-17-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 17",
+              "cs": "Prezentace Nová krajina VRT, strana 17"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-18-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-18-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-18-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 18",
+              "cs": "Prezentace Nová krajina VRT, strana 18"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-19-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-19-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-19-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 19",
+              "cs": "Prezentace Nová krajina VRT, strana 19"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-20-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-20-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-20-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 20",
+              "cs": "Prezentace Nová krajina VRT, strana 20"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-21-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-21-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-21-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 21",
+              "cs": "Prezentace Nová krajina VRT, strana 21"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-22-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-22-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-22-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 22",
+              "cs": "Prezentace Nová krajina VRT, strana 22"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-23-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-23-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-23-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 23",
+              "cs": "Prezentace Nová krajina VRT, strana 23"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-24-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-24-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-24-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 24",
+              "cs": "Prezentace Nová krajina VRT, strana 24"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-25-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-25-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-25-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 25",
+              "cs": "Prezentace Nová krajina VRT, strana 25"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-26-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-26-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-26-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 26",
+              "cs": "Prezentace Nová krajina VRT, strana 26"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-27-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-27-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-27-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 27",
+              "cs": "Prezentace Nová krajina VRT, strana 27"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-28-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-28-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-28-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 28",
+              "cs": "Prezentace Nová krajina VRT, strana 28"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-29-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-29-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-29-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 29",
+              "cs": "Prezentace Nová krajina VRT, strana 29"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-30-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-30-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-30-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 30",
+              "cs": "Prezentace Nová krajina VRT, strana 30"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-31-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-31-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-31-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 31",
+              "cs": "Prezentace Nová krajina VRT, strana 31"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-32-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-32-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-32-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 32",
+              "cs": "Prezentace Nová krajina VRT, strana 32"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-33-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-33-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-33-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 33",
+              "cs": "Prezentace Nová krajina VRT, strana 33"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-34-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-34-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-34-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 34",
+              "cs": "Prezentace Nová krajina VRT, strana 34"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-35-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-35-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-35-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 35",
+              "cs": "Prezentace Nová krajina VRT, strana 35"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-36-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-36-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-36-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 36",
+              "cs": "Prezentace Nová krajina VRT, strana 36"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-37-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-37-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-37-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 37",
+              "cs": "Prezentace Nová krajina VRT, strana 37"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-38-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-38-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-38-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 38",
+              "cs": "Prezentace Nová krajina VRT, strana 38"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-39-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-39-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-39-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 39",
+              "cs": "Prezentace Nová krajina VRT, strana 39"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-40-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-40-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-40-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 40",
+              "cs": "Prezentace Nová krajina VRT, strana 40"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-41-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-41-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-41-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 41",
+              "cs": "Prezentace Nová krajina VRT, strana 41"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-42-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-42-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-42-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 42",
+              "cs": "Prezentace Nová krajina VRT, strana 42"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-43-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-43-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-43-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 43",
+              "cs": "Prezentace Nová krajina VRT, strana 43"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-44-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-44-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-44-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 44",
+              "cs": "Prezentace Nová krajina VRT, strana 44"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-45-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-45-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-45-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 45",
+              "cs": "Prezentace Nová krajina VRT, strana 45"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-46-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-46-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-46-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 46",
+              "cs": "Prezentace Nová krajina VRT, strana 46"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-47-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-47-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-47-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 47",
+              "cs": "Prezentace Nová krajina VRT, strana 47"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-48-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-48-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-48-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 48",
+              "cs": "Prezentace Nová krajina VRT, strana 48"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-49-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-49-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-49-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 49",
+              "cs": "Prezentace Nová krajina VRT, strana 49"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-50-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-50-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-50-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 50",
+              "cs": "Prezentace Nová krajina VRT, strana 50"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-51-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-51-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-51-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 51",
+              "cs": "Prezentace Nová krajina VRT, strana 51"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-52-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-52-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-52-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 52",
+              "cs": "Prezentace Nová krajina VRT, strana 52"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-53-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-53-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-53-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 53",
+              "cs": "Prezentace Nová krajina VRT, strana 53"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-54-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-54-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-54-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 54",
+              "cs": "Prezentace Nová krajina VRT, strana 54"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-55-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-55-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-55-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 55",
+              "cs": "Prezentace Nová krajina VRT, strana 55"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-56-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-56-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-56-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 56",
+              "cs": "Prezentace Nová krajina VRT, strana 56"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-57-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-57-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-57-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 57",
+              "cs": "Prezentace Nová krajina VRT, strana 57"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-58-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-58-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-58-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 58",
+              "cs": "Prezentace Nová krajina VRT, strana 58"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-59-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-59-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-59-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 59",
+              "cs": "Prezentace Nová krajina VRT, strana 59"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-60-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-60-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-60-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 60",
+              "cs": "Prezentace Nová krajina VRT, strana 60"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-61-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-61-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-61-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 61",
+              "cs": "Prezentace Nová krajina VRT, strana 61"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-62-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-62-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-62-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 62",
+              "cs": "Prezentace Nová krajina VRT, strana 62"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-63-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-63-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-63-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 63",
+              "cs": "Prezentace Nová krajina VRT, strana 63"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-64-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-64-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-64-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 64",
+              "cs": "Prezentace Nová krajina VRT, strana 64"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-65-1600.webp",
+            "srcset": "./assets/presentation-pages/new-landscape-of-high-speed-railways/page-65-1000.webp 1000w, ./assets/presentation-pages/new-landscape-of-high-speed-railways/page-65-1600.webp 1600w",
+            "alt": {
+              "en": "New Landscape of High-Speed Railways presentation, page 65",
+              "cs": "Prezentace Nová krajina VRT, strana 65"
+            }
+          }
+        ]
       },
       "info": {
         "year": "2025–2026",

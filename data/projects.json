@@ -7777,8 +7777,8 @@
           "cs": "návrh instalace"
         },
         "type": {
-          "en": "landscape installation",
-          "cs": "krajinářská instalace"
+          "en": "studio project + competition",
+          "cs": "školní práce + soutěž"
         },
         "collaborators": [
           "David Šmíd"
@@ -16300,16 +16300,16 @@
       "info": {
         "year": 2024,
         "scale": {
-          "en": "installation",
-          "cs": "instalace"
+          "en": "small scale",
+          "cs": "malé měřítko"
         },
         "processing": {
-          "en": "master's study, collaboration",
-          "cs": "magisterské studium, spoluautorství"
+          "en": "installation design",
+          "cs": "návrh instalace"
         },
         "type": {
-          "en": "exhibition installation",
-          "cs": "výstavní instalace"
+          "en": "open call + exhibition",
+          "cs": "opencall + výstava"
         },
         "collaborators": [
           "Sabina Peková",
@@ -16478,12 +16478,7 @@
         "en": "design-build workshop, collaboration",
         "cs": "design-build workshop, spoluautorství"
       },
-      "highlights": [
-        {
-          "en": "realization",
-          "cs": "realizace"
-        }
-      ]
+      "highlights": []
     },
     "translations": {
       "cs": {
@@ -16530,14 +16525,17 @@
           "cs": "malé měřítko"
         },
         "processing": {
-          "en": "design-build workshop",
-          "cs": "design-build workshop"
+          "en": "study",
+          "cs": "studie"
         },
         "type": {
-          "en": "collaboration, realization",
-          "cs": "spoluautorství, realizace"
+          "en": "workshop",
+          "cs": "workshop"
         },
-        "collaborators": []
+        "collaborators": [
+          "Enoo Rasmussen",
+          "Miranda Elg"
+        ]
       },
       "hero": {
         "media": null,
@@ -16553,6 +16551,11 @@
     "annotation": "During an Erasmus semester at Lund University, I took part in the ArkRest design-and-build workshop led by Martin Björklund and Ivar Håkenstad. The assignment was to build a rest area with a shelter on the shore of Lake Dagstorpssjön.\n\nOne of four proposals developed in small groups was selected for construction. Our group’s proposal, “POLYPORUS LARIXIS,” was inspired by the bracket fungi growing on the site. Their unobtrusive character also shaped the shelters, whose structures hug and emerge from the slope. Visitors could choose between a larger shelter with a table and a smaller one with a folding backrest. The proposal also included a fire pit, a bicycle stand, and viewfinders marking the route from the hiking trail.\n\nThe proposal selected for construction was “RÖDA TRÅDEN” (red thread). Very few power tools were used during construction, allowing us to learn basic carpentry, including several types of joints made with a chisel and mallet.",
     "scenes": [],
     "projectType": "Design-build workshop, collaboration",
+    "projectTeam": [
+      "Enoo Rasmussen",
+      "Miranda Elg",
+      "Zuzana Purmová"
+    ],
     "selectorLabel": "POLYPORUS LARIXIS"
   }
 ]

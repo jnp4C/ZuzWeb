@@ -824,6 +824,42 @@ function renderProject(animateFacts = false) {
   });
 
   let navigationFrame;
+  const navigationAnimations = new WeakMap();
+  const setFloatingNavigation = (shouldFloat) => {
+    const isFloating = article.classList.contains("is-project-nav-floating");
+    if (isFloating === shouldFloat) return;
+
+    const controls = [back, ...projectNavigation.querySelectorAll(".concise-project-nav-link")];
+    const previousRects = new Map(controls.map((control) => [control, control.getBoundingClientRect()]));
+    article.classList.toggle("is-project-nav-floating", shouldFloat);
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    controls.forEach((control) => {
+      const previousRect = previousRects.get(control);
+      const nextRect = control.getBoundingClientRect();
+      const deltaX = previousRect.left - nextRect.left;
+      const deltaY = previousRect.top - nextRect.top;
+      const previousAnimation = navigationAnimations.get(control);
+      navigationAnimations.delete(control);
+      previousAnimation?.cancel();
+      const animation = control.animate(
+        [
+          { translate: `${deltaX}px ${deltaY}px` },
+          { translate: "0 0" },
+        ],
+        {
+          duration: 460,
+          easing: "cubic-bezier(0.22, 0.8, 0.2, 1)",
+        },
+      );
+      navigationAnimations.set(control, animation);
+      const clearAnimation = () => {
+        if (navigationAnimations.get(control) === animation) navigationAnimations.delete(control);
+      };
+      animation.addEventListener("finish", clearAnimation, { once: true });
+      animation.addEventListener("cancel", clearAnimation, { once: true });
+    });
+  };
   const updateFloatingNavigation = () => {
     window.cancelAnimationFrame(navigationFrame);
     navigationFrame = window.requestAnimationFrame(() => {
@@ -836,10 +872,7 @@ function renderProject(animateFacts = false) {
         "--project-floating-star-left",
         `${articleBounds.left + spineX}px`,
       );
-      article.classList.toggle(
-        "is-project-nav-floating",
-        window.scrollY > Math.max(48, heading.getBoundingClientRect().height / 2),
-      );
+      setFloatingNavigation(heading.getBoundingClientRect().bottom <= floatingTop);
     });
   };
   window.addEventListener("scroll", updateFloatingNavigation, { passive: true });

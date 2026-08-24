@@ -1051,6 +1051,7 @@ h3,
   display: block;
   width: 100%;
   height: auto;
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .concise-project-footer .concise-project-pdf-download {
@@ -6807,7 +6808,11 @@ main,
     min-height: var(--mobile-control-size);
     place-items: center;
     right: var(--index-page-gutter);
-    bottom: calc(var(--index-page-gutter) + env(safe-area-inset-bottom, 0px));
+    bottom: calc(
+      var(--index-page-gutter)
+      + env(safe-area-inset-bottom, 0px)
+      + var(--visual-viewport-bottom, 0px)
+    );
     padding: 0;
     border: 0;
     z-index: 500;

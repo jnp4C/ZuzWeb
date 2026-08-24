@@ -29,6 +29,24 @@ let activeProject = null;
 let navigableProjects = [];
 let carouselCleanups = [];
 
+function initializeVisualViewportInset() {
+  const visualViewport = window.visualViewport;
+  const updateInset = () => {
+    const layoutHeight = document.documentElement.clientHeight;
+    const visibleBottom = visualViewport
+      ? visualViewport.height + visualViewport.offsetTop
+      : window.innerHeight;
+    document.documentElement.style.setProperty(
+      "--visual-viewport-bottom",
+      `${Math.max(0, layoutHeight - visibleBottom)}px`,
+    );
+  };
+  updateInset();
+  window.addEventListener("resize", updateInset);
+  visualViewport?.addEventListener("resize", updateInset);
+  visualViewport?.addEventListener("scroll", updateInset);
+}
+
 const COPY = {
   en: {
     back: "Back to projects",
@@ -1034,21 +1052,14 @@ function renderProject(animateFacts = false) {
     fullPresentation.classList.add("concise-project-full-presentation--image-sequence");
     presentationPages.forEach((pageMedia, index) => {
       const pageFigure = document.createElement("figure");
-      pageFigure.className = "concise-project-presentation-page is-clickable";
-      pageFigure.tabIndex = 0;
-      pageFigure.setAttribute("role", "button");
-      pageFigure.setAttribute("aria-label", `${copy.openImage}: ${index + 1}`);
-      const pageImage = createImage(pageMedia);
+      pageFigure.className = "concise-project-presentation-page";
+      const pageImage = createImage({
+        ...pageMedia,
+        src: pageMedia.zoomSrc || pageMedia.src,
+        srcset: "",
+      });
       pageImage.loading = index === 0 ? "eager" : "lazy";
       pageFigure.append(pageImage);
-      const openPage = () => openImageLightbox(presentationPages, index);
-      pageFigure.addEventListener("click", openPage);
-      pageFigure.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openPage();
-        }
-      });
       fullPresentation.append(pageFigure);
     });
   } else if (hasEmbeddedPresentation) {
@@ -1162,6 +1173,8 @@ async function initializeProject() {
   }
   renderProject(true);
 }
+
+initializeVisualViewportInset();
 
 initLanguageSwitch((language) => {
   activeLanguage = language;

@@ -6551,9 +6551,9 @@ main,
   .index-page,
   .concise-project-page {
     --mobile-control-size: clamp(34px, 10vw, 44px);
-    --mobile-symbol-size: clamp(20px, 6vw, 26px);
-    --mobile-control-inset: clamp(7px, 2vw, 9px);
-    --mobile-display-size: clamp(24px, 7.7vw, 34px);
+    --mobile-symbol-size: calc(var(--mobile-control-size) - 20px);
+    --mobile-control-inset: 10px;
+    --mobile-display-size: clamp(17px, 5vw, 22px);
     --mobile-vertical-size: clamp(16px, 4.6vw, 20px);
     --index-page-gutter: clamp(16px, 4.1vw, 20px);
   }
@@ -6608,6 +6608,17 @@ main,
   .concise-project-symbol--star::before {
     width: var(--mobile-symbol-size);
     height: var(--mobile-symbol-size);
+  }
+
+  .index-page .project-index-symbol-mark {
+    width: var(--mobile-symbol-size);
+    height: var(--mobile-symbol-size);
+  }
+
+  .index-page .project-index-symbol-mark::before,
+  .index-page .project-index-symbol-mark::after {
+    width: var(--mobile-symbol-size);
+    height: clamp(3px, 1.2vw, 5px);
   }
 
   .index-page :is(
@@ -6712,16 +6723,16 @@ main,
   }
 
   .concise-project-nav-triangles i {
-    border-top-width: 11px;
-    border-bottom-width: 11px;
+    border-top-width: calc(var(--mobile-symbol-size) / 2);
+    border-bottom-width: calc(var(--mobile-symbol-size) / 2);
   }
 
   .concise-project-nav-link--next .concise-project-nav-triangles i {
-    border-left-width: 10px;
+    border-left-width: calc((var(--mobile-symbol-size) - 1px) / 2);
   }
 
   .concise-project-nav-link--previous .concise-project-nav-triangles i {
-    border-right-width: 10px;
+    border-right-width: calc((var(--mobile-symbol-size) - 1px) / 2);
   }
 
   .concise-project-spine-label {
@@ -6868,7 +6879,7 @@ main,
 
   .concise-project-scroll-top-triangles i {
     border-right-width: calc(var(--mobile-symbol-size) / 2);
-    border-bottom-width: clamp(9px, 2.8vw, 12px);
+    border-bottom-width: calc((var(--mobile-symbol-size) - 1px) / 2);
     border-left-width: calc(var(--mobile-symbol-size) / 2);
   }
 

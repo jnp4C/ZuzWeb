@@ -828,7 +828,12 @@ function applyLayerState(currentIndex, progress) {
   const nextIndex = Math.min(currentIndex + 1, layers.length - 1);
   const currentScene = sceneTrack[currentIndex];
   const handoffStart = getSceneHandoffStart(currentScene);
-  const handoffProgress = currentIndex === nextIndex ? 0 : clamp((safeProgress - handoffStart) / (1 - handoffStart), 0, 1);
+  // A full presentation is one continuous scroll document: each embedded
+  // scene owns its complete page segment and hands off only at the next step.
+  // Crossfading two fixed layers here makes neighbouring scenes overlap.
+  const handoffProgress = isEmbeddedPresentation || currentIndex === nextIndex
+    ? 0
+    : clamp((safeProgress - handoffStart) / (1 - handoffStart), 0, 1);
   const nextSceneProgress = clamp(handoffProgress * 0.7, 0, 1);
 
   layers.forEach((layer, index) => {

@@ -6687,6 +6687,14 @@ main,
     padding-bottom: calc(clamp(5rem, 18vw, 7rem) + env(safe-area-inset-bottom, 0px));
   }
 
+  .concise-project::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(clamp(8rem, 32vw, 11rem) + env(safe-area-inset-bottom, 0px));
+    pointer-events: none;
+  }
+
   .concise-project-footer {
     position: relative;
     z-index: 2;
@@ -6738,5 +6746,16 @@ main,
 
   .concise-project-full-presentation {
     height: calc(100svh - env(safe-area-inset-bottom, 0px));
+  }
+
+  .concise-project-scroll-top {
+    right: var(--index-page-gutter);
+    bottom: calc(clamp(16px, 4vw, 20px) + env(safe-area-inset-bottom, 0px));
+    z-index: 500;
+  }
+
+  .concise-project.is-project-nav-floating .concise-project-back {
+    left: calc(var(--index-page-gutter) + (var(--mobile-control-size) / 2));
+    transform: translateX(-50%);
   }
 }

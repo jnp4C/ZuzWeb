@@ -838,7 +838,7 @@ function renderProject(animateFacts = false) {
       );
       article.classList.toggle(
         "is-project-nav-floating",
-        heading.getBoundingClientRect().bottom <= floatingTop,
+        window.scrollY > Math.max(48, heading.getBoundingClientRect().height / 2),
       );
     });
   };
@@ -937,7 +937,6 @@ function renderProject(animateFacts = false) {
   });
 
   const footer = document.createElement("footer");
-  footer.id = "projectPresentationControls";
   footer.className = "concise-project-footer";
   const presentationDownload = page.fullPresentation?.download;
   const hasPresentationFile = Boolean(presentationDownload?.href);

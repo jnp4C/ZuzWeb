@@ -6603,6 +6603,7 @@ main,
   }
 
   .concise-project {
+    --project-spine-x: calc(var(--mobile-control-size) / 2);
     --project-body-start: clamp(1.9rem, 8vw, 2.4rem);
   }
 
@@ -6613,9 +6614,9 @@ main,
 
   .concise-project-heading h1 {
     width: fit-content;
-    max-width: calc(100% - var(--project-body-start));
+    max-width: calc(100% - var(--project-spine-x) - var(--project-body-start));
     min-height: var(--mobile-control-size);
-    margin-left: var(--project-body-start);
+    margin-left: calc(var(--project-spine-x) + var(--project-body-start));
     padding: var(--mobile-control-inset);
     font-size: var(--mobile-display-size);
     line-height: var(--mobile-symbol-size);
@@ -6656,7 +6657,7 @@ main,
   .concise-project-intro,
   .concise-project-section {
     min-width: 0;
-    padding-left: var(--project-body-start);
+    padding-left: calc(var(--project-spine-x) + var(--project-body-start));
   }
 
   .concise-project-annotation,
@@ -6670,7 +6671,9 @@ main,
 
   .concise-project-section:nth-child(n) figure,
   .concise-project-section--model figure {
-    width: calc(100vw - (2 * var(--index-page-gutter)) - var(--project-body-start));
+    width: calc(
+      100vw - (2 * var(--index-page-gutter)) - var(--project-spine-x) - var(--project-body-start)
+    );
     max-width: 100%;
   }
 }

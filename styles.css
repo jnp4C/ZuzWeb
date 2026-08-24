@@ -7099,9 +7099,24 @@ main,
     max-width: 100%;
   }
 
+  .concise-project-intro-copy,
+  .concise-project-intro-copy > *,
+  .concise-project-highlight a,
+  .concise-project-annotation p {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .concise-project-hero,
   .concise-project-hero img {
     width: 100%;
     max-width: 100%;
+  }
+
+  .concise-project-hero {
+    position: relative;
+    overflow: hidden;
+    contain: layout paint;
   }
 }

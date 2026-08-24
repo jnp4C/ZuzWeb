@@ -1066,6 +1066,30 @@ function updateFromScroll() {
     return;
   }
 
+  if (isEmbeddedPresentation) {
+    const viewportAnchor = window.innerHeight * 0.18;
+    let activeSceneIndex = 0;
+    let closestDistance = Number.POSITIVE_INFINITY;
+    steps.forEach((step, sceneIndex) => {
+      const rect = step.getBoundingClientRect();
+      const distance = Math.abs(rect.top - viewportAnchor);
+      if (rect.bottom > viewportAnchor && distance < closestDistance) {
+        closestDistance = distance;
+        activeSceneIndex = sceneIndex;
+      }
+    });
+    const activeStep = steps[activeSceneIndex];
+    const measuredProgress = activeStep ? getContinuousSceneProgress(activeStep) : 0;
+    const progress = activeSceneIndex === 0 && embeddedFirstSceneProgress !== null
+      ? embeddedFirstSceneProgress
+      : measuredProgress;
+    applyLayerState(activeSceneIndex, progress);
+    queueHeaderContourOverlaySync();
+    setActiveProjectFromScene(activeSceneIndex);
+    applyOverlayState(activeSceneIndex, 1);
+    return;
+  }
+
   const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
   const isAtPageBottom = window.scrollY + window.innerHeight >= documentHeight - 2;
   let activeSceneIndex = 0;

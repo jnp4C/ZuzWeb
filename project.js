@@ -1034,9 +1034,12 @@ function renderProject(animateFacts = false) {
   const usesPdfPresentation = page.fullPresentation?.source === "pdf";
   const usesImageSequence = page.fullPresentation?.source === "image-sequence"
     && presentationPages.length > 0;
+  const usesSceneAndImageSequence = page.fullPresentation?.source === "scenes-and-image-sequence"
+    && presentationPages.length > 0;
   const hasEmbeddedPresentation = page.fullPresentation?.enabled
     && hasPresentationFile
-    && (usesImageSequence || usesPdfPresentation || (activeProject.scenes || []).length > 0);
+    && (usesImageSequence || usesSceneAndImageSequence || usesPdfPresentation
+      || (activeProject.scenes || []).length > 0);
   const hasPresentationContent = page.fullPresentation?.enabled
     && hasPresentationFile;
   footer.hidden = !hasPresentationContent;
@@ -1081,8 +1084,7 @@ function renderProject(animateFacts = false) {
   fullPresentation.hidden = true;
   let presentationFrame = null;
   let updateOuterPresentationScroll = null;
-  if (usesImageSequence) {
-    fullPresentation.classList.add("concise-project-full-presentation--image-sequence");
+  const appendPresentationPages = (container) => {
     presentationPages.forEach((pageMedia, index) => {
       const pageFigure = document.createElement("figure");
       pageFigure.className = "concise-project-presentation-page";
@@ -1093,9 +1095,21 @@ function renderProject(animateFacts = false) {
       });
       pageImage.loading = index === 0 ? "eager" : "lazy";
       pageFigure.append(pageImage);
-      fullPresentation.append(pageFigure);
+      container.append(pageFigure);
     });
+  };
+  if (usesImageSequence) {
+    fullPresentation.classList.add("concise-project-full-presentation--image-sequence");
+    appendPresentationPages(fullPresentation);
   } else if (hasEmbeddedPresentation) {
+    const presentationSceneHost = usesSceneAndImageSequence
+      ? document.createElement("div")
+      : fullPresentation;
+    if (usesSceneAndImageSequence) {
+      fullPresentation.classList.add("concise-project-full-presentation--scenes-and-pages");
+      presentationSceneHost.className = "concise-project-presentation-scenes";
+      fullPresentation.append(presentationSceneHost);
+    }
     presentationFrame = document.createElement("iframe");
     presentationFrame.title = copy.fullPresentation;
     presentationFrame.loading = "lazy";
@@ -1105,12 +1119,19 @@ function renderProject(animateFacts = false) {
     if (usesPdfPresentation) {
       presentationFrame.classList.add("concise-project-pdf-frame");
     }
-    fullPresentation.append(presentationFrame);
+    presentationSceneHost.append(presentationFrame);
+
+    if (usesSceneAndImageSequence) {
+      const pageSequence = document.createElement("div");
+      pageSequence.className = "concise-project-presentation-pages";
+      appendPresentationPages(pageSequence);
+      fullPresentation.append(pageSequence);
+    }
 
     if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
       const syncOuterScroll = () => {
-        if (!fullPresentation.classList.contains("is-outer-scroll-driven")) return;
-        const rect = fullPresentation.getBoundingClientRect();
+        if (!presentationSceneHost.classList.contains("is-outer-scroll-driven")) return;
+        const rect = presentationSceneHost.getBoundingClientRect();
         const travel = Math.max(1, rect.height - window.innerHeight);
         const progress = Math.min(1, Math.max(0, -rect.top / travel));
         presentationFrame.contentWindow?.postMessage(
@@ -1127,9 +1148,11 @@ function renderProject(animateFacts = false) {
         const scrollHeight = Number(event.data.scrollHeight);
         if (!Number.isFinite(scrollHeight) || scrollHeight <= 0) return;
         const internalTravel = Math.max(0, scrollHeight - window.innerHeight);
-        const outerScrollTravel = internalTravel * 2;
-        fullPresentation.style.height = `${window.innerHeight + outerScrollTravel}px`;
-        fullPresentation.classList.add("is-outer-scroll-driven");
+        const configuredScale = Number(page.fullPresentation?.scrollScale);
+        const outerScrollScale = Number.isFinite(configuredScale) ? configuredScale : 4;
+        const outerScrollTravel = internalTravel * outerScrollScale;
+        presentationSceneHost.style.height = `${window.innerHeight + outerScrollTravel}px`;
+        presentationSceneHost.classList.add("is-outer-scroll-driven");
         syncOuterScroll();
       };
       updateOuterPresentationScroll = syncOuterScroll;

@@ -185,7 +185,8 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "scrollScale": 3
       },
       "info": {
         "year": 2022,
@@ -1922,7 +1923,8 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "scrollScale": 4
       },
       "info": {
         "year": 2025,
@@ -7815,7 +7817,8 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "scrollScale": 3.5
       },
       "info": {
         "year": 2024,
@@ -8276,7 +8279,7 @@
       ],
       "fullPresentation": {
         "enabled": true,
-        "source": "scenes",
+        "source": "scenes-and-image-sequence",
         "label": {
           "en": "Full presentation",
           "cs": "Celá prezentace"
@@ -8289,7 +8292,739 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "scrollScale": 4,
+        "pages": [
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-01-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-01-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-01-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-01-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 1",
+              "cs": "Prezentace Cyklus změny, strana 1"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-02-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-02-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-02-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-02-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 2",
+              "cs": "Prezentace Cyklus změny, strana 2"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-03-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-03-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-03-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-03-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 3",
+              "cs": "Prezentace Cyklus změny, strana 3"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-04-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-04-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-04-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-04-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 4",
+              "cs": "Prezentace Cyklus změny, strana 4"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-05-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-05-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-05-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-05-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 5",
+              "cs": "Prezentace Cyklus změny, strana 5"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-06-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-06-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-06-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-06-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 6",
+              "cs": "Prezentace Cyklus změny, strana 6"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-07-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-07-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-07-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-07-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 7",
+              "cs": "Prezentace Cyklus změny, strana 7"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-08-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-08-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-08-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-08-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 8",
+              "cs": "Prezentace Cyklus změny, strana 8"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-09-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-09-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-09-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-09-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 9",
+              "cs": "Prezentace Cyklus změny, strana 9"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-10-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-10-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-10-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-10-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 10",
+              "cs": "Prezentace Cyklus změny, strana 10"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-11-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-11-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-11-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-11-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 11",
+              "cs": "Prezentace Cyklus změny, strana 11"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-12-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-12-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-12-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-12-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 12",
+              "cs": "Prezentace Cyklus změny, strana 12"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-13-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-13-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-13-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-13-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 13",
+              "cs": "Prezentace Cyklus změny, strana 13"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-14-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-14-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-14-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-14-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 14",
+              "cs": "Prezentace Cyklus změny, strana 14"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-15-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-15-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-15-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-15-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 15",
+              "cs": "Prezentace Cyklus změny, strana 15"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-16-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-16-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-16-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-16-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 16",
+              "cs": "Prezentace Cyklus změny, strana 16"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-17-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-17-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-17-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-17-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 17",
+              "cs": "Prezentace Cyklus změny, strana 17"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-18-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-18-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-18-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-18-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 18",
+              "cs": "Prezentace Cyklus změny, strana 18"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-19-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-19-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-19-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-19-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 19",
+              "cs": "Prezentace Cyklus změny, strana 19"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-20-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-20-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-20-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-20-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 20",
+              "cs": "Prezentace Cyklus změny, strana 20"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-21-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-21-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-21-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-21-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 21",
+              "cs": "Prezentace Cyklus změny, strana 21"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-22-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-22-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-22-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-22-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 22",
+              "cs": "Prezentace Cyklus změny, strana 22"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-23-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-23-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-23-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-23-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 23",
+              "cs": "Prezentace Cyklus změny, strana 23"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-24-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-24-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-24-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-24-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 24",
+              "cs": "Prezentace Cyklus změny, strana 24"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-25-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-25-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-25-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-25-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 25",
+              "cs": "Prezentace Cyklus změny, strana 25"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-26-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-26-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-26-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-26-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 26",
+              "cs": "Prezentace Cyklus změny, strana 26"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-27-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-27-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-27-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-27-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 27",
+              "cs": "Prezentace Cyklus změny, strana 27"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-28-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-28-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-28-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-28-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 28",
+              "cs": "Prezentace Cyklus změny, strana 28"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-29-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-29-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-29-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-29-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 29",
+              "cs": "Prezentace Cyklus změny, strana 29"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-30-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-30-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-30-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-30-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 30",
+              "cs": "Prezentace Cyklus změny, strana 30"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-31-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-31-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-31-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-31-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 31",
+              "cs": "Prezentace Cyklus změny, strana 31"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-32-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-32-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-32-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-32-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 32",
+              "cs": "Prezentace Cyklus změny, strana 32"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-33-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-33-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-33-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-33-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 33",
+              "cs": "Prezentace Cyklus změny, strana 33"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-34-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-34-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-34-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-34-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 34",
+              "cs": "Prezentace Cyklus změny, strana 34"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-35-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-35-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-35-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-35-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 35",
+              "cs": "Prezentace Cyklus změny, strana 35"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-36-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-36-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-36-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-36-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 36",
+              "cs": "Prezentace Cyklus změny, strana 36"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-37-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-37-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-37-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-37-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 37",
+              "cs": "Prezentace Cyklus změny, strana 37"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-38-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-38-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-38-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-38-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 38",
+              "cs": "Prezentace Cyklus změny, strana 38"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-39-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-39-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-39-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-39-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 39",
+              "cs": "Prezentace Cyklus změny, strana 39"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-40-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-40-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-40-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-40-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 40",
+              "cs": "Prezentace Cyklus změny, strana 40"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-41-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-41-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-41-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-41-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 41",
+              "cs": "Prezentace Cyklus změny, strana 41"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-42-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-42-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-42-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-42-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 42",
+              "cs": "Prezentace Cyklus změny, strana 42"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-43-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-43-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-43-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-43-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 43",
+              "cs": "Prezentace Cyklus změny, strana 43"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-44-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-44-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-44-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-44-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 44",
+              "cs": "Prezentace Cyklus změny, strana 44"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-45-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-45-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-45-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-45-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 45",
+              "cs": "Prezentace Cyklus změny, strana 45"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-46-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-46-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-46-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-46-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 46",
+              "cs": "Prezentace Cyklus změny, strana 46"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-47-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-47-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-47-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-47-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 47",
+              "cs": "Prezentace Cyklus změny, strana 47"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-48-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-48-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-48-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-48-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 48",
+              "cs": "Prezentace Cyklus změny, strana 48"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-49-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-49-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-49-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-49-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 49",
+              "cs": "Prezentace Cyklus změny, strana 49"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-50-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-50-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-50-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-50-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 50",
+              "cs": "Prezentace Cyklus změny, strana 50"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-51-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-51-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-51-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-51-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 51",
+              "cs": "Prezentace Cyklus změny, strana 51"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-52-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-52-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-52-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-52-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 52",
+              "cs": "Prezentace Cyklus změny, strana 52"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-53-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-53-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-53-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-53-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 53",
+              "cs": "Prezentace Cyklus změny, strana 53"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-54-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-54-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-54-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-54-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 54",
+              "cs": "Prezentace Cyklus změny, strana 54"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-55-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-55-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-55-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-55-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 55",
+              "cs": "Prezentace Cyklus změny, strana 55"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-56-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-56-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-56-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-56-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 56",
+              "cs": "Prezentace Cyklus změny, strana 56"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-57-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-57-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-57-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-57-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 57",
+              "cs": "Prezentace Cyklus změny, strana 57"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-58-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-58-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-58-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-58-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 58",
+              "cs": "Prezentace Cyklus změny, strana 58"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-59-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-59-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-59-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-59-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 59",
+              "cs": "Prezentace Cyklus změny, strana 59"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-60-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-60-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-60-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-60-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 60",
+              "cs": "Prezentace Cyklus změny, strana 60"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-61-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-61-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-61-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-61-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 61",
+              "cs": "Prezentace Cyklus změny, strana 61"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-62-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-62-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-62-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-62-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 62",
+              "cs": "Prezentace Cyklus změny, strana 62"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-63-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-63-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-63-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-63-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 63",
+              "cs": "Prezentace Cyklus změny, strana 63"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-64-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-64-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-64-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-64-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 64",
+              "cs": "Prezentace Cyklus změny, strana 64"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-65-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-65-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-65-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-65-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 65",
+              "cs": "Prezentace Cyklus změny, strana 65"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-66-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-66-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-66-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-66-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 66",
+              "cs": "Prezentace Cyklus změny, strana 66"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-67-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-67-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-67-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-67-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 67",
+              "cs": "Prezentace Cyklus změny, strana 67"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-68-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-68-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-68-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-68-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 68",
+              "cs": "Prezentace Cyklus změny, strana 68"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-69-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-69-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-69-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-69-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 69",
+              "cs": "Prezentace Cyklus změny, strana 69"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-70-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-70-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-70-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-70-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 70",
+              "cs": "Prezentace Cyklus změny, strana 70"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-71-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-71-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-71-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-71-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 71",
+              "cs": "Prezentace Cyklus změny, strana 71"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-72-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-72-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-72-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-72-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 72",
+              "cs": "Prezentace Cyklus změny, strana 72"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-73-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-73-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-73-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-73-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 73",
+              "cs": "Prezentace Cyklus změny, strana 73"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-74-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-74-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-74-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-74-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 74",
+              "cs": "Prezentace Cyklus změny, strana 74"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-75-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-75-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-75-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-75-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 75",
+              "cs": "Prezentace Cyklus změny, strana 75"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-76-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-76-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-76-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-76-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 76",
+              "cs": "Prezentace Cyklus změny, strana 76"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-77-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-77-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-77-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-77-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 77",
+              "cs": "Prezentace Cyklus změny, strana 77"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-78-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-78-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-78-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-78-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 78",
+              "cs": "Prezentace Cyklus změny, strana 78"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-79-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-79-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-79-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-79-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 79",
+              "cs": "Prezentace Cyklus změny, strana 79"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-80-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-80-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-80-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-80-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 80",
+              "cs": "Prezentace Cyklus změny, strana 80"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/cycle-of-change/page-81-1600.webp",
+            "srcset": "./assets/presentation-pages/cycle-of-change/page-81-1000.webp 1000w, ./assets/presentation-pages/cycle-of-change/page-81-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/cycle-of-change/page-81-3000.webp",
+            "alt": {
+              "en": "Cycle of Change presentation, page 81",
+              "cs": "Prezentace Cyklus změny, strana 81"
+            }
+          }
+        ]
       },
       "info": {
         "year": "2022–2023",
@@ -9686,7 +10421,8 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "scrollScale": 4.5
       },
       "info": {
         "year": 2023,
@@ -12945,7 +13681,8 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "scrollScale": 4.5
       },
       "info": {
         "year": 2023,
@@ -14783,7 +15520,8 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "scrollScale": 4
       },
       "info": {
         "year": 2024,

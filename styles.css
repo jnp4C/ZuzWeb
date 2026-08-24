@@ -6498,16 +6498,19 @@ main,
     --mobile-control-size: clamp(34px, 10vw, 44px);
     --mobile-symbol-size: clamp(20px, 6vw, 26px);
     --mobile-control-inset: clamp(7px, 2vw, 9px);
-    --mobile-display-size: clamp(27px, 8.2vw, 35px);
+    --mobile-display-size: clamp(25px, 8vw, 35px);
     --mobile-vertical-size: clamp(16px, 4.6vw, 20px);
     --index-page-gutter: clamp(16px, 4.1vw, 20px);
   }
 
   .index-page .project-index {
     --drawer-row-start: var(--mobile-control-size);
+    --mobile-index-offset: calc(var(--mobile-control-size) / 2);
     --index-drawer-heading-size: var(--mobile-display-size);
     --index-section-heading-size: var(--mobile-vertical-size);
-    --index-menu-width: calc(100vw - (2 * var(--index-page-gutter)));
+    --index-menu-width: calc(
+      100vw - (2 * var(--index-page-gutter)) - var(--mobile-index-offset)
+    );
     padding-inline: 0;
   }
 
@@ -6519,7 +6522,15 @@ main,
     width: var(--index-menu-width);
     min-width: 0;
     min-height: var(--mobile-control-size);
+    margin-left: var(--mobile-index-offset);
     padding: 0 0 0 calc(var(--mobile-control-size) + var(--mobile-control-inset));
+  }
+
+  .index-page .project-index.is-projects-open :is(
+    .project-index-info-toggle,
+    .project-index-cv-toggle
+  ) {
+    margin-left: calc(-1 * var(--project-branch-indent));
   }
 
   .index-page :is(
@@ -6568,7 +6579,7 @@ main,
   .index-page .project-index-branch {
     --project-branch-indent: var(--mobile-control-size);
     width: var(--index-menu-width);
-    margin-left: 0;
+    margin-left: var(--mobile-index-offset);
   }
 
   .project-index-group h2 {

@@ -1952,6 +1952,9 @@ async function selectProject(projectIndex) {
     attachScrollHandler();
     attachResizeHandler();
     updateBackToProjectsVisibility();
+    if (isEmbeddedPresentation) {
+      window.requestAnimationFrame(reportEmbeddedPresentationMetrics);
+    }
   } catch (error) {
     setProjectLoadingState(false);
     viewerStatus.classList.add("is-visible");
@@ -2091,13 +2094,27 @@ async function initializeYearPage() {
   }
 }
 
+function reportEmbeddedPresentationMetrics() {
+  if (!isEmbeddedPresentation) return;
+  const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+  window.parent.postMessage(
+    { type: "embedded-presentation-metrics", scrollHeight: documentHeight },
+    window.location.origin,
+  );
+}
+
 window.addEventListener("message", (event) => {
-  if (
-    isEmbeddedPresentation
-    && event.source === window.parent
-    && event.data?.type === "restart-embedded-first-scene"
-  ) {
+  if (!isEmbeddedPresentation || event.source !== window.parent) return;
+  if (event.data?.type === "restart-embedded-first-scene") {
     startEmbeddedFirstSceneAnimation();
+  }
+  if (event.data?.type === "set-embedded-scroll-progress") {
+    const progress = clamp(Number(event.data.progress) || 0, 0, 1);
+    const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+    window.scrollTo(0, progress * Math.max(0, documentHeight - window.innerHeight));
+  }
+  if (event.data?.type === "request-embedded-presentation-metrics") {
+    reportEmbeddedPresentationMetrics();
   }
 });
 

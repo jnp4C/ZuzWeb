@@ -1048,6 +1048,7 @@ function renderProject(animateFacts = false) {
   fullPresentation.className = "concise-project-full-presentation";
   fullPresentation.hidden = true;
   let presentationFrame = null;
+  let updateOuterPresentationScroll = null;
   if (usesImageSequence) {
     fullPresentation.classList.add("concise-project-full-presentation--image-sequence");
     presentationPages.forEach((pageMedia, index) => {
@@ -1073,6 +1074,40 @@ function renderProject(animateFacts = false) {
       presentationFrame.classList.add("concise-project-pdf-frame");
     }
     fullPresentation.append(presentationFrame);
+
+    if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+      const syncOuterScroll = () => {
+        if (!fullPresentation.classList.contains("is-outer-scroll-driven")) return;
+        const rect = fullPresentation.getBoundingClientRect();
+        const travel = Math.max(1, rect.height - window.innerHeight);
+        const progress = Math.min(1, Math.max(0, -rect.top / travel));
+        presentationFrame.contentWindow?.postMessage(
+          { type: "set-embedded-scroll-progress", progress },
+          window.location.origin,
+        );
+      };
+      const receivePresentationMetrics = (event) => {
+        if (
+          event.origin !== window.location.origin
+          || event.source !== presentationFrame.contentWindow
+          || event.data?.type !== "embedded-presentation-metrics"
+        ) return;
+        const scrollHeight = Number(event.data.scrollHeight);
+        if (!Number.isFinite(scrollHeight) || scrollHeight <= 0) return;
+        fullPresentation.style.height = `${Math.max(scrollHeight, window.innerHeight)}px`;
+        fullPresentation.classList.add("is-outer-scroll-driven");
+        syncOuterScroll();
+      };
+      updateOuterPresentationScroll = syncOuterScroll;
+      window.addEventListener("message", receivePresentationMetrics);
+      window.addEventListener("scroll", syncOuterScroll, { passive: true });
+      window.addEventListener("resize", syncOuterScroll);
+      carouselCleanups.push(() => {
+        window.removeEventListener("message", receivePresentationMetrics);
+        window.removeEventListener("scroll", syncOuterScroll);
+        window.removeEventListener("resize", syncOuterScroll);
+      });
+    }
   } else {
     fullPresentation.classList.add("concise-project-full-presentation--download-only");
   }
@@ -1082,6 +1117,10 @@ function renderProject(animateFacts = false) {
   };
 
   presentationFrame?.addEventListener("load", () => {
+    presentationFrame.contentWindow?.postMessage(
+      { type: "request-embedded-presentation-metrics" },
+      window.location.origin,
+    );
     if (presentation.getAttribute("aria-expanded") === "true") {
       if (!usesPdfPresentation) {
         presentationFrame.contentWindow?.postMessage(
@@ -1090,6 +1129,7 @@ function renderProject(animateFacts = false) {
         );
       }
       scrollToPresentationControls();
+      updateOuterPresentationScroll?.();
     }
   });
 

@@ -1039,6 +1039,8 @@ h3,
   margin-left: calc(50% - 50vw + var(--project-page-gutter));
   gap: clamp(0.75rem, 2vw, 1.5rem);
   overflow: visible;
+  overscroll-behavior: auto;
+  touch-action: auto;
 }
 
 .concise-project-presentation-page {
@@ -1051,7 +1053,9 @@ h3,
   display: block;
   width: 100%;
   height: auto;
-  touch-action: pan-x pan-y pinch-zoom;
+  pointer-events: none;
+  touch-action: auto;
+  user-select: none;
 }
 
 .concise-project-footer .concise-project-pdf-download {
@@ -1125,6 +1129,17 @@ h3,
   height: 100%;
   border: 0;
   background: var(--surface);
+}
+
+.concise-project-full-presentation.is-outer-scroll-driven {
+  overflow: visible;
+}
+
+.concise-project-full-presentation.is-outer-scroll-driven iframe {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  pointer-events: none;
 }
 
 .embedded-presentation > .site-header,

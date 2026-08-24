@@ -7037,9 +7037,10 @@ main,
   }
 }
 
-/* Tablet pages preserve the desktop optical gutter. The 50px controls sit
-   fully inside equal left and right screen margins instead of projecting half
-   a control beyond the left content edge. */
+/* Tablet pages preserve the desktop control geometry and equal visible screen
+   margins. Offset the whole project shell by half a control; changing the
+   internal spine coordinate breaks the fixed home-to-title distance and moves
+   vertical labels away from their line. */
 @media (min-width: 721px) and (max-width: 1024px) {
   .index-page,
   .concise-project-page {
@@ -7055,7 +7056,12 @@ main,
     margin-left: 25px;
   }
 
+  .concise-project-shell {
+    padding-left: calc(var(--project-page-gutter) + 25px);
+    padding-right: var(--project-page-gutter);
+  }
+
   .concise-project {
-    --project-spine-x: 25px;
+    --project-spine-x: 0px;
   }
 }

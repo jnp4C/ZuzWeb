@@ -1131,17 +1131,6 @@ h3,
   background: var(--surface);
 }
 
-.concise-project-full-presentation.is-outer-scroll-driven {
-  overflow: visible;
-}
-
-.concise-project-full-presentation.is-outer-scroll-driven iframe {
-  position: sticky;
-  top: 0;
-  height: 100dvh;
-  pointer-events: none;
-}
-
 .embedded-presentation > .site-header,
 .embedded-presentation .year-selector,
 .embedded-presentation .project-overlay,

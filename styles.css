@@ -360,15 +360,8 @@ h3,
   transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
 }
 
-.concise-project.is-project-nav-floating .concise-project-scroll-top {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: none;
-  transition-delay: 0s;
-}
-
-.concise-project.is-scroll-top-visible .concise-project-scroll-top {
+.concise-project.is-project-nav-floating .concise-project-scroll-top,
+.concise-project-scroll-top.is-visible {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -1071,7 +1064,8 @@ h3,
     opacity 120ms linear;
 }
 
-.concise-project-footer.is-presentation-open .concise-project-pdf-download {
+.concise-project-footer.is-presentation-open .concise-project-pdf-download,
+.concise-project-footer.has-download .concise-project-pdf-download {
   flex: 0 0 50px;
   width: 50px;
   min-width: 50px;
@@ -6742,7 +6736,8 @@ main,
     width: clamp(17px, 5vw, 22px);
   }
 
-  .concise-project-footer.is-presentation-open .concise-project-pdf-download {
+  .concise-project-footer.is-presentation-open .concise-project-pdf-download,
+  .concise-project-footer.has-download .concise-project-pdf-download {
     grid-column: 2;
     justify-self: end;
     flex: 0 0 var(--mobile-control-size);

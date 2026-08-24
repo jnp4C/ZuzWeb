@@ -872,8 +872,9 @@ function renderProject(animateFacts = false) {
         "--project-floating-star-left",
         `${articleBounds.left + spineX}px`,
       );
-      article.classList.toggle("is-scroll-top-visible", window.scrollY > 48);
-      setFloatingNavigation(heading.getBoundingClientRect().bottom <= floatingTop);
+      const shouldFloat = heading.getBoundingClientRect().bottom <= floatingTop;
+      scrollTop.classList.toggle("is-visible", shouldFloat);
+      setFloatingNavigation(shouldFloat);
     });
   };
   window.addEventListener("scroll", updateFloatingNavigation, { passive: true });
@@ -996,6 +997,7 @@ function renderProject(animateFacts = false) {
   }
 
   if (hasPresentationContent) {
+    footer.classList.add("has-download");
     const download = document.createElement("a");
     download.className = "concise-project-pdf-download";
     download.href = presentationDownload.href;
@@ -1009,8 +1011,8 @@ function renderProject(animateFacts = false) {
     downloadIcon.setAttribute("aria-hidden", "true");
     downloadIcon.innerHTML = '<path d="M0 0h30L15 14Z" /><rect x="0" y="20" width="30" height="10" />';
     download.append(downloadIcon);
-    download.setAttribute("aria-hidden", "true");
-    download.tabIndex = -1;
+    download.setAttribute("aria-hidden", "false");
+    download.tabIndex = 0;
     footer.append(download);
   }
 
@@ -1050,17 +1052,11 @@ function renderProject(animateFacts = false) {
     window.clearTimeout(presentationCloseTimer);
     if (shouldOpen) {
       footer.classList.add("is-presentation-open");
-      const download = footer.querySelector(".concise-project-pdf-download");
-      download?.setAttribute("aria-hidden", "false");
-      if (download) download.tabIndex = 0;
       fullPresentation.hidden = false;
       fullPresentation.classList.remove("is-closing");
       window.requestAnimationFrame(() => fullPresentation.classList.add("is-open"));
     } else {
       footer.classList.remove("is-presentation-open");
-      const download = footer.querySelector(".concise-project-pdf-download");
-      download?.setAttribute("aria-hidden", "true");
-      if (download) download.tabIndex = -1;
       fullPresentation.classList.remove("is-open");
       fullPresentation.classList.add("is-closing");
       presentationCloseTimer = window.setTimeout(() => {
@@ -1076,8 +1072,8 @@ function renderProject(animateFacts = false) {
     }
   });
 
-  article.append(heading, intro, featured, footer, fullPresentation, scrollTop);
-  projectRoot.append(article);
+  article.append(heading, intro, featured, footer, fullPresentation);
+  projectRoot.append(article, scrollTop);
 }
 
 async function initializeProject() {

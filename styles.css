@@ -6754,7 +6754,14 @@ main,
   }
 
   .concise-project-full-presentation {
+    width: calc(100vw - (2 * var(--index-page-gutter)));
     height: calc(100svh - env(safe-area-inset-bottom, 0px));
+    margin-left: calc(50% - 50vw + var(--index-page-gutter));
+    margin-right: calc(50% - 50vw + var(--index-page-gutter));
+  }
+
+  .concise-project-pdf-frame {
+    touch-action: pan-x pan-y pinch-zoom;
   }
 
   .concise-project-scroll-top {

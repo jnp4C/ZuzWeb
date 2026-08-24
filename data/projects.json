@@ -16390,7 +16390,7 @@
       "featuredSections": [],
       "fullPresentation": {
         "enabled": true,
-        "source": "scenes",
+        "source": "pdf",
         "label": {
           "en": "Full presentation",
           "cs": "Celá prezentace"

@@ -975,9 +975,10 @@ function renderProject(animateFacts = false) {
   footer.className = "concise-project-footer";
   const presentationDownload = page.fullPresentation?.download;
   const hasPresentationFile = Boolean(presentationDownload?.href);
+  const usesPdfPresentation = page.fullPresentation?.source === "pdf";
   const hasEmbeddedPresentation = page.fullPresentation?.enabled
     && hasPresentationFile
-    && (activeProject.scenes || []).length > 0;
+    && (usesPdfPresentation || (activeProject.scenes || []).length > 0);
   const hasPresentationContent = page.fullPresentation?.enabled
     && hasPresentationFile;
   footer.hidden = !hasPresentationContent;
@@ -1025,7 +1026,12 @@ function renderProject(animateFacts = false) {
     presentationFrame = document.createElement("iframe");
     presentationFrame.title = copy.fullPresentation;
     presentationFrame.loading = "lazy";
-    presentationFrame.dataset.src = `${fullPresentationUrl}&embedded=1`;
+    presentationFrame.dataset.src = usesPdfPresentation
+      ? presentationDownload.href
+      : `${fullPresentationUrl}&embedded=1`;
+    if (usesPdfPresentation) {
+      presentationFrame.classList.add("concise-project-pdf-frame");
+    }
     fullPresentation.append(presentationFrame);
   } else {
     fullPresentation.classList.add("concise-project-full-presentation--download-only");
@@ -1037,10 +1043,12 @@ function renderProject(animateFacts = false) {
 
   presentationFrame?.addEventListener("load", () => {
     if (presentation.getAttribute("aria-expanded") === "true") {
-      presentationFrame.contentWindow?.postMessage(
-        { type: "restart-embedded-first-scene" },
-        window.location.origin,
-      );
+      if (!usesPdfPresentation) {
+        presentationFrame.contentWindow?.postMessage(
+          { type: "restart-embedded-first-scene" },
+          window.location.origin,
+        );
+      }
       scrollToPresentationControls();
     }
   });

@@ -394,7 +394,13 @@ function createProjectIndexItem(project, order) {
 
   const title = document.createElement("span");
   title.className = "project-index-title";
-  title.textContent = createLocalizedText(project.index?.title) || project.selectorLabel || project.title;
+  const mobileTitle = window.matchMedia("(max-width: 720px)").matches
+    ? createLocalizedText(project.mobileTitle)
+    : "";
+  title.textContent = mobileTitle
+    || createLocalizedText(project.index?.title)
+    || project.selectorLabel
+    || project.title;
 
   const context = document.createElement("span");
   context.className = "project-index-detail project-index-context";

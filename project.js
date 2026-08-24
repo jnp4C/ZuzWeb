@@ -761,6 +761,9 @@ function renderProject(animateFacts = false) {
 
   const copy = COPY[activeLanguage];
   const title = getLocalizedProjectText(activeProject, "title", activeLanguage);
+  const mobileTitle = window.matchMedia("(max-width: 720px)").matches
+    ? getLocalizedText(activeProject.mobileTitle, activeLanguage)
+    : "";
   const annotation = getLocalizedProjectText(activeProject, "annotation", activeLanguage);
   const page = moveCoverDuplicatesBehindCarouselStart(
     getConcisePage(activeProject),
@@ -792,7 +795,7 @@ function renderProject(animateFacts = false) {
     }
   });
   const name = document.createElement("h1");
-  name.textContent = title;
+  name.textContent = mobileTitle || title;
   const activeNavigationIndex = navigableProjects.findIndex((project) => project.slug === activeProject.slug);
   const previousProject = navigableProjects[
     (activeNavigationIndex - 1 + navigableProjects.length) % navigableProjects.length

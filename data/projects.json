@@ -480,6 +480,10 @@
       }
     },
     "title": "A Tree with the Spirit of Christmas",
+    "mobileTitle": {
+      "en": "CHRISTMAS SPIRIT TREE",
+      "cs": "STROM S DUCHEM VÁNOC"
+    },
     "category": "Landscape Installation",
     "location": "Prague, CZ",
     "year": 2026,
@@ -9674,6 +9678,10 @@
       }
     },
     "title": "CONCEPT OF SEMNĚVICE LANDSCAPE",
+    "mobileTitle": {
+      "en": "SEMNĚVISION",
+      "cs": "KONCEPCE SEMNĚVIC"
+    },
     "category": "Group project",
     "location": "Semněvice, CZ",
     "year": 2023,
@@ -16428,6 +16436,10 @@
       }
     },
     "title": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS",
+    "mobileTitle": {
+      "en": "NEW LANDSCAPE HSR",
+      "cs": "NOVÁ KRAJINA VRT"
+    },
     "category": "Diploma Thesis",
     "location": "Elbe Lowlands, CZ",
     "year": 2026,

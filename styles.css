@@ -6441,12 +6441,6 @@ main,
 }
 
 @media (max-width: 480px) {
-  .index-page #cvTitle {
-    padding-inline: 12.2px;
-    scale: 0.82 1;
-    transform-origin: left center;
-  }
-
   .concise-project-footer button > span:last-child {
     letter-spacing: -0.08em;
   }
@@ -6506,7 +6500,7 @@ main,
     --mobile-control-size: clamp(34px, 10vw, 44px);
     --mobile-symbol-size: clamp(20px, 6vw, 26px);
     --mobile-control-inset: clamp(7px, 2vw, 9px);
-    --mobile-display-size: clamp(25px, 8vw, 35px);
+    --mobile-display-size: clamp(24px, 7.7vw, 34px);
     --mobile-vertical-size: clamp(16px, 4.6vw, 20px);
     --index-page-gutter: clamp(16px, 4.1vw, 20px);
   }
@@ -6610,6 +6604,11 @@ main,
     overflow-wrap: anywhere;
   }
 
+  .project-index-link .project-index-title {
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+
   .concise-project {
     --project-spine-x: calc(var(--mobile-control-size) / 2);
     --project-body-start: clamp(1.9rem, 8vw, 2.4rem);
@@ -6626,9 +6625,10 @@ main,
     min-height: var(--mobile-control-size);
     margin-left: calc(var(--project-spine-x) + var(--project-body-start));
     padding: var(--mobile-control-inset);
-    font-size: var(--mobile-display-size);
+    font-size: clamp(17px, 5vw, 22px);
     line-height: var(--mobile-symbol-size);
-    overflow-wrap: anywhere;
+    white-space: nowrap;
+    overflow-wrap: normal;
   }
 
   .concise-project-nav {

@@ -6493,12 +6493,6 @@ main,
   }
 }
 
-@media (max-width: 480px) {
-  .concise-project-footer button > span:last-child {
-    letter-spacing: -0.08em;
-  }
-}
-
 .concise-project-heading h1 {
   box-sizing: border-box;
   min-height: 50px;
@@ -6799,6 +6793,12 @@ main,
 
   .concise-project-footer .concise-project-symbol {
     margin-left: calc(var(--project-spine-x) - (var(--mobile-control-size) / 2));
+  }
+
+  .concise-project-footer .concise-project-symbol::before,
+  .concise-project-footer .concise-project-symbol::after {
+    width: var(--mobile-symbol-size);
+    height: clamp(3px, 1.2vw, 5px);
   }
 
   .concise-project-footer button > span:last-child {

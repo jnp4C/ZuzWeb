@@ -832,10 +832,9 @@ function renderProject(animateFacts = false) {
       const spineX = Number.parseFloat(
         window.getComputedStyle(article).getPropertyValue("--project-spine-x"),
       ) || 0;
-      const backWidth = back.getBoundingClientRect().width;
       article.style.setProperty(
         "--project-floating-star-left",
-        `${articleBounds.left + spineX - (backWidth / 2)}px`,
+        `${articleBounds.left + spineX}px`,
       );
       article.classList.toggle(
         "is-project-nav-floating",
@@ -938,6 +937,7 @@ function renderProject(animateFacts = false) {
   });
 
   const footer = document.createElement("footer");
+  footer.id = "projectPresentationControls";
   footer.className = "concise-project-footer";
   const presentationDownload = page.fullPresentation?.download;
   const hasPresentationFile = Boolean(presentationDownload?.href);

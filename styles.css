@@ -306,7 +306,7 @@ h3,
   top: clamp(0.85rem, 2.5vw, 2rem);
   left: var(--project-floating-star-left);
   z-index: 300;
-  transform: none;
+  transform: translateX(-50%);
 }
 
 .concise-project.is-project-nav-floating .concise-project-nav {
@@ -6493,6 +6493,12 @@ main,
     overflow-x: clip;
   }
 
+  body.concise-project-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow-y: auto;
+  }
+
   .index-page,
   .concise-project-page {
     --mobile-control-size: clamp(34px, 10vw, 44px);
@@ -6675,5 +6681,62 @@ main,
       100vw - (2 * var(--index-page-gutter)) - var(--project-spine-x) - var(--project-body-start)
     );
     max-width: 100%;
+  }
+
+  .concise-project-shell {
+    padding-bottom: calc(clamp(5rem, 18vw, 7rem) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .concise-project-footer {
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+    min-width: 0;
+    min-height: var(--mobile-control-size);
+    scroll-margin-top: calc(var(--mobile-control-size) + 1rem);
+    scroll-margin-bottom: calc(var(--mobile-control-size) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .concise-project-footer button {
+    min-width: 0;
+    max-width: 100%;
+    gap: clamp(17px, 5vw, 22px);
+  }
+
+  .concise-project-footer .concise-project-symbol {
+    margin-left: calc(var(--project-spine-x) - (var(--mobile-control-size) / 2));
+  }
+
+  .concise-project-footer button > span:last-child {
+    width: fit-content;
+    max-width: calc(100vw - (2 * var(--index-page-gutter)) - var(--mobile-control-size));
+    height: var(--mobile-control-size);
+    min-height: var(--mobile-control-size);
+    padding: var(--mobile-control-inset);
+    font-size: var(--mobile-display-size);
+    line-height: var(--mobile-symbol-size);
+    overflow-wrap: anywhere;
+  }
+
+  .concise-project-footer button > span:last-child::before {
+    width: clamp(17px, 5vw, 22px);
+  }
+
+  .concise-project-footer.is-presentation-open .concise-project-pdf-download {
+    flex: 0 0 var(--mobile-control-size);
+    width: var(--mobile-control-size);
+    min-width: var(--mobile-control-size);
+    max-width: var(--mobile-control-size);
+    height: var(--mobile-control-size);
+    min-height: var(--mobile-control-size);
+  }
+
+  .concise-project-pdf-download svg {
+    width: var(--mobile-symbol-size);
+    height: var(--mobile-symbol-size);
+  }
+
+  .concise-project-full-presentation {
+    height: calc(100svh - env(safe-area-inset-bottom, 0px));
   }
 }

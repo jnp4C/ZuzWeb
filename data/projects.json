@@ -440,7 +440,7 @@
       ],
       "fullPresentation": {
         "enabled": true,
-        "source": "scenes",
+        "source": "image-sequence",
         "label": {
           "en": "Full presentation",
           "cs": "Celá prezentace"
@@ -453,7 +453,54 @@
             "en": "Download presentation",
             "cs": "Stáhnout prezentaci"
           }
-        }
+        },
+        "pages": [
+          {
+            "src": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-01-1600.webp",
+            "srcset": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-01-1000.webp 1000w, ./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-01-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-01-3000.webp",
+            "alt": {
+              "en": "Tree with the Spirit of Christmas presentation, page 1",
+              "cs": "Prezentace Strom s duchem Vánoc, strana 1"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-02-1600.webp",
+            "srcset": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-02-1000.webp 1000w, ./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-02-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-02-3000.webp",
+            "alt": {
+              "en": "Tree with the Spirit of Christmas presentation, page 2",
+              "cs": "Prezentace Strom s duchem Vánoc, strana 2"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-03-1600.webp",
+            "srcset": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-03-1000.webp 1000w, ./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-03-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-03-3000.webp",
+            "alt": {
+              "en": "Tree with the Spirit of Christmas presentation, page 3",
+              "cs": "Prezentace Strom s duchem Vánoc, strana 3"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-04-1600.webp",
+            "srcset": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-04-1000.webp 1000w, ./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-04-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-04-3000.webp",
+            "alt": {
+              "en": "Tree with the Spirit of Christmas presentation, page 4",
+              "cs": "Prezentace Strom s duchem Vánoc, strana 4"
+            }
+          },
+          {
+            "src": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-05-1600.webp",
+            "srcset": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-05-1000.webp 1000w, ./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-05-1600.webp 1600w",
+            "zoomSrc": "./assets/presentation-pages/tree-with-the-spirit-of-christmas/page-05-3000.webp",
+            "alt": {
+              "en": "Tree with the Spirit of Christmas presentation, page 5",
+              "cs": "Prezentace Strom s duchem Vánoc, strana 5"
+            }
+          }
+        ]
       },
       "info": {
         "year": 2026,

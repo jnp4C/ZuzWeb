@@ -6,7 +6,7 @@ import {
 } from "./language.js";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
 
-const DATA_CACHE_VERSION = "2026-08-24-vrt-hires-zoom";
+const DATA_CACHE_VERSION = "2026-10-04-compact-presentations";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -1031,6 +1031,13 @@ function renderProject(animateFacts = false) {
   const presentationPages = Array.isArray(page.fullPresentation?.pages)
     ? page.fullPresentation.pages
     : [];
+  const fallbackPages = Array.isArray(page.fullPresentation?.fallbackPages)
+    ? page.fullPresentation.fallbackPages : presentationPages;
+  const preferCompactPresentation = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    || (navigator.deviceMemory > 0 && navigator.deviceMemory <= 2)
+    || (navigator.hardwareConcurrency > 0 && navigator.hardwareConcurrency <= 2)
+    || navigator.connection?.saveData === true
+    || new URLSearchParams(window.location.search).get("presentation") === "compact";
   const usesPdfPresentation = page.fullPresentation?.source === "pdf";
   const usesImageSequence = page.fullPresentation?.source === "image-sequence"
     && presentationPages.length > 0;
@@ -1084,21 +1091,43 @@ function renderProject(animateFacts = false) {
   fullPresentation.hidden = true;
   let presentationFrame = null;
   let updateOuterPresentationScroll = null;
-  const appendPresentationPages = (container) => {
-    presentationPages.forEach((pageMedia, index) => {
+  const appendPresentationPages = (container, pages = presentationPages, compact = false) => {
+    pages.forEach((pageMedia, index) => {
       const pageFigure = document.createElement("figure");
       pageFigure.className = "concise-project-presentation-page";
       const pageImage = createImage({
         ...pageMedia,
-        src: pageMedia.zoomSrc || pageMedia.src,
-        srcset: "",
+        src: compact ? pageMedia.src : pageMedia.zoomSrc || pageMedia.src,
+        srcset: compact ? pageMedia.srcset || "" : "",
       });
+      if (pageMedia.width && pageMedia.height) {
+        pageImage.width = pageMedia.width;
+        pageImage.height = pageMedia.height;
+      }
+      pageImage.sizes = "100vw";
       pageImage.loading = index === 0 ? "eager" : "lazy";
       pageFigure.append(pageImage);
       container.append(pageFigure);
     });
   };
-  if (usesImageSequence) {
+  let presentationCleanup = () => {};
+  let compactPresentationActive = false;
+  const showCompactPresentation = () => {
+    if (compactPresentationActive || fallbackPages.length === 0) return;
+    compactPresentationActive = true;
+    presentationCleanup();
+    presentationFrame?.remove();
+    presentationFrame = null;
+    updateOuterPresentationScroll = null;
+    fullPresentation.replaceChildren();
+    fullPresentation.style.height = "";
+    fullPresentation.classList.remove("is-outer-scroll-driven", "concise-project-full-presentation--scenes-and-pages");
+    fullPresentation.classList.add("concise-project-full-presentation--image-sequence", "concise-project-full-presentation--compact");
+    appendPresentationPages(fullPresentation, fallbackPages, true);
+  };
+  if (preferCompactPresentation && fallbackPages.length > 0) {
+    showCompactPresentation();
+  } else if (usesImageSequence) {
     fullPresentation.classList.add("concise-project-full-presentation--image-sequence");
     appendPresentationPages(fullPresentation);
   } else if (hasEmbeddedPresentation) {
@@ -1133,17 +1162,53 @@ function renderProject(animateFacts = false) {
       const rect = presentationSceneHost.getBoundingClientRect();
       const travel = Math.max(1, rect.height - window.innerHeight);
       const progress = Math.min(1, Math.max(0, -rect.top / travel));
-      presentationFrame.contentWindow?.postMessage(
-        { type: "set-embedded-scroll-progress", progress },
+      presentationFrame?.contentWindow?.postMessage(
+        { type: "set-embedded-scroll-progress", progress, viewportHeight: window.innerHeight },
         window.location.origin,
       );
     };
+    let readinessTimer = 0;
+    let performanceFrame = 0;
+    let lastFrameTime = 0;
+    let sampleStart = 0;
+    let sampleCount = 0;
+    let slowFrames = 0;
+    let lastScrollTime = 0;
+    const monitorPerformance = (time) => {
+      if (compactPresentationActive) return;
+      const visibleRect = fullPresentation.getBoundingClientRect();
+      const measuring = !fullPresentation.hidden && visibleRect.bottom > 0 && visibleRect.top < window.innerHeight
+        && document.visibilityState === "visible"
+        && time - lastScrollTime < 500;
+      const delta = time - lastFrameTime;
+      if (measuring && lastFrameTime && delta < 1000) {
+        if (!sampleStart) sampleStart = time;
+        sampleCount += 1;
+        if (delta > 50) slowFrames += 1;
+        if (time - sampleStart >= 2500) {
+          if (sampleCount >= 15 && slowFrames / sampleCount > 0.5) {
+            showCompactPresentation();
+            return;
+          }
+          sampleStart = 0; sampleCount = 0; slowFrames = 0;
+        }
+      } else {
+        sampleStart = 0; sampleCount = 0; slowFrames = 0;
+      }
+      lastFrameTime = time;
+      performanceFrame = window.requestAnimationFrame(monitorPerformance);
+    };
+    const noteScroll = () => { lastScrollTime = performance.now(); syncOuterScroll(); };
     const receivePresentationMetrics = (event) => {
       if (
         event.origin !== window.location.origin
-        || event.source !== presentationFrame.contentWindow
-        || event.data?.type !== "embedded-presentation-metrics"
+        || event.source !== presentationFrame?.contentWindow
       ) return;
+      if (event.data?.type === "embedded-presentation-error") {
+        showCompactPresentation(); return;
+      }
+      if (event.data?.type !== "embedded-presentation-metrics") return;
+      if (event.data.ready) window.clearTimeout(readinessTimer);
       const scrollHeight = Number(event.data.scrollHeight);
       if (!Number.isFinite(scrollHeight) || scrollHeight <= 0) return;
       presentationSceneHost.style.height = `${scrollHeight}px`;
@@ -1152,12 +1217,23 @@ function renderProject(animateFacts = false) {
     };
     updateOuterPresentationScroll = syncOuterScroll;
     window.addEventListener("message", receivePresentationMetrics);
-    window.addEventListener("scroll", syncOuterScroll, { passive: true });
+    window.addEventListener("scroll", noteScroll, { passive: true });
     window.addEventListener("resize", syncOuterScroll);
-    carouselCleanups.push(() => {
+    presentationCleanup = () => {
+      window.clearTimeout(readinessTimer);
+      window.cancelAnimationFrame(performanceFrame);
       window.removeEventListener("message", receivePresentationMetrics);
-      window.removeEventListener("scroll", syncOuterScroll);
+      window.removeEventListener("scroll", noteScroll);
       window.removeEventListener("resize", syncOuterScroll);
+    };
+    carouselCleanups.push(() => presentationCleanup());
+    presentationFrame.addEventListener("error", showCompactPresentation);
+    presentation.addEventListener("click", () => {
+      if (!presentationFrame || compactPresentationActive) return;
+      if (presentation.getAttribute("aria-expanded") === "false" && !presentationFrame.hasAttribute("src")) {
+        readinessTimer = window.setTimeout(showCompactPresentation, 15000);
+        performanceFrame = window.requestAnimationFrame(monitorPerformance);
+      }
     });
   } else {
     fullPresentation.classList.add("concise-project-full-presentation--download-only");
@@ -1168,13 +1244,13 @@ function renderProject(animateFacts = false) {
   };
 
   presentationFrame?.addEventListener("load", () => {
-    presentationFrame.contentWindow?.postMessage(
+    presentationFrame?.contentWindow?.postMessage(
       { type: "request-embedded-presentation-metrics" },
       window.location.origin,
     );
     if (presentation.getAttribute("aria-expanded") === "true") {
       if (!usesPdfPresentation) {
-        presentationFrame.contentWindow?.postMessage(
+        presentationFrame?.contentWindow?.postMessage(
           { type: "restart-embedded-first-scene" },
           window.location.origin,
         );

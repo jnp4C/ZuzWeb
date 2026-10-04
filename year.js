@@ -78,7 +78,7 @@ let headerContourSyncQueued = false;
 let headerContourSyncUntil = 0;
 let activeLanguage = getLanguage();
 const isEmbeddedPresentation = new URLSearchParams(window.location.search).get("embedded") === "1";
-const embeddedSceneViewportHeight = isEmbeddedPresentation ? window.innerHeight : 0;
+let embeddedSceneViewportHeight = isEmbeddedPresentation ? window.innerHeight : 0;
 let embeddedVirtualScrollY = 0;
 let embeddedFirstSceneProgress = isEmbeddedPresentation ? 0 : null;
 let embeddedFirstSceneAnimationFrame = 0;
@@ -675,6 +675,7 @@ function normalizeObjectDefinition(rawObject, objectIndex) {
     sizes: rawObject.sizes || "",
     text: rawObject.text || "",
     flowOffsetY: rawObject.flowOffsetY ?? 0,
+    hasSourceCrop: Array.isArray(rawObject.crop),
     crop: crop.map((value, index) => (index < 2 ? clamp(value, 0, 1) : clamp(value, 0.02, 1))),
     displayWidthRatio: clamp(rawObject.displayWidthRatio ?? crop[2], 0.08, 0.95),
     base: {
@@ -886,7 +887,12 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
   objectRefs.forEach((item) => {
     const config = item.config;
     const objectKey = `${sceneIndex}:${config.name}`;
-    const rawProgress = config.scrollTrigger === "self" ? getObjectScrollProgress(item) : sceneProgress;
+    const atEmbeddedEnd = isEmbeddedPresentation
+      && layers.length === sceneTrack.length
+      && (sceneIndex !== 0 || embeddedFirstSceneProgress === null)
+      && embeddedVirtualScrollY >= Math.max(0, visualLayers.offsetHeight - embeddedSceneViewportHeight) - 1;
+    const rawProgress = atEmbeddedEnd ? 1
+      : config.scrollTrigger === "self" ? getObjectScrollProgress(item) : sceneProgress;
     const enterCompleteProgress = config.delay + config.enterDuration;
     if (rawProgress >= enterCompleteProgress) {
       seenObjectKeys.add(objectKey);
@@ -912,7 +918,9 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
     const opacity = lerp(inOpacity, config.exit.opacity, outProgress);
 
     item.element.style.opacity = String(opacity);
-    item.element.style.transform = `translate(${x}px, ${y}px) rotate(${rotate}deg) scale(${scale})`;
+    const sourceScale = item.element.parentElement.classList.contains("source-page-object-scene")
+      ? item.element.parentElement.clientWidth / 1190 : 1;
+    item.element.style.transform = `translate(${x * sourceScale}px, ${y * sourceScale}px) rotate(${rotate}deg) scale(${scale})`;
 
     if (item.dayNightSwitcher && item.dayNightSlider) {
       const blendStart = clamp(config.nightAutoStart, 0, 1);
@@ -1078,26 +1086,8 @@ function updateFromScroll() {
   }
 
   if (isEmbeddedPresentation) {
-    const viewportAnchor = window.innerHeight * 0.18;
-    let activeSceneIndex = 0;
-    let closestDistance = Number.POSITIVE_INFINITY;
-    steps.forEach((step, sceneIndex) => {
-      const rect = step.getBoundingClientRect();
-      const distance = Math.abs(rect.top - viewportAnchor);
-      if (rect.bottom > viewportAnchor && distance < closestDistance) {
-        closestDistance = distance;
-        activeSceneIndex = sceneIndex;
-      }
-    });
-    const activeStep = steps[activeSceneIndex];
-    const measuredProgress = activeStep ? getContinuousSceneProgress(activeStep) : 0;
-    const progress = activeSceneIndex === 0 && embeddedFirstSceneProgress !== null
-      ? embeddedFirstSceneProgress
-      : measuredProgress;
-    applyLayerState(activeSceneIndex, progress);
-    queueHeaderContourOverlaySync();
-    setActiveProjectFromScene(activeSceneIndex);
-    applyOverlayState(activeSceneIndex, 1);
+    const travel = Math.max(0, visualLayers.offsetHeight - embeddedSceneViewportHeight);
+    updateEmbeddedContinuousProgress(travel > 0 ? embeddedVirtualScrollY / travel : 0);
     return;
   }
 
@@ -1140,7 +1130,7 @@ function updateFromScroll() {
 
 function updateEmbeddedContinuousProgress(globalProgress) {
   if (!isEmbeddedPresentation || layers.length === 0) return;
-  const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+  const documentHeight = visualLayers.offsetHeight;
   const maxTravel = Math.max(0, documentHeight - embeddedSceneViewportHeight);
   embeddedVirtualScrollY = clamp(globalProgress, 0, 1) * maxTravel;
   const activeAnchor = embeddedVirtualScrollY + embeddedSceneViewportHeight * 0.18;
@@ -1160,7 +1150,9 @@ function updateEmbeddedContinuousProgress(globalProgress) {
         sceneHeight * 0.92,
       )
       : Math.max(1, Math.min(embeddedSceneViewportHeight * 0.72, sceneHeight * 0.72));
-    const sceneProgress = clamp(
+    const sceneProgress = sceneIndex === 0 && embeddedFirstSceneProgress !== null
+      ? embeddedFirstSceneProgress
+      : embeddedVirtualScrollY >= maxTravel - 1 ? 1 : clamp(
       (embeddedSceneViewportHeight * startLineRatio - simulatedTop) / travel,
       0,
       1,
@@ -1477,6 +1469,9 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
   if (Array.isArray(scene.photos) && scene.photos.length > 0) {
     objectScene.classList.add("has-carousel");
   }
+  const usesSourceCoordinates = /^(abstract-|growing-)/.test(scene.layout || "")
+    && scene.objects.every((object) => object.hasSourceCrop);
+  if (usesSourceCoordinates) objectScene.classList.add("source-page-object-scene");
   layer.append(objectScene);
   const objectContainer = objectScene.classList.contains("has-carousel") ? document.createElement("div") : objectScene;
   if (objectContainer !== objectScene) {
@@ -1494,6 +1489,13 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
     objectNode.style.opacity = "0";
     objectNode.style.transform = "translate(0, 0) scale(1)";
     objectNode.style.width = `${visualLayers.clientWidth * objectConfig.displayWidthRatio}px`;
+    if (usesSourceCoordinates) {
+      const [x, y, width, height] = objectConfig.crop;
+      objectNode.style.setProperty("--source-left", `${x * 100}%`);
+      objectNode.style.setProperty("--source-top", `${y * 100}%`);
+      objectNode.style.setProperty("--source-width", `${width * 100}%`);
+      objectNode.style.setProperty("--source-height", `${height * 100}%`);
+    }
     let dayNightSwitcher = null;
     let dayNightSlider = null;
 
@@ -1527,6 +1529,9 @@ async function renderObjectsIntoLayer(layer, scene, sceneIndex) {
       image.alt = objectConfig.caption || objectConfig.name;
       image.loading = "eager";
       image.decoding = "async";
+      if (isEmbeddedPresentation) image.addEventListener("error", () => {
+        window.parent.postMessage({ type: "embedded-presentation-error" }, window.location.origin);
+      }, { once: true });
       if (objectConfig.nightSrc) {
         const switcher = document.createElement("div");
         dayNightSwitcher = switcher;
@@ -2040,6 +2045,9 @@ async function selectProject(projectIndex) {
     viewerStatus.classList.add("is-visible");
     viewerStatus.textContent = "Error loading selected project";
     projectDescription.textContent = error.message;
+    if (isEmbeddedPresentation) window.parent.postMessage(
+      { type: "embedded-presentation-error" }, window.location.origin,
+    );
   } finally {
     isSelectingProject = false;
   }
@@ -2176,26 +2184,34 @@ async function initializeYearPage() {
 
 function reportEmbeddedPresentationMetrics() {
   if (!isEmbeddedPresentation) return;
-  const documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+  const documentHeight = Math.ceil(visualLayers.getBoundingClientRect().bottom + window.scrollY);
   window.parent.postMessage(
-    { type: "embedded-presentation-metrics", scrollHeight: documentHeight },
+    { type: "embedded-presentation-metrics", scrollHeight: documentHeight, ready: layers.length > 0 && layers.length === sceneTrack.length },
     window.location.origin,
   );
 }
 
 window.addEventListener("message", (event) => {
-  if (!isEmbeddedPresentation || event.source !== window.parent) return;
+  if (!isEmbeddedPresentation || event.source !== window.parent || event.origin !== window.location.origin) return;
   if (event.data?.type === "restart-embedded-first-scene") {
     startEmbeddedFirstSceneAnimation();
   }
   if (event.data?.type === "set-embedded-scroll-progress") {
     const progress = clamp(Number(event.data.progress) || 0, 0, 1);
+    const viewportHeight = Number(event.data.viewportHeight);
+    if (Number.isFinite(viewportHeight) && viewportHeight > 0) embeddedSceneViewportHeight = viewportHeight;
     updateEmbeddedContinuousProgress(progress);
   }
   if (event.data?.type === "request-embedded-presentation-metrics") {
     reportEmbeddedPresentationMetrics();
   }
 });
+
+if (isEmbeddedPresentation) {
+  // Image decoding and responsive reflow change content height after initial render.
+  const presentationResizeObserver = new ResizeObserver(reportEmbeddedPresentationMetrics);
+  presentationResizeObserver.observe(visualLayers);
+}
 
 initLanguageSwitch((language) => {
   activeLanguage = language;

@@ -272,7 +272,7 @@ project-specific text or media. Complete this checklist for every addition:
   control still visible. The download control is a square aligned with the
   orientation controls and uses the existing triangle-plus-rectangle icon.
 - Scene-based full presentations are one continuous parent-page document. Each
-  animated scene occupies its own viewport-sized normal-flow section and
+  animated scene occupies its own content-sized normal-flow section and
   appears after the previous scene as the main page scrolls. Do not restore a
   sticky single-stage iframe, nested presentation scrolling, artificial scroll
   scaling, or simultaneous crossfading/overlap between adjacent scene layers.
@@ -280,6 +280,9 @@ project-specific text or media. Complete this checklist for every addition:
   pages afterward. Extracted pages remain part of the parent page, preserve
   high-resolution pinch zoom, and must not become individually clickable image
   links or a nested PDF viewer.
+- Compact presentation fallbacks use complete PDF-derived pages with preserved
+  aspect ratios. Keep `fallbackPages` separate from hybrid appended `pages` so
+  switching modes never repeats scenes or omits source pages.
 - Support keyboard, touch, pointer input, and `prefers-reduced-motion`.
 
 ## Validation and commit checklist

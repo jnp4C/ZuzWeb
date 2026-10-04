@@ -186,7 +186,174 @@
             "cs": "Stáhnout prezentaci"
           }
         },
-        "scrollScale": 3
+        "scrollScale": 3,
+      "fallbackPages": [
+        {
+          "src": "./assets/presentation-pages/waterscape/page-01-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-01-1000.webp 707w, ./assets/presentation-pages/waterscape/page-01-2400.webp 1697w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-01-2400.webp",
+          "width": 1697,
+          "height": 2400,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 1",
+            "cs": "Prezentace, strana 1"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-02-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-02-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-02-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-02-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 2",
+            "cs": "Prezentace, strana 2"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-03-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-03-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-03-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-03-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 3",
+            "cs": "Prezentace, strana 3"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-04-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-04-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-04-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-04-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 4",
+            "cs": "Prezentace, strana 4"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-05-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-05-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-05-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-05-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 5",
+            "cs": "Prezentace, strana 5"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-06-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-06-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-06-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-06-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 6",
+            "cs": "Prezentace, strana 6"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-07-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-07-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-07-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-07-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 7",
+            "cs": "Prezentace, strana 7"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-08-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-08-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-08-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-08-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 8",
+            "cs": "Prezentace, strana 8"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-09-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-09-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-09-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-09-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 9",
+            "cs": "Prezentace, strana 9"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-10-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-10-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-10-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-10-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 10",
+            "cs": "Prezentace, strana 10"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-11-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-11-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-11-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-11-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 11",
+            "cs": "Prezentace, strana 11"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-12-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-12-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-12-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-12-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 12",
+            "cs": "Prezentace, strana 12"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-13-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-13-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-13-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-13-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 13",
+            "cs": "Prezentace, strana 13"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-14-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-14-1000.webp 1000w, ./assets/presentation-pages/waterscape/page-14-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-14-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 14",
+            "cs": "Prezentace, strana 14"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/waterscape/page-15-1000.webp",
+          "srcset": "./assets/presentation-pages/waterscape/page-15-1000.webp 707w, ./assets/presentation-pages/waterscape/page-15-2400.webp 1697w",
+          "zoomSrc": "./assets/presentation-pages/waterscape/page-15-2400.webp",
+          "width": 1697,
+          "height": 2400,
+          "alt": {
+            "en": "WATERSCAPE presentation, page 15",
+            "cs": "Prezentace, strana 15"
+          }
+        }
+      ]
       },
       "info": {
         "year": 2022,
@@ -1924,7 +2091,174 @@
             "cs": "Stáhnout prezentaci"
           }
         },
-        "scrollScale": 4
+        "scrollScale": 4,
+      "fallbackPages": [
+        {
+          "src": "./assets/presentation-pages/abstract/page-01-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-01-1000.webp 1000w, ./assets/presentation-pages/abstract/page-01-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-01-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 1",
+            "cs": "Prezentace, strana 1"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-02-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-02-1000.webp 1000w, ./assets/presentation-pages/abstract/page-02-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-02-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 2",
+            "cs": "Prezentace, strana 2"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-03-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-03-1000.webp 1000w, ./assets/presentation-pages/abstract/page-03-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-03-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 3",
+            "cs": "Prezentace, strana 3"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-04-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-04-1000.webp 1000w, ./assets/presentation-pages/abstract/page-04-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-04-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 4",
+            "cs": "Prezentace, strana 4"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-05-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-05-1000.webp 1000w, ./assets/presentation-pages/abstract/page-05-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-05-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 5",
+            "cs": "Prezentace, strana 5"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-06-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-06-1000.webp 1000w, ./assets/presentation-pages/abstract/page-06-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-06-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 6",
+            "cs": "Prezentace, strana 6"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-07-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-07-1000.webp 1000w, ./assets/presentation-pages/abstract/page-07-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-07-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 7",
+            "cs": "Prezentace, strana 7"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-08-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-08-1000.webp 1000w, ./assets/presentation-pages/abstract/page-08-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-08-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 8",
+            "cs": "Prezentace, strana 8"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-09-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-09-1000.webp 1000w, ./assets/presentation-pages/abstract/page-09-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-09-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 9",
+            "cs": "Prezentace, strana 9"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-10-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-10-1000.webp 1000w, ./assets/presentation-pages/abstract/page-10-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-10-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 10",
+            "cs": "Prezentace, strana 10"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-11-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-11-1000.webp 1000w, ./assets/presentation-pages/abstract/page-11-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-11-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 11",
+            "cs": "Prezentace, strana 11"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-12-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-12-1000.webp 1000w, ./assets/presentation-pages/abstract/page-12-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-12-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 12",
+            "cs": "Prezentace, strana 12"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-13-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-13-1000.webp 1000w, ./assets/presentation-pages/abstract/page-13-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-13-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 13",
+            "cs": "Prezentace, strana 13"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-14-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-14-1000.webp 1000w, ./assets/presentation-pages/abstract/page-14-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-14-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 14",
+            "cs": "Prezentace, strana 14"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/abstract/page-15-1000.webp",
+          "srcset": "./assets/presentation-pages/abstract/page-15-1000.webp 1000w, ./assets/presentation-pages/abstract/page-15-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/abstract/page-15-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "ABSTRACT. presentation, page 15",
+            "cs": "Prezentace, strana 15"
+          }
+        }
+      ]
       },
       "info": {
         "year": 2025,
@@ -2623,7 +2957,7 @@
         "objects": [
           {
             "name": "abstract-scene-6-top-left",
-            "src": "./assets/2025-abstract/6topleft.jpeg",
+            "src": "./assets/generated/abstract/abstract-scene-6-top-left-source.webp",
             "displayWidthRatio": 0.25,
             "base": {
               "x": 0,
@@ -2646,11 +2980,19 @@
             "delay": 0,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              0.30646589902568644,
+              0.4123456790123457
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-6-mid-left",
-            "src": "./assets/2025-abstract/6midleft.jpeg",
+            "src": "./assets/generated/abstract/abstract-scene-6-mid-left-source.webp",
             "displayWidthRatio": 0.25,
             "base": {
               "x": 0,
@@ -2673,11 +3015,19 @@
             "delay": 0.12,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0.4123456790123457,
+              0.30646589902568644,
+              0.38765432098765434
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-6-down-left",
-            "src": "./assets/2025-abstract/6downleft.jpeg",
+            "src": "./assets/generated/abstract/abstract-scene-6-down-left-source.webp",
             "displayWidthRatio": 0.25,
             "base": {
               "x": 0,
@@ -2700,11 +3050,19 @@
             "delay": 0.24,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0.8,
+              0.30646589902568644,
+              0.2
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-6-right",
-            "src": "./assets/2025-abstract/6right.jpeg",
+            "src": "./assets/generated/abstract/abstract-scene-6-right-source.webp",
             "displayWidthRatio": 0.52,
             "base": {
               "x": 0,
@@ -2727,7 +3085,15 @@
             "delay": 0.1,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0.30646589902568644,
+              0,
+              0.6935341009743136,
+              1
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           }
         ],
         "page": 6,
@@ -2743,7 +3109,7 @@
         "objects": [
           {
             "name": "abstract-scene-7-top-left",
-            "src": "./assets/2025-abstract/7topleft.png",
+            "src": "./assets/generated/abstract/abstract-scene-7-top-left-source.webp",
             "displayWidthRatio": 0.322,
             "base": {
               "x": 0,
@@ -2766,11 +3132,19 @@
             "delay": 0,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              0.3219789132197891,
+              0.6731234866828087
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-7-down-left",
-            "src": "./assets/2025-abstract/7downleft.png",
+            "src": "./assets/generated/abstract/abstract-scene-7-down-left-source.webp",
             "displayWidthRatio": 0.322,
             "base": {
               "x": 0,
@@ -2793,11 +3167,19 @@
             "delay": 0.16,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0.6731234866828087,
+              0.3219789132197891,
+              0.3268765133171913
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-7-right",
-            "src": "./assets/2025-abstract/7right.png",
+            "src": "./assets/generated/abstract/abstract-scene-7-right-source.webp",
             "displayWidthRatio": 0.678,
             "base": {
               "x": 0,
@@ -2820,7 +3202,15 @@
             "delay": 0.08,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0.3219789132197891,
+              0,
+              0.6780210867802109,
+              1
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           }
         ],
         "page": 7,
@@ -2836,7 +3226,7 @@
         "objects": [
           {
             "name": "abstract-scene-8-top-left",
-            "src": "./assets/2025-abstract/8topleft.png",
+            "src": "./assets/generated/abstract/abstract-scene-8-top-left-source.webp",
             "displayWidthRatio": 0.325,
             "base": {
               "x": 0,
@@ -2859,11 +3249,19 @@
             "delay": 0,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              0.324729392173189,
+              0.6881720430107527
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-8-down-left",
-            "src": "./assets/generated/abstract/08-abstract-scene-8-down-left-744.jpg",
+            "src": "./assets/generated/abstract/abstract-scene-8-down-left-source.webp",
             "displayWidthRatio": 0.325,
             "base": {
               "x": 0,
@@ -2888,17 +3286,17 @@
             "exitStart": 0.98,
             "exitDuration": 0.01,
             "crop": [
-              0.035,
-              0.725,
-              0.31,
-              0.245
+              0,
+              0.6881720430107527,
+              0.324729392173189,
+              0.3118279569892473
             ],
-            "srcset": "./assets/generated/abstract/08-abstract-scene-8-down-left-558.jpg 558w, ./assets/generated/abstract/08-abstract-scene-8-down-left-744.jpg 744w",
-            "sizes": "min(28vw, 387px)"
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-8-right",
-            "src": "./assets/2025-abstract/8right.png",
+            "src": "./assets/generated/abstract/abstract-scene-8-right-source.webp",
             "displayWidthRatio": 0.675,
             "base": {
               "x": 0,
@@ -2921,7 +3319,15 @@
             "delay": 0.08,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0.324729392173189,
+              0,
+              0.6752706078268109,
+              1
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           }
         ],
         "page": 8,
@@ -3053,7 +3459,7 @@
         "objects": [
           {
             "name": "abstract-scene-10-top-left",
-            "src": "./assets/2025-abstract/10topleft.png",
+            "src": "./assets/generated/abstract/abstract-scene-10-top-left-source.webp",
             "displayWidthRatio": 0.331,
             "base": {
               "x": 0,
@@ -3076,11 +3482,19 @@
             "delay": 0,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0,
+              0.33064516129032256,
+              0.693950177935943
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-10-down-left",
-            "src": "./assets/2025-abstract/10downleft.png",
+            "src": "./assets/generated/abstract/abstract-scene-10-down-left-source.webp",
             "displayWidthRatio": 0.331,
             "base": {
               "x": 0,
@@ -3103,11 +3517,19 @@
             "delay": 0.16,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0,
+              0.693950177935943,
+              0.33064516129032256,
+              0.30604982206405695
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           },
           {
             "name": "abstract-scene-10-right",
-            "src": "./assets/2025-abstract/10right.png",
+            "src": "./assets/generated/abstract/abstract-scene-10-right-source.webp",
             "displayWidthRatio": 0.669,
             "base": {
               "x": 0,
@@ -3130,7 +3552,15 @@
             "delay": 0.08,
             "enterDuration": 0.64,
             "exitStart": 0.98,
-            "exitDuration": 0.01
+            "exitDuration": 0.01,
+            "crop": [
+              0.33064516129032256,
+              0,
+              0.6693548387096775,
+              1
+            ],
+            "srcset": "",
+            "sizes": "100vw"
           }
         ],
         "page": 10,
@@ -7818,7 +8248,31 @@
             "cs": "Stáhnout prezentaci"
           }
         },
-        "scrollScale": 3.5
+        "scrollScale": 3.5,
+      "fallbackPages": [
+        {
+          "src": "./assets/presentation-pages/growing-through/page-01-1000.webp",
+          "srcset": "./assets/presentation-pages/growing-through/page-01-1000.webp 1000w, ./assets/presentation-pages/growing-through/page-01-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/growing-through/page-01-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "GROWING-THROUGH presentation, page 1",
+            "cs": "Prezentace, strana 1"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/growing-through/page-02-1000.webp",
+          "srcset": "./assets/presentation-pages/growing-through/page-02-1000.webp 1000w, ./assets/presentation-pages/growing-through/page-02-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/growing-through/page-02-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "GROWING-THROUGH presentation, page 2",
+            "cs": "Prezentace, strana 2"
+          }
+        }
+      ]
       },
       "info": {
         "year": 2024,
@@ -10422,7 +10876,20 @@
             "cs": "Stáhnout prezentaci"
           }
         },
-        "scrollScale": 4.5
+        "scrollScale": 4.5,
+      "fallbackPages": [
+        {
+          "src": "./assets/presentation-pages/semnevision/page-01-1000.webp",
+          "srcset": "./assets/presentation-pages/semnevision/page-01-1000.webp 500w, ./assets/presentation-pages/semnevision/page-01-2400.webp 1201w",
+          "zoomSrc": "./assets/presentation-pages/semnevision/page-01-2400.webp",
+          "width": 1201,
+          "height": 2400,
+          "alt": {
+            "en": "CONCEPT OF SEMNĚVICE LANDSCAPE presentation, page 1",
+            "cs": "Prezentace, strana 1"
+          }
+        }
+      ]
       },
       "info": {
         "year": 2023,
@@ -13682,7 +14149,262 @@
             "cs": "Stáhnout prezentaci"
           }
         },
-        "scrollScale": 4.5
+        "scrollScale": 4.5,
+      "fallbackPages": [
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-01-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-01-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-01-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-01-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 1",
+            "cs": "Prezentace, strana 1"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-02-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-02-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-02-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-02-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 2",
+            "cs": "Prezentace, strana 2"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-03-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-03-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-03-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-03-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 3",
+            "cs": "Prezentace, strana 3"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-04-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-04-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-04-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-04-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 4",
+            "cs": "Prezentace, strana 4"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-05-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-05-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-05-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-05-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 5",
+            "cs": "Prezentace, strana 5"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-06-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-06-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-06-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-06-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 6",
+            "cs": "Prezentace, strana 6"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-07-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-07-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-07-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-07-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 7",
+            "cs": "Prezentace, strana 7"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-08-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-08-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-08-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-08-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 8",
+            "cs": "Prezentace, strana 8"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-09-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-09-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-09-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-09-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 9",
+            "cs": "Prezentace, strana 9"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-10-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-10-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-10-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-10-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 10",
+            "cs": "Prezentace, strana 10"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-11-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-11-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-11-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-11-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 11",
+            "cs": "Prezentace, strana 11"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-12-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-12-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-12-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-12-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 12",
+            "cs": "Prezentace, strana 12"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-13-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-13-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-13-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-13-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 13",
+            "cs": "Prezentace, strana 13"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-14-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-14-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-14-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-14-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 14",
+            "cs": "Prezentace, strana 14"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-15-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-15-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-15-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-15-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 15",
+            "cs": "Prezentace, strana 15"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-16-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-16-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-16-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-16-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 16",
+            "cs": "Prezentace, strana 16"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-17-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-17-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-17-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-17-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 17",
+            "cs": "Prezentace, strana 17"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-18-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-18-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-18-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-18-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 18",
+            "cs": "Prezentace, strana 18"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-19-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-19-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-19-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-19-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 19",
+            "cs": "Prezentace, strana 19"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-20-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-20-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-20-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-20-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 20",
+            "cs": "Prezentace, strana 20"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-21-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-21-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-21-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-21-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 21",
+            "cs": "Prezentace, strana 21"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-22-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-22-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-22-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-22-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 22",
+            "cs": "Prezentace, strana 22"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/rewaterization/page-23-1000.webp",
+          "srcset": "./assets/presentation-pages/rewaterization/page-23-1000.webp 1000w, ./assets/presentation-pages/rewaterization/page-23-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/rewaterization/page-23-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "REWATERIZATION presentation, page 23",
+            "cs": "Prezentace, strana 23"
+          }
+        }
+      ]
       },
       "info": {
         "year": 2023,
@@ -15521,7 +16243,592 @@
             "cs": "Stáhnout prezentaci"
           }
         },
-        "scrollScale": 4
+        "scrollScale": 4,
+      "fallbackPages": [
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-01-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-01-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-01-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-01-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 1",
+            "cs": "Prezentace, strana 1"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-02-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-02-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-02-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-02-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 2",
+            "cs": "Prezentace, strana 2"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-03-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-03-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-03-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-03-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 3",
+            "cs": "Prezentace, strana 3"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-04-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-04-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-04-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-04-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 4",
+            "cs": "Prezentace, strana 4"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-05-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-05-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-05-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-05-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 5",
+            "cs": "Prezentace, strana 5"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-06-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-06-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-06-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-06-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 6",
+            "cs": "Prezentace, strana 6"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-07-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-07-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-07-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-07-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 7",
+            "cs": "Prezentace, strana 7"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-08-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-08-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-08-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-08-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 8",
+            "cs": "Prezentace, strana 8"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-09-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-09-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-09-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-09-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 9",
+            "cs": "Prezentace, strana 9"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-10-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-10-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-10-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-10-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 10",
+            "cs": "Prezentace, strana 10"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-11-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-11-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-11-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-11-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 11",
+            "cs": "Prezentace, strana 11"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-12-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-12-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-12-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-12-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 12",
+            "cs": "Prezentace, strana 12"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-13-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-13-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-13-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-13-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 13",
+            "cs": "Prezentace, strana 13"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-14-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-14-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-14-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-14-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 14",
+            "cs": "Prezentace, strana 14"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-15-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-15-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-15-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-15-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 15",
+            "cs": "Prezentace, strana 15"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-16-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-16-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-16-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-16-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 16",
+            "cs": "Prezentace, strana 16"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-17-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-17-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-17-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-17-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 17",
+            "cs": "Prezentace, strana 17"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-18-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-18-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-18-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-18-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 18",
+            "cs": "Prezentace, strana 18"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-19-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-19-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-19-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-19-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 19",
+            "cs": "Prezentace, strana 19"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-20-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-20-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-20-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-20-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 20",
+            "cs": "Prezentace, strana 20"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-21-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-21-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-21-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-21-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 21",
+            "cs": "Prezentace, strana 21"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-22-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-22-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-22-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-22-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 22",
+            "cs": "Prezentace, strana 22"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-23-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-23-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-23-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-23-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 23",
+            "cs": "Prezentace, strana 23"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-24-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-24-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-24-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-24-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 24",
+            "cs": "Prezentace, strana 24"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-25-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-25-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-25-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-25-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 25",
+            "cs": "Prezentace, strana 25"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-26-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-26-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-26-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-26-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 26",
+            "cs": "Prezentace, strana 26"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-27-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-27-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-27-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-27-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 27",
+            "cs": "Prezentace, strana 27"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-28-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-28-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-28-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-28-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 28",
+            "cs": "Prezentace, strana 28"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-29-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-29-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-29-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-29-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 29",
+            "cs": "Prezentace, strana 29"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-30-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-30-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-30-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-30-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 30",
+            "cs": "Prezentace, strana 30"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-31-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-31-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-31-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-31-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 31",
+            "cs": "Prezentace, strana 31"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-32-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-32-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-32-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-32-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 32",
+            "cs": "Prezentace, strana 32"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-33-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-33-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-33-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-33-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 33",
+            "cs": "Prezentace, strana 33"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-34-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-34-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-34-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-34-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 34",
+            "cs": "Prezentace, strana 34"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-35-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-35-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-35-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-35-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 35",
+            "cs": "Prezentace, strana 35"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-36-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-36-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-36-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-36-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 36",
+            "cs": "Prezentace, strana 36"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-37-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-37-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-37-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-37-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 37",
+            "cs": "Prezentace, strana 37"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-38-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-38-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-38-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-38-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 38",
+            "cs": "Prezentace, strana 38"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-39-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-39-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-39-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-39-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 39",
+            "cs": "Prezentace, strana 39"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-40-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-40-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-40-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-40-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 40",
+            "cs": "Prezentace, strana 40"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-41-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-41-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-41-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-41-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 41",
+            "cs": "Prezentace, strana 41"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-42-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-42-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-42-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-42-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 42",
+            "cs": "Prezentace, strana 42"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-43-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-43-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-43-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-43-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 43",
+            "cs": "Prezentace, strana 43"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-44-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-44-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-44-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-44-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 44",
+            "cs": "Prezentace, strana 44"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-45-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-45-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-45-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-45-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 45",
+            "cs": "Prezentace, strana 45"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-46-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-46-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-46-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-46-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 46",
+            "cs": "Prezentace, strana 46"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-47-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-47-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-47-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-47-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 47",
+            "cs": "Prezentace, strana 47"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-48-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-48-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-48-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-48-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 48",
+            "cs": "Prezentace, strana 48"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-49-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-49-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-49-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-49-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 49",
+            "cs": "Prezentace, strana 49"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-50-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-50-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-50-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-50-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 50",
+            "cs": "Prezentace, strana 50"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-51-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-51-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-51-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-51-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 51",
+            "cs": "Prezentace, strana 51"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-52-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-52-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-52-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-52-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 52",
+            "cs": "Prezentace, strana 52"
+          }
+        },
+        {
+          "src": "./assets/presentation-pages/steep-garden/page-53-1000.webp",
+          "srcset": "./assets/presentation-pages/steep-garden/page-53-1000.webp 1000w, ./assets/presentation-pages/steep-garden/page-53-2400.webp 2400w",
+          "zoomSrc": "./assets/presentation-pages/steep-garden/page-53-2400.webp",
+          "width": 2400,
+          "height": 1698,
+          "alt": {
+            "en": "STEEP GARDEN presentation, page 53",
+            "cs": "Prezentace, strana 53"
+          }
+        }
+      ]
       },
       "info": {
         "year": 2024,

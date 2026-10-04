@@ -47,6 +47,28 @@ Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 Use HTTP because project data and PDF features do not reliably work with
 `file://`. Stop the server with Ctrl+C. If the port is busy, use 8081 instead.
 
+## Presentation previews
+
+Animated presentations scroll with the project page and use content-height
+scenes separated by 12px. Abstract and Growing Through assemble their pieces
+using source-page crop coordinates to preserve page proportions.
+
+Compact mode displays complete PDF-derived pages, loads images lazily, and
+preserves browser pinch zoom. It is selected for reduced motion, data saving,
+reported memory of 2GB or less, or two or fewer reported logical processors.
+During animation playback it also activates after sustained slow frames while
+scrolling, an animation error, or a 15-second startup timeout. Browser hardware
+hints are approximate; runtime checks cover browsers without memory hints.
+
+To review compact mode directly, append `&presentation=compact` to a project URL,
+for example `project.html?project=abstract&presentation=compact`.
+
+PDF page exports are stored in `fullPresentation.fallbackPages`; hybrid projects
+can reuse their existing complete `pages` sequence. Rebuild exports from the
+tracked source PDFs using `python3 scripts/export-presentation-pages.py` and
+`python3 scripts/export-abstract-source-crops.py` (requires Poppler and Pillow).
+Do not replace the source PDFs with exported images.
+
 ## Customize content
 
 - Edit project text in `data/projects.json`.

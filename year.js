@@ -78,6 +78,8 @@ let headerContourSyncQueued = false;
 let headerContourSyncUntil = 0;
 let activeLanguage = getLanguage();
 const isEmbeddedPresentation = new URLSearchParams(window.location.search).get("embedded") === "1";
+const usesCompactAnimatedFlow = isEmbeddedPresentation
+  && ["cycle-of-change", "rewaterization"].includes(new URLSearchParams(window.location.search).get("project"));
 let embeddedSceneViewportHeight = isEmbeddedPresentation ? window.innerHeight : 0;
 let embeddedVirtualScrollY = 0;
 let embeddedFirstSceneProgress = isEmbeddedPresentation ? 0 : null;
@@ -86,6 +88,7 @@ let embeddedFirstSceneAnimationRequested = isEmbeddedPresentation;
 
 if (isEmbeddedPresentation) {
   document.body.classList.add("embedded-presentation");
+  if (usesCompactAnimatedFlow) document.body.classList.add("compact-animated-flow");
   document.documentElement.style.setProperty("--embedded-scene-height", `${embeddedSceneViewportHeight}px`);
 }
 
@@ -892,7 +895,7 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
       && (sceneIndex !== 0 || embeddedFirstSceneProgress === null)
       && embeddedVirtualScrollY >= Math.max(0, visualLayers.offsetHeight - embeddedSceneViewportHeight) - 1;
     const rawProgress = atEmbeddedEnd ? 1
-      : config.scrollTrigger === "self" ? getObjectScrollProgress(item) : sceneProgress;
+      : config.scrollTrigger === "self" && !usesCompactAnimatedFlow ? getObjectScrollProgress(item) : sceneProgress;
     const enterCompleteProgress = config.delay + config.enterDuration;
     if (rawProgress >= enterCompleteProgress) {
       seenObjectKeys.add(objectKey);
@@ -918,9 +921,15 @@ function applyObjectSceneProgress(sceneIndex, sceneProgress) {
     const opacity = lerp(inOpacity, config.exit.opacity, outProgress);
 
     item.element.style.opacity = String(opacity);
+    // These flowing pages should assemble while they enter the viewport,
+    // rather than leaving hundreds of pixels empty during delayed entrances.
+    const arrivalDistance = Math.max(Math.abs(config.enter.x - config.base.x), Math.abs(config.enter.y - config.base.y));
+    const arrivalScale = usesCompactAnimatedFlow ? Math.min(1, 96 / Math.max(1, arrivalDistance)) : 1;
+    const displayX = config.base.x + (x - config.base.x) * arrivalScale;
+    const displayY = config.base.y + (y - config.base.y) * arrivalScale;
     const sourceScale = item.element.parentElement.classList.contains("source-page-object-scene")
       ? item.element.parentElement.clientWidth / 1190 : 1;
-    item.element.style.transform = `translate(${x * sourceScale}px, ${y * sourceScale}px) rotate(${rotate}deg) scale(${scale})`;
+    item.element.style.transform = `translate(${displayX * sourceScale}px, ${displayY * sourceScale}px) rotate(${rotate}deg) scale(${scale})`;
 
     if (item.dayNightSwitcher && item.dayNightSlider) {
       const blendStart = clamp(config.nightAutoStart, 0, 1);
@@ -1144,7 +1153,9 @@ function updateEmbeddedContinuousProgress(globalProgress) {
     const simulatedTop = sceneTop - embeddedVirtualScrollY;
     const startLineRatio = scene?.startLineRatio ?? 0.96;
     const hasDelayedDownObject = isRealizationDelayedDownLayout(scene?.layout);
-    const travel = layer.classList.contains("flow-object-scene-layer")
+    const travel = usesCompactAnimatedFlow
+      ? Math.max(1, Math.min(embeddedSceneViewportHeight * 0.55, sceneHeight * 0.55))
+      : layer.classList.contains("flow-object-scene-layer")
       ? Math.max(
         embeddedSceneViewportHeight * (scene?.travelRatio ?? (hasDelayedDownObject ? 1.25 : 0.95)),
         sceneHeight * 0.92,

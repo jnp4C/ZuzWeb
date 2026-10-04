@@ -280,6 +280,10 @@ project-specific text or media. Complete this checklist for every addition:
   pages afterward. Extracted pages remain part of the parent page, preserve
   high-resolution pinch zoom, and must not become individually clickable image
   links or a nested PDF viewer.
+- Cycle of Change and Rewaterization use trimmed animation derivatives under
+  `assets/compact-scenes/` to remove blank source-image margins. Preserve the
+  original assets and PDFs; do not restore long delayed entrances that leave
+  the next scene blank while scrolling.
 - Compact presentation fallbacks use complete PDF-derived pages with preserved
   aspect ratios. Keep `fallbackPages` separate from hybrid appended `pages` so
   switching modes never repeats scenes or omits source pages.

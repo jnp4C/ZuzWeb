@@ -9586,7 +9586,7 @@
         "objects": [
           {
             "name": "krematorium-misto-navrhu",
-            "src": "./assets/generated/kladno-krematorium/03-krematorium-misto-navrhu-1200.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/krematorium-misto-navrhu-full.webp",
             "displayWidthRatio": 0.48,
             "base": {
               "x": 0,
@@ -9617,12 +9617,12 @@
               0.5,
               1
             ],
-            "srcset": "./assets/generated/kladno-krematorium/03-krematorium-misto-navrhu-900.jpg 900w, ./assets/generated/kladno-krematorium/03-krematorium-misto-navrhu-1200.jpg 1200w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/krematorium-misto-navrhu-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/krematorium-misto-navrhu-full.webp 1200w",
             "sizes": "min(41vw, 571px)"
           },
           {
             "name": "krematorium-site-photos",
-            "src": "./assets/generated/kladno-krematorium/03-krematorium-site-photos-1200.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/krematorium-site-photos-full.webp",
             "displayWidthRatio": 0.48,
             "base": {
               "x": 0,
@@ -9653,7 +9653,7 @@
               0.5,
               1
             ],
-            "srcset": "./assets/generated/kladno-krematorium/03-krematorium-site-photos-900.jpg 900w, ./assets/generated/kladno-krematorium/03-krematorium-site-photos-1200.jpg 1200w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/krematorium-site-photos-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/krematorium-site-photos-full.webp 1200w",
             "sizes": "min(41vw, 571px)"
           }
         ]
@@ -9665,7 +9665,7 @@
         "objects": [
           {
             "name": "sirsi-vztahy-left",
-            "src": "./assets/generated/kladno-krematorium/04-sirsi-vztahy-left-1137.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/sirsi-vztahy-left-full.webp",
             "displayWidthRatio": 0.43,
             "base": {
               "x": 0,
@@ -9696,12 +9696,12 @@
               0.47394957983193275,
               0.27110582639714625
             ],
-            "srcset": "./assets/generated/kladno-krematorium/04-sirsi-vztahy-left-853.jpg 853w, ./assets/generated/kladno-krematorium/04-sirsi-vztahy-left-1137.jpg 1137w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/sirsi-vztahy-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/sirsi-vztahy-left-full.webp 1137w",
             "sizes": "min(37vw, 512px)"
           },
           {
             "name": "velky-okruh-right",
-            "src": "./assets/generated/kladno-krematorium/04-velky-okruh-right-1345.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/velky-okruh-right-full.webp",
             "displayWidthRatio": 0.45,
             "base": {
               "x": 0,
@@ -9732,12 +9732,12 @@
               0.5605042016806723,
               0.2734839476813318
             ],
-            "srcset": "./assets/generated/kladno-krematorium/04-velky-okruh-right-1009.jpg 1009w, ./assets/generated/kladno-krematorium/04-velky-okruh-right-1345.jpg 1345w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/velky-okruh-right-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/velky-okruh-right-full.webp 1345w",
             "sizes": "min(39vw, 536px)"
           },
           {
             "name": "sirsi-vztahy-map",
-            "src": "./assets/generated/kladno-krematorium/04-sirsi-vztahy-map-2398.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/sirsi-vztahy-map-full.webp",
             "displayWidthRatio": 0.96,
             "base": {
               "x": 0,
@@ -9768,7 +9768,7 @@
               0.9991596638655462,
               0.6753864447086801
             ],
-            "srcset": "./assets/generated/kladno-krematorium/04-sirsi-vztahy-map-1798.jpg 1798w, ./assets/generated/kladno-krematorium/04-sirsi-vztahy-map-2398.jpg 2398w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/sirsi-vztahy-map-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/sirsi-vztahy-map-full.webp 2398w",
             "sizes": "min(83vw, 1142px)"
           }
         ]
@@ -9780,7 +9780,7 @@
         "objects": [
           {
             "name": "navrh-title",
-            "src": "./assets/generated/kladno-krematorium/05-navrh-title-2394.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/navrh-title-full.webp",
             "displayWidthRatio": 0.96,
             "base": {
               "x": 0,
@@ -9811,12 +9811,12 @@
               0.9974789915966387,
               0.27110582639714625
             ],
-            "srcset": "./assets/generated/kladno-krematorium/05-navrh-title-1795.jpg 1795w, ./assets/generated/kladno-krematorium/05-navrh-title-2394.jpg 2394w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/navrh-title-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/navrh-title-full.webp 2394w",
             "sizes": "min(83vw, 1142px)"
           },
           {
             "name": "navrh-map",
-            "src": "./assets/generated/kladno-krematorium/05-navrh-map-2394.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/navrh-map-full.webp",
             "displayWidthRatio": 0.96,
             "base": {
               "x": 0,
@@ -9847,7 +9847,7 @@
               0.9974789915966387,
               0.6658739595719382
             ],
-            "srcset": "./assets/generated/kladno-krematorium/05-navrh-map-1795.jpg 1795w, ./assets/generated/kladno-krematorium/05-navrh-map-2394.jpg 2394w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/navrh-map-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/navrh-map-full.webp 2394w",
             "sizes": "min(83vw, 1142px)"
           }
         ]
@@ -9859,7 +9859,7 @@
         "objects": [
           {
             "name": "koncept-left",
-            "src": "./assets/generated/kladno-krematorium/06-koncept-left-1216.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/koncept-left-full.webp",
             "displayWidthRatio": 0.43,
             "base": {
               "x": 0,
@@ -9890,12 +9890,12 @@
               0.5067226890756302,
               0.24256837098692033
             ],
-            "srcset": "./assets/generated/kladno-krematorium/06-koncept-left-912.jpg 912w, ./assets/generated/kladno-krematorium/06-koncept-left-1216.jpg 1216w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/koncept-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/koncept-left-full.webp 1216w",
             "sizes": "min(37vw, 512px)"
           },
           {
             "name": "koncept-right",
-            "src": "./assets/generated/kladno-krematorium/06-koncept-right-1198.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/koncept-right-full.webp",
             "displayWidthRatio": 0.44,
             "base": {
               "x": 0,
@@ -9926,7 +9926,7 @@
               0.4991596638655462,
               0.2413793103448276
             ],
-            "srcset": "./assets/generated/kladno-krematorium/06-koncept-right-898.jpg 898w, ./assets/generated/kladno-krematorium/06-koncept-right-1198.jpg 1198w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/koncept-right-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/koncept-right-full.webp 1198w",
             "sizes": "min(38vw, 524px)"
           },
           {
@@ -9974,7 +9974,7 @@
         "objects": [
           {
             "name": "pohled-a",
-            "src": "./assets/generated/kladno-krematorium/07-pohled-a-2400.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/pohled-a-full.webp",
             "displayWidthRatio": 0.96,
             "base": {
               "x": 0,
@@ -10005,7 +10005,7 @@
               1,
               1
             ],
-            "srcset": "./assets/generated/kladno-krematorium/07-pohled-a-1800.jpg 1800w, ./assets/generated/kladno-krematorium/07-pohled-a-2400.jpg 2400w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/pohled-a-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/pohled-a-full.webp 2400w",
             "sizes": "min(83vw, 1142px)"
           }
         ]
@@ -10017,7 +10017,7 @@
         "objects": [
           {
             "name": "dvasvety-left",
-            "src": "./assets/generated/kladno-krematorium/08-dvasvety-left-1168.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/dvasvety-left-full.webp",
             "displayWidthRatio": 0.43,
             "base": {
               "x": 0,
@@ -10048,12 +10048,12 @@
               0.4865546218487395,
               0.2413793103448276
             ],
-            "srcset": "./assets/generated/kladno-krematorium/08-dvasvety-left-876.jpg 876w, ./assets/generated/kladno-krematorium/08-dvasvety-left-1168.jpg 1168w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/dvasvety-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/dvasvety-left-full.webp 1168w",
             "sizes": "min(37vw, 512px)"
           },
           {
             "name": "dvasvety-right",
-            "src": "./assets/generated/kladno-krematorium/08-dvasvety-right-1168.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/dvasvety-right-full.webp",
             "displayWidthRatio": 0.44,
             "base": {
               "x": 0,
@@ -10084,7 +10084,7 @@
               0.4865546218487395,
               0.2413793103448276
             ],
-            "srcset": "./assets/generated/kladno-krematorium/08-dvasvety-right-876.jpg 876w, ./assets/generated/kladno-krematorium/08-dvasvety-right-1168.jpg 1168w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/dvasvety-right-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/dvasvety-right-full.webp 1168w",
             "sizes": "min(38vw, 524px)"
           },
           {
@@ -10132,7 +10132,7 @@
         "objects": [
           {
             "name": "legenda-left",
-            "src": "./assets/generated/kladno-krematorium/09-legenda-left-1113.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/legenda-left-full.webp",
             "displayWidthRatio": 0.45,
             "base": {
               "x": 0,
@@ -10163,12 +10163,12 @@
               0.4638655462184874,
               0.9964328180737217
             ],
-            "srcset": "./assets/generated/kladno-krematorium/09-legenda-left-835.jpg 835w, ./assets/generated/kladno-krematorium/09-legenda-left-1113.jpg 1113w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/legenda-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/legenda-left-full.webp 1113w",
             "sizes": "min(39vw, 536px)"
           },
           {
             "name": "legenda-right",
-            "src": "./assets/generated/kladno-krematorium/09-legenda-right-1234.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/legenda-right-full.webp",
             "displayWidthRatio": 0.5,
             "base": {
               "x": 0,
@@ -10199,7 +10199,7 @@
               0.5142857142857142,
               0.9964328180737217
             ],
-            "srcset": "./assets/generated/kladno-krematorium/09-legenda-right-926.jpg 926w, ./assets/generated/kladno-krematorium/09-legenda-right-1234.jpg 1234w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/legenda-right-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/legenda-right-full.webp 1234w",
             "sizes": "min(43vw, 595px)"
           }
         ]
@@ -10211,7 +10211,7 @@
         "objects": [
           {
             "name": "pohled-b",
-            "src": "./assets/generated/kladno-krematorium/10-pohled-b-2400.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/pohled-b-full.webp",
             "displayWidthRatio": 0.96,
             "base": {
               "x": 0,
@@ -10242,7 +10242,7 @@
               1,
               1
             ],
-            "srcset": "./assets/generated/kladno-krematorium/10-pohled-b-1800.jpg 1800w, ./assets/generated/kladno-krematorium/10-pohled-b-2400.jpg 2400w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/pohled-b-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/pohled-b-full.webp 2400w",
             "sizes": "min(83vw, 1142px)"
           }
         ]
@@ -10254,7 +10254,7 @@
         "objects": [
           {
             "name": "obradni-sin-top-left",
-            "src": "./assets/generated/kladno-krematorium/11-obradni-sin-top-left-1196.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/obradni-sin-top-left-full.webp",
             "displayWidthRatio": 0.46,
             "base": {
               "x": 0,
@@ -10285,12 +10285,12 @@
               0.49831932773109244,
               0.36623067776456597
             ],
-            "srcset": "./assets/generated/kladno-krematorium/11-obradni-sin-top-left-897.jpg 897w, ./assets/generated/kladno-krematorium/11-obradni-sin-top-left-1196.jpg 1196w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/obradni-sin-top-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/obradni-sin-top-left-full.webp 1196w",
             "sizes": "min(40vw, 547px)"
           },
           {
             "name": "obradni-sin-mid-left",
-            "src": "./assets/generated/kladno-krematorium/11-obradni-sin-mid-left-1198.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/obradni-sin-mid-left-full.webp",
             "displayWidthRatio": 0.46,
             "base": {
               "x": 0,
@@ -10321,7 +10321,7 @@
               0.4991596638655462,
               0.34958382877526756
             ],
-            "srcset": "./assets/generated/kladno-krematorium/11-obradni-sin-mid-left-898.jpg 898w, ./assets/generated/kladno-krematorium/11-obradni-sin-mid-left-1198.jpg 1198w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/obradni-sin-mid-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/obradni-sin-mid-left-full.webp 1198w",
             "sizes": "min(40vw, 547px)"
           },
           {
@@ -10362,7 +10362,7 @@
           },
           {
             "name": "obradni-sin-down-left",
-            "src": "./assets/generated/kladno-krematorium/11-obradni-sin-down-left-1198.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/obradni-sin-down-left-full.webp",
             "displayWidthRatio": 0.46,
             "base": {
               "x": 0,
@@ -10393,7 +10393,7 @@
               0.4991596638655462,
               0.291319857312723
             ],
-            "srcset": "./assets/generated/kladno-krematorium/11-obradni-sin-down-left-898.jpg 898w, ./assets/generated/kladno-krematorium/11-obradni-sin-down-left-1198.jpg 1198w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/obradni-sin-down-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/obradni-sin-down-left-full.webp 1198w",
             "sizes": "min(40vw, 547px)"
           }
         ]
@@ -10405,7 +10405,7 @@
         "objects": [
           {
             "name": "object-c",
-            "src": "./assets/generated/kladno-krematorium/10-object-c-2396.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/object-c-full.webp",
             "displayWidthRatio": 0.96,
             "base": {
               "x": 0,
@@ -10436,7 +10436,7 @@
               0.9983193277310924,
               0.8252080856123662
             ],
-            "srcset": "./assets/generated/kladno-krematorium/10-object-c-1797.jpg 1797w, ./assets/generated/kladno-krematorium/10-object-c-2396.jpg 2396w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/object-c-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/object-c-full.webp 2396w",
             "sizes": "min(83vw, 1142px)"
           }
         ]
@@ -10448,7 +10448,7 @@
         "objects": [
           {
             "name": "zed-top-left",
-            "src": "./assets/generated/kladno-krematorium/13-zed-top-left-1190.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/zed-top-left-full.webp",
             "displayWidthRatio": 0.46,
             "base": {
               "x": 0,
@@ -10479,12 +10479,12 @@
               0.4957983193277311,
               0.6135552913198573
             ],
-            "srcset": "./assets/generated/kladno-krematorium/13-zed-top-left-892.jpg 892w, ./assets/generated/kladno-krematorium/13-zed-top-left-1190.jpg 1190w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/zed-top-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/zed-top-left-full.webp 1190w",
             "sizes": "min(40vw, 547px)"
           },
           {
             "name": "zed-mid-left",
-            "src": "./assets/generated/kladno-krematorium/13-zed-mid-left-1190.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/zed-mid-left-full.webp",
             "displayWidthRatio": 0.46,
             "base": {
               "x": 0,
@@ -10515,12 +10515,12 @@
               0.4957983193277311,
               0.13555291319857313
             ],
-            "srcset": "./assets/generated/kladno-krematorium/13-zed-mid-left-892.jpg 892w, ./assets/generated/kladno-krematorium/13-zed-mid-left-1190.jpg 1190w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/zed-mid-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/zed-mid-left-full.webp 1190w",
             "sizes": "min(40vw, 547px)"
           },
           {
             "name": "zed-down-left",
-            "src": "./assets/generated/kladno-krematorium/13-zed-down-left-1190.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/zed-down-left-full.webp",
             "displayWidthRatio": 0.46,
             "base": {
               "x": 0,
@@ -10551,7 +10551,7 @@
               0.4957983193277311,
               0.24019024970273484
             ],
-            "srcset": "./assets/generated/kladno-krematorium/13-zed-down-left-892.jpg 892w, ./assets/generated/kladno-krematorium/13-zed-down-left-1190.jpg 1190w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/zed-down-left-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/zed-down-left-full.webp 1190w",
             "sizes": "min(40vw, 547px)"
           },
           {
@@ -10599,7 +10599,7 @@
         "objects": [
           {
             "name": "pohled-d",
-            "src": "./assets/generated/kladno-krematorium/14-pohled-d-2398.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/pohled-d-full.webp",
             "displayWidthRatio": 0.96,
             "base": {
               "x": 0,
@@ -10630,7 +10630,7 @@
               0.9991596638655462,
               0.8049940546967895
             ],
-            "srcset": "./assets/generated/kladno-krematorium/14-pohled-d-1798.jpg 1798w, ./assets/generated/kladno-krematorium/14-pohled-d-2398.jpg 2398w",
+            "srcset": "./assets/compact-scenes/cycle-of-change/pohled-d-1000.webp 1000w, ./assets/compact-scenes/cycle-of-change/pohled-d-full.webp 2398w",
             "sizes": "min(83vw, 1142px)"
           }
         ]
@@ -10642,7 +10642,7 @@
         "objects": [
           {
             "name": "parkoviste-left",
-            "src": "./assets/generated/kladno-krematorium/15-parkoviste-left-596.jpg",
+            "src": "./assets/compact-scenes/cycle-of-change/parkoviste-left-full.webp",
             "displayWidthRatio": 0.48,
             "base": {
               "x": 0,
@@ -10673,7 +10673,7 @@
               0.24853064651553317,
               0.4982185273159145
             ],
-            "srcset": "./assets/generated/kladno-krematorium/15-parkoviste-left-447.jpg 447w, ./assets/generated/kladno-krematorium/15-parkoviste-left-596.jpg 596w",
+            "srcset": "",
             "sizes": "min(41vw, 571px)"
           },
           {
@@ -14536,8 +14536,8 @@
           },
           {
             "name": "rewaterization-process-diagram",
-            "src": "./assets/generated/rewaterization/02-process-1300.jpg",
-            "srcset": "./assets/generated/rewaterization/02-process-900.jpg 900w, ./assets/generated/rewaterization/02-process-1300.jpg 1300w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-process-diagram-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-process-diagram-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-process-diagram-full.webp 1300w",
             "sizes": "min(90vw, 920px)",
             "displayWidthRatio": 0.58,
             "base": {
@@ -14649,8 +14649,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/04-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/04-split-left-700.jpg 700w, ./assets/generated/rewaterization/04-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-04-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -14684,8 +14684,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/04-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/04-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/04-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-04-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-04-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-04-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -14697,8 +14697,8 @@
         "objects": [
           {
             "name": "rewaterization-page-05-top",
-            "src": "./assets/generated/rewaterization/05-top-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/05-top-1200.jpg 1200w, ./assets/generated/rewaterization/05-top-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-05-top-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-05-top-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-05-top-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -14782,8 +14782,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/06-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/06-split-left-700.jpg 700w, ./assets/generated/rewaterization/06-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-06-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -14817,8 +14817,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/06-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/06-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/06-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-06-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-06-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-06-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -14859,8 +14859,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/07-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/07-split-left-700.jpg 700w, ./assets/generated/rewaterization/07-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-07-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -14894,8 +14894,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/07-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/07-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/07-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-07-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-07-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-07-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -14936,8 +14936,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/08-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/08-split-left-700.jpg 700w, ./assets/generated/rewaterization/08-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-08-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -14971,8 +14971,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/08-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/08-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/08-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-08-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-08-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-08-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15026,8 +15026,8 @@
         "objects": [
           {
             "name": "rewaterization-page-10-top",
-            "src": "./assets/generated/rewaterization/10-top-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/10-top-1200.jpg 1200w, ./assets/generated/rewaterization/10-top-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-10-top-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-10-top-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-10-top-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -15061,8 +15061,8 @@
           },
           {
             "name": "rewaterization-page-10-diagram",
-            "src": "./assets/generated/rewaterization/10-diagram-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/10-diagram-1200.jpg 1200w, ./assets/generated/rewaterization/10-diagram-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-10-diagram-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-10-diagram-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-10-diagram-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -15132,8 +15132,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/11-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/11-split-left-700.jpg 700w, ./assets/generated/rewaterization/11-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-11-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15167,8 +15167,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/11-split-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/11-split-right-1200.jpg 1200w, ./assets/generated/rewaterization/11-split-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-11-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-11-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-11-visual-full.webp 1800w",
             "sizes": "min(62vw, 738px)"
           }
         ]
@@ -15251,8 +15251,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/13-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/13-split-left-700.jpg 700w, ./assets/generated/rewaterization/13-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-13-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15286,8 +15286,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/13-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/13-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/13-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-13-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-13-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-13-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15328,8 +15328,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/14-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/14-split-left-700.jpg 700w, ./assets/generated/rewaterization/14-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-14-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15363,8 +15363,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/14-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/14-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/14-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-14-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-14-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-14-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15405,8 +15405,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/15-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/15-split-left-700.jpg 700w, ./assets/generated/rewaterization/15-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-15-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15440,8 +15440,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/15-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/15-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/15-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-15-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-15-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-15-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15482,8 +15482,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/16-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/16-split-left-700.jpg 700w, ./assets/generated/rewaterization/16-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-16-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15517,8 +15517,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/16-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/16-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/16-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-16-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-16-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-16-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15559,8 +15559,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/17-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/17-split-left-700.jpg 700w, ./assets/generated/rewaterization/17-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-17-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15594,8 +15594,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/17-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/17-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/17-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-17-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-17-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-17-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15636,8 +15636,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/18-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/18-split-left-700.jpg 700w, ./assets/generated/rewaterization/18-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-18-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15671,8 +15671,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/18-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/18-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/18-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-18-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-18-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-18-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15713,8 +15713,8 @@
             "enterDuration": 0.45,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/19-split-left-1000.jpg",
-            "srcset": "./assets/generated/rewaterization/19-split-left-700.jpg 700w, ./assets/generated/rewaterization/19-split-left-1000.jpg 1000w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-19-text-full.webp",
+            "srcset": "",
             "sizes": "min(31vw, 369px)"
           },
           {
@@ -15748,8 +15748,8 @@
             "enterDuration": 0.5,
             "exitStart": 0.98,
             "exitDuration": 0.01,
-            "src": "./assets/generated/rewaterization/19-equal-right-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/19-equal-right-1200.jpg 1200w, ./assets/generated/rewaterization/19-equal-right-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-19-visual-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-19-visual-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-19-visual-full.webp 1800w",
             "sizes": "min(60vw, 714px)"
           }
         ]
@@ -15761,8 +15761,8 @@
         "objects": [
           {
             "name": "rewaterization-page-20-top",
-            "src": "./assets/generated/rewaterization/20-top-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/20-top-1200.jpg 1200w, ./assets/generated/rewaterization/20-top-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-20-top-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-20-top-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-20-top-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -15796,8 +15796,8 @@
           },
           {
             "name": "rewaterization-page-20-bottom-left",
-            "src": "./assets/generated/rewaterization/20-bottom-left-1300.jpg",
-            "srcset": "./assets/generated/rewaterization/20-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/20-bottom-left-1300.jpg 1300w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-20-bottom-left-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-20-bottom-left-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-20-bottom-left-full.webp 1300w",
             "sizes": "min(47vw, 590px)",
             "displayWidthRatio": 0.47,
             "base": {
@@ -15831,8 +15831,8 @@
           },
           {
             "name": "rewaterization-page-20-bottom-right",
-            "src": "./assets/generated/rewaterization/20-bottom-right-1300.jpg",
-            "srcset": "./assets/generated/rewaterization/20-bottom-right-900.jpg 900w, ./assets/generated/rewaterization/20-bottom-right-1300.jpg 1300w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-20-bottom-right-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-20-bottom-right-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-20-bottom-right-full.webp 1300w",
             "sizes": "min(47vw, 590px)",
             "displayWidthRatio": 0.47,
             "base": {
@@ -15873,8 +15873,8 @@
         "objects": [
           {
             "name": "rewaterization-page-21-top",
-            "src": "./assets/generated/rewaterization/21-top-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/21-top-1200.jpg 1200w, ./assets/generated/rewaterization/21-top-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-21-top-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-21-top-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-21-top-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -15908,8 +15908,8 @@
           },
           {
             "name": "rewaterization-page-21-bottom-left",
-            "src": "./assets/generated/rewaterization/21-bottom-left-1300.jpg",
-            "srcset": "./assets/generated/rewaterization/21-bottom-left-900.jpg 900w, ./assets/generated/rewaterization/21-bottom-left-1300.jpg 1300w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-21-bottom-left-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-21-bottom-left-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-21-bottom-left-full.webp 1300w",
             "sizes": "min(47vw, 590px)",
             "displayWidthRatio": 0.47,
             "base": {
@@ -15943,8 +15943,8 @@
           },
           {
             "name": "rewaterization-page-21-bottom-right",
-            "src": "./assets/generated/rewaterization/21-bottom-right-1300.jpg",
-            "srcset": "./assets/generated/rewaterization/21-bottom-right-900.jpg 900w, ./assets/generated/rewaterization/21-bottom-right-1300.jpg 1300w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-21-bottom-right-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-21-bottom-right-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-21-bottom-right-full.webp 1300w",
             "sizes": "min(47vw, 590px)",
             "displayWidthRatio": 0.47,
             "base": {
@@ -15985,8 +15985,8 @@
         "objects": [
           {
             "name": "rewaterization-page-22-top",
-            "src": "./assets/generated/rewaterization/22-top-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/22-top-1200.jpg 1200w, ./assets/generated/rewaterization/22-top-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-22-top-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-22-top-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-22-top-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -16020,8 +16020,8 @@
           },
           {
             "name": "rewaterization-page-22-bottom",
-            "src": "./assets/generated/rewaterization/22-bottom-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/22-bottom-1200.jpg 1200w, ./assets/generated/rewaterization/22-bottom-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-22-bottom-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-22-bottom-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-22-bottom-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -16062,8 +16062,8 @@
         "objects": [
           {
             "name": "rewaterization-page-23-top",
-            "src": "./assets/generated/rewaterization/23-top-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/23-top-1200.jpg 1200w, ./assets/generated/rewaterization/23-top-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-23-top-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-23-top-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-23-top-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {
@@ -16097,8 +16097,8 @@
           },
           {
             "name": "rewaterization-page-23-bottom",
-            "src": "./assets/generated/rewaterization/23-bottom-1800.jpg",
-            "srcset": "./assets/generated/rewaterization/23-bottom-1200.jpg 1200w, ./assets/generated/rewaterization/23-bottom-1800.jpg 1800w",
+            "src": "./assets/compact-scenes/rewaterization/rewaterization-page-23-bottom-full.webp",
+            "srcset": "./assets/compact-scenes/rewaterization/rewaterization-page-23-bottom-1000.webp 1000w, ./assets/compact-scenes/rewaterization/rewaterization-page-23-bottom-full.webp 1800w",
             "sizes": "min(100vw, 1180px)",
             "displayWidthRatio": 0.98,
             "base": {

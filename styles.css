@@ -7159,3 +7159,14 @@ main,
 }
 .embedded-presentation .object-scene { padding-block: 0; }
 .source-page-object-scene .scene-object::after { content: none; }
+
+/* Keep deliberate internal spacing compact after trimming blank source margins. */
+.compact-animated-flow .rewaterization-process-object-scene,
+.compact-animated-flow .rewaterization-photo-carousel-object-scene.has-carousel,
+.compact-animated-flow .krematorium-obradni-sin-object-scene,
+.compact-animated-flow .krematorium-zed-object-scene {
+  row-gap: 12px;
+}
+.compact-animated-flow .side-by-side-object-scene {
+  align-items: flex-start;
+}

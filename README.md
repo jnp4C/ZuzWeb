@@ -1,19 +1,51 @@
 # Dynamic Architecture Portfolio
 
-Minimal portfolio with:
-- intro + year selection on the home page
-- year-based project page with sticky text and animated PDF scenes
-- optional per-year top project picker when multiple projects exist in that year
+Static architecture portfolio with a project index, bilingual project pages,
+image carousels, and optional animated presentations.
+
+## Final design touches on another computer
+
+Clone the repository and check out the finishing branch:
+
+```bash
+git clone --branch design-final-touch https://github.com/jnp4C/ZuzWeb.git
+cd ZuzWeb
+```
+
+For an existing clone with a clean working tree:
+
+```bash
+git fetch origin
+git switch design-final-touch
+git pull --ff-only origin design-final-touch
+```
+
+Open this folder in your coding agent and tell it:
+“Read AGENTS.md, help me set up the local preview, and start the server.
+I will describe the final design changes.”
+
+`AGENTS.md` includes the setup workflow and existing design rules. Local source
+references in `Redesign/` are ignored and are not included in the clone; the
+tracked website can be previewed without them.
 
 ## Local development
 
-Run on a local server (PDF.js does not reliably run from `file://`):
+No build step or npm dependencies are required. Install Python if needed, then
+run from the repository root (keep the terminal open):
 
 ```bash
-python3 -m http.server 8080
+# macOS / Linux
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Open [http://localhost:8080](http://localhost:8080).
+```powershell
+# Windows
+py -m http.server 8080 --bind 127.0.0.1
+```
+
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
+Use HTTP because project data and PDF features do not reliably work with
+`file://`. Stop the server with Ctrl+C. If the port is busy, use 8081 instead.
 
 ## Customize content
 

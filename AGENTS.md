@@ -1,14 +1,51 @@
 # ZuzWeb Agent Guide
 
+## Final design touches: first session on a new computer
+
+Work on `design-final-touch`. This is the final design pass on the current
+redesign. Follow the user's requested visual adjustments and preserve existing
+content, navigation, and interactions unless she asks to change them. Help her
+with setup directly; do not assume she knows terminal commands or dependencies.
+
+1. Locate the cloned repository and inspect `git status --short --branch`.
+   Use `design-final-touch`; do not switch branches over uncommitted work.
+   If the branch is only on origin, use
+   `git switch --track origin/design-final-touch`. If it is unavailable, report
+   the problem instead of creating an unrelated branch. Do not discard changes.
+2. This is a static HTML/CSS/JavaScript site: no build step, npm install, or
+   virtual environment is needed. Check for Python (`python3 --version` on
+   macOS/Linux, `py --version` on Windows). Node is optional for preview and
+   useful for JavaScript syntax checks.
+3. Start an HTTP server from the repository root, bound to localhost:
+   - macOS/Linux: `python3 -m http.server 8080 --bind 127.0.0.1`
+   - Windows: `py -m http.server 8080 --bind 127.0.0.1`
+   - If Python is exposed as `python`, use that command instead.
+   Keep the server running in a terminal or managed background session. Reuse
+   an existing server only after confirming it serves this repository. If 8080
+   is occupied by another app, choose 8081 and report the actual URL.
+4. Verify the home page loads at `http://127.0.0.1:8080/` and report that URL.
+   Open it in the browser when tooling allows. Use HTTP, never `file://`.
+   If Python is missing, help install it using the computer's normal installer
+   or package manager, with any required permission, then retry. Do not make
+   site edits until preview works. Stop the foreground server with Ctrl+C.
+5. Ask what design detail she wants to adjust, then make small, reviewable
+   changes. Use the existing implementation and the rules below as the starting
+   point. Check the result at desktop, tablet, and mobile widths and in both
+   languages when the change affects text or layout.
+6. The ignored `Redesign/` reference folder and untracked `BDWRAP/` do not travel
+   with a Git clone. Their absence is normal. Work from tracked site assets and
+   explicit user direction for finishing touches. When a change requires an
+   exact source document or new source media, ask for that specific reference;
+   do not invent content or block unrelated visual work.
+7. Commit only files for the requested change on `design-final-touch`. Never
+   deploy, merge into another branch, or push without the user's instruction.
+
 ## Current direction
 
-Work on the full-site redesign belongs on the `redesign` branch. This branch was
-created from `deployment-prep` and intentionally does not include the birthday
-wrapping feature from `BDwrapping`.
-
-The redesign is a new working version of the site, not a small visual refresh of
-the existing year-based navigation. Preserve the deployed site as a reference,
-but do not assume its page structure or interaction model must remain.
+The full-site redesign originated on `redesign`, from `deployment-prep`, and
+intentionally excludes the birthday wrapping feature from `BDwrapping`.
+`design-final-touch` continues that implementation for the final design pass.
+Preserve the current project-index structure unless the user requests a change.
 
 ## Redesign goals
 
@@ -72,11 +109,11 @@ introducing unrelated type sizes or families without user approval.
 ## Implementation workflow
 
 1. Check the current branch and working tree before editing. Redesign work should
-   normally happen on `redesign`.
+   happen on `design-final-touch` for this finishing pass.
 2. At the start of every coding session, serve the repository through a local
    HTTP server and verify that the site loads over HTTP. Reuse an already
    running suitable server when possible; otherwise start one (for example,
-   `python3 -m http.server 8000`). Report the local URL and do not rely on
+   `python3 -m http.server 8080 --bind 127.0.0.1`). Report the local URL and do not rely on
    opening the HTML through a `file://` URL. If the server cannot be started,
    diagnose and report that before making site changes.
 3. Review the relevant draft area, project folder, and portfolio text before

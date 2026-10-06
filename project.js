@@ -22,9 +22,6 @@ const AVAILABLE_BACKGROUND_SRCS = new Set([
 ]);
 const projectRoot = document.getElementById("conciseProject");
 const backgroundAnimation = document.querySelector(".concise-project-background");
-const signatureAnimation = document.querySelector(".signature-animation");
-const signatureNameplate = signatureAnimation?.closest(".signature-nameplate");
-const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 let activeLanguage = "cs";
 let navigationLanguage = getLanguage();
 let activeProject = null;
@@ -62,7 +59,6 @@ const COPY = {
     collaborators: "Collaborators",
     awards: "Awards",
     annotation: "Annotation",
-    fullPresentation: "Full presentation",
     previousImage: "Previous image",
     nextImage: "Next image",
     openImage: "Open enlarged image",
@@ -83,7 +79,6 @@ const COPY = {
     collaborators: "Spoluautoři",
     awards: "Ocenění",
     annotation: "Anotace",
-    fullPresentation: "Celá prezentace",
     previousImage: "Předchozí obrázek",
     nextImage: "Další obrázek",
     openImage: "Otevřít zvětšený obrázek",
@@ -95,39 +90,6 @@ const COPY = {
     unavailable: "Tato projektová stránka není dostupná.",
   },
 };
-
-function initializeSignatureAnimation() {
-  if (!signatureAnimation) {
-    return;
-  }
-
-  const showFinalPoster = () => {
-    signatureAnimation.pause();
-    signatureNameplate?.classList.add("is-signature-static");
-    document.documentElement.classList.add("signature-complete");
-    try {
-      window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
-    } catch {
-      // The static transparent image still works when storage is unavailable.
-    }
-  };
-
-  let hasCompleted = false;
-  try {
-    hasCompleted = window.sessionStorage.getItem(SIGNATURE_COMPLETE_STORAGE_KEY) === "1";
-  } catch {
-    hasCompleted = false;
-  }
-  if (hasCompleted || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    showFinalPoster();
-    return;
-  }
-
-  signatureAnimation.addEventListener("ended", showFinalPoster, { once: true });
-  void signatureAnimation.play().catch(() => {
-    showFinalPoster();
-  });
-}
 
 function getStoredBackgroundSrc() {
   try {
@@ -899,14 +861,6 @@ function renderProject(animateFacts = false) {
   back.href = home.href;
   back.setAttribute("aria-label", copy.back);
   home.setAttribute("aria-label", copy.back);
-  home.onclick = () => {
-    try {
-      window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
-    } catch {
-      // Navigation still works when storage is unavailable.
-    }
-  };
-  back.onclick = home.onclick;
   const name = document.createElement("h1");
   name.setAttribute("aria-label", headingTitle);
   const titleTrack = document.createElement("span");
@@ -1315,7 +1269,7 @@ async function initializeProject() {
         - (right.portfolioSection === "study" ? 0 : 1);
       return sectionDifference || (left.index?.order ?? 999) - (right.index?.order ?? 999);
     });
-  activeProject = projects.find((project) => project.slug === slug && project.projectPage?.layout === "concise");
+  activeProject = navigableProjects.find((project) => project.slug === slug && project.projectPage?.layout === "concise");
   if (!activeProject) {
     projectRoot.textContent = COPY[activeLanguage].unavailable;
     return;
@@ -1335,7 +1289,6 @@ initLanguageSwitch((language) => {
 });
 
 void initializeBackgroundTransition();
-initializeSignatureAnimation();
 
 initializeProject().catch(() => {
   projectRoot.textContent = COPY[activeLanguage].unavailable;

@@ -573,22 +573,6 @@ function resolveProjectPages(project, totalPages, projectIndex, totalProjects) {
   ]);
 }
 
-function sceneNeedsPdf(scene) {
-  if (!scene || scene.type === "annotation" || scene.type === "carousel") {
-    return false;
-  }
-
-  if (scene.type === "pdf") {
-    return true;
-  }
-
-  if (scene.type === "objects") {
-    return Array.isArray(scene.objects) && scene.objects.some((object) => !object.src && !object.text);
-  }
-
-  return false;
-}
-
 async function loadPdfDocument(filePath) {
   if (pdfCache.has(filePath)) {
     return pdfCache.get(filePath);
@@ -778,107 +762,6 @@ function createLayer(sceneIndex) {
   layer.dataset.sceneIndex = `${sceneIndex}`;
   visualLayers.append(layer);
   return layer;
-}
-
-function getSceneHandoffStart(scene) {
-  if (!scene) {
-    return 0.72;
-  }
-
-  if (isRealizationDelayedDownLayout(scene.layout)) {
-    return 0.98;
-  }
-
-  if (
-    scene.layout === "side-by-side"
-    || scene.layout === "analysis"
-    || scene.layout === "map-legend"
-    || scene.layout === "single-text"
-    || scene.layout === "stacked-map-text"
-    || scene.layout === "stacked-carousel"
-    || scene.layout === "vegetation"
-    || scene.layout === "inner-function"
-    || scene.layout === "full-width-visual"
-    || scene.layout === "christmas-day-night"
-    || scene.layout === "rewaterization-process"
-    || scene.layout === "rewaterization-photo-carousel"
-    || scene.layout === "rewaterization-stacked"
-    || scene.layout === "rewaterization-three-part"
-    || scene.layout === "rewaterization-top-bottom"
-    || scene.layout === "krematorium-site-split"
-    || scene.layout === "krematorium-sirsi-vztahy"
-    || scene.layout === "krematorium-navrh-cyklus"
-    || scene.layout === "krematorium-koncept"
-    || scene.layout === "krematorium-pohled-a"
-    || scene.layout === "krematorium-dva-svety"
-    || scene.layout === "krematorium-legenda"
-    || scene.layout === "krematorium-pohled-b"
-    || scene.layout === "krematorium-obradni-sin"
-    || scene.layout === "krematorium-zed"
-    || scene.layout === "abstract-start"
-    || scene.layout === "abstract-two-left-one-right"
-    || scene.layout === "abstract-two-top-one-down"
-    || scene.layout === "abstract-three-left-one-right"
-    || scene.layout === "abstract-three-horizontal"
-    || scene.layout === "abstract-two-column"
-    || isRealizationFlowLayout(scene.layout)
-    || scene.layout === "history-kostel"
-  ) {
-    return 0.62;
-  }
-
-  return 0.72;
-}
-
-function applyLayerState(currentIndex, progress) {
-  const safeProgress = clamp(progress, 0, 1);
-  const nextIndex = Math.min(currentIndex + 1, layers.length - 1);
-  const currentScene = sceneTrack[currentIndex];
-  const handoffStart = getSceneHandoffStart(currentScene);
-  // A full presentation is one continuous scroll document: each embedded
-  // scene owns its complete page segment and hands off only at the next step.
-  // Crossfading two fixed layers here makes neighbouring scenes overlap.
-  const handoffProgress = isEmbeddedPresentation || currentIndex === nextIndex
-    ? 0
-    : clamp((safeProgress - handoffStart) / (1 - handoffStart), 0, 1);
-  const nextSceneProgress = clamp(handoffProgress * 0.7, 0, 1);
-
-  layers.forEach((layer, index) => {
-    if (index === currentIndex) {
-      layer.classList.add("active");
-      layer.style.opacity = String(1 - handoffProgress);
-      layer.style.transform = `translateY(${-14 * handoffProgress}px) scale(${1 - handoffProgress * 0.008})`;
-      layer.style.pointerEvents = handoffProgress < 1 ? "auto" : "none";
-      return;
-    }
-
-    if (index === nextIndex && handoffProgress > 0) {
-      layer.classList.add("active");
-      layer.style.opacity = String(handoffProgress);
-      layer.style.transform = `translateY(${14 * (1 - handoffProgress)}px) scale(${0.992 + handoffProgress * 0.008})`;
-      layer.style.pointerEvents = "none";
-      return;
-    }
-
-    layer.classList.remove("active");
-    layer.style.opacity = "0";
-    layer.style.transform = "translateY(24px) scale(0.99)";
-    layer.style.pointerEvents = "none";
-  });
-
-  applyObjectSceneProgress(currentIndex, safeProgress);
-  layers[currentIndex]?.classList.toggle("has-visible-objects", currentScene?.type !== "objects" || safeProgress > 0.025);
-  applyAnnotationSceneProgress(currentIndex, safeProgress);
-  applyCarouselSceneProgress(currentIndex, safeProgress);
-  if (handoffProgress > 0) {
-    const nextScene = sceneTrack[nextIndex];
-    layers[nextIndex]?.classList.toggle("has-visible-objects", nextScene?.type !== "objects" || nextSceneProgress > 0.025);
-    applyObjectSceneProgress(nextIndex, nextSceneProgress);
-    applyAnnotationSceneProgress(nextIndex, nextSceneProgress);
-    applyCarouselSceneProgress(nextIndex, nextSceneProgress);
-  }
-  queueHeaderContourOverlaySync();
-  applyOverlayState(currentIndex, safeProgress);
 }
 
 function applyObjectSceneProgress(sceneIndex, sceneProgress) {
@@ -1846,21 +1729,6 @@ function updateBackToProjectsVisibility() {
   backToProjects.classList.toggle("is-hidden", selectorBottom > 0);
 }
 
-function scrollToProject(projectIndex) {
-  const startStepIndex = projectStartStepByIndex.get(projectIndex);
-  if (!Number.isInteger(startStepIndex)) {
-    return;
-  }
-
-  const targetLayer = layers[startStepIndex] || document.getElementById(`scene-${startStepIndex}`);
-  if (!targetLayer) {
-    return;
-  }
-
-  const targetTop = targetLayer.getBoundingClientRect().top + window.scrollY - 8;
-  window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
-}
-
 function renderProjectPicker() {
   const fragment = document.createDocumentFragment();
 
@@ -2152,7 +2020,7 @@ async function initializeYearPage() {
   }
 
   allProjects = await response.json();
-  yearProjects = allProjects.filter((project) => project.year === selectedYear);
+  yearProjects = allProjects.filter((project) => project.year === selectedYear && project.visibility !== "unpublished");
 
   if (yearProjects.length === 0) {
     throw new Error(`No projects found for year ${selectedYear}.`);

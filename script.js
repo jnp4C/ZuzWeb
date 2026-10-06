@@ -250,7 +250,9 @@ function initCvToggle() {
 
     if (shouldOpen) {
       cvDetails.hidden = false;
-      cvDetails.classList.remove("is-closing");
+      cvDetails.classList.remove("is-open", "is-closing");
+      // Commit the collapsed layout after unhiding, as the INFO drawer does.
+      void cvDetails.offsetWidth;
       cvDetails.classList.add("is-open");
       projectIndex?.classList.remove("is-cv-closing");
       projectIndex?.classList.add("is-cv-open");

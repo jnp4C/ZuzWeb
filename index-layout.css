@@ -380,3 +380,10 @@
 @media (width < 700px) {
   .index-page { --index-page-gutter: 22.5px; --index-content-offset: 30px; }
 }
+
+/* The old mobile CV inset must not widen this label beyond the other boxes. */
+.index-page .project-index #cvTitle {
+  width: max-content;
+  min-width: 0;
+  padding-inline: 0;
+}

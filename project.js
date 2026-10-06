@@ -30,6 +30,7 @@ let navigationLanguage = getLanguage();
 let activeProject = null;
 let navigableProjects = [];
 let lightboxMediaGroups = [];
+let lightboxGroupLabels = [];
 let carouselCleanups = [];
 
 function initializeVisualViewportInset() {
@@ -263,6 +264,13 @@ function openImageLightbox(mediaItems, initialIndex) {
   const dialog = document.createElement("dialog");
   dialog.className = "project-image-lightbox";
   dialog.setAttribute("aria-label", COPY[activeLanguage].imageViewer);
+  const header = document.createElement("header");
+  header.className = "project-image-lightbox-header";
+  const sectionTitle = document.createElement("h2");
+  sectionTitle.className = "project-image-lightbox-title";
+  sectionTitle.setAttribute("aria-live", "polite");
+  const navigation = document.createElement("nav");
+  navigation.className = "project-image-lightbox-section-nav";
   const stage = document.createElement("div");
   stage.className = "project-image-lightbox-stage";
   const image = document.createElement("img");
@@ -327,6 +335,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   };
   const renderMedia = () => {
     const media = mediaItems[activeIndex];
+    sectionTitle.textContent = matchedGroup >= 0 ? lightboxGroupLabels[activeGroup] : getLocalizedText(media.alt, activeLanguage);
     image.srcset = media.zoomSrc ? "" : (media.srcset || "");
     image.src = media.zoomSrc || media.src;
     image.alt = getLocalizedText(media.alt, activeLanguage);
@@ -399,8 +408,9 @@ function openImageLightbox(mediaItems, initialIndex) {
   image.addEventListener("pointercancel", releasePointer);
 
   stage.append(image);
-  dialog.append(stage, close, previous, next);
-  dialog.append(pagination);
+  navigation.append(previous, next);
+  header.append(navigation, sectionTitle, close);
+  dialog.append(header, stage, pagination);
   rebuildPagination();
   document.body.append(dialog);
   renderMedia();
@@ -835,10 +845,15 @@ function renderProject(animateFacts = false) {
   const info = page.info;
   const hero = page.hero?.media;
   const cover = hero || activeProject.index?.image;
-  lightboxMediaGroups = [
-    ...(cover?.src ? [[cover]] : []),
-    ...page.featuredSections.map(section => (section.media || []).filter(media => media.type !== "video")),
-  ].filter(group => group.length > 0);
+  const lightboxSections = [
+    ...(cover?.src ? [{ label: headingTitle, media: [cover] }] : []),
+    ...page.featuredSections.map(section => ({
+      label: getLocalizedText(section.label, activeLanguage),
+      media: (section.media || []).filter(media => media.type !== "video"),
+    })),
+  ].filter(section => section.media.length > 0);
+  lightboxMediaGroups = lightboxSections.map(section => section.media);
+  lightboxGroupLabels = lightboxSections.map(section => section.label);
   const fullPresentationUrl = `./year.html?year=${encodeURIComponent(activeProject.year)}&project=${encodeURIComponent(activeProject.slug)}`;
 
   document.title = `${title} | Zuzana Purmová`;

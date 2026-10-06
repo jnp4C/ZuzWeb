@@ -5,7 +5,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-06-real-content-labels";
 
 const DATA_CACHE_VERSION = "2026-08-24-vrt-hires-zoom";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";

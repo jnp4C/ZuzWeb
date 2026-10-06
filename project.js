@@ -1,10 +1,10 @@
-import { initProjectHeader, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-06-header-navigation";
+import { initProjectHeader } from "./shared-header.js?v=2026-10-06-header-navigation";
 import {
   getLanguage,
   getLocalizedProjectText,
   getLocalizedText,
   initLanguageSwitch,
-} from "./language.js";
+} from "./language.js?v=2026-10-06-inherited-language";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
 
 const DATA_CACHE_VERSION = "2026-08-24-vrt-hires-zoom";
@@ -26,6 +26,7 @@ const signatureAnimation = document.querySelector(".signature-animation");
 const signatureNameplate = signatureAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 let activeLanguage = "cs";
+let navigationLanguage = getLanguage();
 let activeProject = null;
 let navigableProjects = [];
 let carouselCleanups = [];
@@ -666,9 +667,9 @@ function createHighlightedProjectText(page, language, copy) {
 
 function getProjectUrl(project) {
   if (project.projectPage?.layout === "concise") {
-    return `./project.html?project=${encodeURIComponent(project.slug)}`;
+    return `./project.html?project=${encodeURIComponent(project.slug)}&lang=${navigationLanguage}`;
   }
-  return `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(project.slug)}`;
+  return `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(project.slug)}&lang=${navigationLanguage}`;
 }
 
 function createProjectNavigationLink(project, direction, label) {
@@ -801,7 +802,7 @@ function renderProject(animateFacts = false) {
   heading.className = "concise-project-heading";
   const back = document.createElement("a");
   back.className = "concise-project-symbol concise-project-symbol--star concise-project-back";
-  back.href = "./index.html";
+  back.href = `./index.html?lang=${navigationLanguage}`;
   back.textContent = "∗";
   back.setAttribute("aria-label", copy.back);
   back.addEventListener("click", () => {
@@ -1289,7 +1290,7 @@ initializeVisualViewportInset();
 
 initLanguageSwitch((language) => {
   activeLanguage = "cs";
-  updateHeaderLanguageToggle(language);
+  navigationLanguage = language;
   if (activeProject) {
     renderProject(false);
   }

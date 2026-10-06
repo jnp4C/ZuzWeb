@@ -2,6 +2,10 @@ const LANGUAGE_STORAGE_KEY = "zuz-portfolio-language";
 const SUPPORTED_LANGUAGES = new Set(["en", "cs"]);
 
 export function getLanguage() {
+  const urlLanguage = new URLSearchParams(window.location.search).get("lang");
+  if (SUPPORTED_LANGUAGES.has(urlLanguage)) {
+    return urlLanguage;
+  }
   try {
     const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
     return SUPPORTED_LANGUAGES.has(storedLanguage) ? storedLanguage : "en";
@@ -48,6 +52,9 @@ export function initLanguageSwitch(onChange) {
 
     language = nextLanguage;
     if (persist) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", language);
+      window.history.replaceState(window.history.state, "", url);
       try {
         window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
       } catch {

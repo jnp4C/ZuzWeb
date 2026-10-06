@@ -3,7 +3,7 @@ import {
   getLanguage,
   getLocalizedText,
   initLanguageSwitch,
-} from "./language.js";
+} from "./language.js?v=2026-10-06-inherited-language";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
 
 const projectGroups = {
@@ -344,8 +344,8 @@ function createProjectIndexItem(project, order) {
   link.className = "project-index-link";
   link.style.setProperty("--project-order", `${order}`);
   link.href = project.projectPage?.layout === "concise"
-    ? `./project.html?project=${encodeURIComponent(projectSlug)}`
-    : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
+    ? `./project.html?project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`
+    : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`;
   link.addEventListener("pointerenter", () => {
     updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {

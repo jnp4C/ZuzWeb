@@ -165,8 +165,3 @@
 .concise-project-page .index-layout-header .concise-project-nav-triangles i { border-top-width: 8px; border-bottom-width: 8px; }
 .concise-project-page .index-layout-header .concise-project-nav-link--next i { border-left-width: 7.47px; }
 .concise-project-page .index-layout-header .concise-project-nav-link--previous i { border-right-width: 7.47px; }
-@media (max-width: 480px) {
-  .concise-project-page .index-layout-header,
-  .concise-project-page .index-header-actions,
-  .concise-project-page .index-layout-header .concise-project-nav { gap: 5px; }
-}

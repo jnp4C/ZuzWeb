@@ -396,3 +396,9 @@
 @media (prefers-reduced-motion: reduce) {
   .concise-project-page .project-image-lightbox-title.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
 }
+
+/* Use the measured spine position for the floating home icon at every width. */
+.concise-project-page .concise-project.is-project-nav-floating .concise-project-back {
+  left: var(--project-floating-star-left);
+  transform: translateX(-50%);
+}

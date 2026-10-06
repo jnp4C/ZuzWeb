@@ -10,7 +10,7 @@
   --mobile-display-size: var(--type-medium);
   background: #fff;
 }
-.index-page .background-animation { display: none; }
+/* Keep the original animated contour background visible behind the new layout. */
 .index-page .index-layout-header {
   --header-control-size: 30px;
   --header-content-offset: 45px;

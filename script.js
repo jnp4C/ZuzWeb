@@ -469,6 +469,7 @@ function renderProjectIndex(projects) {
 }
 
 async function init() {
+  renderRandomIndexBackground();
   initIndexHeader();
   initProjectsToggle();
   initInfoToggle();

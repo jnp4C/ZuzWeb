@@ -800,18 +800,20 @@ function renderProject(animateFacts = false) {
 
   const heading = document.createElement("header");
   heading.className = "concise-project-heading";
-  const back = document.createElement("a");
+  const back = document.createElement("span");
   back.className = "concise-project-symbol concise-project-symbol--star concise-project-back";
-  back.href = `./index.html?lang=${navigationLanguage}`;
+  const home = document.getElementById("projectHeaderHome");
+  home.href = `./index.html?lang=${navigationLanguage}`;
   back.textContent = "∗";
-  back.setAttribute("aria-label", copy.back);
-  back.addEventListener("click", () => {
+  back.setAttribute("aria-hidden", "true");
+  home.setAttribute("aria-label", copy.back);
+  home.onclick = () => {
     try {
       window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
     } catch {
       // Navigation still works when storage is unavailable.
     }
-  });
+  };
   const name = document.createElement("h1");
   name.setAttribute("aria-label", headingTitle);
   const titleTrack = document.createElement("span");

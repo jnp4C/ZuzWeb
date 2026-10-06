@@ -165,3 +165,8 @@
 .concise-project-page .index-layout-header .concise-project-nav-triangles i { border-top-width: 8px; border-bottom-width: 8px; }
 .concise-project-page .index-layout-header .concise-project-nav-link--next i { border-left-width: 7.47px; }
 .concise-project-page .index-layout-header .concise-project-nav-link--previous i { border-right-width: 7.47px; }
+
+/* The portfolio heading is the project page home link. */
+#projectHeaderHome { color: inherit; text-decoration: none; }
+#projectHeaderHome:focus-visible { outline: var(--index-connector-width) solid #000; outline-offset: 4px; }
+.concise-project-page .concise-project-back { cursor: default; }

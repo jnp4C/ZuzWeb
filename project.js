@@ -29,6 +29,7 @@ let activeLanguage = "cs";
 let navigationLanguage = getLanguage();
 let activeProject = null;
 let navigableProjects = [];
+let lightboxMediaGroups = [];
 let carouselCleanups = [];
 
 function initializeVisualViewportInset() {
@@ -246,7 +247,12 @@ function createVideo(media, className = "") {
 }
 
 function openImageLightbox(mediaItems, initialIndex) {
-  let activeIndex = initialIndex;
+  const selectedMedia = mediaItems[initialIndex];
+  const matchedGroup = lightboxMediaGroups.findIndex(group => group.some(media => media.src === selectedMedia.src));
+  const groups = matchedGroup >= 0 ? lightboxMediaGroups : [mediaItems];
+  let activeGroup = Math.max(0, matchedGroup);
+  mediaItems = groups[activeGroup];
+  let activeIndex = Math.max(0, mediaItems.findIndex(media => media.src === selectedMedia.src));
   let scale = 1;
   let translateX = 0;
   let translateY = 0;
@@ -287,24 +293,28 @@ function openImageLightbox(mediaItems, initialIndex) {
   nextTriangles.append(document.createElement("i"), document.createElement("i"));
   next.append(nextTriangles);
   next.setAttribute("aria-label", COPY[activeLanguage].nextImage);
-  previous.hidden = mediaItems.length < 2;
-  next.hidden = mediaItems.length < 2;
+  previous.hidden = groups.length < 2;
+  next.hidden = groups.length < 2;
   const pagination = document.createElement("div");
   pagination.className = "project-image-lightbox-pagination concise-project-carousel-controls";
   pagination.setAttribute("role", "group");
   pagination.setAttribute("aria-label", COPY[activeLanguage].openImage);
-  const paginationDots = mediaItems.length > 1 ? mediaItems.map((media, index) => {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.className = "concise-project-carousel-dot";
-    dot.setAttribute("aria-label", `${index + 1} / ${mediaItems.length}`);
-    dot.addEventListener("click", () => {
-      activeIndex = index;
-      renderMedia();
-    });
-    return dot;
-  }) : [];
-  pagination.append(...paginationDots);
+  let paginationDots = [];
+  const rebuildPagination = () => {
+    paginationDots = mediaItems.length > 1 ? mediaItems.map((media, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "concise-project-carousel-dot";
+      dot.setAttribute("aria-label", `${index + 1} / ${mediaItems.length}`);
+      dot.addEventListener("click", () => {
+        activeIndex = index;
+        renderMedia();
+      });
+      return dot;
+    }) : [];
+    pagination.replaceChildren(...paginationDots);
+    pagination.hidden = paginationDots.length === 0;
+  };
 
   const applyTransform = () => {
     image.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
@@ -327,7 +337,10 @@ function openImageLightbox(mediaItems, initialIndex) {
     resetTransform();
   };
   const changeMedia = (direction) => {
-    activeIndex = (activeIndex + direction + mediaItems.length) % mediaItems.length;
+    activeGroup = (activeGroup + direction + groups.length) % groups.length;
+    mediaItems = groups[activeGroup];
+    activeIndex = 0;
+    rebuildPagination();
     renderMedia();
   };
   const closeLightbox = () => dialog.close();
@@ -387,7 +400,8 @@ function openImageLightbox(mediaItems, initialIndex) {
 
   stage.append(image);
   dialog.append(stage, close, previous, next);
-  if (paginationDots.length) dialog.append(pagination);
+  dialog.append(pagination);
+  rebuildPagination();
   document.body.append(dialog);
   renderMedia();
   dialog.showModal();
@@ -820,6 +834,11 @@ function renderProject(animateFacts = false) {
   );
   const info = page.info;
   const hero = page.hero?.media;
+  const cover = hero || activeProject.index?.image;
+  lightboxMediaGroups = [
+    ...(cover?.src ? [[cover]] : []),
+    ...page.featuredSections.map(section => (section.media || []).filter(media => media.type !== "video")),
+  ].filter(group => group.length > 0);
   const fullPresentationUrl = `./year.html?year=${encodeURIComponent(activeProject.year)}&project=${encodeURIComponent(activeProject.slug)}`;
 
   document.title = `${title} | Zuzana Purmová`;

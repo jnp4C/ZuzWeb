@@ -223,3 +223,20 @@
   padding: 4px 8px;
   background: #fff;
 }
+
+/* Lightbox section navigation shares the close control's edge clearance. */
+.concise-project-page .project-image-lightbox-nav { top: 50%; transform: translateY(-50%); }
+.concise-project-page .project-image-lightbox-nav--previous { left: clamp(1rem, 3vw, 2rem); }
+.concise-project-page .project-image-lightbox-nav--next { right: clamp(1rem, 3vw, 2rem); }
+.concise-project-page .project-image-lightbox-pagination[hidden] { display: none; }
+
+.concise-project-page .project-image-lightbox-pagination .concise-project-carousel-dot {
+  position: relative;
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  min-height: 1.25rem;
+  background: transparent;
+  color: #000;
+}

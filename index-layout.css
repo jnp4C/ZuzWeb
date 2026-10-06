@@ -153,12 +153,14 @@
 .index-page .project-index-group + .project-index-group { margin-top: 30px; }
 .index-page .project-index-group h2,
 .index-page .project-index-cv .cv-section > h3 {
+  /* Align the final rotated letter with the first body line ink, not its line box. */
+  --subsection-label-ink-offset: 2.5px;
   --spine-label-width: 20px;
   grid-area: 1 / 1;
   position: relative;
   align-self: start;
   justify-self: start;
-  top: 0;
+  top: var(--subsection-label-ink-offset);
   left: -55px;
   width: 20px;
   height: auto;

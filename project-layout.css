@@ -210,3 +210,16 @@
 .concise-project-page .project-image-lightbox-close .project-index-symbol-mark::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
+
+.concise-project-page .project-image-lightbox-pagination {
+  position: fixed;
+  z-index: 2;
+  bottom: clamp(1rem, 3vw, 2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: calc(100% - 2rem);
+  padding: 4px 8px;
+  background: #fff;
+}

@@ -289,9 +289,22 @@ function openImageLightbox(mediaItems, initialIndex) {
   next.setAttribute("aria-label", COPY[activeLanguage].nextImage);
   previous.hidden = mediaItems.length < 2;
   next.hidden = mediaItems.length < 2;
-  const counter = document.createElement("span");
-  counter.className = "project-image-lightbox-counter";
-  counter.setAttribute("aria-live", "polite");
+  const pagination = document.createElement("div");
+  pagination.className = "project-image-lightbox-pagination concise-project-carousel-controls";
+  pagination.setAttribute("role", "group");
+  pagination.setAttribute("aria-label", COPY[activeLanguage].openImage);
+  const paginationDots = mediaItems.length > 1 ? mediaItems.map((media, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "concise-project-carousel-dot";
+    dot.setAttribute("aria-label", `${index + 1} / ${mediaItems.length}`);
+    dot.addEventListener("click", () => {
+      activeIndex = index;
+      renderMedia();
+    });
+    return dot;
+  }) : [];
+  pagination.append(...paginationDots);
 
   const applyTransform = () => {
     image.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
@@ -307,7 +320,10 @@ function openImageLightbox(mediaItems, initialIndex) {
     image.srcset = media.zoomSrc ? "" : (media.srcset || "");
     image.src = media.zoomSrc || media.src;
     image.alt = getLocalizedText(media.alt, activeLanguage);
-    counter.textContent = `${activeIndex + 1} / ${mediaItems.length}`;
+    paginationDots.forEach((dot, index) => {
+      dot.classList.toggle("is-selected", index === activeIndex);
+      dot.setAttribute("aria-current", String(index === activeIndex));
+    });
     resetTransform();
   };
   const changeMedia = (direction) => {
@@ -370,7 +386,8 @@ function openImageLightbox(mediaItems, initialIndex) {
   image.addEventListener("pointercancel", releasePointer);
 
   stage.append(image);
-  dialog.append(stage, close, previous, next, counter);
+  dialog.append(stage, close, previous, next);
+  if (paginationDots.length) dialog.append(pagination);
   document.body.append(dialog);
   renderMedia();
   dialog.showModal();

@@ -487,6 +487,16 @@ function initConnectorGaps() {
   const labels = Array.from(document.querySelectorAll(".project-index-group h2, .cv-section > h3"));
   function update() {
     const contentScale = getIndexContentScale();
+    const pixelRatio = window.devicePixelRatio || 1;
+    // Align every connector edge to the same device pixel grid after content zoom.
+    [header, projectIndex, projectsToggle, infoToggle, cvToggle].filter(Boolean).forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const control = element.matches("button");
+      const x = rect.left + (control ? 15 * contentScale : 0);
+      const y = rect.top + 15 * contentScale;
+      element.style.setProperty("--connector-x-adjust", `${(Math.round(x * pixelRatio) / pixelRatio - x) / contentScale}px`);
+      element.style.setProperty("--connector-y-adjust", `${(Math.round(y * pixelRatio) / pixelRatio - y) / contentScale}px`);
+    });
     if (header && title) {
       const fullTitle = title.querySelector(".index-header-full-title");
       const actions = header.querySelector(".index-header-actions");

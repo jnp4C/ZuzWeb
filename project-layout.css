@@ -3,7 +3,7 @@
   --project-control-size: calc(30px * var(--index-content-scale));
   --project-display-size: calc(20px * var(--index-content-scale));
   --project-copy-size: calc(10px * var(--index-content-scale));
-  --project-layout-offset: calc(45px * var(--index-content-scale));
+  --project-layout-offset: calc(var(--index-content-offset) * var(--index-content-scale));
   --project-line-width: calc(var(--index-connector-width) * var(--index-content-scale));
 }
 .concise-project-page .concise-project-shell {
@@ -373,4 +373,8 @@
 .concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track > span:last-child { display: block; }
 @media (prefers-reduced-motion: reduce) {
   .concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
+}
+
+@media (max-width: 780px) {
+  .concise-project-page .concise-project-footer button { gap: 19.5px; }
 }

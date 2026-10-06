@@ -8,6 +8,7 @@
   --type-medium: 20px;
   --type-large: 40px;
   --index-page-gutter: 45px;
+  --index-content-offset: 45px;
   --mobile-control-size: 30px;
   --mobile-display-size: var(--type-medium);
   background: #fff;
@@ -15,10 +16,10 @@
 /* Keep the original animated contour background visible behind the new layout. */
 .index-page .index-layout-header {
   --header-control-size: 30px;
-  --header-content-offset: 45px;
+  --header-content-offset: var(--index-content-offset);
   min-height: 30px;
   margin: 30px var(--index-page-gutter) 30px;
-  padding-left: 45px;
+  padding-left: var(--index-content-offset);
   flex-wrap: nowrap;
   gap: 15px;
 }
@@ -35,7 +36,7 @@
 .index-page .index-header-help-text { font-size: var(--type-small); padding: 15px; border: 0; box-shadow: inset 0 0 0 var(--index-connector-width) #000; }
 .index-page main { padding-inline: var(--index-page-gutter); padding-bottom: 90px; }
 .index-page .project-index {
-  --drawer-row-start: 45px;
+  --drawer-row-start: var(--index-content-offset);
   --index-menu-width: 100%;
   --index-drawer-heading-size: var(--type-medium);
   --index-section-heading-size: var(--type-medium);
@@ -61,7 +62,7 @@
   min-height: 30px;
   height: 30px;
   margin-left: 0;
-  padding: 0 0 0 45px;
+  padding: 0 0 0 var(--index-content-offset);
   overflow: visible;
   animation: none !important;
 }
@@ -148,7 +149,7 @@
 .index-page .project-index :is(.project-index-projects-panel-inner, .project-index-info-content-inner, .project-index-cv-content-inner) {
   min-height: 0;
   margin: 0;
-  padding: 0 0 0 45px;
+  padding: 0 0 0 var(--index-content-offset);
   overflow: hidden;
   transition: padding 700ms cubic-bezier(.45,0,.2,1);
 }
@@ -239,7 +240,7 @@
 .index-page .project-index-info-row dd { font-weight: 700; overflow-wrap: anywhere; }
 .index-page .project-index .project-index-cv-content.is-open .project-index-cv-content-inner { padding-block: 30px 0; }
 .index-page .project-index .project-index-cv-content.is-open .project-index-cv-content-inner { overflow: visible; }
-.index-page .project-index-cv .cv-section { --cv-section-indent: 45px; display: grid; min-height: 0; padding: 0; }
+.index-page .project-index-cv .cv-section { --cv-section-indent: var(--index-content-offset); display: grid; min-height: 0; padding: 0; }
 .index-page .project-index-cv .cv-section + .cv-section { margin-top: 30px; }
 .index-page .project-index-cv .cv-section-content { grid-area: 1 / 1; display: grid; gap: 15px; }
 .index-page .project-index .project-index-cv .cv-entry { font-size: var(--type-small); line-height: 15px; margin: 0; animation: none !important; }
@@ -249,7 +250,7 @@
 .index-page .project-index-cv mark { padding: 0 1px; }
 .index-page .project-index-cv .cv-section[aria-labelledby="cvExperienceTitle"] .cv-section-content { display: grid; gap: 15px; }
 @media (max-width: 780px) {
-  .index-page { --index-page-gutter: 30px; }
+  .index-page { --index-page-gutter: 22.5px; --index-content-offset: 30px; }
   .index-page .project-index .project-index-info-content-inner { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .index-page .project-index-info .intro { grid-column: 1; grid-row: 2; }
   .index-page .project-index-info-row { gap: 0 10px; }

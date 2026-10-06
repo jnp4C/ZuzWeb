@@ -351,3 +351,5 @@
 
 /* Compact info shares the CV experience entry spacing. */
 .concise-project-page .concise-project-facts.is-stacked { gap: 19.5px; }
+
+.concise-project-page .concise-project-fact.is-stacked { row-gap: 0; }

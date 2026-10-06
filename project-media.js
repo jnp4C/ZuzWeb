@@ -76,7 +76,7 @@ const CURATED_MEDIA = {
   semnevision: {
     hero: media("semnevice", "index", "Semněvice landscape concept sketch", "Skica koncepce krajiny Semněvic"),
     sections: [
-      section("iso", "graphic", "ISO", "ISO", [
+      section("iso", "graphic", "ISO", "Vrstvy analýz", [
         {
           src: "./assets/project-pages/semnevice/iso-1800.webp",
           srcset: "./assets/project-pages/semnevice/iso-1200.webp 1200w, ./assets/project-pages/semnevice/iso-1800.webp 1800w",

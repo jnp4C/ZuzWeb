@@ -312,3 +312,17 @@
 @media (prefers-reduced-motion: reduce) {
   .concise-project-page .concise-project-footer .project-index-symbol-mark { transition: none; }
 }
+
+/* Keep the download box square, including its flex allocation. */
+.concise-project-page .concise-project-footer:is(.has-download, .is-presentation-open) .concise-project-pdf-download {
+  flex: 0 0 var(--project-control-size);
+  width: var(--project-control-size);
+  min-width: var(--project-control-size);
+  max-width: var(--project-control-size);
+  height: var(--project-control-size);
+  min-height: var(--project-control-size);
+  aspect-ratio: 1;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}

@@ -1,3 +1,4 @@
+import { initIndexHeader, updateSharedHeaderGeometry, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-06-project-layout";
 import {
   getLanguage,
   getLocalizedText,
@@ -281,39 +282,6 @@ function initCvToggle() {
   });
 }
 
-function initIndexHeader() {
-  const help = document.querySelector('.index-header-help');
-  const toggle = document.getElementById('headerHelpToggle');
-  const panel = document.getElementById('headerHelpText');
-  if (!help || !toggle || !panel) return;
-  const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-  let dismissed = false;
-  const setOpen = (open) => {
-    panel.hidden = !open;
-    toggle.setAttribute('aria-expanded', String(open));
-  };
-  help.addEventListener('pointerenter', () => {
-    dismissed = false;
-    if (hoverPointer.matches) setOpen(true);
-  });
-  help.addEventListener('pointerleave', () => {
-    if (hoverPointer.matches && !help.contains(document.activeElement)) setOpen(false);
-  });
-  help.addEventListener('focusin', () => { if (!dismissed && (hoverPointer.matches || toggle.matches(":focus-visible"))) setOpen(true); });
-  help.addEventListener('focusout', (event) => {
-    if (!help.contains(event.relatedTarget)) { dismissed = false; setOpen(false); }
-  });
-  toggle.addEventListener('click', () => {
-    if (!hoverPointer.matches) setOpen(panel.hidden);
-    else { dismissed = false; setOpen(true); }
-  });
-  document.addEventListener('pointerdown', (event) => {
-    if (!help.contains(event.target)) setOpen(false);
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') { dismissed = true; setOpen(false); }
-  });
-}
 
 function createLocalizedText(value) {
   // Use authored Czech index copy in both modes until English copy is supplied.
@@ -497,20 +465,7 @@ function initConnectorGaps() {
       element.style.setProperty("--connector-x-adjust", `${(Math.round(x * pixelRatio) / pixelRatio - x) / contentScale}px`);
       element.style.setProperty("--connector-y-adjust", `${(Math.round(y * pixelRatio) / pixelRatio - y) / contentScale}px`);
     });
-    if (header && title) {
-      const fullTitle = title.querySelector(".index-header-full-title");
-      const actions = header.querySelector(".index-header-actions");
-      const headerStyle = getComputedStyle(header);
-      const available = header.clientWidth - parseFloat(headerStyle.paddingLeft) - actions.getBoundingClientRect().width / contentScale - parseFloat(headerStyle.columnGap);
-      const compact = fullTitle.getBoundingClientRect().width / contentScale > available;
-      header.classList.toggle("is-compact", compact);
-      fullTitle.setAttribute("aria-hidden", String(compact));
-      title.querySelector(".index-header-short-title").setAttribute("aria-hidden", String(!compact));
-      const headerRect = header.getBoundingClientRect();
-      const titleRect = title.getBoundingClientRect();
-      header.style.setProperty("--header-connector-mask",
-        `linear-gradient(to right, #000 ${(titleRect.left - headerRect.left) / contentScale}px, transparent ${(titleRect.left - headerRect.left) / contentScale}px, transparent ${(titleRect.right - headerRect.left) / contentScale}px, #000 ${(titleRect.right - headerRect.left) / contentScale}px)`);
-    }
+    updateSharedHeaderGeometry();
     if (!projectIndex) return;
     const spineTop = projectIndex.getBoundingClientRect().top + 30 * contentScale;
     const gaps = labels.flatMap((label) => {
@@ -562,15 +517,7 @@ async function init() {
 
 initLanguageSwitch((language) => {
   activeLanguage = language;
-  const languageToggle = document.getElementById('headerLanguageToggle');
-  if (languageToggle) {
-    const target = language === 'cs' ? 'en' : 'cs';
-    languageToggle.dataset.language = target;
-    languageToggle.textContent = target === 'cs' ? 'CZ' : 'EN';
-    languageToggle.setAttribute('aria-label', target === 'cs' ? 'Switch to Czech' : 'Přepnout do angličtiny');
-    languageToggle.removeAttribute('aria-pressed');
-    languageToggle.classList.remove('is-active');
-  }
+  updateHeaderLanguageToggle(language);
   if (indexProjects.length > 0) {
     renderProjectIndex(indexProjects);
   }

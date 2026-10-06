@@ -1,3 +1,4 @@
+import { initProjectHeader, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-06-project-layout";
 import {
   getLanguage,
   getLocalizedProjectText,
@@ -24,7 +25,7 @@ const backgroundAnimation = document.querySelector(".concise-project-background"
 const signatureAnimation = document.querySelector(".signature-animation");
 const signatureNameplate = signatureAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
-let activeLanguage = getLanguage();
+let activeLanguage = "cs";
 let activeProject = null;
 let navigableProjects = [];
 let carouselCleanups = [];
@@ -835,31 +836,6 @@ function renderProject(animateFacts = false) {
   );
   heading.append(back, name, projectNavigation);
 
-  const updateTitleCarousel = () => {
-    const usesCompactTitle = window.matchMedia("(max-width: 1024px)").matches;
-    const nameStyle = window.getComputedStyle(name);
-    const availableWidth = name.clientWidth
-      - Number.parseFloat(nameStyle.paddingLeft)
-      - Number.parseFloat(nameStyle.paddingRight);
-    const titleWidth = titleText.getBoundingClientRect().width;
-    const shouldScroll = usesCompactTitle && titleWidth > availableWidth + 1;
-    name.classList.toggle("is-title-scrolling", shouldScroll);
-    if (shouldScroll) {
-      name.style.setProperty("--title-marquee-duration", `${Math.max(9, titleWidth / 32)}s`);
-    } else {
-      name.style.removeProperty("--title-marquee-duration");
-    }
-  };
-  const titleObserver = new ResizeObserver(updateTitleCarousel);
-  titleObserver.observe(name);
-  titleObserver.observe(titleText);
-  window.addEventListener("resize", updateTitleCarousel);
-  carouselCleanups.push(() => {
-    titleObserver.disconnect();
-    window.removeEventListener("resize", updateTitleCarousel);
-  });
-  window.requestAnimationFrame(updateTitleCarousel);
-
   const scrollTop = document.createElement("button");
   scrollTop.type = "button";
   scrollTop.className = "concise-project-symbol concise-project-scroll-top";
@@ -1213,6 +1189,24 @@ function renderProject(animateFacts = false) {
 
   article.append(heading, intro, featured, footer, fullPresentation);
   projectRoot.append(article, scrollTop);
+  const updateSpineGaps = () => {
+    const top = article.getBoundingClientRect().top + parseFloat(getComputedStyle(article, "::before").top);
+    const stops = ["#000 0px"];
+    article.querySelectorAll(".concise-project-spine-label").forEach((label) => {
+      const rect = label.getBoundingClientRect();
+      const start = Math.max(0, rect.top - top - 3.9);
+      const end = Math.max(start, rect.bottom - top + 3.9);
+      stops.push(`#000 ${start}px`, `transparent ${start}px`, `transparent ${end}px`, `#000 ${end}px`);
+    });
+    stops.push("#000 100%");
+    article.style.setProperty("--project-spine-mask", `linear-gradient(to bottom, ${stops.join(", ")})`);
+  };
+  const gapObserver = new ResizeObserver(updateSpineGaps);
+  gapObserver.observe(article);
+  article.querySelectorAll(".concise-project-spine-label").forEach((label) => gapObserver.observe(label));
+  document.fonts?.ready.then(updateSpineGaps);
+  carouselCleanups.push(() => gapObserver.disconnect());
+  updateSpineGaps();
 
   if (hasPresentationContent) {
     let previousSpineHeight = -1;
@@ -1265,10 +1259,12 @@ async function initializeProject() {
   renderProject(true);
 }
 
+initProjectHeader();
 initializeVisualViewportInset();
 
 initLanguageSwitch((language) => {
-  activeLanguage = language;
+  activeLanguage = "cs";
+  updateHeaderLanguageToggle(language);
   if (activeProject) {
     renderProject(false);
   }

@@ -353,3 +353,6 @@
 .concise-project-page .concise-project-facts.is-stacked { gap: 19.5px; }
 
 .concise-project-page .concise-project-fact.is-stacked { row-gap: 0; }
+
+.concise-project-page .concise-project-section > h2 { white-space: nowrap; overflow-wrap: normal; }
+.concise-project-page .concise-project-section.is-feature-label-hidden > h2 { visibility: hidden; }

@@ -618,7 +618,13 @@ function connectSectionToFrame(section, figure) {
       ? Number.parseFloat(getComputedStyle(project).getPropertyValue("--project-spine-x")) || 0
       : 0;
     const label = section.querySelector(":scope > h2");
-    const labelRect = label?.getBoundingClientRect();
+    const range = document.createRange();
+    if (label) range.selectNodeContents(label);
+    const naturalLabelWidth = label ? range.getBoundingClientRect().width : 0;
+    const labelFits = naturalLabelWidth <= sectionRect.width * 0.35;
+    section.classList.toggle("is-feature-label-hidden", !labelFits);
+    const labelRect = labelFits ? label?.getBoundingClientRect() : null;
+    if (!labelRect) section.style.setProperty("--feature-connector-mask", "none");
     const textClearance = 6.5;
     const beforeLength = labelRect ? Math.max(0, labelRect.left - sectionRect.left - spineX - textClearance) : 0;
     const afterLength = beforeLength / 2;

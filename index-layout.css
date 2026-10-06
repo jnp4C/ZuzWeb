@@ -366,3 +366,12 @@
 .index-mobile-help-ticker { color: #808080; }
 .index-mobile-help-dot { border-color: currentColor; background: currentColor; }
 .index-mobile-help-copy em { font-style: italic; }
+
+@media (width < 700px) {
+  .index-mobile-help-ticker {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 19.5px;
+  }
+}

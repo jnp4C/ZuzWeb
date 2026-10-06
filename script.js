@@ -521,7 +521,7 @@ function initMobileHelpTicker() {
     track.append(copy);
   }
   ticker.append(track);
-  header.before(ticker);
+  document.body.append(ticker);
 }
 
 async function init() {

@@ -246,10 +246,6 @@
 .index-page .project-index-cv .cv-section[aria-labelledby="cvExperienceTitle"] .cv-section-content { display: grid; gap: 15px; }
 @media (max-width: 600px) {
   .index-page { --index-page-gutter: 30px; }
-  .index-page .index-layout-header { flex-wrap: wrap; }
-  .index-page .index-layout-header h1 { flex: 1 1 100%; }
-  .index-page .index-layout-header::before { top: calc(100% - 15px); }
-  .index-page .index-layout-header::after { top: calc(100% - 15px); }
   .index-page .project-index .project-index-info-content-inner { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .index-page .project-index-info .intro { grid-column: 1; grid-row: 2; }
   .index-page .project-index-info-row { gap: 0 10px; }
@@ -312,3 +308,15 @@
   }
   .index-page .project-index-list { gap: 30px; }
 }
+
+.index-page .index-layout-header h1 { flex: 0 0 auto; white-space: nowrap; }
+.index-page .index-header-actions { margin-left: auto; }
+.index-header-full-title { display: inline-block; white-space: nowrap; }
+.index-header-short-title { display: none; }
+.index-layout-header.is-compact .index-header-full-title {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  width: max-content;
+}
+.index-layout-header.is-compact .index-header-short-title { display: inline; }

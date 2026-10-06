@@ -482,10 +482,17 @@ function initConnectorGaps() {
   const labels = Array.from(document.querySelectorAll(".project-index-group h2, .cv-section > h3"));
   function update() {
     if (header && title) {
+      const fullTitle = title.querySelector(".index-header-full-title");
+      const actions = header.querySelector(".index-header-actions");
+      const headerStyle = getComputedStyle(header);
+      const available = header.clientWidth - parseFloat(headerStyle.paddingLeft) - actions.getBoundingClientRect().width - parseFloat(headerStyle.columnGap);
+      const compact = fullTitle.getBoundingClientRect().width > available;
+      header.classList.toggle("is-compact", compact);
+      fullTitle.setAttribute("aria-hidden", String(compact));
+      title.querySelector(".index-header-short-title").setAttribute("aria-hidden", String(!compact));
       const headerRect = header.getBoundingClientRect();
       const titleRect = title.getBoundingClientRect();
-      const wraps = window.matchMedia("(max-width: 600px)").matches;
-      header.style.setProperty("--header-connector-mask", wraps ? "none" :
+      header.style.setProperty("--header-connector-mask",
         `linear-gradient(to right, #000 ${titleRect.left - headerRect.left}px, transparent ${titleRect.left - headerRect.left}px, transparent ${titleRect.right - headerRect.left}px, #000 ${titleRect.right - headerRect.left}px)`);
     }
     if (!projectIndex) return;

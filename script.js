@@ -340,23 +340,28 @@ function getProjectIndexMedia(project) {
 }
 
 function updateProjectPreviewPlacements() {
-  document.querySelectorAll(".project-index-link:has(.project-index-link-preview)").forEach((link) => {
-    const textParts = Array.from(link.children)
-      .filter((child) => !child.classList.contains("project-index-link-preview"));
-    const textRight = Math.max(...textParts.map((part) => part.getBoundingClientRect().right));
-    const availableRight = window.innerWidth - textRight - 24;
+  const links = Array.from(document.querySelectorAll(".project-index-link:has(.project-index-link-preview)"));
+  const inline = window.innerWidth <= 900 || window.matchMedia("(hover: none), (pointer: coarse)").matches;
+  const textRects = links.map((link) => Array.from(link.children)
+    .filter((child) => !child.classList.contains("project-index-link-preview"))
+    .map((part) => part.getBoundingClientRect()));
+  // Reserve the entire text column so a tall preview cannot cover another row.
+  const columnRight = Math.max(0, ...textRects.flat().map((rect) => rect.right));
+  links.forEach((link, index) => {
+    const rects = textRects[index];
+    const centerY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
+    const left = columnRight + 30;
+    const heightLimit = Math.max(0, Math.min(340, 2 * (centerY - 75), 2 * (window.innerHeight - centerY - 24)));
+    const widthLimit = Math.max(0, Math.min(540, window.innerWidth * 0.38, window.innerWidth - left - 24));
+    const image = link.querySelector(".project-index-link-preview img");
+    const ratio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : 1;
+    const width = Math.min(widthLimit, heightLimit * ratio);
     const linkRect = link.getBoundingClientRect();
-    const linkCenterY = linkRect.top + (linkRect.height / 2);
-    const availableHalfHeight = Math.max(
-      0,
-      Math.min(linkCenterY - 24, window.innerHeight - linkCenterY - 24),
-    );
-    link.style.setProperty("--project-preview-side-width", `${Math.max(0, availableRight)}px`);
-    link.style.setProperty("--project-preview-side-height", `${availableHalfHeight * 2}px`);
-    link.classList.toggle(
-      "has-side-preview",
-      window.innerWidth > 720 && availableRight > 0,
-    );
+    link.style.setProperty("--project-preview-left", `${left - linkRect.left}px`);
+    link.style.setProperty("--project-preview-center", `${centerY - linkRect.top}px`);
+    link.style.setProperty("--project-preview-width", `${width}px`);
+    link.style.setProperty("--project-preview-height", `${width / ratio}px`);
+    link.classList.toggle("has-side-preview", !inline && width > 0);
   });
 }
 
@@ -375,6 +380,7 @@ function createProjectIndexItem(project, order) {
     }
   });
   link.addEventListener("focus", () => {
+    updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
     }
@@ -425,6 +431,7 @@ function createProjectIndexItem(project, order) {
     previewImage.sizes = "(max-width: 760px) 90vw, min(70vw, 46rem)";
     previewImage.alt = "";
     previewImage.loading = "lazy";
+    previewImage.addEventListener("load", updateProjectPreviewPlacements);
     preview.append(previewImage);
     link.append(preview);
   }
@@ -518,6 +525,7 @@ async function init() {
   initInfoToggle();
   initCvToggle();
   window.addEventListener("resize", updateProjectPreviewPlacements);
+  window.addEventListener("scroll", updateProjectPreviewPlacements, { passive: true });
 
   const response = await fetch(`./data/projects.json?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });
   if (!response.ok) {

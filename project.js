@@ -574,7 +574,15 @@ function connectSectionToFrame(section, figure) {
     const spineX = project
       ? Number.parseFloat(getComputedStyle(project).getPropertyValue("--project-spine-x")) || 0
       : 0;
-    section.style.setProperty("--feature-label-clearance", "0px");
+    const label = section.querySelector(":scope > h2");
+    const labelRect = label?.getBoundingClientRect();
+    const gap = 13;
+    section.style.setProperty("--feature-label-clearance", `${labelRect ? labelRect.width + gap : 0}px`);
+    if (labelRect) {
+      const start = Math.max(0, labelRect.left - sectionRect.left - spineX - gap / 2);
+      const end = labelRect.right - sectionRect.left - spineX + gap / 2;
+      section.style.setProperty("--feature-connector-mask", `linear-gradient(to right, #000 0px, #000 ${start}px, transparent ${start}px, transparent ${end}px, #000 ${end}px, #000 100%)`);
+    }
     section.style.setProperty(
       "--feature-connector-top",
       `${viewportRect.top - sectionRect.top + (viewportRect.height / 2)}px`,
@@ -588,6 +596,8 @@ function connectSectionToFrame(section, figure) {
   const observer = new ResizeObserver(updateConnector);
   observer.observe(section);
   observer.observe(figure);
+  const label = section.querySelector(":scope > h2");
+  if (label) observer.observe(label);
   carouselCleanups.push(() => observer.disconnect());
   window.requestAnimationFrame(updateConnector);
 }
@@ -1025,7 +1035,7 @@ function renderProject(animateFacts = false) {
     const figure = section.presentation === "day-night-fade"
       ? createDayNightFade(mediaItems, localizedSectionLabel, sectionHeading)
       : createMediaCarousel(mediaItems, localizedSectionLabel, sectionHeading);
-    block.append(figure);
+    block.append(sectionHeading, figure);
     featured.append(block);
     connectSectionToFrame(block, figure);
   });

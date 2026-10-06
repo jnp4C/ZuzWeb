@@ -169,3 +169,32 @@
 /* The portfolio heading is the project page home link. */
 #projectHeaderHome { color: inherit; text-decoration: none; }
 #projectHeaderHome:focus-visible { outline: var(--index-connector-width) solid #000; outline-offset: 4px; }
+
+/* Featured labels occupy the connector before the contained image. */
+.concise-project-page .concise-project-section {
+  padding-left: calc(var(--project-body-start) + var(--feature-label-clearance));
+}
+.concise-project-page .concise-project-section > h2 {
+  position: absolute;
+  left: var(--project-body-start);
+  top: var(--feature-connector-top, 50%);
+  transform: translateY(-50%);
+  width: max-content;
+  max-width: 35%;
+  overflow-wrap: anywhere;
+  font-family: var(--font-heading);
+  font-size: var(--project-display-size);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: lowercase;
+}
+.concise-project-page .concise-project-section::before {
+  width: var(--feature-connector-width);
+  mask-image: var(--feature-connector-mask);
+}
+.concise-project-page .concise-project-section:nth-child(n) figure {
+  width: 100%;
+  max-width: 68rem;
+  min-width: 0;
+  margin-left: 0;
+}

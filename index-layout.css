@@ -370,14 +370,21 @@
 
 @media (width < 700px) {
   .index-mobile-help-ticker {
-    position: relative;
+    position: fixed;
     top: auto;
-    left: auto;
-    margin-top: 19.5px;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    margin: 0;
+    background: var(--surface);
+    padding-bottom: calc(3px + env(safe-area-inset-bottom, 0px));
   }
 }
 
 @media (width < 700px) {
+  .index-page:not(.concise-project-page) {
+    padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  }
   .index-page { --index-page-gutter: 22.5px; --index-content-offset: 30px; }
 }
 

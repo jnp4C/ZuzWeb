@@ -169,4 +169,3 @@
 /* The portfolio heading is the project page home link. */
 #projectHeaderHome { color: inherit; text-decoration: none; }
 #projectHeaderHome:focus-visible { outline: var(--index-connector-width) solid #000; outline-offset: 4px; }
-.concise-project-page .concise-project-back { cursor: default; }

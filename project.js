@@ -800,12 +800,13 @@ function renderProject(animateFacts = false) {
 
   const heading = document.createElement("header");
   heading.className = "concise-project-heading";
-  const back = document.createElement("span");
+  const back = document.createElement("a");
   back.className = "concise-project-symbol concise-project-symbol--star concise-project-back";
   const home = document.getElementById("projectHeaderHome");
   home.href = `./index.html?lang=${navigationLanguage}`;
   back.textContent = "∗";
-  back.setAttribute("aria-hidden", "true");
+  back.href = home.href;
+  back.setAttribute("aria-label", copy.back);
   home.setAttribute("aria-label", copy.back);
   home.onclick = () => {
     try {
@@ -814,6 +815,7 @@ function renderProject(animateFacts = false) {
       // Navigation still works when storage is unavailable.
     }
   };
+  back.onclick = home.onclick;
   const name = document.createElement("h1");
   name.setAttribute("aria-label", headingTitle);
   const titleTrack = document.createElement("span");

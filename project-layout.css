@@ -129,7 +129,7 @@
   background: #000;
   pointer-events: none;
 }
-.concise-project-page .concise-project-heading h1 { min-width: min(175.5px, calc(100% - var(--project-body-start))); }
+.concise-project-page .concise-project-heading h1 { min-width: 0; }
 .concise-project-page .concise-project-fact { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
 .concise-project-page .concise-project-fact dt { overflow-wrap: anywhere; color: #000; font-weight: 400; text-transform: lowercase; }
 .concise-project-page .project-image-lightbox-close .project-index-symbol-mark { width: 20.8px; height: 20.8px; }

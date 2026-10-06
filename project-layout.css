@@ -356,3 +356,21 @@
 
 .concise-project-page .concise-project-section > h2 { white-space: nowrap; overflow-wrap: normal; }
 .concise-project-page .concise-project-section.is-feature-label-hidden > h2 { visibility: hidden; }
+
+.concise-project-page .concise-project-footer > button { flex: 1 1 auto; min-width: 0; }
+.concise-project-page .concise-project-footer > button > .concise-project-symbol { flex: 0 0 var(--project-control-size); }
+.concise-project-page .concise-project-footer .concise-project-presentation-label {
+  min-width: 0;
+  width: max-content;
+  overflow: hidden;
+  white-space: nowrap;
+  --title-marquee-gap: 26px;
+}
+.concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track {
+  gap: var(--title-marquee-gap);
+  animation: concise-project-title-carousel var(--title-marquee-duration, 12s) linear infinite;
+}
+.concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track > span:last-child { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
+}

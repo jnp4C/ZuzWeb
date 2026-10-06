@@ -1149,7 +1149,25 @@ function renderProject(animateFacts = false) {
   presentationMark.className = "project-index-symbol-mark";
   plus.append(presentationMark);
   const presentationLabel = document.createElement("span");
-  presentationLabel.textContent = activeLanguage === "cs" ? "Prezentace" : "Presentation";
+  presentationLabel.className = "concise-project-presentation-label";
+  const presentationTrack = document.createElement("span");
+  presentationTrack.className = "concise-project-title-track";
+  const presentationText = document.createElement("span");
+  presentationText.textContent = activeLanguage === "cs" ? "Prezentace" : "Presentation";
+  const repeatedPresentationText = presentationText.cloneNode(true);
+  repeatedPresentationText.setAttribute("aria-hidden", "true");
+  presentationTrack.append(presentationText, repeatedPresentationText);
+  presentationLabel.append(presentationTrack);
+  const updatePresentationCarousel = () => {
+    if (!presentationLabel.isConnected) return;
+    const textWidth = presentationText.getBoundingClientRect().width;
+    presentationLabel.classList.toggle("is-title-scrolling", textWidth > presentationLabel.clientWidth + 1);
+    presentationLabel.style.setProperty("--title-marquee-duration", `${Math.max(9, textWidth / 32)}s`);
+  };
+  const presentationObserver = new ResizeObserver(updatePresentationCarousel);
+  presentationObserver.observe(presentationLabel);
+  carouselCleanups.push(() => presentationObserver.disconnect());
+  document.fonts?.ready.then(updatePresentationCarousel);
   presentation.append(plus, presentationLabel);
   if (hasPresentationContent) {
     footer.append(presentation);

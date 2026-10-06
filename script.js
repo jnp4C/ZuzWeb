@@ -314,7 +314,7 @@ function getIndexContentScale() {
 function updateProjectPreviewPlacements() {
   const contentScale = getIndexContentScale();
   const links = Array.from(document.querySelectorAll(".project-index-link:has(.project-index-link-preview)"));
-  const inline = window.innerWidth / contentScale <= 900 || window.matchMedia("(hover: none), (pointer: coarse)").matches;
+  const inline = window.matchMedia("(width < 700px)").matches || window.matchMedia("(hover: none), (pointer: coarse)").matches;
   const textRects = links.map((link) => Array.from(link.children)
     .filter((child) => !child.classList.contains("project-index-link-preview"))
     .map((part) => part.getBoundingClientRect()));

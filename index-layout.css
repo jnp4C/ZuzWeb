@@ -285,7 +285,7 @@
   max-height: none;
   object-position: center;
 }
-@media (max-width: 1170px), (hover: none), (pointer: coarse) {
+@media (width < 700px), (hover: none), (pointer: coarse) {
   .index-page .project-index-link { width: 100%; }
   .index-page .project-index-link .project-index-link-preview {
     display: block !important;

@@ -1,4 +1,4 @@
-import { initProjectHeader, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-06-project-layout";
+import { initProjectHeader, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-06-header-navigation";
 import {
   getLanguage,
   getLocalizedProjectText,
@@ -834,7 +834,8 @@ function renderProject(animateFacts = false) {
     createProjectNavigationLink(previousProject, "previous", copy.previousProject),
     createProjectNavigationLink(nextProject, "next", copy.nextProject),
   );
-  heading.append(back, name, projectNavigation);
+  heading.append(back, name);
+  document.getElementById("headerProjectNavigation").replaceChildren(projectNavigation);
 
   const updateTitleCarousel = () => {
     const nameStyle = window.getComputedStyle(name);

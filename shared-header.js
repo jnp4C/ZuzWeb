@@ -68,6 +68,7 @@ export function initProjectHeader() {
   const observer = new ResizeObserver(updateSharedHeaderGeometry);
   observer.observe(header);
   observer.observe(header.querySelector("h1"));
+  observer.observe(header.querySelector(".index-header-actions"));
   document.fonts?.ready.then(updateSharedHeaderGeometry);
   window.addEventListener("resize", updateSharedHeaderGeometry);
   updateSharedHeaderGeometry();

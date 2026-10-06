@@ -8,7 +8,7 @@ image carousels, and optional animated presentations.
 Clone the repository and check out the finishing branch:
 
 ```bash
-git clone --branch design-final-touch https://github.com/jnp4C/ZuzWeb.git
+git clone --branch final-static https://github.com/jnp4C/ZuzWeb.git
 cd ZuzWeb
 ```
 
@@ -16,8 +16,8 @@ For an existing clone with a clean working tree:
 
 ```bash
 git fetch origin
-git switch design-final-touch
-git pull --ff-only origin design-final-touch
+git switch final-static
+git pull --ff-only origin final-static
 ```
 
 Open this folder in your coding agent and tell it:
@@ -47,27 +47,15 @@ Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 Use HTTP because project data and PDF features do not reliably work with
 `file://`. Stop the server with Ctrl+C. If the port is busy, use 8081 instead.
 
-## Presentation previews
+## Static presentation branch
 
-Animated presentations scroll with the project page and use content-height
-scenes separated by 12px. Abstract and Growing Through assemble their pieces
-using source-page crop coordinates to preserve page proportions.
+`final-static` uses complete static PDF page images for every published full
+presentation. Pages load lazily, retain their original proportions, and scroll
+in the main document. The PDF download remains available.
 
-Compact mode displays complete PDF-derived pages, loads images lazily, and
-preserves browser pinch zoom. It is selected for reduced motion, data saving,
-reported memory of 2GB or less, or two or fewer reported logical processors.
-During animation playback it also activates after sustained slow frames while
-scrolling, an animation error, or a 15-second startup timeout. Browser hardware
-hints are approximate; runtime checks cover browsers without memory hints.
-
-To review compact mode directly, append `&presentation=compact` to a project URL,
-for example `project.html?project=abstract&presentation=compact`.
-
-PDF page exports are stored in `fullPresentation.fallbackPages`; hybrid projects
-can reuse their existing complete `pages` sequence. Rebuild exports from the
-tracked source PDFs using `python3 scripts/export-presentation-pages.py` and
-`python3 scripts/export-abstract-source-crops.py` (requires Poppler and Pillow).
-Do not replace the source PDFs with exported images.
+The dynamic implementation is preserved on `design-final-touch` for future
+animation work. Legacy scene files are retained but are not loaded by full
+presentations on this branch.
 
 ## Customize content
 

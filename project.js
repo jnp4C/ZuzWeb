@@ -7,7 +7,7 @@ import {
 } from "./language.js?v=2026-10-06-inherited-language";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-06-real-content-labels";
 
-const DATA_CACHE_VERSION = "2026-10-04-trimmed-scene-flow";
+const DATA_CACHE_VERSION = "2026-10-06-static-presentations";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -881,7 +881,6 @@ function renderProject(animateFacts = false) {
   ].filter(section => section.media.length > 0);
   lightboxMediaGroups = lightboxSections.map(section => section.media);
   lightboxGroupLabels = lightboxSections.map(section => section.label);
-  const fullPresentationUrl = `./year.html?year=${encodeURIComponent(activeProject.year)}&project=${encodeURIComponent(activeProject.slug)}`;
 
   document.title = `${title} | Zuzana Purmová`;
   projectRoot.replaceChildren();
@@ -1147,24 +1146,8 @@ function renderProject(animateFacts = false) {
   const presentationPages = Array.isArray(page.fullPresentation?.pages)
     ? page.fullPresentation.pages
     : [];
-  const fallbackPages = Array.isArray(page.fullPresentation?.fallbackPages)
-    ? page.fullPresentation.fallbackPages : presentationPages;
-  const preferCompactPresentation = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    || (navigator.deviceMemory > 0 && navigator.deviceMemory <= 2)
-    || (navigator.hardwareConcurrency > 0 && navigator.hardwareConcurrency <= 2)
-    || navigator.connection?.saveData === true
-    || new URLSearchParams(window.location.search).get("presentation") === "compact";
-  const usesPdfPresentation = page.fullPresentation?.source === "pdf";
-  const usesImageSequence = page.fullPresentation?.source === "image-sequence"
-    && presentationPages.length > 0;
-  const usesSceneAndImageSequence = page.fullPresentation?.source === "scenes-and-image-sequence"
-    && presentationPages.length > 0;
-  const hasEmbeddedPresentation = page.fullPresentation?.enabled
-    && hasPresentationFile
-    && (usesImageSequence || usesSceneAndImageSequence || usesPdfPresentation
-      || (activeProject.scenes || []).length > 0);
   const hasPresentationContent = page.fullPresentation?.enabled
-    && hasPresentationFile;
+    && hasPresentationFile && presentationPages.length > 0;
   footer.hidden = !hasPresentationContent;
   const presentation = document.createElement("button");
   presentation.type = "button";
@@ -1225,176 +1208,24 @@ function renderProject(animateFacts = false) {
   fullPresentation.id = "embeddedFullPresentation";
   fullPresentation.className = "concise-project-full-presentation";
   fullPresentation.hidden = true;
-  let presentationFrame = null;
-  let updateOuterPresentationScroll = null;
-  const appendPresentationPages = (container, pages = presentationPages, compact = false) => {
-    pages.forEach((pageMedia, index) => {
-      const pageFigure = document.createElement("figure");
-      pageFigure.className = "concise-project-presentation-page";
-      const pageImage = createImage({
-        ...pageMedia,
-        src: compact ? pageMedia.src : pageMedia.zoomSrc || pageMedia.src,
-        srcset: compact ? pageMedia.srcset || "" : "",
-      });
-      if (pageMedia.width && pageMedia.height) {
-        pageImage.width = pageMedia.width;
-        pageImage.height = pageMedia.height;
-      }
-      pageImage.sizes = "100vw";
-      pageImage.loading = index === 0 ? "eager" : "lazy";
-      pageFigure.append(pageImage);
-      container.append(pageFigure);
-    });
-  };
-  let presentationCleanup = () => {};
-  let compactPresentationActive = false;
-  const showCompactPresentation = () => {
-    if (compactPresentationActive || fallbackPages.length === 0) return;
-    compactPresentationActive = true;
-    presentationCleanup();
-    presentationFrame?.remove();
-    presentationFrame = null;
-    updateOuterPresentationScroll = null;
-    fullPresentation.replaceChildren();
-    fullPresentation.style.height = "";
-    fullPresentation.classList.remove("is-outer-scroll-driven", "concise-project-full-presentation--scenes-and-pages");
-    fullPresentation.classList.add("concise-project-full-presentation--image-sequence", "concise-project-full-presentation--compact");
-    appendPresentationPages(fullPresentation, fallbackPages, true);
-  };
-  if (preferCompactPresentation && fallbackPages.length > 0) {
-    showCompactPresentation();
-  } else if (usesImageSequence) {
-    fullPresentation.classList.add("concise-project-full-presentation--image-sequence");
-    appendPresentationPages(fullPresentation);
-  } else if (hasEmbeddedPresentation) {
-    const presentationSceneHost = usesSceneAndImageSequence
-      ? document.createElement("div")
-      : fullPresentation;
-    if (usesSceneAndImageSequence) {
-      fullPresentation.classList.add("concise-project-full-presentation--scenes-and-pages");
-      presentationSceneHost.className = "concise-project-presentation-scenes";
-      fullPresentation.append(presentationSceneHost);
+  fullPresentation.classList.add("concise-project-full-presentation--image-sequence", "concise-project-full-presentation--compact");
+  presentationPages.forEach((pageMedia, index) => {
+    const pageFigure = document.createElement("figure");
+    pageFigure.className = "concise-project-presentation-page";
+    const pageImage = createImage(pageMedia);
+    if (pageMedia.width && pageMedia.height) {
+      pageImage.width = pageMedia.width;
+      pageImage.height = pageMedia.height;
     }
-    presentationFrame = document.createElement("iframe");
-    presentationFrame.title = copy.fullPresentation;
-    presentationFrame.loading = "lazy";
-    presentationFrame.dataset.src = usesPdfPresentation
-      ? presentationDownload.href
-      : `${fullPresentationUrl}&embedded=1`;
-    if (usesPdfPresentation) {
-      presentationFrame.classList.add("concise-project-pdf-frame");
-    }
-    presentationSceneHost.append(presentationFrame);
-
-    if (usesSceneAndImageSequence) {
-      const pageSequence = document.createElement("div");
-      pageSequence.className = "concise-project-presentation-pages";
-      appendPresentationPages(pageSequence);
-      fullPresentation.append(pageSequence);
-    }
-
-    const syncOuterScroll = () => {
-      if (!presentationSceneHost.classList.contains("is-outer-scroll-driven")) return;
-      const rect = presentationSceneHost.getBoundingClientRect();
-      const travel = Math.max(1, rect.height - window.innerHeight);
-      const progress = Math.min(1, Math.max(0, -rect.top / travel));
-      presentationFrame?.contentWindow?.postMessage(
-        { type: "set-embedded-scroll-progress", progress, viewportHeight: window.innerHeight },
-        window.location.origin,
-      );
-    };
-    let readinessTimer = 0;
-    let performanceFrame = 0;
-    let lastFrameTime = 0;
-    let sampleStart = 0;
-    let sampleCount = 0;
-    let slowFrames = 0;
-    let lastScrollTime = 0;
-    const monitorPerformance = (time) => {
-      if (compactPresentationActive) return;
-      const visibleRect = fullPresentation.getBoundingClientRect();
-      const measuring = !fullPresentation.hidden && visibleRect.bottom > 0 && visibleRect.top < window.innerHeight
-        && document.visibilityState === "visible"
-        && time - lastScrollTime < 500;
-      const delta = time - lastFrameTime;
-      if (measuring && lastFrameTime && delta < 1000) {
-        if (!sampleStart) sampleStart = time;
-        sampleCount += 1;
-        if (delta > 50) slowFrames += 1;
-        if (time - sampleStart >= 2500) {
-          if (sampleCount >= 15 && slowFrames / sampleCount > 0.5) {
-            showCompactPresentation();
-            return;
-          }
-          sampleStart = 0; sampleCount = 0; slowFrames = 0;
-        }
-      } else {
-        sampleStart = 0; sampleCount = 0; slowFrames = 0;
-      }
-      lastFrameTime = time;
-      performanceFrame = window.requestAnimationFrame(monitorPerformance);
-    };
-    const noteScroll = () => { lastScrollTime = performance.now(); syncOuterScroll(); };
-    const receivePresentationMetrics = (event) => {
-      if (
-        event.origin !== window.location.origin
-        || event.source !== presentationFrame?.contentWindow
-      ) return;
-      if (event.data?.type === "embedded-presentation-error") {
-        showCompactPresentation(); return;
-      }
-      if (event.data?.type !== "embedded-presentation-metrics") return;
-      if (event.data.ready) window.clearTimeout(readinessTimer);
-      const scrollHeight = Number(event.data.scrollHeight);
-      if (!Number.isFinite(scrollHeight) || scrollHeight <= 0) return;
-      presentationSceneHost.style.height = `${scrollHeight}px`;
-      presentationSceneHost.classList.add("is-outer-scroll-driven");
-      syncOuterScroll();
-    };
-    updateOuterPresentationScroll = syncOuterScroll;
-    window.addEventListener("message", receivePresentationMetrics);
-    window.addEventListener("scroll", noteScroll, { passive: true });
-    window.addEventListener("resize", syncOuterScroll);
-    presentationCleanup = () => {
-      window.clearTimeout(readinessTimer);
-      window.cancelAnimationFrame(performanceFrame);
-      window.removeEventListener("message", receivePresentationMetrics);
-      window.removeEventListener("scroll", noteScroll);
-      window.removeEventListener("resize", syncOuterScroll);
-    };
-    carouselCleanups.push(() => presentationCleanup());
-    presentationFrame.addEventListener("error", showCompactPresentation);
-    presentation.addEventListener("click", () => {
-      if (!presentationFrame || compactPresentationActive) return;
-      if (presentation.getAttribute("aria-expanded") === "false" && !presentationFrame.hasAttribute("src")) {
-        readinessTimer = window.setTimeout(showCompactPresentation, 15000);
-        performanceFrame = window.requestAnimationFrame(monitorPerformance);
-      }
-    });
-  } else {
-    fullPresentation.classList.add("concise-project-full-presentation--download-only");
-  }
+    pageImage.sizes = "100vw";
+    pageImage.loading = "lazy";
+    pageFigure.append(pageImage);
+    fullPresentation.append(pageFigure);
+  });
 
   const scrollToPresentationControls = () => {
     footer.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-
-  presentationFrame?.addEventListener("load", () => {
-    presentationFrame?.contentWindow?.postMessage(
-      { type: "request-embedded-presentation-metrics" },
-      window.location.origin,
-    );
-    if (presentation.getAttribute("aria-expanded") === "true") {
-      if (!usesPdfPresentation) {
-        presentationFrame?.contentWindow?.postMessage(
-          { type: "restart-embedded-first-scene" },
-          window.location.origin,
-        );
-      }
-      scrollToPresentationControls();
-      updateOuterPresentationScroll?.();
-    }
-  });
 
   let presentationCloseTimer;
   presentation.addEventListener("click", () => {
@@ -1414,9 +1245,6 @@ function renderProject(animateFacts = false) {
         fullPresentation.hidden = true;
         fullPresentation.classList.remove("is-closing");
       }, 460);
-    }
-    if (shouldOpen && presentationFrame && !presentationFrame.hasAttribute("src")) {
-      presentationFrame.src = presentationFrame.dataset.src;
     }
     if (shouldOpen) {
       window.requestAnimationFrame(scrollToPresentationControls);

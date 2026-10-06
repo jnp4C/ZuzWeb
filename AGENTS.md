@@ -1,16 +1,30 @@
+# Static presentation branch
+
+This checkout uses `final-static`, branched from `design-final-touch`. Make new
+changes on `final-static`; the original dynamic implementation is preserved on
+`design-final-touch`. Branch-specific instructions here override the historical
+redesign workflow below.
+
+Full presentations on published project pages use complete, static PDF-derived
+image sequences only. Preserve page order, aspect ratios, responsive image
+sources, lazy loading, pinch zoom, and PDF downloads. Do not reintroduce scene
+iframes, runtime capability checks, frame-rate monitoring, or animated full
+presentation playback. Legacy scene data and the year viewer remain available
+for future dynamic work; leave them untouched unless explicitly requested.
+
 # ZuzWeb Agent Guide
 
 ## Final design touches: first session on a new computer
 
-Work on `design-final-touch`. This is the final design pass on the current
+Work on `final-static`. This is the final design pass on the current
 redesign. Follow the user's requested visual adjustments and preserve existing
 content, navigation, and interactions unless she asks to change them. Help her
 with setup directly; do not assume she knows terminal commands or dependencies.
 
 1. Locate the cloned repository and inspect `git status --short --branch`.
-   Use `design-final-touch`; do not switch branches over uncommitted work.
+   Use `final-static`; do not switch branches over uncommitted work.
    If the branch is only on origin, use
-   `git switch --track origin/design-final-touch`. If it is unavailable, report
+   `git switch --track origin/final-static`. If it is unavailable, report
    the problem instead of creating an unrelated branch. Do not discard changes.
 2. This is a static HTML/CSS/JavaScript site: no build step, npm install, or
    virtual environment is needed. Check for Python (`python3 --version` on
@@ -37,7 +51,7 @@ with setup directly; do not assume she knows terminal commands or dependencies.
    explicit user direction for finishing touches. When a change requires an
    exact source document or new source media, ask for that specific reference;
    do not invent content or block unrelated visual work.
-7. Commit only files for the requested change on `design-final-touch`. Never
+7. Commit only files for the requested change on `final-static`. Never
    deploy, merge into another branch, or push without the user's instruction.
 
 ## Current direction
@@ -109,7 +123,7 @@ introducing unrelated type sizes or families without user approval.
 ## Implementation workflow
 
 1. Check the current branch and working tree before editing. Redesign work should
-   happen on `design-final-touch` for this finishing pass.
+   happen on `final-static` for this finishing pass.
 2. At the start of every coding session, serve the repository through a local
    HTTP server and verify that the site loads over HTTP. Reuse an already
    running suitable server when possible; otherwise start one (for example,

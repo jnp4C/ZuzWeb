@@ -99,8 +99,10 @@
 .index-page .project-index-symbol-mark::after { width: 16px; height: calc(var(--type-medium) * 0.108); }
 .index-page .project-index-symbol--star::before { width: 16px; height: 16px; }
 .index-page .project-index :is(.project-index-heading, .project-index-destination-title, .project-index-destination-heading h2) {
-  width: 135px;
+  width: max-content;
+  min-width: 0;
   max-width: none;
+  flex: 0 0 auto;
   height: 30px;
   min-height: 30px;
   margin: 0;
@@ -112,7 +114,7 @@
   color: #fff;
   scale: 1;
 }
-.index-page .project-index #infoTitle { width: 75px; }
+.index-page .project-index #infoTitle { width: max-content; }
 .index-page .project-index-branch {
   --project-branch-indent: 0px;
   --project-branch-top: 0px;

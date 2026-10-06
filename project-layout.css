@@ -402,3 +402,23 @@
   left: var(--project-floating-star-left);
   transform: translateX(-50%);
 }
+
+/* Match the range thumb's outer diameter to the carousel dots. */
+.concise-project-page .concise-project-carousel-dot::before {
+  box-sizing: border-box;
+  width: 0.55rem;
+  height: 0.55rem;
+}
+.concise-project-page .concise-project-day-night-slider::-webkit-slider-thumb {
+  box-sizing: border-box;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1.5px solid var(--text);
+  margin-top: calc((1.5px - 0.55rem) / 2);
+}
+.concise-project-page .concise-project-day-night-slider::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1.5px solid var(--text);
+}

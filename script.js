@@ -495,10 +495,34 @@ function initConnectorGaps() {
   update();
 }
 
+function initMobileHelpTicker() {
+  const source = document.getElementById("headerHelpText");
+  const header = document.querySelector(".index-layout-header");
+  if (!source || !header) return;
+  const ticker = document.createElement("div");
+  ticker.className = "index-mobile-help-ticker";
+  const track = document.createElement("div");
+  track.className = "index-mobile-help-track";
+  const text = Array.from(source.querySelectorAll("p")).map(p => p.textContent.trim()).join(" ");
+  for (let index = 0; index < 2; index++) {
+    const copy = document.createElement("span");
+    copy.className = "index-mobile-help-copy";
+    if (index) copy.setAttribute("aria-hidden", "true");
+    const dot = document.createElement("span");
+    dot.className = "index-mobile-help-dot";
+    dot.setAttribute("aria-hidden", "true");
+    copy.append(document.createTextNode(text), dot);
+    track.append(copy);
+  }
+  ticker.append(track);
+  header.before(ticker);
+}
+
 async function init() {
   initConnectorGaps();
   renderRandomIndexBackground();
   initIndexHeader();
+  initMobileHelpTicker();
   initProjectsToggle();
   initInfoToggle();
   initCvToggle();

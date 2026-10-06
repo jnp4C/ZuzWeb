@@ -511,7 +511,13 @@ function initMobileHelpTicker() {
     const dot = document.createElement("span");
     dot.className = "index-mobile-help-dot";
     dot.setAttribute("aria-hidden", "true");
-    copy.append(document.createTextNode(text), dot);
+    const message = document.createElement("span");
+    text.split(/(\[[^\]]*\])/g).filter(Boolean).forEach(part => {
+      const fragment = document.createElement(part.startsWith("[") ? "span" : "em");
+      fragment.textContent = part;
+      message.append(fragment);
+    });
+    copy.append(message, dot);
     track.append(copy);
   }
   ticker.append(track);

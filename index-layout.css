@@ -362,3 +362,7 @@
   .index-mobile-help-track { animation: none; }
   .index-mobile-help-copy[aria-hidden="true"] { display: none; }
 }
+
+.index-mobile-help-ticker { color: #808080; }
+.index-mobile-help-dot { border-color: currentColor; background: currentColor; }
+.index-mobile-help-copy em { font-style: italic; }

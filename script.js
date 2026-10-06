@@ -475,17 +475,23 @@ function initConnectorGaps() {
       const clip = panel.getBoundingClientRect();
       const start = (Math.max(rect.top - 3 * contentScale, clip.top, spineTop) - spineTop) / contentScale;
       const end = (Math.min(rect.bottom + 3 * contentScale, clip.bottom) - spineTop) / contentScale;
-      return end > start ? [[start, end]] : [];
+      return end > start ? [[start, end, label.id === "cvExperienceTitle"]] : [];
     }).sort((a, b) => a[0] - b[0]);
     const stops = ["#000 0px"];
     let end = 0;
+    let spineEnded = false;
     for (const gap of gaps) {
       const start = Math.max(end, gap[0]);
       if (gap[1] <= start) continue;
+      if (gap[2]) {
+        stops.push(`#000 ${start}px`, `transparent ${start}px`, "transparent 100%");
+        spineEnded = true;
+        break;
+      }
       stops.push(`#000 ${start}px`, `transparent ${start}px`, `transparent ${gap[1]}px`, `#000 ${gap[1]}px`);
       end = gap[1];
     }
-    stops.push("#000 100%");
+    if (!spineEnded) stops.push("#000 100%");
     projectIndex.style.setProperty("--subsection-connector-mask", `linear-gradient(to bottom, ${stops.join(", ")})`);
   }
   const observer = new ResizeObserver(update);

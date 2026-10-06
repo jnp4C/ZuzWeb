@@ -31,7 +31,7 @@
 .index-page .index-layout-header::after { top: 15px; bottom: -30px; left: 0; width: 1px; }
 .index-page .index-header-actions { gap: 15px; }
 .index-page .index-header-button { padding: 4px; font-size: var(--type-medium); }
-.index-page .index-header-help-text { font-size: var(--type-small); padding: 15px; }
+.index-page .index-header-help-text { font-size: var(--type-small); padding: 15px; border: 0; box-shadow: inset 0 0 0 1px #000; }
 .index-page main { padding-inline: var(--index-page-gutter); padding-bottom: 90px; }
 .index-page .project-index {
   --drawer-row-start: 45px;

@@ -846,7 +846,7 @@ function renderProject(animateFacts = false) {
   const hero = page.hero?.media;
   const cover = hero || activeProject.index?.image;
   const lightboxSections = [
-    ...(cover?.src ? [{ label: headingTitle, media: [cover] }] : []),
+    ...(cover?.src ? [{ label: "", media: [cover] }] : []),
     ...page.featuredSections.map(section => ({
       label: getLocalizedText(section.label, activeLanguage),
       media: (section.media || []).filter(media => media.type !== "video"),

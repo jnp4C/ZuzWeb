@@ -151,3 +151,6 @@
 @media (prefers-reduced-motion: reduce) {
   .concise-project-page .concise-project-heading h1.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
 }
+
+.concise-project-page .concise-project-heading::before,
+.concise-project-page .concise-project-footer button > span:last-child::before { content: none; }

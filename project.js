@@ -1031,6 +1031,21 @@ function renderProject(animateFacts = false) {
   infoHeading.className = "concise-project-spine-label";
   infoHeading.textContent = copy.info;
   infoBlock.append(infoHeading, facts);
+  const updateFactWrapping = () => {
+    facts.querySelectorAll(".concise-project-fact").forEach(row => {
+      const term = row.querySelector("dt");
+      const range = document.createRange();
+      range.selectNodeContents(term);
+      const labelWidth = range.getBoundingClientRect().width;
+      const availableWidth = row.getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+      row.classList.toggle("is-stacked", labelWidth > (availableWidth - gap) * 0.4);
+    });
+  };
+  const factObserver = new ResizeObserver(updateFactWrapping);
+  factObserver.observe(facts);
+  carouselCleanups.push(() => factObserver.disconnect());
+  document.fonts?.ready.then(updateFactWrapping);
 
   const annotationBlock = document.createElement("section");
   annotationBlock.className = "concise-project-annotation";

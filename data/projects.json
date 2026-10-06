@@ -10802,7 +10802,7 @@
           "kind": "graphic",
           "label": {
             "en": "ISO",
-            "cs": "ISO"
+            "cs": "Vrstvy analýz"
           },
           "media": [
             {
@@ -18464,7 +18464,7 @@
       },
       "title": {
         "en": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS",
-        "cs": "NOVÁ KRAJINA VYSOKORYCHLOSTNÍCH TRATÍ"
+        "cs": "NOVÁ KRAJINA VRT"
       },
       "context": {
         "en": "diploma thesis",

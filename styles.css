@@ -7170,3 +7170,99 @@ main,
 .compact-animated-flow .side-by-side-object-scene {
   align-items: flex-start;
 }
+
+/* Intro layout reference, October 2026: line, title and square controls. */
+.index-page .index-layout-header {
+  --header-control-size: 50px;
+  --header-content-offset: 50px;
+  position: relative;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  min-height: var(--header-control-size);
+  margin: 60px var(--index-page-gutter) 60px;
+  padding-left: var(--header-content-offset);
+}
+.index-layout-header::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: calc(-1 * var(--index-page-gutter));
+  height: 2px;
+  background: #000;
+  z-index: -1;
+}
+.index-layout-header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: -60px;
+  left: 0;
+  width: 2px;
+  background: #000;
+}
+.index-layout-header h1 {
+  margin: 0 auto 0 0;
+  background: var(--bg);
+  font-family: var(--font-heading);
+  font-size: var(--type-medium);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.index-header-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 25px;
+}
+.index-header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--header-control-size);
+  height: var(--header-control-size);
+  border: 0;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  font: 500 var(--type-medium)/1 var(--font-heading);
+  cursor: pointer;
+}
+.index-header-button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}
+.index-header-help-text {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: min(390px, 100%);
+  padding: 20px;
+  border: 2px solid #000;
+  background: var(--bg);
+  font: 400 var(--type-small)/1.5 var(--font-text);
+}
+.index-header-help-text[hidden] { display: none; }
+.index-header-help-text p { margin: 0; }
+.index-header-help-text p + p { margin-top: 15px; }
+.index-page .index-layout-header + main .project-index { padding-top: 0; }
+@media (max-width: 720px) {
+  .index-page .index-layout-header {
+    --header-control-size: var(--mobile-control-size);
+    --header-content-offset: calc(var(--mobile-control-size) * 1.5 + 10px);
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .index-layout-header h1 { flex: 1 1 100%; }
+  .index-header-actions { margin-left: auto; gap: 15px; }
+  .index-layout-header::before { top: calc(100% - var(--header-control-size) / 2); }
+  .index-layout-header::after {
+    top: calc(100% - var(--header-control-size) / 2);
+    bottom: -30px;
+    left: calc(var(--mobile-control-size) / 2);
+  }
+  .index-header-button { font-size: var(--mobile-display-size); }
+}

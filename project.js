@@ -1,10 +1,11 @@
+import { initProjectHeader } from "./shared-header.js?v=2026-10-06-header-navigation";
 import {
   getLanguage,
   getLocalizedProjectText,
   getLocalizedText,
   initLanguageSwitch,
-} from "./language.js";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
+} from "./language.js?v=2026-10-06-inherited-language";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-06-real-content-labels";
 
 const DATA_CACHE_VERSION = "2026-10-04-trimmed-scene-flow";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
@@ -24,9 +25,12 @@ const backgroundAnimation = document.querySelector(".concise-project-background"
 const signatureAnimation = document.querySelector(".signature-animation");
 const signatureNameplate = signatureAnimation?.closest(".signature-nameplate");
 const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
-let activeLanguage = getLanguage();
+let activeLanguage = "cs";
+let navigationLanguage = getLanguage();
 let activeProject = null;
 let navigableProjects = [];
+let lightboxMediaGroups = [];
+let lightboxGroupLabels = [];
 let carouselCleanups = [];
 
 function initializeVisualViewportInset() {
@@ -244,7 +248,12 @@ function createVideo(media, className = "") {
 }
 
 function openImageLightbox(mediaItems, initialIndex) {
-  let activeIndex = initialIndex;
+  const selectedMedia = mediaItems[initialIndex];
+  const matchedGroup = lightboxMediaGroups.findIndex(group => group.some(media => media.src === selectedMedia.src));
+  const groups = matchedGroup >= 0 ? lightboxMediaGroups : [mediaItems];
+  let activeGroup = Math.max(0, matchedGroup);
+  mediaItems = groups[activeGroup];
+  let activeIndex = Math.max(0, mediaItems.findIndex(media => media.src === selectedMedia.src));
   let scale = 1;
   let translateX = 0;
   let translateY = 0;
@@ -255,6 +264,28 @@ function openImageLightbox(mediaItems, initialIndex) {
   const dialog = document.createElement("dialog");
   dialog.className = "project-image-lightbox";
   dialog.setAttribute("aria-label", COPY[activeLanguage].imageViewer);
+  const header = document.createElement("header");
+  header.className = "project-image-lightbox-header";
+  const sectionTitle = document.createElement("h2");
+  sectionTitle.className = "project-image-lightbox-title";
+  sectionTitle.setAttribute("aria-live", "polite");
+  const lightboxTitleTrack = document.createElement("span");
+  lightboxTitleTrack.className = "concise-project-title-track";
+  const lightboxTitleText = document.createElement("span");
+  const lightboxTitleRepeat = document.createElement("span");
+  lightboxTitleRepeat.setAttribute("aria-hidden", "true");
+  lightboxTitleTrack.append(lightboxTitleText, lightboxTitleRepeat);
+  sectionTitle.append(lightboxTitleTrack);
+  const updateLightboxTitleCarousel = () => {
+    const textWidth = lightboxTitleText.getBoundingClientRect().width;
+    sectionTitle.classList.toggle("is-title-scrolling", textWidth > sectionTitle.clientWidth + 1);
+    sectionTitle.style.setProperty("--title-marquee-duration", `${Math.max(9, textWidth / 32)}s`);
+  };
+  const lightboxTitleObserver = new ResizeObserver(updateLightboxTitleCarousel);
+  lightboxTitleObserver.observe(sectionTitle);
+
+  const navigation = document.createElement("nav");
+  navigation.className = "project-image-lightbox-section-nav";
   const stage = document.createElement("div");
   stage.className = "project-image-lightbox-stage";
   const image = document.createElement("img");
@@ -285,11 +316,28 @@ function openImageLightbox(mediaItems, initialIndex) {
   nextTriangles.append(document.createElement("i"), document.createElement("i"));
   next.append(nextTriangles);
   next.setAttribute("aria-label", COPY[activeLanguage].nextImage);
-  previous.hidden = mediaItems.length < 2;
-  next.hidden = mediaItems.length < 2;
-  const counter = document.createElement("span");
-  counter.className = "project-image-lightbox-counter";
-  counter.setAttribute("aria-live", "polite");
+  previous.hidden = groups.length < 2;
+  next.hidden = groups.length < 2;
+  const pagination = document.createElement("div");
+  pagination.className = "project-image-lightbox-pagination concise-project-carousel-controls";
+  pagination.setAttribute("role", "group");
+  pagination.setAttribute("aria-label", COPY[activeLanguage].openImage);
+  let paginationDots = [];
+  const rebuildPagination = () => {
+    paginationDots = mediaItems.length > 1 ? mediaItems.map((media, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "concise-project-carousel-dot";
+      dot.setAttribute("aria-label", `${index + 1} / ${mediaItems.length}`);
+      dot.addEventListener("click", () => {
+        activeIndex = index;
+        renderMedia();
+      });
+      return dot;
+    }) : [];
+    pagination.replaceChildren(...paginationDots);
+    pagination.hidden = paginationDots.length === 0;
+  };
 
   const applyTransform = () => {
     image.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
@@ -302,14 +350,24 @@ function openImageLightbox(mediaItems, initialIndex) {
   };
   const renderMedia = () => {
     const media = mediaItems[activeIndex];
+    const title = matchedGroup >= 0 ? lightboxGroupLabels[activeGroup] : getLocalizedText(media.alt, activeLanguage);
+    lightboxTitleText.textContent = title;
+    lightboxTitleRepeat.textContent = title;
+    updateLightboxTitleCarousel();
     image.srcset = media.zoomSrc ? "" : (media.srcset || "");
     image.src = media.zoomSrc || media.src;
     image.alt = getLocalizedText(media.alt, activeLanguage);
-    counter.textContent = `${activeIndex + 1} / ${mediaItems.length}`;
+    paginationDots.forEach((dot, index) => {
+      dot.classList.toggle("is-selected", index === activeIndex);
+      dot.setAttribute("aria-current", String(index === activeIndex));
+    });
     resetTransform();
   };
   const changeMedia = (direction) => {
-    activeIndex = (activeIndex + direction + mediaItems.length) % mediaItems.length;
+    activeGroup = (activeGroup + direction + groups.length) % groups.length;
+    mediaItems = groups[activeGroup];
+    activeIndex = 0;
+    rebuildPagination();
     renderMedia();
   };
   const closeLightbox = () => dialog.close();
@@ -326,6 +384,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   });
   dialog.addEventListener("close", () => {
     document.removeEventListener("keydown", onKeydown);
+    lightboxTitleObserver.disconnect();
     dialog.remove();
   });
   document.addEventListener("keydown", onKeydown);
@@ -368,10 +427,15 @@ function openImageLightbox(mediaItems, initialIndex) {
   image.addEventListener("pointercancel", releasePointer);
 
   stage.append(image);
-  dialog.append(stage, close, previous, next, counter);
+  navigation.append(previous, next);
+  header.append(navigation, sectionTitle, close);
+  dialog.append(header, stage, pagination);
+  rebuildPagination();
   document.body.append(dialog);
   renderMedia();
   dialog.showModal();
+  updateLightboxTitleCarousel();
+  document.fonts.ready.then(() => { if (dialog.isConnected) updateLightboxTitleCarousel(); });
   close.focus();
 }
 
@@ -469,8 +533,10 @@ function createMediaCarousel(mediaItems, label, heading) {
   controls.append(...dotButtons);
   const meta = document.createElement("figcaption");
   meta.className = "concise-project-carousel-meta";
-  meta.append(heading, controls);
-  figure.append(meta);
+  if (mediaItems.length > 1) {
+    meta.append(heading, controls);
+    figure.append(meta);
+  }
   const activeMediaIsImage = () => mediaItems[activeIndex]?.type !== "video";
   const openActiveImage = () => {
     if (activeMediaIsImage()) {
@@ -572,20 +638,38 @@ function connectSectionToFrame(section, figure) {
     const spineX = project
       ? Number.parseFloat(getComputedStyle(project).getPropertyValue("--project-spine-x")) || 0
       : 0;
-    section.style.setProperty("--feature-label-clearance", "0px");
+    const label = section.querySelector(":scope > h2");
+    const range = document.createRange();
+    if (label) range.selectNodeContents(label);
+    const naturalLabelWidth = label ? range.getBoundingClientRect().width : 0;
+    const labelFits = naturalLabelWidth <= sectionRect.width * 0.35;
+    section.classList.toggle("is-feature-label-hidden", !labelFits);
+    const labelRect = labelFits ? label?.getBoundingClientRect() : null;
+    if (!labelRect) section.style.setProperty("--feature-connector-mask", "none");
+    const textClearance = 6.5;
+    const beforeLength = labelRect ? Math.max(0, labelRect.left - sectionRect.left - spineX - textClearance) : 0;
+    const afterLength = beforeLength / 2;
+    section.style.setProperty("--feature-label-clearance", `${labelRect ? labelRect.width + textClearance + afterLength : 0}px`);
+    if (labelRect) {
+      const start = beforeLength;
+      const end = labelRect.right - sectionRect.left - spineX + textClearance;
+      section.style.setProperty("--feature-connector-mask", `linear-gradient(to right, #000 0px, #000 ${start}px, transparent ${start}px, transparent ${end}px, #000 ${end}px, #000 100%)`);
+    }
     section.style.setProperty(
       "--feature-connector-top",
       `${viewportRect.top - sectionRect.top + (viewportRect.height / 2)}px`,
     );
     section.style.setProperty(
       "--feature-connector-width",
-      `${Math.max(0, viewportRect.left - sectionRect.left - spineX + 2)}px`,
+      `${Math.max(0, viewportRect.left - sectionRect.left - spineX)}px`,
     );
   };
 
   const observer = new ResizeObserver(updateConnector);
   observer.observe(section);
   observer.observe(figure);
+  const label = section.querySelector(":scope > h2");
+  if (label) observer.observe(label);
   carouselCleanups.push(() => observer.disconnect());
   window.requestAnimationFrame(updateConnector);
 }
@@ -665,9 +749,9 @@ function createHighlightedProjectText(page, language, copy) {
 
 function getProjectUrl(project) {
   if (project.projectPage?.layout === "concise") {
-    return `./project.html?project=${encodeURIComponent(project.slug)}`;
+    return `./project.html?project=${encodeURIComponent(project.slug)}&lang=${navigationLanguage}`;
   }
-  return `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(project.slug)}`;
+  return `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(project.slug)}&lang=${navigationLanguage}`;
 }
 
 function createProjectNavigationLink(project, direction, label) {
@@ -787,6 +871,16 @@ function renderProject(animateFacts = false) {
   );
   const info = page.info;
   const hero = page.hero?.media;
+  const cover = hero || activeProject.index?.image;
+  const lightboxSections = [
+    ...(cover?.src ? [{ label: "", media: [cover] }] : []),
+    ...page.featuredSections.map(section => ({
+      label: getLocalizedText(section.label, activeLanguage),
+      media: (section.media || []).filter(media => media.type !== "video"),
+    })),
+  ].filter(section => section.media.length > 0);
+  lightboxMediaGroups = lightboxSections.map(section => section.media);
+  lightboxGroupLabels = lightboxSections.map(section => section.label);
   const fullPresentationUrl = `./year.html?year=${encodeURIComponent(activeProject.year)}&project=${encodeURIComponent(activeProject.slug)}`;
 
   document.title = `${title} | Zuzana Purmová`;
@@ -800,16 +894,20 @@ function renderProject(animateFacts = false) {
   heading.className = "concise-project-heading";
   const back = document.createElement("a");
   back.className = "concise-project-symbol concise-project-symbol--star concise-project-back";
-  back.href = "./index.html";
+  const home = document.getElementById("projectHeaderHome");
+  home.href = `./index.html?lang=${navigationLanguage}&projects=open`;
   back.textContent = "∗";
+  back.href = home.href;
   back.setAttribute("aria-label", copy.back);
-  back.addEventListener("click", () => {
+  home.setAttribute("aria-label", copy.back);
+  home.onclick = () => {
     try {
       window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
     } catch {
       // Navigation still works when storage is unavailable.
     }
-  });
+  };
+  back.onclick = home.onclick;
   const name = document.createElement("h1");
   name.setAttribute("aria-label", headingTitle);
   const titleTrack = document.createElement("span");
@@ -833,16 +931,16 @@ function renderProject(animateFacts = false) {
     createProjectNavigationLink(previousProject, "previous", copy.previousProject),
     createProjectNavigationLink(nextProject, "next", copy.nextProject),
   );
-  heading.append(back, name, projectNavigation);
+  heading.append(back, name);
+  document.getElementById("headerProjectNavigation").replaceChildren(projectNavigation);
 
   const updateTitleCarousel = () => {
-    const usesCompactTitle = window.matchMedia("(max-width: 1024px)").matches;
     const nameStyle = window.getComputedStyle(name);
     const availableWidth = name.clientWidth
       - Number.parseFloat(nameStyle.paddingLeft)
       - Number.parseFloat(nameStyle.paddingRight);
     const titleWidth = titleText.getBoundingClientRect().width;
-    const shouldScroll = usesCompactTitle && titleWidth > availableWidth + 1;
+    const shouldScroll = titleWidth > availableWidth + 1;
     name.classList.toggle("is-title-scrolling", shouldScroll);
     if (shouldScroll) {
       name.style.setProperty("--title-marquee-duration", `${Math.max(9, titleWidth / 32)}s`);
@@ -960,6 +1058,24 @@ function renderProject(animateFacts = false) {
   infoHeading.className = "concise-project-spine-label";
   infoHeading.textContent = copy.info;
   infoBlock.append(infoHeading, facts);
+  const updateFactWrapping = () => {
+    const rows = Array.from(facts.querySelectorAll(".concise-project-fact"));
+    const shouldStack = rows.some(row => {
+      const term = row.querySelector("dt");
+      const range = document.createRange();
+      range.selectNodeContents(term);
+      const labelWidth = range.getBoundingClientRect().width;
+      const availableWidth = row.getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+      return labelWidth > (availableWidth - gap) * 0.4;
+    });
+    facts.classList.toggle("is-stacked", shouldStack);
+    rows.forEach(row => row.classList.toggle("is-stacked", shouldStack));
+  };
+  const factObserver = new ResizeObserver(updateFactWrapping);
+  factObserver.observe(facts);
+  carouselCleanups.push(() => factObserver.disconnect());
+  document.fonts?.ready.then(updateFactWrapping);
 
   const annotationBlock = document.createElement("section");
   annotationBlock.className = "concise-project-annotation";
@@ -1019,7 +1135,7 @@ function renderProject(animateFacts = false) {
     const figure = section.presentation === "day-night-fade"
       ? createDayNightFade(mediaItems, localizedSectionLabel, sectionHeading)
       : createMediaCarousel(mediaItems, localizedSectionLabel, sectionHeading);
-    block.append(figure);
+    block.append(sectionHeading, figure);
     featured.append(block);
     connectSectionToFrame(block, figure);
   });
@@ -1057,9 +1173,29 @@ function renderProject(animateFacts = false) {
   const plus = document.createElement("span");
   plus.className = "concise-project-symbol";
   plus.setAttribute("aria-hidden", "true");
-  plus.textContent = "+";
+  const presentationMark = document.createElement("span");
+  presentationMark.className = "project-index-symbol-mark";
+  plus.append(presentationMark);
   const presentationLabel = document.createElement("span");
-  presentationLabel.textContent = activeLanguage === "cs" ? "Prezentace" : "Presentation";
+  presentationLabel.className = "concise-project-presentation-label";
+  const presentationTrack = document.createElement("span");
+  presentationTrack.className = "concise-project-title-track";
+  const presentationText = document.createElement("span");
+  presentationText.textContent = activeLanguage === "cs" ? "Prezentace" : "Presentation";
+  const repeatedPresentationText = presentationText.cloneNode(true);
+  repeatedPresentationText.setAttribute("aria-hidden", "true");
+  presentationTrack.append(presentationText, repeatedPresentationText);
+  presentationLabel.append(presentationTrack);
+  const updatePresentationCarousel = () => {
+    if (!presentationLabel.isConnected) return;
+    const textWidth = presentationText.getBoundingClientRect().width;
+    presentationLabel.classList.toggle("is-title-scrolling", textWidth > presentationLabel.clientWidth + 1);
+    presentationLabel.style.setProperty("--title-marquee-duration", `${Math.max(9, textWidth / 32)}s`);
+  };
+  const presentationObserver = new ResizeObserver(updatePresentationCarousel);
+  presentationObserver.observe(presentationLabel);
+  carouselCleanups.push(() => presentationObserver.disconnect());
+  document.fonts?.ready.then(updatePresentationCarousel);
   presentation.append(plus, presentationLabel);
   if (hasPresentationContent) {
     footer.append(presentation);
@@ -1289,6 +1425,24 @@ function renderProject(animateFacts = false) {
 
   article.append(heading, intro, featured, footer, fullPresentation);
   projectRoot.append(article, scrollTop);
+  const updateSpineGaps = () => {
+    const top = article.getBoundingClientRect().top + parseFloat(getComputedStyle(article, "::before").top);
+    const stops = ["#000 0px"];
+    article.querySelectorAll(".concise-project-spine-label").forEach((label) => {
+      const rect = label.getBoundingClientRect();
+      const start = Math.max(0, rect.top - top - 3.9);
+      const end = Math.max(start, rect.bottom - top + 3.9);
+      stops.push(`#000 ${start}px`, `transparent ${start}px`, `transparent ${end}px`, `#000 ${end}px`);
+    });
+    stops.push("#000 100%");
+    article.style.setProperty("--project-spine-mask", `linear-gradient(to bottom, ${stops.join(", ")})`);
+  };
+  const gapObserver = new ResizeObserver(updateSpineGaps);
+  gapObserver.observe(article);
+  article.querySelectorAll(".concise-project-spine-label").forEach((label) => gapObserver.observe(label));
+  document.fonts?.ready.then(updateSpineGaps);
+  carouselCleanups.push(() => gapObserver.disconnect());
+  updateSpineGaps();
 
   if (hasPresentationContent) {
     let previousSpineHeight = -1;
@@ -1341,10 +1495,12 @@ async function initializeProject() {
   renderProject(true);
 }
 
+initProjectHeader();
 initializeVisualViewportInset();
 
 initLanguageSwitch((language) => {
-  activeLanguage = language;
+  activeLanguage = "cs";
+  navigationLanguage = language;
   if (activeProject) {
     renderProject(false);
   }

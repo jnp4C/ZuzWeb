@@ -5,42 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Project | Zuzana Purmová</title>
     <meta name="description" content="Landscape architecture project by Zuzana Purmová." />
-    <script>
-      try {
-        if (sessionStorage.getItem("zuz-signature-animation-complete-v2") === "1") {
-          document.documentElement.classList.add("signature-complete");
-        }
-      } catch {}
-    </script>
-    <link rel="stylesheet" href="./styles.css?v=2026-10-04-trimmed-scene-flow" />
+    <link rel="stylesheet" href="./styles.css?v=2026-10-06-merged-design-presentations" />
+    <link rel="stylesheet" href="./index-layout.css?v=2026-10-06-mobile-spacing-alignment" />
+    <link rel="stylesheet" href="./project-layout.css?v=2026-10-06-slider-dot-size" />
   </head>
-  <body class="concise-project-page">
+  <body class="index-page concise-project-page">
     <div class="background-animation concise-project-background" aria-hidden="true"></div>
 
-    <header class="site-header concise-project-nameplate signature-nameplate">
-      <a class="signature-home-link" href="./index.html" aria-label="Back to project index"></a>
-      <video
-        class="signature-animation"
-        autoplay
-        muted
-        playsinline
-        preload="auto"
-        poster="./assets/Header/signature-transparent.png?v=2026-07-30-clean-alpha-v2"
-        aria-hidden="true"
-      >
-        <source src="./assets/Header/signature-transparent.webm?v=2026-07-30-clean-alpha-v2" type="video/webm" />
-      </video>
-      <img class="signature-poster" src="./assets/Header/signature-transparent.png?v=2026-07-30-clean-alpha-v2" alt="" aria-hidden="true" />
+    <header class="index-layout-header">
+      <h1><a id="projectHeaderHome" href="./index.html"><span class="index-header-full-title">portfolio - Ing. Zuzana Purmová</span><span class="index-header-short-title">portfolio</span></a></h1>
+      <div class="index-header-actions">
+        <div id="headerProjectNavigation"></div>
+      </div>
     </header>
 
     <main id="conciseProject" class="concise-project-shell" aria-live="polite"></main>
 
-    <nav class="language-switch" data-language-switch aria-label="Language">
-      <button type="button" data-language="cs" aria-pressed="false">CZ</button>
-      <span aria-hidden="true">/</span>
-      <button type="button" data-language="en" aria-pressed="true">EN</button>
-    </nav>
 
-    <script src="./project.js?v=2026-10-04-trimmed-scene-flow" type="module"></script>
+    <script src="./project.js?v=2026-10-06-merged-design-presentations" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,424 @@
+/* Project geometry follows the index at its current 130% content scale. */
+.concise-project-page {
+  --project-control-size: calc(30px * var(--index-content-scale));
+  --project-display-size: calc(20px * var(--index-content-scale));
+  --project-copy-size: calc(10px * var(--index-content-scale));
+  --project-layout-offset: calc(var(--index-content-offset) * var(--index-content-scale));
+  --project-line-width: calc(var(--index-connector-width) * var(--index-content-scale));
+}
+.concise-project-page .concise-project-shell {
+  zoom: 1;
+  --type-small: var(--project-copy-size);
+  --type-medium: var(--project-display-size);
+  --type-large: calc(40px * var(--index-content-scale));
+  --project-page-gutter: calc(var(--index-page-gutter) * var(--index-content-scale));
+  width: auto;
+  padding: 0 var(--project-page-gutter) 117px;
+  font-size: var(--type-small);
+}
+.concise-project-page .concise-project {
+  --project-spine-x: 0px;
+  --project-body-start: var(--project-layout-offset);
+}
+.concise-project-page .concise-project::before {
+  top: var(--project-control-size);
+  width: var(--project-line-width);
+  mask-image: var(--project-spine-mask);
+}
+.concise-project-page .concise-project-heading {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 39px;
+  min-height: var(--project-control-size);
+  margin-bottom: 39px;
+  align-items: start;
+}
+.concise-project-page .concise-project-heading h1 {
+  width: fit-content;
+  max-width: calc(100% - var(--project-body-start));
+  min-height: var(--project-control-size);
+  margin: 0 0 0 var(--project-body-start);
+  padding: 0;
+  font-size: var(--project-display-size);
+  font-weight: 500;
+  line-height: var(--project-control-size);
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+}
+.concise-project-page .concise-project-title-track,
+.concise-project-page .concise-project-title-track > span:first-child {
+  display: block;
+  width: auto;
+  white-space: normal;
+  animation: none;
+}
+.concise-project-page .concise-project-title-track > span:last-child { display: none; }
+.concise-project-page .concise-project-symbol,
+.concise-project-page .concise-project-footer .concise-project-pdf-download,
+.concise-project-page .project-image-lightbox-close,
+.concise-project-page .project-image-lightbox-nav {
+  width: var(--project-control-size);
+  min-width: var(--project-control-size);
+  height: var(--project-control-size);
+  min-height: var(--project-control-size);
+  padding: 0;
+  font-size: 0;
+}
+.concise-project-page .concise-project-back { top: 0; transform: translateX(-50%); }
+.concise-project-page .concise-project-nav { gap: 19.5px; }
+.concise-project-page .concise-project-symbol--star::before { width: 20.8px; height: 20.8px; }
+.concise-project-page :is(.concise-project-nav-triangles, .concise-project-scroll-top-triangles, .concise-project-pdf-download svg) { width: 20.8px; height: 20.8px; gap: 1.39px; }
+.concise-project-page .concise-project-nav-triangles i { border-top-width: 10.4px; border-bottom-width: 10.4px; }
+.concise-project-page .concise-project-nav-link--next i { border-left-width: 9.7px; }
+.concise-project-page .concise-project-nav-link--previous i { border-right-width: 9.7px; }
+.concise-project-page .concise-project-scroll-top-triangles i { border-right-width: 10.4px; border-left-width: 10.4px; border-bottom-width: 9.7px; }
+.concise-project-page .concise-project-intro {
+  --project-content-offset: var(--project-body-start);
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.35fr);
+  gap: 39px;
+  padding: 0 0 78px var(--project-body-start);
+}
+.concise-project-page .concise-project-intro--without-hero { grid-template-columns: minmax(0, 1fr); }
+.concise-project-page .concise-project-intro-copy { gap: 39px; min-width: 0; }
+.concise-project-page .concise-project-spine-label {
+  --spine-label-width: var(--project-display-size);
+  top: 3.25px;
+  right: calc(100% + var(--project-body-start) - var(--spine-label-width) / 2);
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: var(--project-display-size);
+  font-weight: 500;
+}
+.concise-project-page :is(.concise-project-facts, .concise-project-annotation p, .concise-project-highlight, .concise-project-carousel-heading, .concise-project-section h2) {
+  font-size: var(--project-copy-size);
+  line-height: 19.5px;
+}
+.concise-project-page .concise-project-facts { gap: 0; }
+.concise-project-page .concise-project-fact { gap: 19.5px; line-height: 19.5px; }
+.concise-project-page .concise-project-hero { min-width: 0; margin: 0; }
+.concise-project-page .concise-project-hero img { max-width: 100%; object-fit: contain; }
+.concise-project-page .concise-project-section { padding-left: var(--project-body-start); }
+.concise-project-page .concise-project-section::before { height: var(--project-line-width); }
+.concise-project-page .concise-project-footer button { gap: 39px; }
+.concise-project-page .concise-project-footer .concise-project-symbol { margin-left: -19.5px; }
+.concise-project-page .concise-project-footer button > span:last-child {
+  height: var(--project-control-size);
+  min-height: var(--project-control-size);
+  padding: 0;
+  font-size: var(--project-display-size);
+  font-weight: 500;
+  line-height: var(--project-control-size);
+}
+.concise-project-page .concise-project-footer button > span:last-child::before { left: -39px; width: 39px; height: var(--project-line-width); }
+.concise-project-page .concise-project-footer .concise-project-symbol::before,
+.concise-project-page .concise-project-footer .concise-project-symbol::after { width: 20.8px; height: calc(var(--project-display-size) * 0.108); }
+@media (max-width: 780px) {
+  .concise-project-page .concise-project-heading { gap: 19.5px; }
+  .concise-project-page .concise-project-intro { grid-template-columns: minmax(0, 1fr); }
+  .concise-project-page .concise-project-nav { gap: 6.5px; }
+}
+
+.concise-project-page .concise-project-heading::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--project-control-size) / 2);
+  top: calc(var(--project-control-size) / 2);
+  width: calc(var(--project-body-start) - var(--project-control-size) / 2);
+  height: var(--project-line-width);
+  background: #000;
+  pointer-events: none;
+}
+.concise-project-page .concise-project-heading h1 { min-width: 0; }
+.concise-project-page .concise-project-fact { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
+.concise-project-page .concise-project-fact dt { overflow-wrap: anywhere; color: #000; font-weight: 400; text-transform: lowercase; }
+.concise-project-page .project-image-lightbox-close .project-index-symbol-mark { width: 20.8px; height: 20.8px; }
+.concise-project-page .project-image-lightbox-close .project-index-symbol-mark::before,
+.concise-project-page .project-image-lightbox-close .project-index-symbol-mark::after { width: 20.8px; height: calc(var(--project-display-size) * 0.108); }
+/* The project heading is static; only overflowing title text moves. */
+.concise-project-page .concise-project-heading h1 { white-space: nowrap; overflow: hidden; overflow-wrap: normal; }
+.concise-project-page .concise-project-title-track { display: flex; width: max-content; white-space: nowrap; }
+.concise-project-page .concise-project-title-track > span:first-child { white-space: nowrap; }
+.concise-project-page .concise-project-heading h1.is-title-scrolling {
+  --title-marquee-gap: 26px;
+  width: calc(100% - var(--project-body-start));
+}
+.concise-project-page .concise-project-heading h1.is-title-scrolling .concise-project-title-track {
+  gap: var(--title-marquee-gap);
+  animation: concise-project-title-carousel var(--title-marquee-duration, 12s) linear infinite;
+}
+.concise-project-page .concise-project-heading h1.is-title-scrolling .concise-project-title-track > span:last-child { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .concise-project-heading h1.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
+}
+
+.concise-project-page .concise-project-heading::before,
+.concise-project-page .concise-project-footer button > span:last-child::before { content: none; }
+
+/* Project navigation lives with the language button on the header line. */
+.concise-project-page .concise-project-heading { grid-template-columns: minmax(0, 1fr); }
+.concise-project-page .index-layout-header .concise-project-nav { gap: 15px; }
+.concise-project-page .index-layout-header .concise-project-symbol {
+  width: 30px; min-width: 30px; height: 30px; min-height: 30px;
+}
+.concise-project-page .index-layout-header .concise-project-nav-triangles { width: 16px; height: 16px; gap: 1.07px; }
+.concise-project-page .index-layout-header .concise-project-nav-triangles i { border-top-width: 8px; border-bottom-width: 8px; }
+.concise-project-page .index-layout-header .concise-project-nav-link--next i { border-left-width: 7.47px; }
+.concise-project-page .index-layout-header .concise-project-nav-link--previous i { border-right-width: 7.47px; }
+
+/* The portfolio heading is the project page home link. */
+#projectHeaderHome { color: inherit; text-decoration: none; }
+#projectHeaderHome:focus-visible { outline: var(--index-connector-width) solid #000; outline-offset: 4px; }
+
+/* Featured labels occupy the connector before the contained image. */
+.concise-project-page .concise-project-section {
+  padding-left: calc(var(--project-body-start) + var(--feature-label-clearance));
+}
+.concise-project-page .concise-project-section > h2 {
+  position: absolute;
+  left: var(--project-body-start);
+  top: var(--feature-connector-top, 50%);
+  transform: translateY(-50%);
+  width: max-content;
+  max-width: 35%;
+  overflow-wrap: anywhere;
+  font-family: var(--font-heading);
+  font-size: var(--project-display-size);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: lowercase;
+}
+.concise-project-page .concise-project-section::before {
+  width: var(--feature-connector-width);
+  mask-image: var(--feature-connector-mask);
+}
+.concise-project-page .concise-project-section:nth-child(n) figure {
+  width: 100%;
+  max-width: 68rem;
+  min-width: 0;
+  margin-left: 0;
+}
+
+/* Reuse the opened index control's rotated plus for lightbox closing. */
+.concise-project-page .project-image-lightbox-close .project-index-symbol-mark {
+  transform: none;
+  rotate: 45deg;
+}
+.concise-project-page .project-image-lightbox-close .project-index-symbol-mark::before {
+  transform: translate(-50%, -50%);
+}
+.concise-project-page .project-image-lightbox-close .project-index-symbol-mark::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.concise-project-page .project-image-lightbox-pagination {
+  position: fixed;
+  z-index: 2;
+  bottom: clamp(1rem, 3vw, 2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: calc(100% - 2rem);
+  padding: 4px 8px;
+  background: #fff;
+}
+
+/* Lightbox section navigation shares the close control's edge clearance. */
+.concise-project-page .project-image-lightbox-nav { top: 50%; transform: translateY(-50%); }
+.concise-project-page .project-image-lightbox-nav--previous { left: clamp(1rem, 3vw, 2rem); }
+.concise-project-page .project-image-lightbox-nav--next { right: clamp(1rem, 3vw, 2rem); }
+.concise-project-page .project-image-lightbox-pagination[hidden] { display: none; }
+
+.concise-project-page .project-image-lightbox-pagination .concise-project-carousel-dot {
+  position: relative;
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  min-height: 1.25rem;
+  background: transparent;
+  color: #000;
+}
+
+/* Reserve a normal-flow header and pagination outside the image viewport. */
+.concise-project-page .project-image-lightbox[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 13px;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+.concise-project-page .project-image-lightbox-header {
+  display: grid;
+  grid-template-columns: 97.5px minmax(0, 1fr) 97.5px;
+  align-items: center;
+  gap: 13px;
+}
+.concise-project-page .project-image-lightbox-section-nav {
+  display: flex;
+  gap: 19.5px;
+}
+.concise-project-page .project-image-lightbox-header button {
+  position: static;
+  transform: none;
+}
+.concise-project-page .project-image-lightbox-header .project-image-lightbox-close { justify-self: end; }
+.concise-project-page .project-image-lightbox-title {
+  margin: 0;
+  color: #000;
+  font-family: var(--font-heading);
+  font-size: var(--project-display-size);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: lowercase;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.concise-project-page .project-image-lightbox-stage {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+.concise-project-page .project-image-lightbox-stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.concise-project-page .project-image-lightbox-pagination {
+  position: static;
+  justify-self: center;
+  transform: none;
+}
+
+/* Presentation uses the same rotating plus mark as the index drawers. */
+.concise-project-page .concise-project-footer .concise-project-symbol::before,
+.concise-project-page .concise-project-footer .concise-project-symbol::after { content: none; }
+.concise-project-page .concise-project-footer .project-index-symbol-mark {
+  width: 20.8px;
+  height: 20.8px;
+  rotate: 0deg;
+  transition: rotate 420ms var(--index-connector-easing);
+}
+.concise-project-page .concise-project-footer .project-index-symbol-mark::before,
+.concise-project-page .concise-project-footer .project-index-symbol-mark::after {
+  width: 20.8px;
+  height: calc(var(--project-display-size) * 0.108);
+}
+.concise-project-page .concise-project-footer button[aria-expanded="true"] .project-index-symbol-mark { rotate: 45deg; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .concise-project-footer .project-index-symbol-mark { transition: none; }
+}
+
+/* Keep the download box square, including its flex allocation. */
+.concise-project-page .concise-project-footer:is(.has-download, .is-presentation-open) .concise-project-pdf-download {
+  flex: 0 0 var(--project-control-size);
+  width: var(--project-control-size);
+  min-width: var(--project-control-size);
+  max-width: var(--project-control-size);
+  height: var(--project-control-size);
+  min-height: var(--project-control-size);
+  aspect-ratio: 1;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 780px) {
+  .concise-project-page .concise-project-intro-copy { display: contents; }
+  .concise-project-page .concise-project-intro .concise-project-info-block { order: 0; }
+  .concise-project-page .concise-project-intro .concise-project-hero { order: 1; }
+  .concise-project-page .concise-project-intro .concise-project-annotation { order: 2; }
+  .concise-project-page .concise-project-intro .concise-project-highlight { order: 3; }
+}
+
+.concise-project-page .concise-project-fact dt { white-space: nowrap; overflow-wrap: normal; }
+.concise-project-page .concise-project-fact.is-stacked { grid-template-columns: minmax(0, 1fr); }
+.concise-project-page .concise-project-fact.is-stacked :is(dt, dd) {
+  grid-column: 1;
+  grid-row: auto;
+  text-align: left;
+}
+
+.concise-project-page .concise-project-fact.is-stacked dd {
+  justify-self: start;
+  width: 100%;
+  text-align: left;
+}
+
+/* Compact info shares the CV experience entry spacing. */
+.concise-project-page .concise-project-facts.is-stacked { gap: 19.5px; }
+
+.concise-project-page .concise-project-fact.is-stacked { row-gap: 0; }
+
+.concise-project-page .concise-project-section > h2 { white-space: nowrap; overflow-wrap: normal; }
+.concise-project-page .concise-project-section.is-feature-label-hidden > h2 { visibility: hidden; }
+
+.concise-project-page .concise-project-footer > button { flex: 1 1 auto; min-width: 0; }
+.concise-project-page .concise-project-footer > button > .concise-project-symbol { flex: 0 0 var(--project-control-size); }
+.concise-project-page .concise-project-footer .concise-project-presentation-label {
+  min-width: 0;
+  width: max-content;
+  overflow: hidden;
+  white-space: nowrap;
+  --title-marquee-gap: 26px;
+}
+.concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track {
+  gap: var(--title-marquee-gap);
+  animation: concise-project-title-carousel var(--title-marquee-duration, 12s) linear infinite;
+}
+.concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track > span:last-child { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
+}
+
+@media (width < 700px) {
+  .concise-project-page .concise-project-footer button { gap: 19.5px; }
+}
+
+.concise-project-page .project-image-lightbox-title {
+  min-width: 0;
+  overflow: hidden;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  --title-marquee-gap: 26px;
+}
+.concise-project-page .project-image-lightbox-title .concise-project-title-track { margin-inline: auto; }
+.concise-project-page .project-image-lightbox-title.is-title-scrolling .concise-project-title-track {
+  margin-inline: 0;
+  gap: var(--title-marquee-gap);
+  animation: concise-project-title-carousel var(--title-marquee-duration, 12s) linear infinite;
+}
+.concise-project-page .project-image-lightbox-title.is-title-scrolling .concise-project-title-track > span:last-child { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .project-image-lightbox-title.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
+}
+
+/* Use the measured spine position for the floating home icon at every width. */
+.concise-project-page .concise-project.is-project-nav-floating .concise-project-back {
+  left: var(--project-floating-star-left);
+  transform: translateX(-50%);
+}
+
+/* Match the range thumb's outer diameter to the carousel dots. */
+.concise-project-page .concise-project-carousel-dot::before {
+  box-sizing: border-box;
+  width: 0.55rem;
+  height: 0.55rem;
+}
+.concise-project-page .concise-project-day-night-slider::-webkit-slider-thumb {
+  box-sizing: border-box;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1.5px solid var(--text);
+  margin-top: calc((1.5px - 0.55rem) / 2);
+}
+.concise-project-page .concise-project-day-night-slider::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1.5px solid var(--text);
+}

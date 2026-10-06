@@ -1,8 +1,9 @@
+import { initIndexHeader, updateSharedHeaderGeometry, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-06-project-layout";
 import {
   getLanguage,
   getLocalizedText,
   initLanguageSwitch,
-} from "./language.js";
+} from "./language.js?v=2026-10-06-inherited-language";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
 
 const projectGroups = {
@@ -19,9 +20,6 @@ const cvToggle = document.getElementById("cvToggle");
 const cvDetails = document.getElementById("cvDetails");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
-const indexNameAnimation = document.getElementById("indexNameAnimation");
-const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
-const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 const INDEX_OPENING_SPEED = 0.6;
 const PROJECTS_CLOSING_DURATION = 900;
 const NESTED_DRAWER_CLOSING_DURATION = 700;
@@ -284,48 +282,10 @@ function initCvToggle() {
   });
 }
 
-function initIndexNameAnimation() {
-  if (!indexNameAnimation) {
-    return;
-  }
 
-  const showFinalPoster = () => {
-    indexNameAnimation.pause();
-    signatureNameplate?.classList.add("is-signature-static");
-    document.documentElement.classList.add("signature-complete");
-    try {
-      window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
-    } catch {
-      // The static transparent image still works when storage is unavailable.
-    }
-  };
-
-  const isPageReload = window.performance
-    ?.getEntriesByType("navigation")
-    .some((entry) => entry.type === "reload");
-  let hasCompleted = false;
-  try {
-    hasCompleted = !isPageReload
-      && window.sessionStorage.getItem(SIGNATURE_COMPLETE_STORAGE_KEY) === "1";
-  } catch {
-    hasCompleted = false;
-  }
-  if (hasCompleted || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    showFinalPoster();
-    return;
-  }
-
-  document.documentElement.classList.remove("signature-complete");
-  signatureNameplate?.classList.remove("is-signature-static");
-  indexNameAnimation.currentTime = 0;
-  indexNameAnimation.addEventListener("ended", showFinalPoster, { once: true });
-  void indexNameAnimation.play().catch(() => {
-    showFinalPoster();
-  });
-}
-
-function createLocalizedText(value, locale = activeLanguage) {
-  return getLocalizedText(value, locale);
+function createLocalizedText(value) {
+  // Use authored Czech index copy in both modes until English copy is supplied.
+  return getLocalizedText(value, "cs");
 }
 
 function getProjectIndexMedia(project) {
@@ -347,24 +307,34 @@ function getProjectIndexMedia(project) {
   };
 }
 
+function getIndexContentScale() {
+  return parseFloat(getComputedStyle(document.body).getPropertyValue("--index-content-scale")) || 1;
+}
+
 function updateProjectPreviewPlacements() {
-  document.querySelectorAll(".project-index-link:has(.project-index-link-preview)").forEach((link) => {
-    const textParts = Array.from(link.children)
-      .filter((child) => !child.classList.contains("project-index-link-preview"));
-    const textRight = Math.max(...textParts.map((part) => part.getBoundingClientRect().right));
-    const availableRight = window.innerWidth - textRight - 24;
+  const contentScale = getIndexContentScale();
+  const links = Array.from(document.querySelectorAll(".project-index-link:has(.project-index-link-preview)"));
+  const inline = window.matchMedia("(width < 700px)").matches || window.matchMedia("(hover: none), (pointer: coarse)").matches;
+  const textRects = links.map((link) => Array.from(link.children)
+    .filter((child) => !child.classList.contains("project-index-link-preview"))
+    .map((part) => part.getBoundingClientRect()));
+  // Reserve the entire text column so a tall preview cannot cover another row.
+  const columnRight = Math.max(0, ...textRects.flat().map((rect) => rect.right));
+  links.forEach((link, index) => {
+    const rects = textRects[index];
+    const centerY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
+    const left = columnRight + 30 * contentScale;
+    const heightLimit = Math.max(0, Math.min(340 * contentScale, 2 * (centerY - 75 * contentScale), 2 * (window.innerHeight - centerY - 24 * contentScale)));
+    const widthLimit = Math.max(0, Math.min(540 * contentScale, window.innerWidth * 0.38, window.innerWidth - left - 24 * contentScale));
+    const image = link.querySelector(".project-index-link-preview img");
+    const ratio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : 1;
+    const width = Math.min(widthLimit, heightLimit * ratio);
     const linkRect = link.getBoundingClientRect();
-    const linkCenterY = linkRect.top + (linkRect.height / 2);
-    const availableHalfHeight = Math.max(
-      0,
-      Math.min(linkCenterY - 24, window.innerHeight - linkCenterY - 24),
-    );
-    link.style.setProperty("--project-preview-side-width", `${Math.max(0, availableRight)}px`);
-    link.style.setProperty("--project-preview-side-height", `${availableHalfHeight * 2}px`);
-    link.classList.toggle(
-      "has-side-preview",
-      window.innerWidth > 720 && availableRight > 0,
-    );
+    link.style.setProperty("--project-preview-left", `${(left - linkRect.left) / contentScale}px`);
+    link.style.setProperty("--project-preview-center", `${(centerY - linkRect.top) / contentScale}px`);
+    link.style.setProperty("--project-preview-width", `${width / contentScale}px`);
+    link.style.setProperty("--project-preview-height", `${width / ratio / contentScale}px`);
+    link.classList.toggle("has-side-preview", !inline && width > 0);
   });
 }
 
@@ -374,8 +344,8 @@ function createProjectIndexItem(project, order) {
   link.className = "project-index-link";
   link.style.setProperty("--project-order", `${order}`);
   link.href = project.projectPage?.layout === "concise"
-    ? `./project.html?project=${encodeURIComponent(projectSlug)}`
-    : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}`;
+    ? `./project.html?project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`
+    : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`;
   link.addEventListener("pointerenter", () => {
     updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
@@ -383,6 +353,7 @@ function createProjectIndexItem(project, order) {
     }
   });
   link.addEventListener("focus", () => {
+    updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
     }
@@ -404,9 +375,12 @@ function createProjectIndexItem(project, order) {
 
   const context = document.createElement("span");
   context.className = "project-index-detail project-index-context";
-  context.textContent = `< ${createLocalizedText(project.index?.context)} >`;
+  context.textContent = createLocalizedText(project.index?.context);
 
-  link.append(title, scale, context);
+  const metadata = document.createElement("span");
+  metadata.className = "project-index-metadata";
+  metadata.append(context);
+  link.append(title, scale, metadata);
   link.setAttribute(
     "aria-label",
     `${title.textContent} ${scale.textContent} ${context.textContent}`.trim(),
@@ -416,7 +390,7 @@ function createProjectIndexItem(project, order) {
     const badge = document.createElement("span");
     badge.className = `project-index-highlight project-index-highlight--${highlight.type || "note"}`;
     badge.textContent = createLocalizedText(highlight.label || highlight);
-    link.append(badge);
+    metadata.append(badge);
   });
 
   const media = getProjectIndexMedia(project);
@@ -430,6 +404,7 @@ function createProjectIndexItem(project, order) {
     previewImage.sizes = "(max-width: 760px) 90vw, min(70vw, 46rem)";
     previewImage.alt = "";
     previewImage.loading = "lazy";
+    previewImage.addEventListener("load", updateProjectPreviewPlacements);
     preview.append(previewImage);
     link.append(preview);
   }
@@ -473,13 +448,98 @@ function renderProjectIndex(projects) {
   document.fonts?.ready.then(updateProjectPreviewPlacements);
 }
 
+// Cut only the connector lines; labels stay transparent over the terrain.
+function initConnectorGaps() {
+  const header = document.querySelector(".index-layout-header");
+  const title = header?.querySelector("h1");
+  const labels = Array.from(document.querySelectorAll(".project-index-group h2, .cv-section > h3"));
+  function update() {
+    const contentScale = getIndexContentScale();
+    const pixelRatio = window.devicePixelRatio || 1;
+    // Align every connector edge to the same device pixel grid after content zoom.
+    [header, projectIndex, projectsToggle, infoToggle, cvToggle].filter(Boolean).forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const control = element.matches("button");
+      const x = rect.left + (control ? 15 * contentScale : 0);
+      const y = rect.top + 15 * contentScale;
+      element.style.setProperty("--connector-x-adjust", `${(Math.round(x * pixelRatio) / pixelRatio - x) / contentScale}px`);
+      element.style.setProperty("--connector-y-adjust", `${(Math.round(y * pixelRatio) / pixelRatio - y) / contentScale}px`);
+    });
+    updateSharedHeaderGeometry();
+    if (!projectIndex) return;
+    const spineTop = projectIndex.getBoundingClientRect().top + 30 * contentScale;
+    const gaps = labels.flatMap((label) => {
+      const panel = label.closest(".project-index-projects-panel, .project-index-cv-content");
+      if (!panel || panel.hidden) return [];
+      const rect = label.getBoundingClientRect();
+      const clip = panel.getBoundingClientRect();
+      const start = (Math.max(rect.top - 3 * contentScale, clip.top, spineTop) - spineTop) / contentScale;
+      const end = (Math.min(rect.bottom + 3 * contentScale, clip.bottom) - spineTop) / contentScale;
+      return end > start ? [[start, end, label.id === "cvExperienceTitle"]] : [];
+    }).sort((a, b) => a[0] - b[0]);
+    const stops = ["#000 0px"];
+    let end = 0;
+    let spineEnded = false;
+    for (const gap of gaps) {
+      const start = Math.max(end, gap[0]);
+      if (gap[1] <= start) continue;
+      if (gap[2]) {
+        stops.push(`#000 ${start}px`, `transparent ${start}px`, "transparent 100%");
+        spineEnded = true;
+        break;
+      }
+      stops.push(`#000 ${start}px`, `transparent ${start}px`, `transparent ${gap[1]}px`, `#000 ${gap[1]}px`);
+      end = gap[1];
+    }
+    if (!spineEnded) stops.push("#000 100%");
+    projectIndex.style.setProperty("--subsection-connector-mask", `linear-gradient(to bottom, ${stops.join(", ")})`);
+  }
+  const observer = new ResizeObserver(update);
+  [header, title, projectIndex, projectsPanel, cvDetails, ...labels].filter(Boolean).forEach((element) => observer.observe(element));
+  window.addEventListener("resize", update);
+  document.fonts?.ready.then(update);
+  update();
+}
+
+function initMobileHelpTicker() {
+  const source = document.getElementById("headerHelpText");
+  const header = document.querySelector(".index-layout-header");
+  if (!source || !header) return;
+  const ticker = document.createElement("div");
+  ticker.className = "index-mobile-help-ticker";
+  const track = document.createElement("div");
+  track.className = "index-mobile-help-track";
+  const text = Array.from(source.querySelectorAll("p")).map(p => p.textContent.trim()).join(" ");
+  for (let index = 0; index < 2; index++) {
+    const copy = document.createElement("span");
+    copy.className = "index-mobile-help-copy";
+    if (index) copy.setAttribute("aria-hidden", "true");
+    const dot = document.createElement("span");
+    dot.className = "index-mobile-help-dot";
+    dot.setAttribute("aria-hidden", "true");
+    const message = document.createElement("span");
+    text.split(/(\[[^\]]*\])/g).filter(Boolean).forEach(part => {
+      const fragment = document.createElement(part.startsWith("[") ? "span" : "em");
+      fragment.textContent = part;
+      message.append(fragment);
+    });
+    copy.append(message, dot);
+    track.append(copy);
+  }
+  ticker.append(track);
+  document.body.append(ticker);
+}
+
 async function init() {
-  void renderRandomIndexBackground();
-  initIndexNameAnimation();
+  initConnectorGaps();
+  renderRandomIndexBackground();
+  initIndexHeader();
+  initMobileHelpTicker();
   initProjectsToggle();
   initInfoToggle();
   initCvToggle();
   window.addEventListener("resize", updateProjectPreviewPlacements);
+  window.addEventListener("scroll", updateProjectPreviewPlacements, { passive: true });
 
   const response = await fetch(`./data/projects.json?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });
   if (!response.ok) {
@@ -488,11 +548,15 @@ async function init() {
 
   indexProjects = applyCuratedProjectMedia(await response.json());
   renderProjectIndex(indexProjects);
+  if (new URLSearchParams(window.location.search).get("projects") === "open") {
+    setProjectsOpen(true);
+  }
   yearLabel.textContent = new Date().getFullYear();
 }
 
 initLanguageSwitch((language) => {
   activeLanguage = language;
+  updateHeaderLanguageToggle(language);
   if (indexProjects.length > 0) {
     renderProjectIndex(indexProjects);
   }

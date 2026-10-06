@@ -1121,7 +1121,9 @@ function renderProject(animateFacts = false) {
   const plus = document.createElement("span");
   plus.className = "concise-project-symbol";
   plus.setAttribute("aria-hidden", "true");
-  plus.textContent = "+";
+  const presentationMark = document.createElement("span");
+  presentationMark.className = "project-index-symbol-mark";
+  plus.append(presentationMark);
   const presentationLabel = document.createElement("span");
   presentationLabel.textContent = activeLanguage === "cs" ? "Prezentace" : "Presentation";
   presentation.append(plus, presentationLabel);

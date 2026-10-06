@@ -293,3 +293,22 @@
   justify-self: center;
   transform: none;
 }
+
+/* Presentation uses the same rotating plus mark as the index drawers. */
+.concise-project-page .concise-project-footer .concise-project-symbol::before,
+.concise-project-page .concise-project-footer .concise-project-symbol::after { content: none; }
+.concise-project-page .concise-project-footer .project-index-symbol-mark {
+  width: 20.8px;
+  height: 20.8px;
+  rotate: 0deg;
+  transition: rotate 420ms var(--index-connector-easing);
+}
+.concise-project-page .concise-project-footer .project-index-symbol-mark::before,
+.concise-project-page .concise-project-footer .project-index-symbol-mark::after {
+  width: 20.8px;
+  height: calc(var(--project-display-size) * 0.108);
+}
+.concise-project-page .concise-project-footer button[aria-expanded="true"] .project-index-symbol-mark { rotate: 45deg; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .concise-project-footer .project-index-symbol-mark { transition: none; }
+}

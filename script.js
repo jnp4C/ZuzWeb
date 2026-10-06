@@ -200,7 +200,9 @@ function initProjectsToggle() {
       projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
         link.classList.remove("has-user-previewed", "skip-language-reveal");
       });
-      projectIndex.classList.remove("is-projects-closing");
+      projectIndex.classList.remove("is-projects-open", "is-projects-closing");
+      // Establish the collapsed layout after unhiding before starting the transition.
+      void projectsPanel.offsetWidth;
       projectIndex.classList.add("is-projects-open");
       projectIndex.classList.add("is-projects-intro-active");
       introTimer = window.setTimeout(() => {

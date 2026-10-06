@@ -1032,15 +1032,18 @@ function renderProject(animateFacts = false) {
   infoHeading.textContent = copy.info;
   infoBlock.append(infoHeading, facts);
   const updateFactWrapping = () => {
-    facts.querySelectorAll(".concise-project-fact").forEach(row => {
+    const rows = Array.from(facts.querySelectorAll(".concise-project-fact"));
+    const shouldStack = rows.some(row => {
       const term = row.querySelector("dt");
       const range = document.createRange();
       range.selectNodeContents(term);
       const labelWidth = range.getBoundingClientRect().width;
       const availableWidth = row.getBoundingClientRect().width;
       const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
-      row.classList.toggle("is-stacked", labelWidth > (availableWidth - gap) * 0.4);
+      return labelWidth > (availableWidth - gap) * 0.4;
     });
+    facts.classList.toggle("is-stacked", shouldStack);
+    rows.forEach(row => row.classList.toggle("is-stacked", shouldStack));
   };
   const factObserver = new ResizeObserver(updateFactWrapping);
   factObserver.observe(facts);

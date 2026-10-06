@@ -348,3 +348,6 @@
   width: 100%;
   text-align: left;
 }
+
+/* Compact info shares the CV experience entry spacing. */
+.concise-project-page .concise-project-facts.is-stacked { gap: 19.5px; }

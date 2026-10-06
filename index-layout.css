@@ -95,7 +95,7 @@
 .index-page .project-index-symbol-mark { width: 16px; height: 16px; }
 .index-page .project-index :is(.project-index-root, .project-index-destination-heading)[aria-expanded="true"] .project-index-symbol-mark { transform: none; rotate: 45deg; }
 .index-page .project-index-symbol-mark::before,
-.index-page .project-index-symbol-mark::after { width: 16px; height: 2px; }
+.index-page .project-index-symbol-mark::after { width: 16px; height: calc(var(--type-medium) * 0.108); }
 .index-page .project-index-symbol--star::before { width: 16px; height: 16px; }
 .index-page .project-index :is(.project-index-heading, .project-index-destination-title, .project-index-destination-heading h2) {
   width: 135px;

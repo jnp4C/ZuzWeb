@@ -512,6 +512,9 @@ async function init() {
 
   indexProjects = applyCuratedProjectMedia(await response.json());
   renderProjectIndex(indexProjects);
+  if (new URLSearchParams(window.location.search).get("projects") === "open") {
+    setProjectsOpen(true);
+  }
   yearLabel.textContent = new Date().getFullYear();
 }
 

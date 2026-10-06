@@ -803,7 +803,7 @@ function renderProject(animateFacts = false) {
   const back = document.createElement("a");
   back.className = "concise-project-symbol concise-project-symbol--star concise-project-back";
   const home = document.getElementById("projectHeaderHome");
-  home.href = `./index.html?lang=${navigationLanguage}`;
+  home.href = `./index.html?lang=${navigationLanguage}&projects=open`;
   back.textContent = "∗";
   back.href = home.href;
   back.setAttribute("aria-label", copy.back);

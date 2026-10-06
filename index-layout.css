@@ -24,8 +24,9 @@
   flex: 0 1 auto;
   font-size: var(--type-medium);
   line-height: 30px;
+  background: transparent;
 }
-.index-page .index-layout-header::before { top: 15px; left: 0; height: 1px; }
+.index-page .index-layout-header::before { top: 15px; left: 0; height: 1px; mask-image: var(--header-connector-mask); }
 .index-page .index-layout-header::after { top: 15px; bottom: -30px; left: 0; width: 1px; }
 .index-page .index-header-actions { gap: 15px; }
 .index-page .index-header-button { padding: 4px; font-size: var(--type-medium); }
@@ -47,6 +48,7 @@
   top: 30px;
   bottom: 0;
   left: 0;
+  mask-image: var(--subsection-connector-mask);
   width: 1px;
   background: #000;
   pointer-events: none;
@@ -170,8 +172,8 @@
   font-size: var(--type-medium);
   font-weight: 500;
   line-height: 1;
-  background: #fff;
-  box-shadow: 0 3px #fff, 0 -3px #fff;
+  background: transparent;
+  box-shadow: none;
   opacity: 1;
   animation: none !important;
 }

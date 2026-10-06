@@ -468,7 +468,50 @@ function renderProjectIndex(projects) {
   document.fonts?.ready.then(updateProjectPreviewPlacements);
 }
 
+// Cut only the connector lines; labels stay transparent over the terrain.
+function initConnectorGaps() {
+  const header = document.querySelector(".index-layout-header");
+  const title = header?.querySelector("h1");
+  const labels = Array.from(document.querySelectorAll(".project-index-group h2, .cv-section > h3"));
+  function update() {
+    if (header && title) {
+      const headerRect = header.getBoundingClientRect();
+      const titleRect = title.getBoundingClientRect();
+      const wraps = window.matchMedia("(max-width: 600px)").matches;
+      header.style.setProperty("--header-connector-mask", wraps ? "none" :
+        `linear-gradient(to right, #000 ${titleRect.left - headerRect.left}px, transparent ${titleRect.left - headerRect.left}px, transparent ${titleRect.right - headerRect.left}px, #000 ${titleRect.right - headerRect.left}px)`);
+    }
+    if (!projectIndex) return;
+    const spineTop = projectIndex.getBoundingClientRect().top + 30;
+    const gaps = labels.flatMap((label) => {
+      const panel = label.closest(".project-index-projects-panel, .project-index-cv-content");
+      if (!panel || panel.hidden) return [];
+      const rect = label.getBoundingClientRect();
+      const clip = panel.getBoundingClientRect();
+      const start = Math.max(rect.top - 3, clip.top, spineTop) - spineTop;
+      const end = Math.min(rect.bottom + 3, clip.bottom) - spineTop;
+      return end > start ? [[start, end]] : [];
+    }).sort((a, b) => a[0] - b[0]);
+    const stops = ["#000 0px"];
+    let end = 0;
+    for (const gap of gaps) {
+      const start = Math.max(end, gap[0]);
+      if (gap[1] <= start) continue;
+      stops.push(`#000 ${start}px`, `transparent ${start}px`, `transparent ${gap[1]}px`, `#000 ${gap[1]}px`);
+      end = gap[1];
+    }
+    stops.push("#000 100%");
+    projectIndex.style.setProperty("--subsection-connector-mask", `linear-gradient(to bottom, ${stops.join(", ")})`);
+  }
+  const observer = new ResizeObserver(update);
+  [header, title, projectIndex, projectsPanel, cvDetails, ...labels].filter(Boolean).forEach((element) => observer.observe(element));
+  window.addEventListener("resize", update);
+  document.fonts?.ready.then(update);
+  update();
+}
+
 async function init() {
+  initConnectorGaps();
   renderRandomIndexBackground();
   initIndexHeader();
   initProjectsToggle();

@@ -269,6 +269,21 @@ function openImageLightbox(mediaItems, initialIndex) {
   const sectionTitle = document.createElement("h2");
   sectionTitle.className = "project-image-lightbox-title";
   sectionTitle.setAttribute("aria-live", "polite");
+  const lightboxTitleTrack = document.createElement("span");
+  lightboxTitleTrack.className = "concise-project-title-track";
+  const lightboxTitleText = document.createElement("span");
+  const lightboxTitleRepeat = document.createElement("span");
+  lightboxTitleRepeat.setAttribute("aria-hidden", "true");
+  lightboxTitleTrack.append(lightboxTitleText, lightboxTitleRepeat);
+  sectionTitle.append(lightboxTitleTrack);
+  const updateLightboxTitleCarousel = () => {
+    const textWidth = lightboxTitleText.getBoundingClientRect().width;
+    sectionTitle.classList.toggle("is-title-scrolling", textWidth > sectionTitle.clientWidth + 1);
+    sectionTitle.style.setProperty("--title-marquee-duration", `${Math.max(9, textWidth / 32)}s`);
+  };
+  const lightboxTitleObserver = new ResizeObserver(updateLightboxTitleCarousel);
+  lightboxTitleObserver.observe(sectionTitle);
+
   const navigation = document.createElement("nav");
   navigation.className = "project-image-lightbox-section-nav";
   const stage = document.createElement("div");
@@ -335,7 +350,10 @@ function openImageLightbox(mediaItems, initialIndex) {
   };
   const renderMedia = () => {
     const media = mediaItems[activeIndex];
-    sectionTitle.textContent = matchedGroup >= 0 ? lightboxGroupLabels[activeGroup] : getLocalizedText(media.alt, activeLanguage);
+    const title = matchedGroup >= 0 ? lightboxGroupLabels[activeGroup] : getLocalizedText(media.alt, activeLanguage);
+    lightboxTitleText.textContent = title;
+    lightboxTitleRepeat.textContent = title;
+    updateLightboxTitleCarousel();
     image.srcset = media.zoomSrc ? "" : (media.srcset || "");
     image.src = media.zoomSrc || media.src;
     image.alt = getLocalizedText(media.alt, activeLanguage);
@@ -366,6 +384,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   });
   dialog.addEventListener("close", () => {
     document.removeEventListener("keydown", onKeydown);
+    lightboxTitleObserver.disconnect();
     dialog.remove();
   });
   document.addEventListener("keydown", onKeydown);
@@ -415,6 +434,8 @@ function openImageLightbox(mediaItems, initialIndex) {
   document.body.append(dialog);
   renderMedia();
   dialog.showModal();
+  updateLightboxTitleCarousel();
+  document.fonts.ready.then(() => { if (dialog.isConnected) updateLightboxTitleCarousel(); });
   close.focus();
 }
 

@@ -378,3 +378,21 @@
 @media (max-width: 780px) {
   .concise-project-page .concise-project-footer button { gap: 19.5px; }
 }
+
+.concise-project-page .project-image-lightbox-title {
+  min-width: 0;
+  overflow: hidden;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  --title-marquee-gap: 26px;
+}
+.concise-project-page .project-image-lightbox-title .concise-project-title-track { margin-inline: auto; }
+.concise-project-page .project-image-lightbox-title.is-title-scrolling .concise-project-title-track {
+  margin-inline: 0;
+  gap: var(--title-marquee-gap);
+  animation: concise-project-title-carousel var(--title-marquee-duration, 12s) linear infinite;
+}
+.concise-project-page .project-image-lightbox-title.is-title-scrolling .concise-project-title-track > span:last-child { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .project-image-lightbox-title.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
+}

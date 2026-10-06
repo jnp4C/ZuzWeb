@@ -576,11 +576,13 @@ function connectSectionToFrame(section, figure) {
       : 0;
     const label = section.querySelector(":scope > h2");
     const labelRect = label?.getBoundingClientRect();
-    const gap = 13;
-    section.style.setProperty("--feature-label-clearance", `${labelRect ? labelRect.width + gap : 0}px`);
+    const textClearance = 6.5;
+    const beforeLength = labelRect ? Math.max(0, labelRect.left - sectionRect.left - spineX - textClearance) : 0;
+    const afterLength = beforeLength / 2;
+    section.style.setProperty("--feature-label-clearance", `${labelRect ? labelRect.width + textClearance + afterLength : 0}px`);
     if (labelRect) {
-      const start = Math.max(0, labelRect.left - sectionRect.left - spineX - gap / 2);
-      const end = labelRect.right - sectionRect.left - spineX + gap / 2;
+      const start = beforeLength;
+      const end = labelRect.right - sectionRect.left - spineX + textClearance;
       section.style.setProperty("--feature-connector-mask", `linear-gradient(to right, #000 0px, #000 ${start}px, transparent ${start}px, transparent ${end}px, #000 ${end}px, #000 100%)`);
     }
     section.style.setProperty(
@@ -589,7 +591,7 @@ function connectSectionToFrame(section, figure) {
     );
     section.style.setProperty(
       "--feature-connector-width",
-      `${Math.max(0, viewportRect.left - sectionRect.left - spineX + 2)}px`,
+      `${Math.max(0, viewportRect.left - sectionRect.left - spineX)}px`,
     );
   };
 

@@ -315,8 +315,9 @@ function initIndexHeader() {
   });
 }
 
-function createLocalizedText(value, locale = activeLanguage) {
-  return getLocalizedText(value, locale);
+function createLocalizedText(value) {
+  // Use authored Czech index copy in both modes until English copy is supplied.
+  return getLocalizedText(value, "cs");
 }
 
 function getProjectIndexMedia(project) {
@@ -395,9 +396,12 @@ function createProjectIndexItem(project, order) {
 
   const context = document.createElement("span");
   context.className = "project-index-detail project-index-context";
-  context.textContent = `< ${createLocalizedText(project.index?.context)} >`;
+  context.textContent = createLocalizedText(project.index?.context);
 
-  link.append(title, scale, context);
+  const metadata = document.createElement("span");
+  metadata.className = "project-index-metadata";
+  metadata.append(context);
+  link.append(title, scale, metadata);
   link.setAttribute(
     "aria-label",
     `${title.textContent} ${scale.textContent} ${context.textContent}`.trim(),
@@ -407,7 +411,7 @@ function createProjectIndexItem(project, order) {
     const badge = document.createElement("span");
     badge.className = `project-index-highlight project-index-highlight--${highlight.type || "note"}`;
     badge.textContent = createLocalizedText(highlight.label || highlight);
-    link.append(badge);
+    metadata.append(badge);
   });
 
   const media = getProjectIndexMedia(project);
@@ -465,7 +469,6 @@ function renderProjectIndex(projects) {
 }
 
 async function init() {
-  void renderRandomIndexBackground();
   initIndexHeader();
   initProjectsToggle();
   initInfoToggle();

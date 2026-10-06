@@ -19,9 +19,6 @@ const cvToggle = document.getElementById("cvToggle");
 const cvDetails = document.getElementById("cvDetails");
 const personalPhotoFrame = document.querySelector(".personal-photo-frame");
 const backgroundAnimation = document.querySelector(".background-animation");
-const indexNameAnimation = document.getElementById("indexNameAnimation");
-const signatureNameplate = indexNameAnimation?.closest(".signature-nameplate");
-const SIGNATURE_COMPLETE_STORAGE_KEY = "zuz-signature-animation-complete-v2";
 const INDEX_OPENING_SPEED = 0.6;
 const PROJECTS_CLOSING_DURATION = 900;
 const NESTED_DRAWER_CLOSING_DURATION = 700;
@@ -284,43 +281,37 @@ function initCvToggle() {
   });
 }
 
-function initIndexNameAnimation() {
-  if (!indexNameAnimation) {
-    return;
-  }
-
-  const showFinalPoster = () => {
-    indexNameAnimation.pause();
-    signatureNameplate?.classList.add("is-signature-static");
-    document.documentElement.classList.add("signature-complete");
-    try {
-      window.sessionStorage.setItem(SIGNATURE_COMPLETE_STORAGE_KEY, "1");
-    } catch {
-      // The static transparent image still works when storage is unavailable.
-    }
+function initIndexHeader() {
+  const help = document.querySelector('.index-header-help');
+  const toggle = document.getElementById('headerHelpToggle');
+  const panel = document.getElementById('headerHelpText');
+  if (!help || !toggle || !panel) return;
+  const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let dismissed = false;
+  const setOpen = (open) => {
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
   };
-
-  const isPageReload = window.performance
-    ?.getEntriesByType("navigation")
-    .some((entry) => entry.type === "reload");
-  let hasCompleted = false;
-  try {
-    hasCompleted = !isPageReload
-      && window.sessionStorage.getItem(SIGNATURE_COMPLETE_STORAGE_KEY) === "1";
-  } catch {
-    hasCompleted = false;
-  }
-  if (hasCompleted || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    showFinalPoster();
-    return;
-  }
-
-  document.documentElement.classList.remove("signature-complete");
-  signatureNameplate?.classList.remove("is-signature-static");
-  indexNameAnimation.currentTime = 0;
-  indexNameAnimation.addEventListener("ended", showFinalPoster, { once: true });
-  void indexNameAnimation.play().catch(() => {
-    showFinalPoster();
+  help.addEventListener('pointerenter', () => {
+    dismissed = false;
+    if (hoverPointer.matches) setOpen(true);
+  });
+  help.addEventListener('pointerleave', () => {
+    if (hoverPointer.matches && !help.contains(document.activeElement)) setOpen(false);
+  });
+  help.addEventListener('focusin', () => { if (!dismissed && (hoverPointer.matches || toggle.matches(":focus-visible"))) setOpen(true); });
+  help.addEventListener('focusout', (event) => {
+    if (!help.contains(event.relatedTarget)) { dismissed = false; setOpen(false); }
+  });
+  toggle.addEventListener('click', () => {
+    if (!hoverPointer.matches) setOpen(panel.hidden);
+    else { dismissed = false; setOpen(true); }
+  });
+  document.addEventListener('pointerdown', (event) => {
+    if (!help.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { dismissed = true; setOpen(false); }
   });
 }
 
@@ -475,7 +466,7 @@ function renderProjectIndex(projects) {
 
 async function init() {
   void renderRandomIndexBackground();
-  initIndexNameAnimation();
+  initIndexHeader();
   initProjectsToggle();
   initInfoToggle();
   initCvToggle();
@@ -493,6 +484,15 @@ async function init() {
 
 initLanguageSwitch((language) => {
   activeLanguage = language;
+  const languageToggle = document.getElementById('headerLanguageToggle');
+  if (languageToggle) {
+    const target = language === 'cs' ? 'en' : 'cs';
+    languageToggle.dataset.language = target;
+    languageToggle.textContent = target === 'cs' ? 'CZ' : 'EN';
+    languageToggle.setAttribute('aria-label', target === 'cs' ? 'Switch to Czech' : 'Přepnout do angličtiny');
+    languageToggle.removeAttribute('aria-pressed');
+    languageToggle.classList.remove('is-active');
+  }
   if (indexProjects.length > 0) {
     renderProjectIndex(indexProjects);
   }

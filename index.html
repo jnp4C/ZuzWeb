@@ -8,38 +8,25 @@
       name="description"
       content="Minimal architecture portfolio with static project text and dynamic PDF-driven visuals."
     />
-    <script>
-      try {
-        if (sessionStorage.getItem("zuz-signature-animation-complete-v2") === "1") {
-          document.documentElement.classList.add("signature-complete");
-        }
-      } catch {}
-    </script>
-    <link rel="stylesheet" href="./styles.css?v=2026-08-24-tablet-control-alignment" />
+    <link rel="stylesheet" href="./styles.css?v=2026-10-06-index-header" />
   </head>
   <body class="index-page">
     <div class="background-animation" aria-hidden="true">
     </div>
-    <nav class="language-switch" data-language-switch aria-label="Language">
-      <button type="button" data-language="cs" aria-pressed="false">CZ</button>
-      <span aria-hidden="true">/</span>
-      <button type="button" data-language="en" aria-pressed="true">EN</button>
-    </nav>
-    <header class="site-header index-nameplate signature-nameplate">
-      <h1 class="visually-hidden">Zuzana Purmová</h1>
-      <video
-        id="indexNameAnimation"
-        class="index-name-animation signature-animation"
-        autoplay
-        muted
-        playsinline
-        preload="auto"
-        poster="./assets/Header/signature-transparent.png?v=2026-07-30-clean-alpha-v2"
-        aria-hidden="true"
-      >
-        <source src="./assets/Header/signature-transparent.webm?v=2026-07-30-clean-alpha-v2" type="video/webm" />
-      </video>
-      <img class="signature-poster" src="./assets/Header/signature-transparent.png?v=2026-07-30-clean-alpha-v2" alt="" aria-hidden="true" />
+    <header class="index-layout-header">
+      <h1>portfolio - Ing. Zuzana Purmová</h1>
+      <div class="index-header-actions">
+        <div class="index-header-help">
+          <button id="headerHelpToggle" class="index-header-button" type="button" aria-label="O webu" aria-expanded="false" aria-controls="headerHelpText">?</button>
+          <div id="headerHelpText" class="index-header-help-text" hidden>
+            <p>Zdravím! Jsem krajinářská architektka a zde najdete mé projekty. V případě zájmu mě neváhejte kontaktovat. </p>
+            <p>[ web creation: Jonáš Paleček; design: Zuzana Purmová; 2026]</p>
+          </div>
+        </div>
+        <nav data-language-switch aria-label="Language">
+          <button id="headerLanguageToggle" class="index-header-button" type="button" data-language="cs" aria-label="Switch to Czech">CZ</button>
+        </nav>
+      </div>
     </header>
 
     <main class="container">
@@ -184,6 +171,6 @@
       <p>© <span id="year"></span> Zuzana Purmová</p>
     </footer>
 
-    <script src="./script.js?v=2026-08-24-single-row-mobile-titles" type="module"></script>
+    <script src="./script.js?v=2026-10-06-index-header" type="module"></script>
   </body>
 </html>

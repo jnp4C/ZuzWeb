@@ -135,3 +135,19 @@
 .concise-project-page .project-image-lightbox-close .project-index-symbol-mark { width: 20.8px; height: 20.8px; }
 .concise-project-page .project-image-lightbox-close .project-index-symbol-mark::before,
 .concise-project-page .project-image-lightbox-close .project-index-symbol-mark::after { width: 20.8px; height: calc(var(--project-display-size) * 0.108); }
+/* The project heading is static; only overflowing title text moves. */
+.concise-project-page .concise-project-heading h1 { white-space: nowrap; overflow: hidden; overflow-wrap: normal; }
+.concise-project-page .concise-project-title-track { display: flex; width: max-content; white-space: nowrap; }
+.concise-project-page .concise-project-title-track > span:first-child { white-space: nowrap; }
+.concise-project-page .concise-project-heading h1.is-title-scrolling {
+  --title-marquee-gap: 26px;
+  width: calc(100% - var(--project-body-start));
+}
+.concise-project-page .concise-project-heading h1.is-title-scrolling .concise-project-title-track {
+  gap: var(--title-marquee-gap);
+  animation: concise-project-title-carousel var(--title-marquee-duration, 12s) linear infinite;
+}
+.concise-project-page .concise-project-heading h1.is-title-scrolling .concise-project-title-track > span:last-child { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .concise-project-page .concise-project-heading h1.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
+}

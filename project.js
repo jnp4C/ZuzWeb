@@ -836,6 +836,30 @@ function renderProject(animateFacts = false) {
   );
   heading.append(back, name, projectNavigation);
 
+  const updateTitleCarousel = () => {
+    const nameStyle = window.getComputedStyle(name);
+    const availableWidth = name.clientWidth
+      - Number.parseFloat(nameStyle.paddingLeft)
+      - Number.parseFloat(nameStyle.paddingRight);
+    const titleWidth = titleText.getBoundingClientRect().width;
+    const shouldScroll = titleWidth > availableWidth + 1;
+    name.classList.toggle("is-title-scrolling", shouldScroll);
+    if (shouldScroll) {
+      name.style.setProperty("--title-marquee-duration", `${Math.max(9, titleWidth / 32)}s`);
+    } else {
+      name.style.removeProperty("--title-marquee-duration");
+    }
+  };
+  const titleObserver = new ResizeObserver(updateTitleCarousel);
+  titleObserver.observe(name);
+  titleObserver.observe(titleText);
+  window.addEventListener("resize", updateTitleCarousel);
+  carouselCleanups.push(() => {
+    titleObserver.disconnect();
+    window.removeEventListener("resize", updateTitleCarousel);
+  });
+  window.requestAnimationFrame(updateTitleCarousel);
+
   const scrollTop = document.createElement("button");
   scrollTop.type = "button";
   scrollTop.className = "concise-project-symbol concise-project-scroll-top";

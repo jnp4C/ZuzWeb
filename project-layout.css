@@ -375,7 +375,7 @@
   .concise-project-page .concise-project-presentation-label.is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
 }
 
-@media (max-width: 780px) {
+@media (width < 700px) {
   .concise-project-page .concise-project-footer button { gap: 19.5px; }
 }
 

@@ -326,3 +326,11 @@
   display: grid;
   place-items: center;
 }
+
+@media (max-width: 780px) {
+  .concise-project-page .concise-project-intro-copy { display: contents; }
+  .concise-project-page .concise-project-intro .concise-project-info-block { order: 0; }
+  .concise-project-page .concise-project-intro .concise-project-hero { order: 1; }
+  .concise-project-page .concise-project-intro .concise-project-annotation { order: 2; }
+  .concise-project-page .concise-project-intro .concise-project-highlight { order: 3; }
+}

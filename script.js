@@ -339,9 +339,14 @@ function getProjectIndexMedia(project) {
   };
 }
 
+function getIndexContentScale() {
+  return parseFloat(getComputedStyle(document.body).getPropertyValue("--index-content-scale")) || 1;
+}
+
 function updateProjectPreviewPlacements() {
+  const contentScale = getIndexContentScale();
   const links = Array.from(document.querySelectorAll(".project-index-link:has(.project-index-link-preview)"));
-  const inline = window.innerWidth <= 900 || window.matchMedia("(hover: none), (pointer: coarse)").matches;
+  const inline = window.innerWidth / contentScale <= 900 || window.matchMedia("(hover: none), (pointer: coarse)").matches;
   const textRects = links.map((link) => Array.from(link.children)
     .filter((child) => !child.classList.contains("project-index-link-preview"))
     .map((part) => part.getBoundingClientRect()));
@@ -350,17 +355,17 @@ function updateProjectPreviewPlacements() {
   links.forEach((link, index) => {
     const rects = textRects[index];
     const centerY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
-    const left = columnRight + 30;
-    const heightLimit = Math.max(0, Math.min(340, 2 * (centerY - 75), 2 * (window.innerHeight - centerY - 24)));
-    const widthLimit = Math.max(0, Math.min(540, window.innerWidth * 0.38, window.innerWidth - left - 24));
+    const left = columnRight + 30 * contentScale;
+    const heightLimit = Math.max(0, Math.min(340 * contentScale, 2 * (centerY - 75 * contentScale), 2 * (window.innerHeight - centerY - 24 * contentScale)));
+    const widthLimit = Math.max(0, Math.min(540 * contentScale, window.innerWidth * 0.38, window.innerWidth - left - 24 * contentScale));
     const image = link.querySelector(".project-index-link-preview img");
     const ratio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : 1;
     const width = Math.min(widthLimit, heightLimit * ratio);
     const linkRect = link.getBoundingClientRect();
-    link.style.setProperty("--project-preview-left", `${left - linkRect.left}px`);
-    link.style.setProperty("--project-preview-center", `${centerY - linkRect.top}px`);
-    link.style.setProperty("--project-preview-width", `${width}px`);
-    link.style.setProperty("--project-preview-height", `${width / ratio}px`);
+    link.style.setProperty("--project-preview-left", `${(left - linkRect.left) / contentScale}px`);
+    link.style.setProperty("--project-preview-center", `${(centerY - linkRect.top) / contentScale}px`);
+    link.style.setProperty("--project-preview-width", `${width / contentScale}px`);
+    link.style.setProperty("--project-preview-height", `${width / ratio / contentScale}px`);
     link.classList.toggle("has-side-preview", !inline && width > 0);
   });
 }
@@ -481,29 +486,30 @@ function initConnectorGaps() {
   const title = header?.querySelector("h1");
   const labels = Array.from(document.querySelectorAll(".project-index-group h2, .cv-section > h3"));
   function update() {
+    const contentScale = getIndexContentScale();
     if (header && title) {
       const fullTitle = title.querySelector(".index-header-full-title");
       const actions = header.querySelector(".index-header-actions");
       const headerStyle = getComputedStyle(header);
-      const available = header.clientWidth - parseFloat(headerStyle.paddingLeft) - actions.getBoundingClientRect().width - parseFloat(headerStyle.columnGap);
-      const compact = fullTitle.getBoundingClientRect().width > available;
+      const available = header.clientWidth - parseFloat(headerStyle.paddingLeft) - actions.getBoundingClientRect().width / contentScale - parseFloat(headerStyle.columnGap);
+      const compact = fullTitle.getBoundingClientRect().width / contentScale > available;
       header.classList.toggle("is-compact", compact);
       fullTitle.setAttribute("aria-hidden", String(compact));
       title.querySelector(".index-header-short-title").setAttribute("aria-hidden", String(!compact));
       const headerRect = header.getBoundingClientRect();
       const titleRect = title.getBoundingClientRect();
       header.style.setProperty("--header-connector-mask",
-        `linear-gradient(to right, #000 ${titleRect.left - headerRect.left}px, transparent ${titleRect.left - headerRect.left}px, transparent ${titleRect.right - headerRect.left}px, #000 ${titleRect.right - headerRect.left}px)`);
+        `linear-gradient(to right, #000 ${(titleRect.left - headerRect.left) / contentScale}px, transparent ${(titleRect.left - headerRect.left) / contentScale}px, transparent ${(titleRect.right - headerRect.left) / contentScale}px, #000 ${(titleRect.right - headerRect.left) / contentScale}px)`);
     }
     if (!projectIndex) return;
-    const spineTop = projectIndex.getBoundingClientRect().top + 30;
+    const spineTop = projectIndex.getBoundingClientRect().top + 30 * contentScale;
     const gaps = labels.flatMap((label) => {
       const panel = label.closest(".project-index-projects-panel, .project-index-cv-content");
       if (!panel || panel.hidden) return [];
       const rect = label.getBoundingClientRect();
       const clip = panel.getBoundingClientRect();
-      const start = Math.max(rect.top - 3, clip.top, spineTop) - spineTop;
-      const end = Math.min(rect.bottom + 3, clip.bottom) - spineTop;
+      const start = (Math.max(rect.top - 3 * contentScale, clip.top, spineTop) - spineTop) / contentScale;
+      const end = (Math.min(rect.bottom + 3 * contentScale, clip.bottom) - spineTop) / contentScale;
       return end > start ? [[start, end]] : [];
     }).sort((a, b) => a[0] - b[0]);
     const stops = ["#000 0px"];

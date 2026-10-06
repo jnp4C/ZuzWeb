@@ -1,5 +1,6 @@
 /* Intro draft grid: 60-unit reference icons rendered at 30 CSS pixels. */
 .index-page {
+  --index-content-scale: 1.3;
   --bg: #fff;
   --surface: #fff;
   --type-small: 10px;
@@ -244,7 +245,7 @@
 .index-page .project-index-cv .cv-muted { color: #888; }
 .index-page .project-index-cv mark { padding: 0 1px; }
 .index-page .project-index-cv .cv-section[aria-labelledby="cvExperienceTitle"] .cv-section-content { display: grid; gap: 15px; }
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   .index-page { --index-page-gutter: 30px; }
   .index-page .project-index .project-index-info-content-inner { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .index-page .project-index-info .intro { grid-column: 1; grid-row: 2; }
@@ -283,7 +284,7 @@
   max-height: none;
   object-position: center;
 }
-@media (max-width: 900px), (hover: none), (pointer: coarse) {
+@media (max-width: 1170px), (hover: none), (pointer: coarse) {
   .index-page .project-index-link { width: 100%; }
   .index-page .project-index-link .project-index-link-preview {
     display: block !important;
@@ -320,3 +321,7 @@
   width: max-content;
 }
 .index-layout-header.is-compact .index-header-short-title { display: inline; }
+
+/* Scale only page content, keeping the fixed terrain layer at its original size. */
+.index-page > :is(.index-layout-header, main, .site-footer) { zoom: var(--index-content-scale); }
+.index-page main.container { width: auto; }

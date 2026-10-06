@@ -471,8 +471,10 @@ function createMediaCarousel(mediaItems, label, heading) {
   controls.append(...dotButtons);
   const meta = document.createElement("figcaption");
   meta.className = "concise-project-carousel-meta";
-  meta.append(heading, controls);
-  figure.append(meta);
+  if (mediaItems.length > 1) {
+    meta.append(heading, controls);
+    figure.append(meta);
+  }
   const activeMediaIsImage = () => mediaItems[activeIndex]?.type !== "video";
   const openActiveImage = () => {
     if (activeMediaIsImage()) {

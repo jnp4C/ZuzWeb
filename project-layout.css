@@ -342,3 +342,9 @@
   grid-row: auto;
   text-align: left;
 }
+
+.concise-project-page .concise-project-fact.is-stacked dd {
+  justify-self: start;
+  width: 100%;
+  text-align: left;
+}

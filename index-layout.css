@@ -361,3 +361,8 @@
 @media (width < 700px) {
   .index-page { --index-page-gutter: 22.5px; --index-content-offset: 30px; }
 }
+
+/* Extend only the black background so text keeps its original left alignment. */
+.index-page .project-index :is(.project-index-heading, .project-index-destination-title, .project-index-destination-heading h2) {
+  box-shadow: -4px 0 0 #000, 4px 0 0 #000;
+}

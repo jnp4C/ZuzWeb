@@ -422,3 +422,9 @@
   height: 0.55rem;
   border: 1.5px solid var(--text);
 }
+
+.concise-project-page .concise-project-heading h1,
+.concise-project-page .concise-project-footer .concise-project-presentation-label {
+  box-shadow: calc(-4px * var(--index-content-scale)) 0 0 #000,
+    calc(4px * var(--index-content-scale)) 0 0 #000;
+}

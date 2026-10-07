@@ -524,11 +524,35 @@ function initMobileHelpTicker() {
   fitCredits();
 }
 
+function initIndexScrollTop() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "concise-project-symbol concise-project-scroll-top index-scroll-top";
+  button.setAttribute("aria-label", "Posunout nahoru");
+  const triangles = document.createElement("span");
+  triangles.className = "concise-project-scroll-top-triangles";
+  triangles.setAttribute("aria-hidden", "true");
+  triangles.append(document.createElement("i"), document.createElement("i"));
+  button.append(triangles);
+  document.body.append(button);
+  button.addEventListener("click", () => window.scrollTo({
+    top: 0,
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+  }));
+  const heading = document.getElementById("projectsToggle");
+  const update = () => button.classList.toggle("is-visible",
+    heading.getBoundingClientRect().bottom <= Math.max(14, window.innerWidth * 0.025));
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+}
+
 async function init() {
   initConnectorGaps();
   renderRandomIndexBackground();
   initIndexHeader();
   initMobileHelpTicker();
+  initIndexScrollTop();
   initProjectsToggle();
   initInfoToggle();
   initCvToggle();

@@ -369,3 +369,19 @@
 
 /* Remove the legacy mobile inset specific to the CV title. */
 .index-page .project-index #cvTitle { padding: 0; }
+
+.index-page .index-scroll-top {
+  --project-page-gutter: calc(var(--index-page-gutter) * var(--index-content-scale));
+  display: grid;
+  place-items: center;
+  width: 39px;
+  min-width: 39px;
+  height: 39px;
+  min-height: 39px;
+  border: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+}
+.index-page .index-scroll-top .concise-project-scroll-top-triangles { width: 20.8px; height: 20.8px; gap: 1.39px; }
+.index-page .index-scroll-top .concise-project-scroll-top-triangles i { border-right-width: 10.4px; border-left-width: 10.4px; border-bottom-width: 9.7px; }

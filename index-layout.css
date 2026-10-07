@@ -332,49 +332,30 @@
 
 .index-page .project-index :is(.project-index-root, .project-index-destination-heading):focus-visible { outline-width: var(--index-connector-width); }
 
-.index-mobile-help-ticker { display: none; }
+.index-mobile-credits { display: none; }
 @media (width < 700px) {
-  .index-page:not(.concise-project-page) .index-header-help { display: none; }
-  .index-mobile-help-ticker {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    padding-block: 3px;
-    font-family: var(--font-text);
-    font-size: calc(var(--type-small) * var(--index-content-scale));
-    line-height: 19.5px;
-    color: #000;
-  }
-  .index-mobile-help-track {
+  .index-page:not(.concise-project-page) {
     display: flex;
-    width: max-content;
-    animation: index-mobile-help-scroll 35s linear infinite;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
-  .index-mobile-help-copy { display: flex; align-items: center; gap: 19.5px; padding-right: 19.5px; white-space: nowrap; }
-  .index-mobile-help-dot { flex: 0 0 auto; width: .55rem; height: .55rem; border: 1.5px solid #000; border-radius: 50%; background: #000; }
-  .index-mobile-help-ticker:hover .index-mobile-help-track { animation-play-state: paused; }
-}
-@keyframes index-mobile-help-scroll { to { transform: translateX(-50%); } }
-@media (width < 700px) and (prefers-reduced-motion: reduce) {
-  .index-mobile-help-ticker { overflow-x: auto; }
-  .index-mobile-help-track { animation: none; }
-  .index-mobile-help-copy[aria-hidden="true"] { display: none; }
-}
-
-.index-mobile-help-ticker { color: #808080; }
-.index-mobile-help-dot { border-color: currentColor; background: currentColor; }
-.index-mobile-help-copy em { font-style: italic; }
-
-@media (width < 700px) {
-  .index-mobile-help-ticker {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin-top: 19.5px;
+  .index-page:not(.concise-project-page) .index-header-help,
+  .index-page:not(.concise-project-page) > .site-footer { display: none; }
+  .index-mobile-credits {
+    display: block;
+    position: static;
+    width: 100%;
+    margin-top: auto;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #808080;
+    font-family: var(--font-text);
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
   }
+  .index-mobile-credits > span { display: inline-block; }
 }
 
 @media (width < 700px) {

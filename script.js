@@ -503,31 +503,25 @@ function initConnectorGaps() {
 
 function initMobileHelpTicker() {
   const source = document.getElementById("headerHelpText");
-  const header = document.querySelector(".index-layout-header");
-  if (!source || !header) return;
-  const ticker = document.createElement("div");
-  ticker.className = "index-mobile-help-ticker";
-  const track = document.createElement("div");
-  track.className = "index-mobile-help-track";
-  const text = Array.from(source.querySelectorAll("p")).map(p => p.textContent.trim()).join(" ");
-  for (let index = 0; index < 2; index++) {
-    const copy = document.createElement("span");
-    copy.className = "index-mobile-help-copy";
-    if (index) copy.setAttribute("aria-hidden", "true");
-    const dot = document.createElement("span");
-    dot.className = "index-mobile-help-dot";
-    dot.setAttribute("aria-hidden", "true");
-    const message = document.createElement("span");
-    text.split(/(\[[^\]]*\])/g).filter(Boolean).forEach(part => {
-      const fragment = document.createElement(part.startsWith("[") ? "span" : "em");
-      fragment.textContent = part;
-      message.append(fragment);
-    });
-    copy.append(message, dot);
-    track.append(copy);
-  }
-  ticker.append(track);
-  document.body.append(ticker);
+  if (!source) return;
+  const text = source.textContent.match(/\[[^\]]*\]/)?.[0];
+  if (!text) return;
+  const footer = document.createElement("footer");
+  footer.className = "index-mobile-credits";
+  const copy = document.createElement("span");
+  copy.textContent = text;
+  footer.append(copy);
+  document.body.append(footer);
+  const fitCredits = () => {
+    if (!footer.clientWidth) return;
+    copy.style.fontSize = "13px";
+    const available = footer.clientWidth - 16;
+    const natural = copy.getBoundingClientRect().width;
+    copy.style.fontSize = `${Math.min(13, 13 * available / Math.max(1, natural))}px`;
+  };
+  new ResizeObserver(fitCredits).observe(footer);
+  document.fonts.ready.then(fitCredits);
+  fitCredits();
 }
 
 async function init() {

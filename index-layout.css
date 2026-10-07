@@ -366,3 +366,6 @@
 .index-page .project-index :is(.project-index-heading, .project-index-destination-title, .project-index-destination-heading h2) {
   box-shadow: -4px 0 0 #000, 4px 0 0 #000;
 }
+
+/* Remove the legacy mobile inset specific to the CV title. */
+.index-page .project-index #cvTitle { padding: 0; }

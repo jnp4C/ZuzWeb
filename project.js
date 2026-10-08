@@ -6,9 +6,9 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-08-red-english-complete";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-08-redesign-media";
 
-const DATA_CACHE_VERSION = "2026-10-08-red-english-complete";
+const DATA_CACHE_VERSION = "2026-10-08-redesign-media";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";

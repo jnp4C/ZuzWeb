@@ -83,15 +83,15 @@ const CURATED_MEDIA = {
           alt: { en: "Exploded isometric landscape concept for Semněvice", cs: "Rozložená izometrie koncepce krajiny Semněvic" },
         },
       ]),
+      section("analysis-examples", "graphic", "Analysis examples", "Ukázka analýz", [
+        media("semnevice", "analysis", "Examples of Semněvice landscape analyses", "Ukázka analýz krajiny Semněvic"),
+      ]),
       section("masterplan", "masterplan", "Masterplan", "Masterplan", [
         {
           src: "./assets/project-pages/semnevice/masterplan-1800.webp",
           srcset: "./assets/project-pages/semnevice/masterplan-1200.webp 1200w, ./assets/project-pages/semnevice/masterplan-1800.webp 1800w",
           alt: { en: "Landscape masterplan for Semněvice", cs: "Masterplan koncepce krajiny Semněvic" },
         },
-      ]),
-      section("analysis-examples", "graphic", "Analysis examples", "Ukázka analýz", [
-        media("semnevice", "analysis", "Examples of Semněvice landscape analyses", "Ukázka analýz krajiny Semněvic"),
       ]),
     ],
   },
@@ -245,6 +245,9 @@ const CURATED_MEDIA = {
       section("analyses", "graphic", "Analysis sample of the study area", "Ukázka analýz řešeného území", [1, 2, 3, 4].map((number) => media(
         "new-landscape-of-high-speed-railways", `analysis-0${number}`, `Study-area analysis ${number}`, `Analýza řešeného území ${number}`,
       ))),
+      section("project-vision", "graphic", "Project vision", "Vize projektu", [
+        media("new-landscape-of-high-speed-railways", "vision", "Vision for new high-speed rail landscapes", "Vize nových krajin vysokorychlostních tratí"),
+      ]),
       section("project-concept", "graphic", "Project concept", "Koncept projektu", [
         media("new-landscape-of-high-speed-railways", "concept", "Elbe Embroidery project concept", "Koncept projektu Polabská výšivka"),
       ]),
@@ -254,6 +257,9 @@ const CURATED_MEDIA = {
       section("atmospheric-collages", "graphic", "Atmospheric collages", "Atmosférické koláže", [1, 2, 3, 4, 5, 6].map((number) => media(
         "new-landscape-of-high-speed-railways", `collage-0${number}`, `Atmospheric collage ${number}`, `Atmosférická koláž ${number}`,
       ))),
+      section("aerial-sketch", "graphic", "Aerial sketch", "Nadhledová skica", [
+        media("new-landscape-of-high-speed-railways", "aerial-sketch", "Aerial sketch of the landscape proposal", "Nadhledová skica návrhu krajiny"),
+      ]),
     ],
   },
 };

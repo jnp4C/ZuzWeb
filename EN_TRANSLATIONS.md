@@ -12,10 +12,11 @@ capitalization, and index context punctuation follow the Czech formatting. Semn�
 use the source's initials; Czech names remain unchanged. The welcome and credits
 continue to use the supplied English wording.
 
-Captions are applied to existing media sections. The source also names Project
-Vision and Aerial Sketch groups for high-speed rail; the current page has no
-separate sections for these, so this text update does not add media or change
-the layout. The combined Christmas day/night section uses both supplied captions.
+Featured sections follow the content document's order, including Project Vision
+and Aerial Sketch for high-speed rail and analysis examples before the Semněvice
+masterplan. Index previews use the designated source `_index` files; Mezi vším
+and high-speed rail were refreshed from the redesign collection. The combined
+Christmas day/night section uses both supplied captions.
 
 No English CV or detailed contact-drawer copy is supplied in this document;
 those remain as previously authored. Czech project copy and the original static

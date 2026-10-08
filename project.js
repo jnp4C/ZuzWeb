@@ -317,28 +317,9 @@ function openImageLightbox(mediaItems, initialIndex) {
   nextTriangles.append(document.createElement("i"), document.createElement("i"));
   next.append(nextTriangles);
   next.setAttribute("aria-label", COPY[activeLanguage].nextImage);
-  previous.hidden = groups.length < 2;
-  next.hidden = groups.length < 2;
-  const pagination = document.createElement("div");
-  pagination.className = "project-image-lightbox-pagination concise-project-carousel-controls";
-  pagination.setAttribute("role", "group");
-  pagination.setAttribute("aria-label", COPY[activeLanguage].openImage);
-  let paginationDots = [];
-  const rebuildPagination = () => {
-    paginationDots = mediaItems.length > 1 ? mediaItems.map((media, index) => {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.className = "concise-project-carousel-dot";
-      dot.setAttribute("aria-label", `${index + 1} / ${mediaItems.length}`);
-      dot.addEventListener("click", () => {
-        activeIndex = index;
-        renderMedia();
-      });
-      return dot;
-    }) : [];
-    pagination.replaceChildren(...paginationDots);
-    pagination.hidden = paginationDots.length === 0;
-  };
+  const imageCount = groups.reduce((total, group) => total + group.length, 0);
+  previous.hidden = imageCount < 2;
+  next.hidden = imageCount < 2;
 
   const applyTransform = () => {
     image.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
@@ -358,17 +339,19 @@ function openImageLightbox(mediaItems, initialIndex) {
     image.srcset = media.zoomSrc ? "" : (media.srcset || "");
     image.src = media.zoomSrc || media.src;
     image.alt = getLocalizedText(media.alt, activeLanguage);
-    paginationDots.forEach((dot, index) => {
-      dot.classList.toggle("is-selected", index === activeIndex);
-      dot.setAttribute("aria-current", String(index === activeIndex));
-    });
     resetTransform();
   };
   const changeMedia = (direction) => {
-    activeGroup = (activeGroup + direction + groups.length) % groups.length;
-    mediaItems = groups[activeGroup];
-    activeIndex = 0;
-    rebuildPagination();
+    activeIndex += direction;
+    if (activeIndex >= mediaItems.length) {
+      activeGroup = (activeGroup + 1) % groups.length;
+      mediaItems = groups[activeGroup];
+      activeIndex = 0;
+    } else if (activeIndex < 0) {
+      activeGroup = (activeGroup - 1 + groups.length) % groups.length;
+      mediaItems = groups[activeGroup];
+      activeIndex = mediaItems.length - 1;
+    }
     renderMedia();
   };
   const closeLightbox = () => dialog.close();
@@ -430,8 +413,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   stage.append(image);
   navigation.append(previous, next);
   header.append(navigation, sectionTitle, close);
-  dialog.append(header, stage, pagination);
-  rebuildPagination();
+  dialog.append(header, stage);
   document.body.append(dialog);
   renderMedia();
   dialog.showModal();

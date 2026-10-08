@@ -24,7 +24,7 @@ const backgroundAnimation = document.querySelector(".background-animation");
 const INDEX_OPENING_SPEED = 0.6;
 const PROJECTS_CLOSING_DURATION = 900;
 const NESTED_DRAWER_CLOSING_DURATION = 700;
-const DATA_CACHE_VERSION = "2026-08-16-normalized-author-names";
+const DATA_CACHE_VERSION = "2026-10-08-deployment-merge";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -201,7 +201,9 @@ function initProjectsToggle() {
       projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
         link.classList.remove("has-user-previewed", "skip-language-reveal");
       });
-      projectIndex.classList.remove("is-projects-closing");
+      projectIndex.classList.remove("is-projects-open", "is-projects-closing");
+      // Establish the collapsed layout after unhiding before starting the transition.
+      void projectsPanel.offsetWidth;
       projectIndex.classList.add("is-projects-open");
       projectIndex.classList.add("is-projects-intro-active");
       introTimer = window.setTimeout(() => {
@@ -251,7 +253,9 @@ function initCvToggle() {
 
     if (shouldOpen) {
       cvDetails.hidden = false;
-      cvDetails.classList.remove("is-closing");
+      cvDetails.classList.remove("is-open", "is-closing");
+      // Commit the collapsed layout after unhiding, as the INFO drawer does.
+      void cvDetails.offsetWidth;
       cvDetails.classList.add("is-open");
       projectIndex?.classList.remove("is-cv-closing");
       projectIndex?.classList.add("is-cv-open");

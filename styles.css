@@ -7121,6 +7121,55 @@ main,
   }
 }
 
+/* Embedded scenes follow their artwork height, with a compact page handoff. */
+.embedded-presentation .fullstage { min-height: 0; }
+.embedded-presentation .pdf-layer {
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  padding-block: 0;
+  margin-bottom: 12px;
+}
+.embedded-presentation .object-scene {
+  min-width: 0;
+  min-height: 0;
+}
+.embedded-presentation .scene-object {
+  min-width: 0;
+  min-height: 0;
+}
+.embedded-presentation .scene-object-image { object-fit: contain; }
+.source-page-object-scene { display: block; height: auto; }
+.source-page-object-scene .scene-object {
+  position: absolute;
+  left: var(--source-left);
+  top: var(--source-top);
+  width: var(--source-width) !important;
+  height: var(--source-height);
+  margin: 0;
+}
+.source-page-object-scene .scene-object-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.concise-project-full-presentation--compact {
+  height: auto;
+  overflow: visible;
+}
+.embedded-presentation .object-scene { padding-block: 0; }
+.source-page-object-scene .scene-object::after { content: none; }
+
+/* Keep deliberate internal spacing compact after trimming blank source margins. */
+.compact-animated-flow .rewaterization-process-object-scene,
+.compact-animated-flow .rewaterization-photo-carousel-object-scene.has-carousel,
+.compact-animated-flow .krematorium-obradni-sin-object-scene,
+.compact-animated-flow .krematorium-zed-object-scene {
+  row-gap: 12px;
+}
+.compact-animated-flow .side-by-side-object-scene {
+  align-items: flex-start;
+}
 
 /* Intro layout reference, October 2026: line, title and square controls. */
 .index-page .index-layout-header {

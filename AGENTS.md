@@ -1,16 +1,31 @@
+# Static presentation branch
+
+This checkout uses `deployment-final`, combining `final-static` with the latest
+`design-final-touch` design changes. Make new changes on `deployment-final`; the
+original dynamic implementation is preserved on
+`design-final-touch`. Branch-specific instructions here override the historical
+redesign workflow below.
+
+Full presentations on published project pages use complete, static PDF-derived
+image sequences only. Preserve page order, aspect ratios, responsive image
+sources, lazy loading, pinch zoom, and PDF downloads. Do not reintroduce scene
+iframes, runtime capability checks, frame-rate monitoring, or animated full
+presentation playback. Legacy scene data and the year viewer remain available
+for future dynamic work; leave them untouched unless explicitly requested.
+
 # ZuzWeb Agent Guide
 
 ## Final design touches: first session on a new computer
 
-Work on `design-final-touch`. This is the final design pass on the current
+Work on `deployment-final`. This is the final design pass on the current
 redesign. Follow the user's requested visual adjustments and preserve existing
 content, navigation, and interactions unless she asks to change them. Help her
 with setup directly; do not assume she knows terminal commands or dependencies.
 
 1. Locate the cloned repository and inspect `git status --short --branch`.
-   Use `design-final-touch`; do not switch branches over uncommitted work.
+   Use `deployment-final`; do not switch branches over uncommitted work.
    If the branch is only on origin, use
-   `git switch --track origin/design-final-touch`. If it is unavailable, report
+   `git switch --track origin/deployment-final`. If it is unavailable, report
    the problem instead of creating an unrelated branch. Do not discard changes.
 2. This is a static HTML/CSS/JavaScript site: no build step, npm install, or
    virtual environment is needed. Check for Python (`python3 --version` on
@@ -37,7 +52,7 @@ with setup directly; do not assume she knows terminal commands or dependencies.
    explicit user direction for finishing touches. When a change requires an
    exact source document or new source media, ask for that specific reference;
    do not invent content or block unrelated visual work.
-7. Commit only files for the requested change on `design-final-touch`. Never
+7. Commit only files for the requested change on `deployment-final`. Never
    deploy, merge into another branch, or push without the user's instruction.
 
 ## Current direction
@@ -109,7 +124,7 @@ introducing unrelated type sizes or families without user approval.
 ## Implementation workflow
 
 1. Check the current branch and working tree before editing. Redesign work should
-   happen on `design-final-touch` for this finishing pass.
+   happen on `deployment-final` for this finishing pass.
 2. At the start of every coding session, serve the repository through a local
    HTTP server and verify that the site loads over HTTP. Reuse an already
    running suitable server when possible; otherwise start one (for example,
@@ -272,7 +287,7 @@ project-specific text or media. Complete this checklist for every addition:
   control still visible. The download control is a square aligned with the
   orientation controls and uses the existing triangle-plus-rectangle icon.
 - Scene-based full presentations are one continuous parent-page document. Each
-  animated scene occupies its own viewport-sized normal-flow section and
+  animated scene occupies its own content-sized normal-flow section and
   appears after the previous scene as the main page scrolls. Do not restore a
   sticky single-stage iframe, nested presentation scrolling, artificial scroll
   scaling, or simultaneous crossfading/overlap between adjacent scene layers.
@@ -280,6 +295,13 @@ project-specific text or media. Complete this checklist for every addition:
   pages afterward. Extracted pages remain part of the parent page, preserve
   high-resolution pinch zoom, and must not become individually clickable image
   links or a nested PDF viewer.
+- Cycle of Change and Rewaterization use trimmed animation derivatives under
+  `assets/compact-scenes/` to remove blank source-image margins. Preserve the
+  original assets and PDFs; do not restore long delayed entrances that leave
+  the next scene blank while scrolling.
+- Compact presentation fallbacks use complete PDF-derived pages with preserved
+  aspect ratios. Keep `fallbackPages` separate from hybrid appended `pages` so
+  switching modes never repeats scenes or omits source pages.
 - Support keyboard, touch, pointer input, and `prefers-reduced-motion`.
 
 ## Validation and commit checklist

@@ -18,6 +18,7 @@ masterplan. Index previews use the designated source `_index` files; Mezi vším
 and high-speed rail were refreshed from the redesign collection. The combined
 Christmas day/night section uses both supplied captions.
 
-No English CV or detailed contact-drawer copy is supplied in this document;
-those remain as previously authored. Czech project copy and the original static
+The remaining Info and CV drawer copy is translated from the existing Czech
+website text. Its semantic formatting, highlights, and explicit line breaks are
+preserved; the source document does not supply these English translations. Czech project copy and the original static
 presentation images/PDFs, their dimensions, and their order are unchanged.

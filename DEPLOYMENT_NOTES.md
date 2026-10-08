@@ -46,7 +46,8 @@ module/media requests fail and unpublished material is absent from the bundle.
 
 The language control now uses the supplied English index and project translations.
 The updated red-text source supplies English copy for all 11 projects; it still
-has no English CV or detailed contact-drawer copy. Some presentation
+has no English CV or detailed contact-drawer copy; those now use translations
+of the existing Czech website text with matching formatting. Some presentation
 srcsets top out below the archived zoom image resolution; preserve zoom sources
 until the intended zoom quality is decided.
 

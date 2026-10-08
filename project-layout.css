@@ -515,3 +515,18 @@
   justify-self: end;
   margin: 0;
 }
+
+@media (max-width: 780px) {
+  .concise-project-page .concise-project-intro > *,
+  .concise-project-page .concise-project-intro-copy > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .concise-project-page .concise-project-annotation,
+  .concise-project-page .concise-project-annotation p,
+  .concise-project-page .concise-project-hero,
+  .concise-project-page .concise-project-hero img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

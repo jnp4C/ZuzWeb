@@ -530,3 +530,8 @@
     max-width: 100%;
   }
 }
+
+.concise-project-page .concise-project-facts {
+  width: 100%;
+  max-width: 100%;
+}

@@ -497,3 +497,21 @@
 .concise-project-page .concise-project-heading h1.is-title-scrolling {
   width: calc(100% - var(--project-body-start) - 5.2px);
 }
+
+/* Layout allocation must match the visible control size. */
+.concise-project-page .index-layout-header .concise-project-nav-link {
+  flex: 0 0 30px;
+  max-width: 30px;
+  margin: 0;
+}
+.concise-project-page .concise-project-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--project-control-size);
+  column-gap: 19.5px;
+}
+.concise-project-page .concise-project-footer > button { grid-column: 1; }
+.concise-project-page .concise-project-footer .concise-project-pdf-download {
+  grid-column: 2;
+  justify-self: end;
+  margin: 0;
+}

@@ -621,7 +621,10 @@ function createDayNightFade(mediaItems, label, heading) {
 
   const meta = document.createElement("figcaption");
   meta.className = "concise-project-carousel-meta";
-  meta.append(heading, slider);
+  const sliderFrame = document.createElement("span");
+  sliderFrame.className = "concise-project-day-night-slider-frame";
+  sliderFrame.append(slider);
+  meta.append(heading, sliderFrame);
   figure.append(viewport, meta);
   return figure;
 }

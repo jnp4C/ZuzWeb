@@ -428,3 +428,30 @@
   box-shadow: calc(-4px * var(--index-content-scale)) 0 0 #000,
     calc(4px * var(--index-content-scale)) 0 0 #000;
 }
+
+.concise-project-page .concise-project-day-night-slider-frame {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 9.7px;
+  color: #000;
+}
+.concise-project-page .concise-project-day-night-slider-frame::before,
+.concise-project-page .concise-project-day-night-slider-frame::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-block: 10.4px solid transparent;
+  pointer-events: none;
+}
+.concise-project-page .concise-project-day-night-slider-frame::before {
+  left: 0;
+  border-right: 9.7px solid currentColor;
+}
+.concise-project-page .concise-project-day-night-slider-frame::after {
+  right: 0;
+  border-left: 9.7px solid currentColor;
+}

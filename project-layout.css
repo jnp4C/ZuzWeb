@@ -455,3 +455,13 @@
   right: 0;
   border-left: 4.85px solid currentColor;
 }
+
+@media (width < 700px) {
+  .concise-project-page .concise-project-shell {
+    padding-right: calc(var(--index-right-gutter) * var(--index-content-scale));
+  }
+  .concise-project-page .concise-project-scroll-top {
+    right: var(--index-right-gutter);
+    bottom: calc(var(--index-right-gutter) + env(safe-area-inset-bottom, 0px) + var(--visual-viewport-bottom, 0px));
+  }
+}

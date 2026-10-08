@@ -388,3 +388,13 @@
 
 /* Uniform enlargement, including controls, typography, spacing and media. */
 html { zoom: 1.1; }
+
+@media (width < 700px) {
+  .index-page { --index-right-gutter: 15px; }
+  .index-page .index-layout-header { margin-right: var(--index-right-gutter); }
+  .index-page main { padding-right: var(--index-right-gutter); }
+  .index-page .index-scroll-top {
+    right: var(--index-right-gutter);
+    bottom: calc(var(--index-right-gutter) + env(safe-area-inset-bottom, 0px) + var(--visual-viewport-bottom, 0px));
+  }
+}

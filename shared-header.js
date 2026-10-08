@@ -1,3 +1,4 @@
+import { SITE_SCALE, layoutRect } from "./layout-scale.js?v=2026-10-08-site-scale";
 export function initIndexHeader() {
   const help = document.querySelector('.index-header-help');
   const toggle = document.getElementById('headerHelpToggle');
@@ -40,13 +41,13 @@ export function updateSharedHeaderGeometry() {
       const fullTitle = title.querySelector(".index-header-full-title");
       const actions = header.querySelector(".index-header-actions");
       const headerStyle = getComputedStyle(header);
-      const available = header.clientWidth - parseFloat(headerStyle.paddingLeft) - actions.getBoundingClientRect().width / contentScale - parseFloat(headerStyle.columnGap);
-      const compact = fullTitle.getBoundingClientRect().width / contentScale > available;
+      const available = header.clientWidth - parseFloat(headerStyle.paddingLeft) - layoutRect(actions).width / contentScale - parseFloat(headerStyle.columnGap);
+      const compact = layoutRect(fullTitle).width / contentScale > available;
       header.classList.toggle("is-compact", compact);
       fullTitle.setAttribute("aria-hidden", String(compact));
       title.querySelector(".index-header-short-title").setAttribute("aria-hidden", String(!compact));
-      const headerRect = header.getBoundingClientRect();
-      const titleRect = title.getBoundingClientRect();
+      const headerRect = layoutRect(header);
+      const titleRect = layoutRect(title);
       header.style.setProperty("--header-connector-mask",
         `linear-gradient(to right, #000 ${(titleRect.left - headerRect.left) / contentScale}px, transparent ${(titleRect.left - headerRect.left) / contentScale}px, transparent ${(titleRect.right - headerRect.left) / contentScale}px, #000 ${(titleRect.right - headerRect.left) / contentScale}px)`);
     }

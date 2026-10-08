@@ -337,8 +337,8 @@
   .index-page:not(.concise-project-page) {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: calc(100vh / 1.1);
+    min-height: calc(100dvh / 1.1);
   }
   .index-page:not(.concise-project-page) .index-header-help,
   .index-page:not(.concise-project-page) > .site-footer { display: none; }
@@ -385,3 +385,6 @@
 }
 .index-page .index-scroll-top .concise-project-scroll-top-triangles { width: 20.8px; height: 20.8px; gap: 1.39px; }
 .index-page .index-scroll-top .concise-project-scroll-top-triangles i { border-right-width: 10.4px; border-left-width: 10.4px; border-bottom-width: 9.7px; }
+
+/* Uniform enlargement, including controls, typography, spacing and media. */
+html { zoom: 1.1; }

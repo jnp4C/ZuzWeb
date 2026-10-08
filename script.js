@@ -1,4 +1,5 @@
-import { initIndexHeader, updateSharedHeaderGeometry, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-06-project-layout";
+import { SITE_SCALE, layoutRect } from "./layout-scale.js?v=2026-10-08-site-scale";
+import { initIndexHeader, updateSharedHeaderGeometry, updateHeaderLanguageToggle } from "./shared-header.js?v=2026-10-08-site-scale";
 import {
   getLanguage,
   getLocalizedText,
@@ -317,19 +318,19 @@ function updateProjectPreviewPlacements() {
   const inline = window.matchMedia("(width < 700px)").matches || window.matchMedia("(hover: none), (pointer: coarse)").matches;
   const textRects = links.map((link) => Array.from(link.children)
     .filter((child) => !child.classList.contains("project-index-link-preview"))
-    .map((part) => part.getBoundingClientRect()));
+    .map((part) => layoutRect(part)));
   // Reserve the entire text column so a tall preview cannot cover another row.
   const columnRight = Math.max(0, ...textRects.flat().map((rect) => rect.right));
   links.forEach((link, index) => {
     const rects = textRects[index];
     const centerY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
     const left = columnRight + 30 * contentScale;
-    const heightLimit = Math.max(0, Math.min(340 * contentScale, 2 * (centerY - 75 * contentScale), 2 * (window.innerHeight - centerY - 24 * contentScale)));
-    const widthLimit = Math.max(0, Math.min(540 * contentScale, window.innerWidth * 0.38, window.innerWidth - left - 24 * contentScale));
+    const heightLimit = Math.max(0, Math.min(340 * contentScale, 2 * (centerY - 75 * contentScale), 2 * ((window.innerHeight / SITE_SCALE) - centerY - 24 * contentScale)));
+    const widthLimit = Math.max(0, Math.min(540 * contentScale, (window.innerWidth / SITE_SCALE) * 0.38, (window.innerWidth / SITE_SCALE) - left - 24 * contentScale));
     const image = link.querySelector(".project-index-link-preview img");
     const ratio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : 1;
     const width = Math.min(widthLimit, heightLimit * ratio);
-    const linkRect = link.getBoundingClientRect();
+    const linkRect = layoutRect(link);
     link.style.setProperty("--project-preview-left", `${(left - linkRect.left) / contentScale}px`);
     link.style.setProperty("--project-preview-center", `${(centerY - linkRect.top) / contentScale}px`);
     link.style.setProperty("--project-preview-width", `${width / contentScale}px`);
@@ -458,7 +459,7 @@ function initConnectorGaps() {
     const pixelRatio = window.devicePixelRatio || 1;
     // Align every connector edge to the same device pixel grid after content zoom.
     [header, projectIndex, projectsToggle, infoToggle, cvToggle].filter(Boolean).forEach((element) => {
-      const rect = element.getBoundingClientRect();
+      const rect = layoutRect(element);
       const control = element.matches("button");
       const x = rect.left + (control ? 15 * contentScale : 0);
       const y = rect.top + 15 * contentScale;
@@ -467,12 +468,12 @@ function initConnectorGaps() {
     });
     updateSharedHeaderGeometry();
     if (!projectIndex) return;
-    const spineTop = projectIndex.getBoundingClientRect().top + 30 * contentScale;
+    const spineTop = layoutRect(projectIndex).top + 30 * contentScale;
     const gaps = labels.flatMap((label) => {
       const panel = label.closest(".project-index-projects-panel, .project-index-cv-content");
       if (!panel || panel.hidden) return [];
-      const rect = label.getBoundingClientRect();
-      const clip = panel.getBoundingClientRect();
+      const rect = layoutRect(label);
+      const clip = layoutRect(panel);
       const start = (Math.max(rect.top - 3 * contentScale, clip.top, spineTop) - spineTop) / contentScale;
       const end = (Math.min(rect.bottom + 3 * contentScale, clip.bottom) - spineTop) / contentScale;
       return end > start ? [[start, end, label.id === "cvExperienceTitle"]] : [];
@@ -516,7 +517,7 @@ function initMobileHelpTicker() {
     if (!footer.clientWidth) return;
     copy.style.fontSize = "13px";
     const available = footer.clientWidth - 16;
-    const natural = copy.getBoundingClientRect().width;
+    const natural = layoutRect(copy).width;
     copy.style.fontSize = `${Math.min(13, 13 * available / Math.max(1, natural))}px`;
   };
   new ResizeObserver(fitCredits).observe(footer);
@@ -541,7 +542,7 @@ function initIndexScrollTop() {
   }));
   const heading = document.getElementById("projectsToggle");
   const update = () => button.classList.toggle("is-visible",
-    heading.getBoundingClientRect().bottom <= Math.max(14, window.innerWidth * 0.025));
+    layoutRect(heading).bottom <= Math.max(14, (window.innerWidth / SITE_SCALE) * 0.025));
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
   update();

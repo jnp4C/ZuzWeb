@@ -1,4 +1,5 @@
-import { initProjectHeader } from "./shared-header.js?v=2026-10-06-header-navigation";
+import { SITE_SCALE, layoutRect } from "./layout-scale.js?v=2026-10-08-site-scale";
+import { initProjectHeader } from "./shared-header.js?v=2026-10-08-site-scale";
 import {
   getLanguage,
   getLocalizedProjectText,
@@ -38,8 +39,8 @@ function initializeVisualViewportInset() {
   const updateInset = () => {
     const layoutHeight = document.documentElement.clientHeight;
     const visibleBottom = visualViewport
-      ? visualViewport.height + visualViewport.offsetTop
-      : window.innerHeight;
+      ? (visualViewport.height + visualViewport.offsetTop) / SITE_SCALE
+      : (window.innerHeight / SITE_SCALE);
     document.documentElement.style.setProperty(
       "--visual-viewport-bottom",
       `${Math.max(0, layoutHeight - visibleBottom)}px`,
@@ -196,11 +197,11 @@ async function initializeBackgroundTransition() {
 
     previousBackground.classList.add("is-static");
     backgroundAnimation.replaceChildren(previousBackground);
-    void previousBackground.getBoundingClientRect();
+    void layoutRect(previousBackground);
 
     window.requestAnimationFrame(() => {
       previousBackground.classList.remove("is-static");
-      void previousBackground.getBoundingClientRect();
+      void layoutRect(previousBackground);
       previousBackground.classList.add("is-undrawing");
     });
 
@@ -277,7 +278,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   lightboxTitleTrack.append(lightboxTitleText, lightboxTitleRepeat);
   sectionTitle.append(lightboxTitleTrack);
   const updateLightboxTitleCarousel = () => {
-    const textWidth = lightboxTitleText.getBoundingClientRect().width;
+    const textWidth = layoutRect(lightboxTitleText).width;
     sectionTitle.classList.toggle("is-title-scrolling", textWidth > sectionTitle.clientWidth + 1);
     sectionTitle.style.setProperty("--title-marquee-duration", `${Math.max(9, textWidth / 32)}s`);
   };
@@ -401,7 +402,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   }, { passive: false });
   image.addEventListener("pointerdown", (event) => {
     image.setPointerCapture(event.pointerId);
-    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    pointers.set(event.pointerId, { x: (event.clientX / SITE_SCALE), y: (event.clientY / SITE_SCALE) });
     if (pointers.size === 2) {
       const [first, second] = Array.from(pointers.values());
       pinchDistance = Math.hypot(second.x - first.x, second.y - first.y);
@@ -411,14 +412,14 @@ function openImageLightbox(mediaItems, initialIndex) {
   image.addEventListener("pointermove", (event) => {
     const previousPoint = pointers.get(event.pointerId);
     if (!previousPoint) return;
-    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    pointers.set(event.pointerId, { x: (event.clientX / SITE_SCALE), y: (event.clientY / SITE_SCALE) });
     if (pointers.size === 2) {
       const [first, second] = Array.from(pointers.values());
       const distance = Math.hypot(second.x - first.x, second.y - first.y);
       scale = Math.min(5, Math.max(1, pinchScale * (distance / Math.max(1, pinchDistance))));
     } else if (scale > 1) {
-      translateX += event.clientX - previousPoint.x;
-      translateY += event.clientY - previousPoint.y;
+      translateX += (event.clientX / SITE_SCALE) - previousPoint.x;
+      translateY += (event.clientY / SITE_SCALE) - previousPoint.y;
     }
     applyTransform();
   });
@@ -634,9 +635,9 @@ function connectSectionToFrame(section, figure) {
     if (!section.isConnected || !figure.isConnected) {
       return;
     }
-    const sectionRect = section.getBoundingClientRect();
+    const sectionRect = layoutRect(section);
     const viewport = figure.querySelector(".concise-project-carousel-viewport");
-    const viewportRect = viewport?.getBoundingClientRect() || figure.getBoundingClientRect();
+    const viewportRect = (viewport ? layoutRect(viewport) : undefined) || layoutRect(figure);
     const project = section.closest(".concise-project");
     const spineX = project
       ? Number.parseFloat(getComputedStyle(project).getPropertyValue("--project-spine-x")) || 0
@@ -644,10 +645,10 @@ function connectSectionToFrame(section, figure) {
     const label = section.querySelector(":scope > h2");
     const range = document.createRange();
     if (label) range.selectNodeContents(label);
-    const naturalLabelWidth = label ? range.getBoundingClientRect().width : 0;
+    const naturalLabelWidth = label ? layoutRect(range).width : 0;
     const labelFits = naturalLabelWidth <= sectionRect.width * 0.35;
     section.classList.toggle("is-feature-label-hidden", !labelFits);
-    const labelRect = labelFits ? label?.getBoundingClientRect() : null;
+    const labelRect = labelFits ? (label ? layoutRect(label) : undefined) : null;
     if (!labelRect) section.style.setProperty("--feature-connector-mask", "none");
     const textClearance = 6.5;
     const beforeLength = labelRect ? Math.max(0, labelRect.left - sectionRect.left - spineX - textClearance) : 0;
@@ -942,7 +943,7 @@ function renderProject(animateFacts = false) {
     const availableWidth = name.clientWidth
       - Number.parseFloat(nameStyle.paddingLeft)
       - Number.parseFloat(nameStyle.paddingRight);
-    const titleWidth = titleText.getBoundingClientRect().width;
+    const titleWidth = layoutRect(titleText).width;
     const shouldScroll = titleWidth > availableWidth + 1;
     name.classList.toggle("is-title-scrolling", shouldScroll);
     if (shouldScroll) {
@@ -984,13 +985,13 @@ function renderProject(animateFacts = false) {
     if (isFloating === shouldFloat) return;
 
     const controls = [back, ...projectNavigation.querySelectorAll(".concise-project-nav-link")];
-    const previousRects = new Map(controls.map((control) => [control, control.getBoundingClientRect()]));
+    const previousRects = new Map(controls.map((control) => [control, layoutRect(control)]));
     article.classList.toggle("is-project-nav-floating", shouldFloat);
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     controls.forEach((control) => {
       const previousRect = previousRects.get(control);
-      const nextRect = control.getBoundingClientRect();
+      const nextRect = layoutRect(control);
       const deltaX = previousRect.left - nextRect.left;
       const deltaY = previousRect.top - nextRect.top;
       const previousAnimation = navigationAnimations.get(control);
@@ -1017,8 +1018,8 @@ function renderProject(animateFacts = false) {
   const updateFloatingNavigation = () => {
     window.cancelAnimationFrame(navigationFrame);
     navigationFrame = window.requestAnimationFrame(() => {
-      const floatingTop = Math.max(14, window.innerWidth * 0.025);
-      const articleBounds = article.getBoundingClientRect();
+      const floatingTop = Math.max(14, (window.innerWidth / SITE_SCALE) * 0.025);
+      const articleBounds = layoutRect(article);
       const spineX = Number.parseFloat(
         window.getComputedStyle(article).getPropertyValue("--project-spine-x"),
       ) || 0;
@@ -1026,7 +1027,7 @@ function renderProject(animateFacts = false) {
         "--project-floating-star-left",
         `${articleBounds.left + spineX}px`,
       );
-      const shouldFloat = heading.getBoundingClientRect().bottom <= floatingTop;
+      const shouldFloat = layoutRect(heading).bottom <= floatingTop;
       scrollTop.classList.toggle("is-visible", shouldFloat);
       setFloatingNavigation(shouldFloat);
     });
@@ -1067,8 +1068,8 @@ function renderProject(animateFacts = false) {
       const term = row.querySelector("dt");
       const range = document.createRange();
       range.selectNodeContents(term);
-      const labelWidth = range.getBoundingClientRect().width;
-      const availableWidth = row.getBoundingClientRect().width;
+      const labelWidth = layoutRect(range).width;
+      const availableWidth = layoutRect(row).width;
       const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
       return labelWidth > (availableWidth - gap) * 0.4;
     });
@@ -1184,7 +1185,7 @@ function renderProject(animateFacts = false) {
   presentationLabel.append(presentationTrack);
   const updatePresentationCarousel = () => {
     if (!presentationLabel.isConnected) return;
-    const textWidth = presentationText.getBoundingClientRect().width;
+    const textWidth = layoutRect(presentationText).width;
     presentationLabel.classList.toggle("is-title-scrolling", textWidth > presentationLabel.clientWidth + 1);
     presentationLabel.style.setProperty("--title-marquee-duration", `${Math.max(9, textWidth / 32)}s`);
   };
@@ -1269,8 +1270,8 @@ function renderProject(animateFacts = false) {
 
     const syncOuterScroll = () => {
       if (!presentationSceneHost.classList.contains("is-outer-scroll-driven")) return;
-      const rect = presentationSceneHost.getBoundingClientRect();
-      const travel = Math.max(1, rect.height - window.innerHeight);
+      const rect = layoutRect(presentationSceneHost);
+      const travel = Math.max(1, rect.height - (window.innerHeight / SITE_SCALE));
       const progress = Math.min(1, Math.max(0, -rect.top / travel));
       presentationFrame.contentWindow?.postMessage(
         { type: "set-embedded-scroll-progress", progress },
@@ -1353,10 +1354,10 @@ function renderProject(animateFacts = false) {
   article.append(heading, intro, featured, footer, fullPresentation);
   projectRoot.append(article, scrollTop);
   const updateSpineGaps = () => {
-    const top = article.getBoundingClientRect().top + parseFloat(getComputedStyle(article, "::before").top);
+    const top = layoutRect(article).top + parseFloat(getComputedStyle(article, "::before").top);
     const stops = ["#000 0px"];
     article.querySelectorAll(".concise-project-spine-label").forEach((label) => {
-      const rect = label.getBoundingClientRect();
+      const rect = layoutRect(label);
       const start = Math.max(0, rect.top - top - 3.9);
       const end = Math.max(start, rect.bottom - top + 3.9);
       stops.push(`#000 ${start}px`, `transparent ${start}px`, `transparent ${end}px`, `#000 ${end}px`);
@@ -1374,8 +1375,8 @@ function renderProject(animateFacts = false) {
   if (hasPresentationContent) {
     let previousSpineHeight = -1;
     const updateSpineEnd = () => {
-      const articleRect = article.getBoundingClientRect();
-      const controlRect = plus.getBoundingClientRect();
+      const articleRect = layoutRect(article);
+      const controlRect = layoutRect(plus);
       const spineTop = Number.parseFloat(
         window.getComputedStyle(article, "::before").top,
       ) || 0;

@@ -53,3 +53,13 @@ until the intended zoom quality is decided.
 Verify the host's caching and compression settings. HTML, data, and modules must
 revalidate when updated; immutable asset caching requires versioned URLs or
 filenames. Publishing, pushing, and changing hosting require an explicit request.
+
+## GitHub Pages bundle
+
+Run `node scripts/build-pages.mjs` to generate the ignored `_site` directory.
+The Pages workflow uploads only this directory. It filters unpublished records,
+removes legacy scene metadata from deployment data, checks referenced assets,
+and retains downloads and high-resolution variants. No source assets are deleted.
+See [GitHub Pages setup](GITHUB_PAGES_SETUP.md) for `zuzanapurm.cz` DNS records and
+activation steps. Change Pages from branch-root publishing to GitHub Actions
+before pushing the workflow, so the source archive is not used as the site root.

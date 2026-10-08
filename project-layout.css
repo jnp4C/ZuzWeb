@@ -481,3 +481,19 @@
 @media (width < 700px) {
   .concise-project-page .index-layout-header .concise-project-nav { gap: 7.5px; }
 }
+
+.concise-project-page .concise-project-shell { padding-right: var(--page-right-inset); }
+.concise-project-page .concise-project-scroll-top { right: var(--page-right-inset); }
+.concise-project-page #headerProjectNavigation { margin: 0; min-width: 0; }
+.concise-project-page .index-layout-header .concise-project-nav { position: static; margin: 0; }
+.concise-project-page :is(.concise-project-hero, .concise-project-section, .concise-project-carousel, .concise-project-full-presentation) {
+  max-width: 100%;
+  min-width: 0;
+  margin-right: 0;
+}
+.concise-project-page .concise-project-heading h1 {
+  max-width: calc(100% - var(--project-body-start) - 5.2px);
+}
+.concise-project-page .concise-project-heading h1.is-title-scrolling {
+  width: calc(100% - var(--project-body-start) - 5.2px);
+}

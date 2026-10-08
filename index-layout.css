@@ -398,3 +398,16 @@ html { zoom: 1.1; }
     bottom: calc(var(--index-right-gutter) + env(safe-area-inset-bottom, 0px) + var(--visual-viewport-bottom, 0px));
   }
 }
+
+/* One right boundary for page content and controls, at every viewport width. */
+.index-page {
+  --index-right-gutter: var(--index-page-gutter);
+  --page-right-inset: calc(var(--index-right-gutter) * var(--index-content-scale));
+}
+@media (width < 700px) { .index-page { --index-right-gutter: 15px; } }
+.index-page .index-layout-header { margin-right: var(--index-right-gutter); min-width: 0; }
+.index-page .index-layout-header::before { right: calc(-1 * var(--index-right-gutter)); }
+.index-page main { padding-right: var(--index-right-gutter); }
+.index-page .index-header-actions { flex-shrink: 0; margin-right: 0; }
+.index-page .index-scroll-top { right: var(--page-right-inset); }
+.index-page .index-layout-header h1 { min-width: 0; }

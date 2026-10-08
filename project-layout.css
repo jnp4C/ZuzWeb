@@ -477,3 +477,7 @@
   margin-right: 0;
   justify-self: end;
 }
+
+@media (width < 700px) {
+  .concise-project-page .index-layout-header .concise-project-nav { gap: 7.5px; }
+}

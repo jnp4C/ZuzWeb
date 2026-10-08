@@ -1,17 +1,22 @@
 # English content source
 
-English wording was taken from the locally supplied
-`Redesign/REGESIGN INSTRUCTIONS/WEB PORTFOLIO texty.docx`.
-The source document remains local and ignored; it is not deployed or committed.
+English wording is taken from the red/burgundy (`980000`) text in the updated
+local `Redesign/WEB PORTFOLIO texty.docx`. This supersedes the earlier copy under
+`Redesign/REGESIGN INSTRUCTIONS/`. The reference documents remain ignored and
+are not committed or deployed.
 
-Applied: all 11 index titles, scale/context labels and highlights; the welcome
-and development credits; Waterscape, Cycle of Change, Semněvice Landscape
-Concept and Rewaterisation annotations, project facts and featured-section
-labels; Semněvice award and conference wording. Czech project content and static
-presentation files/order are unchanged.
+The updated source covers all 11 published projects: index titles, scale/context
+labels and highlights, annotations, project facts, awards, realisation notes,
+Erasmus notes, and featured-media captions. English paragraph spacing, label
+capitalization, and index context punctuation follow the Czech formatting. Semněvice's English co-author names
+use the source's initials; Czech names remain unchanged. The welcome and credits
+continue to use the supplied English wording.
 
-The source has no new English annotation for Hillside Garden, In Between,
-Growing-Through, Polyporus Larixis, New Landscapes of High-Speed Rail, or A Tree
-with the Christmas Spirit. These retain their existing English project copy.
-Abstract already has an English annotation. The document supplies no English
-CV or detailed contact-drawer copy; those remain as previously authored.
+Captions are applied to existing media sections. The source also names Project
+Vision and Aerial Sketch groups for high-speed rail; the current page has no
+separate sections for these, so this text update does not add media or change
+the layout. The combined Christmas day/night section uses both supplied captions.
+
+No English CV or detailed contact-drawer copy is supplied in this document;
+those remain as previously authored. Czech project copy and the original static
+presentation images/PDFs, their dimensions, and their order are unchanged.

@@ -24,19 +24,19 @@ const CURATED_MEDIA = {
   waterscape: {
     hero: media("waterscape", "index", "Waterscape project index drawing", "Indexová kresba projektu Waterscape"),
     sections: [
-      section("situation", "masterplan", "SITE PLAN", "Situace", [1, 2, 3, 4].map((number) => media(
+      section("situation", "masterplan", "Site plan", "Situace", [1, 2, 3, 4].map((number) => media(
         "waterscape",
         `source-situation-${String(number).padStart(2, "0")}`,
         `Waterscape situation ${number}`,
         `Situace Waterscape ${number}`,
       ))),
-      section("sections", "graphic", "SECTION", "Řezy", [1, 2, 3, 4, 5, 6].map((number) => media(
+      section("sections", "graphic", "Section", "Řezy", [1, 2, 3, 4, 5, 6].map((number) => media(
         "waterscape",
         `source-section-${String(number).padStart(2, "0")}`,
         `Waterscape section ${number}`,
         `Řez Waterscape ${number}`,
       ))),
-      section("model", "model", "MODEL", "Model", [1, 2, 3, 4].map((number) => media(
+      section("model", "model", "Model", "Model", [1, 2, 3, 4].map((number) => media(
         "waterscape",
         `source-model-${String(number).padStart(2, "0")}`,
         `Waterscape model ${number}`,
@@ -47,25 +47,25 @@ const CURATED_MEDIA = {
   "cycle-of-change": {
     hero: media("cycle-of-change", "index", "Cycle of Change index graphic", "Indexová grafika projektu Cyklus proměny"),
     sections: [
-      section("situation", "masterplan", "SITE PLAN", "Situace", [
+      section("situation", "masterplan", "Site plan", "Situace", [
         media("cycle-of-change", "source-situation", "Cycle of Change situation", "Situace projektu Cyklus proměny"),
       ]),
-      section("sections", "graphic", "SECTIONS", "Řezy", [1, 2, 3].map((number) => media(
+      section("sections", "graphic", "Sections", "Řezy", [1, 2, 3].map((number) => media(
         "cycle-of-change",
         `source-section-0${number}`,
         `Cycle of Change section ${number}`,
         `Řez projektu Cyklus proměny ${number}`,
       ))),
-      section("model", "model", "MODEL", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
+      section("model", "model", "Model", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
         "cycle-of-change",
         `source-model-0${number}`,
         `Cycle of Change model ${number}`,
         `Model projektu Cyklus proměny ${number}`,
       ))),
-      section("wider-relations", "graphic", "SITE CONTEXT", "Širší vztahy", [
+      section("wider-relations", "graphic", "Site context", "Širší vztahy", [
         media("cycle-of-change", "source-wider-relations", "Wider landscape relations", "Širší krajinné vztahy"),
       ]),
-      section("documentation", "graphic", "DOCUMENTATION EXAMPLE", "Výběr z dokumentace", [0, 1, 2, 3, 4].map((number) => media(
+      section("documentation", "graphic", "Documentation example", "Výběr z dokumentace", [0, 1, 2, 3, 4].map((number) => media(
         "cycle-of-change",
         `source-documentation-0${number}`,
         `Cycle of Change documentation ${number + 1}`,
@@ -76,21 +76,21 @@ const CURATED_MEDIA = {
   semnevision: {
     hero: media("semnevice", "index", "Semněvice landscape concept sketch", "Skica koncepce krajiny Semněvic"),
     sections: [
-      section("iso", "graphic", "ANALYSIS LAYERS", "Vrstvy analýz", [
+      section("iso", "graphic", "Analysis layers", "Vrstvy analýz", [
         {
           src: "./assets/project-pages/semnevice/iso-1800.webp",
           srcset: "./assets/project-pages/semnevice/iso-1200.webp 1200w, ./assets/project-pages/semnevice/iso-1800.webp 1800w",
           alt: { en: "Exploded isometric landscape concept for Semněvice", cs: "Rozložená izometrie koncepce krajiny Semněvic" },
         },
       ]),
-      section("masterplan", "masterplan", "MASTERPLAN", "Masterplan", [
+      section("masterplan", "masterplan", "Masterplan", "Masterplan", [
         {
           src: "./assets/project-pages/semnevice/masterplan-1800.webp",
           srcset: "./assets/project-pages/semnevice/masterplan-1200.webp 1200w, ./assets/project-pages/semnevice/masterplan-1800.webp 1800w",
           alt: { en: "Landscape masterplan for Semněvice", cs: "Masterplan koncepce krajiny Semněvic" },
         },
       ]),
-      section("analysis-examples", "graphic", "ANALYSIS EXAMPLES", "Ukázka analýz", [
+      section("analysis-examples", "graphic", "Analysis examples", "Ukázka analýz", [
         media("semnevice", "analysis", "Examples of Semněvice landscape analyses", "Ukázka analýz krajiny Semněvic"),
       ]),
     ],
@@ -98,19 +98,19 @@ const CURATED_MEDIA = {
   rewaterization: {
     hero: media("rewaterization", "index", "Rewaterization project visualization", "Vizualizace projektu Revodalizace"),
     sections: [
-      section("axonometry", "graphic", "AERIAL AXONOMETRIC VIEW", "Nadhledová axonometrie", [
+      section("axonometry", "graphic", "Aerial axonometric view", "Nadhledová axonometrie", [
         media("rewaterization", "source-axonometry", "Rewaterization aerial axonometry", "Nadhledová axonometrie Revodalizace"),
       ]),
-      section("introduction", "graphic", "PROJECT INTRODUCTION", "Úvod do projektu", [1, 2].map((number) => media(
+      section("introduction", "graphic", "Project introduction", "Úvod do projektu", [1, 2].map((number) => media(
         "rewaterization",
         `source-introduction-0${number}`,
         `Rewaterization project introduction ${number}`,
         `Úvod do projektu Revodalizace ${number}`,
       ))),
-      section("stream-revitalization", "graphic", "REVITALISATION DIAGRAM", "Schéma revitalizace toku", [
+      section("stream-revitalization", "graphic", "Revitalisation diagram", "Schéma revitalizace toku", [
         media("rewaterization", "source-stream-revitalization", "Stream revitalization scheme", "Schéma revitalizace toku"),
       ]),
-      section("model", "model", "MODEL", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
+      section("model", "model", "Model", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
         "rewaterization",
         `source-model-0${number}`,
         `Rewaterization model ${number}`,
@@ -121,16 +121,16 @@ const CURATED_MEDIA = {
   "steep-garden": {
     hero: media("steep-garden", "index", "Steep Garden visualization", "Vizualizace Zahrady ve svahu"),
     sections: [
-      section("design-variant", "graphic", "One design variant", "Jedna z variant při navrhování", [
+      section("design-variant", "graphic", "Previous design variant", "Jedna z variant při navrhování", [
         media("steep-garden", "source-design-variant", "One Steep Garden design variant", "Jedna z variant Zahrady ve svahu"),
       ]),
-      section("axonometry", "graphic", "Axonometry", "Axonometrie", [
+      section("axonometry", "graphic", "Design axonometric view", "Axonometrie", [
         media("steep-garden", "source-axonometry", "Steep Garden axonometry", "Axonometrie Zahrady ve svahu"),
       ]),
-      section("architectural-situation", "masterplan", "Architectural situation", "Architektonická situace", [
+      section("architectural-situation", "masterplan", "Architectural site plan", "Architektonická situace", [
         media("steep-garden", "source-architectural-situation", "Steep Garden architectural situation", "Architektonická situace Zahrady ve svahu"),
       ]),
-      section("documentation", "graphic", "Documentation examples", "Ukázky z dokumentace", [1, 2, 3, 4].map((number) => media(
+      section("documentation", "graphic", "Documentation samples", "Ukázky z dokumentace", [1, 2, 3, 4].map((number) => media(
         "steep-garden",
         `source-documentation-0${number}`,
         `Steep Garden documentation ${number}`,
@@ -147,16 +147,16 @@ const CURATED_MEDIA = {
   "growing-through": {
     hero: media("growing-through", "source-index", "Growing-Through installation visualization", "Vizualizace instalace Growing-Through"),
     sections: [
-      section("visualization", "graphic", "Visualization", "Vizualizace", [
+      section("visualization", "graphic", "Visualisation", "Vizualizace", [
         media("growing-through", "source-visualization", "Growing-Through visualization", "Vizualizace Growing-Through"),
       ]),
-      section("idea-concept", "graphic", "Idea concept", "Ideový koncept", [
+      section("idea-concept", "graphic", "Design concept", "Ideový koncept", [
         media("growing-through", "source-idea-concept", "Growing-Through idea concept", "Ideový koncept Growing-Through"),
       ]),
-      section("situation", "masterplan", "Situation", "Situace", [
+      section("situation", "masterplan", "Site plan", "Situace", [
         media("growing-through", "source-situation", "Growing-Through situation", "Situace Growing-Through"),
       ]),
-      section("construction-section", "graphic", "Construction section", "Řez konstrukcí", [
+      section("construction-section", "graphic", "Structural section", "Řez konstrukcí", [
         media("growing-through", "source-section", "Growing-Through construction section", "Řez konstrukcí Growing-Through"),
       ]),
     ],
@@ -190,7 +190,7 @@ const CURATED_MEDIA = {
         `Mezi vším design ${number}`,
         `Návrh Mezi vším ${number}`,
       ))),
-      section("realization-process", "graphic", "Realization process", "Průběh realizace", [1, 2, 3].map((number) => media(
+      section("realization-process", "graphic", "Installation process", "Průběh realizace", [1, 2, 3].map((number) => media(
         "mezi-vsim",
         `source-realization-0${number}`,
         `Mezi vším realization process ${number}`,
@@ -210,7 +210,7 @@ const CURATED_MEDIA = {
   "tree-with-the-spirit-of-christmas": {
     hero: media("tree-with-the-spirit-of-christmas", "index", "Christmas tree project index visualization", "Indexová vizualizace vánočního stromu"),
     sections: [
-      section("day-night-visualization", "graphic", "Day / night visualization", "Vizualizace den / noc", [
+      section("day-night-visualization", "graphic", "Day visualisation / night visualisation", "Vizualizace den / noc", [
         media("tree-with-the-spirit-of-christmas", "day", "Christmas tree daytime visualization", "Vizualizace stromu ve dne"),
         media("tree-with-the-spirit-of-christmas", "night", "Christmas tree nighttime visualization", "Vizualizace stromu v noci"),
       ], { presentation: "day-night-fade" }),
@@ -219,16 +219,16 @@ const CURATED_MEDIA = {
   "polyporus-larixis": {
     hero: media("polyporus-larixis", "index", "Polyporus Larixis timber structure", "Dřevěná konstrukce Polyporus Larixis"),
     sections: [
-      section("concept", "graphic", "Polyporus Larixis concept", "Koncept „Polyporus Larixis“", [
+      section("concept", "graphic", "“Polyporus Larixis” concept", "Koncept „Polyporus Larixis“", [
         media("polyporus-larixis", "design-01", "Concept drawing for the Polyporus Larixis shelters", "Koncepční kresba přístřešků Polyporus Larixis"),
       ]),
-      section("viewfinder", "graphic", "Path viewfinder", "Kukátko ukazující cestu", [
+      section("viewfinder", "graphic", "Wayfinding viewing aperture", "Kukátko ukazující cestu", [
         media("polyporus-larixis", "design-02", "Design drawing of the path viewfinder", "Návrhová kresba kukátka ukazujícího cestu"),
       ]),
       section("bicycle-stand", "graphic", "Bicycle stand", "Stojan na kola", [
         media("polyporus-larixis", "design-03", "Design drawing of the bicycle stand", "Návrhová kresba stojanu na kola"),
       ]),
-      section("roda-traden-realization", "realization", "Röda Tråden realization", "Realizace „Röda Tråden“", [1, 2, 3, 4].map((number) => media(
+      section("roda-traden-realization", "realization", "Construction of “Röda Tråden”", "Realizace „Röda Tråden“", [1, 2, 3, 4].map((number) => media(
         "polyporus-larixis", `realization-0${number}`, `Röda Tråden construction process ${number}`, `Průběh realizace Röda Tråden ${number}`,
       ))),
       section("completed-structure", "realization", "Completed structure", "Dokončená stavba", [
@@ -242,7 +242,7 @@ const CURATED_MEDIA = {
       section("theoretical-conclusion", "graphic", "Conclusion of the theoretical part", "Závěr teoretické části", [
         media("new-landscape-of-high-speed-railways", "theory", "Summary diagram of the theoretical research", "Shrnující schéma teoretické části"),
       ]),
-      section("analyses", "graphic", "Study-area analyses", "Ukázka analýz řešeného území", [1, 2, 3, 4].map((number) => media(
+      section("analyses", "graphic", "Analysis sample of the study area", "Ukázka analýz řešeného území", [1, 2, 3, 4].map((number) => media(
         "new-landscape-of-high-speed-railways", `analysis-0${number}`, `Study-area analysis ${number}`, `Analýza řešeného území ${number}`,
       ))),
       section("project-concept", "graphic", "Project concept", "Koncept projektu", [

@@ -14,7 +14,7 @@
         "cs": "WATERSCAPE"
       },
       "context": {
-        "en": "< FA studio project >",
+        "en": "FA studio project",
         "cs": "školní práce"
       },
       "image": {
@@ -388,7 +388,7 @@
     "location": "Milan, IT",
     "year": 2022,
     "description": "A proposal to reopen a Milan canal and shape a public space where water plays the leading role.",
-    "annotation": "Milan was once a city of water canals, much like Venice. The international competition asks its participants how these canals could be reopened and what the public space around them should look like in several selected areas. One of them is a street with a park-like square, connecting the future archaeological park with a water basin and the former port - Darsena.\n\nIn the WATERSCAPE project, I reopen the canal in its full beauty, with water playing the key role in the design. By introducing a number of smaller islands, the project offers a more intimate contact with the water in many different forms. The spatial concept is also shaped by two paths following the main pedestrian routes, making the area easy to move through on foot. Thanks to modest play elements and a café half-hidden in the terrain, it becomes a public space for everyone.",
+    "annotation": "Milan was once a city of water canals, much like Venice. The international competition asks its participants how these canals could be reopened and what the public space around them should look like in several selected areas. One of them is a street with a park-like square, connecting the future archaeological park with a water basin and the former port - Darsena. In the WATERSCAPE project, I reopen the canal in its full beauty, with water playing the key role in the design. By introducing a number of smaller islands, the project offers a more intimate contact with the water in many different forms. The spatial concept is also shaped by two paths following the main pedestrian routes, making the area easy to move through on foot. Thanks to modest play elements and a café half-hidden in the terrain, it becomes a public space for everyone.",
     "scenes": [
       {
         "type": "annotation",
@@ -556,7 +556,7 @@
         "cs": "STROM S DUCHEM VÁNOC"
       },
       "context": {
-        "en": "< open call, co-authored >",
+        "en": "open call, co-authored",
         "cs": "opencall, spoluautorství"
       },
       "highlights": []
@@ -712,7 +712,7 @@
     "location": "Prague, CZ",
     "year": 2026,
     "description": "Group project for the GHMP Opencall.",
-    "annotation": "Just as Holešovice Market differs from conventional shopping centres, we sought an alternative to their typical style of Christmas decoration. We chose simplicity and natural materials to subtly complement the market's ornate buildings.\n\nThe construction refers to traditional thatched roofs while incorporating modern technology. Alongside reeds, the thatch contains optical fibres that make the tree magically come alive at dusk, as if the tips of the stalks themselves were glowing. Could it be the Spirit of Christmas lighting them?\n\nThe proposal was created for OPEN CALL – Christmas Tree at Holešovice Market, organized by GHMP as part of the Art for the City programme.",
+    "annotation": "Just as Holešovice Market differs from conventional shopping centres, we also looked for an alternative to their typical kind of decoration. We therefore chose simplicity and natural materials that would gently complement the market’s ornate buildings.\n\nThe structure refers to traditional thatched roofs, enriched with modern technology. Alongside the reeds, the thatch also contains optical fibres, thanks to which the tree magically comes to life at dusk. It may seem as if the very tips of the stalks are glowing. Could it be that the Spirit of Christmas is lighting them up?\n\nThe design was created for the open call “Christmas Tree at Holešovice Market”, organised by GHMP as part of the Art for the City programme.",
     "scenes": [
       {
         "type": "annotation",
@@ -2023,7 +2023,7 @@
         "cs": "ABSTRACT."
       },
       "context": {
-        "en": "< SA studio project, Erasmus >",
+        "en": "SA studio project, Erasmus",
         "cs": "školní práce, Erasmus"
       },
       "highlights": []
@@ -2032,7 +2032,7 @@
       "cs": {
         "title": "ABSTRACT.",
         "description": null,
-        "annotation": null
+        "annotation": "The aim of the design was to emerge from the landscape. This was accomplished through a process of abstraction—extracting the essential elements and using them as the foundation for the work, ensuring a relation to the place. The created urban tissue is shaped as an interpretation of the landscape, for it to make the place more readable for its visitors, fostering a deeper emotional connection. Centralized to the top of the hill with a community center, the two axes continue as pedestrian streets, referring to the main street in the old city center. Important was the usage of the partly opened block, with apartment buildings on the edges and row-houses in the middle. Therefore, the sun exposure and sheltering from the wind is achieved, as well as the cosy courtyards creating communities."
       }
     },
     "projectPage": {
@@ -2050,7 +2050,7 @@
             "cs": "pozn.:"
           },
           "detail": {
-            "en": "completed during an Erasmus stay at Lund University\n(Sustainable Urban Design Studio)",
+            "en": "developed during an ERASMUS exchange at Lund University\n (Sustainable Urban Design Studio)",
             "cs": "v rámci pobytu ERASMUS na Lund University\n(Sustainable Urban Design Studio)"
           }
         }
@@ -2275,11 +2275,11 @@
           "cs": "velké měřítko"
         },
         "processing": {
-          "en": "study",
+          "en": "design study",
           "cs": "studie"
         },
         "type": {
-          "en": "studio project",
+          "en": "student project",
           "cs": "školní práce"
         },
         "collaborators": []
@@ -2295,7 +2295,7 @@
     "location": "Lund, SE",
     "year": 2025,
     "description": "Urban tissue shaped through abstraction from the landscape, centered around a hilltop community center and pedestrian axes.",
-    "annotation": "The aim of the design was to emerge from the landscape. This was accomplished through a process of abstraction—extracting the essential elements and using them as the foundation for the work, ensuring a relation to the place. The created urban tissue is shaped as an interpretation of the landscape, for it to make the place more readable for its visitors, fostering a deeper emotional connection. Centralized to the top of the hill with a community center, the two axes continue as pedestrian streets, referring to the main street in the old city center. Important was the usage of the partly opened block, with apartment buildings on the edges and row-houses in the middle. Therefore, the sun exposure and sheltering from the wind is achieved, as well as the cosy courtyards creating communities.",
+    "annotation": "The aim of the design was to emerge from the landscape. This was achieved through a process of abstraction—extracting its essential elements and using them as the foundation for the design, while maintaining a strong relationship to the place. The resulting urban fabric is shaped as an interpretation of the landscape, making the site more readable for its visitors and fostering a deeper emotional connection to it. Centred on the top of the hill around a community centre, two main axes continue as pedestrian streets, referring to the main street of the old town centre. An important principle was the use of partially open urban blocks, with apartment buildings along the edges and row houses in the middle. This allows for good sun exposure and protection from the wind, while also creating cosy courtyards that support community life.",
     "scenes": [
       {
         "type": "annotation",
@@ -8175,7 +8175,7 @@
         "cs": "GROWING-THROUGH"
       },
       "context": {
-        "en": "< student project, co-authored >",
+        "en": "student project, co-authored",
         "cs": "školní práce, spoluautorství"
       },
       "highlights": [
@@ -8206,7 +8206,7 @@
             "cs": "OCENĚNÍ :"
           },
           "detail": {
-            "en": "Laurus 2025 — Winner in the LANDSCAPE GESTURE category\n(Conceptual or artistic proposals outside a specific brief; a gesture as an idea, symbol or intervention that opens a new perspective on the landscape)",
+            "en": "Laurus 2025 – Winner in the LANDSCAPE GESTURE category\n(Conceptual or artistic proposals developed beyond the scope of a specific brief; a gesture understood as an idea, symbol, or intervention that opens up a new perspective on the landscape.)",
             "cs": "Laurus 2025 - Vítěz v kategorii KRAJINÁŘSKÉ GESTO\n(Ideové či výtvarné návrhy, mimo rámec konkrétního zadání, gesto jako myšlenka, symbol nebo zásah, jenž otevírá nový pohled na krajinu)"
           }
         }
@@ -8292,7 +8292,7 @@
           "cs": "návrh instalace"
         },
         "type": {
-          "en": "studio project + competition",
+          "en": "student project + competition",
           "cs": "školní práce + soutěž"
         },
         "collaborators": [
@@ -8310,7 +8310,7 @@
     "location": "Les Jardins de Métis, CA",
     "year": 2024,
     "description": "Two-year outdoor installation for the International Garden Festival at Les Jardins de Métis.",
-    "annotation": "A design for a two-year outdoor installation created for the International Garden Festival at Les Jardins de Métis (Reford Gardens) with the theme 'BORDERS'. The installation illustrates how nature deals with artificial boundaries created by humans. Concrete objects placed in conflict with willow patches demonstrate various spatial concepts of barriers and their overcoming. By using willow rods that will take root and grow through the whole time of the exhibition, the installation continuously evolves, showing how the environment adapts to the impacts of insensitive human interventions.",
+    "annotation": "A design for a two-year outdoor installation created for the International Garden Festival at Les Jardins de Métis (Reford Gardens), with the theme ‘BORDERS’. The installation illustrates how nature responds to artificial boundaries created by humans. Concrete objects placed in tension with willow patches demonstrate different spatial concepts of barriers and ways of overcoming them. Using willow rods that take root and continue growing throughout the exhibition, the installation constantly evolves, showing how the environment adapts to the effects of insensitive human intervention.",
     "scenes": [
       {
         "type": "annotation",
@@ -8598,7 +8598,7 @@
         "cs": "CYKLUS PROMĚNY"
       },
       "context": {
-        "en": "< Bachelor’s thesis >",
+        "en": "Bachelor’s thesis",
         "cs": "bakalářská práce"
       },
       "highlights": []
@@ -9682,7 +9682,7 @@
     "location": "Kladno, CZ",
     "year": 2022,
     "description": "Landscape architecture studio project for a dignified and recreational landscape around the Kladno crematorium.",
-    "annotation": "The crematorium currently exists only as a technical building that resembles a car repair shop, surrounded by shrubs and remnants of an orchard. The project aims to create a pleasant space that can be visited both to say a dignified farewell to the deceased and for recreation, while ensuring that these two purposes do not disturb each other.\n\nOne of the main elements of the project is an elegant wall that hides the crematorium building. Another idea is that of two worlds, separated by a ribbon of water. Inside, there is a place for peaceful rest, with three scattering meadows shaped like grass-covered pillows.\n\nA dynamic path in dialogue with the ribbon of water symbolizes the infinite cycle of life. Both elements are constantly changing, expressing the idea that the lives of those who grieve do not end, but simply change.",
+    "annotation": "The crematorium currently exists only as a technical building that resembles a car repair shop, surrounded by shrubs and remnants of an orchard. The project aims to create a pleasant space that can be visited both to say a dignified farewell to the deceased and for recreation, while ensuring that these two purposes do not disturb each other. One of the main elements of the project is an elegant wall that hides the crematorium building. Another idea is that of two worlds, separated by a ribbon of water. Inside, there is a place for peaceful rest, with three scattering meadows shaped like grass-covered pillows. A dynamic path in dialogue with the ribbon of water symbolizes the infinite cycle of life. Both elements are constantly changing, expressing the idea that the lives of those who grieve do not end, but simply change.",
     "pdfPages": [
       1,
       3,
@@ -10903,7 +10903,7 @@
         "cs": "KONCEPCE KRAJINY SEMNĚVIC"
       },
       "context": {
-        "en": "< FA studio project, co-authored >",
+        "en": "FA studio project, co-authored",
         "cs": "školní práce, spoluautorství"
       },
       "highlights": [
@@ -11079,7 +11079,8 @@
           "Eliška Kuncířová",
           "Josefína Jírovcová",
           "Martina Gruntová"
-        ]
+        ],
+        "collaboratorsEn": ["D. Moravcová", "A. Koupalová", "D. Kvapilová", "E. Kuncířová", "J. Jírovcová", "M. Gruntová"]
       },
       "hero": {
         "media": {
@@ -11103,7 +11104,7 @@
     "location": "Semněvice, CZ",
     "year": 2023,
     "description": "Landscape concept for Semněvice based on a multi-layer territorial analysis.",
-    "annotation": "Based on a detailed analysis of the Semněvice landscape, a vision for the area was developed – SemněVISION – followed by the Semněvice Landscape Concept. Its aim was to approach the landscape comprehensively as one interconnected whole and to establish principles and methods for its rational and sustainable use and transformation, so that the landscape could prosper and remain a good place to live.\nThe landscape concept was developed in greater detail through four layers reflecting the needs and key issues of the Semněvice landscape: the path network, the built-up area, agriculture, and the water regime.\nThis team project is followed by individual projects that further develop these layers, including REVODALIZACE, presented next in the portfolio.",
+    "annotation": "Based on a detailed analysis of the Semněvice landscape, a vision for the area was developed – SemněVISION – followed by the Semněvice Landscape Concept. Its aim was to approach the landscape comprehensively as one interconnected whole and to establish principles and methods for its rational and sustainable use and transformation, so that the landscape could prosper and remain a good place to live. The landscape concept was developed in greater detail through four layers reflecting the needs and key issues of the Semněvice landscape: the path network, the built-up area, agriculture, and the water regime. This team project is followed by individual projects that further develop these layers, including REVODALIZACE, presented next in the portfolio.",
     "pdfPages": [
       1,
       2,
@@ -14216,7 +14217,7 @@
         "cs": "REVODALIZACE"
       },
       "context": {
-        "en": "< FA studio project >",
+        "en": "FA studio project",
         "cs": "školní práce"
       },
       "highlights": []
@@ -14606,7 +14607,7 @@
     "location": "Semněvice, CZ",
     "year": 2023,
     "description": "A Semněvice water regime revitalisation proposal developed from the landscape concept.",
-    "annotation": "The project builds on a group project in which, based on an analysis of the municipality of Semněvice, a VISION was developed and a LANDSCAPE CONCEPT was created. Its aim was to approach the landscape comprehensively, as one interconnected whole, and to establish principles and methods for its rational and sustainable use and transformation, so that it could prosper and remain a good place to live.\nThe proposal applies the principles defined in the concept to a specific area. It is an example of landscape revitalisation and improvement of the local water regime. The project is based on the real needs of the municipality and aims to offer a more suitable alternative to the water reservoir currently proposed for the area.\nThe presentation of the proposal also aims to explain the issue of water in the landscape clearly and thoroughly, as this is not only a theoretical project intended for an academic audience, but above all a real initiative for a specific municipality and its residents.",
+    "annotation": "The project builds on a group project in which, based on an analysis of the municipality of Semněvice, a VISION was developed and a LANDSCAPE CONCEPT was created. Its aim was to approach the landscape comprehensively, as one interconnected whole, and to establish principles and methods for its rational and sustainable use and transformation, so that it could prosper and remain a good place to live. The proposal applies the principles defined in the concept to a specific area. It is an example of landscape revitalisation and improvement of the local water regime. The project is based on the real needs of the municipality and aims to offer a more suitable alternative to the water reservoir currently proposed for the area. The presentation of the proposal also aims to explain the issue of water in the landscape clearly and thoroughly, as this is not only a theoretical project intended for an academic audience, but above all a real initiative for a specific municipality and its residents.",
     "relatedProjectLink": {
       "label": "View concept",
       "href": "./year.html?year=2023&project=concept-of-semnevice-landscape"
@@ -16344,7 +16345,7 @@
         "cs": "ZAHRADA VE SVAHU"
       },
       "context": {
-        "en": "< FA studio project >",
+        "en": "FA studio project",
         "cs": "školní práce"
       },
       "highlights": []
@@ -17002,11 +17003,11 @@
           "cs": "malé měřítko"
         },
         "processing": {
-          "en": "study + documentation",
+          "en": "design study + documentation",
           "cs": "studie + dokumentace"
         },
         "type": {
-          "en": "studio project",
+          "en": "student project",
           "cs": "školní práce"
         },
         "collaborators": []
@@ -17022,7 +17023,7 @@
     "location": "Prague-Střešovice, CZ",
     "year": 2024,
     "description": "Design of a steep family house garden in Prague's Střešovice district.",
-    "annotation": "This project is a redevelopment design of a garden around a family house in Prague's Střešovice district, subsequently processed into detailed project documentation. The project's plot is very steep, so the design works with the terrain to create more usable spaces. The concept is based on simplicity, which is ideal for the small spaces of the garden. The aesthetic of the design is inspired by early 20th-century urban villa gardens, for example by the use of evergreen trees. The project creates cozy rooms that invite you to spend the time in the garden, rather than just looking at it. Despite its small size, the garden offers spaces for socializing or quiet solitude for all house residents.",
+    "annotation": "The project is a study for the redesign of a private garden in Prague’s Střešovice district, later developed into project documentation. The garden is situated on a steep slope, so the design works with the terrain to create more usable areas. The concept is based on simplicity, preventing the relatively small garden from becoming overcrowded. In its character, the design draws inspiration from the gardens of early 20th-century urban villas, for example through the use of evergreen planting. It creates a series of cosy outdoor rooms that encourage people to spend time in the garden rather than observe it passively from inside the house. Despite its small size, the garden offers spaces both for socialising and for spending quiet time alone, meeting the needs of all residents of the house.",
     "pdfPages": [
       1,
       2,
@@ -18515,7 +18516,7 @@
         "cs": "MEZI VŠÍM"
       },
       "context": {
-        "en": "< Pokoje exhibition, co-authored >",
+        "en": "Pokoje exhibition, co-authored",
         "cs": "přehlídka Pokoje, spoluautorství"
       },
       "highlights": [
@@ -18542,11 +18543,11 @@
       "awards": [
         {
           "label": {
-            "en": "REALIZATION :",
+            "en": "REALISATION:",
             "cs": "REALIZACE :"
           },
           "detail": {
-            "en": "POKOJE 2024 EXHIBITION\nThe exhibition presents work by students from art universities across the Czech Republic, as well as Poland, Slovakia and Hungary. Each year, it brings buildings in central Prague to life, with participants creating their own site-specific art projects for these spaces.",
+            "en": "Pokoje 2024\nThe exhibition presents work by students from art universities across the Czech Republic, as well as from Poland, Slovakia, and Hungary. Each year, it brings new life to buildings in central Prague, with participants creating site-specific art projects for their individual spaces.",
             "cs": "PŘEHLÍDKA Pokoje 2024\nVýstava prezentuje tvorbu studentů vysokých uměleckých škol z celé České republiky a také z Polska, Slovenska a Maďarska, která každoročně oživuje domy v centru Prahy, pro jejichž prostory vytvářejí účastníci vždy vlastní specifické umělecké projekty."
           }
         }
@@ -18623,7 +18624,7 @@
     "location": "Prague, CZ",
     "year": 2024,
     "description": "Realized installation for the Pokoje 2024 exhibition.",
-    "annotation": "The room houses a representation of Landscape Architecture as a living entity. But what kind of discipline is it?\nBecause of its complexity, the discipline itself struggles to define and find its core. Its designs address an ever-evolving environment through every phase of its life cycle—it is work with growth. Landscape architecture can be explored through the interconnection of many disciplines and themes spanning the full breadth of the environment.\nWe invite you to climb through its intricacies, explore thematic connections and discover its materialized core. As a visitor, you can help both the sculpture itself and awareness of the purpose of landscape design to grow.",
+    "annotation": "The room is inhabited by Landscape Architecture embodied as a living entity. But what kind of discipline is it, actually? Because of its complexity, the discipline itself struggles to define its boundaries and find its core. Its designs deal with an ever-changing environment throughout all stages of its life cycle – it is a practice of working with growth. Landscape architecture can be understood through the interconnection of many disciplines and themes concerning the environment in all its complexity.\n\nWe invite you to explore its intricacies, discover connections between its themes, and search for its materialised core. As a visitor, you can help both the sculpture itself and the awareness of the meaning of landscape architecture to grow.",
     "headerActions": [
       {
         "label": "Pokoje 2024",
@@ -18663,7 +18664,7 @@
         "cs": "NOVÁ KRAJINA VRT"
       },
       "context": {
-        "en": "< Master’s thesis >",
+        "en": "Master’s thesis",
         "cs": "diplomová práce"
       },
       "highlights": []
@@ -19425,11 +19426,11 @@
           "cs": "velké měřítko"
         },
         "processing": {
-          "en": "diploma thesis",
+          "en": "theoretical part + design study",
           "cs": "diplomová práce"
         },
         "type": {
-          "en": "landscape planning",
+          "en": "Master’s thesis",
           "cs": "krajinné plánování"
         },
         "collaborators": []
@@ -19449,7 +19450,7 @@
     "location": "Elbe Lowlands, CZ",
     "year": 2026,
     "description": "Diploma thesis on integrating a high-speed railway into the landscape of the Elbe lowlands.",
-    "annotation": "The thesis examines the possibilities of integrating a high-speed railway line into the landscape of the Elbe lowlands from a landscape architecture perspective. It assumes that a purely functional solution to a high-speed rail project, understood in terms of technical and ecological aspects, is insufficient. The aim of the thesis is therefore to answer the question of how high-speed rail lines can be approached comprehensively, in a way that corresponds to the scale of their intervention in the landscape, and what landscape architecture can contribute to this process. The first part of the thesis is a theoretical review dealing with the relationship between landscape and high-speed rail as a form of linear transport infrastructure.\n\nThe second part focuses on the study area between Roudnice nad Labem and Křešice, which is analysed in detail. The design forms the third part of the thesis, where the theoretical findings are applied to a specific section of the planned railway line. Based on the review, principles of a comprehensive approach to high-speed rail are derived, forming the basis for the vision of the New Landscapes of High-Speed Rail. The Elbe Embroidery is the name of the concept for one of the New Landscapes of High-Speed Rail, which also includes the study area. The concept of the Elbe Embroidery is then further specified in an integration strategy, which presents the proposed landscape modifications. It also includes a more detailed presentation of the individual integrating elements.",
+    "annotation": "The thesis examines the possibilities of integrating a high-speed railway line into the landscape of the Elbe lowlands from the perspective of landscape architecture. It is based on the assumption that a purely functional approach to high-speed rail, focused only on technical and ecological aspects, is insufficient. The aim of the thesis is therefore to explore how high-speed rail lines can be approached comprehensively, in a way that reflects the scale of their impact on the landscape, and what landscape architecture can contribute to this process. The first part of the thesis provides a theoretical overview of the relationship between landscape and high-speed rail as a form of linear transport infrastructure.\n\nThe second part focuses on the study area between Roudnice nad Labem and Křešice, which is analysed in detail. The design forms the third part of the thesis, applying the theoretical findings to a specific section of the planned railway line. Based on the theoretical research, a set of principles for a comprehensive approach to high-speed rail is established, forming the basis for the vision of NEW LANDSCAPES OF HIGH-SPEED RAIL. THE ELBE EMBROIDERY is the concept developed for one of these new landscapes and includes the study area. The concept is further elaborated through an integration strategy presenting the proposed landscape interventions, together with a more detailed description of the individual integrating elements.",
     "headerActions": [
       {
         "label": "Diploma thesis",
@@ -19492,7 +19493,7 @@
         "cs": "POLYPORUS LARIXIS"
       },
       "context": {
-        "en": "< design-build workshop, co-authored >",
+        "en": "design-build workshop, co-authored",
         "cs": "design-build workshop, spoluautorství"
       },
       "highlights": []
@@ -19519,7 +19520,7 @@
             "cs": "pozn.:"
           },
           "detail": {
-            "en": "completed during an Erasmus stay at Lund University",
+            "en": "developed during an ERASMUS exchange at Lund University\n (Sustainable Urban Design Studio)",
             "cs": "v rámci pobytu ERASMUS na Lund University"
           }
         }
@@ -19542,7 +19543,7 @@
           "cs": "malé měřítko"
         },
         "processing": {
-          "en": "study",
+          "en": "design study",
           "cs": "studie"
         },
         "type": {
@@ -19565,7 +19566,7 @@
     "location": "Czech Republic",
     "year": 2025,
     "description": "A design-and-build project developed during the ArkRest workshop beside Lake Dagstorpssjön.",
-    "annotation": "During an Erasmus semester at Lund University, I took part in the ArkRest design-and-build workshop led by Martin Björklund and Ivar Håkenstad. The assignment was to build a rest area with a shelter on the shore of Lake Dagstorpssjön.\n\nOne of four proposals developed in small groups was selected for construction. Our group’s proposal, “POLYPORUS LARIXIS,” was inspired by the bracket fungi growing on the site. Their unobtrusive character also shaped the shelters, whose structures hug and emerge from the slope. Visitors could choose between a larger shelter with a table and a smaller one with a folding backrest. The proposal also included a fire pit, a bicycle stand, and viewfinders marking the route from the hiking trail.\n\nThe proposal selected for construction was “RÖDA TRÅDEN” (red thread). Very few power tools were used during construction, allowing us to learn basic carpentry, including several types of joints made with a chisel and mallet.",
+    "annotation": "During my Erasmus semester at Lund University, I took part in the ArkRest design-build workshop led by Martin Björklund and Ivar Håkenstad. The task was to build a resting place with a shelter on the shore of Lake Dagstorpssjön.\n\nThe project selected for construction was chosen from four proposals developed in small groups. Our group’s proposal, “POLYPORUS LARIXIS”, was inspired by the bracket fungi growing on the site. Their subtle presence also influenced the final character of the shelters, which were designed to blend into the slope they emerge from. Visitors could choose between a larger shelter with a table and a smaller one with a folding backrest. The proposal also included a fire pit, a bicycle stand, and small viewing openings indicating the way from the hiking trail.\n\nThe proposal selected for construction was “RÖDA TRÅDEN” (“the red thread”). During the building process, we used only a minimum of power tools, which gave us the opportunity to learn basic carpentry skills, including different types of timber joints made using a chisel and mallet.",
     "scenes": [],
     "projectType": "Design-build workshop, collaboration",
     "projectTeam": [

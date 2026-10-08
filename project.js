@@ -6,9 +6,9 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-08-authored-english";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-08-red-english-complete";
 
-const DATA_CACHE_VERSION = "2026-10-08-authored-english";
+const DATA_CACHE_VERSION = "2026-10-08-red-english-complete";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -988,8 +988,11 @@ function renderProject(animateFacts = false) {
     createFact(copy.processing, getLocalizedText(info.processing, activeLanguage), "left", 2),
     createFact(copy.type, getLocalizedText(info.type, activeLanguage), "left", 3),
   );
-  if (Array.isArray(info.collaborators) && info.collaborators.length > 0) {
-    facts.append(createFact(copy.collaborators, info.collaborators.join(", "), "left", 4));
+  const collaborators = activeLanguage === "en" && info.collaboratorsEn
+    ? info.collaboratorsEn
+    : info.collaborators;
+  if (Array.isArray(collaborators) && collaborators.length > 0) {
+    facts.append(createFact(copy.collaborators, collaborators.join(", "), "left", 4));
   }
   const infoBlock = document.createElement("section");
   infoBlock.className = "concise-project-info-block";

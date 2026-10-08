@@ -45,8 +45,8 @@ previous/next navigation, responsive layouts, and PDF downloads. Check that no
 module/media requests fail and unpublished material is absent from the bundle.
 
 The language control now uses the supplied English index and project translations.
-The new source has no English CV and supplies detailed new translations for only
-four projects; other projects retain their existing translations. Some presentation
+The updated red-text source supplies English copy for all 11 projects; it still
+has no English CV or detailed contact-drawer copy. Some presentation
 srcsets top out below the archived zoom image resolution; preserve zoom sources
 until the intended zoom quality is decided.
 

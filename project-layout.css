@@ -236,6 +236,9 @@
 /* Reserve a normal-flow header and pagination outside the image viewport. */
 .concise-project-page .project-image-lightbox[open] {
   display: grid;
+  width: calc(100vw / var(--site-scale));
+  height: calc(100vh / var(--site-scale));
+  height: calc(100dvh / var(--site-scale));
   grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 13px;
   padding: clamp(1rem, 3vw, 2rem);

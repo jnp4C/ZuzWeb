@@ -387,7 +387,7 @@
 .index-page .index-scroll-top .concise-project-scroll-top-triangles i { border-right-width: 10.4px; border-left-width: 10.4px; border-bottom-width: 9.7px; }
 
 /* Uniform enlargement, including controls, typography, spacing and media. */
-html { zoom: 1.1; }
+html { --site-scale: 1.1; zoom: var(--site-scale); }
 
 @media (width < 700px) {
   .index-page .index-scroll-top {

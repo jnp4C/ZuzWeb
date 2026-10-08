@@ -327,18 +327,24 @@ function updateProjectPreviewPlacements() {
   const columnRight = Math.max(0, ...textRects.flat().map((rect) => rect.right));
   links.forEach((link, index) => {
     const rects = textRects[index];
-    const centerY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
+    const rowCenterY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
     const left = columnRight + 30 * contentScale;
-    const heightLimit = Math.max(0, Math.min(340 * contentScale, 2 * (centerY - 75 * contentScale), 2 * ((window.innerHeight / SITE_SCALE) - centerY - 24 * contentScale)));
-    const widthLimit = Math.max(0, Math.min(540 * contentScale, (window.innerWidth / SITE_SCALE) * 0.38, (window.innerWidth / SITE_SCALE) - left - 24 * contentScale));
+    const viewportHeight = window.innerHeight / SITE_SCALE;
+    const topInset = 75 * contentScale;
+    const bottomInset = 24 * contentScale;
+    // Fit to the viewport, then shift at its edges instead of shrinking by row position.
+    const heightLimit = Math.max(0, Math.min(520 * contentScale, viewportHeight - topInset - bottomInset));
+    const widthLimit = Math.max(0, Math.min(720 * contentScale, (window.innerWidth / SITE_SCALE) * 0.48, (window.innerWidth / SITE_SCALE) - left - 24 * contentScale));
     const image = link.querySelector(".project-index-link-preview img");
     const ratio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : 1;
     const width = Math.min(widthLimit, heightLimit * ratio);
+    const height = width / ratio;
+    const centerY = Math.max(topInset + height / 2, Math.min(rowCenterY, viewportHeight - bottomInset - height / 2));
     const linkRect = layoutRect(link);
     link.style.setProperty("--project-preview-left", `${(left - linkRect.left) / contentScale}px`);
     link.style.setProperty("--project-preview-center", `${(centerY - linkRect.top) / contentScale}px`);
     link.style.setProperty("--project-preview-width", `${width / contentScale}px`);
-    link.style.setProperty("--project-preview-height", `${width / ratio / contentScale}px`);
+    link.style.setProperty("--project-preview-height", `${height / contentScale}px`);
     link.classList.toggle("has-side-preview", !inline && width > 0);
   });
 }
@@ -352,16 +358,16 @@ function createProjectIndexItem(project, order) {
     ? `./project.html?project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`
     : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`;
   link.addEventListener("pointerenter", () => {
-    updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
     }
+    updateProjectPreviewPlacements();
   });
   link.addEventListener("focus", () => {
-    updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
     }
+    updateProjectPreviewPlacements();
   });
 
   const scale = document.createElement("span");

@@ -502,7 +502,7 @@ function initConnectorGaps() {
   update();
 }
 
-function initMobileHelpTicker() {
+function initMobileCredits() {
   const source = document.getElementById("headerHelpText");
   if (!source) return;
   const text = source.textContent.match(/\[[^\]]*\]/)?.[0];
@@ -552,7 +552,7 @@ async function init() {
   initConnectorGaps();
   renderRandomIndexBackground();
   initIndexHeader();
-  initMobileHelpTicker();
+  initMobileCredits();
   initIndexScrollTop();
   initProjectsToggle();
   initInfoToggle();

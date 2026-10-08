@@ -1020,6 +1020,7 @@ function renderProject(animateFacts = false) {
     navigationFrame = window.requestAnimationFrame(() => {
       const floatingTop = Math.max(14, (window.innerWidth / SITE_SCALE) * 0.025);
       const articleBounds = layoutRect(article);
+      scrollTop.style.right = `${Math.max(0, window.innerWidth / SITE_SCALE - articleBounds.right)}px`;
       const spineX = Number.parseFloat(
         window.getComputedStyle(article).getPropertyValue("--project-spine-x"),
       ) || 0;

@@ -465,3 +465,15 @@
     bottom: calc(var(--index-right-gutter) + env(safe-area-inset-bottom, 0px) + var(--visual-viewport-bottom, 0px));
   }
 }
+
+/* Keep the download control on the same right edge as the article content. */
+.concise-project-page .concise-project-footer {
+  width: 100%;
+  max-width: 100%;
+  margin-right: 0;
+  padding-right: 0;
+}
+.concise-project-page .concise-project-footer .concise-project-pdf-download {
+  margin-right: 0;
+  justify-self: end;
+}

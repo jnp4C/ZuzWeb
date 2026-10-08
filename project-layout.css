@@ -479,3 +479,13 @@
 @media (prefers-reduced-motion: reduce) {
   .concise-project-page :is(.concise-project-heading h1, .concise-project-presentation-label, .project-image-lightbox-title).is-title-scrolling .concise-project-title-track { animation-play-state: paused; }
 }
+
+/* Static pages use equal screen margins, independent of the project spine. */
+.concise-project-page .concise-project-full-presentation--image-sequence {
+  width: 100%;
+  height: auto;
+  margin-left: calc((var(--page-right-inset) - var(--project-page-gutter)) / 2);
+  margin-right: 0;
+  overflow: visible;
+  touch-action: pan-x pan-y pinch-zoom;
+}

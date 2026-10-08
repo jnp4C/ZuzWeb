@@ -14,7 +14,7 @@
         "cs": "WATERSCAPE"
       },
       "context": {
-        "en": "studio project",
+        "en": "< FA studio project >",
         "cs": "školní práce"
       },
       "image": {
@@ -361,11 +361,11 @@
           "cs": "střední měřítko"
         },
         "processing": {
-          "en": "study",
+          "en": "design study",
           "cs": "studie"
         },
         "type": {
-          "en": "studio project + competition",
+          "en": "student project + competition",
           "cs": "školní práce + soutěž"
         },
         "collaborators": []
@@ -388,7 +388,7 @@
     "location": "Milan, IT",
     "year": 2022,
     "description": "A proposal to reopen a Milan canal and shape a public space where water plays the leading role.",
-    "annotation": "Milan once was the city of water canals, such as Venice for example. The international competition is asking its participants, how to reopen them and how the public space around them should look like in a few chosen areas. One of them is a street with a park square, connecting the future archeological park with a water basin and former port – Darsena. In the WATERSCAPE project, I’m opening the canal in its full beauty and water plays the key role in it. With the use of many smaller islands, the design offers a more intimate contact with the water level in numerous forms. The spatial concept is also formed by two paths in the main transit directions, because it’s pedestrian friendly. Thanks to modest playing features and a café half-hidden in the terrain, it is a public space for everyone.",
+    "annotation": "Milan was once a city of water canals, much like Venice. The international competition asks its participants how these canals could be reopened and what the public space around them should look like in several selected areas. One of them is a street with a park-like square, connecting the future archaeological park with a water basin and the former port - Darsena.\n\nIn the WATERSCAPE project, I reopen the canal in its full beauty, with water playing the key role in the design. By introducing a number of smaller islands, the project offers a more intimate contact with the water in many different forms. The spatial concept is also shaped by two paths following the main pedestrian routes, making the area easy to move through on foot. Thanks to modest play elements and a café half-hidden in the terrain, it becomes a public space for everyone.",
     "scenes": [
       {
         "type": "annotation",
@@ -552,11 +552,11 @@
         "cs": "instalace"
       },
       "title": {
-        "en": "A TREE WITH THE SPIRIT OF CHRISTMAS",
+        "en": "A TREE WITH THE CHRISTMAS SPIRIT",
         "cs": "STROM S DUCHEM VÁNOC"
       },
       "context": {
-        "en": "open call, collaboration",
+        "en": "< open call, co-authored >",
         "cs": "opencall, spoluautorství"
       },
       "highlights": []
@@ -703,9 +703,9 @@
         "mobilePosition": "after-annotation"
       }
     },
-    "title": "A Tree with the Spirit of Christmas",
+    "title": "A TREE WITH THE CHRISTMAS SPIRIT",
     "mobileTitle": {
-      "en": "CHRISTMAS SPIRIT TREE",
+      "en": "A TREE WITH THE CHRISTMAS SPIRIT",
       "cs": "STROM S DUCHEM VÁNOC"
     },
     "category": "Landscape Installation",
@@ -2023,7 +2023,7 @@
         "cs": "ABSTRACT."
       },
       "context": {
-        "en": "studio project, Erasmus",
+        "en": "< SA studio project, Erasmus >",
         "cs": "školní práce, Erasmus"
       },
       "highlights": []
@@ -8175,7 +8175,7 @@
         "cs": "GROWING-THROUGH"
       },
       "context": {
-        "en": "studio project, collaboration",
+        "en": "< student project, co-authored >",
         "cs": "školní práce, spoluautorství"
       },
       "highlights": [
@@ -8598,7 +8598,7 @@
         "cs": "CYKLUS PROMĚNY"
       },
       "context": {
-        "en": "bachelor thesis",
+        "en": "< Bachelor’s thesis >",
         "cs": "bakalářská práce"
       },
       "highlights": []
@@ -9655,11 +9655,11 @@
           "cs": "střední měřítko"
         },
         "processing": {
-          "en": "study + documentation",
+          "en": "design study + documentation",
           "cs": "studie + dokumentace"
         },
         "type": {
-          "en": "bachelor thesis",
+          "en": "Bachelor’s thesis",
           "cs": "bakalářská práce"
         },
         "collaborators": []
@@ -9682,7 +9682,7 @@
     "location": "Kladno, CZ",
     "year": 2022,
     "description": "Landscape architecture studio project for a dignified and recreational landscape around the Kladno crematorium.",
-    "annotation": "Crematorium now exists only as a technical building, that looks like a car repair shop surrounded by shrubs and rests of orchard. The project tends to create a pleasant space, which can be visit both for dignifiedly take part with departed and for recreation, but with condition that these intents wouldn’t disturb each other. One of the basis of the project is an elegant wall, that hides the crematorium’s building. Then there is an idea of two worlds, bordered with a water ribbon. Inside, there is a place of peaceful rest with three scattering meadow shaped as grass pillows. Dynamic path in dialog with water ribbon are symbolizing the infinite cycle of life. Both features are changing constantly, bringing the idea that the life of the grievers is not ending, just changing.",
+    "annotation": "The crematorium currently exists only as a technical building that resembles a car repair shop, surrounded by shrubs and remnants of an orchard. The project aims to create a pleasant space that can be visited both to say a dignified farewell to the deceased and for recreation, while ensuring that these two purposes do not disturb each other.\n\nOne of the main elements of the project is an elegant wall that hides the crematorium building. Another idea is that of two worlds, separated by a ribbon of water. Inside, there is a place for peaceful rest, with three scattering meadows shaped like grass-covered pillows.\n\nA dynamic path in dialogue with the ribbon of water symbolizes the infinite cycle of life. Both elements are constantly changing, expressing the idea that the lives of those who grieve do not end, but simply change.",
     "pdfPages": [
       1,
       3,
@@ -10899,11 +10899,11 @@
         "cs": "velké měřítko"
       },
       "title": {
-        "en": "CONCEPT OF SEMNĚVICE LANDSCAPE",
+        "en": "SEMNĚVICE LANDSCAPE CONCEPT",
         "cs": "KONCEPCE KRAJINY SEMNĚVIC"
       },
       "context": {
-        "en": "studio project, collaboration",
+        "en": "< FA studio project, co-authored >",
         "cs": "školní práce, spoluautorství"
       },
       "highlights": [
@@ -10934,7 +10934,7 @@
             "cs": "OCENĚNÍ :"
           },
           "detail": {
-            "en": "FA CTU Dean's Award 2024\nfor a 2nd–5th year studio project — Landscape Architecture",
+            "en": "Dean’s Award, Faculty of Architecture, CTU 2024\nfor a 2nd–5th year studio project – Landscape Architecture",
             "cs": "Cena děkana FA ČVUT 2024\nza ateliérový projekt 2. – 5. ročníku – Krajinářská architektura"
           }
         }
@@ -10959,7 +10959,7 @@
             "cs": ""
           },
           "text": {
-            "en": "The project was presented at the conference [ Nature-based Measures in the Landscape ] FA CTU 18 September 2024",
+            "en": "The project was presented at the conference [ Nature-Based Measures in the Landscape ], Faculty of Architecture, CTU, 18 September 2024.",
             "cs": "Projekt byl prezentován na konferenci [ Přírodě blízká opatření v krajině ] FA ČVUT 18.9.2024"
           }
         }
@@ -11065,11 +11065,11 @@
           "cs": "velké měřítko"
         },
         "processing": {
-          "en": "study",
+          "en": "design study",
           "cs": "studie"
         },
         "type": {
-          "en": "studio project",
+          "en": "student project",
           "cs": "školní práce"
         },
         "collaborators": [
@@ -11094,16 +11094,16 @@
         "mobilePosition": "after-annotation"
       }
     },
-    "title": "CONCEPT OF SEMNĚVICE LANDSCAPE",
+    "title": "SEMNĚVICE LANDSCAPE CONCEPT",
     "mobileTitle": {
-      "en": "SEMNĚVISION",
+      "en": "SEMNĚVICE LANDSCAPE CONCEPT",
       "cs": "KONCEPCE SEMNĚVIC"
     },
     "category": "Group project",
     "location": "Semněvice, CZ",
     "year": 2023,
     "description": "Landscape concept for Semněvice based on a multi-layer territorial analysis.",
-    "annotation": "Based on a detailed analysis of the landscape of Semněvice, a vision for the area was proposed — SemněVISION, and a Landscape Concept of Semněvice was prepared. It aims to grasp the landscape comprehensively as a whole, to establish principles and methods of rational and sustainable use and interventions so that it would prosper and people would live well in it. The landscape concept was elaborated in detail in four layers based on the needs and problems of the Semněvice landscape: the road network, the intramural area, agriculture and the water regime. This team project is followed by individual projects developing the following layers: THE LANDSCAPE AROUND SEMNĚVICE, Through the Village Under the Hillage, WATER FLOW, Heart of Semněvice, AGRI-SEMNĚ-CULTURE, REWATERIZATION, OUT-WATERING.",
+    "annotation": "Based on a detailed analysis of the Semněvice landscape, a vision for the area was developed – SemněVISION – followed by the Semněvice Landscape Concept. Its aim was to approach the landscape comprehensively as one interconnected whole and to establish principles and methods for its rational and sustainable use and transformation, so that the landscape could prosper and remain a good place to live.\nThe landscape concept was developed in greater detail through four layers reflecting the needs and key issues of the Semněvice landscape: the path network, the built-up area, agriculture, and the water regime.\nThis team project is followed by individual projects that further develop these layers, including REVODALIZACE, presented next in the portfolio.",
     "pdfPages": [
       1,
       2,
@@ -14212,11 +14212,11 @@
         "cs": "střední měřítko"
       },
       "title": {
-        "en": "REWATERIZATION",
+        "en": "REWATERISATION",
         "cs": "REVODALIZACE"
       },
       "context": {
-        "en": "studio project",
+        "en": "< FA studio project >",
         "cs": "školní práce"
       },
       "highlights": []
@@ -14579,11 +14579,11 @@
           "cs": "střední měřítko"
         },
         "processing": {
-          "en": "study",
+          "en": "design study",
           "cs": "studie"
         },
         "type": {
-          "en": "studio project",
+          "en": "student project",
           "cs": "školní práce"
         },
         "collaborators": []
@@ -14601,12 +14601,12 @@
         "mobilePosition": "after-annotation"
       }
     },
-    "title": "REWATERIZATION",
+    "title": "REWATERISATION",
     "category": "Studio project",
     "location": "Semněvice, CZ",
     "year": 2023,
     "description": "A Semněvice water regime revitalisation proposal developed from the landscape concept.",
-    "annotation": "The project arises from group work, in which a VISION was proposed and a LANDSCAPE CONCEPT was created based on an analysis of the territory of the Semněvice municipality. Its aim was to grasp the landscape as a whole and to establish principles and methods for rational and sustainable use, so that it could thrive and people could live well in it. The proposal is an application of principles established in the concept to a specific area, an example of revitalising local water regime. The work is based on the real needs of the community. The presentation of the proposal ensures that the issue of water in the landscape is adequately explained, as it is not just theoretical work for the academic community but primarily a real initiative for a specific municipality and its citizens.",
+    "annotation": "The project builds on a group project in which, based on an analysis of the municipality of Semněvice, a VISION was developed and a LANDSCAPE CONCEPT was created. Its aim was to approach the landscape comprehensively, as one interconnected whole, and to establish principles and methods for its rational and sustainable use and transformation, so that it could prosper and remain a good place to live.\nThe proposal applies the principles defined in the concept to a specific area. It is an example of landscape revitalisation and improvement of the local water regime. The project is based on the real needs of the municipality and aims to offer a more suitable alternative to the water reservoir currently proposed for the area.\nThe presentation of the proposal also aims to explain the issue of water in the landscape clearly and thoroughly, as this is not only a theoretical project intended for an academic audience, but above all a real initiative for a specific municipality and its residents.",
     "relatedProjectLink": {
       "label": "View concept",
       "href": "./year.html?year=2023&project=concept-of-semnevice-landscape"
@@ -16340,11 +16340,11 @@
         "cs": "malé měřítko + dokumentace"
       },
       "title": {
-        "en": "STEEP GARDEN",
+        "en": "HILLSIDE GARDEN",
         "cs": "ZAHRADA VE SVAHU"
       },
       "context": {
-        "en": "studio project",
+        "en": "< FA studio project >",
         "cs": "školní práce"
       },
       "highlights": []
@@ -17017,7 +17017,7 @@
         "mobilePosition": "after-annotation"
       }
     },
-    "title": "STEEP GARDEN",
+    "title": "HILLSIDE GARDEN",
     "category": "Garden Design",
     "location": "Prague-Střešovice, CZ",
     "year": 2024,
@@ -18511,16 +18511,16 @@
         "cs": "instalace"
       },
       "title": {
-        "en": "MEZI VŠÍM",
+        "en": "IN BETWEEN",
         "cs": "MEZI VŠÍM"
       },
       "context": {
-        "en": "Pokoje exhibition, collaboration",
+        "en": "< Pokoje exhibition, co-authored >",
         "cs": "přehlídka Pokoje, spoluautorství"
       },
       "highlights": [
         {
-          "en": "realization",
+          "en": "built",
           "cs": "realizace"
         }
       ]
@@ -18618,7 +18618,7 @@
         "mobilePosition": "after-annotation"
       }
     },
-    "title": "MEZI VŠÍM",
+    "title": "IN BETWEEN",
     "category": "Exhibition Installation",
     "location": "Prague, CZ",
     "year": 2024,
@@ -18659,11 +18659,11 @@
         "cs": "velké měřítko"
       },
       "title": {
-        "en": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS",
+        "en": "NEW LANDSCAPES OF HIGH-SPEED RAIL",
         "cs": "NOVÁ KRAJINA VRT"
       },
       "context": {
-        "en": "diploma thesis",
+        "en": "< Master’s thesis >",
         "cs": "diplomová práce"
       },
       "highlights": []
@@ -19440,9 +19440,9 @@
         "mobilePosition": "after-annotation"
       }
     },
-    "title": "THE NEW LANDSCAPE OF HIGH-SPEED RAILWAYS",
+    "title": "NEW LANDSCAPES OF HIGH-SPEED RAIL",
     "mobileTitle": {
-      "en": "NEW LANDSCAPE HSR",
+      "en": "NEW LANDSCAPES OF HIGH-SPEED RAIL",
       "cs": "NOVÁ KRAJINA VRT"
     },
     "category": "Diploma Thesis",
@@ -19492,7 +19492,7 @@
         "cs": "POLYPORUS LARIXIS"
       },
       "context": {
-        "en": "design-build workshop, collaboration",
+        "en": "< design-build workshop, co-authored >",
         "cs": "design-build workshop, spoluautorství"
       },
       "highlights": []

@@ -24,7 +24,7 @@ const backgroundAnimation = document.querySelector(".background-animation");
 const INDEX_OPENING_SPEED = 0.6;
 const PROJECTS_CLOSING_DURATION = 900;
 const NESTED_DRAWER_CLOSING_DURATION = 700;
-const DATA_CACHE_VERSION = "2026-10-08-deployment-merge";
+const DATA_CACHE_VERSION = "2026-10-08-authored-english";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -289,8 +289,7 @@ function initCvToggle() {
 
 
 function createLocalizedText(value) {
-  // Use authored Czech index copy in both modes until English copy is supplied.
-  return getLocalizedText(value, "cs");
+  return getLocalizedText(value, activeLanguage);
 }
 
 function getProjectIndexMedia(project) {
@@ -521,6 +520,11 @@ function initMobileCredits() {
   footer.className = "index-mobile-credits";
   const copy = document.createElement("span");
   copy.textContent = text;
+  const credits = source.querySelector('p[data-en] + p[data-en]');
+  if (credits) {
+    copy.dataset.en = credits.dataset.en;
+    copy.dataset.cs = credits.dataset.cs;
+  }
   footer.append(copy);
   document.body.append(footer);
   const fitCredits = () => {
@@ -530,7 +534,9 @@ function initMobileCredits() {
     const natural = layoutRect(copy).width;
     copy.style.fontSize = `${Math.min(13, 13 * available / Math.max(1, natural))}px`;
   };
-  new ResizeObserver(fitCredits).observe(footer);
+  const creditsObserver = new ResizeObserver(fitCredits);
+  creditsObserver.observe(footer);
+  creditsObserver.observe(copy);
   document.fonts.ready.then(fitCredits);
   fitCredits();
 }

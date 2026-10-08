@@ -24,19 +24,19 @@ const CURATED_MEDIA = {
   waterscape: {
     hero: media("waterscape", "index", "Waterscape project index drawing", "Indexová kresba projektu Waterscape"),
     sections: [
-      section("situation", "masterplan", "Situation", "Situace", [1, 2, 3, 4].map((number) => media(
+      section("situation", "masterplan", "SITE PLAN", "Situace", [1, 2, 3, 4].map((number) => media(
         "waterscape",
         `source-situation-${String(number).padStart(2, "0")}`,
         `Waterscape situation ${number}`,
         `Situace Waterscape ${number}`,
       ))),
-      section("sections", "graphic", "Sections", "Řezy", [1, 2, 3, 4, 5, 6].map((number) => media(
+      section("sections", "graphic", "SECTION", "Řezy", [1, 2, 3, 4, 5, 6].map((number) => media(
         "waterscape",
         `source-section-${String(number).padStart(2, "0")}`,
         `Waterscape section ${number}`,
         `Řez Waterscape ${number}`,
       ))),
-      section("model", "model", "Model", "Model", [1, 2, 3, 4].map((number) => media(
+      section("model", "model", "MODEL", "Model", [1, 2, 3, 4].map((number) => media(
         "waterscape",
         `source-model-${String(number).padStart(2, "0")}`,
         `Waterscape model ${number}`,
@@ -47,25 +47,25 @@ const CURATED_MEDIA = {
   "cycle-of-change": {
     hero: media("cycle-of-change", "index", "Cycle of Change index graphic", "Indexová grafika projektu Cyklus proměny"),
     sections: [
-      section("situation", "masterplan", "Situation", "Situace", [
+      section("situation", "masterplan", "SITE PLAN", "Situace", [
         media("cycle-of-change", "source-situation", "Cycle of Change situation", "Situace projektu Cyklus proměny"),
       ]),
-      section("sections", "graphic", "Sections", "Řezy", [1, 2, 3].map((number) => media(
+      section("sections", "graphic", "SECTIONS", "Řezy", [1, 2, 3].map((number) => media(
         "cycle-of-change",
         `source-section-0${number}`,
         `Cycle of Change section ${number}`,
         `Řez projektu Cyklus proměny ${number}`,
       ))),
-      section("model", "model", "Model", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
+      section("model", "model", "MODEL", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
         "cycle-of-change",
         `source-model-0${number}`,
         `Cycle of Change model ${number}`,
         `Model projektu Cyklus proměny ${number}`,
       ))),
-      section("wider-relations", "graphic", "Wider relations", "Širší vztahy", [
+      section("wider-relations", "graphic", "SITE CONTEXT", "Širší vztahy", [
         media("cycle-of-change", "source-wider-relations", "Wider landscape relations", "Širší krajinné vztahy"),
       ]),
-      section("documentation", "graphic", "Documentation selection", "Výběr z dokumentace", [0, 1, 2, 3, 4].map((number) => media(
+      section("documentation", "graphic", "DOCUMENTATION EXAMPLE", "Výběr z dokumentace", [0, 1, 2, 3, 4].map((number) => media(
         "cycle-of-change",
         `source-documentation-0${number}`,
         `Cycle of Change documentation ${number + 1}`,
@@ -76,21 +76,21 @@ const CURATED_MEDIA = {
   semnevision: {
     hero: media("semnevice", "index", "Semněvice landscape concept sketch", "Skica koncepce krajiny Semněvic"),
     sections: [
-      section("iso", "graphic", "ISO", "Vrstvy analýz", [
+      section("iso", "graphic", "ANALYSIS LAYERS", "Vrstvy analýz", [
         {
           src: "./assets/project-pages/semnevice/iso-1800.webp",
           srcset: "./assets/project-pages/semnevice/iso-1200.webp 1200w, ./assets/project-pages/semnevice/iso-1800.webp 1800w",
           alt: { en: "Exploded isometric landscape concept for Semněvice", cs: "Rozložená izometrie koncepce krajiny Semněvic" },
         },
       ]),
-      section("masterplan", "masterplan", "Masterplan", "Masterplan", [
+      section("masterplan", "masterplan", "MASTERPLAN", "Masterplan", [
         {
           src: "./assets/project-pages/semnevice/masterplan-1800.webp",
           srcset: "./assets/project-pages/semnevice/masterplan-1200.webp 1200w, ./assets/project-pages/semnevice/masterplan-1800.webp 1800w",
           alt: { en: "Landscape masterplan for Semněvice", cs: "Masterplan koncepce krajiny Semněvic" },
         },
       ]),
-      section("analysis-examples", "graphic", "Analysis examples", "Ukázka analýz", [
+      section("analysis-examples", "graphic", "ANALYSIS EXAMPLES", "Ukázka analýz", [
         media("semnevice", "analysis", "Examples of Semněvice landscape analyses", "Ukázka analýz krajiny Semněvic"),
       ]),
     ],
@@ -98,19 +98,19 @@ const CURATED_MEDIA = {
   rewaterization: {
     hero: media("rewaterization", "index", "Rewaterization project visualization", "Vizualizace projektu Revodalizace"),
     sections: [
-      section("axonometry", "graphic", "Aerial axonometry", "Nadhledová axonometrie", [
+      section("axonometry", "graphic", "AERIAL AXONOMETRIC VIEW", "Nadhledová axonometrie", [
         media("rewaterization", "source-axonometry", "Rewaterization aerial axonometry", "Nadhledová axonometrie Revodalizace"),
       ]),
-      section("introduction", "graphic", "Introduction to the project", "Úvod do projektu", [1, 2].map((number) => media(
+      section("introduction", "graphic", "PROJECT INTRODUCTION", "Úvod do projektu", [1, 2].map((number) => media(
         "rewaterization",
         `source-introduction-0${number}`,
         `Rewaterization project introduction ${number}`,
         `Úvod do projektu Revodalizace ${number}`,
       ))),
-      section("stream-revitalization", "graphic", "Stream revitalization scheme", "Schéma revitalizace toku", [
+      section("stream-revitalization", "graphic", "REVITALISATION DIAGRAM", "Schéma revitalizace toku", [
         media("rewaterization", "source-stream-revitalization", "Stream revitalization scheme", "Schéma revitalizace toku"),
       ]),
-      section("model", "model", "Model", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
+      section("model", "model", "MODEL", "Model", [1, 2, 3, 4, 5, 6].map((number) => media(
         "rewaterization",
         `source-model-0${number}`,
         `Rewaterization model ${number}`,

@@ -6,9 +6,9 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-06-real-content-labels";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-08-authored-english";
 
-const DATA_CACHE_VERSION = "2026-10-08-deployment-merge";
+const DATA_CACHE_VERSION = "2026-10-08-authored-english";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -23,7 +23,7 @@ const AVAILABLE_BACKGROUND_SRCS = new Set([
 ]);
 const projectRoot = document.getElementById("conciseProject");
 const backgroundAnimation = document.querySelector(".concise-project-background");
-let activeLanguage = "cs";
+let activeLanguage = getLanguage();
 let navigationLanguage = getLanguage();
 let activeProject = null;
 let navigableProjects = [];
@@ -55,9 +55,9 @@ const COPY = {
     info: "Info",
     year: "Year",
     scale: "Scale",
-    processing: "Processing",
+    processing: "Output",
     type: "Type",
-    collaborators: "Collaborators",
+    collaborators: "Co-authorship",
     awards: "Awards",
     annotation: "Annotation",
     previousImage: "Previous image",
@@ -1267,7 +1267,7 @@ initProjectHeader();
 initializeVisualViewportInset();
 
 initLanguageSwitch((language) => {
-  activeLanguage = "cs";
+  activeLanguage = language;
   navigationLanguage = language;
   if (activeProject) {
     renderProject(false);

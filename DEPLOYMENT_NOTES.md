@@ -44,8 +44,9 @@ help text, every project and full presentation, featured-media lightboxes,
 previous/next navigation, responsive layouts, and PDF downloads. Check that no
 module/media requests fail and unpublished material is absent from the bundle.
 
-The language control currently retains Czech main copy in both settings; do
-not describe the content as a complete English translation. Some presentation
+The language control now uses the supplied English index and project translations.
+The new source has no English CV and supplies detailed new translations for only
+four projects; other projects retain their existing translations. Some presentation
 srcsets top out below the archived zoom image resolution; preserve zoom sources
 until the intended zoom quality is decided.
 

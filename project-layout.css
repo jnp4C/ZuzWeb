@@ -433,7 +433,7 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding-inline: 9.7px;
+  padding-inline: 4.85px;
   color: #000;
 }
 .concise-project-page .concise-project-day-night-slider-frame::before,
@@ -444,14 +444,14 @@
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-block: 10.4px solid transparent;
+  border-block: 5.2px solid transparent;
   pointer-events: none;
 }
 .concise-project-page .concise-project-day-night-slider-frame::before {
   left: 0;
-  border-right: 9.7px solid currentColor;
+  border-right: 4.85px solid currentColor;
 }
 .concise-project-page .concise-project-day-night-slider-frame::after {
   right: 0;
-  border-left: 9.7px solid currentColor;
+  border-left: 4.85px solid currentColor;
 }

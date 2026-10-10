@@ -233,7 +233,7 @@
   animation: none !important;
 }
 .index-page .personal-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
-.index-page .project-index-info .intro { grid-column: 2; grid-row: 1; margin: 0; padding: 0; border: 0; background: #fff; }
+.index-page .project-index-info .intro { grid-column: 2; grid-row: 1; margin: 0; padding: 0; border: 0; background: transparent; }
 .index-page .project-index-info-contact { margin: 0; display: grid; gap: 15px; font-size: var(--type-small); line-height: 15px; }
 .index-page .project-index .project-index-info-row { display: flex; flex-wrap: wrap; gap: 0 15px; margin: 0; animation: none !important; }
 .index-page .project-index-info-row dt { color: #000; }

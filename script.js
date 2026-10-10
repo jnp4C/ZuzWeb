@@ -5,7 +5,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-10-media";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-10-merged";
 
 const projectGroups = {
   study: document.getElementById("studyProjects"),
@@ -24,7 +24,7 @@ const backgroundAnimation = document.querySelector(".background-animation");
 const INDEX_OPENING_SPEED = 0.6;
 const PROJECTS_CLOSING_DURATION = 900;
 const NESTED_DRAWER_CLOSING_DURATION = 700;
-const DATA_CACHE_VERSION = "2026-08-16-normalized-author-names";
+const DATA_CACHE_VERSION = "2026-10-10-merged";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -201,7 +201,9 @@ function initProjectsToggle() {
       projectIndex.querySelectorAll(".project-index-link").forEach((link) => {
         link.classList.remove("has-user-previewed", "skip-language-reveal");
       });
-      projectIndex.classList.remove("is-projects-closing");
+      projectIndex.classList.remove("is-projects-open", "is-projects-closing");
+      // Establish the collapsed layout after unhiding before starting the transition.
+      void projectsPanel.offsetWidth;
       projectIndex.classList.add("is-projects-open");
       projectIndex.classList.add("is-projects-intro-active");
       introTimer = window.setTimeout(() => {
@@ -251,7 +253,9 @@ function initCvToggle() {
 
     if (shouldOpen) {
       cvDetails.hidden = false;
-      cvDetails.classList.remove("is-closing");
+      cvDetails.classList.remove("is-open", "is-closing");
+      // Commit the collapsed layout after unhiding, as the INFO drawer does.
+      void cvDetails.offsetWidth;
       cvDetails.classList.add("is-open");
       projectIndex?.classList.remove("is-cv-closing");
       projectIndex?.classList.add("is-cv-open");
@@ -285,8 +289,7 @@ function initCvToggle() {
 
 
 function createLocalizedText(value) {
-  // Use authored Czech index copy in both modes until English copy is supplied.
-  return getLocalizedText(value, "cs");
+  return getLocalizedText(value, activeLanguage);
 }
 
 function getProjectIndexMedia(project) {
@@ -323,18 +326,24 @@ function updateProjectPreviewPlacements() {
   const columnRight = Math.max(0, ...textRects.flat().map((rect) => rect.right));
   links.forEach((link, index) => {
     const rects = textRects[index];
-    const centerY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
+    const rowCenterY = (Math.min(...rects.map((rect) => rect.top)) + Math.max(...rects.map((rect) => rect.bottom))) / 2;
     const left = columnRight + 30 * contentScale;
-    const heightLimit = Math.max(0, Math.min(340 * contentScale, 2 * (centerY - 75 * contentScale), 2 * ((window.innerHeight / SITE_SCALE) - centerY - 24 * contentScale)));
-    const widthLimit = Math.max(0, Math.min(540 * contentScale, (window.innerWidth / SITE_SCALE) * 0.38, (window.innerWidth / SITE_SCALE) - left - 24 * contentScale));
+    const viewportHeight = window.innerHeight / SITE_SCALE;
+    const topInset = 75 * contentScale;
+    const bottomInset = 24 * contentScale;
+    // Fit to the viewport, then shift at its edges instead of shrinking by row position.
+    const heightLimit = Math.max(0, Math.min(520 * contentScale, viewportHeight - topInset - bottomInset));
+    const widthLimit = Math.max(0, Math.min(720 * contentScale, (window.innerWidth / SITE_SCALE) * 0.48, (window.innerWidth / SITE_SCALE) - left - 24 * contentScale));
     const image = link.querySelector(".project-index-link-preview img");
     const ratio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : 1;
     const width = Math.min(widthLimit, heightLimit * ratio);
+    const height = width / ratio;
+    const centerY = Math.max(topInset + height / 2, Math.min(rowCenterY, viewportHeight - bottomInset - height / 2));
     const linkRect = layoutRect(link);
     link.style.setProperty("--project-preview-left", `${(left - linkRect.left) / contentScale}px`);
     link.style.setProperty("--project-preview-center", `${(centerY - linkRect.top) / contentScale}px`);
     link.style.setProperty("--project-preview-width", `${width / contentScale}px`);
-    link.style.setProperty("--project-preview-height", `${width / ratio / contentScale}px`);
+    link.style.setProperty("--project-preview-height", `${height / contentScale}px`);
     link.classList.toggle("has-side-preview", !inline && width > 0);
   });
 }
@@ -348,16 +357,16 @@ function createProjectIndexItem(project, order) {
     ? `./project.html?project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`
     : `./year.html?year=${encodeURIComponent(project.year)}&project=${encodeURIComponent(projectSlug)}&lang=${activeLanguage}`;
   link.addEventListener("pointerenter", () => {
-    updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
     }
+    updateProjectPreviewPlacements();
   });
   link.addEventListener("focus", () => {
-    updateProjectPreviewPlacements();
     if (projectIndex?.classList.contains("is-projects-intro-active")) {
       link.classList.add("has-user-previewed");
     }
+    updateProjectPreviewPlacements();
   });
 
   const scale = document.createElement("span");
@@ -511,6 +520,11 @@ function initMobileCredits() {
   footer.className = "index-mobile-credits";
   const copy = document.createElement("span");
   copy.textContent = text;
+  const credits = source.querySelector('p[data-en] + p[data-en]');
+  if (credits) {
+    copy.dataset.en = credits.dataset.en;
+    copy.dataset.cs = credits.dataset.cs;
+  }
   footer.append(copy);
   document.body.append(footer);
   const fitCredits = () => {
@@ -520,7 +534,9 @@ function initMobileCredits() {
     const natural = layoutRect(copy).width;
     copy.style.fontSize = `${Math.min(13, 13 * available / Math.max(1, natural))}px`;
   };
-  new ResizeObserver(fitCredits).observe(footer);
+  const creditsObserver = new ResizeObserver(fitCredits);
+  creditsObserver.observe(footer);
+  creditsObserver.observe(copy);
   document.fonts.ready.then(fitCredits);
   fitCredits();
 }

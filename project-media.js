@@ -1,8 +1,8 @@
 function media(slug, name, en, cs) {
   const base = `./assets/project-pages/${slug}/${name}`;
   return {
-    src: `${base}-1800.webp`,
-    srcset: `${base}-1100.webp 1100w, ${base}-1800.webp 1800w`,
+    src: `${base}-1800.webp?v=2026-10-10-media`,
+    srcset: `${base}-1100.webp?v=2026-10-10-media 1100w, ${base}-1800.webp?v=2026-10-10-media 1800w`,
     alt: { en, cs },
   };
 }
@@ -11,7 +11,7 @@ function video(slug, name, posterName, en, cs) {
   return {
     type: "video",
     src: `./assets/project-pages/${slug}/${name}.mp4`,
-    poster: `./assets/project-pages/${slug}/${posterName}-1800.webp`,
+    poster: `./assets/project-pages/${slug}/${posterName}-1800.webp?v=2026-10-10-media`,
     alt: { en, cs },
   };
 }
@@ -78,15 +78,15 @@ const CURATED_MEDIA = {
     sections: [
       section("iso", "graphic", "ISO", "Vrstvy analýz", [
         {
-          src: "./assets/project-pages/semnevice/iso-1800.webp",
-          srcset: "./assets/project-pages/semnevice/iso-1200.webp 1200w, ./assets/project-pages/semnevice/iso-1800.webp 1800w",
+          src: "./assets/project-pages/semnevice/iso-1800.webp?v=2026-10-10-media",
+          srcset: "./assets/project-pages/semnevice/iso-1200.webp?v=2026-10-10-media 1200w, ./assets/project-pages/semnevice/iso-1800.webp?v=2026-10-10-media 1800w",
           alt: { en: "Exploded isometric landscape concept for Semněvice", cs: "Rozložená izometrie koncepce krajiny Semněvic" },
         },
       ]),
       section("masterplan", "masterplan", "Masterplan", "Masterplan", [
         {
-          src: "./assets/project-pages/semnevice/masterplan-1800.webp",
-          srcset: "./assets/project-pages/semnevice/masterplan-1200.webp 1200w, ./assets/project-pages/semnevice/masterplan-1800.webp 1800w",
+          src: "./assets/project-pages/semnevice/masterplan-1800.webp?v=2026-10-10-media",
+          srcset: "./assets/project-pages/semnevice/masterplan-1200.webp?v=2026-10-10-media 1200w, ./assets/project-pages/semnevice/masterplan-1800.webp?v=2026-10-10-media 1800w",
           alt: { en: "Landscape masterplan for Semněvice", cs: "Masterplan koncepce krajiny Semněvic" },
         },
       ]),

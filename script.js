@@ -5,7 +5,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-08-16-updated-index-images";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-10-media";
 
 const projectGroups = {
   study: document.getElementById("studyProjects"),

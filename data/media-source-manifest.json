@@ -1,0 +1,1438 @@
+[
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_index\\WATERSCAPE_index.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\index-1100.webp",
+      "assets\\project-pages\\waterscape\\index-1800.webp"
+    ],
+    "sha256": "1e21934dfd23280fd9527142ec85023fffeedea1183c94ee04ba090e3ac8bd56"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_index\\hlavni grafika web 90per.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\index-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\index-1800.webp"
+    ],
+    "sha256": "b38f6446cacad902ff835c9a6d75a6e2a5d58e30c4294b47c8214f9f1a9b4d83"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_KONCEPCE KRAJINY SEMNEVIC\\KONCEPCE_index\\koncepce_SKICE.jpg",
+    "outputs": [
+      "assets\\project-pages\\semnevice\\index-1100.webp",
+      "assets\\project-pages\\semnevice\\index-1800.webp"
+    ],
+    "sha256": "e220a310d67a012eed8b049b0efa2c3b58f40a3bd70d47029d39e9d160c92e3e"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_index\\VIZUAIZACE IKON.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\index-1100.webp",
+      "assets\\project-pages\\rewaterization\\index-1800.webp"
+    ],
+    "sha256": "376daf5e79e3211d306a4e622e705075cb6663c91150121328a1ffce7ef842a0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_index\\VESVAHU_index.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\index-1100.webp",
+      "assets\\project-pages\\steep-garden\\index-1800.webp"
+    ],
+    "sha256": "bdc2430bd9c78aa51449bbc9efdc1ab17dcf36f66e1210062953e50abcb87907"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_GROWING-TROUGH\\GROWING-TROUHG_INDEX\\METIS_vizu_mini_babi.jpg",
+    "outputs": [
+      "assets\\project-pages\\growing-through\\index-1100.webp",
+      "assets\\project-pages\\growing-through\\index-1800.webp"
+    ],
+    "sha256": "afca26aa5b4fedec4a32736421b5fca15054f9b594aeed5a421d806b1fa6ae27"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._index\\abstract_INDEX.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-index-1100.webp",
+      "assets\\project-pages\\abstract\\source-index-1800.webp"
+    ],
+    "sha256": "646e6fdf4baf3b6e8437c835e2fa810b946ef97e2e345d3a27c8b536da4c1ca4"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_index\\MEZI VSIM_index.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-index-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-index-1800.webp"
+    ],
+    "sha256": "1c8e769ca38f7e6b6e7e689d191aed18b6583b8e82ae12a7609a4f9029bff98e"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_index\\IMG_2030.JPG",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\index-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\index-1800.webp"
+    ],
+    "sha256": "9bc51a5e28b2b105cf465b07ed75ef409bbd1732a0ca3c5faef095c939268e15"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_index\\DP_index.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\index-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\index-1800.webp"
+    ],
+    "sha256": "ba90c7afaa969caa0fa99e55ff4f124bedd61a3b6ed550f98eedcaea340d2c69"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2026_STROM S DUCHEM\\stromsduchem_INDEX\\opencall_vizualizace_den svetla - OREZ.jpg",
+    "outputs": [
+      "assets\\project-pages\\tree-with-the-spirit-of-christmas\\index-1100.webp",
+      "assets\\project-pages\\tree-with-the-spirit-of-christmas\\index-1800.webp"
+    ],
+    "sha256": "8977e44aa73b245456a5f9044e01f2b01aa712f5ecdee3e30c807e44510ffe99"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_SITUACE_01.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-situation-01-1100.webp",
+      "assets\\project-pages\\waterscape\\source-situation-01-1800.webp"
+    ],
+    "sha256": "14d567b795ceb70bfe2178017099588c8be83061c3d5aa68be438f00cf42c0a9"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_SITUACE_02.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-situation-02-1100.webp",
+      "assets\\project-pages\\waterscape\\source-situation-02-1800.webp"
+    ],
+    "sha256": "a2daf09aa373c6a162d9553b07f51504b758c0d3ff2a6721e92bb8de8ca14f36"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_SITUACE_03.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-situation-03-1100.webp",
+      "assets\\project-pages\\waterscape\\source-situation-03-1800.webp"
+    ],
+    "sha256": "498f99a0a4eef94deb890b25f4cd23bd61713e223d405a3c0d44cd9ad9ae956f"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_SITUACE_04.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-situation-04-1100.webp",
+      "assets\\project-pages\\waterscape\\source-situation-04-1800.webp"
+    ],
+    "sha256": "980cb389f55dc60aeed898fd8061784b8b447bf495e943092a9a7951a7c3fa53"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_REZ_01.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-section-01-1100.webp",
+      "assets\\project-pages\\waterscape\\source-section-01-1800.webp"
+    ],
+    "sha256": "b054a107537ae54ecc359297678da6d657905bcdcf5d2c78a2ec97f0feb8f144"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_REZ_02.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-section-02-1100.webp",
+      "assets\\project-pages\\waterscape\\source-section-02-1800.webp"
+    ],
+    "sha256": "e518a94ebb1a6ce75952478e6a9069a2f7e9ab995dd53c516e4592969b677e59"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_REZ_03.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-section-03-1100.webp",
+      "assets\\project-pages\\waterscape\\source-section-03-1800.webp"
+    ],
+    "sha256": "cee542d8059ec20d41c9a65bb9fabc58dc90ebd709bc3e1eeecf3b15c259799f"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_REZ_04.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-section-04-1100.webp",
+      "assets\\project-pages\\waterscape\\source-section-04-1800.webp"
+    ],
+    "sha256": "32d7ba3df722da034888f71a1ebcf92e05fbd695dc7756e87326502514c8e49f"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_REZ_05.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-section-05-1100.webp",
+      "assets\\project-pages\\waterscape\\source-section-05-1800.webp"
+    ],
+    "sha256": "595c2de22990d9dac00eeada2d2368d43288a5d7f763b860375b03a6f886e401"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_REZ_06.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-section-06-1100.webp",
+      "assets\\project-pages\\waterscape\\source-section-06-1800.webp"
+    ],
+    "sha256": "d7509c2d096dc076de29176a1914a40dcb6c5bad5c1752be3aec150b38402ea2"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_MODEL_01.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-model-01-1100.webp",
+      "assets\\project-pages\\waterscape\\source-model-01-1800.webp"
+    ],
+    "sha256": "ffe870bf0a0e6d613f19fcf5517824fdc9123b522701e33ecdecb897f220ecec"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_MODEL_02.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-model-02-1100.webp",
+      "assets\\project-pages\\waterscape\\source-model-02-1800.webp"
+    ],
+    "sha256": "ef46871a8fa998470adca1a119e2f21ac121092852e9fc2508a482df33754061"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_MODEL_03.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-model-03-1100.webp",
+      "assets\\project-pages\\waterscape\\source-model-03-1800.webp"
+    ],
+    "sha256": "1fa9a78d676d0df589f229af2b9b27ef3c490eca012a1bd935fd1c82ef563924"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_grafika\\waterscape_MODEL_04.jpg",
+    "outputs": [
+      "assets\\project-pages\\waterscape\\source-model-04-1100.webp",
+      "assets\\project-pages\\waterscape\\source-model-04-1800.webp"
+    ],
+    "sha256": "49937b0825e8f04e3acfbcb2f76352af92a5100f559c4961277a824d18dfd921"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_SITUACE.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-situation-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-situation-1800.webp"
+    ],
+    "sha256": "238cea796c5027447ddf03acbdc3d156d7ff1c6055359751b8fa47ca10188c5d"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_SIRSI VZTAHY.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-wider-relations-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-wider-relations-1800.webp"
+    ],
+    "sha256": "29d8329311cce19e03c1142fe49abd7e2422ffcdaa14acd8e5515e43a47c7ec7"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_REZ 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-section-01-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-section-01-1800.webp"
+    ],
+    "sha256": "bf3a367731b6297150cd7c7240fe3abc17b78b23e15d4649e03c28e20b9df3d6"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_REZ 02.jpg.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-section-02-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-section-02-1800.webp"
+    ],
+    "sha256": "cd3f40b09a0baf7753a8a6225ddc1ba6d246fcb5d38cb9a160d23b6136352861"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_REZ 03.jpg.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-section-03-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-section-03-1800.webp"
+    ],
+    "sha256": "a698d428b183b249f1080aba8655cd4508a90c6465bc92c18df2b963ddd78dce"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_MODEL 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-model-01-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-model-01-1800.webp"
+    ],
+    "sha256": "28fff62ae2a76b96124f894d69db7ef11da729139886058947dfbba0a95b70e8"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_MODEL 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-model-02-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-model-02-1800.webp"
+    ],
+    "sha256": "ca342e37b0499378a687016b5fd8d481d6859ff76a014df6358b60d2411aa43a"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_MODEL 03.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-model-03-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-model-03-1800.webp"
+    ],
+    "sha256": "e02bcdcb5212786ab5e958cb9f989c79d3c9d260d599273c75678949e928c13a"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_MODEL 04.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-model-04-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-model-04-1800.webp"
+    ],
+    "sha256": "c81776fd71462640d6c7939df5f702f1b626c9bb33587c5cd5377c3aed5545c1"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_MODEL 05.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-model-05-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-model-05-1800.webp"
+    ],
+    "sha256": "1c3b8fade6422d0d160733f83f3fe910881cc3b732a2abbcb2415ad45892db40"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_MODEL 06.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-model-06-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-model-06-1800.webp"
+    ],
+    "sha256": "1ade7698b0d8b59194b53ff88c84a09131ef3128abc9d1fb04b3bced228e44d7"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_DOKUMENTACE 00.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-documentation-00-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-documentation-00-1800.webp"
+    ],
+    "sha256": "a33eb6cbfabe0dda1c686314c8e3b558575a17fa80cd4fe38a68ffbb08334655"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_DOKUMENTACE 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-documentation-01-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-documentation-01-1800.webp"
+    ],
+    "sha256": "2a4664fc9cc9af6c52f3c37b6cde01950571dc3b95192a22318bf933bd59c80c"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_DOKUMENTACE 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-documentation-02-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-documentation-02-1800.webp"
+    ],
+    "sha256": "43519f3d9eda3f7bd7f86325cce22ae9837e0eb6de3561eaa333fb393ddb7249"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_DOKUMENTACE 03.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-documentation-03-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-documentation-03-1800.webp"
+    ],
+    "sha256": "5067bb5ca653bd4df410171985275752abc3d0f384e9382b90a274a34581afe5"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_grafika\\cyklus_DOKUMENTACE 04.jpg",
+    "outputs": [
+      "assets\\project-pages\\cycle-of-change\\source-documentation-04-1100.webp",
+      "assets\\project-pages\\cycle-of-change\\source-documentation-04-1800.webp"
+    ],
+    "sha256": "2607f0d494043bf03c876d01a7cabb28c065c82efb420349d514749b662128c8"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_KONCEPCE KRAJINY SEMNEVIC\\KONCEPCE_grafika\\koncepce_ISO.pdf",
+    "outputs": [
+      "assets\\project-pages\\semnevice\\iso-1100.webp",
+      "assets\\project-pages\\semnevice\\iso-1200.webp",
+      "assets\\project-pages\\semnevice\\iso-1800.webp"
+    ],
+    "sha256": "ae50d92d260c8593d7499576b9abe0bc6187dad77f9c37c036e915cd28b23ba1"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_KONCEPCE KRAJINY SEMNEVIC\\KONCEPCE_grafika\\koncepce_MASTERPLAN.pdf",
+    "outputs": [
+      "assets\\project-pages\\semnevice\\masterplan-1100.webp",
+      "assets\\project-pages\\semnevice\\masterplan-1200.webp",
+      "assets\\project-pages\\semnevice\\masterplan-1800.webp"
+    ],
+    "sha256": "dc8e1d854cafe4349435d0548f0b3690df583e0979d206d4467b38111b2564e0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_KONCEPCE KRAJINY SEMNEVIC\\KONCEPCE_grafika\\koncepce_UKAZKA ANALYZ.jpg",
+    "outputs": [
+      "assets\\project-pages\\semnevice\\analysis-1100.webp",
+      "assets\\project-pages\\semnevice\\analysis-1800.webp"
+    ],
+    "sha256": "301bdb3cd6b0f3f28459334744e166b7eab9906bf2ce6a41abc6054c21e240cd"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_AXO TEXTY.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-axonometry-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-axonometry-1800.webp"
+    ],
+    "sha256": "63eed81bde4cc32bead6bce0c4c48adca407d4f34bcd7d5e97b7602014c8dc65"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\PORTFOLIO Revodalizace2.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-introduction-01-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-introduction-01-1800.webp"
+    ],
+    "sha256": "cd754c437cb562689a6e7e8ebeb8307df90d94f30416a48d0b9683280927fc59"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\PORTFOLIO Revodalizace13.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-introduction-02-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-introduction-02-1800.webp"
+    ],
+    "sha256": "0cd6a8cc62936857e7fa5057326f08e36f71ed751ecdae0002d7158e1cbd3c6b"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_REV.TOKU_vyrez plachta.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-stream-revitalization-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-stream-revitalization-1800.webp"
+    ],
+    "sha256": "0b2f5352a7b9c97753c9d0d62bb4ad387a1532dd0a13581c1d76c00b14a9fce2"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_MODEL 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-model-01-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-model-01-1800.webp"
+    ],
+    "sha256": "f7e76fcf98a78a28c63ea636c3e43d3c9c7df02c435c9e903c02a7f4bb794e58"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_MODEL 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-model-02-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-model-02-1800.webp"
+    ],
+    "sha256": "a81379c39b729ac409b46512dbea6cf2a908f2b91632a46f7ae875dc667fc123"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_MODEL 03.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-model-03-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-model-03-1800.webp"
+    ],
+    "sha256": "7dc56cd72f5a930c23445db22608fcfc72686fa164db51a93ee4d5b88a5387eb"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_MODEL 04.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-model-04-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-model-04-1800.webp"
+    ],
+    "sha256": "b865a2220d6d63edb047b51b2e32788e6e63880420e57d29dbdb403dc3fe93de"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_MODEL 05.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-model-05-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-model-05-1800.webp"
+    ],
+    "sha256": "a463772790f9efac631bd390a365f353068fc8286ac0dfd129508da5095f296f"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_grafika\\revodalizace_MODEL 06.jpg",
+    "outputs": [
+      "assets\\project-pages\\rewaterization\\source-model-06-1100.webp",
+      "assets\\project-pages\\rewaterization\\source-model-06-1800.webp"
+    ],
+    "sha256": "82123cf2a96535dc68cd72b7e605d8801b0eafa4ec54849a2b9e445b6ce5f114"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_JEDNAZVARIANT.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-design-variant-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-design-variant-1800.webp"
+    ],
+    "sha256": "fb93206d5e29ce630f15b89a49b4555753915c9389248fac95a43b5959455540"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_AXONAVRH.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-axonometry-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-axonometry-1800.webp"
+    ],
+    "sha256": "fe7802b4dbf1fb9d01abf0ce7daea11ea317b1a70fac1b515918c4a1b0126342"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_ARCHISITUACE.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-architectural-situation-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-architectural-situation-1800.webp"
+    ],
+    "sha256": "870f7d61ddaed7ac16885943d8f84f7675b1eabf51517efca630edd9a087dca4"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_UKAZKADOKU 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-documentation-01-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-documentation-01-1800.webp"
+    ],
+    "sha256": "d63926de50cd25dc38f4f9d808f5c5af556e559c5d0fc7acf57d477ba0de24d8"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_UKAZKADOKU 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-documentation-02-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-documentation-02-1800.webp"
+    ],
+    "sha256": "16702595bff91b600b234ec2b08e7f4e2a7a9e74f298bd13a4dc241808c159c1"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_UKAZKADOKU 03.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-documentation-03-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-documentation-03-1800.webp"
+    ],
+    "sha256": "32bf38b5537ddab19ebcc190cc9928fe52d669670f848d6c361c7d2516dfc2ab"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_UKAZKADOKU 04.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-documentation-04-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-documentation-04-1800.webp"
+    ],
+    "sha256": "5372376f13c2ecbfab4e023f151cac0acfe4639f47e0d913cc14681ae1a98f55"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_OSAZOVACI 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-planting-plan-01-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-planting-plan-01-1800.webp"
+    ],
+    "sha256": "7b12d7900d2026c7cdb308bea182171386e779ae9e28384d6a15aa5267484b9e"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_grafika\\vesvahu_OSAZOVACI 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\steep-garden\\source-planting-plan-02-1100.webp",
+      "assets\\project-pages\\steep-garden\\source-planting-plan-02-1800.webp"
+    ],
+    "sha256": "e4949e902dede96bf1279fd7f9890da0f6577acc82d0a164b96b41099fb2d4c7"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_GROWING-TROUGH\\GROWING-TROUHG_grafika\\growing-through_VIZUALIZACE.jpg",
+    "outputs": [
+      "assets\\project-pages\\growing-through\\source-visualization-1100.webp",
+      "assets\\project-pages\\growing-through\\source-visualization-1800.webp"
+    ],
+    "sha256": "727d8d4f307e25869e389802daaaad4cad0a67b02749ee1358446b6a62f950b4"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_GROWING-TROUGH\\GROWING-TROUHG_grafika\\growing-through_IDEOVYKONCEPT.jpg",
+    "outputs": [
+      "assets\\project-pages\\growing-through\\source-idea-concept-1100.webp",
+      "assets\\project-pages\\growing-through\\source-idea-concept-1800.webp"
+    ],
+    "sha256": "6bc4931485bde74b0d87c865c47b38cceacdcd756ca463e61984c66f4d64056c"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_GROWING-TROUGH\\GROWING-TROUHG_grafika\\growing-through_SITUACE.jpg",
+    "outputs": [
+      "assets\\project-pages\\growing-through\\source-situation-1100.webp",
+      "assets\\project-pages\\growing-through\\source-situation-1800.webp"
+    ],
+    "sha256": "0c4e571f9fad3095a7e6e1da39503c9735d87d0dc2c3d27c24b57d82787d0513"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_GROWING-TROUGH\\GROWING-TROUHG_grafika\\growing-through_REZ.jpg",
+    "outputs": [
+      "assets\\project-pages\\growing-through\\source-section-1100.webp",
+      "assets\\project-pages\\growing-through\\source-section-1800.webp"
+    ],
+    "sha256": "949f2febdcce9a09e699ee8945797253045b5f057d82afd661d4684b207f0d25"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_MASTERPLAN.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-masterplan-1100.webp",
+      "assets\\project-pages\\abstract\\source-masterplan-1800.webp"
+    ],
+    "sha256": "bdc27c1587f981d09de82d175bbb7b51402fa57ce53c8928629d8427060f62bf"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_DETAILPLAN.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-detail-plan-1100.webp",
+      "assets\\project-pages\\abstract\\source-detail-plan-1800.webp"
+    ],
+    "sha256": "a9e8f69dfa0d4b352da94a020b5d73a90e79db4bba3696d7ab4b21c76a3028b7"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_AXONOMETRY.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-axonometry-1100.webp",
+      "assets\\project-pages\\abstract\\source-axonometry-1800.webp"
+    ],
+    "sha256": "2c43e90ec36881e2836e51f09fd1c86fd0d0135ae2da0c7e13a9204d72002290"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_PERSPECTIVE 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-perspective-01-1100.webp",
+      "assets\\project-pages\\abstract\\source-perspective-01-1800.webp"
+    ],
+    "sha256": "82a8cd5360511290d08795cb416c26b6b8caa8d55af07cadd74c5934761e7c74"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_PERSPECTIVE 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-perspective-02-1100.webp",
+      "assets\\project-pages\\abstract\\source-perspective-02-1800.webp"
+    ],
+    "sha256": "0ec312e0dcc4b9c7dee225f9cd34828551956cc2262b9dd365abb98be3b9df5f"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_PERSPECTIVE 03.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-perspective-03-1100.webp",
+      "assets\\project-pages\\abstract\\source-perspective-03-1800.webp"
+    ],
+    "sha256": "2a0cc410222bdf3877240c319b7acf7455b070efaf5fbf9dbc173d91d2483dcf"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_PERSPECTIVE 04.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-perspective-04-1100.webp",
+      "assets\\project-pages\\abstract\\source-perspective-04-1800.webp"
+    ],
+    "sha256": "59be68235978f695a13f1732a1544a3a512c2019b806663256666e19d4f5dc4d"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._grafika\\abstract_PERSPECTIVE 05.jpg",
+    "outputs": [
+      "assets\\project-pages\\abstract\\source-perspective-05-1100.webp",
+      "assets\\project-pages\\abstract\\source-perspective-05-1800.webp"
+    ],
+    "sha256": "646e6fdf4baf3b6e8437c835e2fa810b946ef97e2e345d3a27c8b536da4c1ca4"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_NAVRH 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-design-01-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-design-01-1800.webp"
+    ],
+    "sha256": "680970852b03611650caaedc1e6dd9a02c29eb3b89209769af1be4a363330852"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_NAVRH 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-design-02-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-design-02-1800.webp"
+    ],
+    "sha256": "01310b954d8fd7892082a3799dcb4b037792eb7accaebe636cf5e1d2a36a4f29"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_REALIZACE 01.heif",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-realization-01-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-realization-01-1800.webp"
+    ],
+    "sha256": "af4e82bd4adbb5396efaccb038df1bda5afa2e7a646a88ab4f09ec569debf253"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_REALIZACE 02.heif",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-realization-02-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-realization-02-1800.webp"
+    ],
+    "sha256": "7caaba20e2cba1327395f1ad400d9c2428a5c86490a636ef7b26cdcd6288be50"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_REALIZACE 03.heif",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-realization-03-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-realization-03-1800.webp"
+    ],
+    "sha256": "98e6fbaa4f95393863de368d8665610cf680d999677732b402aedd3d5cbee9df"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_VYSTAVA 01.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-01-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-01-1800.webp"
+    ],
+    "sha256": "6eff122a7968e70ed8a49b383a50fc8396226527c3f11394a5c6eadfe8088b40"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_VYSTAVA 02.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-02-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-02-1800.webp"
+    ],
+    "sha256": "769031af612d66e0ef803b8f31a895d9d8c00f2e1c1f2f5a0af86350a2dbbfa1"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_VYSTAVA 03.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-03-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-03-1800.webp"
+    ],
+    "sha256": "fb73dc73a30b3e64b09ba25f8a362f313e02d1950572027cda1f660ece3dfd79"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_VYSTAVA 04.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-04-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-04-1800.webp"
+    ],
+    "sha256": "348af917ce567f9b3b2a23284a4ff952923a3a56874f5665b131f46a0a2b9da0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_VYSTAVA 05.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-05-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-05-1800.webp"
+    ],
+    "sha256": "b5f63ebc363d881d3e88b30a8fcd8a58dee46f1061c1c38b5d5f351845db2c6d"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_VYSTAVA 06.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-06-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-06-1800.webp"
+    ],
+    "sha256": "9b142fe33ea944af3f3fdccd0c2b5886c412828868f77f19ae10bfd81c6f2cbb"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_grafika\\mezivsim_VYSTAVA 07.jpg",
+    "outputs": [
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-07-1100.webp",
+      "assets\\project-pages\\mezi-vsim\\source-exhibition-07-1800.webp"
+    ],
+    "sha256": "0455f03abc1eb25015e29fd4fa1960eaa282895e11458efa3b78ade8172e52db"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2026_STROM S DUCHEM\\stromsduchem_GRAFIKA\\stromsduchem_VIZUALIZACE DEN.jpg",
+    "outputs": [
+      "assets\\project-pages\\tree-with-the-spirit-of-christmas\\day-1100.webp",
+      "assets\\project-pages\\tree-with-the-spirit-of-christmas\\day-1800.webp"
+    ],
+    "sha256": "b8ad87cdbd55a2f395db5375aa77090e59e909d224a8dcdd4ed72c9d7737b191"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2026_STROM S DUCHEM\\stromsduchem_GRAFIKA\\stromsduchem_VIZUALIZACE NOC.jpg",
+    "outputs": [
+      "assets\\project-pages\\tree-with-the-spirit-of-christmas\\night-1100.webp",
+      "assets\\project-pages\\tree-with-the-spirit-of-christmas\\night-1800.webp"
+    ],
+    "sha256": "46523b651613e3087a6d5252bb7bcb2e03e873ae3d4bc6a148eacf87e6a01ddc"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_KONCEPT.jpg",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\design-01-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\design-01-1800.webp"
+    ],
+    "sha256": "1640985b897a3faec02e4f3687497e133b51e25dad79482c2e807ad5c95ca2e0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_KUKATKO.jpg",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\design-02-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\design-02-1800.webp"
+    ],
+    "sha256": "3a365bcfd35021a3473f4a2a6076f87cbe5ce872ef702603491bdf4753080514"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STOJAN.jpg",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\design-03-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\design-03-1800.webp"
+    ],
+    "sha256": "138c87728a2528d9f654146658e73047304305d84f6e268cb7b0884a2b811336"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_REALIZACE_01.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\realization-01-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\realization-01-1800.webp"
+    ],
+    "sha256": "02fbb531c747ceb78688f9403c46bfa6fa60ac91debd05023ad91f7ed6efc707"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_REALIZACE_02.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\realization-02-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\realization-02-1800.webp"
+    ],
+    "sha256": "f6edea974ffb7988c0734b3624c131ff6897948dd686d55e39e5dc7577ce8f71"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_REALIZACE_03.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\realization-03-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\realization-03-1800.webp"
+    ],
+    "sha256": "684be9b468c0deb6596420f6a2990f157caf39f0a8b67f065aaa94b989904e24"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_REALIZACE_04.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\realization-04-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\realization-04-1800.webp"
+    ],
+    "sha256": "e035a31aca74ffd350b7d8dbf9c81129fdb05f4c7e3c0927a8216ead791660a6"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_08.JPG",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-1800.webp"
+    ],
+    "sha256": "cbcd49fc42b4d3b8e49d1601f6ee83e1e0f0d5477e68ac7e3d6dab343f781fdd"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_zaverteoretickecasti.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\theory-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\theory-1800.webp"
+    ],
+    "sha256": "b5774772ad7b8fc791999400e3f41ccc8c517aace0a8e438e538bc4ae819d0c0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_konceptprojektu.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\concept-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\concept-1800.webp"
+    ],
+    "sha256": "cf0719794b14bb4aaf9df74d2870c7c85ccfe4d442c00669b7fd97eac5b4d156"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_ukazkaanalyz_01.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-01-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-01-1800.webp"
+    ],
+    "sha256": "815fc0215cd0ec68c40eda3dfddcc1aa96a0838c4b93eb8b4d5ad02516a43abd"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_ukazkaanalyz_02.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-02-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-02-1800.webp"
+    ],
+    "sha256": "6c9a2ebafa723e529ec1361614f009dff3ca3688b002f11a0c3b552cdb3c8601"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_ukazkaanalyz_03.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-03-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-03-1800.webp"
+    ],
+    "sha256": "b1d961e489fa568695c5d1341f997dcdb4d969d784e19dd759bd4d9ff72587c3"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_ukazkaanalyz_04.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-04-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\analysis-04-1800.webp"
+    ],
+    "sha256": "1f4ee7000d49b9f7e30aed983255b3446d401f9c8acb17365f21cf0e71a3784e"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_masterplan_01.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-01-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-01-1800.webp"
+    ],
+    "sha256": "900a4ed725cdc100aca7b4b31c4ee28080baa1e62178cc560a236e32fdd14cb2"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_masterplan_02.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-02-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-02-1800.webp"
+    ],
+    "sha256": "66bebea432e12b1ded85c9a0abb9dbba8253fb4d3ef7ed77f6d818d0720af8c5"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_masterplan_03.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-03-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-03-1800.webp"
+    ],
+    "sha256": "96ec71bafb494e92da0e288f87b0d9c9bca37576234be3dc26c15586bbd5f4f4"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_masterplan_04.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-04-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\masterplan-04-1800.webp"
+    ],
+    "sha256": "40518f68ec970327ba627e52dfabe8c33e62575f24d2c5ebdc2b88a71cd37fa2"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_kolaz_01.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-01-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-01-1800.webp"
+    ],
+    "sha256": "fb98191f1859a35138ee7b91e6de546c8fc35ebdd8181f82f2d0dd9de4498346"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_kolaz_02.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-02-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-02-1800.webp"
+    ],
+    "sha256": "a8ef8a9c55bee4231f6998290ab4c6850f3494770f89212db107d44f3bdfbbd0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_kolaz_03.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-03-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-03-1800.webp"
+    ],
+    "sha256": "7b27deb4fe281d8ddee0310ddaadcfb6342bbd0448c13f2fbb3426eb2da7b380"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_kolaz_04.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-04-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-04-1800.webp"
+    ],
+    "sha256": "c1bd301558ee6e92076314f2bb6362286205024f6ea83a2bb86b64fc12098b59"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_kolaz_05.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-05-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-05-1800.webp"
+    ],
+    "sha256": "1e9685ba9d7a53bb266dec863d80281438adea511fc284b5aaa785d1ead35053"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_grafika\\DP_kolaz_06.jpg",
+    "outputs": [
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-06-1100.webp",
+      "assets\\project-pages\\new-landscape-of-high-speed-railways\\collage-06-1800.webp"
+    ],
+    "sha256": "db25f19051c092af637aeba8a7ec338e01bef44b80a5a716a31af0ba1fb3fe2b"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\SOUBORY dodatecne\\moje-foto-Gothenburg-BaW.heif",
+    "outputs": [
+      "assets\\Other photos\\portrait-gothenburg-baw.webp"
+    ],
+    "sha256": "f5464a890500629aa8b0567e2c9416ac3466d8057d73d1f4afd24b67944407a3"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.LS_WATERSCAPE\\WATERSCAPE_prezentace\\portfolio WATERSCAPE 144dpi.pdf",
+    "outputs": [
+      "assets\\presentations\\waterscape.pdf"
+    ],
+    "sha256": "323e035bcec8364589a54d4057b7feece28798b759b6a3f203ed2199cd0d61de"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2026_STROM S DUCHEM\\stromsduchem_PREZENTACE\\SMID.PURMOVA_booklet navrh NAWEB 150ppi.pdf",
+    "outputs": [
+      "assets\\presentations\\tree-with-the-spirit-of-christmas.pdf",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-01-1000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-01-1600.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-01-3000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-02-1000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-02-1600.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-02-3000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-03-1000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-03-1600.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-03-3000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-04-1000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-04-1600.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-04-3000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-05-1000.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-05-1600.webp",
+      "assets\\presentation-pages\\tree-with-the-spirit-of-christmas\\page-05-3000.webp"
+    ],
+    "sha256": "11e95112e0ba259b01976e0a55750b209aa4ec985a4e55a31d747946f00bda5f"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.26_NOVA KRAJINA VRT\\NOVA.KRAJINA.VRT_prezentace\\DP_Purmova_Zuzana_portfolio 150ppi.pdf",
+    "outputs": [
+      "assets\\presentations\\new-landscape-of-high-speed-railways.pdf",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-01-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-01-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-01-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-02-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-02-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-02-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-03-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-03-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-03-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-04-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-04-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-04-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-05-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-05-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-05-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-06-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-06-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-06-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-07-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-07-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-07-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-08-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-08-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-08-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-09-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-09-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-09-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-10-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-10-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-10-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-11-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-11-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-11-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-12-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-12-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-12-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-13-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-13-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-13-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-14-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-14-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-14-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-15-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-15-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-15-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-16-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-16-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-16-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-17-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-17-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-17-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-18-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-18-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-18-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-19-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-19-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-19-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-20-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-20-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-20-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-21-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-21-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-21-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-22-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-22-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-22-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-23-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-23-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-23-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-24-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-24-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-24-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-25-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-25-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-25-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-26-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-26-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-26-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-27-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-27-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-27-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-28-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-28-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-28-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-29-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-29-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-29-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-30-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-30-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-30-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-31-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-31-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-31-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-32-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-32-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-32-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-33-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-33-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-33-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-34-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-34-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-34-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-35-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-35-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-35-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-36-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-36-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-36-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-37-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-37-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-37-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-38-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-38-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-38-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-39-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-39-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-39-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-40-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-40-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-40-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-41-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-41-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-41-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-42-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-42-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-42-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-43-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-43-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-43-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-44-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-44-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-44-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-45-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-45-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-45-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-46-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-46-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-46-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-47-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-47-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-47-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-48-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-48-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-48-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-49-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-49-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-49-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-50-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-50-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-50-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-51-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-51-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-51-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-52-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-52-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-52-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-53-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-53-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-53-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-54-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-54-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-54-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-55-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-55-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-55-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-56-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-56-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-56-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-57-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-57-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-57-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-58-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-58-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-58-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-59-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-59-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-59-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-60-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-60-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-60-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-61-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-61-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-61-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-62-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-62-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-62-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-63-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-63-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-63-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-64-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-64-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-64-3000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-65-1000.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-65-1600.webp",
+      "assets\\presentation-pages\\new-landscape-of-high-speed-railways\\page-65-3000.webp"
+    ],
+    "sha256": "168605178e7177a5d0662626544914923e446f4b8dcc58dc7ac0fcf7a9a059ab"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.LS_ZAHRADA VE SVAHU\\ZAHRADA.V.S_prezentace\\PD-Zahrada ve svahu PORTFOLIO interactive 96.pdf",
+    "outputs": [
+      "assets\\presentations\\steep-garden.pdf"
+    ],
+    "sha256": "0863d667632cc31a5c98f222b4cc01efcbaf027a964c42b4104baf3ff6c202d0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_GROWING-TROUGH\\GROWING-TROUHG_prezentace\\METIS board A B print.pdf",
+    "outputs": [
+      "assets\\presentations\\growing-through.pdf"
+    ],
+    "sha256": "88d2d014de0b78fee3b59f2a6f2b83c1d1b6917213fb26462c3e4bede0c686e0"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_ABSTRACT\\ABSTRACT._prezentace\\Abstract portfolio design award 120.pdf",
+    "outputs": [
+      "assets\\presentations\\abstract.pdf"
+    ],
+    "sha256": "b9879f50ece8ab83381fa61c1c81a6f627e696d0ad1edc570b0fd16fbc8b98ed"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2022.23_KREMATORIUM KLADNO_ CYKLUS PROMĚNY\\KREMATORIUM_prezentace\\BP_LS2023_Krematorium Kladno_portfolio zaroven pare_Purmová Zuzana.pdf",
+    "outputs": [
+      "assets\\presentations\\cycle-of-change.pdf",
+      "assets\\presentation-pages\\cycle-of-change\\page-01-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-01-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-01-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-02-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-02-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-02-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-03-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-03-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-03-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-04-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-04-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-04-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-05-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-05-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-05-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-06-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-06-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-06-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-07-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-07-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-07-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-08-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-08-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-08-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-09-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-09-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-09-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-10-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-10-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-10-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-11-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-11-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-11-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-12-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-12-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-12-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-13-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-13-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-13-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-14-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-14-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-14-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-15-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-15-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-15-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-16-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-16-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-16-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-17-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-17-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-17-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-18-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-18-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-18-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-19-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-19-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-19-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-20-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-20-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-20-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-21-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-21-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-21-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-22-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-22-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-22-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-23-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-23-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-23-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-24-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-24-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-24-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-25-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-25-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-25-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-26-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-26-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-26-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-27-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-27-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-27-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-28-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-28-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-28-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-29-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-29-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-29-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-30-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-30-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-30-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-31-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-31-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-31-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-32-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-32-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-32-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-33-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-33-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-33-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-34-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-34-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-34-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-35-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-35-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-35-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-36-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-36-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-36-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-37-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-37-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-37-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-38-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-38-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-38-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-39-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-39-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-39-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-40-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-40-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-40-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-41-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-41-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-41-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-42-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-42-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-42-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-43-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-43-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-43-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-44-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-44-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-44-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-45-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-45-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-45-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-46-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-46-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-46-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-47-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-47-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-47-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-48-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-48-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-48-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-49-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-49-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-49-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-50-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-50-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-50-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-51-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-51-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-51-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-52-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-52-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-52-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-53-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-53-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-53-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-54-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-54-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-54-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-55-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-55-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-55-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-56-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-56-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-56-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-57-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-57-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-57-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-58-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-58-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-58-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-59-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-59-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-59-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-60-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-60-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-60-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-61-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-61-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-61-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-62-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-62-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-62-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-63-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-63-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-63-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-64-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-64-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-64-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-65-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-65-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-65-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-66-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-66-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-66-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-67-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-67-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-67-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-68-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-68-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-68-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-69-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-69-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-69-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-70-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-70-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-70-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-71-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-71-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-71-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-72-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-72-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-72-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-73-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-73-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-73-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-74-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-74-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-74-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-75-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-75-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-75-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-76-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-76-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-76-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-77-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-77-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-77-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-78-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-78-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-78-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-79-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-79-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-79-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-80-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-80-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-80-3000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-81-1000.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-81-1600.webp",
+      "assets\\presentation-pages\\cycle-of-change\\page-81-3000.webp"
+    ],
+    "sha256": "fbe9f93e0b39dca3f112da194485e889c800019be771f274464ffb28b69230a6"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2024.ZS_MEZI VSIM\\MEZI VSIM_prezentace\\mezi vsim_Pekova Purmova Smid_POKOJE 24.pdf",
+    "outputs": [
+      "assets\\presentations\\mezi-vsim.pdf"
+    ],
+    "sha256": "902be39647d9d7c16134727ccaaae85b7e28219551ff90e940bbfad503d5d35d"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_REVODALIZACE\\REVODALIZACE_prezentace\\PORTFOLIO Revodalizace INTERACTIVE 144.pdf",
+    "outputs": [
+      "assets\\presentations\\rewaterization.pdf"
+    ],
+    "sha256": "9827c5d581ba4502d17d618e9335a04fcaee87dcd4b2ab6bdfc936392e67ab59"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2023_KONCEPCE KRAJINY SEMNEVIC\\KONCEPCE_prezentace\\SEMNEVICE PLACHTA SPOLECNA interactive 144ppi.pdf",
+    "outputs": [
+      "assets\\presentations\\concept-of-semnevice-landscape.pdf"
+    ],
+    "sha256": "013be085b8b2adea6fcfc36ce5501d137bfed76d76a5e89dc28c42ab10dc48c0"
+  }
+]

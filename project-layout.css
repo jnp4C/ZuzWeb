@@ -384,6 +384,8 @@
 
 .concise-project-page .concise-project-day-night-slider-frame {
   position: relative;
+  transform: scale(1.5);
+  transform-origin: center;
   display: inline-flex;
   align-items: center;
   padding-inline: 4.85px;

@@ -367,7 +367,7 @@
   width: 0.55rem;
   height: 0.55rem;
   border: 1.5px solid var(--text);
-  margin-top: calc((1.5px - 0.55rem) / 2);
+  margin-top: calc((var(--project-line-width) / var(--slider-scale) - 0.55rem) / 2);
 }
 .concise-project-page .concise-project-day-night-slider::-moz-range-thumb {
   box-sizing: border-box;
@@ -384,12 +384,19 @@
 
 .concise-project-page .concise-project-day-night-slider-frame {
   position: relative;
-  transform: scale(1.5);
+  --slider-scale: 1.5;
+  transform: scale(var(--slider-scale));
   transform-origin: center;
   display: inline-flex;
   align-items: center;
   padding-inline: 4.85px;
   color: #000;
+}
+.concise-project-page .concise-project-day-night-slider::-webkit-slider-runnable-track {
+  height: calc(var(--project-line-width) / var(--slider-scale));
+}
+.concise-project-page .concise-project-day-night-slider::-moz-range-track {
+  height: calc(var(--project-line-width) / var(--slider-scale));
 }
 .concise-project-page .concise-project-day-night-slider-frame::before,
 .concise-project-page .concise-project-day-night-slider-frame::after {

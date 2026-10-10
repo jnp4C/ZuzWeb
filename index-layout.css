@@ -238,6 +238,13 @@
 .index-page .project-index .project-index-info-row { display: flex; flex-wrap: wrap; gap: 0 15px; margin: 0; animation: none !important; }
 .index-page .project-index-info-row dt { color: #000; }
 .index-page .project-index-info-row dd { font-weight: 700; overflow-wrap: anywhere; }
+.index-page .project-index .project-index-info-contact.is-stacked .project-index-info-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.index-page .project-index-info-contact.is-stacked dd { margin: 0; }
+
 .index-page .project-index .project-index-cv-content.is-open .project-index-cv-content-inner { padding-block: 30px 0; }
 .index-page .project-index .project-index-cv-content.is-open .project-index-cv-content-inner { overflow: visible; }
 .index-page .project-index-cv .cv-section { --cv-section-indent: var(--index-content-offset); display: grid; min-height: 0; padding: 0; }

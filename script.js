@@ -123,6 +123,40 @@ async function renderRandomIndexBackground() {
   }
 }
 
+let updateInfoRowsLayout = () => {};
+
+function initInfoRowsLayout() {
+  const contact = document.querySelector(".project-index-info-contact");
+  if (!contact) return;
+  const rows = [...contact.querySelectorAll(".project-index-info-row")];
+  const measure = (element) => {
+    const copy = element.cloneNode(true);
+    Object.assign(copy.style, {
+      position: "fixed", visibility: "hidden", width: "max-content",
+      maxWidth: "none", whiteSpace: "nowrap", margin: "0",
+    });
+    element.parentElement.append(copy);
+    const width = layoutRect(copy).width;
+    copy.remove();
+    return width;
+  };
+  updateInfoRowsLayout = () => {
+    const needsStacking = rows.some((row) => {
+      const available = layoutRect(row).width;
+      if (!available) return false;
+      const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+      const zoom = layoutRect(row).width / row.clientWidth;
+      return measure(row.querySelector("dt")) + measure(row.querySelector("dd"))
+        + gap * zoom > available + 1;
+    });
+    contact.classList.toggle("is-stacked", needsStacking);
+  };
+  new ResizeObserver(updateInfoRowsLayout).observe(contact);
+  window.addEventListener("resize", updateInfoRowsLayout);
+  document.fonts?.ready.then(updateInfoRowsLayout);
+  updateInfoRowsLayout();
+}
+
 function initInfoToggle() {
   const infoRows = Array.from(infoDetails?.querySelectorAll(".project-index-info-row") || []);
   let infoClosingTimer;
@@ -572,6 +606,7 @@ async function init() {
   initIndexScrollTop();
   initProjectsToggle();
   initInfoToggle();
+  initInfoRowsLayout();
   initCvToggle();
   window.addEventListener("resize", updateProjectPreviewPlacements);
   window.addEventListener("scroll", updateProjectPreviewPlacements, { passive: true });
@@ -591,6 +626,7 @@ async function init() {
 
 initLanguageSwitch((language) => {
   activeLanguage = language;
+  requestAnimationFrame(updateInfoRowsLayout);
   updateHeaderLanguageToggle(language);
   if (indexProjects.length > 0) {
     renderProjectIndex(indexProjects);

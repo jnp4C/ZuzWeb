@@ -6,7 +6,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-12-info-bio";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-12-info-alignment";
 
 const DATA_CACHE_VERSION = "2026-10-12-info-bio";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";

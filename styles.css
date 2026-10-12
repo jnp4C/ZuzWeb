@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
+  --annotation-max-width: 62ch;
   --bg: #fdfdfd;
   --surface: #ffffff;
   --text: #111111;
@@ -439,7 +440,7 @@ h3,
   display: grid;
   gap: clamp(0.55rem, 1.2vw, 0.9rem);
   width: 100%;
-  max-width: 62ch;
+  max-width: var(--annotation-max-width);
   margin: 0;
   font-family: var(--font-text);
   font-size: clamp(var(--type-small), 1.05vw, 0.98rem);
@@ -526,7 +527,7 @@ h3,
 
 .concise-project-highlight {
   width: 100%;
-  max-width: 62ch;
+  max-width: var(--annotation-max-width);
   padding: 0;
   background: transparent;
   color: var(--text);
@@ -623,7 +624,7 @@ h3,
 
 .concise-project-annotation p {
   width: 100%;
-  max-width: 62ch;
+  max-width: var(--annotation-max-width);
   margin: 0;
   border: 0;
   padding: 0;
@@ -3451,7 +3452,7 @@ main,
   margin: 0.18rem 0 0;
   color: var(--muted);
   line-height: 1.45;
-  max-width: 62ch;
+  max-width: var(--annotation-max-width);
 }
 
 .cv-copy a {

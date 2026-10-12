@@ -188,6 +188,7 @@
   transform: none;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
   width: fit-content;
@@ -234,6 +235,12 @@
 }
 .index-page .personal-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 .index-page .project-index-info .intro { grid-column: 2; grid-row: 1; margin: 0; padding: 0; border: 0; background: transparent; }
+.index-page .project-index-info .intro {
+  min-width: 0;
+  width: 100%;
+  max-width: var(--annotation-max-width);
+  font-size: var(--type-small);
+}
 /* The index content zoom makes these match project annotation typography. */
 .index-page .project-index-info-bio {
   display: grid;
@@ -255,15 +262,16 @@
   text-wrap: pretty;
 }
 .index-page .project-index-info-contact { margin: 0; display: grid; gap: 15px; font-size: var(--type-small); line-height: 15px; }
-.index-page .project-index .project-index-info-row { display: flex; flex-wrap: wrap; gap: 0 15px; margin: 0; animation: none !important; }
+.index-page .project-index .project-index-info-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 15px; margin: 0; animation: none !important; }
 .index-page .project-index-info-row dt { color: #000; }
-.index-page .project-index-info-row dd { font-weight: 700; overflow-wrap: anywhere; }
+.index-page .project-index-info-row dd { margin: 0; font-weight: 700; text-align: right; overflow-wrap: anywhere; }
 .index-page .project-index .project-index-info-contact.is-stacked .project-index-info-row {
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
 }
-.index-page .project-index-info-contact.is-stacked dd { margin: 0; }
+.index-page .project-index-info-contact.is-stacked dd { margin: 0; text-align: left; }
 
 .index-page .project-index .project-index-cv-content.is-open .project-index-cv-content-inner { padding-block: 30px 0; }
 .index-page .project-index .project-index-cv-content.is-open .project-index-cv-content-inner { overflow: visible; }
@@ -285,7 +293,7 @@
 @media (max-width: 780px) {
   .index-page { --index-page-gutter: 30px; }
   .index-page .project-index .project-index-info-content-inner { grid-template-columns: minmax(0, 1fr); gap: 30px; }
-  .index-page .project-index-info .intro { grid-column: 1; grid-row: 2; }
+  .index-page .project-index-info .intro { grid-column: 1; grid-row: 2; max-width: 100%; }
   .index-page .project-index-info-row { gap: 0 10px; }
 }
 @media (prefers-reduced-motion: reduce) {

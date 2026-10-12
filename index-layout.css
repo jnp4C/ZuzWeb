@@ -234,6 +234,26 @@
 }
 .index-page .personal-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 .index-page .project-index-info .intro { grid-column: 2; grid-row: 1; margin: 0; padding: 0; border: 0; background: transparent; }
+/* The index content zoom makes these match project annotation typography. */
+.index-page .project-index-info-bio {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.index-page .project-index-info-bio p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: var(--type-small);
+  font-weight: 400;
+  line-height: 15px;
+  text-align: justify;
+  text-wrap: pretty;
+}
 .index-page .project-index-info-contact { margin: 0; display: grid; gap: 15px; font-size: var(--type-small); line-height: 15px; }
 .index-page .project-index .project-index-info-row { display: flex; flex-wrap: wrap; gap: 0 15px; margin: 0; animation: none !important; }
 .index-page .project-index-info-row dt { color: #000; }

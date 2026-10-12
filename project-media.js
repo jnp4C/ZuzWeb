@@ -50,7 +50,7 @@ const CURATED_MEDIA = {
       section("situation", "masterplan", "Site plan", "Situace", [
         media("cycle-of-change", "source-situation", "Cycle of Change situation", "Situace projektu Cyklus proměny"),
       ]),
-      section("sections", "graphic", "Sections", "Řezy", [1, 2, 3].map((number) => media(
+      section("sections", "graphic", "Section", "Řezy", [1, 2, 3].map((number) => media(
         "cycle-of-change",
         `source-section-0${number}`,
         `Cycle of Change section ${number}`,

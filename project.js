@@ -6,9 +6,9 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-12-source-texts";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-12-info-bio";
 
-const DATA_CACHE_VERSION = "2026-10-12-source-texts";
+const DATA_CACHE_VERSION = "2026-10-12-info-bio";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";
@@ -77,7 +77,7 @@ const COPY = {
     scale: "Měřítko",
     processing: "Zpracování",
     type: "Typ",
-    collaborators: "Spoluautoři",
+    collaborators: "Spoluautorství",
     awards: "Ocenění",
     annotation: "Anotace",
     previousImage: "Předchozí obrázek",

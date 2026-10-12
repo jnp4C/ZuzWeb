@@ -8,7 +8,7 @@ import {
 } from "./language.js?v=2026-10-06-inherited-language";
 import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-12-info-alignment";
 
-const DATA_CACHE_VERSION = "2026-10-12-info-bio";
+const DATA_CACHE_VERSION = "2026-10-12-abstract-cs-refresh";
 const BACKGROUND_CACHE_VERSION = "2026-07-30-concise-project-transition";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";

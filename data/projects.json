@@ -683,7 +683,7 @@
         "year": 2026,
         "scale": {
           "en": "small scale",
-          "cs": "malé měřítko"
+          "cs": "malé"
         },
         "processing": {
           "en": "installation design",
@@ -2032,7 +2032,7 @@
       "cs": {
         "title": "ABSTRACT.",
         "description": null,
-        "annotation": "The aim of the design was to emerge from the landscape. This was accomplished through a process of abstraction—extracting the essential elements and using them as the foundation for the work, ensuring a relation to the place. The created urban tissue is shaped as an interpretation of the landscape, for it to make the place more readable for its visitors, fostering a deeper emotional connection. Centralized to the top of the hill with a community center, the two axes continue as pedestrian streets, referring to the main street in the old city center. Important was the usage of the partly opened block, with apartment buildings on the edges and row-houses in the middle. Therefore, the sun exposure and sheltering from the wind is achieved, as well as the cosy courtyards creating communities."
+        "annotation": "Koncept spočívá ve vzejití návrhu nové urbánní čtvrti z krajiny, která místo tvoří. Byl k tomu použit proces abstrakce, kdy dochází k extrahování základních prvků a principů a jejich využitím jako východiska pro návrh. Tím dochází k zachování vazby na místo, přestože jde o vytváření nové formy. Vytvořená městská struktura je tedy interpretací krajiny, která pomáhá místo lépe číst a tím podporuje vytvoření emocionálního vztahu k lokalitě.\n\nNavržená čtvrť je centralizovaná vrcholem kopce, se skulpturální budovou komunitního centra. Odtud pokračují dvě hlavní kompoziční osy, tvořené pěšími ulicemi s aktivním parterem. Jde o odkaz na populární hlavní ulici, v historickém centru města.\n\nZákladním prvkem struktury nové zástavby je polootevřený blok. Kombinuje vyšší bytové domy umístěné po jeho obvodu, které vymezují rušnější ulice, s řadovými domky uvnitř bloku. Výsledkem je dobré oslunění zástavby a ochrana venkovních prostor před větrem.\n\nZároveň díky tomu vznikají útulné vnitrobloky podporující komunitní život."
       }
     },
     "projectPage": {
@@ -2272,7 +2272,7 @@
         "year": 2025,
         "scale": {
           "en": "large scale",
-          "cs": "velké měřítko"
+          "cs": "velké"
         },
         "processing": {
           "en": "design study",
@@ -8285,7 +8285,7 @@
         "year": 2024,
         "scale": {
           "en": "small scale",
-          "cs": "malé měřítko"
+          "cs": "malé"
         },
         "processing": {
           "en": "installation design",
@@ -10917,7 +10917,7 @@
       "cs": {
         "title": "KONCEPCE KRAJINY SEMNĚVIC",
         "description": "Koncepce krajiny Semněvic založená na vícevrstvé analýze území.",
-        "annotation": "Na základě podrobné analýzy krajiny Semněvic byla pro území navržena vize – SemněVIZE a zhotovena Krajinná Koncepce Semněvic. Jejím cílem bylo krajinu uchopit komplexně jako jeden celek, stanovit principy a způsoby racionálního a udržitelného využití a zásahů, tak aby prosperovala a dobře se v ní lidem žilo. Koncepce krajiny byla podrobněji zpracována ve čtyřech vrstvách vycházejících z potřeb a problému krajiny Semněvic: cestní síť, intravilán, zemědělství a vodní režim. Na tento týmový projekt navazují individuální projekty rozvíjející tyto vrstvy: KRAJINOU KOL SEMNĚVIC, Skrz Obci Pod Kopci, VODO TEČ, Srdce Semněvic, SEMNĚ-DĚLSTVÍ, REVODALIZACE, VYVODNĚNÍ."
+        "annotation": "Na základě podrobné analýzy krajiny Semněvic byla pro území navržena vize - SemněVIZE a zhotovena Krajinná Koncepce Semněvic. Jejím cílem bylo krajinu uchopit komplexně jako jeden celek, stanovit principy a způsoby racionálního a udržitelného využití a zásahů, tak aby prosperovala a dobře se v ní lidem žilo. Koncepce krajiny byla podrobněji zpracována ve čtyřech vrstvách vycházejících z potřeb a problému krajiny Semněvic: cestní síť, intravilán, zemědělství a vodní režim.\n\nNa tento týmový projekt navazují individuální projekty rozvíjející tyto vrstvy, včetně projektu REVODALIZACE (v portfoliu navazující)."
       }
     },
     "projectPage": {
@@ -11073,12 +11073,12 @@
           "cs": "školní práce"
         },
         "collaborators": [
-          "Denisa Moravcová",
-          "Anna Koupalová",
-          "Daniela Kvapilová",
-          "Eliška Kuncířová",
-          "Josefína Jírovcová",
-          "Martina Gruntová"
+          "D. Moravcová",
+          "A. Koupalová",
+          "D. Kvapilová",
+          "E. Kuncířová",
+          "J. Jírovcová",
+          "M. Gruntová"
         ],
         "collaboratorsEn": [
           "D. Moravcová",
@@ -18555,7 +18555,7 @@
           },
           "detail": {
             "en": "Pokoje 2024\nThe exhibition presents work by students from art universities across the Czech Republic, as well as from Poland, Slovakia, and Hungary. Each year, it brings new life to buildings in central Prague, with participants creating site-specific art projects for their individual spaces.",
-            "cs": "PŘEHLÍDKA Pokoje 2024\nVýstava prezentuje tvorbu studentů vysokých uměleckých škol z celé České republiky a také z Polska, Slovenska a Maďarska, která každoročně oživuje domy v centru Prahy, pro jejichž prostory vytvářejí účastníci vždy vlastní specifické umělecké projekty."
+            "cs": "Přehlídka Pokoje 2024\nVýstava prezentuje tvorbu studentů vysokých uměleckých škol z celé České republiky a také z Polska, Slovenska a Maďarska, která každoročně oživuje domy v centru Prahy, pro jejichž prostory vytvářejí účastníci vždy vlastní specifické umělecké projekty."
           }
         }
       ],
@@ -18605,7 +18605,7 @@
         "year": 2024,
         "scale": {
           "en": "small scale",
-          "cs": "malé měřítko"
+          "cs": "malé"
         },
         "processing": {
           "en": "installation design",
@@ -18668,7 +18668,7 @@
       },
       "title": {
         "en": "NEW LANDSCAPES OF HIGH-SPEED RAIL",
-        "cs": "NOVÁ KRAJINA VRT"
+        "cs": "NOVÉ KRAJINY VYSOKORYCHLOSTNÍCH TRATÍ"
       },
       "context": {
         "en": "Master’s thesis",
@@ -19434,11 +19434,11 @@
         },
         "processing": {
           "en": "theoretical part + design study",
-          "cs": "diplomová práce"
+          "cs": "teoretická část + studie"
         },
         "type": {
           "en": "Master’s thesis",
-          "cs": "krajinné plánování"
+          "cs": "diplomová práce"
         },
         "collaborators": []
       },
@@ -19547,7 +19547,7 @@
         "year": 2025,
         "scale": {
           "en": "small scale",
-          "cs": "malé měřítko"
+          "cs": "malé"
         },
         "processing": {
           "en": "design study",

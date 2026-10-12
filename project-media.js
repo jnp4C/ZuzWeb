@@ -121,10 +121,10 @@ const CURATED_MEDIA = {
   "steep-garden": {
     hero: media("steep-garden", "index", "Steep Garden visualization", "Vizualizace Zahrady ve svahu"),
     sections: [
-      section("design-variant", "graphic", "Previous design variant", "Jedna z variant při navrhování", [
+      section("design-variant", "graphic", "Previous design variant", "Předešlá varianta návrhu", [
         media("steep-garden", "source-design-variant", "One Steep Garden design variant", "Jedna z variant Zahrady ve svahu"),
       ]),
-      section("axonometry", "graphic", "Design axonometric view", "Axonometrie", [
+      section("axonometry", "graphic", "Design axonometric view", "Axonometrie návrhu", [
         media("steep-garden", "source-axonometry", "Steep Garden axonometry", "Axonometrie Zahrady ve svahu"),
       ]),
       section("architectural-situation", "masterplan", "Architectural site plan", "Architektonická situace", [
@@ -167,10 +167,10 @@ const CURATED_MEDIA = {
       section("masterplan", "masterplan", "Masterplan", "Masterplan", [
         media("abstract", "source-masterplan", "Abstract project masterplan", "Masterplan projektu Abstract"),
       ]),
-      section("detail-plan", "masterplan", "Detail plan cutout", "Výřez detailního plánu", [
+      section("detail-plan", "masterplan", "Detail plan cutout", "Výřez situace", [
         media("abstract", "source-detail-plan", "Abstract project detail plan cutout", "Výřez detailního plánu projektu Abstract"),
       ]),
-      section("block-axonometry", "graphic", "Axonometry of a block", "Axonometrie bloku", [
+      section("block-axonometry", "graphic", "Axonometry of a block", "Axonometrie polootevřeného bloku", [
         media("abstract", "source-axonometry", "Abstract project block axonometry", "Axonometrie bloku projektu Abstract"),
       ]),
       section("perspectives", "graphic", "Perspectives", "Perspektivy", [1, 2, 3, 4, 5].map((number) => media(

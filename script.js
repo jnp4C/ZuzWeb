@@ -5,7 +5,7 @@ import {
   getLocalizedText,
   initLanguageSwitch,
 } from "./language.js?v=2026-10-06-inherited-language";
-import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-10-merged";
+import { applyCuratedProjectMedia } from "./project-media.js?v=2026-10-12-source-texts";
 
 const projectGroups = {
   study: document.getElementById("studyProjects"),
@@ -24,7 +24,7 @@ const backgroundAnimation = document.querySelector(".background-animation");
 const INDEX_OPENING_SPEED = 0.6;
 const PROJECTS_CLOSING_DURATION = 900;
 const NESTED_DRAWER_CLOSING_DURATION = 700;
-const DATA_CACHE_VERSION = "2026-10-10-merged";
+const DATA_CACHE_VERSION = "2026-10-12-source-texts";
 const BACKGROUND_CACHE_VERSION = "2026-05-31-project-backgrounds";
 const BACKGROUND_STORAGE_KEY = "zuz-active-background-src";
 const DEFAULT_BACKGROUND_SRC = "./assets/Background/smoothed/contours.svg";

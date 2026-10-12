@@ -1670,5 +1670,77 @@
       "assets/project-pages/new-landscape-of-high-speed-railways/aerial-sketch-1800.webp"
     ],
     "sha256": "06e7291b4c3412e2bb76fe08c64b0bd6fac4eaaa1d8607286552090999e5e388"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_00.JPG",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-00-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-00-1800.webp"
+    ],
+    "sha256": "849f7cd18a18208eb4d9302152be5851cb3064fc066027b4c55971553669ff7e"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_01.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-01-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-01-1800.webp"
+    ],
+    "sha256": "2f634e3aed050a1228e2b2e9f7c0b7a7d1085adac170634456d62feceee14087"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_02.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-02-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-02-1800.webp"
+    ],
+    "sha256": "e7fdb6d540020af9d4149f6632f342008ab29f4dfbf8ea301f3e58ddb409d14d"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_03.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-03-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-03-1800.webp"
+    ],
+    "sha256": "a10ac8765106503248c1fe0311717c4171e2ee2cefeb710c5d92fc226447e51d"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_04.HEIC",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-04-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-04-1800.webp"
+    ],
+    "sha256": "c4f9379aabf4f98882ad35afcfbd695d16ebac00edf019ecaa598a3bf68bbaec"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_05.JPG",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-05-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-05-1800.webp"
+    ],
+    "sha256": "d6293b8ce1671acc599c080c708fd7eda4682be4d317bdc2b2730b04dd81c667"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_06.JPG",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-06-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-06-1800.webp"
+    ],
+    "sha256": "d37b7add16154797e2893f0d1a22cd822223e5d6ae01aef9709b14aef838f03f"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_08(1).JPG",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-07-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-07-1800.webp"
+    ],
+    "sha256": "a6de22861ded265b0ee104ee75191e1a23f07d26628391606be9ee87343ae9aa"
+  },
+  {
+    "source": "REGESIGN INSTRUCTIONS\\PROJEKTY na web\\2025.LS_POLYPORUS LARIXIS\\POLYPORUS LARIXIS_grafika\\polyporus_STAVBA_08.JPG",
+    "outputs": [
+      "assets\\project-pages\\polyporus-larixis\\completed-08-1100.webp",
+      "assets\\project-pages\\polyporus-larixis\\completed-08-1800.webp"
+    ],
+    "sha256": "cbcd49fc42b4d3b8e49d1601f6ee83e1e0f0d5477e68ac7e3d6dab343f781fdd"
   }
 ]

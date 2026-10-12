@@ -231,9 +231,11 @@ const CURATED_MEDIA = {
       section("roda-traden-realization", "realization", "Construction of “Röda Tråden”", "Realizace „Röda Tråden“", [1, 2, 3, 4].map((number) => media(
         "polyporus-larixis", `realization-0${number}`, `Röda Tråden construction process ${number}`, `Průběh realizace Röda Tråden ${number}`,
       ))),
-      section("completed-structure", "realization", "Completed structure", "Dokončená stavba", [
-        media("polyporus-larixis", "completed", "Completed Röda Tråden lakeside shelter", "Dokončený přístřešek Röda Tråden u jezera"),
-      ]),
+      section("completed-structure", "realization", "Completed structure", "Dokončená stavba", [0, 1, 2, 3, 4, 5, 6, 7, 8].map((number) => media(
+        "polyporus-larixis", `completed-${String(number).padStart(2, "0")}`,
+        `Completed Röda Tråden structure and detail ${number + 1}`,
+        `Dokončená stavba Röda Tråden a detail ${number + 1}`,
+      ))),
     ],
   },
   "new-landscape-of-high-speed-railways": {

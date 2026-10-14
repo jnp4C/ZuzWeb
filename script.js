@@ -144,7 +144,8 @@ function initInfoRowsLayout() {
     const needsStacking = rows.some((row) => {
       const available = layoutRect(row).width;
       if (!available) return false;
-      const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+      // Measure the horizontal gap even while the rows are stacked.
+      const gap = parseFloat(getComputedStyle(contact).getPropertyValue("--info-row-gap")) || 0;
       const zoom = layoutRect(row).width / row.clientWidth;
       return measure(row.querySelector("dt")) + measure(row.querySelector("dd"))
         + gap * zoom > available + 1;

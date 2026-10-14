@@ -510,3 +510,8 @@
   outline: 2px solid var(--text);
   outline-offset: 4px;
 }
+
+/* Touch may keep focus after tapping; show its outline only for keyboard input. */
+.concise-project-page .project-image-lightbox.is-touch-input .project-image-lightbox-header button:focus {
+  outline: none;
+}

@@ -210,6 +210,17 @@ function createVideo(media, className = "") {
   return videoElement;
 }
 
+let lightboxTouchInput = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+const updateLightboxInputMode = (touch) => {
+  lightboxTouchInput = touch;
+  document.querySelector(".project-image-lightbox[open]")
+    ?.classList.toggle("is-touch-input", touch);
+};
+document.addEventListener("pointerdown", (event) => {
+  updateLightboxInputMode(event.pointerType === "touch" || event.pointerType === "pen");
+}, true);
+document.addEventListener("keydown", () => updateLightboxInputMode(false), true);
+
 function openImageLightbox(mediaItems, initialIndex) {
   const selectedMedia = mediaItems[initialIndex];
   const matchedGroup = lightboxMediaGroups.findIndex(group => group.some(media => media.src === selectedMedia.src));
@@ -378,6 +389,7 @@ function openImageLightbox(mediaItems, initialIndex) {
   dialog.append(header, stage);
   document.body.append(dialog);
   renderMedia();
+  dialog.classList.toggle("is-touch-input", lightboxTouchInput);
   dialog.showModal();
   updateLightboxTitleCarousel();
   document.fonts.ready.then(() => { if (dialog.isConnected) updateLightboxTitleCarousel(); });

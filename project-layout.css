@@ -359,8 +359,9 @@
 /* Match the range thumb's outer diameter to the carousel dots. */
 .concise-project-page .concise-project-carousel-dot::before {
   box-sizing: border-box;
-  width: 0.55rem;
-  height: 0.55rem;
+  width: calc(0.55rem * 1.5);
+  height: calc(0.55rem * 1.5);
+  border-width: 2.25px;
 }
 .concise-project-page .concise-project-day-night-slider::-webkit-slider-thumb {
   box-sizing: border-box;
@@ -531,4 +532,10 @@
   height: 20.8px;
   border-radius: 50%;
   background: #fff;
+}
+
+.concise-project-page .concise-project-section figure.concise-project-carousel,
+.concise-project-page .concise-project-carousel-meta,
+.concise-project-page .concise-project-carousel-controls {
+  background: transparent;
 }

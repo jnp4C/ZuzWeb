@@ -1103,7 +1103,7 @@ function renderProject(animateFacts = false) {
     : [];
   const hasPresentationContent = page.fullPresentation?.enabled
     && hasPresentationFile && presentationPages.length > 0;
-  footer.hidden = !hasPresentationContent;
+  footer.classList.toggle("is-without-presentation", !hasPresentationContent);
   const presentation = document.createElement("button");
   presentation.type = "button";
   presentation.setAttribute("aria-expanded", "false");
@@ -1135,8 +1135,18 @@ function renderProject(animateFacts = false) {
   carouselCleanups.push(() => presentationObserver.disconnect());
   document.fonts?.ready.then(updatePresentationCarousel);
   presentation.append(plus, presentationLabel);
+  let spineEndControl = plus;
   if (hasPresentationContent) {
     footer.append(presentation);
+  } else {
+    const marker = document.createElement("span");
+    marker.className = "concise-project-symbol concise-project-end-marker";
+    marker.setAttribute("aria-hidden", "true");
+    const dot = document.createElement("span");
+    dot.className = "concise-project-end-dot";
+    marker.append(dot);
+    footer.append(marker);
+    spineEndControl = marker;
   }
 
   if (hasPresentationContent) {
@@ -1227,11 +1237,11 @@ function renderProject(animateFacts = false) {
   carouselCleanups.push(() => gapObserver.disconnect());
   updateSpineGaps();
 
-  if (hasPresentationContent) {
+  {
     let previousSpineHeight = -1;
     const updateSpineEnd = () => {
       const articleRect = layoutRect(article);
-      const controlRect = layoutRect(plus);
+      const controlRect = layoutRect(spineEndControl);
       const spineTop = Number.parseFloat(
         window.getComputedStyle(article, "::before").top,
       ) || 0;

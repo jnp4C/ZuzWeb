@@ -515,3 +515,15 @@
 .concise-project-page .project-image-lightbox.is-touch-input .project-image-lightbox-header button:focus {
   outline: none;
 }
+
+.concise-project-page .concise-project-footer.is-without-presentation {
+  min-height: var(--project-control-size);
+}
+.concise-project-page .concise-project-end-marker { cursor: default; }
+.concise-project-page .concise-project-end-dot {
+  display: block;
+  width: 20.8px;
+  height: 20.8px;
+  border-radius: 50%;
+  background: #fff;
+}

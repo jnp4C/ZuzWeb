@@ -498,3 +498,15 @@
   overflow: visible;
   touch-action: pan-x pan-y pinch-zoom;
 }
+
+/* Avoid Safari's tap tint and pointer-focus ring on lightbox controls. */
+.concise-project-page .project-image-lightbox-header button {
+  -webkit-tap-highlight-color: transparent;
+}
+.concise-project-page .project-image-lightbox-close:focus:not(:focus-visible) {
+  outline: none;
+}
+.concise-project-page .project-image-lightbox-close:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+}

@@ -361,20 +361,20 @@
   box-sizing: border-box;
   width: calc(0.55rem * 1.5);
   height: calc(0.55rem * 1.5);
-  border-width: 2.25px;
+  border-width: var(--project-line-width);
 }
 .concise-project-page .concise-project-day-night-slider::-webkit-slider-thumb {
   box-sizing: border-box;
   width: 0.55rem;
   height: 0.55rem;
-  border: 1.5px solid var(--text);
+  border: calc(var(--project-line-width) / var(--slider-scale)) solid var(--text);
   margin-top: calc((var(--project-line-width) / var(--slider-scale) - 0.55rem) / 2);
 }
 .concise-project-page .concise-project-day-night-slider::-moz-range-thumb {
   box-sizing: border-box;
   width: 0.55rem;
   height: 0.55rem;
-  border: 1.5px solid var(--text);
+  border: calc(var(--project-line-width) / var(--slider-scale)) solid var(--text);
 }
 
 .concise-project-page .concise-project-heading h1,
